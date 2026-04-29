@@ -1,0 +1,54 @@
+<section class="Section Section--spacingNormal" id="section-{{ section.id }}">
+  <div class="Container">
+    {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+        {%- if section.settings.subheading != blank -%}
+         <h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+        {%- endif -%}
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="Liquid">
+      {{ section.settings.liquid }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Liquid",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "<p>Sub-heading</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<p>Your Liquid</p>"
+    },
+    {
+      "type": "liquid",
+      "id": "liquid",
+      "label": "Liquid",
+      "info": "Add app snippets or other Liquid code to create advanced customizations.",
+      "default": "<p>Write your own custom Liquid content.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Custom Liquid",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

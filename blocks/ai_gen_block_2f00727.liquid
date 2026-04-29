@@ -1,0 +1,444 @@
+{% doc %}
+  @prompt
+    video 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-block-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+    background-color: #000000;
+  }
+
+  .ai-video-aspect-ratio-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    {% if block.settings.aspect_ratio == 'natural' %}
+      padding-bottom: 56.25%;
+    {% elsif block.settings.aspect_ratio == '16_9' %}
+      padding-bottom: 56.25%;
+    {% elsif block.settings.aspect_ratio == '4_3' %}
+      padding-bottom: 75%;
+    {% elsif block.settings.aspect_ratio == '1_1' %}
+      padding-bottom: 100%;
+    {% elsif block.settings.aspect_ratio == '9_16' %}
+      padding-bottom: 177.78%;
+    {% endif %}
+  }
+
+  .ai-video-element-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-video-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-video-controls-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-video-wrapper-{{ ai_gen_id }}:hover .ai-video-controls-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .ai-video-control-button-{{ ai_gen_id }} {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: {{ block.settings.control_background_color }};
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: {{ block.settings.control_icon_color }};
+  }
+
+  .ai-video-control-button-{{ ai_gen_id }}:hover {
+    transform: scale(1.1);
+  }
+
+  .ai-video-control-button-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-video-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,{{ block.settings.overlay_opacity }}) 100%);
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-video-block-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-video-controls-{{ ai_gen_id }} {
+      opacity: 1;
+    }
+  }
+{% endstyle %}
+
+<video-player-{{ ai_gen_id }} class="ai-video-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-video-wrapper-{{ ai_gen_id }}">
+    <div class="ai-video-aspect-ratio-{{ ai_gen_id }}">
+      {% if block.settings.video_url != blank %}
+        {% if block.settings.video_url.type == 'youtube' %}
+          <iframe
+            class="ai-video-element-{{ ai_gen_id }}"
+            src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?controls={{ block.settings.show_native_controls | default: 1 }}&autoplay={{ block.settings.autoplay | default: 0 }}&mute={{ block.settings.mute | default: 0 }}&loop={{ block.settings.loop | default: 0 }}&playlist={{ block.settings.video_url.id }}"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        {% elsif block.settings.video_url.type == 'vimeo' %}
+          <iframe
+            class="ai-video-element-{{ ai_gen_id }}"
+            src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?controls={{ block.settings.show_native_controls | default: 1 }}&autoplay={{ block.settings.autoplay | default: 0 }}&muted={{ block.settings.mute | default: 0 }}&loop={{ block.settings.loop | default: 0 }}"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        {% endif %}
+        {% if block.settings.show_overlay %}
+          <div class="ai-video-overlay-{{ ai_gen_id }}"></div>
+        {% endif %}
+      {% elsif block.settings.video_file != blank %}
+        <video
+          class="ai-video-element-{{ ai_gen_id }}"
+          {% if block.settings.autoplay %}autoplay{% endif %}
+          {% if block.settings.loop %}loop{% endif %}
+          {% if block.settings.mute %}muted{% endif %}
+          {% if block.settings.show_native_controls %}controls{% endif %}
+          playsinline
+        >
+          <source src="{{ block.settings.video_file }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        {% if block.settings.show_overlay %}
+          <div class="ai-video-overlay-{{ ai_gen_id }}"></div>
+        {% endif %}
+        {% if block.settings.show_custom_controls and block.settings.video_file != blank %}
+          <div class="ai-video-controls-{{ ai_gen_id }}">
+            <button class="ai-video-control-button-{{ ai_gen_id }} ai-video-play-pause-{{ ai_gen_id }}" aria-label="Play/Pause">
+              <svg class="ai-video-play-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <svg class="ai-video-pause-icon-{{ ai_gen_id }}" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+            <button class="ai-video-control-button-{{ ai_gen_id }} ai-video-mute-{{ ai_gen_id }}" aria-label="Mute/Unmute">
+              <svg class="ai-video-volume-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <svg class="ai-video-mute-icon-{{ ai_gen_id }}" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </button>
+          </div>
+        {% endif %}
+      {% else %}
+        <div class="ai-video-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-video-empty-state-{{ ai_gen_id }}">
+            Next, add a video URL or upload a video file
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</video-player-{{ ai_gen_id }}>
+
+{% if block.settings.video_file != blank and block.settings.show_custom_controls %}
+  <script>
+    (function() {
+      class VideoPlayer{{ ai_gen_id }} extends HTMLElement {
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.video = this.querySelector('.ai-video-element-{{ ai_gen_id }}');
+          this.playPauseBtn = this.querySelector('.ai-video-play-pause-{{ ai_gen_id }}');
+          this.muteBtn = this.querySelector('.ai-video-mute-{{ ai_gen_id }}');
+          this.playIcon = this.querySelector('.ai-video-play-icon-{{ ai_gen_id }}');
+          this.pauseIcon = this.querySelector('.ai-video-pause-icon-{{ ai_gen_id }}');
+          this.volumeIcon = this.querySelector('.ai-video-volume-icon-{{ ai_gen_id }}');
+          this.muteIcon = this.querySelector('.ai-video-mute-icon-{{ ai_gen_id }}');
+
+          if (!this.video) return;
+
+          this.setupEventListeners();
+          this.updatePlayPauseIcon();
+          this.updateMuteIcon();
+        }
+
+        setupEventListeners() {
+          if (this.playPauseBtn) {
+            this.playPauseBtn.addEventListener('click', () => {
+              if (this.video.paused) {
+                this.video.play();
+              } else {
+                this.video.pause();
+              }
+            });
+          }
+
+          if (this.muteBtn) {
+            this.muteBtn.addEventListener('click', () => {
+              this.video.muted = !this.video.muted;
+              this.updateMuteIcon();
+            });
+          }
+
+          this.video.addEventListener('play', () => {
+            this.updatePlayPauseIcon();
+          });
+
+          this.video.addEventListener('pause', () => {
+            this.updatePlayPauseIcon();
+          });
+        }
+
+        updatePlayPauseIcon() {
+          if (!this.playIcon || !this.pauseIcon) return;
+
+          if (this.video.paused) {
+            this.playIcon.style.display = 'block';
+            this.pauseIcon.style.display = 'none';
+          } else {
+            this.playIcon.style.display = 'none';
+            this.pauseIcon.style.display = 'block';
+          }
+        }
+
+        updateMuteIcon() {
+          if (!this.volumeIcon || !this.muteIcon) return;
+
+          if (this.video.muted) {
+            this.volumeIcon.style.display = 'none';
+            this.muteIcon.style.display = 'block';
+          } else {
+            this.volumeIcon.style.display = 'block';
+            this.muteIcon.style.display = 'none';
+          }
+        }
+      }
+
+      customElements.define('video-player-{{ ai_gen_id }}', VideoPlayer{{ ai_gen_id }});
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video source"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Video URL",
+      "accept": ["youtube", "vimeo"],
+      "info": "Add a YouTube or Vimeo URL"
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video file",
+      "info": "Or upload a video file (MP4 recommended)"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio",
+      "options": [
+        {
+          "value": "16_9",
+          "label": "16:9"
+        },
+        {
+          "value": "4_3",
+          "label": "4:3"
+        },
+        {
+          "value": "1_1",
+          "label": "1:1"
+        },
+        {
+          "value": "9_16",
+          "label": "9:16"
+        }
+      ],
+      "default": "16_9"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Playback"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false,
+      "info": "Video will be muted if autoplay is enabled"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop video",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mute",
+      "label": "Mute video",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Controls"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_native_controls",
+      "label": "Show native controls",
+      "default": true,
+      "info": "Show default video player controls"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_controls",
+      "label": "Show custom controls",
+      "default": false,
+      "info": "Only works with uploaded video files"
+    },
+    {
+      "type": "color",
+      "id": "control_background_color",
+      "label": "Control background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "control_icon_color",
+      "label": "Control icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show gradient overlay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.3
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video"
+    }
+  ]
+}
+{% endschema %}

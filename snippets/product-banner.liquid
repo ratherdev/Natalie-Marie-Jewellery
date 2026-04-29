@@ -1,0 +1,125 @@
+{% comment %} First image appears as a banner {% endcomment %}
+{% liquid
+  assign banner = blank
+
+ if product.metafields.custom.collection_handle
+   assign collection_target = collections[product.metafields.custom.collection_handle]
+
+   if collection_target.metafields.custom.product_banner
+     assign banner = collection_target.metafields.custom.product_banner.value
+   endif
+ endif
+%}
+
+{%- if product.media.size > 0 and banner == blank -%}
+{%- assign media = product.featured_media  -%} 
+
+{% else %}
+{%- assign media = banner -%}
+{%- endif -%}
+
+{% if media.media_type == 'image' %}
+<div 
+ id="Media{{ media.id }}" 
+ tabindex="0" 
+ class="featured-media-container AspectRatio AspectRatio--withFallback" 
+ data-media-type="image" 
+ data-media-id="{{ media.id }}" 
+ style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};"
+>
+ {%- capture media_labels -%}
+   {%- if media.alt contains '_label:' -%}
+     <span class="ProductItem__Label Heading Heading--textFont Heading--caps Text--highlight"><strong>{{  media.alt | split: '_label:' | last }}</strong></span>
+   {%- endif -%}
+ {%- endcapture -%}
+
+ {%- if media_labels != blank -%}
+   <div class="ProductItem__LabelList">
+     {{ media_labels }}
+   </div>
+ {%- endif -%}
+
+ {%- capture sizes -%}
+     (max-width: 1008px) 100vw, 50vw
+ {%- endcapture -%}
+ {%- liquid
+     assign loading = 'eager'
+     assign fetchpriority = 'high'
+ -%}
+ 
+ {%- assign mediaId = media.id -%}
+ {%- assign mediaMaster =  media | image_url: 'master' -%}
+ {{- media | image_url: width: 1800 | image_tag: 
+      loading: loading, 
+      sizes: '(max-width: 1008px) 100vw, 100vw', 
+      widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', 
+      data-media-id: mediaId, 
+      fetchpriority: fetchpriority, 
+      data-original-src: mediaMaster, 
+      data-max-width: 1800, 
+      data-max-height: 800, 
+      class: 'featured-img' -}}
+  </div>
+
+{% elsif media.media_type == 'external_video' %}
+<div 
+ id="Media{{ media.id }}" 
+ tabindex="-1" 
+ class="featured-media-container" 
+ data-media-type="external_video" 
+ data-media-id="{{ media.id }}" 
+ data-media-position="{{ media.position }}" 
+ data-video-host="{{ media.host | escape }}" 
+ data-video-id="{{ media.external_id | escape }}"
+>
+ {%- capture media_labels -%}
+   {%- if media.alt contains '_label:' -%}
+     <span class="ProductItem__Label Heading Heading--textFont Heading--caps Text--highlight"><strong>{{  media.alt | split: '_label:' | last }}</strong></span>
+   {%- endif -%}
+ {%- endcapture -%}
+
+ {%- if media_labels != blank -%}
+   <div class="ProductItem__LabelList">
+     {{ media_labels }}
+   </div>
+ {%- endif -%}
+ <div class="Image--lazyLoad Image--fadeIn" data-expand="-100">
+   <div class="VideoWrapper">
+     {{- media | external_video_tag: image_size: '1024x' -}}
+   </div>
+ </div>
+</div>
+
+{% else %}
+<div 
+ id="Media{{ media.id }}" 
+ tabindex="-1" 
+ class="featured-media-container" 
+ data-media-type="video" 
+ data-media-id="{{ media.id }}" 
+ data-media-position="{{ media.position }}"
+>
+ {%- capture media_labels -%}
+   {%- if media.alt contains '_label:' -%}
+     <span class="ProductItem__Label Heading Heading--textFont Heading--caps Text--highlight"><strong>{{  media.alt | split: '_label:' | last }}</strong></span>
+   {%- endif -%}
+ {%- endcapture -%}
+
+ {%- if media_labels != blank -%}
+   <div class="ProductItem__LabelList">
+     {{ media_labels }}
+   </div>
+ {%- endif -%}
+ <div class="Image--lazyLoad Image--fadeIn" data-expand="-100">
+   <div class="VideoWrapper VideoWrapper--native" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%">
+     <video controlsList="nodownload" class="{{ main_image_classes }} lazyVideo" playsinline="playsinline" autoplay="autoplay" loop muted="muted" preload="metadata" style="--aspect-ratio: {{ media.aspect_ratio }};">
+       {% for source in media.sources %}
+         {% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+         <source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+       {% endfor %}
+       <img loading="lazy" src="{{ media.preview_image | img_url: '400x' }}">
+     </video>
+   </div>	
+ </div>
+</div>
+{% endif %}

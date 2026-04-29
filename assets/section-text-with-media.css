@@ -1,0 +1,117 @@
+.TextMedia__ContentWrapper {
+  position: relative;
+  display: flex;
+}
+
+.TextMedia__Content--bottomLeft,
+.TextMedia__Content--bottomCenter,
+.TextMedia__Content--bottomRight {
+  align-self: flex-end;
+}
+
+.TextMedia__Content--middleLeft,
+.TextMedia__Content--middleCenter,
+.TextMedia__Content--middleRight {
+  align-self: center;
+}
+
+.TextMedia__Content--topLeftSticky.
+.TextMedia__Content--topLeft,
+.TextMedia__Content--middleLeft,
+.TextMedia__Content--bottomLeft {
+  text-align: left;
+}
+
+.TextMedia__Content--topLeftSticky .ButtonGroup,
+.TextMedia__Content--topLeft .ButtonGroup,
+.TextMedia__Content--middleLeft .ButtonGroup,
+.TextMedia__Content--bottomLeft .ButtonGroup {
+  justify-content: flex-start;
+}
+
+.TextMedia__Content--topCenter,
+.TextMedia__Content--middleCenter,
+.TextMedia__Content--bottomCenter {
+  text-align: center;
+}
+
+.TextMedia__Content--topCenter .SectionHeader, 
+.TextMedia__Content--middleCenter .SectionHeader, 
+.TextMedia__Content--bottomCenter .SectionHeader {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TextMedia__Content--topCenter .ButtonGroup,
+.TextMedia__Content--middleCenter .ButtonGroup,
+.TextMedia__Content--bottomCenter .ButtonGroup {
+  justify-content: center;
+}
+
+.TextMedia__Content--topRight,
+.TextMedia__Content--middleRight,
+.TextMedia__Content--bottomRight {
+  text-align: right;
+}
+
+.TextMedia__Content--topRight .ButtonGroup,
+.TextMedia__Content--middleRight .ButtonGroup,
+.TextMedia__Content--bottomRight .ButtonGroup {
+  justify-content: flex-end;
+}
+
+.TextMedia__ContentWrapper--sticky {
+    display: block;
+}
+
+
+@media screen and (min-width: 1008px) {
+	.TextMedia__Content--topLeftSticky {
+	    position: sticky;
+	    top: calc(var(--header-height) + 16px);
+	}
+
+	[data-section-type="text-with-media"]:not(.Section--spacingExtraLargeTop) .TextMedia__Content--topLeftSticky {
+		padding-top: 16px;
+		top: var(--header-height);
+	}
+
+	[data-section-type="text-with-media"]:not(.Section--spacingExtraLargeBottom) .TextMedia__Content--topLeftSticky {
+		padding-bottom: 16px;
+	}
+}
+
+
+@media screen and (max-width: 1007px) {
+	.TextMedia__MediaWrapper {
+	    order: 1;
+	    /*margin-left: -20px;
+	    width: calc(100% + 20px);*/
+	}
+
+	.TextMedia__MediaWrapper--reverse {
+		order: 0 !important;
+	}
+
+	.TextMedia__ContentWrapper {
+	    order: 0;
+	}
+
+	.TextMedia__ContentWrapper--reverse {
+		order: 1 !important;
+	}
+	
+	.TextMedia.Grid {
+	    margin-top: -16px;
+	    margin-bottom: -16px;
+	}
+
+	.TextMedia .Grid__Cell {
+	    margin-top: 16px;
+	    margin-bottom: 16px;
+	}
+}
+
+.TextMedia__VideoContainer + .ContentItem__BlockContent {
+    padding: 0 !important;
+}

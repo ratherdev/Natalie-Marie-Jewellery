@@ -1,0 +1,103 @@
+{% layout none %}
+{% paginate collection.products by 16 %}
+[
+  {%- for product in collection.products -%}
+    {%- assign metalMetaObject = product.metafields.custom.metal.value -%}
+	{%- assign metalTooltip = metalMetaObject.tooltip | metafield_tag -%}
+	{%- assign metalTitle = metalMetaObject.title -%}
+	{%- capture metalSwatch -%}
+		{%- assign media = metalMetaObject.swatch.value -%}
+		<div class="Swatch__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+			<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+				data-src="{{ image_url }}"
+				data-optimumx="1.2"
+				data-widths="[{{ supported_sizes }}]"
+				data-sizes="auto"
+				alt="{{ media.alt | escape }}">
+
+			<noscript>
+				<img class="Swatch__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			</noscript>
+		</div>
+	{%- endcapture -%}
+	{%- capture metalImage -%}
+		{%- assign media = metalMetaObject.main_image.value -%}
+		<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+			<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+				data-src="{{ image_url }}"
+				data-optimumx="1.2"
+				data-widths="[{{ supported_sizes }}]"
+				data-sizes="auto"
+				alt="{{ media.alt | escape }}">
+
+			<noscript>
+				<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			</noscript>
+		</div>
+	{%- endcapture -%}
+	
+	{%- assign stoneMetaObject = product.metafields.custom.primary_stone.value -%}
+	{%- assign stoneTooltip = stoneMetaObject.tooltip | metafield_tag -%}
+	{%- assign stoneTitle = stoneMetaObject.title -%}
+	{%- capture stoneSwatch -%}
+		{%- assign media = stoneMetaObject.swatch.value -%}
+		<div class="Swatch__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+			<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+				data-src="{{ image_url }}"
+				data-optimumx="1.2"
+				data-widths="[{{ supported_sizes }}]"
+				data-sizes="auto"
+				alt="{{ media.alt | escape }}">
+
+			<noscript>
+				<img class="Swatch__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			</noscript>
+		</div>
+	{%- endcapture -%}
+	{%- capture stoneImage -%}
+		{%- assign media = stoneMetaObject.main_image.value -%}
+		<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+			<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+				data-src="{{ image_url }}"
+				data-optimumx="1.2"
+				data-widths="[{{ supported_sizes }}]"
+				data-sizes="auto"
+				alt="{{ media.alt | escape }}">
+
+			<noscript>
+				<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			</noscript>
+		</div>
+	{%- endcapture -%}
+
+    {%- unless forloop.first -%},{%- endunless -%}
+    {
+      "url": {{ product.url | json }},
+	  "metalSwatch": {{ metalSwatch | json }},
+	  "metalTooltip": {{ metalTooltip | json }},
+	  "metalTitle": {{ metalTitle | json }},
+	  "metalImage": {{ metalImage | json }},
+	  "metalId": {{ metalMetaObject.system.id | json }},
+	  "stoneSwatch": {{ stoneSwatch | json }},
+	  "stoneTooltip": {{ stoneTooltip | json }},
+	  "stoneTitle": {{ stoneTitle | json }},
+	  "stoneImage": {{ stoneImage | json }},
+	  "stoneId": {{ stoneMetaObject.system.id | json }},
+      "handle": {{ product.handle | json }},
+	  "available": {{ product.available | json }}
+    }
+  {%- endfor -%}
+]
+{% endpaginate  %}

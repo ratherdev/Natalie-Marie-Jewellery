@@ -1,0 +1,76 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product grid
+ * ----------------------------------------------------------------------------
+ */
+
+
+
+@media screen and (min-width: 641px) {
+  .CollectionInner {
+    margin-top: 50px;
+  }
+
+  .ProductList--removeMargin {
+    margin-bottom: -50px !important;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .CollectionInner {
+    display: flex;
+	margin-top: 24px;
+  }
+
+  .CollectionInner__Sidebar {
+    position: sticky;
+    top: 200px;
+    flex: none;
+    align-self: flex-start;
+    padding-bottom: 50px;
+  }
+
+  @supports (--css: variables) {
+    .CollectionInner__Sidebar {
+      top: calc(var(--header-height) + 50px);
+    }
+  }
+
+  @supports (--css: variables) {
+    .CollectionInner__Sidebar--withTopToolbar {
+      top: calc(var(--header-height) * 0 + 93px);
+      top: calc(var(--header-height) * var(--use-sticky-header, 0) + 93px);
+    }
+  }
+
+  .CollectionInner__Products {
+    flex: 1 0 0;
+  }
+
+  .CollectionInner__Sidebar .Collapsible {
+    padding: 0;
+  }
+}
+
+.ProductList--grid > .Grid__Cell {
+  margin-bottom: calc(var(--vertical-spacing-two-products-per-row) / 2);
+}
+
+@media screen and (min-width: 1140px) {
+  .CollectionInner .Pagination {
+    margin-bottom: 80px;
+  }
+
+  .ProductList--grid > .Grid__Cell {
+    margin-bottom: calc(var(--vertical-spacing-two-products-per-row) / 2);
+  }
+
+  .ProductList--removeMargin {
+    margin-bottom: calc(-1 * var(--vertical-spacing-two-products-per-row)) !important;
+  }
+  
+  .ProductList--grid .Grid__Cell.CollectionFeaturedBanner {
+      margin-bottom: 120px;
+      margin-top: 70px;
+  }
+}

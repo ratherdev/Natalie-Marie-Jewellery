@@ -1,0 +1,147 @@
+{%- assign minimumAdditionalFee = minimumAdditionalFee | plus: 0 -%}
+<div class="ProductMeta" {{ block.shopify_attributes }}>
+	{%- if block.settings.show_labels -%}
+		{%- capture product_labels -%}
+        	{%- assign label_swatch_config = settings.label_swatch_config | newline_to_br | split: '<br />' -%}
+			{%- if product.metafields.custom.label.value != blank -%}
+				{%- for label in product.metafields.custom.label.value -%}
+					<span class="ProductMeta__Label Heading u-h5 Heading--textFont Heading--caps Text--highlight" style="{% render 'label_swatch_style', label_swatch_config: label_swatch_config, value: label %}"><strong>{{ label }}</strong></span>
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endcapture -%}
+
+		{%- if product_labels != blank -%}
+			<div class="ProductMeta__LabelList">
+				{{ product_labels }}
+			</div>
+		{%- endif -%}
+	{%- endif -%}
+	
+  {%- if block.settings.show_vendor and product.vendor != blank -%}
+    <h2 class="ProductMeta__Vendor Heading u-h6">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- unless collection_for_vendor.empty? -%}
+        <a href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+      {%- else -%}
+        {{- product.vendor -}}
+      {%- endunless -%}
+    </h2>
+  {%- endif -%}
+
+  <h1 class="ProductMeta__Title Heading u-h3">
+    {%- if template.name == 'product' -%}
+		{%- liquid
+			assign product_title = product.title
+			if product_title contains '|'
+				assign raw_product_title_parts = product_title | split: '|'
+				assign raw_product_title_parts_first = raw_product_title_parts | first
+				assign raw_product_title_parts_last = raw_product_title_parts | last
+				assign product_title = raw_product_title_parts_first | append: '<span class="ProductMeta__SubTitle"> | <em>' | append: raw_product_title_parts_last | append: '</em></span>'
+			endif 
+		-%}
+      {{- product_title -}} {% if block.settings.show_sub_title and product.metafields.custom.sub_title != blank %}<span class="ProductMeta__SubTitle"> | <em>{{ product.metafields.custom.sub_title }}</em>{% endif %}
+    {%- else -%}
+      <a href="{{ product.url }}">{{ product_title }} {% if block.settings.show_sub_title and product.metafields.custom.sub_title != blank %}<span class="ProductMeta__SubTitle"> | <em>{{ product.metafields.custom.sub_title }}</em>{% endif %}</a>
+    {%- endif -%}
+  </h1>
+
+  {%- if block.settings.show_product_rating -%}
+    <div class="ProductMeta__Rating Heading Text--subdued u-h7">
+      {%- render 'product-rating', product: product -%}
+    </div>
+  {%- endif -%}
+
+  {%- if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank -%}
+    <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
+  {%- endif -%}
+  
+  {%- if product.template_suffix != 'coming-soon' and show_price and product.price > 0 -%}
+    <div class="flex flex-wrap gap-2 mt-4">
+      {% liquid
+        assign show_from = false
+  
+        if template.name == 'product' and template.suffix == 'signature-bespoke'
+          assign show_from = true
+        endif
+      %}
+      {% if minimumAdditionalFee > 0 or show_from or has_minimum_additional_fee %}
+        <span>From</span>
+      {% endif %} 
+      <div class="ProductMeta__PriceList Heading Heading--textFont mt-0">
+        {%- if settings.currency_code_enabled -%}
+          {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+            <span class="ProductMeta__Price Price Price--highlight u-h6">{{ product.selected_or_first_available_variant.price | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+            <span class="ProductMeta__Price Price Price--compareAt u-h6">{{ product.selected_or_first_available_variant.compare_at_price | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+          {%- else -%}
+            <span class="ProductMeta__Price Price u-h6">{{ product.selected_or_first_available_variant.price | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+          {%- endif -%}
+        {%- else -%}
+          {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+            <span class="ProductMeta__Price Price Price--highlight u-h6">{{ product.selected_or_first_available_variant.price | plus: minimumAdditionalFee | money }}</span>
+            <span class="ProductMeta__Price Price Price--compareAt u-h6">{{ product.selected_or_first_available_variant.compare_at_price | plus: minimumAdditionalFee | money }}</span>
+          {%- else -%}
+            <span class="ProductMeta__Price Price u-h6">{{ product.selected_or_first_available_variant.price | plus: minimumAdditionalFee | money }}</span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    
+      {%- if block.settings.show_payment_options -%}
+        {%- assign optionGuide = 'Payment Options' | append: '-guide' | handle -%}
+        {%- assign drawerID = optionGuide -%}
+        {%- assign metaobject = shop.metaobjects.guide.payment-options -%}
+        
+        {%- if metaobject != blank -%}
+          {%- capture additionalDrawerHtml -%}
+              {%- render 'additional-drawer', 
+              drawerID: drawerID, 
+              drawerTitle: '', 
+              drawerContent: '', 
+              drawerFooterContent: '',
+              metaobject: metaobject
+            -%}
+          {%- endcapture -%}
+          
+          {%- if additionalDrawerHtml != blank -%}
+            <div class="ProductMeta__PaymentOptions">
+              <div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+            </div>
+          {%- endif -%}	
+        {%- endif -%}
+      {%- endif -%}
+  
+      <div class="ProductMeta__UnitPriceMeasurement" style="display: {%- if product.selected_or_first_available_variant.unit_price_measurement -%}block{% else %}none{% endif %}">
+        <div class="UnitPriceMeasurement Heading u-h6 Text--subdued">
+          <span class="UnitPriceMeasurement__Price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+          <span class="UnitPriceMeasurement__Separator">/ </span>
+          <span class="UnitPriceMeasurement__ReferenceValue" style="display: {% if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 %}inline{% else %}none{% endif %}">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
+          <span class="UnitPriceMeasurement__ReferenceUnit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+        </div>
+      </div>
+    </div>
+	
+  {%- endif -%}
+
+  {%- if block.settings.show_taxes_included -%}
+    {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+      <p class="ProductMeta__TaxNotice Rte">
+        {%- if shop.taxes_included -%}
+          {{ 'product.general.include_taxes' | t }}
+        {%- endif -%}
+
+        {%- if shop.shipping_policy.body != blank -%}
+          {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  {%- endif -%}
+
+  {{- form | payment_terms -}}
+</div>
+
+{%- if additionalDrawerHtml != blank -%}
+	<div class="Product__OffScreen">
+		{{ additionalDrawerHtml }}
+	</div>
+{%- endif -%}	

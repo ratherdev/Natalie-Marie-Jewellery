@@ -1,0 +1,29 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product tabs
+ * ----------------------------------------------------------------------------
+ */
+.Product__Tabs {
+  margin: 50px 0;
+}
+
+@media screen and (max-width: 640px) {
+  .Product__Tabs .Collapsible__Content {
+    padding-top: 6px;
+    padding-bottom: 28px;
+  }
+}
+@media screen and (max-width: 1007px) {
+  .Product__Tabs .Collapsible {
+    padding: 0 24px;
+  }
+}
+@media screen and (min-width: 1008px) {
+  .Product__Tabs {
+    margin: 80px 0;
+  }
+
+  .Product__Tabs .Collapsible__Content {
+    padding-right: 80px;
+  }
+}

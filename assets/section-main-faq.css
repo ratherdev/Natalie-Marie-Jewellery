@@ -1,0 +1,112 @@
+.Faq__Section {
+  margin-bottom: 20px;
+}
+
+.Faq__Section ~ .Faq__Section {
+  margin-top: 34px;
+}
+
+.Faq__Item {
+  position: relative;
+  margin: 14px 0;
+}
+
+.Faq__Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--text-color-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.Faq__Icon svg {
+  width: 8px;
+  height: 10px;
+  vertical-align: baseline;
+}
+
+.Faq__Item[aria-expanded=true] .Faq__Icon {
+  transform: rotateZ(90deg);
+  color: var(--heading-color);
+}
+
+.Faq__ItemWrapper {
+  padding-left: 26px;
+}
+
+.Faq__Question {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.Faq__AnswerWrapper {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: height 0.25s ease-in-out, visibility 0s ease-in-out 0.25s;
+}
+
+.Faq__Item[aria-expanded=true] .Faq__AnswerWrapper {
+  visibility: visible;
+  transition: height 0.25s ease-in-out;
+}
+
+.Faq__Answer {
+  padding: 16px 0 22px 0;
+}
+
+.Faq__Item--lastOfSection .Faq__Answer {
+  padding-bottom: 0;
+}
+
+.FaqSummary {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.FaqSummary__Item {
+  margin-bottom: 12px;
+}
+
+.FaqSummary__Item.is-active::after {
+  width: 100%;
+}
+
+.FaqSummary__Link {
+  display: block;
+}
+
+.FaqSummary__LinkLabel {
+  position: relative;
+  display: inline-block;
+}
+
+.FaqSummary__LinkLabel::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  background: currentColor;
+  transition: transform 0.2s linear;
+}
+
+.FaqSummary__Item.is-active .FaqSummary__LinkLabel::after {
+  transform: scale(1, 1);
+}
+
+@media screen and (min-width: 641px) {
+  .Faq__Section {
+    margin-bottom: 34px;
+  }
+
+  .Faq__Section ~ .Faq__Section {
+    margin-top: 60px;
+  }
+}

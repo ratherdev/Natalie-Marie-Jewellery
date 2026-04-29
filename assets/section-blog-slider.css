@@ -1,0 +1,22 @@
+.BlogSlider__ContentWrapper {
+    align-self: center;
+	position: relative;
+	z-index: 1;
+}
+
+.BlogSlider__ContentWrapper .ButtonGroup {
+	justify-content: flex-start;
+}
+
+.BlogSlider__SliderWrapper .ContentList--carousel .Carousel__Cell {
+	width: 33.33333%;
+	padding: 0 var(--horizontal-spacing-four-products-per-row) 0 0;
+}
+
+.BlogSlider__SliderWrapper .ContentList--carousel {
+	margin: 0 -32px 0 0;
+}
+
+[data-section-type="blog-slider"] {
+    overflow: hidden;
+}

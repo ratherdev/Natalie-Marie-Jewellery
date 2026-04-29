@@ -1,0 +1,75 @@
+{%- capture seo_content -%}
+	{%- if section.settings.title != blank -%}
+		<h2 class="SectionHeader__Heading Heading u-h3">{{ section.settings.title }}</h2>
+	{%- endif -%}
+	{%- if section.settings.content_intro != blank -%}
+		{{ section.settings.content_intro }}
+		{%- if section.settings.content != blank -%}
+            <div class="Collapsible Collapsible--reverse">
+				<span class="Collapsible__Button Collapsible__Button--short Collapsible__Button--noBorder Link Link--underline" data-action="toggle-collapsible" aria-expanded="false">
+					Read More
+				</span>
+				<div class="Collapsible__Inner">
+					<div class="Collapsible__Content">
+						{{ section.settings.content }}
+					</div>
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endif -%}
+{%- endcapture -%}
+{%- if seo_content != blank -%}
+	<section class="Section Section--spacingExtraLarge" id="section-{{ section.id }}">
+		<div class="Container">
+			<div class="Grid">
+				<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 12/16--lap-and-up">
+			        <header class="SectionHeader">
+						{{ seo_content  | 
+							replace: '<a href="', '<a class="Link Link--underline" href="' | 
+							replace: '<h1>', '<h1 class="Heading u-h1">' | 
+							replace: '<h2>', '<h2 class="Heading u-h2">' | 
+							replace: '<h3>', '<h3 class="Heading u-h3">' | 
+							replace: '<h4>', '<h4 class="Heading u-h4">' | 
+							replace: '<h5>', '<h5 class="Heading u-h5">' | 
+							replace: '<h6>', '<h6 class="Heading u-h6">'
+						}}
+					</header>
+				</div>
+				<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+			</div>
+		</div>
+	</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Seo Block",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content_intro",
+      "label": "Intro text"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Seo Content",
+      "settings": {},
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

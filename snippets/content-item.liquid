@@ -1,0 +1,358 @@
+{%- assign block_id = block.id | default: metaobject.system.id | default: '' -%}
+
+{%- assign background_color = block.settings.background_color | default: metaobject.background_colour.value | default: '' -%}
+{%- if block.settings.metaobject_apply_overlay != blank or metaobject.apply_overlay_on_media.value != blank -%}
+	{%- if block.settings.metaobject_apply_overlay == 'true' or metaobject.apply_overlay_on_media.value == 'true' -%}
+		{%- assign apply_overlay = true -%}
+	{%- else -%}
+		{%- assign apply_overlay = false -%}
+	{%- endif -%}	
+{%- else -%}
+	{%- assign apply_overlay = block.settings.apply_overlay -%}
+{%- endif -%}
+
+{%- if block.settings.metaobject_loop != blank or metaobject.loop_video.value != blank -%}
+	{%- if block.settings.metaobject_loop == 'true' or metaobject.loop_video.value == 'true' -%}
+		{%- assign loop = true -%}
+	{%- else -%}
+		{%- assign loop = false -%}
+	{%- endif -%}	
+{%- else -%}
+	{%- assign loop = block.settings.loop -%}
+{%- endif -%}
+
+{%- if block.settings.metaobject_autoplay != blank or metaobject.autoplay_video.value != blank -%}
+	{%- if block.settings.metaobject_autoplay == 'true' or metaobject.autoplay_video.value == 'true' -%}
+		{%- assign autoplay = true -%}
+	{%- else -%}
+		{%- assign autoplay = false -%}
+	{%- endif -%}	
+{%- else -%}
+	{%- assign autoplay = block.settings.autoplay -%}
+{%- endif -%}
+
+{%- if block.settings.metaobject_button_style != blank or metaobject.button_style.value != blank -%}
+	{%- assign button_style_base = block.settings.metaobject_button_style | default: metaobject.button_style.value | default: '' -%}
+	{%- assign button_style = button_style_base | downcase | remove: 'text' | remove: 'button' | remove: ' ' -%}
+{%- else -%}
+	{%- assign button_style = block.settings.button_style -%}
+{%- endif -%}
+
+{%- if block.settings.metaobject_content_position != blank or metaobject.content_position.value != blank -%}
+	{%- assign content_position_base = block.settings.metaobject_content_position | default: metaobject.content_position.value | default: '' -%}
+	{%- assign firstCharacter = content_position_base | slice: 0 | downcase -%}
+	{%- assign remainingCharacters = content_position_base | camelize | slice: 1, 100 -%}
+	{%- assign content_position = firstCharacter | append: remainingCharacters | remove: ' ' -%}
+{%- else -%}
+	{%- assign content_position = block.settings.content_position -%}
+{%- endif -%}
+
+{%- if block.settings.metaobject_colour_style != blank or metaobject.colour_style.value != blank -%}
+	{%- assign colour_style_base = block.settings.metaobject_colour_style | default: metaobject.colour_style.value | default: '' -%}
+	{%- assign firstCharacter = colour_style_base | slice: 0 | downcase -%}
+	{%- assign remainingCharacters = colour_style_base | camelize | slice: 1, 100 -%}
+	{%- assign colour_style = firstCharacter | append: remainingCharacters | remove: ' ' -%}
+{%- else -%}
+	{%- assign colour_style = block.settings.colour_style -%}
+{%- endif -%}
+
+{%- assign additionalDrawersHtml = '' -%} 
+
+
+{%- capture contentItem -%}
+	{%- capture contentItem_media -%}
+		{%- assign media = block.settings.video | default: metaobject.main_video.value | default: '' -%}
+		{%- assign imageMedia = block.settings.image | default: metaobject.main_image.value | default: '' -%} 
+		{%- assign video_present = false -%}
+		{%- if media != blank -%}
+			<div class="ContentItem__VideoContainer {% if apply_overlay %}Image--contrast{% endif %} AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">		
+				{%- assign video_present = true -%}
+				<video controlsList="nodownload" id="video-{{ block_id }}" class="ContentItem__Video lazyVideo" playsinline="playsinline" {% if autoplay %}autoplay muted{% endif %} {% if loop %}loop="loop"{% endif %}  preload="metadata" {% unless autoplay %}poster="{{ media.preview_image | img_url: '1200x' }}"{% endunless %}>
+					{% for source in media.sources %}
+						{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+						<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+					{% endfor %}
+					{% unless autoplay %}
+						<img src="{{ media.preview_image | img_url: '1200x' }}">
+					{%- endunless -%}
+				</video>
+			</div>
+		{%- elsif imageMedia != blank -%}
+			<div class="ContentItem__ImageContainer {% if apply_overlay %}Image--contrast{% endif %} AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: imageMedia.aspect_ratio }}%; --aspect-ratio: {{ imageMedia.aspect_ratio }}; background-image: url({{ imageMedia | img_url: '1x1', format: 'jpg' }});">
+				{% assign image_url = imageMedia | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+				<img class="ContentItem__Image Image--lazyLoad hide-no-js"
+					data-src="{{ image_url }}"
+					data-optimumx="1.2"
+					data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+					data-sizes="auto"
+					alt="{{ imageMedia.alt | escape }}">
+
+				<noscript>
+					<img class="ContentItem__Image" src="{{ imageMedia | img_url: '1000x' }}" alt="{{ imageMedia.alt | escape }}">
+				</noscript>
+			</div>
+		{%- endif -%}
+	{%- endcapture -%}
+	
+	{%- if layout == 'mediaFirst' -%}
+		{{ contentItem_media }}
+	{%- endif -%}
+
+	{%- capture contentItem_content -%}
+		{%- assign logo_image = block.settings.logo_image | default: metaobject.icon.value | default: '' -%}
+		{%- if logo_image != blank -%}
+			<div class="SectionHeader__ImageWrapper AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: logo_image.aspect_ratio }}%; --aspect-ratio: {{ logo_image.aspect_ratio }}; max-width: min(96px, {{ logo_image.width }}px);">
+				{% assign image_url = logo_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+		        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '32,64,96', image: logo_image -%}{%- endcapture -%}
+				
+				<img class="SectionHeader__Image Image--lazyLoad hide-no-js"
+					data-src="{{ image_url }}"
+					data-optimumx="1.2"
+					data-widths="[{{ supported_sizes }}]"
+					data-sizes="auto"
+					alt="{{ logo_image.alt | escape }}">
+
+				<noscript>
+					<img class="SectionHeader__Image" src="{{ logo_image | img_url: '1000x' }}" alt="{{ logo_image.alt | escape }}">
+				</noscript>
+			</div>
+		{%- endif -%}
+		
+		{%- assign subheading = metaobject.sub_heading | metafield_tag | default: block.settings.subheading | default: '' -%}
+		{%- if subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ subheading }}</span></h3>
+		{%- endif -%}
+		
+		
+		{%- assign rawBlockTitle = metaobject.title | metafield_tag | default: block.settings.title | default: '' -%}
+		{%- if rawBlockTitle != blank -%}
+			{%- if search and rawBlockTitle contains '||RESULTS||'-%}
+		        {%- assign filtered_terms = search.terms | replace: '*', '' -%}
+		        {%- assign blockTitle = 'search.general.results_with_terms_count' | t: count: search.results_count, terms: filtered_terms -%}
+			{%- else -%}
+				{%- assign blockTitle = rawBlockTitle -%}
+			{%- endif -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ blockTitle }}</span></h2>
+		{%- endif -%}
+		
+		{%- unless layout == 'mediaFirst' -%}
+			{{ contentItem_media }}
+		{%- endunless -%}
+	
+		{%- assign description = metaobject.description | metafield_tag | default: block.settings.description | default: '' -%}
+		{%- if description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte hidden-pocket">
+				{{ description }}
+			</div>
+		{%- endif -%}
+		
+		{%- assign description_mobile = metaobject.description_mobile | metafield_tag | default: block.settings.description_mobile | default: '' -%}
+		{%- if description_mobile != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte hidden-lap-and-up">
+				{{ description_mobile }}
+			</div>
+		{%- endif -%}
+
+		{%- assign button_1_metaobect = block.settings.button_1_metaobject | default: metaobject.button_1_metaobject.value | default: '' -%}
+		{%- assign button_1_text = block.settings.button_1_text | default: metaobject.button_1_text.value | default: button_1_metaobect.link_title | default: '' -%}
+		{%- assign button_1_link = block.settings.button_1_link | default: metaobject.button_1_link.value | default: '' -%}
+		{%- if button_1_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if button_1_metaobect != blank -%}
+						{%- assign metaobject = shop.metaobjects['guide'][button_1_metaobect] -%}
+				
+						{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+						{%- assign guideButton = '' -%}
+				
+						{%- if metaobject != blank -%}
+							{%- capture additionalDrawerHtml -%}
+							  	{%- render 'additional-drawer', 
+									drawerID: drawerID, 
+									drawerTitle: '', 
+									drawerContent: '', 
+									drawerFooterContent: '',
+									metaobject: metaobject,
+									option: option
+								-%}
+							{%- endcapture -%}
+
+							{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}" >{{ button_1_text | escape }}</div>
+								{%- assign button_1_function = 'drawer' -%}
+								{%- assign button_1_drawer_id = drawerID -%}
+							{%- endif -%}	
+						{%- endif -%}
+					{%- elsif button_1_link contains 'https://calendly.com/' -%}
+						{%- assign button_1_function = 'link' -%}
+						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_1_link }}'});return false;">{{ button_1_text | escape }}</button>
+					{%- else -%}
+						{%- assign button_1_function = 'link' -%}
+						{%- assign blockLinkFirstLetter = button_1_link | slice: 0 -%}
+						{%- if button_1_link contains shop.url or blockLinkFirstLetter == '/' -%}
+							<button onclick="location.href='{{ button_1_link }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_1_text | escape }}</button>
+						{%- else -%}
+							<button onclick="window.open('{{ button_1_link }}','_blank')" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_1_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+		
+		{%- assign button_2_metaobect = block.settings.button_2_metaobject | default: metaobject.button_2_metaobject.value | default: '' -%}
+		{%- assign button_2_text = block.settings.button_2_text | default: metaobject.button_2_text.value | default: button_2_metaobect.link_title | default: '' -%}
+		{%- assign button_2_link = block.settings.button_2_link | default: metaobject.button_2_link.value | default: '' -%}
+		
+		{%- if button_2_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if button_2_metaobect != blank -%}
+						{%- assign metaobject = shop.metaobjects['guide'][button_2_metaobect] -%}
+				
+						{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+						{%- assign guideButton = '' -%}
+				
+						{%- if metaobject != blank -%}
+							{%- capture additionalDrawerHtml -%}
+							  	{%- render 'additional-drawer', 
+									drawerID: drawerID, 
+									drawerTitle: '', 
+									drawerContent: '', 
+									drawerFooterContent: '',
+									metaobject: metaobject,
+									option: option
+								-%}
+							{%- endcapture -%}
+
+							{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}" >{{ button_2_text | escape }}</div>
+								{%- assign button_2_function = 'drawer' -%}
+							{%- endif -%}	
+						{%- endif -%}
+					{%- elsif button_2_link contains 'https://calendly.com/' -%}
+						{%- assign button_2_function = 'link' -%}
+						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_2_link }}'});return false;">{{ button_2_text | escape }}</button>
+					{%- else -%}
+						{%- assign button_2_function = 'link' -%}
+						{%- assign blockLinkFirstLetter = button_2_link | slice: 0 -%}
+						{%- if button_2_link contains shop.url or blockLinkFirstLetter == '/' -%}
+							<button onclick="location.href='{{ button_2_link }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_2_text | escape }}</button>
+						{%- else -%}
+							<button onclick="window.open('{{ button_2_link }}','_blank')" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_2_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+		
+		{%- assign button_3_metaobect = block.settings.button_3_metaobject | default: metaobject.button_3_metaobject.value | default: '' -%}
+		{%- assign button_3_text = block.settings.button_3_text | default: metaobject.button_3_text.value | default: button_3_metaobect.link_title | default: '' -%}
+		{%- assign button_3_link = block.settings.button_3_link | default: metaobject.button_3_link.value | default: '' -%}
+		
+		{%- if button_3_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if button_3_metaobect != blank -%}
+						{%- assign metaobject = shop.metaobjects['guide'][button_3_metaobect] -%}
+				
+						{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+						{%- assign guideButton = '' -%}
+				
+						{%- if metaobject != blank -%}
+							{%- capture additionalDrawerHtml -%}
+							  	{%- render 'additional-drawer', 
+									drawerID: drawerID, 
+									drawerTitle: '', 
+									drawerContent: '', 
+									drawerFooterContent: '',
+									metaobject: metaobject,
+									option: option
+								-%}
+							{%- endcapture -%}
+
+							{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}" >{{ button_3_text | escape }}</div>
+								{%- assign button_3_function = 'drawer' -%}
+							{%- endif -%}	
+						{%- endif -%}
+					{%- elsif button_3_link contains 'https://calendly.com/' -%}
+						{%- assign button_3_function = 'link' -%}
+						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_3_link }}'});return false;">{{ button_3_text | escape }}</button>
+					{%- else -%}
+						{%- assign button_3_function = 'link' -%}
+						{%- assign blockLinkFirstLetter = button_3_link | slice: 0 -%}
+						{%- if button_3_link contains shop.url or blockLinkFirstLetter == '/' -%}
+							<button onclick="location.href='{{ button_3_link }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_3_text | escape }}</button>
+						{%- else -%}
+							<button onclick="window.open('{{ button_3_link }}','_blank')" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ button_style }}{% endif %}">{{ button_3_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+		
+		{%- if media != blank and autoplay == false -%}
+            <div class="SectionHeader__IconHolder">
+              <video-toggle-play-button class="Video__PlayButton" aria-label="Play video" video-wrapper-element="video-wrapper-{{ block_id }}" aria-controls="video-{{ block_id }}">{% render 'icon' with 'play' %}</video-toggle-play-button>
+            </div>
+		{%- endif -%}
+
+	{%- endcapture -%}
+
+	{%- if contentItem_content != blank -%}
+		<div {% if video_present %}id="video-wrapper-{{ block_id }}"{% endif %} class="ContentItem__BlockContent ContentItem__BlockContent--{{ content_position }} ColourStyle--{{ colour_style }}">
+			<header class="SectionHeader">
+				{{ contentItem_content }}
+			</header>
+		</div>
+	{%- endif -%}
+  
+{%- endcapture -%}
+
+{%- if contentItem != blank -%}
+	{%- comment -%}This code allows to cover a common use case where merchant would like to have a clickable image{%- endcomment -%}
+	
+	{%- if button_1_function != blank and button_2_function == blank and button_3_function == blank -%}
+		{%- if button_1_function == 'drawer' -%}
+			<div data-action="open-drawer" data-drawer-id="{{ button_1_drawer_id }}" class="ContentItem__BlockContentWrapper {% if contentItem_media == blank and include_no_media_border %}ContentItem__BlockContentWrapper--noMedia{% endif %} Grid__Cell {{ phoneWidth }}--phone {{ tabletWidth }}--tablet-and-up {{ deskWidth }}--desk-and-up {% if devices == 'mobile' %}hidden-desk-and-up{% endif %} {% if devices == 'desktop' %}hidden-pocket hidden-lap{% endif %}" {% if background_color != blank and contentItem_media == blank %}style="background: {{ background_color }}"{% endif %} {{ block.shopify_attributes }}>
+				{{- contentItem -}}
+			</div>
+		{%- else -%}
+			{%- if button_1_link contains 'https://calendly.com/' -%}
+				<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+				<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+				<div class="ContentItem__Clickable ContentItem__BlockContentWrapper {% if contentItem_media == blank and include_no_media_border %}ContentItem__BlockContentWrapper--noMedia{% endif %} Grid__Cell {{ phoneWidth }}--phone {{ tabletWidth }}--tablet-and-up {{ deskWidth }}--desk-and-up {% if devices == 'mobile' %}hidden-desk-and-up{% endif %} {% if devices == 'desktop' %}hidden-pocket hidden-lap{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_1_link }}'});return false;" {% if background_color != blank and contentItem_media == blank %}style="background: {{ background_color }}"{% endif %} {{ block.shopify_attributes }}>
+					{{- contentItem -}}
+				</div>
+			{%- else -%}
+				{%- assign blockLinkFirstLetter = button_1_link | slice: 0 -%}
+				<a href="{{ button_1_link }}" {% unless button_1_link contains shop.url or blockLinkFirstLetter == '/' %}target="_blank"{% endunless %} class="ContentItem__Clickable ContentItem__BlockContentWrapper {% if contentItem_media == blank and include_no_media_border %}ContentItem__BlockContentWrapper--noMedia{% endif %} Grid__Cell {{ phoneWidth }}--phone {{ tabletWidth }}--tablet-and-up {{ deskWidth }}--desk-and-up {% if devices == 'mobile' %}hidden-desk-and-up{% endif %} {% if devices == 'desktop' %}hidden-pocket hidden-lap{% endif %}" {% if background_color != blank and contentItem_media == blank %}style="background: {{ background_color }}"{% endif %} {{ block.shopify_attributes }}>
+					{{- contentItem -}}
+				</a>
+			{%- endif -%}
+		{%- endif -%}
+	{%- else -%}
+		<div class="ContentItem__BlockContentWrapper {% if contentItem_media == blank and include_no_media_border %}ContentItem__BlockContentWrapper--noMedia{% endif %} Grid__Cell {{ phoneWidth }}--phone {{ tabletWidth }}--tablet-and-up {{ deskWidth }}--desk-and-up {% if devices == 'mobile' %}hidden-desk-and-up{% endif %} {% if devices == 'desktop' %}hidden-pocket hidden-lap{% endif %}" {% if background_color != blank and contentItem_media == blank %}style="background: {{ background_color }}"{% endif %} {{ block.shopify_attributes }}>
+			{{- contentItem -}}
+		</div>
+	{%- endif -%}
+{%- endif -%}
+
+<div class="Content__OffScreen">
+	{%- if additionalDrawersHtml != blank -%}
+		{{ additionalDrawersHtml }}
+	{%- endif -%}
+</div>

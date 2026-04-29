@@ -1,0 +1,21 @@
+{%- liquid
+	assign label_value_downcase = value | downcase
+	assign label_swatch_style = ''
+	
+	for label_swatch_item in label_swatch_config
+		assign label_swatch_parts = label_swatch_item | split: '|'
+		assign label_swatch_name = label_swatch_parts.first | downcase | strip
+		
+		if label_value_downcase == label_swatch_name
+			assign label_swatch_text_value = label_swatch_parts.last | strip
+			
+			if label_swatch_text_value != blank
+				assign label_swatch_style = label_swatch_style | append: 'color: ' | append: label_swatch_text_value
+			endif
+			
+			break
+		endif
+	endfor
+-%}
+
+{{- label_swatch_style -}}

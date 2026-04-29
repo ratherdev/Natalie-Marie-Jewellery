@@ -1,0 +1,48 @@
+.StyledWith--content_1 {
+    padding-top: 8.33333%;
+}
+
+.StyledWith--content_2,
+.StyledWith--content_3 {
+	padding-top: 16.66667%;
+}
+
+@media screen and (min-width: 1008px) {
+	.StyledWith--content_2 {
+		padding-top: 0;
+	}
+}
+
+.StyledWith__Content .ButtonGroup--spacingSmall {
+	justify-content: flex-start;
+}
+
+.StyledWith__ImageContainer + .u-h6,
+.StyledWith__VideoContainer + .u-h6 {
+	margin-top: 10px;
+}
+
+.StyledWith__ContentWrapper .SectionHeader.SectionHeader--center {
+    margin-bottom: 32px;
+}
+
+.StyledWith .Grid {
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.StyledWith--content_1,
+.StyledWith--content_2,
+.StyledWith--content_3 {
+    position: relative;
+}
+
+.StyleLink {
+	font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 11px));
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    margin-bottom: 0;
+}

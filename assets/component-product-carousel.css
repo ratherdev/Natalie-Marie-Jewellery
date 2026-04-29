@@ -1,0 +1,112 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product carousel
+ * ----------------------------------------------------------------------------
+ */
+
+.ProductList--carousel .Carousel__Cell {
+  width: 62%;
+  padding: 0 12px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 640px) {
+  .template-search .ProductList--grid,
+  .template-collection .ProductList--grid {
+    margin-bottom: 20px; /* hack, would require some better code */
+  }
+}
+
+@media screen and (max-width: 1007px) {
+  /* On phone and tablet we do not use the carousel but instead use a free scroll, which offers better performance */
+  .ProductListWrapper {
+    overflow: hidden;
+  }
+
+  .ProductList--carousel {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 30px; /* This is a trick to hide the scrollbar on iOS */
+    margin-bottom: -30px;
+  }
+
+  .ProductList--carousel .Carousel__Cell {
+    display: inline-block !important;
+  }
+
+  .ProductList--carousel .Carousel__Cell:first-child {
+    margin-left: 19%; /* This is (100% - 62%) / 2, where 62% is the width of a single cell */
+  }
+  .ProductList--carousel .Carousel__Cell:last-child {
+    margin-right: 19%; /* This is (100% - 62%) / 2, where 62% is the width of a single cell */
+  }
+  
+  .MinicartRecommendations .ProductList--carousel .Carousel__Cell:first-child {
+    margin-left: 0; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+  .MinicartRecommendations  .ProductList--carousel .Carousel__Cell:last-child {
+    margin-right: 0; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  .ProductList--carousel .Carousel__Cell {
+    width: 48%;
+    padding: 0 16px;
+  }
+
+  .ProductList--carousel .Carousel__Cell:first-child {
+    margin-left: 26%; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+  .ProductList--carousel .Carousel__Cell:last-child {
+    margin-right: 26%; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+  
+  .MinicartRecommendations .ProductList--carousel .Carousel__Cell:first-child {
+    margin-left: 0; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+  .MinicartRecommendations  .ProductList--carousel .Carousel__Cell:last-child {
+    margin-right: 0; /* This is (100% - 48%) / 2, where 48% is the width of a single cell */
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .ProductList--carousel {
+    margin: 0 90px;
+  }
+
+  .ProductList--carousel::after {
+    content: "flickity";
+    display: none;
+  }
+
+  .ProductList--carousel .Carousel__Cell {
+    width: 33.3333%;
+    left: 0;
+    padding: 0 calc(var(--horizontal-spacing-four-products-per-row) / 2);
+    margin-left: 0;
+  }
+
+  .ProductList--carousel .flickity-prev-next-button {
+    top: calc(50% - 45px);
+    width: 45px;
+    height: 45px;
+    stroke-width: 1px;
+  }
+
+  .ProductList--carousel .flickity-prev-next-button.next {
+    right: -50px;
+  }
+
+  .ProductList--carousel .flickity-prev-next-button.previous {
+    left: -50px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .ProductList--carousel .Carousel__Cell {
+    width: 25%;
+  }
+}

@@ -1,0 +1,8 @@
+.ContentBlock .SectionHeader__Description {
+    max-width: 100%;
+}
+
+.ContentBlock .ContentItem__Image + .SectionHeader__Description,
+.ContentBlock .ContentItem__Video + .SectionHeader__Description{
+    margin-top: 50px
+}

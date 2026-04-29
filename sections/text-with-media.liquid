@@ -1,0 +1,569 @@
+{%- if section.settings.media_width == "11" -%}
+	{%- assign content_width_widescreen = 3 -%}
+	{%- assign content_width_desk = 3 -%}
+{%- elsif section.settings.media_width == "7" -%}
+	{%- assign content_width_widescreen = 4 -%}
+	{%- assign content_width_desk = 4 -%}
+{%- elsif section.settings.media_width == "6" -%}
+	{%- assign content_width_widescreen = 4 -%}
+	{%- assign content_width_desk = 6 -%}
+{%- endif -%}
+
+{% liquid
+	assign media_wrap = 'TextMedia__MediaWrapper'
+	assign content_wrap = 'TextMedia__ContentWrapper'
+
+	if section.settings.media_position_mobile == 'top'
+		assign media_wrap = 'TextMedia__MediaWrapper--reverse'
+		assign content_wrap = 'TextMedia__ContentWrapper--reverse'
+	endif
+%}
+
+{%- assign additionalDrawersHtml = '' -%} 
+
+{%- capture section_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		{%- if section.settings.title != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>
+            	{{ section.settings.title | 
+					replace: '<h1>', '<h1 class="u-h1">' | 
+					replace: '<h2>', '<h2 class="u-h2">' | 
+					replace: '<h3>', '<h3 class="u-h3">' | 
+					replace: '<h4>', '<h4 class="u-h4">' | 
+					replace: '<h5>', '<h5 class="u-h5">' | 
+					replace: '<h6>', '<h6 class="u-h6">'
+				}}
+			</span></h2>
+		{%- endif -%}
+	
+		{%- if section.settings.description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+				{{ section.settings.description }}
+			</div>
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if section.settings.button_1_text != blank -%}
+						{%- if section.settings.button_1_link contains 'https://calendly.com/' -%}
+							<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+							<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+							<button class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--full Button--{{ section.settings.button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ section.settings.button_1_link }}'});return false;">{{ section.settings.button_1_text | escape }}</button>
+						{%- else -%}
+							<button onclick="location.href='{{ section.settings.button_1_link }}'" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--full Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+		
+		{%- if section.settings.enable_newsletter_subscribe -%}
+			{%- if section.settings.klaviyo_form_id != blank -%}
+		        <div class="Form">
+		        	<div class="klaviyo-form-{{ section.settings.klaviyo_form_id }}"></div>
+		        </div>
+			{%- else -%}
+		        {%- assign newsletter_id = 'textMedia-' | append: section.id -%}
+
+		        {%- form 'customer', id: newsletter_id, class: 'Form' -%}
+		          {%- if form.posted_successfully? -%}
+		            <p class="Form__Alert Alert Alert--success">{{ 'home_page.newsletter.success' | t }}</p>
+		          {%- else -%}
+		            {%- if form.errors -%}
+		              <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+		            {%- endif -%}
+
+					<input type="hidden" name="contact[tags]" value="newsletter">
+		            <div class="Form__Item">
+						<input type="text" name="contact[first_name]" class="Form__Input" aria-label="{{ 'home_page.newsletter.first_name' | t }}" placeholder="{{ 'home_page.newsletter.first_name' | t }}" required>
+						<label class="Form__FloatingLabel">{{ 'contact.form.name' | t }}</label>
+					</div>
+			        <div class="Form__Item">
+	              	  <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'home_page.newsletter.input' | t }}" placeholder="{{ 'home_page.newsletter.input' | t }}" required>
+					  <label class="Form__FloatingLabel">{{ 'contact.form.email' | t }}</label>
+				  	</div>
+					<button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'home_page.newsletter.submit' | t }}</button>
+				
+		          {%- endif -%}
+		        {%- endform -%}
+			{%- endif -%}
+		{%- endif -%}
+		
+		{%- if section.settings.form_metafield != blank -%}
+		    {%- if template contains 'product' -%}
+				{%- assign referenceObject = product -%}
+		    {%- elsif template contains 'blog' -%}
+				{%- assign referenceObject = blog -%}
+		    {%- elsif template contains 'article' -%}
+				{%- assign referenceObject = article -%}
+		    {%- elsif template contains 'page' -%}
+				{%- assign referenceObject = page -%}
+		    {%- elsif template contains 'collection' -%}
+				{%- assign referenceObject = collection -%}
+			{%- endif -%}
+			
+			{%- assign formMetaFieldNameSpace = section.settings.form_metafield | split: '.' | first -%}
+			{%- assign formMetaFieldKey = section.settings.form_metafield | split: '.' | last -%}
+			
+			{%- if referenceObject!= blank and referenceObject.metafields[formMetaFieldNameSpace][formMetaFieldKey].value != blank -%}
+				{%- assign metaobject = referenceObject.metafields[formMetaFieldNameSpace][formMetaFieldKey].value -%}
+				{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+				
+				{%- if metaobject != blank -%}
+					{%- capture additionalDrawerHtml -%}
+					  	{%- render 'additional-drawer', 
+							drawerID: drawerID, 
+							drawerTitle: '', 
+							drawerContent: '', 
+							drawerFooterContent: '',
+							metaobject: metaobject
+						-%}
+					{%- endcapture -%}
+
+					{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+
+					{%- if additionalDrawerHtml != blank -%}
+						<div class="SectionHeader__ButtonWrapper">
+							<div class="ButtonGroup ButtonGroup--spacingSmall">
+								<button class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}"
+									data-action="open-drawer"
+									data-drawer-id="{{ drawerID }}"
+									aria-label="{{ metaobject.link_title }}">
+									{{ metaobject.link_title }}
+								</button>
+							</div>
+						</div>
+					{%- endif -%}		
+				{%- endif -%}
+			{%- endif -%}
+		{%- endif -%}
+		
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="{{ content_wrap }} {% if section.settings.content_position == 'topLeftSticky' %}TextMedia__ContentWrapper--sticky{% endif %} Grid__Cell {{ content_width_desk }}/16--lap-and-up {{ content_width_widescreen }}/16--widescreen">
+			<div class="TextMedia__Content TextMedia__Content--{{ section.settings.content_position }} ColourStyle--{{ section.settings.colour_style }}">
+				<header class="SectionHeader">
+					{{ text_content }}
+				</header>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+	
+{%- capture section_media -%}
+	{%- capture media_content -%}
+		{%- for block in section.blocks -%}
+			{%- if block.type == "video" -%}	
+				{%- if block.settings.video != blank or block.settings.video_url != blank -%}
+					{%- if block.settings.video_url != blank -%}
+					
+						{%- assign video_width = block.settings.video_size | split: 'x' | first | append: '.00' -%}
+						{%- assign video_height = block.settings.video_size | split: 'x' | last | append: '.00' -%}
+						{%- assign aspect_ratio = video_width | divided_by: video_height -%}
+						
+						<div class="ContentItem__BlockContentWrapper">
+							<div class="TextMedia__VideoContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: aspect_ratio }}%; --aspect-ratio: {{ aspect_ratio }};">
+					          {% if block.settings.video_url.type == 'youtube' %}
+					            <iframe class="Image--lazyLoad" data-src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&showinfo=0&controls=1&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+					          {% elsif block.settings.video_url.type == 'vimeo' %}
+					            <iframe class="Image--lazyLoad" data-src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?autoplay=1&portrait=0&byline=0&color={{ settings.accent_color | remove_first: '#' }}" frameborder="0"></iframe>
+					          {% endif %}
+							</div>
+						</div>
+					{%- else -%}
+						{%- assign media = block.settings.video -%}
+						<div class="ContentItem__BlockContentWrapper">
+							<div class="TextMedia__VideoContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">
+								<video id="video-{{ block.id }}" controlsList="nodownload" class="TextMedia__Video lazyVideo" playsinline="playsinline" {% if block.settings.autoplay %}autoplay muted{% endif %} {% if block.settings.loop %}loop="loop"{% endif %} preload="metadata" poster="{{ media.preview_image | img_url: '1200x' }}">
+									{% for source in media.sources %}
+										{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+										<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+									{% endfor %}
+									<img src="{{ media.preview_image | img_url: '1200x' }}">
+								</video>
+							</div>
+							{%- if block.settings.autoplay == false -%}	
+					  			{%- if block.settings.video != blank -%}
+									<div id="video-wrapper-{{ block.id }}" class="ContentItem__BlockContent ContentItem__BlockContent--middleCenter ColourStyle--light">
+										<header class="SectionHeader">
+								            <div class="SectionHeader__IconHolder">
+								              <video-toggle-play-button class="Video__PlayButton" aria-label="Play video" video-wrapper-element="video-wrapper-{{ block.id }}" aria-controls="video-{{ block.id }}">{% render 'icon' with 'play' %}</video-toggle-play-button>
+								            </div>
+										</header>	
+									</div>
+					  			{%- endif -%}
+							{%- endif -%}
+						</div>
+					{%- endif -%}
+				{%- endif -%}
+			{%- else -%}
+				{%- if block.settings.image != blank -%}
+					<div class="TextMedia__ImageContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+						{% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+						<img class="TextMedia__Image Image--lazyLoad hide-no-js"
+							data-src="{{ image_url }}"
+							data-optimumx="1.2"
+							data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+							data-sizes="auto"
+							alt="{{ block.settings.image.alt | escape }}">
+
+						<noscript>
+							<img class="TextMedia__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+						</noscript>
+					</div>
+				{%- endif -%}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endcapture -%}
+	
+	{%- if media_content != blank -%}
+		<div class="Grid__Cell {{ media_wrap }} {{ section.settings.media_width }}/16--lap-and-up">
+			{{ media_content }}
+		</div>
+	{%- endif -%}
+		
+{%- endcapture -%}
+
+{%- if section_media != blank -%}
+	{{ 'section-text-with-media.css' | asset_url | stylesheet_tag }}
+	
+	{% liquid
+		if section.settings.remove_spacing_top and section.settings.remove_spacing_bottom 
+			assign spacing_class = ''
+		elsif section.settings.remove_spacing_top
+			assign spacing_class = 'Section--spacingExtraLargeBottom'
+		elsif section.settings.remove_spacing_bottom
+			assign spacing_class = 'Section--spacingExtraLargeTop'
+		else
+			assign spacing_class = 'Section--spacingExtraLarge'
+		endif
+	%}
+	<section class="Section {{ spacing_class }}" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="text-with-media">
+		<div class="Container">
+			<div class="TextMedia Grid">
+			    {%- if section.settings.media_position == 'left' -%}
+					{%- if section.settings.media_width == '6' or section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{{- section_media -}}
+					
+					{%- if section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 1/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{{- section_content -}}
+					
+					{%- if section.settings.media_width == '11' -%}
+						<div class="Grid__Cell hidden-pocket hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{%- if section.settings.media_width == '6' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up 4/16--widescreen"></div>
+					{%- endif -%}
+					
+					{%- if section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+			    {%- else -%}
+					{%- if section.settings.media_width == '6' or section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{{- section_content -}}
+					
+					{%- if section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 1/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{%- if section.settings.media_width == '11' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+					
+					{{- section_media -}}
+					
+					{%- if section.settings.media_width == '6' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up 4/16--widescreen"></div>
+					{%- endif -%}
+					
+					{%- if section.settings.media_width == '7' -%}
+						<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+					{%- endif -%}
+			    {%- endif -%}
+			</div>
+		</div>
+	</section>
+		
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Text with media",
+  "max_blocks": 1,
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "remove_spacing_top",
+        "label": "Remove top spacing",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_spacing_bottom",
+        "label": "Remove bottom spacing",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_newsletter_subscribe",
+        "label": "Enable newsletter subscribe form",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "klaviyo_form_id",
+        "label": "Klaviyo form ID",
+		"info": "If set, replaces the default Shopify form."
+      },
+	  	{
+        "type": "select",
+        "id": "media_position",
+        "label": "Media position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      },
+			{
+        "type": "select",
+        "id": "media_position_mobile",
+        "label": "Media position Mobile",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default": "bottom"
+      },
+      {
+        "type": "select",
+        "id": "media_width",
+        "label": "Media width",
+        "options": [
+          {
+            "value": "11",
+            "label": "11 Columns"
+          },
+          {
+            "value": "7",
+            "label": "7 Columns"
+          },
+          {
+            "value": "6",
+            "label": "6 Columns"
+          }
+        ],
+        "default": "11"
+      },
+      {
+        "type": "select",
+        "id": "content_position",
+        "label": "Content position",
+        "options": [
+          {
+            "value": "topLeftSticky",
+            "label": "Top left sticky"
+          },
+		  {
+            "value": "topLeft",
+            "label": "Top left"
+          },
+          {
+            "value": "middleLeft",
+            "label": "Middle left"
+          },
+          {
+            "value": "bottomLeft",
+            "label": "Bottom left"
+          }
+        ],
+        "default": "bottomLeft"
+      },
+	  {
+	    "type": "header",
+	    "content": "Text"
+	  },
+	  {
+	    "type": "image_picker",
+	    "id": "logo_image",
+	    "label": "Title image",
+	    "info": "1800 x 800px .jpg recommended"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "subheading",
+	    "label": "Sub-heading",
+	    "default": "<p>Slide title</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "title",
+	    "label": "Heading",
+	    "default": "<p>Tell your story</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "description",
+	    "label": "Description"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Text Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "colour_style",
+	    "label": "Colour style",
+	    "options": [
+	      {
+	        "value": "light",
+	        "label": "Light"
+	      },
+	      {
+	        "value": "dark",
+	        "label": "Dark"
+	      }
+	    ],
+	    "default": "dark",
+		"info": "Sets the text and button colour."
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button 1"
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_1_text",
+	    "label": "Text"
+	  },
+	  {
+	    "type": "url",
+	    "id": "button_1_link",
+	    "label": "Link"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "button_style",
+	    "label": "Button style",
+	    "options": [
+	      {
+	        "value": "underline",
+	        "label": "Text underline"
+	      },
+	      {
+	        "value": "secondary",
+	        "label": "Secondary Button"
+	      },
+	      {
+	        "value": "primary",
+	        "label": "Primary Button"
+	      }
+	    ],
+	    "default": "underline",
+	    "info": "Sets the style for the button."
+	  }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+	    {
+	      "type": "video_url",
+	      "accept": ["vimeo"],
+	      "id": "video_url",
+	      "label": "Vimeo URL"
+	    },
+        {
+	      "type": "text",
+	      "id": "video_size",
+	      "label": "Size",
+		  "default": "1920x1080",
+		  "info": "Enter video size in width x height format. E.g '1920x1080'"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Text with media",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

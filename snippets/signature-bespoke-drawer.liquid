@@ -1,0 +1,344 @@
+{% comment %} 
+Refer to theme.js _klaviyoEvent function
+{% endcomment %}
+{%- assign currentMetal = product.metafields.custom.metal.value -%}
+
+{%- if metaobject != blank -%}
+	{%- assign drawerTitle = metaobject.title | metafield_tag -%}
+	{%- capture drawerContent -%}
+		{%- if metaobject.intro.value != blank -%}
+			{{ metaobject.intro | metafield_tag | 
+				replace: '<a href="', '<a class="Link Link--underline" href="' | 
+				replace: '<h1>', '<h1 class="Heading u-h1">' | 
+				replace: '<h2>', '<h2 class="Heading u-h2">' | 
+				replace: '<h3>', '<h3 class="Heading u-h3">' | 
+				replace: '<h4>', '<h4 class="Heading u-h4">' | 
+				replace: '<h5>', '<h5 class="Heading u-h5">' | 
+				replace: '<h6>', '<h6 class="Heading u-h6">'
+			 }}
+		{%- endif -%}
+
+		{%- if metaobject.form.value != blank -%}
+			{%- assign formObject = metaobject.form.value -%}
+			<div vue-init class="DrawerContent spaced ">
+				<bespoke-form-input inline-template>
+					<div>
+						<form id="bespoke-form" class="Form Form--spacingTight Form--justifyCenter">
+							{%- for formInput in formObject.form_fields.value -%}
+								{%- liquid
+									assign fieldName = formInput.label
+									if formInput.name != blank
+										assign fieldName = formInput.name
+									endif
+								-%}
+								{%- if formInput.type == 'Text' -%}
+									<div class="Form__Item">
+										<input type="text" class="Form__Input" name="{{ fieldName }}" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Text Area' -%}
+									<div class="Form__Item">
+										<textarea name="{{ fieldName }}" cols="20" rows="10" class="Form__Textarea" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}></textarea>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Email' -%}
+									<div class="Form__Item">
+										<input type="email" class="Form__Input" name="{{ fieldName }}" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Product Name' -%}
+									<div class="Form__Item">
+										<input type="text" value="{{ product.title }}" class="Form__Input" name="{{ fieldName }}" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Tel' -%}
+									<div class="Form__Item">
+										<input type="tel" class="Form__Input" name="{{ fieldName }}" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Product Details' -%}
+									<div class="Form__Item">
+										<input type="text" value="{{ product.title }}{% if currentMetal.title != blank %} - {{ currentMetal.title }}{% endif %}" 
+											class="Form__Input" 
+											name="{{ fieldName }}" 
+											aria-label="{{ formInput.label }}" 
+											placeholder="{{ formInput.placeholder }}" 
+											:value="'{{ product.title }}{% if currentMetal.title != blank %} - {{ currentMetal.title }}{% endif %}' + (ringSize ? ' - ' + ringSize : '') + (selectedStoneSize ? ' - ' + selectedStoneSize : '')"
+											{% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Ring Size' -%}
+									<div class="Form__Item">
+										<input type="tel" class="Form__Input" name="{{ fieldName }}" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" :value="ringSize" {% if formInput.required.value %}required{% endif %}>
+										<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+									</div>
+								{%- elsif formInput.type == 'Product URL' and product != blank -%}
+									<input type="hidden" name="{{ fieldName }}" aria-label="{{ formInput.label }}" value="{{ product.url }}">	
+								{%- elsif formInput.type == 'Product Data' and product != blank -%}
+									<input type="hidden" name="Product Name" aria-label="Product Name" value="{{ product.title }}">
+									<input type="hidden" name="Product Name" aria-label="Product Name" value="{{ product.title }}">
+									<input type="hidden" name="Product Name" aria-label="Product Name" value="{{ product.title }}">	
+								{%- endif -%}
+							{%- endfor -%}
+							
+							{%- if formObject.display_newsletter.value == true -%}
+								<div class="Form__CheckboxWrapper">
+									<input type="hidden" aria-label="Newsletter Subscribe" name="Newsletter Subscribe" value="No" />
+									<input type="checkbox" aria-label="Newsletter Subscribe" class="Form__Checkbox" name="Newsletter Subscribe" id="{{ formObject.system.id }}_subscribe" value="Yes" checked>
+									{% render 'icon' with 'checkmark' %}
+									<label for="{{ formObject.system.id }}_subscribe">Sign me up to the newsletter</label>
+								</div>
+							{%- endif -%}
+		
+							<input type="hidden" name="Product Name" aria-label="Product Name" value="{{ product.title }}">
+							{% if currentMetal != blank %}
+								<input type="hidden" name="Metal" aria-label="Metal" value="{{ currentMetal.title }}">
+							{% endif %}
+
+							<input type="hidden" name="Stone Size" aria-label="Stone Size" :value="selectedStoneSize">
+							<input type="hidden" name="Price" aria-label="Price" :value="selectedStoneSizePrice">
+		
+							<button type="submit" data-action="submit-klaviyo-form" data-event-type="{{ formObject.event_type }}" class="Form__Submit Button Button--primary Button--full">{{ formObject.submit_button }}</button>
+						</form>
+					</div>
+				</bespoke-form-input>
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.html_content.value != blank -%}
+			<div class="DrawerContent--spaced">
+				{{ metaobject.html_content.value }}
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.loop_content.value != blank -%}
+			<div class="DrawerContent--spaced">
+        		{%- capture loopContent -%}
+					{%- for metasubobject in metaobject.loop_content.value -%}
+						
+						{%- if forloop.first -%}
+							{%- assign metaobjectSystemType = metasubobject.system.type -%}
+						{%- else -%}
+							{%- if metasubobject.system.type != metaobjectSystemType -%}
+								{%- continue -%}
+							{%- endif -%}
+						{%- endif -%}
+						
+						{%- if metasubobject.system.type == "ring_size" -%}
+							<tr>
+								<td class="Text--alignCenter"
+									data-value="{%- if option.values contains metasubobject.nmj_size_aus_uk -%}{{ metasubobject.nmj_size_aus_uk }}{%- else -%}Custom{%- endif -%}"
+									data-true-value="{{ metasubobject.nmj_size_aus_uk }}"
+									data-option-position="{{ option.position }}"
+									data-action="select-value">
+										{{ metasubobject.nmj_size_aus_uk }}
+								</td>
+								<td class="Text--alignCenter">{{ metasubobject.international_diameter_mm }} / {{ metasubobject.circumference_mm }}</td>
+								<!-- <td class="Text--alignCenter">{{ metasubobject.circumference_mm }}</td> -->
+								<td class="Text--alignCenter">{{ metasubobject.usa_size }}</td>
+							</tr>
+							{%- unless forloop.last -%}
+								<tr class="spacer"><td></td></tr>
+							{%- endunless -%} 
+						{%- elsif metasubobject.system.type == "chain_size" -%}
+							<tr>
+								<td class="Text--alignCenter">{{ metasubobject.inches }}</td>
+								<td class="Text--alignCenter">{{ metasubobject.centimeters }}</td>
+							</tr>
+						{%- elsif metasubobject.system.type == "payment_options" -%}	
+							<div class="Grid__Cell 4/16">
+			 					{%- assign media = metasubobject.logo.value -%}
+			 					<div class="Payment__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			 						{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+			 			            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+						
+			 						<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+			 							data-src="{{ image_url }}"
+			 							data-optimumx="1.2"
+			 							data-widths="[{{ supported_sizes }}]"
+			 							data-sizes="auto"
+			 							alt="{{ media.alt | escape }}">
+
+			 						<noscript>
+			 							<img class="Payment__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			 						</noscript>
+			 					</div>
+							</div>
+							<div class="Grid__Cell Grid__Cell--bordered 2/16"></div>
+							<div class="Grid__Cell 2/16"></div>
+							<div class="Grid__Cell 8/16">
+						  		{{ metasubobject.copy | metafield_tag | 
+									replace: '<a href="', '<a class="Link Link--underline" href="' | 
+									replace: '<h1>', '<h1 class="Heading u-h1">' | 
+									replace: '<h2>', '<h2 class="Heading u-h2">' | 
+									replace: '<h3>', '<h3 class="Heading u-h3">' | 
+									replace: '<h4>', '<h4 class="Heading u-h4">' | 
+									replace: '<h5>', '<h5 class="Heading u-h5">' | 
+									replace: '<h6>', '<h6 class="Heading u-h6">' 
+								}}
+							</div>
+						{%- endif -%}	
+					{%- endfor -%}
+				{%- endcapture -%}
+				
+				{%- if loopContent != blank -%}
+					{%- if metaobjectSystemType == "ring_size" or metaobjectSystemType == "chain_size" -%}
+				        <div class="TableWrapper">
+							<table class="Table {% if metaobjectSystemType == 'ring_size' %}Table--noBorder{% endif %} Table--productSizing">
+								<thead>
+									<tr class="Heading--caps">
+										{%- if metaobjectSystemType == "ring_size" -%}
+											<th class="Text--alignCenter">NMJ SIZE (AUS/UK)</th>
+											<th class="Text--alignCenter">Internal Diameter / Circumference (MM)</th>
+											<!-- <th class="Text--alignCenter">CIRCUMFERENCE (MM)</th> -->
+											<th class="Text--alignCenter">USA SIZE</th>
+										{%- elsif metaobjectSystemType == "chain_size" -%}
+											<th class="Text--alignCenter">Inches</th>
+											<th class="Text--alignCenter">Centimeter</th>
+										{%- endif -%}
+									</tr>
+								</thead>
+								<tbody>
+									{{ loopContent }}		
+								</tbody>
+							</table>
+						</div>
+					{%- elsif metaobjectSystemType == "payment_options" -%}
+						<div class="Grid Grid--paymentOptions">
+							{{ loopContent }}
+						</div>
+					{%- endif -%}	
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+
+		{%- if metaobject.faqs_title != blank -%}
+			<div class="DrawerContent--spaced">
+				{{ metaobject.faqs_title | metafield_tag }}
+			</div>
+		{%- endif -%}
+	
+		{% for faq in metaobject.faqs.value %}
+			{%- if faq.question != blank and faq.answer != blank -%}
+	            <div class="Collapsible">
+	              <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	                {{ faq.question }} <span class="Collapsible__Plus"></span>
+	              </button>
+
+	              <div class="Collapsible__Inner">
+	                <div class="Collapsible__Content">
+	                  <div class="Rte">
+	                    {{ faq.answer | metafield_tag }}
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+			{%- endif -%}
+		{% endfor %}
+	
+	{%- endcapture -%}
+
+	{%- capture drawer_media_content -%}
+		{%- if metaobject.media_title.value != blank -%}
+			<div class="DrawerContent--spaced">
+				{{ metaobject.media_title | metafield_tag }}
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.media.value != blank -%}
+			{%- assign media = metaobject.media.value -%}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: media -%}{%- endcapture -%}
+			
+			<div class="DrawerContent">
+				<div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+					{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+					<img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ media.alt | escape }}">
+					<span class="Image__Loader"></span>
+				
+					<noscript>
+						<img src="{{ media | img_url: '800x' }}" alt="{{ media.alt | escape }}">
+					</noscript>
+				</div>
+			</div>
+		{%- endif -%}
+	
+	{%- endcapture -%}
+
+	{%- capture drawerFooterContent -%}
+		{{ metaobject.footer | metafield_tag }}
+	{%- endcapture -%}
+{%- endif -%}
+
+<div id="{{ drawerID }}" class="Drawer Drawer--fromRight {% if metaobjectSystemType == 'ring_size' %}Drawer--variantSelector{% endif %} {% if drawerClass != blank %}{{ drawerClass }}{% endif %}" aria-hidden="true">
+	<div class="Drawer__Header">
+		<button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ 'header.navigation.close_cart' | t }}">
+			{%- render 'icon' with 'close' -%}
+		</button>
+	</div>
+
+	<div class="Cart Drawer__Content">
+		<div class="Drawer__Main SignatureDrawer--main" data-scrollable>
+			<div class="h-full Drawer__Container">
+				<div class="Drawer__Title Heading Heading--textFont u-h6">{{ drawerTitle | upcase }}</div>
+				<div class="SignatureDrawer--container">
+					<div class="content-container" style="padding-bottom: 50px;">
+						<div id="bespoke-drawer-content">
+							<div id="bespoke-drawer-main">
+								{{ drawerContent | 
+									replace: '<a href="', '<a class="Link Link--underline" href="' |
+									replace: '<h1>', '<h1 class="Heading u-h1">' | 
+									replace: '<h2>', '<h2 class="Heading u-h2">' | 
+									replace: '<h3>', '<h3 class="Heading u-h3">' | 
+									replace: '<h4>', '<h4 class="Heading u-h4">' | 
+									replace: '<h5>', '<h5 class="Heading u-h5">' | 
+									replace: '<h6>', '<h6 class="Heading u-h6">'
+								}}
+							</div>
+
+							{%- comment -%}
+								Thank you message
+							{%- endcomment -%}
+							<div 
+							  id="bespoke-thank-you" 
+							  class="hidden Drawer__ThankYou SectionHeader"
+							  data-auto-close-enabled="{{ formObject.auto_close_enabled }}"
+							  data-auto-close-delay="{{ formObject.auto_close_delay }}"
+							>
+								<h3 class="SectionHeader__Heading Heading u-h3">
+									<em>{{ formObject.thank_you_title }}</em>
+								</h3>
+								<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+									{{ formObject.thank_you_body | metafield_tag }}</div>
+								{% if formObject.thank_you_cta_text and formObject.thank_you_cta_link %}
+									<a href="{{ formObject.thank_you_cta_link }}" class="Button Button--primary mt-[50px] w-full">
+										{{ formObject.thank_you_cta_text }}
+									</a>
+								{% endif %}
+							</div>
+							<script>
+							  window.theme = window.theme || {};
+							  window.theme.formObject = Object.assign({}, window.theme.formObject, {
+							    auto_close_enabled: {{ formObject.auto_close_enabled | default: false | downcase }},
+							    auto_close_delay: {{ formObject.auto_close_delay | default: 5 }}
+							  });
+							</script>
+						</div>
+					</div>
+					
+					{% comment %} <div class="media-container">
+						{{ drawer_media_content }}
+					</div> {% endcomment %}
+				</div>
+			</div>
+		</div>
+		
+		{%- if drawerFooterContent != blank -%}
+			<div class="Drawer__Footer" data-drawer-animated-fade>
+				<div class="Drawer__Container">
+					{{ drawerFooterContent }}
+				</div>
+			</div>
+		{%- endif -%}
+    </div>
+</div>

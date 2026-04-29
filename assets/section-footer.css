@@ -1,0 +1,131 @@
+
+.shopify-section--bordered + .shopify-section--footer {
+  border-top: 1px solid var(--footer-border-color);
+}
+
+.Footer {
+  padding: 100px 0 32px;
+  background: var(--footer-background);
+  color: var(--footer-text-color);
+  overflow: hidden;
+}
+
+.Footer__Title {
+  color: var(--footer-heading-color);
+}
+
+.Footer .Link--primary:hover {
+  color: var(--link-color);
+}
+
+.Footer .Form__Input::-moz-placeholder {
+  color: var(--footer-text-color);
+}
+
+.Footer .Form__Input:-ms-input-placeholder {
+  color: var(--footer-text-color);
+}
+
+.Footer .Link--secondary:hover,
+.Footer .Form__Input::placeholder {
+  color: var(--footer-text-color);
+}
+
+.Footer .Grid__Cell {
+  margin-bottom: 46px;
+}
+
+.Footer__Title {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1007px) {
+	.Footer__Block--end {
+	    order: var(--block-count);
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.Footer .Grid__Cell {
+	  margin-bottom: 100px;
+	}
+	
+	.Footer__Title {
+	  margin-bottom: 30px;
+	}
+}
+
+.Footer .Footer__Aside .Grid__Cell {
+  margin-bottom: 0;
+}
+
+
+
+.Footer__Social {
+  margin-top: 24px;
+}
+
+.Footer__Content + .Footer__Newsletter {
+  margin-top: 18px;
+}
+
+.Footer__Aside {
+  justify-content: space-between;
+}
+
+.Footer__LocalizationForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Footer__LocalizationItem + .Footer__LocalizationItem {
+  margin-left: 30px;
+}
+
+.PaymentList svg {
+  opacity: 0.8;
+  width: auto;
+  height: 24px;
+}
+
+.Footer__StoreName {
+  color: var(--footer-text-color);
+}
+
+.PaymentList {
+	filter: sepia(1) saturate(0.4);
+	-webkit-filter: sepia(1) saturate(0.4);
+    text-align: right;
+}
+
+@media screen and (max-width: 1007px) {
+	.Footer__PaymentList {
+	    text-align: left;
+		margin-top: 20px;
+	}
+	
+	.Footer__PaymentList.HorizontalList {
+	    margin: 20px -4px 0;
+	}
+
+	.Footer__PaymentList.HorizontalList .HorizontalList__Item {
+	    margin: 6px 4px;
+	}
+	
+	.PaymentList svg {
+	  height: 20px;
+	}
+}
+
+.Footer__Newsletter {
+	display: flex;
+}
+
+.Footer__Newsletter .Form__Submit {
+	display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+	margin-top: 0;
+    white-space: nowrap;
+}

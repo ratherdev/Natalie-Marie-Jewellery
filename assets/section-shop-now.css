@@ -1,0 +1,55 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product shop now
+ * ----------------------------------------------------------------------------
+ */
+
+.ProductList--shopNow {
+  position: static;
+}
+
+.ProductList--shopNow .Carousel__Cell {
+  padding: 0 60px;
+}
+
+@media screen and (max-width: 640px) {
+  .ShopNowGrid .FeaturedQuote {
+    margin: 50px -24px -90px -24px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  .ShopNowGrid .FeaturedQuote {
+    margin: 60px -50px -90px -50px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .ProductList--shopNow {
+    padding: 0 50px;
+    overflow: hidden;
+  }
+
+  .ProductList--shopNow .flickity-viewport {
+    overflow: visible;
+  }
+
+  .ProductList--shopNow .Carousel__Cell {
+    width: 50%;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .ProductList--shopNow[data-desktop-count="3"] .Carousel__Cell {
+    width: 33.333333%;
+  }
+
+  .ShopNowGrid {
+    display: flex;
+  }
+
+  .ShopNowGrid .FeaturedQuote {
+    height: 100%;
+  }
+}

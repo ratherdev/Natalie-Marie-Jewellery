@@ -1,0 +1,350 @@
+.ContentItem__Image,
+.ContentItem__Video {
+    z-index: 0;
+}
+
+.ContentItem__BlockContentWrapper {
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.ContentItem__BlockContentWrapper--noMedia {
+    border: 1px solid var(--border-color);
+    width: calc(100% - 8px);
+    margin-left: 8px;
+	transition: 0.5s ease border;
+    padding: 16px;
+	min-height: 360px;
+}
+
+@media screen and (min-width: 1008px) {
+	.ContentItem__BlockContentWrapper--noMedia {
+		min-height: 440px;
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(100% - 16px);
+	    margin-left: 16px;
+	}
+}
+
+.Grid--m .ContentItem__BlockContentWrapper--noMedia {
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 641px) {
+	.Grid:not(.ProductList--grid) > .Grid__Cell[class*='--tablet-and-up']:not(.\31\/1--tablet-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 16px;
+	}
+	
+	.Grid--m:not(.ProductList--grid) > .Grid__Cell[class*='--tablet-and-up']:not(.\31\/1--tablet-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 32px;
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.Grid:not(.ProductList--grid) > .Grid__Cell[class*='--lap-and-up']:not(.\31\/1--lap-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 16px;
+	}
+	
+	.Grid--m:not(.ProductList--grid) > .Grid__Cell[class*='--lap-and-up']:not(.\31\/1--lap-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 32px;
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.Grid:not(.ProductList--grid) > .Grid__Cell[class*='--desk-and-up']:not(.\31\/1--desk-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 16px;
+	}
+	
+	.Grid--m:not(.ProductList--grid) > .Grid__Cell[class*='--desk-and-up']:not(.\31\/1--desk-and-up).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 32px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.Grid:not(.ProductList--grid) > .Grid__Cell[class*='--widescreen']:not(.\31\/1--widescreen).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 16px;
+	}
+	
+	.Grid--m:not(.ProductList--grid) > .Grid__Cell[class*='--widescreen']:not(.\31\/1--widescreen).ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 32px;
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.ContentItem__BlockContentWrapper--noMedia {
+	    padding: 32px;
+	}
+}
+
+a.ContentItem__BlockContentWrapper--noMedia {
+	cursor: pointer;
+}
+
+a.ContentItem__BlockContentWrapper--noMedia:hover {
+	border-color: var(--link-color);
+}
+
+.ContentItem__BlockContentWrapper--noMedia + .ContentItem__BlockContentWrapper .ContentItem__ImageContainer,
+.has-no-media-tiles .ContentItem__BlockContentWrapper .ContentItem__ImageContainer {
+    height: 100%;
+}
+
+.ContentItem__BlockContentWrapper--noMedia + .ContentItem__BlockContentWrapper .ContentItem__ImageContainer .ContentItem__Image,
+.has-no-media-tiles .ContentItem__BlockContentWrapper .ContentItem__ImageContainer .ContentItem__Image {
+    object-fit: cover;
+}
+
+@media screen and (max-width: 640px) {
+	.\31\/2--phone.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 8px);
+	}
+}
+
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+	.\31\/2--tablet-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 8px);
+	}
+
+    .\31\/3--tablet-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(33.33333% - 8px);
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.\31\/2--tablet-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 16px);
+	}
+
+    .\31\/3--tablet-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(33.33333% - 16px);
+	}
+}
+
+@media screen and (max-width: 1007px) {
+	.\31\/2--pocket.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 8px);
+	}
+	
+	.ProductList--grid .ContentItem__BlockContentWrapper--noMedia,
+	.ArticleList .ContentItem__BlockContentWrapper--noMedia {
+		margin-left: 8px;
+	}
+}
+
+@media screen and (min-width: 1008px) and (max-width: 1139px) {
+	.\31\/2--lap.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 32px);
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.\31\/4--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(25% - 32px);
+	}
+	
+	.\31\/3--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(33.33333% - 32px);
+	}
+	
+	.\31\/2--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 32px);
+	}
+	
+	.CollectionInner__Products .\31\/4--desk-and-up.ContentItem__BlockContentWrapper--noMedia,
+	.ArticleList .\31\/4--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(25% - 16px);
+	}
+	
+	.CollectionInner__Products .\31\/3--desk-and-up.ContentItem__BlockContentWrapper--noMedia,
+	.ArticleList .\31\/3--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(33.33333% - 16px);
+	}
+	
+	.CollectionInner__Products .\31\/2--desk-and-up.ContentItem__BlockContentWrapper--noMedia,
+	.ArticleList .\31\/2--desk-and-up.ContentItem__BlockContentWrapper--noMedia {
+	    width: calc(50% - 16px);
+	}
+}
+
+.ContentItem__BlockContent {
+    display: flex;
+    flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+}
+
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__BlockContent:not(.ContentItem__BlockContent--underLeft):not(.ContentItem__BlockContent--underCenter):not(.ContentItem__BlockContent--underRight) {
+	position: absolute;
+	padding: 32px 32px 32px 64px;
+	top: 0;
+	left: 0;
+}
+
+.Grid--withSpacer .ContentItem__BlockContentWrapper--noMedia {
+    border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: 370px;
+}
+
+@media screen and (max-width: 640px) {
+	.Grid--withSpacer .ContentItem__BlockContentWrapper--noMedia {
+		min-height: 320px;
+	}
+	
+	.Grid__Cell--spacer {
+	    margin-top: 50px;
+	    margin-bottom: 50px;
+	}
+}
+
+.ContentItem__BlockContent--topLeft,
+.ContentItem__BlockContent--middleLeft,
+.ContentItem__BlockContent--bottomLeft,
+.ContentItem__BlockContent--underLeft,
+.ContentItem__BlockContent--topLeft .ButtonGroup,
+.ContentItem__BlockContent--middleLeft .ButtonGroup,
+.ContentItem__BlockContent--bottomLeft .ButtonGroup,
+.ContentItem__BlockContent--underLeft .ButtonGroup {
+    justify-content: flex-start;
+}
+
+.ContentItem__BlockContent--topCenter,
+.ContentItem__BlockContent--middleCenter,
+.ContentItem__BlockContent--bottomCenter,
+.ContentItem__BlockContent--underCenter,
+.ContentItem__BlockContent--topCenter .ButtonGroup,
+.ContentItem__BlockContent--middleCenter .ButtonGroup,
+.ContentItem__BlockContent--bottomCenter .ButtonGroup,
+.ContentItem__BlockContent--underCenter .ButtonGroup {
+    justify-content: center;
+}
+
+.ContentItem__BlockContent--topCenter .SectionHeader > *,
+.ContentItem__BlockContent--middleCenter .SectionHeader > *,
+.ContentItem__BlockContent--bottomCenter .SectionHeader > *,
+.ContentItem__BlockContent--underCenter .SectionHeader > * {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ContentItem__BlockContent--topRight,
+.ContentItem__BlockContent--middleRight,
+.ContentItem__BlockContent--bottomRight,
+.ContentItem__BlockContent--underRight,
+.ContentItem__BlockContent--topRight .ButtonGroup,
+.ContentItem__BlockContent--middleRight .ButtonGroup,
+.ContentItem__BlockContent--bottomRight .ButtonGroup,
+.ContentItem__BlockContent--underRight .ButtonGroup {
+    justify-content: flex-end;
+}
+
+.ContentItem__BlockContent--topRight .SectionHeader > *,
+.ContentItem__BlockContent--middleRight .SectionHeader > *,
+.ContentItem__BlockContent--bottomRight .SectionHeader > *,
+.ContentItem__BlockContent--underRight .SectionHeader > * {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ContentItem__BlockContent--topLeft,
+.ContentItem__BlockContent--topCenter,
+.ContentItem__BlockContent--topRight {
+    align-content: flex-start;
+}
+
+.ContentItem__BlockContent--middleLeft,
+.ContentItem__BlockContent--middleCenter,
+.ContentItem__BlockContent--middleRight {
+    align-content: center;
+}
+
+.ContentItem__BlockContent--bottomLeft,
+.ContentItem__BlockContent--bottomCenter,
+.ContentItem__BlockContent--bottomRight {
+    align-content: flex-end;
+}
+
+.ContentItem__BlockContent--underLeft,
+.ContentItem__BlockContent--underCenter,
+.ContentItem__BlockContent--underRight {
+    height: auto;
+}
+
+
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__VideoContainer + .ContentItem__BlockContent--underLeft .SectionHeader,
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__VideoContainer + .ContentItem__BlockContent--underCenter .SectionHeader,
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__VideoContainer + .ContentItem__BlockContent--underRight .SectionHeader,
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__ImageContainer + .ContentItem__BlockContent--underLeft .SectionHeader,
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__ImageContainer + .ContentItem__BlockContent--underCenter .SectionHeader,
+.ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__ImageContainer + .ContentItem__BlockContent--underRight .SectionHeader {
+    margin-top: 20px;
+}
+
+.ContentItem__BlockContent--topLeft .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--middleLeft .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--bottomLeft .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--underLeft .SectionHeader__ImageWrapper {
+  margin-left: 0;
+}
+
+.ContentItem__BlockContent--topRight .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--middleRight .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--bottomRight .SectionHeader__ImageWrapper,
+.ContentItem__BlockContent--underRight .SectionHeader__ImageWrapper {
+  margin-right: 0;
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper {
+    margin-top: 0;
+	flex-grow: 0;
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__BlockContent:not(.ContentItem__BlockContent--underLeft):not(.ContentItem__BlockContent--underCenter):not(.ContentItem__BlockContent--underRight) {
+    padding: 16px 16px 16px 24px;
+}
+
+@media screen and (min-width: 1008px) {
+	.ProductList--grid .ContentItem__BlockContentWrapper:not(.ContentItem__BlockContentWrapper--noMedia) .ContentItem__BlockContent:not(.ContentItem__BlockContent--underLeft):not(.ContentItem__BlockContent--underCenter):not(.ContentItem__BlockContent--underRight) {
+	    padding: 32px 32px 32px 48px;
+	}
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__VideoContainer,
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__ImageContainer{
+    height: 100%;
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__VideoContainer video,
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__ImageContainer .ContentItem__Image {
+    object-fit: cover;
+}
+
+@media screen and (min-width: 1008px) {
+	.ProductList--grid .ContentItem__BlockContentWrapper--noMedia {
+		margin-left: 16px;
+	}
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__VideoContainer.AspectRatio:before, 
+.ProductList--grid .ContentItem__BlockContentWrapper .ContentItem__ImageContainer.AspectRatio:before {
+    padding: 0;
+}
+
+.ProductList--grid .ContentItem__BlockContentWrapper--noMedia {
+    min-height: 0;
+}
+
+.ContentItem__BlockContent .SectionHeader__Description {
+    max-width: none;
+}

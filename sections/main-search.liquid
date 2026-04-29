@@ -1,0 +1,826 @@
+{{ 'section-main-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+{{ 'component-content-item.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.show_layout_switch -%}
+  {%- assign desktop_items_per_row = cart.attributes.collection_desktop_items_per_row | default: section.settings.grid_desktop_items_per_row | times: 1 -%}
+  {%- assign mobile_items_per_row  = cart.attributes.collection_mobile_items_per_row | default: section.settings.grid_mobile_items_per_row | times: 1 -%}
+{%- else -%}
+  {%- assign desktop_items_per_row = section.settings.grid_desktop_items_per_row | times: 1 -%}
+  {%- assign mobile_items_per_row  = section.settings.grid_mobile_items_per_row | times: 1 -%}
+{%- endif -%}
+
+{%- assign viewMode = cart.attributes.collection_view_mode | default: 'flatlay' -%}
+
+{%- if desktop_items_per_row == 4 -%}
+  {%- assign tablet_items_per_row = 3 -%}
+{%- else -%}
+  {%- assign tablet_items_per_row = 2 -%}
+{%- endif -%}
+
+{%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
+{%- assign active_filters_count = 0 -%}
+
+{%- for filter in search.filters -%}
+  {%- if filter.type == 'list' -%}
+    {%- assign active_filters_count = active_filters_count | plus: filter.active_values.size -%}
+  {%- elsif filter.type == 'price_range' and filter.min_value.value or filter.max_value.value -%}
+    {%- assign active_filters_count = active_filters_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if section.settings.show_filters or section.settings.show_sort_by -%}
+	{%- assign hide_desktop_filters = cart.attributes.hide_desktop_filters | default: 'true' -%}
+{%- endif -%}
+
+{%- capture section_settings -%}
+{
+  "sectionId": {{ section.id | json }},
+  "filterPosition": {{ section.settings.filter_position | json }}
+}
+{%- endcapture -%}
+
+<section data-section-id="{{ section.id }}" data-section-type="collection" data-section-settings='{{ section_settings }}'>
+  {%- if search.performed == false or search.results_count == 0 -%}
+    <div class="EmptyState">
+      <div class="Container">
+        <h1 class="EmptyState__Title Heading u-h5">{{ 'search.general.title' | t }}</h1>
+
+        {%- if search.performed -%}
+          {%- assign filtered_terms = search.terms | replace: '*', '' -%}
+          <p>{{ 'search.general.no_results_with_terms' | t: terms: filtered_terms }}</p>
+        {%- else -%}
+          <p>{{ 'search.general.content' | t }}</p>
+        {%- endif -%}
+
+        <div class="EmptyState__Action" >
+          <form method="GET" action="{{ routes.search_url }}" class="Form">
+            <input class="Form__Input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="{{ 'search.general.input_placeholder' | t }}" placeholder="{{ 'search.general.input_placeholder' | t }}">
+            <input type="hidden" name="type" value="product">
+            <input type="hidden" name="options[prefix]" value="last">
+          </form>
+        </div>
+      </div>
+    </div>
+  {%- else -%}
+    {%- paginate search.results by section.settings.grid_items_per_page -%}
+      {%- if section.settings.show_header -%}
+		  <header class="PageHeader">
+	        <div class="Container">
+	          <div class="SectionHeader SectionHeader--center">
+	            <h1 class="SectionHeader__Heading Heading u-h3">{{ 'search.general.title' | t }}</h1>
+
+	            <div class="SectionHeader__Description">
+	              {%- assign filtered_terms = search.terms | replace: '*', '' -%}
+	              {{- 'search.general.results_with_terms_count' | t: count: search.results_count, terms: filtered_terms -}}
+	            </div>
+	          </div>
+	        </div>
+	      </header>
+	  {%- endif -%}
+
+      {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      COLLECTION TOOLBAR
+      --------------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+
+      {%- if search.results_count > 0 -%}
+        {%- assign show_filters = false -%}
+        {%- assign quick_links = linklists[section.settings.filter_menu] -%}
+
+        {%- if quick_links != blank or search.filters != empty and section.settings.show_filters -%}
+          {%- assign show_filters = true -%}
+        {%- endif -%}
+
+        {%- capture collection_toolbar -%}
+          {%- if search.types contains 'product' and show_filters or section.settings.show_sort_by or section.settings.show_layout_switch or section.settings.show_view_switch -%}
+		  	<div class="CollectionToolbar CollectionToolbar--{{ section.settings.toolbar_position }}">
+			  {%- if show_filters or section.settings.show_sort_by -%}
+	            <div class="CollectionToolbar__Group">
+                	<button class="CollectionToolbar__Item CollectionToolbar__Item--mobile CollectionToolbar__Item--filter Heading Heading--caps Heading--textFont u-h6 hidden-widescreen"
+	                        data-action="open-drawer"
+	                        data-drawer-id="collection-filter-drawer"
+	                        aria-label="{{ 'collection.filter.show_filter' | t }}">
+	                  	  	<strong>{{ 'collection.filter.title' | t }}</strong> {% if active_filters_count > 0 %}<span class="Text--highlight">({{ active_filters_count }})</span>{% endif %} {% if section.settings.show_sort_by %}<strong>& {{ 'collection.sorting.title' | t }}</strong>{% endif %} {%- render 'icon' with 'filter' -%}
+	                </button>
+					
+                	<button class="CollectionToolbar__Item CollectionToolbar__Item--filter Heading Heading--caps Heading--textFont u-h6 hidden-pocket hidden-lap hidden-desk"
+                        	data-action="toggle-filters"
+	                        aria-label="{{ 'collection.filter.show_filter' | t }}"
+							aria-expanded="{% if hide_desktop_filters == 'false' %}false{% else %}true{% endif %}"
+							>
+	                  	  	<strong>{{ 'collection.filter.title' | t }}</strong> {% if active_filters_count > 0 %}<span class="Text--highlight">({{ active_filters_count }})</span>{% endif %} {% if section.settings.show_sort_by %}<strong>& {{ 'collection.sorting.title' | t }}</strong>{% endif %} {%- render 'icon' with 'filter' -%}
+	                </button>
+	            </div>
+	          {%- endif -%}
+
+			  {%- if section.settings.show_layout_switch or section.settings.show_view_switch -%}
+			  	<div class="CollectionToolbar__Group mobile-justify-right">
+	  	          {%- if section.settings.show_view_switch -%}
+	  	            <div class="CollectionToolbar__Item CollectionToolbar__Item--layout CollectionToolbar__Item--mobile">
+	  	              <div class="CollectionToolbar__ViewSwitch">
+	  					<div class="Heading Heading--caps Heading--textFont u-h6"><strong>View</strong></div>  
+	  	                <button aria-label="Flatlay View" class="CollectionToolbar__LayoutType {% if viewMode == 'flatlay' %}is-active{% endif %}" data-action="change-view-mode" data-view-type="flatlay">Flatlay</button>
+	  					<button aria-label="Model View" class="CollectionToolbar__LayoutType {% if viewMode == 'model' %}is-active{% endif %}" data-action="change-view-mode" data-view-type="model">Model</button>
+	  	              </div>
+	  	            </div>
+	  	          {%- endif -%}
+			  
+	  	          {%- if section.settings.show_layout_switch -%}
+	                <div class="CollectionToolbar__Item CollectionToolbar__Item--layout hidden-pocket hidden-lap">
+	              	  <div class="CollectionToolbar__LayoutSwitch">
+		                <button aria-label="{{ 'collection.layout.show_four_per_row' | t }}" class="CollectionToolbar__LayoutType {% if desktop_items_per_row == 3 %}is-active{% endif %}" data-action="change-layout-mode" data-grid-type="desktop" data-count="3">{% render 'icon' with 'wall-4' %}</button>
+						<button aria-label="{{ 'collection.layout.show_four_per_row' | t }}" class="CollectionToolbar__LayoutType {% if desktop_items_per_row == 4 %}is-active{% endif %}" data-action="change-layout-mode" data-grid-type="desktop" data-count="4">{% render 'icon' with 'wall-3' %}</button>
+		              </div>
+	                </div>
+	  	          {%- endif -%}	
+			  	</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        FILTERS AND SORT BY POPOVER
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+
+        {%- if show_filters -%}
+          {%- comment -%}
+            Implementation note: the filters can be displayed in two different ways: in a sidebar menu, always visible, or in a drawer. Due to that, we are
+            setting the general code here, and then we will output it twice.
+          {%- endcomment -%}
+
+          {%- assign quick_links = linklists[section.settings.filter_menu] -%}
+
+          {%- capture filters_content -%}
+            <input type="hidden" name="sort_by" value="{{ search.sort_by | default: search.default_sort_by }}">
+            <input type="hidden" name="q" value="{{ search.terms | escape }}">
+            <input type="hidden" name="type" value="product">
+
+            {%- if quick_links != empty -%}
+              <div class="Collapsible {% if section.settings.expand_filters %}Collapsible--autoExpand{% endif %}" data-filter-index="{% increment filter_index %}">
+                <button type="button" class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+                  {{- quick_links.title | escape -}} <span class="Collapsible__Plus"></span>
+                </button>
+
+                <div class="Collapsible__Inner">
+                  <div class="Collapsible__Content">
+                    <ul class="Linklist">
+                      {%- for link in quick_links.links -%}
+                        <li class="Linklist__Item {% if link.active %}is-selected{% endif %}">
+                          <a href="{{ link.url }}" class="Link Link--primary {% if link.active %}is-active{% endif %}">{{ link.title | escape }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.show_filters and search.filters != empty -%}
+              {%- assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
+			  <h4 class="Heading Heading--caps Heading--textFont u-h6 hidden-widescreen"><strong>Filter</strong></h4>
+			  
+              {%- for filter in search.filters -%}
+			  	{%- assign filterResultCount = 0 -%}
+				{%- assign filterHtml = '' -%}
+				
+				{%- capture filterHtml -%}
+                    <div class="Collapsible__Inner">
+                      <div class="Collapsible__Content">
+                        <ul class="{% if section.settings.show_filter_color_swatch and color_label contains downcase_filter_label %}ColorSwatchList HorizontalList HorizontalList--spacingTight{% else %}Linklist{% endif %}">
+                          {%- if section.settings.show_filter_color_swatch and color_label contains downcase_filter_label -%}
+                            {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+                            {%- for filter_value in filter.values -%}
+                              {%- assign filterResultCount = filterResultCount | plus: filter_value.count -%}
+							  {%- if filter_value.active -%}
+								{%- assign filterResultCount = filterResultCount | plus: 1 -%}
+							  {%- endif -%}
+							  <li class="HorizontalList__Item {% if filter_value.count == 0 and filter_value.active %}Filter_NoValueActive{% elsif filter_value.count == 0 %}Filter_NoValue{% endif %}">
+                                {%- capture filter_value_id -%}@@@@-{{ filter_value.param_name | append: filter_value.value | handle }}{%- endcapture -%}
+                                <input id="{{ filter_value_id | escape }}" class="ColorSwatch__Radio" type="checkbox" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}" {% if filter_value.active %}checked="checked"{% endif %}>
+
+                                <label for="{{ filter_value_id | escape }}" class="ColorSwatch" data-tooltip="{{ filter_value.label | escape }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: filter_value.label %}">
+                                  <span class="u-visually-hidden">{{ filter_value.label }}</span>
+                                </label>
+                              </li>
+                            {%- endfor -%}
+                          {%- else -%}
+                            {%- if filter.type == 'list' -%}
+                              {%- for filter_value in filter.values -%}
+                                {%- capture filter_value_id -%}@@@@-{{ filter_value.param_name | append: filter_value.value | handle }}{%- endcapture -%}
+								{%- assign filterResultCount = filterResultCount | plus: filter_value.count -%}
+								{%- if filter_value.active -%}
+                                  {%- assign filterResultCount = filterResultCount | plus: 1 -%}
+								{%- endif -%}
+                                <li class="Linklist__Item {% if filter_value.count == 0 and filter_value.active %}Filter_NoValueActive{% elsif filter_value.count == 0 %}Filter_NoValue{% endif %}">
+                                  <input class="Linklist__Checkbox u-visually-hidden" id="{{ filter_value_id | escape }}" type="checkbox" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}" {% if filter_value.active %}checked{% endif %}>
+                                  <label for="{{ filter_value_id | escape }}" class="Link Link--primary">
+                                    {{- filter_value.label }} ({{ filter_value.count -}})
+                                  </label>
+                                </li>
+                              {%- endfor -%}
+                            {%- elsif filter.type == 'price_range' -%}
+                              {%- assign filterResultCount = filterResultCount | plus: 1 -%}
+                              <price-range class="price-range">
+                                {%- assign min_value = filter.min_value.value | default: 0.0 | divided_by: 100.0 -%}
+                                {%- assign max_value = filter.max_value.value | default: filter.range_max | divided_by: 100.0 -%}
+                                {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
+
+                                {% assign lower_bound_progress = min_value | divided_by: range_max | times: 100.0 %}
+                                {% assign higher_bound_progress = max_value | divided_by: range_max | times: 100.0 %}
+
+                                <div class="price-range__range-group range-group" style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%">
+                                  <input type="range" aria-label="{{ 'collection.filter.price_filter_from' | t }}" class="range" min="0" max="{{ range_max | ceil }}" value="{{ min_value | ceil }}">
+                                  <input type="range" aria-label="{{ 'collection.filter.price_filter_to' | t }}" class="range" min="0" max="{{ range_max | ceil }}" value="{{ max_value | ceil }}">
+                                </div>
+
+                                <div class="price-range__input-group">
+                                  <div class="price-range__input input-prefix text--xsmall">
+                                    <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                    <input aria-label="{{ 'collection.filter.price_filter_from' | t }}" class="input-prefix__field" type="number" inputmode="numeric" {% if filter.min_value.value %}value="{{ min_value | ceil }}"{% endif %} name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name | handle }}" min="0" max="{{ max_value | ceil }}" placeholder="0">
+                                  </div>
+
+                                  <span class="price-range__delimiter text--small">-</span>
+
+                                  <div class="price-range__input input-prefix text--xsmall">
+                                    <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                    <input aria-label="{{ 'collection.filter.price_filter_to' | t }}" class="input-prefix__field" type="number" inputmode="numeric" {% if filter.max_value.value %}value="{{ max_value | ceil }}"{% endif %} name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name | handle }}" min="{{ min_value | ceil }}" max="{{ range_max | ceil }}" placeholder="{{ range_max | ceil }}">
+                                  </div>
+                                </div>
+                              </price-range>
+                            {%- endif -%}
+                          {%- endif -%}
+                        </ul>
+                      </div>
+                    </div>
+				{%- endcapture -%}
+				
+				{%- if filterHtml != blank and filterResultCount > 0 -%}  
+	                {%- assign downcase_filter_label = filter.label | downcase -%}
+					{%- if downcase_filter_label == 'group' or filter.values.size == 1 -%}{%- continue -%}{%- endif -%}
+	                <div class="Collapsible {% if section.settings.expand_filters %}Collapsible--autoExpand{% endif %}" data-filter-index="{{ downcase_filter_label | handle }}">
+	                  {%- if filter.type == 'boolean' -%}
+	                    <div class="Collapsible__Button BooleanFilter">
+	                      <label for="{{ filter.param_name }}" class="Heading u-h6">{{- filter.label -}}</label>
+	                      <input id="{{ filter.param_name }}" type="checkbox" class="switch-checkbox" name="{{ filter.param_name }}" value="1" {% if filter.true_value.active %}checked{% endif %}>
+	                    </div>
+	                  {%- else -%}
+	                    <button type="button" class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	                      {{- filter.label -}} <span class="Collapsible__Plus"></span>
+	                    </button>
+	                  {%- endif -%}
+					  {{ filterHtml }}
+		            </div>
+				{%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+
+            <input type="hidden" name="sort_by" value="{{ sort_by }}">
+          {%- endcapture -%}
+
+          <div id="collection-filter-drawer" class="CollectionFilters Drawer Drawer--fromRight" aria-hidden="true">
+            <header class="Drawer__Header">
+              <button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="collection-filter-drawer" aria-label="{{ 'header.navigation.close_sidebar' | t }}">
+                {%- render 'icon' with 'close' -%}
+              </button>
+            </header>
+
+            <div class="Drawer__Content">
+              <div class="Drawer__Main" data-scrollable>
+                <form id="collection-filters-drawer-form" class="collection-filters-form">
+					<div class="Drawer__Container">
+						{{ filters_content | replace: '@@@@', 'drawer' }}
+						
+		                {%- if active_filters_count > 0 -%}
+		                  <button type="button" class="CollectionFilters__ClearButton Link Link--underline" data-action="clear-filters" data-url="{{ collection.url }}?sort_by={{ sort_by }}">{{ 'collection.filter.reset' | t }}</button>
+		                {%- endif -%}
+					</div>
+                </form>
+              </div>
+	          <div class="Drawer__Footer Drawer__Footer--padded" data-drawer-animated-bottom>
+	            <div class="ButtonGroup">
+	              <button type="button" class="ButtonGroup__Item ButtonGroup__Item--expand Button Button--primary" data-action="close-drawer" data-drawer-id="collection-filter-drawer">{{ 'collection.filter.apply' | t }}</button>
+	            </div>
+	          </div>
+            </div>
+          </div>
+        {%- endif -%}
+		
+        {%- if section.settings.show_sort_by and section.settings.filter_position != 'sidebar' and search.types contains 'product' -%}
+          <div id="collection-sort-popover" class="Popover" aria-hidden="true">
+            <header class="Popover__Header">
+              <button class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
+              <span class="Popover__Title Heading u-h4">{{ 'collection.sorting.title' | t }}</span>
+            </header>
+
+            <div class="Popover__Content">
+              <div class="Popover__ValueList" data-scrollable>
+                {% assign search_sort_by = search.sort_by | default: search.default_sort_by %}
+
+                {%- for option in search.sort_options -%}
+                  <button class="Popover__Value {% if option.value == search_sort_by %}is-selected{% endif %} Heading Link Link--primary u-h6" data-value="{{ option.value }}" data-action="select-value">
+                    {{ option.name }}
+                  </button>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if search.types contains 'product' -%}
+        <div class="CollectionMain">
+          {%- if section.settings.toolbar_position == 'top' -%}
+            {{- collection_toolbar -}}
+          {%- endif -%}
+		  
+		  <div class="Container">
+	          <div class="CollectionInner Grid {% if hide_desktop_filters == 'true' %}hideDesktopFilter{% endif %}">
+	            {%- if show_filters and section.settings.filter_position == 'sidebar' -%}
+	              <div class="CollectionInner__Sidebar Grid__Cell hidden-pocket hidden-lap hidden-desk 2/16--widescreen {% if collection_toolbar != blank and section.settings.toolbar_position == 'top' %}CollectionInner__Sidebar--withTopToolbar{% endif %}">
+	                <div class="CollectionFilters">
+	                  <form id="collection-filters-sidebar-form" class="collection-filters-form">
+	                    {{ filters_content | replace: '@@@@', 'sidebar' }}
+
+	                    {%- if active_filters_count > 0 -%}
+	                      <button type="button" class="CollectionFilters__ClearButton Link Link--underline" data-action="clear-filters" data-url="{{ routes.search_url }}?sort_by={{ sort_by }}&q={{ search.terms | escape }}&type=product&options[prefix]=last">{{ 'collection.filter.reset' | t }}</button>
+	                    {%- endif -%}
+	                  </form>
+	                </div>
+	              </div>
+	  			{%- else -%} 
+	    	          <div class="CollectionInner__Sidebar Grid__Cell hidden-pocket hidden-lap hidden-desk 2/16--widescreen {% if collection_toolbar != blank and section.settings.toolbar_position == 'top' %}CollectionInner__Sidebar--withTopToolbar{% endif %}"></div>
+	  	        {%- endif -%}
+
+		        <div class="CollectionInner__Products Grid__Cell 12/16--widescreen">
+	              <div class="ProductListWrapper">
+	                <div class="ProductList ProductList--grid {% if paginate.pages > 1 %}ProductList--removeMargin{% endif %} Grid" data-mobile-count="{{ mobile_items_per_row }}" data-desktop-count="{{ desktop_items_per_row }}" data-view-type="{{ viewMode }}">
+                  
+			  		  {%- assign disruptorTilePositions = section.settings.disruptor_tile_positions | split: ',' -%}
+					  {%- assign phoneWidth = '1/' | append: mobile_items_per_row -%}
+					  {%- assign tabletWidth = '1/' | append: tablet_items_per_row -%}
+					  {%- assign deskWidth = '1/' | append: desktop_items_per_row -%}
+		  
+			  		  {%- assign parentForLoopIndex = paginate.current_offset | plus: 1 -%}
+			  		  {%- assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip -%}
+				  
+					  {%- for result in search.results -%}
+					  
+						{%- if disruptorTilePositions contains parentForLoopIndexString -%}
+							{%- for disruptorTilePosition in disruptorTilePositions -%}
+								{%- if disruptorTilePosition == parentForLoopIndexString -%}
+									{%- assign disruptorBlock = section.blocks[forloop.index0] -%}
+									{%- break -%}
+								{%- endif -%}
+							{%- endfor -%}
+				
+			  				{%- if disruptorBlock != blank -%}
+								{%- capture disruptorBlockContent -%}
+			  						{%- render 'content-item', block: disruptorBlock, forloop: forloop.index, phoneWidth: phoneWidth, tabletWidth: tabletWidth, deskWidth: deskWidth, layout: 'mediaFirst', include_no_media_border: disruptorBlock.settings.include_no_media_border -%}
+								{%- endcapture -%}
+								{%- if disruptorBlockContent != blank -%}
+									{{ disruptorBlockContent }}
+									{%- assign parentForLoopIndex = parentForLoopIndex | plus: 1 -%}
+									{%- assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip -%}
+								{%- endif -%}
+			  				{%- endif -%}
+						{%- endif -%}
+						
+	                    <div class="Grid__Cell 1/{{ mobile_items_per_row }}--phone 1/{{ tablet_items_per_row }}--tablet-and-up 1/{{ desktop_items_per_row }}--{% if section.settings.filter_position == 'drawer' %}lap-and-up{% else %}desk-and-up{% endif %}">
+			              {%- liquid
+							  if forloop.first
+							  	assign preload = true
+							  else
+							    assign preload = false
+							  endif
+			              -%}
+						  {%- render 'product-item', product: result, show_product_info: true, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true, preload: preload -%}
+						  
+						  {%- assign parentForLoopIndex = parentForLoopIndex | plus: 1 -%}
+						  {%- assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip -%}
+	                    </div>
+					
+	                  {%- endfor -%}
+	                </div>
+	              </div>
+
+	            </div>
+			
+		        {%- if section.settings.show_sort_by and section.settings.filter_position == 'sidebar' -%}
+		          <div class="CollectionInner__Sidebar CollectionInner__Sidebar--right Grid__Cell hidden-pocket hidden-lap hidden-desk 2/16--widescreen {% if collection_toolbar != blank and section.settings.toolbar_position == 'top' %}CollectionInner__Sidebar--withTopToolbar{% endif %}">
+		          
+            
+		          </div>
+	    			{%- else -%} 
+	      	          <div class="CollectionInner__Sidebar CollectionInner__Sidebar--right Grid__Cell hidden-pocket hidden-lap hidden-desk 2/16--widescreen {% if collection_toolbar != blank and section.settings.toolbar_position == 'top' %}CollectionInner__Sidebar--withTopToolbar{% endif %}"></div>
+	    	        {%- endif -%}
+			
+	          </div>
+		  </div>
+
+          {%- if section.settings.toolbar_position == 'bottom' -%}
+            {{- collection_toolbar -}}
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <div class="ArticleListWrapper">
+          <div class="ArticleList Grid Grid--m">
+            {%- for result in search.results -%}
+              <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+                {%- if result.object_type == 'article' -%}
+                  {%- render 'article-item', article: result, hide_category_mobile: true -%}
+                {%- elsif result.object_type == 'page' -%}
+                  <article class="ArticleItem">
+                    <div class="ArticleItem__Content">
+                      <h2 class="ArticleItem__Title Heading u-h2">
+                        <a href="{{ result.url }}">{{ result.title }}</a>
+                      </h2>
+
+                      <p class="ArticleItem__Excerpt">{{ result.content | strip_html | truncate: 150 }}</p>
+                      <a href="{{ result.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                    </div>
+                  </article>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endpaginate -%}
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Search",
+  "settings": [
+    {
+      "type": "text",
+      "id": "disruptor_tile_positions",
+      "label": "Disrupter tile positions",
+	  "default": "10,22"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header",
+      "label": "Show header",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_swatch",
+      "label": "Show color swatch",
+      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Toolbar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sort_by",
+      "label": "Show sort by",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_layout_switch",
+      "label": "Show layout switch"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_switch",
+      "label": "Show view switch"
+    },
+    {
+      "type": "select",
+      "id": "toolbar_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "header",
+      "content": "Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filters",
+      "label": "Show filters",
+      "info": "[Customize filters](/admin/menus)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_color_swatch",
+      "label": "Show filter color swatch",
+      "info": "Transform color filters to swatches.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "expand_filters",
+      "label": "Expand filters on desktop",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "filter_position",
+      "label": "Desktop position",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "Sidebar"
+        },
+        {
+          "value": "drawer",
+          "label": "Drawer"
+        }
+      ],
+      "default": "sidebar"
+    },
+    {
+      "type": "link_list",
+      "id": "filter_menu",
+      "label": "Quick links",
+      "info": "This menu won't show dropdown items."
+    },
+    {
+      "type": "header",
+      "content": "Grid"
+    },
+    {
+      "type": "range",
+      "id": "grid_items_per_page",
+      "label": "Products per page",
+      "min": 4,
+      "max": 48,
+      "step": 4,
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "grid_mobile_items_per_row",
+      "label": "Products per row (mobile)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "min": 2,
+      "max": 4,
+      "id": "grid_desktop_items_per_row",
+      "label": "Products per row (desktop)",
+      "default": 4
+    }
+  ],
+  "blocks": [
+	{
+      "type": "disruptor",
+      "name": "Disrupter tile",
+      "settings": [
+	    {
+	      "type": "header",
+	      "content": "Video"
+	    },
+	    {
+	      "type": "paragraph",
+	      "content": "Video takes precedence over images."
+	    },
+		{
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        },
+	    {
+	      "type": "header",
+	      "content": "Image"
+	    },
+		{
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+	    {
+	      "type": "header",
+	      "content": "General settings"
+	    },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background colour",
+          "default": "#fff"
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "topLeft",
+              "label": "Top left"
+            },
+            {
+              "value": "topRight",
+              "label": "Top right"
+            },
+            {
+              "value": "topCenter",
+              "label": "Top center"
+            },
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "underLeft",
+              "label": "Under left"
+            },
+            {
+              "value": "underRight",
+              "label": "Under right"
+            },
+            {
+              "value": "underCenter",
+              "label": "Under center"
+            }
+          ],
+          "default": "underLeft"
+        },
+	    {
+	      "type": "header",
+	      "content": "Text"
+	    },
+	    {
+	      "type": "image_picker",
+	      "id": "logo_image",
+	      "label": "Title image",
+	      "info": "1800 x 800px .jpg recommended"
+	    },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "<p>Sub-heading</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Heading",
+          "default": "<p>Heading</p>"
+        },
+	    {
+	      "type": "richtext",
+	      "id": "description",
+	      "label": "Description"
+	    },
+	    {
+	      "type": "richtext",
+	      "id": "description_mobile",
+	      "label": "Description - mobile"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Text Settings"
+	    },
+		{
+	      "type": "select",
+	      "id": "colour_style",
+	      "label": "Colour style",
+	      "options": [
+	        {
+	          "value": "light",
+	          "label": "Light"
+	        },
+	        {
+	          "value": "dark",
+	          "label": "Dark"
+	        }
+	      ],
+	      "default": "dark",
+		  "info": "Sets the text and button colour."
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 1"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_1_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "button_style",
+	      "label": "Button style",
+	      "options": [
+	        {
+	          "value": "underline",
+	          "label": "Text underline"
+	        },
+	        {
+	          "value": "secondary",
+	          "label": "Secondary Button"
+	        },
+	        {
+	          "value": "primary",
+	          "label": "Primary Button"
+	        }
+	      ],
+	      "default": "underline",
+		  "info": "Sets the style for the button."
+	    },
+        {
+          "type": "checkbox",
+          "id": "include_no_media_border",
+          "label": "Apply border to tile when no media is set",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

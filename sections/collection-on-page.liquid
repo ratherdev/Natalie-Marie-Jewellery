@@ -1,0 +1,299 @@
+{{ 'section-main-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+{{ 'component-content-item.css' | asset_url | stylesheet_tag }}
+
+{% assign custom_collection = collections[section.settings.collection] %}
+
+<style>
+.ContentItem__BlockContentWrapper.Grid__Cell.\31 \/2--phone.\31 \/4--tablet-and-up.\31 \/4--desk-and-up {
+  border: 1px solid var(--border-color);
+}
+.SectionHeader__Description h2 {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+.ContentItem__BlockContent.ContentItem__BlockContent--middle_left.ColourStyle-- {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+</style>
+
+{% if custom_collection %}
+
+{%- paginate custom_collection.products by section.settings.grid_items_per_page -%}
+
+{% assign disruptorTilePositions = section.settings.disruptor_tile_positions | split: ',' %}
+{% assign parentForLoopIndex = paginate.current_offset | plus: 1 %}
+{% assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip %}
+
+{% assign phoneWidth  = '1/' | append: section.settings.mobile_items_per_row %}
+{% assign tabletWidth = '1/' | append: section.settings.tablet_items_per_row %}
+{% assign deskWidth   = '1/' | append: section.settings.desktop_items_per_row %}
+
+<div class="Container">
+
+  {%- comment -%} ✅ FIXED CONDITION HERE {%- endcomment -%}
+  {% if custom_collection and custom_collection.products.size > 0 %}
+
+    <div class="ProductListWrapper CollectionInner__Products">
+      <div class="ProductList ProductList--grid Grid"
+        data-mobile-count="{{ section.settings.mobile_items_per_row }}"
+        data-desktop-count="{{ section.settings.desktop_items_per_row }}">
+
+        {% for product in custom_collection.products %}
+
+          {%- comment -%} Insert Disrupter Tile {%- endcomment -%}
+          {% if disruptorTilePositions contains parentForLoopIndexString %}
+            {% for block in section.blocks %}
+              {% if block.type == 'disruptor_tile' %}
+                
+                {% capture disruptorBlockContent %}
+                  {% render 'content-item',
+                    block: block,
+                    forloop: forloop.index,
+                    phoneWidth: phoneWidth,
+                    tabletWidth: tabletWidth,
+                    deskWidth: deskWidth,
+                    layout: 'mediaFirst',
+                    devices: block.settings.devices,
+                    include_no_media_border: block.settings.include_no_media_border
+                  %}
+                {% endcapture %}
+
+                {{ disruptorBlockContent }}
+
+                {% assign parentForLoopIndex = parentForLoopIndex | plus: 1 %}
+                {% assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          <div class="
+            Grid__Cell 
+            1/{{ section.settings.mobile_items_per_row }}--phone
+            1/{{ section.settings.tablet_items_per_row }}--tablet-and-up
+            1/{{ section.settings.desktop_items_per_row }}--desk">
+
+            {% liquid
+              if forloop.first
+                assign preload = true
+              else
+                assign preload = false
+              endif
+            %}
+
+            {% render 'product-item',
+              product: product,
+              show_product_info: true,
+              show_vendor: section.settings.show_vendor,
+              show_color_swatch: section.settings.show_color_swatch,
+              show_labels: true,
+              preload: preload
+            %}
+
+          </div>
+
+          {% assign parentForLoopIndex = parentForLoopIndex | plus: 1 %}
+          {% assign parentForLoopIndexString = parentForLoopIndex | append: '' | strip %}
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+    {% if paginate.pages > 1 %}
+      {% render 'pagination', paginate: paginate %}
+    {% endif %}
+
+  {% endif %}
+
+</div>
+
+{%- endpaginate -%}
+
+{% endif %}
+{% schema %}
+{
+  "name": "Collection with Disrupter",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select collection"
+    },
+    {
+      "type": "range",
+      "id": "grid_items_per_page",
+      "label": "Products per page",
+      "min": 4,
+      "max": 48,
+      "step": 4,
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "disruptor_tile_positions",
+      "label": "Disrupter tile positions",
+      "info": "Comma separated (example: 3,8,13)",
+      "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "mobile_items_per_row",
+      "label": "Mobile per row",
+      "default": "2",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tablet_items_per_row",
+      "label": "Tablet per row",
+      "default": "3",
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "desktop_items_per_row",
+      "label": "Desktop per row",
+      "default": "4",
+      "options": [
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_swatch",
+      "label": "Show color swatches",
+      "default": true
+    }
+  ],
+  "blocks": [
+  {
+    "type": "disruptor_tile",
+    "name": "Disrupter tile",
+    "settings": [
+
+      {
+        "type": "select",
+        "id": "devices",
+        "label": "Devices",
+        "options": [
+          { "value": "all", "label": "Mobile & Desktop" },
+          { "value": "desktop", "label": "Desktop only" },
+          { "value": "mobile", "label": "Mobile only" }
+        ],
+        "default": "all"
+      },
+
+      {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay video",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "loop",
+        "label": "Loop video",
+        "default": false
+      },
+
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background colour",
+        "default": "#F8F6F2"
+      },
+
+      {
+        "type": "checkbox",
+        "id": "overlay",
+        "label": "Apply overlay on image",
+        "default": false
+      },
+
+      {
+        "type": "select",
+        "id": "content_position",
+        "label": "Content position",
+        "options": [
+          { "value": "top_left", "label": "Top left" },
+          { "value": "top_center", "label": "Top center" },
+          { "value": "top_right", "label": "Top right" },
+          { "value": "middle_left", "label": "Middle left" },
+          { "value": "middle_center", "label": "Middle center" },
+          { "value": "middle_right", "label": "Middle right" },
+          { "value": "bottom_left", "label": "Bottom left" },
+          { "value": "bottom_center", "label": "Bottom center" },
+          { "value": "bottom_right", "label": "Bottom right" }
+        ],
+        "default": "middle_left"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "title_image",
+        "label": "Title image"
+      },
+
+      {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "Sub-heading"
+      },
+
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading"
+      },
+
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+
+      {
+        "type": "richtext",
+        "id": "description_mobile",
+        "label": "Description - mobile"
+      }
+    ]
+  }
+],
+  "presets": [
+    {
+      "name": "Collection with Disrupter"
+    }
+  ]
+}
+{% endschema %}

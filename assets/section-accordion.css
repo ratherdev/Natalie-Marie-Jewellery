@@ -1,0 +1,17 @@
+.Accordion__Section {
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+.Accordion__Section + .Collapsible .Collapsible__Button {
+    padding-top: 0;
+}
+
+.Accordion__ImageWrapper {
+	margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.Accordion__Section.Heading:first-child {
+    margin-top: -20px;
+}

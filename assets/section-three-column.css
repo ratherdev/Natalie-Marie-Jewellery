@@ -1,0 +1,22 @@
+.ThreeColumn__Content .ButtonGroup {
+  justify-content: flex-start;
+}
+
+.ThreeColumn__ContentWrapper--center {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1007px) {
+	.ThreeColumn .ThreeColumn__ContentWrapper {
+	    margin-bottom: 60px;
+	}
+	
+	.ThreeColumn .u-h2 {
+	    font-size: 30px;
+	}
+}
+
+.ThreeColumn__VideoContainer + .ContentItem__BlockContent {
+    padding: 0 !important;
+}

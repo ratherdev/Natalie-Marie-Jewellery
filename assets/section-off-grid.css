@@ -1,0 +1,88 @@
+.OffGrid--content_3 {
+    position: relative;
+	padding-top: 25%;
+    left: 6.25%;
+    z-index: 1;
+}
+
+.OffGrid--content_4 {
+    position: relative;
+}
+
+.OffGrid--content_4 > * {
+   position: relative;
+}
+
+@media screen and (max-width: 1007px) {
+	.OffGrid--content_3 > * {
+		width: calc(125% + 8px);
+	}
+	
+	.OffGrid--content_4 {
+	    padding-top: 20px;
+	}
+	
+	.OffGrid--content_5 {
+	    padding-top: 8.33333%;
+	}
+
+	.OffGrid--content_6 {
+	    padding-top: 33.33333%;
+	}
+
+	.OffGrid--content_7 {
+		padding-top: 16.66667%;
+	}
+}
+
+.OffGrid--content_1 {
+    padding-top: 8.33333%;
+}
+
+@media screen and (min-width: 1008px) {
+	.OffGrid--content_1 {
+	    padding-top: 16.66667%;
+	}
+
+	.OffGrid--content_2 {
+	    position: relative;
+	    padding-top: 8.33333%;
+	    left: 8.33333%;
+	    z-index: 1;
+	}
+
+	.OffGrid--content_3 {
+		padding-top: 8.33333%;
+	    left: 16.66667%;
+	}
+	
+	.OffGrid--content_4 {
+	    margin-bottom: -8.33333%;
+	}
+	
+	.OffGrid--content_4 > * {
+	   width: calc(150% + 8px);
+	   top: -16.66667%;
+	   left: -8.33333%;
+	}
+
+	.OffGrid--content_6 {
+	   padding-top: 25%;
+	}
+
+	.OffGrid--content_7 {
+		padding-top: 16.66667%;
+	    left: calc(8.33333% + 16px);
+	    position: relative;
+	}
+}
+
+.OffGrid__Content .ButtonGroup--spacingSmall {
+	justify-content: flex-start;
+}
+
+.OffGrid__ImageContainer + .u-h6,
+.OffGrid__VideoContainer + .u-h6 {
+	margin-top: 10px;
+}
+	

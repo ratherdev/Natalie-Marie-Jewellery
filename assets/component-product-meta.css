@@ -1,0 +1,113 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product meta and info
+ * ----------------------------------------------------------------------------
+ */
+.ProductMeta {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.ProductMeta__ImageWrapper {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.ProductMeta__Vendor {
+  margin-bottom: 20px;
+}
+
+.ProductMeta__Title {
+  margin-bottom: 0;
+}
+
+.ProductMeta__PriceList {
+  margin-top: 15px;
+}
+
+.ProductMeta__Price.Price--compareAt {
+  margin-left: 10px;
+}
+
+.ProductMeta__UnitPriceMeasurement {
+  margin-top: 5px;
+}
+
+shopify-payment-terms {
+  display: block;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.ProductMeta__TaxNotice {
+  margin-top: 5px;
+}
+
+.ProductMeta__Description,
+.ProductMeta__Text,
+.ProductMeta__ProductionTime {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.ProductMeta__ProductionTime {
+  color: var(--link-color);
+  margin-bottom: 20px;
+}
+
+.ProductMeta__Rating {
+  margin-top: 4px;
+}
+
+.ProductMeta__ShareButtons {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.ProductMeta__ShareTitle {
+  margin-right: 6px;
+}
+
+.ProductMeta__ShareList {
+  font-size: 0;
+}
+
+.ProductMeta__ShareItem {
+  display: inline-block;
+  margin: 0 7px;
+}
+.ProductMeta__ShareItem svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+.ProductMeta__ShareItem:hover svg {
+  opacity: 1;
+}
+
+/* When the description is set after the product form, layout changes a bit */
+.ProductForm ~ .ProductMeta__Description {
+  border-top: none;
+  padding-top: 0;
+}
+.ProductForm ~ .ProductMeta__Description .ProductMeta__ShareButtons {
+  margin-bottom: 2px;
+}
+
+.ProductMeta__PaymentOptions {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.ProductMeta > *:has(+ .ProductMeta__PaymentOptions) {
+    display: inline-block;
+}
+
+.ProductMeta__LabelList {
+    margin-bottom: 20px;
+	display: flex;
+    flex-direction: column;
+}

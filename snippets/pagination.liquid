@@ -1,0 +1,49 @@
+{%- if paginate.pages > 1 -%}
+	{% liquid
+		assign paginateFrom = paginate.current_offset | plus: 1
+		assign paginatePages = paginate.pages | times: 1.00
+		assign paginateProgress = paginate.current_page | divided_by: paginatePages
+		if paginate.current_page == paginate.pages
+			assign paginateTo = paginate.items
+		else
+			assign paginateTo = paginate.current_page | times: paginate.page_size
+		endif
+	%}
+	<div class="Pagination {% if tight %}Pagination--tight{% endif %}">
+		<div class="Pagination__Nav">
+			<div class="Pagination__NavTitle ">
+				Showing {{ paginateFrom }} - {{ paginateTo }} of {{ paginate.items }} items
+			</div>
+		
+			<div class="Pagination__NavScrollerWrapper">
+				<div class="Pagination__NavScrollerProgress" style="width: {{ paginateProgress | times: 100 }}%"></div>
+			</div>
+			
+			<div class="Pagination__NavParts Heading--textFont">
+				{%- for part in paginate.parts -%}
+					{%- if part.is_link -%}
+						<a href="{{ part.url | remove: 'view=ajax' }}{{ hash }}" class="Pagination__NavItem Link Link--primary" title="{{ 'general.pagination.go_to_page' | t: page: part.title }}">{{ part.title }}</a>
+					{%- else -%}
+						<span class="Pagination__NavItem {% if part.title == paginate.current_page %}is-active{% endif %}">{{ part.title }}</span>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+			
+			{%- if paginate.previous or paginate.next -%}
+				<div class="Pagination__NavFooter Heading--textFont">
+					{%- if paginate.previous -%}
+						<a class="Link Link--underline" rel="prev" title="{{ 'general.pagination.previous_page' | t }}" href="{{ paginate.previous.url | remove: 'view=ajax' }}{{ hash }}">
+							Previous page
+						</a>
+					{%- endif -%}
+
+					{%- if paginate.next -%}
+						<a class="Link Link--underline" rel="next" title="{{ 'general.pagination.next_page' | t }}" href="{{ paginate.next.url | remove: 'view=ajax' }}{{ hash }}">
+							Next Page
+						</a>
+					{%- endif -%}
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+{%- endif -%}

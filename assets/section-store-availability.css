@@ -1,0 +1,73 @@
+.store-availability-container {
+  margin-top: 30px;
+}
+
+.store-availability-information {
+  display: flex;
+  align-items: baseline;
+}
+
+.Icon--store-availability-in-stock {
+  position: relative;
+  width: 13px;
+  height: 9px;
+}
+
+.Icon--store-availability-out-of-stock {
+  position: relative;
+  width: 11px;
+  height: 10px;
+}
+
+.store-availability-information-container {
+  margin-left: 6px;
+}
+
+.store-availability-information__title {
+  margin-bottom: 2px;
+}
+
+.store-availability-information__stock {
+  margin-bottom: 5px;
+}
+
+.store-availability-information__stock,
+.store-availability-information__link,
+.store-availability-list__item-info {
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 13px));
+}
+
+.store-availability-list__item:first-child {
+  margin-top: 25px;
+}
+
+.store-availability-list__item {
+  margin-top: 30px;
+}
+
+.store-availability-list__location,
+.store-availability-list__stock {
+  margin-bottom: 5px;
+}
+
+.store-availability-list__stock svg {
+  margin-right: 3px;
+}
+
+.store-availability-list__contact {
+  line-height: 1.45;
+}
+
+.store-availability-list__stock .Icon--store-availability-in-stock {
+  top: -1px;
+}
+
+.store-availability-list__contact p {
+  margin-bottom: 0; /* Remove the margin of the formatted address by Shopify */
+}
+
+/* Modal */
+
+.store-availabilities-modal__product-information {
+  text-align: left;
+}

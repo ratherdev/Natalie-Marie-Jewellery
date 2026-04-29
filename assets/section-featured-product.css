@@ -1,0 +1,51 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Featured product (on home page)
+ * ----------------------------------------------------------------------------
+ */
+.FeaturedProduct__Gallery {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.FeaturedProduct__ViewWrapper {
+  margin-top: 34px;
+  text-align: center;
+}
+
+@media screen and (min-width: 641px) {
+  .FeaturedProduct {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .FeaturedProduct--center {
+    align-items: center;
+  }
+
+  .FeaturedProduct__Gallery,
+  .FeaturedProduct__Info {
+    flex: 1 1 50%;
+  }
+
+  .FeaturedProduct__Gallery {
+    margin: 0;
+  }
+
+  .FeaturedProduct__Info {
+    margin-left: 50px;
+  }
+
+  .FeaturedProduct__Info .ProductMeta,
+  .FeaturedProduct__ViewWrapper {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1008px) {
+  .FeaturedProduct__Info {
+    margin-left: 80px;
+  }
+}

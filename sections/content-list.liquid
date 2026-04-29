@@ -1,0 +1,819 @@
+{%- capture section_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		{%- if section.settings.title != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+		{%- endif -%}
+
+		{%- if section.settings.description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+				{{ section.settings.description }}
+			</div>
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank and section.settings.button_2_text != blank -%}
+			{%- assign has_two_buttons = true -%}
+		{%- else -%}
+			{%- assign has_two_buttons = false -%}
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank or section.settings.button_2_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+					{%- if section.settings.button_1_text != blank -%}
+						<a href="{{ section.settings.button_1_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</a>
+					{%- endif -%}
+
+					{%- if block.settings.button_2_text != blank -%}
+						<a href="{{ section.settings.button_2_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_2_text | escape }}</a>
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="ContentList__ContentWrapper">
+			<div class="ContentList__Content ColourStyle--{{ section.settings.colour_style }}">
+				<header class="SectionHeader SectionHeader--{{ section.settings.text_align }}">
+					{{ text_content }}
+				</header>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture content_items -%}
+	{%- if section.settings.grid_items_count == 1 -%}
+		{%- assign deskWidth = '16/16' -%}
+	{%- elsif section.settings.grid_items_count == 2 -%}
+		{%- assign deskWidth = '1/2' -%}
+	{%- elsif section.settings.grid_items_count == 3 -%}
+		{%- assign deskWidth = '1/3' -%}
+	{%- endif -%}
+	
+	{%- assign numberBlockToHide = section.blocks.size | modulo: section.settings.grid_items_count | plus: 0 -%}
+	{%- assign numberDesktopContent = section.blocks.size | minus: numberBlockToHide -%}
+	
+	{%- for block in section.blocks -%}
+		{%- if section.blocks.size == 2 and section.settings.grid_items_count == 3 and forloop.index == 2 -%}
+			<div class="Grid__Cell Grid__Cell--spacer {{ deskWidth }}--desk-and-up"></div>
+		{%- endif -%}
+		
+		{%- if block.settings.metaobject_devices != blank -%}
+			{%- assign devices = block.settings.metaobject_devices -%}
+		{%- else -%}
+			{%- assign devices = block.settings.devices -%}
+		{%- endif -%}
+		
+		{%- assign media = block.settings.video | default: '' -%}
+		{%- assign imageMedia = block.settings.image | default: '' -%} 
+		
+		{% if media == blank and media == imageMedia and block.settings.include_no_media_border %}
+			{%- assign content_no_media = true -%}
+		{% endif %}
+		
+		{%- 
+      render 'content-item', 
+      block: block, 
+      forloop: forloop.index, 
+      phoneWidth: section.settings.grid_items_count_pocket, 
+      tabletWidth: section.settings.grid_items_count_pocket, 
+      deskWidth: deskWidth, 
+      layout: 'mediaFirst', 
+      devices: devices, 
+      include_no_media_border: block.settings.include_no_media_border 
+    -%}
+	{%- endfor -%}
+{%- endcapture -%}
+	
+{%- if content_items != blank -%}
+	<section class="Section Section--spacingExtraLarge" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="content-list">
+		{{ 'section-content-list.css' | asset_url | stylesheet_tag }}
+		{{ 'component-content-item.css' | asset_url | stylesheet_tag }}
+		<div class="Container">
+			<div class="ContentList Grid {% if content_no_media %}has-no-media-tiles{% endif %}">
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 12/16--lap-and-up">
+					{%- if section_content != blank -%}
+						{{ section_content }}
+					{%- endif -%}
+					<div class="Grid {% if section.blocks.size == 2 and section.settings.grid_items_count == 3 %}Grid--withSpacer{% else %}Grid--m{% endif %}">
+            {{ content_items }}
+					</div>
+				</div>
+		
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+			</div>
+		</div>
+	</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Content list",
+  "settings": [
+    {
+      "type": "range",
+      "id": "grid_items_count",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Grid items on desktop",
+      "default": 3
+    },
+	{
+      "type": "select",
+      "id": "grid_items_count_pocket",
+      "label": "Grid items on pocket devices",
+      "options": [
+        {
+          "value": "1/1",
+          "label": "1"
+        },
+        {
+          "value": "1/2",
+          "label": "2"
+        }
+      ],
+      "default": "1/2"
+    },
+	{
+      "type": "header",
+      "content": "Text"
+    },
+	{
+      "type": "select",
+      "id": "text_align",
+      "label": "Header alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Title image",
+      "info": "1800 x 800px .jpg recommended"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "<p>Slide title</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<p>Tell your story</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+	{
+      "type": "select",
+      "id": "colour_style",
+      "label": "Colour style",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark",
+      "info": "Sets the text and button colour."
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "underline",
+          "label": "Text underline"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary Button"
+        },
+        {
+          "value": "primary",
+          "label": "Primary Button"
+        }
+      ],
+      "default": "underline",
+      "info": "Sets the style for the button."
+    }
+  ],
+  "blocks": [
+	{
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "devices",
+          "label": "Devices",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Mobile"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop"
+            },
+            {
+              "value": "mobile_desktop",
+              "label": "Mobile & Desktop"
+            }
+          ],
+          "default": "mobile_desktop"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "topLeft",
+              "label": "Top left"
+            },
+            {
+              "value": "topRight",
+              "label": "Top right"
+            },
+            {
+              "value": "topCenter",
+              "label": "Top center"
+            },
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "underLeft",
+              "label": "Under left"
+            },
+            {
+              "value": "underRight",
+              "label": "Under right"
+            },
+            {
+              "value": "underCenter",
+              "label": "Under center"
+            }
+          ],
+          "default": "underLeft"
+        },
+	    {
+	      "type": "header",
+	      "content": "Text"
+	    },
+	    {
+	      "type": "image_picker",
+	      "id": "logo_image",
+	      "label": "Title image",
+	      "info": "1800 x 800px .jpg recommended"
+	    },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "<p>Sub-heading</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Heading",
+          "default": "<p>Heading</p>"
+        },
+	    {
+	      "type": "richtext",
+	      "id": "description",
+	      "label": "Description"
+	    },
+	    {
+	      "type": "richtext",
+	      "id": "description_mobile",
+	      "label": "Description - mobile"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Text Settings"
+	    },
+		{
+	      "type": "select",
+	      "id": "colour_style",
+	      "label": "Colour style",
+	      "options": [
+	        {
+	          "value": "light",
+	          "label": "Light"
+	        },
+	        {
+	          "value": "dark",
+	          "label": "Dark"
+	        }
+	      ],
+	      "default": "dark",
+		  "info": "Sets the text and button colour."
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 1"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_metaobject",
+	      "label": "Metafield string",
+		  "info": "Metafield must be a guide metaobject. Content will be displayed in a drawer."
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_1_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 2"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_2_metaobject",
+	      "label": "Metafield string",
+		  "info": "Metafield must be a guide metaobject. Content will be displayed in a drawer."
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_2_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_2_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 3"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_3_metaobject",
+	      "label": "Metafield string",
+		  "info": "Metafield must be a guide metaobject. Content will be displayed in a drawer."
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_3_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_3_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "button_style",
+	      "label": "Button style",
+	      "options": [
+	        {
+	          "value": "underline",
+	          "label": "Text underline"
+	        },
+	        {
+	          "value": "secondary",
+	          "label": "Secondary Button"
+	        },
+	        {
+	          "value": "primary",
+	          "label": "Primary Button"
+	        }
+	      ],
+	      "default": "underline",
+		  "info": "Sets the style for the button."
+	    },
+        {
+          "type": "checkbox",
+          "id": "include_no_media_border",
+          "label": "Apply border to tile when no media is set",
+          "default": true
+        },
+	    {
+	      "type": "header",
+	      "content": "Metaobject Fields (Advanced)"
+	    },
+        {
+          "type": "text",
+          "id": "metaobject_autoplay",
+          "label": "Autoplay video"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_loop",
+          "label": "Loop video"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_apply_overlay",
+          "label": "Apply overlay on image"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_content_position",
+          "label": "Content position"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_colour_style",
+	      "label": "Colour style"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_button_style",
+	      "label": "Button style"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_devices",
+          "label": "Devices"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        },
+        {
+          "type": "select",
+          "id": "devices",
+          "label": "Devices",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Mobile"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop"
+            },
+            {
+              "value": "mobile_desktop",
+              "label": "Mobile & Desktop"
+            }
+          ],
+          "default": "mobile_desktop"
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "topLeft",
+              "label": "Top left"
+            },
+            {
+              "value": "topRight",
+              "label": "Top right"
+            },
+            {
+              "value": "topCenter",
+              "label": "Top center"
+            },
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "underLeft",
+              "label": "Under left"
+            },
+            {
+              "value": "underRight",
+              "label": "Under right"
+            },
+            {
+              "value": "underCenter",
+              "label": "Under center"
+            }
+          ],
+          "default": "underLeft"
+        },
+	    {
+	      "type": "header",
+	      "content": "Text"
+	    },
+	    {
+	      "type": "image_picker",
+	      "id": "logo_image",
+	      "label": "Title image",
+	      "info": "1800 x 800px .jpg recommended"
+	    },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "<p>Slide title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Heading",
+          "default": "<p>Tell your story</p>"
+        },
+	    {
+	      "type": "richtext",
+	      "id": "description",
+	      "label": "Description"
+	    },
+	    {
+	      "type": "richtext",
+	      "id": "description_mobile",
+	      "label": "Description - mobile"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Text Settings"
+	    },
+		{
+	      "type": "select",
+	      "id": "colour_style",
+	      "label": "Colour style",
+	      "options": [
+	        {
+	          "value": "light",
+	          "label": "Light"
+	        },
+	        {
+	          "value": "dark",
+	          "label": "Dark"
+	        }
+	      ],
+	      "default": "dark",
+		  "info": "Sets the text and button colour."
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 1"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_1_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 2"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_2_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_2_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "button_style",
+	      "label": "Button style",
+	      "options": [
+	        {
+	          "value": "underline",
+	          "label": "Text underline"
+	        },
+	        {
+	          "value": "secondary",
+	          "label": "Secondary Button"
+	        },
+	        {
+	          "value": "primary",
+	          "label": "Primary Button"
+	        }
+	      ],
+	      "default": "underline",
+		  "info": "Sets the style for the button."
+	    },
+        {
+          "type": "checkbox",
+          "id": "include_no_media_border",
+          "label": "Apply border to tile when no media is set",
+          "default": true
+        },
+	    {
+	      "type": "header",
+	      "content": "Metaobject Fields (Advanced)"
+	    },
+        {
+          "type": "text",
+          "id": "metaobject_autoplay",
+          "label": "Autoplay video"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_loop",
+          "label": "Loop video"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_apply_overlay",
+          "label": "Apply overlay on image"
+        },
+        {
+          "type": "text",
+          "id": "metaobject_content_position",
+          "label": "Content position"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_colour_style",
+	      "label": "Colour style"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_button_style",
+	      "label": "Button style"
+        },
+        {
+          "type": "text",
+	      "id": "metaobject_devices",
+          "label": "Devices"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Content list",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,8 @@
+{%- assign for_drawer = false -%}
+{%- if section.id == 'mini-cart' or template.name != 'cart' -%}
+  {%- assign for_drawer = true -%}
+{%- endif -%}
+
+<div class="MinicartRecommendations {{ class }} {% unless for_drawer %}CartPage{% endunless %}" data-scrollable>
+	
+</div>

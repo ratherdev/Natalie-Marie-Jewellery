@@ -1,0 +1,46 @@
+{%- liquid
+  if preload
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+  else
+    assign loading = 'lazy'
+    assign fetchpriority = 'auto'
+  endif
+-%}
+
+<div class="ProductItem ">
+  <div class="ProductItem__Wrapper">
+    {%- comment -%}
+    We are using LazySizes to efficiently choose the most appropriate image in the set. However, because internally LazySizes uses srcset, we need to make
+    sure that the image sizes we offer is not larger than the max size uploaded by the merchants.
+    {%- endcomment -%}
+
+    {%- if settings.product_image_size == 'natural'  -%}
+      {%- assign use_natural_size = true -%}
+    {%- else -%}
+      {%- assign use_natural_size = false -%}
+    {%- endif -%}
+
+    <div class="ProductItem__ImageWrapper">
+      <div class="ProductItem__Media">
+        {%- capture sizes -%}
+            (max-width: 1008px) 50vw, 33vw
+        {%- endcapture -%}
+        {%- capture main_image_classes -%}ProductItem__Image ProductItem__Image--primary{%- endcapture -%}
+      
+        {%- assign mediaId = media.id -%}
+        {%- if media.media_type == 'video' -%}
+          <video controlsList="nodownload" class="{{ main_image_classes }} lazyVideo" playsinline="playsinline" autoplay="autoplay" loop muted="muted" preload="metadata" data-media-id="{{ mediaId }}" style="--aspect-ratio: {{ media.aspect_ratio }};">
+            {% for source in media.sources %}
+              {% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+              <source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+            {% endfor %}
+            <img loading="lazy" width="400px" height="400px" src="{{ media.preview_image | img_url: '400x' }}">
+          </video>
+        {%- else -%}
+              {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: main_image_classes, data-media-id: mediaId, fetchpriority: fetchpriority -}}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>

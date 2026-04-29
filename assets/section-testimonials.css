@@ -1,0 +1,134 @@
+/**
+ * For now testimonials are only used on home page but may be expanded
+ */
+@-webkit-keyframes testimonialOpening {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes testimonialOpening {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes testimonialClosing {
+  from {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+@keyframes testimonialClosing {
+  from {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+.Testimonial {
+  text-align: center;
+  font-size: 16px;
+}
+
+.Testimonial__Logo {
+  margin-top: 54px;
+}
+
+.js .TestimonialList {
+  opacity: 0;
+  transition: opacity 0s linear 0.5s;
+}
+.js .TestimonialList.flickity-enabled {
+  opacity: 1;
+}
+.js .TestimonialList .flickity-viewport {
+  overflow: visible;
+}
+.js .TestimonialList .flickity-page-dots {
+  position: relative;
+  margin-top: 60px;
+}
+.js .TestimonialList .Testimonial {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-animation: testimonialClosing 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+          animation: testimonialClosing 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+.js .TestimonialList .Testimonial.is-selected {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  -webkit-animation: testimonialOpening 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+          animation: testimonialOpening 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+}
+
+@media screen and (max-width: 640px) {
+  .Testimonial__Logo {
+    max-width: 110px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .Testimonial__Content {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .Testimonial__Logo,
+  .TestimonialNav__Item {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 1008px) {
+  .TestimonialList--withNav .flickity-page-dots {
+    display: none;
+  }
+
+  .TestimonialNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+  }
+
+  .TestimonialNav__Item {
+    margin: 0 25px;
+    cursor: pointer;
+    opacity: 0.25;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+  }
+
+  .TestimonialNav__Item.is-selected {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .TestimonialNav__Item {
+    margin: 0 45px;
+  }
+}

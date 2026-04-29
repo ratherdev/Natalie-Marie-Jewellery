@@ -1,0 +1,387 @@
+{%- for block in section.blocks -%}
+	{%- capture media_content -%}
+		{%- if block.type == "video" -%}	
+			{%- if block.settings.video != blank -%}
+				{%- assign media = block.settings.video -%}
+				{%- if block.settings.link != blank -%}
+					<a href="{{ block.settings.link }}">
+				{%- endif -%}
+				<div class="OffGrid__VideoContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">
+					<video controlsList="nodownload" class="OffGrid__Video lazyVideo" playsinline="playsinline" {% if block.settings.autoplay %}autoplay="autoplay"{% endif %} {% if block.settings.loop %}loop="loop"{% endif %} muted="muted" preload="metadata" poster="{{ media.preview_image | img_url: '1200x' }}">
+						{% for source in media.sources %}
+							{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+							<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+						{% endfor %}
+						<img src="{{ media.preview_image | img_url: '1200x' }}">
+					</video>
+				</div>
+				{%- if media.alt != blank -%}
+					<h3 class="Heading u-h6 ColourStyle--{{ section.settings.colour_style }}"><span>{{ media.alt }}</span></h3>
+				{%- endif -%}
+				{%- if block.settings.link != blank -%}
+					</a>
+				{%- endif -%}
+			{%- endif -%}
+		{%- else -%}
+			{%- if block.settings.image != blank -%}
+				{%- if block.settings.link != blank -%}
+					<a href="{{ block.settings.link }}">
+				{%- endif -%}
+				<div class="OffGrid__ImageContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+					{% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+					<img class="OffGrid__Image Image--lazyLoad hide-no-js"
+						data-src="{{ image_url }}"
+						data-optimumx="1.2"
+						data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+						data-sizes="auto"
+						alt="{{ block.settings.image.alt | escape }}">
+
+					<noscript>
+						<img class="OffGrid__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+					</noscript>
+				</div>
+				{%- if block.settings.image.alt != blank -%}
+					<h3 class="Heading u-h6 ColourStyle--{{ section.settings.colour_style }}"><span>{{ block.settings.image.alt }}</span></h3>
+				{%- endif -%}
+				{%- if block.settings.link != blank -%}
+					</a>
+				{%- endif -%}
+			{%- endif -%}
+		{%- endif -%}
+	{%- endcapture -%}
+	
+	{%- if media_content != blank and forloop.index == 1 -%}
+		{%- capture media_content_1 -%}{{ media_content }}{%- endcapture -%}
+	{%- elsif media_content != blank and forloop.index == 2 -%}
+		{%- capture media_content_2 -%}{{ media_content }}{%- endcapture -%}
+	{%- elsif media_content != blank and forloop.index == 3 -%}
+		{%- capture media_content_3 -%}{{ media_content }}{%- endcapture -%}
+	{%- elsif media_content != blank and forloop.index == 4 -%}
+		{%- capture media_content_4 -%}{{ media_content }}{%- endcapture -%}
+	{%- elsif media_content != blank and forloop.index == 5 -%}
+		{%- capture media_content_5 -%}{{ media_content }}{%- endcapture -%}
+	{%- endif -%}
+	
+{%- endfor -%}
+
+{%- capture section_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		{%- if section.settings.title != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+		{%- endif -%}
+	
+		{%- if section.settings.description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+				{{ section.settings.description }}
+			</div>
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank and section.settings.button_2_text != blank -%}
+			{%- assign has_two_buttons = true -%}
+		{%- else -%}
+			{%- assign has_two_buttons = false -%}
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank or section.settings.button_2_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+					{%- if section.settings.button_1_text != blank -%}
+						<a href="{{ section.settings.button_1_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</a>
+					{%- endif -%}
+
+					{%- if block.settings.button_2_text != blank -%}
+						<a href="{{ section.settings.button_2_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_2_text | escape }}</a>
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="OffGrid__Content ColourStyle--{{ section.settings.colour_style }}">
+			<header class="SectionHeader">
+				{{ text_content }}
+			</header>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture feature_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.feature_text != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h2"><span>{{ section.settings.feature_text }}</span></h2>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="OffGrid__Content ColourStyle--{{ section.settings.colour_style }}">
+			<header class="SectionHeader">
+				{{ text_content }}
+			</header>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- if section_content != blank -%}
+	{{ 'section-off-grid.css' | asset_url | stylesheet_tag }}
+	{% liquid
+		assign spacing_class = 'Section--spacingExtraLarge'
+		if section.settings.remove_spacing_top
+			assign spacing_class = 'Section--spacingExtraLargeBottom'
+		endif
+	%}
+	<section class="Section {{ spacing_class }} " id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="off-grid" data-section-theme='dark'>
+		<div class="Container">
+			<div class="OffGrid Grid">
+				<div class="Grid__Cell hidden-pocket 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 6/16--lap-and-up">
+					<div class="Grid">
+						<div class="Grid__Cell OffGrid--content_1 8/16">
+							{{ media_content_1 }}
+						</div>
+						<div class="Grid__Cell 1/16--pocket hidden-lap-and-up"></div>
+						<div class="Grid__Cell OffGrid--content_2 6/16--pocket 4/12--lap-and-up">
+							{{ media_content_2 }}
+						</div>
+						<div class="Grid__Cell 1/16--pocket 2/12--lap-and-up"></div>
+						<div class="Grid__Cell OffGrid--content_3 8/16--pocket 8/12--lap-and-up">
+							{{ feature_content }}
+						</div>
+						<div class="Grid__Cell OffGrid--content_4 8/16--pocket 4/12--lap-and-up">
+							{{ media_content_3 }}
+						</div>
+					</div>
+				</div>
+				<div class="Grid__Cell 6/16--lap-and-up">
+					<div class="Grid">
+						<div class="Grid__Cell OffGrid--content_5 6/12">
+							{{ media_content_4 }}
+						</div>
+						<div class="Grid__Cell 1/16--pocket 2/12--lap-and-up">
+						
+						</div>
+						<div class="Grid__Cell OffGrid--content_6 6/16--pocket 4/12--lap-and-up">
+							{{ media_content_5 }}
+						</div>
+						
+						<div class="Grid__Cell 1/16--pocket hidden-lap-and-up">
+						
+						</div>
+						
+						<div class="Grid__Cell 1/16--pocket 2/12--lap-and-up">
+						
+						</div>
+						
+						<div class="Grid__Cell OffGrid--content_7 14/16--pocket 6/12--lap-and-up">
+							{{ section_content }}
+						</div>
+						<div class="Grid__Cell 1/16--pocket 4/12--lap-and-up">
+						
+						</div>
+					</div>
+				</div>
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+			</div>
+		</div>
+	</section>
+		
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Off grid",
+  "max_blocks": 5,
+  "settings": [
+		{
+			"type": "checkbox",
+			"id": "enable_dark",
+			"label": "Enable dark background",
+			"default": false
+		},
+		{
+			"type": "checkbox",
+			"id": "remove_spacing_bottom",
+			"label": "Remove bottom spacing",
+			"default": false
+		},
+	  {
+	    "type": "header",
+	    "content": "Text"
+	  },
+	  {
+	    "type": "image_picker",
+	    "id": "logo_image",
+	    "label": "Title image",
+	    "info": "1800 x 800px .jpg recommended"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "subheading",
+	    "label": "Sub-heading",
+	    "default": "<p>Slide title</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "title",
+	    "label": "Heading",
+	    "default": "<p>Tell your story</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "description",
+	    "label": "Description"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "feature_text",
+	    "label": "Feature heading",
+	    "default": "<p>Feature text.</p>"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Text Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "colour_style",
+	    "label": "Colour style",
+	    "options": [
+	      {
+	        "value": "light",
+	        "label": "Light"
+	      },
+	      {
+	        "value": "dark",
+	        "label": "Dark"
+	      }
+	    ],
+	    "default": "dark",
+		"info": "Sets the text and button colour."
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button 1"
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_1_text",
+	    "label": "Text"
+	  },
+	  {
+	    "type": "url",
+	    "id": "button_1_link",
+	    "label": "Link"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button 2"
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_2_text",
+	    "label": "Text"
+	  },
+	  {
+	    "type": "url",
+	    "id": "button_2_link",
+	    "label": "Link"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "button_style",
+	    "label": "Button style",
+	    "options": [
+	      {
+	        "value": "underline",
+	        "label": "Text underline"
+	      },
+	      {
+	        "value": "secondary",
+	        "label": "Secondary Button"
+	      },
+	      {
+	        "value": "primary",
+	        "label": "Primary Button"
+	      }
+	    ],
+	    "default": "underline",
+	    "info": "Sets the style for the button."
+	  }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Off grid",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

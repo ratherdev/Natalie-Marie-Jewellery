@@ -1,0 +1,203 @@
+{%- assign recently_viewed_block = section.blocks | where: 'type', 'recently' | first -%}
+{%- assign tabsCount = 0 -%}
+{%- assign activeTabHeaderSet = false -%}
+
+{% assign first_block = section.blocks | first %}
+{%- if first_block.type == 'product' -%}
+	{%- assign content = product.media -%}
+{%- endif -%}
+
+{%- assign item_count = 0 -%}
+{%- for media in content limit: section.settings.grid_items_count -%}
+	{% liquid
+		assign collection_target = collections[product.metafields.custom.collection_handle]
+		assign banner = collection_target.metafields.custom.product_banner.value
+
+		unless banner 
+			if forloop.first 
+				continue
+			endif
+		endunless
+	%}
+	{%- assign item_count = item_count | plus: 1 -%}
+{%- endfor -%}
+
+{%- capture section_settings -%}
+{
+  "enable_natual_scroll": {{ section.settings.enable_natual_scroll | json }},
+  "productId": {% if template.name == 'product' %}{{ product.id }}{% else %}null{% endif %},
+  "tabs_count": {{ tabsCount }},
+}
+{% comment %} "enableImageZoom": {{ section.settings.enable_image_zoom | json }}, {% endcomment %}
+{%- endcapture -%}
+
+<section 
+	vue-init
+	v-cloak
+	class="Section {% if section.settings.enable_light %}Section--lightBackground{% endif %}" 
+	data-section-id="{{ section.id }}" 
+	data-section-type="content-slider" 
+	style="--horizontal-spacing-four-products-per-row: 10px; margin-top: -50px"
+	data-section-settings='{{ section_settings }}'
+>
+	<image-content-slider inline-template>
+		<div class="ImageContentSlider">
+			<keen-slider
+				:arrows="true"
+				:pagination="false"
+				:options="{
+					slides: {
+						perView: 1.1,
+						spacing: 10
+					},
+					breakpoints: {
+						'(min-width: 768px)': {
+							slides: {
+								perView: {% if item_count < 5 %}{{ item_count }}{% else %}5{% endif %},
+								spacing: 10
+							}
+						}
+					}
+				}"
+			>
+				{%- for block in section.blocks -%}
+					{%- for media in content limit: section.settings.grid_items_count -%}
+	
+						{% liquid
+							assign collection_target = collections[product.metafields.custom.collection_handle]
+							assign banner = collection_target.metafields.custom.product_banner.value
+	
+							unless banner 
+								if forloop.first 
+									continue
+								endif
+							endunless
+						%}
+						<div class="cursor-pointer" @click="toggleFullscreen">
+							{%- 
+								render 'image-item', 
+								media: media, 
+							-%}
+						</div>
+					{%- endfor -%}
+				{%- endfor -%}
+			</keen-slider>
+			<div 
+				v-if="showModal"
+				class="fixed w-screen h-screen top-0 left-0 z-50 bg-white lg:px-[10%]" 
+			>
+				<div class="relative w-full h-full flex m-auto max-w-[1400px]">
+					<button 
+						type="button"
+						class="absolute top-4 right-4 lg:right-0 p-4 z-10" 
+						@click="closeFullscreen"
+						title="Close (Esc)"
+					>
+						<svg class="Icon Icon--close  " role="presentation" viewBox="0 0 16 14">
+							<path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+						</svg>
+					</button>
+
+					<keen-slider
+						:arrows="true"
+						:pagination="false"
+						:options="{
+							slides: {
+								perView: 1,
+								spacing: 10
+							}
+						}"
+						classes="w-auto h-full mx-auto"
+					>
+						{%- for block in section.blocks -%}
+							{%- for media in content limit: section.settings.grid_items_count -%}
+			
+								{% liquid
+									assign collection_target = collections[product.metafields.custom.collection_handle]
+									assign banner = collection_target.metafields.custom.product_banner.value
+			
+									unless banner 
+										if forloop.first 
+											continue
+										endif
+									endunless
+								%}
+								<div class="w-auto h-full flex justify-center items-center">
+									<image-zoom
+										img-normal="{{ media | image_url: width: 1400 }}"
+										img-zoom="{{ media | image_url: width: 3000 }}"
+										img-srcset="
+										{{ media | image_url: width: 422 }} 422w,
+										{{ media | image_url: width: 444 }} 444w,
+										{{ media | image_url: width: 476 }} 476w,
+										{{ media | image_url: width: 731 }} 731w,
+										{{ media | image_url: width: 1024 }} 1024w,
+										{{ media | image_url: width: 1920 }} 1920w,
+										"
+										img-sizes="
+											(max-width: 480px) 444px,
+											(max-width: 767px) 731px,
+											(max-width: 1024px) 1024px,
+											(max-width: 1280px) 1920px,
+											1400px
+										"
+									></image-zoom>
+								</div>
+							{%- endfor -%}
+						{%- endfor -%}
+					</keen-slider>
+				</div>
+			</div>
+		</div>
+	</image-content-slider>
+	
+	{% if product.media.size < 4 %}
+        <style>
+			#shopify-section-{{ section.id }} {
+				display: none;
+			}
+        </style>
+	{% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Image Content slider (MA)",
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+	    	{
+					"type": "paragraph",
+					"content": "Pulls in images from the Product except the first image"
+				}
+	  	]
+		}
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_light",
+      "label": "Enable light background",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "grid_items_count",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "label": "Items to show",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Content slider (MA)",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

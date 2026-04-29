@@ -1,0 +1,89 @@
+<section data-section-id="reset-password" data-section-type="reset-password">
+  <div class="Container">
+    <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
+      {%- form 'create_customer', name: 'create_customer', class: 'Form Form--spacingTight', id: 'create_customer' -%}
+		<input type="hidden" name="return_to" value="/account">
+        
+		<header class="Form__Header">
+			<h3 class="Form__Title Heading Heading--caps Heading--textFont u-h6"><span><strong>New User</strong></span></h3>
+          <h1 class="Form__Title Heading u-h3">
+			  {%- assign titleArray = 'customer.register.title' | t | split: ' ' -%}
+			  <span>
+				  {%- for word in titleArray -%}
+				  	{%- if forloop.last -%}
+						<em>{{ word }}</em>
+					{%- else -%}	
+						{{ word | append: ' ' }}
+					{%- endif -%}
+				  {%- endfor -%}
+			  </span>
+		  </h1>
+          <p class="Form__Legend">{{ 'customer.register.description' | t }}</p>
+        </header>
+
+        {%- if form.errors -%}
+          <div class="Form__Alert Alert Alert--error">
+            <ul class="Alert__ErrorList">
+              {%- for field in form.errors -%}
+                {%- if field == 'form' -%}
+                  <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                {%- else -%}
+                  <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        {%- if request.locale.iso_code == 'ja' -%}
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.register.last_name' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+            <label class="Form__FloatingLabel">{{ 'customer.register.first_name' | t }}</label>
+          </div>
+        {%- else -%}
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+            <label class="Form__FloatingLabel">{{ 'customer.register.first_name' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.register.last_name' | t }}</label>
+          </div>
+        {%- endif -%}
+
+        <div class="Form__Item">
+          <input type="email" class="Form__Input" name="customer[email]" aria-label="{{ 'customer.register.email' | t }}" placeholder="{{ 'customer.register.email' | t }}" required="required">
+          <label class="Form__FloatingLabel">{{ 'customer.register.email' | t }}</label>
+        </div>
+
+        <div class="Form__Item">
+          <input type="password" class="Form__Input" name="customer[password]" aria-label="{{ 'customer.register.password' | t }}" placeholder="{{ 'customer.register.password' | t }}" required="required">
+          <label class="Form__FloatingLabel">{{ 'customer.register.password' | t }}</label>
+        </div>
+		
+		<div class="Form__Item">
+			<div class="Form__CheckboxWrapper">
+				<input type="hidden" name="customer[accepts_marketing]" value="false" />
+				<input type="checkbox" aria-label="Newsletter Subscribe" class="Form__Checkbox" name="customer[accepts_marketing]" id="create_customer_subscribe" value="true" checked>
+				{% render 'icon' with 'checkmark' %}
+				<label for="create_customer_subscribe">I agree to the terms & conditions and to receive promotional emails.</label>
+			</div>
+		</div>
+
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.register.submit' | t }}</button>
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Customer register"
+}
+{% endschema %}

@@ -1,0 +1,446 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Collection item (for list of collections)
+ * ----------------------------------------------------------------------------
+ */
+
+.CollectionList::after {
+  content: "flickity";
+  display: none;
+}
+
+.CollectionItem {
+  display: block;
+}
+
+.CollectionItem__Wrapper {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.CollectionItem__Wrapper--small {
+  height: 450px;
+}
+
+.CollectionItem__Wrapper--large {
+  height: 550px;
+}
+
+.CollectionItem__ImageWrapper {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Icon.Icon--filter {
+    width: auto;
+    height: 10px;
+    position: relative;
+    top: -1px;
+    margin-left: 8px;
+}
+
+.CollectionToolbar__Item--filter[aria-expanded="true"] .Icon.Icon--filter {
+    color: var(--link-color);
+}
+
+
+.features--show-image-zooming .CollectionItem__ImageWrapper {
+  transform: scale(1);
+  transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.CollectionItem__Image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.CollectionItem__Content {
+  position: absolute;
+  padding: 0 24px;
+  margin-bottom: 0 !important;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.CollectionItem__Content--bottomCenter,
+.CollectionItem__Content--middleCenter {
+  text-align: center;
+}
+
+.CollectionItem__Content--bottomRight,
+.CollectionItem__Content--middleRight {
+  text-align: right;
+}
+
+.CollectionItem__Content--bottomLeft,
+.CollectionItem__Content--bottomRight,
+.CollectionItem__Content--bottomCenter {
+  bottom: 24px;
+  top: auto;
+  left: 0;
+  transform: none;
+}
+
+@media (-moz-touch-enabled: 0), (hover: hover) {
+  .features--show-image-zooming .CollectionItem:hover .CollectionItem__ImageWrapper {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .CollectionList--grid {
+    margin: 12px 12px 12px 12px;
+  }
+
+  .CollectionList--grid .CollectionItem {
+    padding: 12px;
+  }
+
+  .CollectionList:not(.CollectionList--grid) .CollectionItem__Content--bottomLeft,
+  .CollectionList:not(.CollectionList--grid) .CollectionItem__Content--bottomRight,
+  .CollectionList:not(.CollectionList--grid) .CollectionItem__Content--bottomCenter {
+    bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .CollectionList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .CollectionList::after {
+    content: ""; /* disable Flickity */
+  }
+
+  .CollectionList--spaced {
+    margin: 15px;
+  }
+
+  .CollectionList--spaced .CollectionItem {
+    padding: 15px;
+  }
+
+  .CollectionItem {
+    display: block !important;
+    flex: 0 1 0;
+    min-width: 50%;
+  }
+
+  .CollectionItem--expand {
+    flex-grow: 1;
+  }
+
+  .CollectionItem__Content {
+    padding: 0 40px;
+  }
+
+  .CollectionItem__Content--bottomLeft,
+  .CollectionItem__Content--bottomRight,
+  .CollectionItem__Content--bottomCenter {
+    bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .CollectionItem {
+    min-width: 33.33333%;
+  }
+
+  .CollectionItem__Wrapper {
+    height: 600px;
+  }
+
+  .CollectionItem__Wrapper--small {
+    height: 500px;
+  }
+
+  .CollectionItem__Wrapper--large {
+    height: 700px;
+  }
+
+  .CollectionItem__Content {
+    padding: 0 50px;
+  }
+
+  .CollectionItem__Content--bottomLeft,
+  .CollectionItem__Content--bottomRight,
+  .CollectionItem__Content--bottomCenter {
+    bottom: 50px;
+  }
+}
+
+.Grid__Cell--collectionHeader .PageHeader {
+    background: var(--link-color);
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.Grid__Cell--collectionHeader .PageHeader .Container {
+    padding: 0 50px;
+}
+
+
+/**
+ * ----------------------------------------------------------------------------
+ * Collection toolbar
+ * ----------------------------------------------------------------------------
+ */
+
+.CollectionToolbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+
+.CollectionToolbar--top {
+  top: var(--header-base-height);
+}
+
+@supports (--css: variables) {
+  .CollectionToolbar--top {
+    top: calc(var(--header-height) * 0 - 1px);
+    top: calc(var(--header-height) * var(--use-sticky-header, 0) - 1px);
+  }
+}
+
+.supports-sticky .CollectionToolbar--bottom {
+  bottom: 0; /* as of today the best polyfill I've found does not support polyfilling sticky on bottom. As a consequence on those old
+                browsers, the stickiness is always at the top */
+}
+
+.CollectionToolbar__Group {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.CollectionToolbar__Item {
+  flex: 1 0 auto;
+  padding: 13px 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.CollectionToolbar__Item--mobile {
+    padding: 13px 20px;
+    text-align: left;
+}
+
+.CollectionToolbar__Item--sort .Icon--select-arrow {
+  height: 6px;
+  margin-left: 2px;
+  pointer-events: none;
+}
+
+.CollectionToolbar__Item--layout {
+  flex: none;
+  width: auto;
+  line-height: 1;
+  cursor: auto;
+  cursor: initial;
+}
+
+.CollectionToolbar__LayoutType {
+  display: inline-block;
+}
+
+.CollectionToolbar__LayoutType svg {
+  width: auto;
+  height: 18px;
+}
+
+.CollectionToolbar__LayoutType.is-active {
+  display: none;
+}
+
+@media screen and (min-width: 641px) {
+  .CollectionToolbar--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .CollectionToolbar__Group {
+    flex: none;
+  }
+
+  .CollectionToolbar__Item {
+    padding: 46px 32px 28px;
+  }
+
+  .CollectionToolbar__Item--layout {
+    white-space: nowrap;
+  }
+  
+  .CollectionToolbar.CollectionToolbar--top + .Container .CollectionInner {
+      margin-top: 0;
+	  transition: all 0.5s var(--drawer-transition-timing);
+  }
+}
+
+.CollectionToolbar__ViewSwitch .is-active {
+    display: block;
+    color: var(--link-color);
+}
+
+.CollectionToolbar__ViewSwitch {
+    display: flex;
+    gap: 10px;
+    margin-top: 3px;
+    position: relative;
+}
+
+@media screen and (min-width: 1140px) {
+	.CollectionToolbar__Item .CollectionToolbar__ViewSwitch:after {
+	    content: '';
+	    position: absolute;
+	    border-left: 1px solid var(--text-color);
+	    right: -32px;
+	    bottom: 2px;
+	    height: 10px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.CollectionToolbar.CollectionToolbar--top + .Container .CollectionInner.hideDesktopFilter {
+	  margin: 0 -17% 0 -17.7%;
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ * Collection filters
+ * ----------------------------------------------------------------------------
+ */
+
+.CollectionFilters {
+  text-align: right;
+}
+
+.CollectionFilters .Collapsible:first-child {
+  border-top: none;
+}
+
+.CollectionFilters__ClearButton {
+  margin-top: 24px;
+}
+
+.BooleanFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1440px) {
+	.CollectionFilters {
+	  padding-right: 34px;
+	}
+}
+
+@media screen and (min-width: 641px) {
+  .CollectionFilters .Drawer__Main {
+    padding: 0px;
+  }
+}
+
+.CollectionFilters .Collapsible__Content {
+    padding-left: 0;
+}
+
+.CollectionFilters .Collapsible__Button {
+	border-bottom: none;
+	padding: 10px 0;
+}
+
+.CollectionFilters .Collapsible__Button.is-selected {
+    color: var(--link-color);
+}
+
+.CollectionFilters .Collapsible__Plus {
+	bottom: 15px;
+}
+
+@media screen and (max-width: 640px) {
+    .CollectionFilters {
+        background: transparent;
+    }
+
+    .CollectionFilters .Drawer__Content {
+        background: var(--navigation-background);
+    }
+}
+
+.CollectionFilters .Drawer__Main {
+    padding: 0;
+}
+
+.CollectionFilters .Drawer__Container {
+    padding: 20px;
+	text-align: left;
+}
+
+.CollectionInner__Sidebar--right button {
+    padding: 10px 0;
+    display: block;
+    margin-left: auto;
+	transition: 0.5s ease color;
+}
+
+.CollectionInner__Sidebar--right button.is-selected {
+    color: var(--link-color);
+}
+
+.CollectionInner__Sidebar--right button:first-child {
+    padding-top: 0;
+}
+
+
+@media screen and (max-width: 1007px) {
+	.CollectionFeaturedBanner .u-h2 {
+	    font-size: 30px;
+	    margin-top: calc(var(--vertical-spacing-two-products-per-row) / 2);
+	}
+	
+	.CollectionFilters .price-range {
+	    width: calc(100% - 40px);
+	    margin: auto;
+	}
+}
+
+.CollectionFilters sup {
+    margin-left: 5px;
+    position: absolute;
+    font-size: 0.75em;
+}
+
+.Filter_NoValue {
+    opacity: 0.25;
+	pointer-events: none;
+}
+
+.CollectionFilters .SidebarMenu__Nav--primary .Heading {
+    text-align: left;
+}
+
+.CollectionFilters .SidebarMenu__Nav--primary {
+    text-align: right;
+}

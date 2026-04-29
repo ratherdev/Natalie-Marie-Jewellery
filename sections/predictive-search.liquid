@@ -1,0 +1,89 @@
+{%- if predictive_search.performed and predictive_search.resources.products.size > 0 -%}
+	{{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+	<div class="Segment">
+		<div class="Segment__Content">
+			<div class="Grid">
+				<div class="Grid__Cell 2/16--widescreen">
+					{%- if predictive_search.resources.queries.size > 0 -%}
+						<div class="PredictedResults">
+							<h3 class="Heading u-h4">Popular Searches</h3>
+							<ul class="Linklist">
+								{%- for result in predictive_search.resources.queries -%}
+									<li class="Linklist__Item"><a href="{{ result.url }}" class="Link Link--primary" aria-label="{{ query.text }}">{{ result.styled_text | capitalize }}</a></li>
+								{%- endfor -%}
+							</ul>
+						</div>
+					{%- endif -%}
+					{%- if predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 -%}
+						<div class="PredictedResults">
+							<h3 class="Heading u-h4">Pages</h3>
+							<ul class="Linklist">
+								{%- for result in predictive_search.resources.pages -%}
+									<li class="Linklist__Item"><a href="{{ result.url }}" class="Link Link--primary">{{ result.title }}</a></li>
+									{%- assign pagesShown = pagesShown | plus: 1 -%}
+								{%- endfor -%}
+								
+								{%- assign articleLimit = 4 | minus: pagesShown -%}
+								
+								{%- for result in predictive_search.resources.articles limit: articleLimit -%}
+									<li class="Linklist__Item"><a href="{{ result.url }}" class="Link Link--primary">{{ result.title }}</a></li>
+								{%- endfor -%}
+							</ul>
+						</div>
+					{%- endif -%}
+				</div>
+				<div class="Grid__Cell hidden-pocket 2/16"><div class="Border--left"></div></div>
+				<div class="Grid__Cell 12/16--widescreen Text--alignRight">
+					{%- if predictive_search.resources.products.size > 0 -%}
+						{%- capture slider_content -%}
+							{%- assign item_count = 0 -%}
+								{%- for result in predictive_search.resources.products limit: 4 -%}
+										<div class="Carousel__Cell" onclick="window.location.href = '{{ result.url }}'">
+											{%- render 'product-item', product: result, show_product_info: true, show_vendor: false, show_color_swatch: true, show_labels: true -%}
+										</div>
+										{%- assign item_count = item_count | plus: 1 -%}
+								{%- endfor -%}
+						{%- endcapture -%}
+					
+						{%- if slider_content != blank -%}
+							{%- capture flickity_options -%}
+							  {
+							    "prevNextButtons": true,
+							    "pageDots": false,
+							    "wrapAround": false,
+							    "contain": true,
+							    "cellAlign": "left",
+							    "watchCSS": true,
+							    "dragThreshold": 8,
+							    "groupCells": true,
+							    "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+							  }
+							{%- endcapture -%}
+					
+							<div class="ContentSlider__SliderWrapper">
+								<div class="Carousel--scroll ContentList ContentList--carousel Carousel" data-flickity-config='{{ flickity_options }}' data-block-id="slideshow_search_products">
+									{{ slider_content }}
+								</div>
+					            <div class="Content__SlideshowNav Content__SlideshowNav--scroller" id="slideshow_search_products">
+									<div class="flickity-page-dots flickity-page-slider hidden-widescreen">
+						              {%- assign itemCountDivided = item_count | divided_by: 2.00 | ceil -%}
+			  				          <button type="button" style="--item-count: {{itemCountDivided}};" aria-label="Slide to image" class="slider is-selected"></button>
+						            </div>
+								</div>
+							</div>
+			
+						{%- endif -%}
+				
+						<a href="/search?q={{ predictive_search.terms }}&type=product" class="AllResults Link Link--primary Link--underline" aria-label="{{ query.text }}">View All Search Results</a>
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Predictive search"
+}
+{% endschema %}

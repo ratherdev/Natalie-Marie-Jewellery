@@ -1,0 +1,39 @@
+.Content__SlideshowNav {
+	position: relative;
+}
+
+.Content__SlideshowNav[aria-hidden="true"] {
+    display: none;
+}
+
+.ContentList--carousel.Carousel.Carousel--scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+	display: flex;
+}
+
+.ContentList--carousel.Carousel.Carousel--scroll::after {
+    content: "";
+}
+
+.ContentList--carousel.Carousel.Carousel--scroll .Carousel__Cell {
+    display: block !important;
+}
+
+.ContentList--carousel.Carousel.Carousel--scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.Content__SlideshowNav--scroller .slider {
+    width: calc(100% / var(--item-count));
+    flex-grow: 0;
+    position: absolute;
+}
+
+.Content__SlideshowNav--scroller .flickity-page-slider {
+    height: 2px;
+    background:var(--border-color);
+}

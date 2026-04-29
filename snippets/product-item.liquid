@@ -1,0 +1,267 @@
+{%- liquid
+  if preload
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+  else
+    assign loading = 'lazy'
+    assign fetchpriority = 'auto'
+  endif
+
+	if product.tags contains 'Signature Bespoke'
+		assign skip_first_image = true
+	else
+		assign skip_first_image = false
+	endif
+-%}
+
+<div class="ProductItem {% if use_horizontal %}ProductItem--horizontal{% endif %}">
+  <div class="ProductItem__Wrapper">
+    {%- comment -%}
+    We are using LazySizes to efficiently choose the most appropriate image in the set. However, because internally LazySizes uses srcset, we need to make
+    sure that the image sizes we offer is not larger than the max size uploaded by the merchants.
+    {%- endcomment -%}
+
+    {%- if settings.product_image_size == 'natural' or use_horizontal -%}
+      {%- assign use_natural_size = true -%}
+    {%- else -%}
+      {%- assign use_natural_size = false -%}
+    {%- endif -%}
+
+		{%- liquid 
+			if skip_first_image
+				assign second_image = product.media[2]
+			else
+				assign second_image = product.media[1]
+			endif
+		-%}
+		
+    {%- if settings.product_show_secondary_image and second_image and use_horizontal != true -%}
+      {%- assign has_alternate_image = true -%}
+    {%- else -%}
+      {%- assign has_alternate_image = false -%}
+    {%- endif -%}
+
+    <a href="{{ product.url }}" class="ProductItem__ImageWrapper">
+		
+		<div class="ProductItem__Media">
+            
+	        {%- capture sizes -%}
+	            (max-width: 1008px) 50vw, 33vw
+	        {%- endcapture -%}
+	        {%- capture main_image_classes -%}ProductItem__Image ProductItem__Image--primary{%- endcapture -%}
+				
+				{%- liquid 
+						if skip_first_image
+							assign media = product.media[1]
+						else
+							assign media = product.featured_media
+						endif
+						assign mediaId = media.id
+				-%}
+			{%- if media.media_type == 'video' -%}
+				<video controlsList="nodownload" class="{{ main_image_classes }} lazyVideo" playsinline="playsinline" autoplay="autoplay" loop muted="muted" preload="metadata" data-media-id="{{ mediaId }}" style="--aspect-ratio: {{ media.aspect_ratio }};">
+					{% for source in media.sources %}
+						{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+						<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+					{% endfor %}
+					<img loading="lazy" src="{{ media.preview_image | img_url: '400x' }}">
+				</video>
+			{%- else -%}
+		        {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: main_image_classes, data-media-id: mediaId, fetchpriority: fetchpriority -}}
+			{%- endif -%}
+
+	        {%- if has_alternate_image -%}
+				{%- liquid 
+						if skip_first_image
+							assign media = product.media[2]
+						else
+							assign media = product.media[1]
+						endif
+						assign mediaId = media.id
+				-%}
+				{%- if media.media_type == 'video' -%}
+					<video controlsList="nodownload" class="ProductItem__Image ProductItem__Image--secondary lazyVideo" playsinline="playsinline" autoplay="autoplay" loop muted="muted" preload="metadata" data-media-id="{{ mediaId }}" style="--aspect-ratio: {{ media.aspect_ratio }};">
+						{% for source in media.sources %}
+							{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+							<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+						{% endfor %}
+						<img loading="lazy" src="{{ media.preview_image | img_url: '400x' }}">
+					</video>
+				{%- else -%}
+			        {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: 'ProductItem__Image ProductItem__Image--secondary', data-media-id: mediaId, fetchpriority: fetchpriority -}}
+				{%- endif -%}
+			{%- endif -%}
+		</div>
+	  
+      {%- if show_labels -%}
+	  	{%- capture product_labels -%}
+        	{%- assign label_swatch_config = settings.label_swatch_config | newline_to_br | split: '<br />' -%}
+			{%- if product.metafields.custom.label.value != blank -%}
+				{%- for label in product.metafields.custom.label.value -%}
+					<span class="ProductItem__Label Heading Heading--textFont Heading--caps Text--highlight" style="{% render 'label_swatch_style', label_swatch_config: label_swatch_config, value: label %}"><strong>{{ label }}</strong></span>
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endcapture -%}
+
+		{%- if product_labels != blank -%}
+			<div class="ProductItem__LabelList">
+				{{ product_labels }}
+			</div>
+		{%- endif -%}
+      {%- endif -%}
+	  
+    </a>
+	
+    {%- if settings.enable_swym -%}
+      
+		<span class="swym-add-to-wishlist-view-product Icon-Wrapper Icon-Wrapper--clickable product_{{product.id}}"
+			id="wishlist_{{ product.id }}"
+			data-with-epi="true"
+			data-swaction="addToWishlist"
+			data-product-id="{{ product.id }}"
+			data-variant-id="{{ product.variants[0].id }}"
+			data-product-url="{{ shop.url }}{{ product.url }}">
+				{%- render 'icon' with 'wishlist' -%}
+				{%- render 'icon' with 'wishlist-fill', class: hidden' -%}
+		</span>
+    {%- endif -%}
+
+    {%- if show_product_info -%}
+      <div class="ProductItem__Info {% unless use_horizontal %}ProductItem__Info--{{ settings.product_info_alignment }}{% endunless %}">
+        {%- if show_vendor -%}
+          <p class="ProductItem__Vendor Heading">{{ product.vendor }}</p>
+        {%- endif -%}
+
+        <h2 class="ProductItem__Title Heading u-h5">
+			{%- liquid
+				assign product_title = product.title
+				if product_title contains '|'
+					assign raw_product_title_parts = product_title | split: '|'
+					assign raw_product_title_parts_first = raw_product_title_parts | first
+					assign raw_product_title_parts_last = raw_product_title_parts | last
+					assign product_title = raw_product_title_parts_first | append: '<span class="ProductMeta__SubTitle"> | <em>' | append: raw_product_title_parts_last | append: '</em></span>'
+				endif 
+			-%}
+          <a href="{{ product.url }}">{{ product_title }} {% if settings.show_product_sub_title and product.metafields.custom.sub_title != blank %}<span class="ProductMeta__SubTitle"> | <em>{{ product.metafields.custom.sub_title }}</em>{% endif %}</a>
+        </h2>
+
+        {%- if settings.show_product_rating -%}
+          {%- unless use_horizontal -%}
+            <div class="ProductItem__Rating Heading u-h7">
+              {%- render 'product-rating', product: product -%}
+            </div>
+          {%- endunless -%}
+        {%- endif -%}
+
+        {%- if show_price_on_hover == nil -%}
+          {%- assign show_price_on_hover = settings.product_show_price_on_hover -%}
+        {%- endif -%}
+		
+        {%- capture color_swatch_list -%}
+			{%- if settings.stitch_stones or settings.stitch_metals -%}
+				{%- render 'product-stitching', stitch_width: true, stitch_stones: settings.stitch_stones, hide_stones: true, stitch_metals: settings.stitch_metals, product: product, mode: 'text' -%}
+			{%- endif -%}
+		{%- endcapture -%}
+
+        {%- if show_price_on_hover and show_color_swatch and color_swatch_list != blank -%}
+            <div class="ProductItem__ColorSwatchList">
+              {{- color_swatch_list -}}
+            </div>
+        {%- endif -%}
+
+        {%- if product.template_suffix != 'coming-soon' and product.price > 0 -%}
+			{%- assign minimumAdditionalFee = 0 -%}
+
+			{%- for custom_line_property in product.metafields.custom.custom_line_item_properties.value -%}
+				{% unless custom_line_property.display_name contains 'Charm Builder' %}
+					{%- assign additional_price_variant = '' -%}
+					{%- assign additional_price_product = '' -%}
+				
+					{%- case custom_line_property.system.type -%}
+						{%- when 'product_custom_line_text' -%}
+							{%- assign additional_price_variant = custom_line_property.additional_price_variant.value -%}
+							{%- if custom_line_property.required -%}
+								{%- assign minimumAdditionalFee = minimumAdditionalFee | plus: additional_price_variant.price -%}
+							{%- endif -%}
+							{%- if additional_price_variant.price > 0 -%}
+								{%- assign additionalFees = true -%}	
+							{%- endif -%}
+						{%- when 'product_custom_line_variant_selector' -%}
+							{%- assign additional_price_product = custom_line_property.product.value -%}
+							{%- if custom_line_property.required -%}
+								{%- assign minimumAdditionalFee = minimumAdditionalFee | plus: additional_price_product.price_min -%}	
+							{%- endif -%}
+							{%- if additional_price_product.price_min > 0 -%}
+								{%- assign additionalFees = true -%}	
+							{%- endif -%}
+					{%- endcase -%}	
+				{%- endunless -%}	
+
+				{% assign has_minimum_additional_fee = false %}
+				{% if custom_line_property.display_name contains 'Charm Builder' and custom_line_property.required == true %}
+					{% assign has_minimum_additional_fee = true %}
+				{% endif %}
+			{%- endfor -%}
+			
+	          <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading Heading--textFont u-h7">
+				{%- if product.compare_at_price > product.price -%}
+	                {%- if settings.currency_code_enabled -%}
+	                  <span class="ProductItem__Price Price Price--highlight">{% if additionalFees or product.price_varies or has_minimum_additional_fee %}From{% endif %} {{ product.price_min | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+	                  <span class="ProductItem__Price Price Price--compareAt">{{ product.compare_at_price_min | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+	                {%- else -%}
+	                  <span class="ProductItem__Price Price Price--highlight">{% if additionalFees or product.price_varies or has_minimum_additional_fee %}From{% endif %} {{ product.price_min | plus: minimumAdditionalFee | money }}</span>
+	                  <span class="ProductItem__Price Price Price--compareAt">{{ product.compare_at_price_min | plus: minimumAdditionalFee | money }}</span>
+					{% endif %}
+	            {%- else -%}
+	              {%- if settings.currency_code_enabled -%}
+	                <span class="ProductItem__Price Price">{% if additionalFees or product.price_varies or has_minimum_additional_fee %}From{% endif %} {{ product.price_min | plus: minimumAdditionalFee | money_with_currency | remove: '.00' }}</span>
+	              {%- else -%}
+	                <span class="ProductItem__Price Price">{% if additionalFees or product.price_varies or has_minimum_additional_fee %}From{% endif %} {{ product.price_min | plus: minimumAdditionalFee | money }}</span>
+	              {%- endif -%}
+	            {%- endif -%}
+				
+		        {%- if show_labels -%}
+			  	  	{%- capture product_labels -%}
+			          	{%- assign label_swatch_config = settings.label_swatch_config | newline_to_br | split: '<br />' -%}
+			  			{%- if product.metafields.custom.discount_label != blank -%}
+			  				{%- assign label = product.metafields.custom.discount_label -%}
+			  				<span class="ProductItem__Label Heading Heading--textFont" style="{% render 'label_swatch_style', label_swatch_config: label_swatch_config, value: label %}"><em>{{ label }}</em></span>
+			  			{%- endif -%}
+			  		{%- endcapture -%}
+
+			  		{%- if product_labels != blank -%}
+			  			{{ product_labels }}
+			  		{%- endif -%}
+		        {%- endif -%}
+				
+	          </div>
+
+          {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+            <div class="ProductItem__UnitPriceMeasurement">
+              <div class="UnitPriceMeasurement Heading">
+                <span class="UnitPriceMeasurement__Price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+                <span class="UnitPriceMeasurement__Separator">/ </span>
+
+                <span class="UnitPriceMeasurement__ReferenceValue" {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value == 1 -%}style="display: none"{% endif %}>
+                  {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+                </span>
+
+                <span class="UnitPriceMeasurement__ReferenceUnit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if show_price_on_hover == false and show_color_swatch and color_swatch_list != blank -%}
+	        <div class="ProductItem__ColorSwatchList">
+	          {{- color_swatch_list -}}
+	        </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if use_horizontal -%}
+    <a href="{{ product.url }}" class="ProductItem__ViewButton Button Button--secondary hidden-pocket">{{ 'collection.product.view_product' | t }}</a>
+  {%- endif -%}
+</div>

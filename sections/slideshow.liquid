@@ -1,0 +1,559 @@
+{{ 'section-slideshow.css' | asset_url | stylesheet_tag }}
+
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "groupCells": true,
+  "setGallerySize": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "adaptiveHeight": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "wrapAround": true,
+  "dragThreshold": 15,
+  "pauseAutoPlayOnHover": false,
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+  "pageDots": false
+}
+{%- endcapture -%}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
+  <div class="Slideshow {% if section.settings.show_fullscreen %}Slideshow--fullscreen{% endif %}">
+    <div class="Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
+         data-flickity-config='{{ flickity_options }}'>
+      
+	  {%- for block in section.blocks -%}
+	  
+	  	{%- if block.settings.fifty_fifty and fifty_enabled_first != false -%}
+			{%- assign fifty_enabled = true -%}
+			{%- assign fifty_enabled_first = true -%}
+		{%- endif -%}
+		
+		{%- assign video_present = false -%}
+		
+        {%- capture slide_content -%}
+		
+  		  {%- if block.type == "video" -%}	
+			
+  		  	{%- if block.settings.mobile_video != blank -%}
+  				{%- assign media = block.settings.mobile_video -%}
+  	            <div class="Slideshow__VideoContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} hidden-tablet-and-up"
+  					style="{% unless section.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};{% endunless %} background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">
+  					<video controlsList="nodownload" id="video-{{ block.id }}-mobile" class="Slideshow__Video lazyVideo" playsinline {% if block.settings.autoplay %}autoplay muted{% endif %} {% if block.settings.loop %}loop{% endif %} preload="metadata">
+  						{% for source in media.sources %}
+  							{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+  							<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+  						{% endfor %}
+  						<img loading="lazy" src="{{ media.preview_image | img_url: '400x' }}">
+  					</video>
+  				</div>
+  			{%- endif -%}
+			
+  			{%- if block.settings.video != blank -%}
+  				{%- assign media = block.settings.video -%}
+  	            <div class="Slideshow__VideoContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} {% if block.settings.mobile_video != blank %}hidden-phone{% endif %}"
+  					style="{% unless section.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};{% endunless %} background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">
+  					<video controlsList="nodownload" id="video-{{ block.id }}" class="Slideshow__Video lazyVideo" playsinline {% if block.settings.autoplay %}autoplay muted{% endif %} {% if block.settings.loop %}loop{% endif %} preload="metadata">
+  						{% for source in media.sources %}
+  							{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+  							<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+  						{% endfor %}
+  						<img loading="lazy" src="{{ media.preview_image | img_url: '1200x' }}">
+  					</video>
+  				</div>
+  			{%- endif -%}
+
+  		  {%- else -%}
+          {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+
+	          {%- if mobile_image -%}
+	            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio{% endunless %} hidden-tablet-and-up"
+	                 style="{% unless section.settings.show_fullscreen %}--aspect-ratio: {{ mobile_image.aspect_ratio }};{% endunless %} background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+	                <img class="Slideshow__Image Image--lazyLoad"
+	                     src="{{ mobile_image | img_url: '1x1' }}"
+	                     data-src="{{ mobile_image | img_url: 'x800' }}"
+	                     alt="{{ mobile_image.alt | escape }}">
+
+	                <noscript>
+	                  <img class="Slideshow__Image" src="{{ mobile_image | img_url: 'x800' }}" alt="{{ mobile_image.alt | escape }}">
+	                </noscript>
+	            </div>
+	          {%- endif -%}
+
+	          {%- if block.settings.image -%}
+	            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} hidden-phone"
+	                 style="{% unless section.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }};{% endunless %} background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+	              {% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+	              <img class="Slideshow__Image Image--lazyLoad hide-no-js"
+	                   data-src="{{ image_url }}"
+	                   data-optimumx="1.2"
+	                   data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+	                   data-sizes="auto"
+	                   alt="{{ block.settings.image.alt | escape }}">
+
+	              <noscript>
+	                <img class="Slideshow__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+	              </noscript>
+	            </div>
+	          {%- else -%}
+	            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% if section.settings.show_fullscreen %}PlaceholderBackground{% endif %} PlaceholderSvg--dark">
+	              {%- capture placeholder -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+	              {{ placeholder | placeholder_svg_tag: 'Slideshow__Image PlaceholderBackground__Svg' }}
+	            </div>
+	          {%- endif -%}
+		  {%- endif -%}
+
+          {%- capture slideshow_content -%}
+            {%- if block.settings.subheading != blank -%}
+              <h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ block.settings.subheading }}</span></h3>
+            {%- endif -%}
+
+            {%- if block.settings.title != blank -%}
+              <h2 class="SectionHeader__Heading Heading u-h3"><span>{{ block.settings.title }}</span></h2>
+            {%- endif -%}
+			
+			{%- if block.settings.description != blank -%}
+				<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+					{{ block.settings.description }}
+				</div>
+			{%- endif -%}
+
+            {%- if block.settings.button_1_text != blank and block.settings.button_2_text != blank -%}
+              {%- assign has_two_buttons = true -%}
+            {%- else -%}
+              {%- assign has_two_buttons = false -%}
+            {%- endif -%}
+
+            {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
+              <div class="SectionHeader__ButtonWrapper">
+                <div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+                  {%- if block.settings.button_1_text != blank -%}
+                    <button onclick="location.href='{{ block.settings.button_1_link }}'" class="ButtonGroup__Item {% if block.settings.button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--{{ block.settings.button_style }}{% endif %}">{{ block.settings.button_1_text | escape }}</button>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+			
+			{%- if block.type == "video" and block.settings.autoplay == false -%}	
+	  		  	{%- assign video_present = true -%}
+				{%- if block.settings.mobile_video != blank -%}
+		            <div class="SectionHeader__IconHolder  hidden-tablet-and-up">
+		              <video-toggle-play-button class="Video__PlayButton" aria-label="Play video" video-wrapper-element="video-wrapper-{{ block.id }}" aria-controls="video-{{ block.id }}-mobile">{% render 'icon' with 'play' %}</video-toggle-play-button>
+		            </div>
+	  			{%- endif -%}
+			
+	  			{%- if block.settings.video != blank -%}
+		            <div class="SectionHeader__IconHolder {% if block.settings.mobile_video != blank %}hidden-phone{% endif %}">
+		              <video-toggle-play-button class="Video__PlayButton" aria-label="Play video" video-wrapper-element="video-wrapper-{{ block.id }}" aria-controls="video-{{ block.id }}">{% render 'icon' with 'play' %}</video-toggle-play-button>
+		            </div>
+	  			{%- endif -%}
+			{%- endif -%}
+			
+          {%- endcapture -%}
+
+          {%- if slideshow_content != blank -%}
+            <div class="Slideshow__Content Slideshow__Content--{{ block.settings.content_position }} ColourStyle--{{ block.settings.colour_style }}">
+              <header {% if video_present %}id="video-wrapper-{{ block.id }}"{% endif %} class="SectionHeader">
+                {{ slideshow_content }}
+              </header>
+            </div>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- comment -%}adi This code allows to cover a common use case where merchant would like to have a clickable image{%- endcomment -%}
+
+        {%- if block.settings.button_1_link != blank and video_present == false -%}
+          <div href="{{ block.settings.button_1_link }}" id="Slide{{ block.id }}" class="Slideshow__Slide {% if block.settings.fifty_fifty %}Slideshow__Slide--fiftyFifty{% endif %} {% if fifty_enabled and fifty_enabled_first == false %}Slideshow__Slide--fiftyFiftySecond{% endif %} Carousel__Cell {% if forloop.first or fifty_enabled %}is-selected{% endif %}" {% if forloop.first or fifty_enabled %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {{- slide_content -}}
+          </div>
+        {%- else -%}
+          <div id="Slide{{ block.id }}" class="Slideshow__Slide {% if block.settings.fifty_fifty %}Slideshow__Slide--fiftyFifty{% endif %} {% if fifty_enabled and fifty_enabled_first == false %}Slideshow__Slide--fiftyFiftySecond{% endif %} Carousel__Cell {% if forloop.first or fifty_enabled %}is-selected{% endif %}" {% if forloop.first or fifty_enabled %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {{- slide_content -}}
+          </div>
+        {%- endif -%}
+		
+	  	{%- unless fifty_enabled_first -%}
+			{%- assign fifty_enabled = false -%}
+		{%- endunless -%}
+		
+		{%- assign fifty_enabled_first = false -%}
+		
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.show_arrow -%}
+      <button data-href="#section-{{ section.id }}-end" class="Slideshow__ScrollButton RoundButton RoundButton--medium" aria-label="{{ 'general.accessibility.scroll_to_content' | t }}" data-animate-bottom>
+        {%- render 'icon' with 'arrow-bottom' -%}
+      </button>
+    {%- endif -%}
+  </div>
+
+  <span id="section-{{ section.id }}-end" class="Anchor"></span>
+</section>
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "class": "shopify-section--slideshow",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_fullscreen",
+      "label": "Show full-screen images",
+      "info": "If enabled, images will be resized to fit the entire screen.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrow",
+      "label": "Show bottom arrow",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "fifty_fifty",
+          "label": "Set width to 50% on desktop.",
+          "info": "This will automatically make this and the next slide 50% wide.",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "bottomLeft"
+        },
+	    {
+	      "type": "header",
+	      "content": "Text"
+	    },
+	    {
+	      "type": "image_picker",
+	      "id": "logo_image",
+	      "label": "Title image",
+	      "info": "1800 x 800px .jpg recommended"
+	    },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "<p>Slide title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Heading",
+          "default": "<p>Tell your story</p>"
+        },
+	    {
+	      "type": "richtext",
+	      "id": "description",
+	      "label": "Description"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Text Settings"
+	    },
+		{
+	      "type": "select",
+	      "id": "colour_style",
+	      "label": "Colour style",
+	      "options": [
+	        {
+	          "value": "light",
+	          "label": "Light"
+	        },
+	        {
+	          "value": "dark",
+	          "label": "Dark"
+	        }
+	      ],
+	      "default": "light",
+		  "info": "Sets the text and button colour."
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 1"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_1_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "button_style",
+	      "label": "Button style",
+	      "options": [
+	        {
+	          "value": "underline",
+	          "label": "Text underline"
+	        },
+	        {
+	          "value": "secondary",
+	          "label": "Secondary Button"
+	        },
+	        {
+	          "value": "primary",
+	          "label": "Primary Button"
+	        }
+	      ],
+	      "default": "underline",
+		  "info": "Sets the style for the button."
+	    }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video slide",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "video",
+          "id": "mobile_video",
+          "label": "Mobile video"
+        },
+        {
+          "type": "checkbox",
+          "id": "fifty_fifty",
+          "label": "Set width to 50% on desktop.",
+          "info": "This will automatically make this and the next slide 50% wide.",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "bottomLeft"
+        },
+	    {
+	      "type": "header",
+	      "content": "Text"
+	    },
+	    {
+	      "type": "image_picker",
+	      "id": "logo_image",
+	      "label": "Title image",
+	      "info": "1800 x 800px .jpg recommended"
+	    },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "<p>Slide title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Heading",
+          "default": "<p>Tell your story</p>"
+        },
+	    {
+	      "type": "richtext",
+	      "id": "description",
+	      "label": "Description"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Text Settings"
+	    },
+		{
+	      "type": "select",
+	      "id": "colour_style",
+	      "label": "Colour style",
+	      "options": [
+	        {
+	          "value": "light",
+	          "label": "Light"
+	        },
+	        {
+	          "value": "dark",
+	          "label": "Dark"
+	        }
+	      ],
+	      "default": "light",
+		  "info": "Sets the text and button colour."
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button 1"
+	    },
+	    {
+	      "type": "text",
+	      "id": "button_1_text",
+	      "label": "Text"
+	    },
+	    {
+	      "type": "url",
+	      "id": "button_1_link",
+	      "label": "Link"
+	    },
+	    {
+	      "type": "header",
+	      "content": "Button Settings"
+	    },
+	    {
+	      "type": "select",
+	      "id": "button_style",
+	      "label": "Button style",
+	      "options": [
+	        {
+	          "value": "underline",
+	          "label": "Text underline"
+	        },
+	        {
+	          "value": "secondary",
+	          "label": "Secondary Button"
+	        },
+	        {
+	          "value": "primary",
+	          "label": "Primary Button"
+	        }
+	      ],
+	      "default": "underline",
+		  "info": "Sets the style for the button."
+	    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Slideshow",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

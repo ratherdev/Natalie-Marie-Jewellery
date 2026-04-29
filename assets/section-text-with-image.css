@@ -1,0 +1,94 @@
+/**
+ * As of today this section is displayed on the home page only
+ */
+
+.FeatureText {
+  text-align: center;
+}
+
+.FeatureText__ContentWrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.FeatureText__ImageWrapper {
+  overflow: hidden;
+}
+
+.FeatureText--withImage .FeatureText__ContentWrapper {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.FeatureText .SectionHeader__Description {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .FeatureText--imageLeft {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .FeatureText__Content {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .FeatureText--withImage {
+    display: table;
+    width: 100%;
+    text-align: left;
+    table-layout: fixed;
+  }
+
+  .FeatureText--withImage .FeatureText__ContentWrapper,
+  .FeatureText--withImage .FeatureText__ImageWrapper {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+  }
+
+  .FeatureText--withImage .FeatureText__ContentWrapper {
+    padding: 50px;
+  }
+
+  .FeatureText--imageRight .FeatureText__ContentWrapper {
+    padding-right: 40px;
+  }
+
+  .FeatureText--imageRight .FeatureText__Content,
+  .FeatureText--imageRight .AspectRatio {
+    margin-right: 0;
+  }
+
+  .FeatureText--imageRight .AspectRatio {
+    text-align: right;
+  }
+
+  .FeatureText--imageLeft .FeatureText__ContentWrapper {
+    padding-left: 40px;
+  }
+
+  .FeatureText--imageLeft .FeatureText__Content,
+  .FeatureText--imageLeft .AspectRatio {
+    margin-left: 0;
+  }
+
+  .FeatureText--imageLeft .AspectRatio {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .FeatureText--imageRight .FeatureText__ContentWrapper {
+    padding-right: 100px;
+  }
+
+  .FeatureText--imageLeft .FeatureText__ContentWrapper {
+    padding-left: 100px;
+  }
+}

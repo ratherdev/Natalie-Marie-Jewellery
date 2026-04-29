@@ -1,0 +1,465 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "global": {
+    "categories": {
+      "banners": "Banners",
+      "collections": "Collections",
+      "call_to_action": "Call to action",
+      "layout": "Layout",
+      "products": "Products",
+      "media": "Media",
+      "storytelling": "Storytelling",
+      "content": "Content",
+      "trust_social": "Trust & social proof"
+    },
+    "colors": {
+      "category": "Colors",
+      "scheme": "Color scheme",
+      "background": "Background",
+      "background_gradient": "Background gradient",
+      "background_opacity": "Background opacity",
+      "text": "Text",
+      "text_shadow": "Text shadow",
+      "border": "Border",
+      "icon": "Icon",
+      "button_background": "Button background",
+      "button_text": "Button text",
+      "overlay_color": "Overlay",
+      "overlay_opacity": "Overlay opacity",
+      "gradient_overlay": "Gradient overlay"
+    },
+    "sizes": {
+      "size": "Size",
+      "section_width": "Section width",
+      "content_width": "Content width",
+      "x_small": "X-Small",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "x_large": "X-Large",
+      "fit_screen": "Fit screen",
+      "full_width": "Full width",
+      "original_image_ratio": "Original image ratio",
+      "original_video_ratio": "Original video ratio",
+      "none": "None"
+    },
+    "text": {
+      "subheading": "Subheading",
+      "heading": "Heading",
+      "heading_style": "Heading style",
+      "alignment": "Text alignment",
+      "title": "Title",
+      "content": "Content",
+      "text": "Text",
+      "secondary_text": "Secondary text",
+      "button_1_category": "Button 1",
+      "button_2_category": "Button 2",
+      "button_text": "Button text",
+      "button_link": "Button link",
+      "style": "Style",
+      "font_size_factor": "Font size factor",
+      "link": "Link",
+      "link_url": "Link URL",
+      "link_text": "Link text",
+      "link_style": "Link style",
+      "link_style_options": {
+        "outline": "Outline button",
+        "solid": "Solid button",
+        "link": "Link"
+      },
+      "button_style": "Button style",
+      "button_style_options": {
+        "outline": "Outline",
+        "solid": "Solid"
+      }
+    },
+    "image": {
+      "image": "Image",
+      "background_image": "Background image",
+      "mobile_image": "Mobile image",
+      "mobile_background_image": "Mobile background image",
+      "alignment": "Alignment",
+      "image_alignment": "Image alignment",
+      "size": "Image size",
+      "width": "Image width",
+      "mobile_width": "Mobile image width",
+      "width_options": {
+        "full_width": "Full width",
+        "custom": "Custom"
+      },
+      "maximum_width": "Maximum width",
+      "mobile_maximum_width": "Mobile maximum width",
+      "ratio_avoid_cropping_info": "Choose \"Original image ratio\" to avoid image cropping. [Learn more](https://help.shopify.com/en/manual/online-store/images/theme-images#best-practices-for-slideshows-and-full-widtw-images)"
+    },
+    "section": {
+      "header_category": "Section header",
+      "separate_section_with_border": "Separate section with border",
+      "allow_transparent_header": "Allow transparent header",
+      "allow_transparent_header_info": "This setting only applies when this section is the first one."
+    },
+    "video": {
+      "video": "Video",
+      "mobile_video": "Mobile video",
+      "video_info": "Replaces external video URL if both are specified.",
+      "video_url": "External video URL",
+      "autoplay": "Autoplay",
+      "autoplay_info": "Video are muted to allow autoplay.",
+      "loop": "Enable video looping",
+      "show_controls": "Show video controls",
+      "video_size": "Video size",
+      "ratio_avoid_cropping_info": "Choose \"Original video ratio\" to avoid video cropping. [Learn more](https://help.shopify.com/en/manual/online-store/images/theme-images#best-practices-for-slideshows-and-full-widtw-images)"
+    },
+    "position": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right",
+      "top": "Top",
+      "middle": "Middle",
+      "bottom": "Bottom",
+      "top_left": "Top left",
+      "top_center": "Top center",
+      "top_right": "Top right",
+      "middle_left": "Middle left",
+      "middle_center": "Middle center",
+      "middle_right": "Middle right",
+      "bottom_left": "Bottom left",
+      "bottom_center": "Bottom center",
+      "bottom_right": "Bottom right",
+      "content_position": "Content position",
+      "desktop_content_position": "Desktop content position",
+      "mobile_content_position": "Mobile content position"
+    },
+    "spacing": {
+      "spacing": "Spacing",
+      "column_spacing": "Column spacing",
+      "remove_vertical_spacing": "Remove vertical spacing",
+      "remove_horizontal_spacing": "Remove horizontal spacing"
+    },
+    "localization": {
+      "country_region_selector_category": "Country/region selector",
+      "country_region_selector_category_info": "To add a country/region, go to your [markets settings](/admin/settings/markets).",
+      "show_country_region_selector": "Show country/region selector",
+      "show_country_name": "Show country name",
+      "show_country_flag": "Show country flag",
+      "language_selector_category": "Language selector",
+      "language_selector_category_info": "To add a language, go to your [language settings](/admin/settings/languages).",
+      "show_locale_selector": "Show language selector"
+    },
+    "animation": {
+      "reveal_image_on_scroll": "Reveal image on scroll",
+      "reveal_on_scroll": "Reveal on scroll"
+    },
+    "faceting": {
+      "products_per_page": "Products per page",
+      "filters_and_sorting_category": "Filters and sorting",
+      "desktop_layout": "Desktop layout",
+      "desktop_layout_options": {
+        "sidebar": "Sidebar",
+        "horizontal": "Horizontal",
+        "drawer": "Drawer"
+      },
+      "show_sort_by": "Show sort by",
+      "show_filters": "Show filters",
+      "show_filters_info": "[Customize filters](https://help.shopify.com/manual/online-store/search-and-discovery/filters)",
+      "show_results_count": "Show product results count",
+      "show_group_name": "Show group name",
+      "show_group_name_info": "Group name will be shown inside selected filters.",
+      "show_filter_values_count": "Show filter values count",
+      "open_filters_by_default": "Open filters by default"
+    },
+    "code": {
+      "html": "HTML",
+      "liquid": "Liquid",
+      "liquid_info": "Add app snippets or other Liquid code to create advanced customizations."
+    },
+    "product_list": {
+      "product_list_category": "Product list",
+      "products_to_show": "Products to show",
+      "products_per_row_mobile": "Products per row (mobile)",
+      "products_per_row_desktop": "Products per row (desktop)",
+      "products_per_row_desktop_info": "Items per row can be changed automatically by the theme to avoid very narrow cards.",
+      "products_size_desktop": "Products size (desktop)",
+      "products_size_desktop_info": "Adjusted automatically to fit space.",
+      "products_size_desktop_options": {
+        "compact": "Compact",
+        "medium": "Medium",
+        "large": "Large"
+      },
+      "show_grid_mode_selector": "Show grid size selector",
+      "show_grid_mode_selector_info": "Allows customers to customize the size of products card.",
+      "stack_products": "Stack products",
+      "spacing_category": "Product list spacing",
+      "spacing_category_info": "A higher value increases spacing proportionally.",
+      "horizontal_spacing_factor": "Horizontal spacing factor",
+      "vertical_spacing_factor": "Vertical spacing factor",
+      "hide_product_information": "Hide product information",
+      "hide_product_information_info": "Create an immersive image-first experience by hiding product information.",
+      "hide_product_information_collection_info": "Create an immersive image-first experience by hiding product information. Product information is always hidden when compact mode is selected."
+    },
+    "blog": {
+      "show_excerpt": "Show excerpt",
+      "show_date": "Show date",
+      "show_author": "Show author",
+      "show_category": "Show category",
+      "show_category_info": "Add tag to organize blog posts. [Learn more](https://help.shopify.com/en/manual/online-store/blogs/writing-blogs#add-tags-to-a-blog-post).",
+      "show_read_more": "Show read more"
+    },
+    "icons": {
+      "icon": "Icon",
+      "custom_icon": "Custom icon",
+      "custom_icon_info": "128 x 128px .png recommended",
+      "icon_width": "Icon width",
+      "mobile_icon_width": "Mobile icon width",
+      "none": "None",
+      "shop_category": "Shop",
+      "award_gift": "Award gift",
+      "bag_handle": "Bag handle",
+      "building": "Building",
+      "coupon": "Coupon",
+      "gift": "Gift",
+      "info": "Info",
+      "love": "Love",
+      "percent": "Percent",
+      "star": "Star",
+      "shipping_category": "Shipping",
+      "box": "Box",
+      "delivery_truck": "Delivery truck",
+      "pin": "Pin",
+      "plane": "Plane",
+      "return": "Return",
+      "payment_and_security_category": "Payment & Security",
+      "credit_card": "Credit card",
+      "lock": "Lock",
+      "money": "Money",
+      "secure_profile": "Secure profile",
+      "shield": "Shield",
+      "ecology_category": "Ecology",
+      "earth": "Earth",
+      "leaf": "Leaf",
+      "recycle": "Recycle",
+      "tree": "Tree",
+      "tech_category": "Tech",
+      "at_sign": "At sign",
+      "bluetooth": "Bluetooth",
+      "camera": "Camera",
+      "printer": "Printer",
+      "smart_watch": "Smart watch",
+      "wifi": "WiFi",
+      "communication_category": "Communication",
+      "avatar": "Avatar",
+      "chat": "Chat",
+      "calendar": "Calendar",
+      "comment": "Comment",
+      "customer_support": "Customer support",
+      "happy_face": "Happy face",
+      "mailbox": "Mailbox",
+      "mobile_phone": "Mobile phone",
+      "operator": "Operator",
+      "phone": "Phone",
+      "send": "Send",
+      "user": "User",
+      "food_category": "Food & Drink",
+      "burger": "Burger",
+      "beer": "Beer",
+      "coffee": "Coffee",
+      "pizza": "Pizza",
+      "bottle": "Bottle",
+      "other_category": "Other",
+      "document": "Document",
+      "error": "Error",
+      "file": "File",
+      "jewelry": "Jewelry",
+      "mask": "Mask",
+      "music": "Music",
+      "not_allowed": "Not allowed",
+      "target": "Target",
+      "timer": "Timer",
+      "success": "Success"
+    }
+  },
+  "theme_settings": {
+    "appearance": {
+      "name": "Appearance",
+      "info_paragraph": "Adapt the theme to your brand style by changing rounded elements, spacing and icons style.",
+      "page_width": "Page width",
+      "icon_category": "Icon",
+      "icon_thickness": "Icon thickness",
+      "section_spacing_category": "Section spacing",
+      "vertical_space_between_sections": "Vertical space between sections",
+      "rounding_category": "Rounding",
+      "button_border_radius": "Button corner radius",
+      "input_border_radius": "Form input corner radius"
+    },
+    "colors": {
+      "name": "Colors",
+      "general_category": "General",
+      "heading_color": "Heading",
+      "body_text_color": "Body text",
+      "default_color_scheme": "Default color scheme",
+      "default_color_scheme_info": "Used on secondary pages like customer accounts or policy pages.",
+      "notification_category": "Notification",
+      "success_color": "Success",
+      "warning_color": "Warning",
+      "error_color": "Error",
+      "button_category": "Button",
+      "button_icon_category": "Button with icon",
+      "button_icon_category_info": "Applies to circled buttons such as navigation or close buttons.",
+      "modal_category": "Modal/drawer",
+      "product_category": "Product",
+      "product_rating_color": "Star rating",
+      "on_sale_accent": "On sale accent",
+      "sold_out_badge_background": "Sold out badge",
+      "custom_badge": "Custom badge",
+      "custom_badge_info": "[Learn more](https://support.maestrooo.com/article/719-custom-badges)"
+    },
+    "typography": {
+      "name": "Typography",
+      "headings_category": "Headings",
+      "heading_font": "Font",
+      "heading_size_factor": "Heading size factor",
+      "heading_size_factor_info": "All headings are increased or decreased proportionally.",
+      "heading_letter_spacing": "Heading letter spacing",
+      "heading_casing": "Heading casing",
+      "heading_casing_options": {
+        "normal": "Normal",
+        "lowercase": "Lowercase",
+        "uppercase": "Uppercase"
+      },
+      "body_text_category": "Body text",
+      "body_font": "Font",
+      "body_base_size_mobile": "Base size (mobile)",
+      "body_base_size_desktop": "Base size (tablet and desktop)",
+      "body_letter_spacing": "Body letter spacing",
+      "button_category": "Button",
+      "button_text_font": "Text font",
+      "button_text_font_options": {
+        "heading": "Heading",
+        "body": "Body text"
+      },
+      "button_letter_spacing": "Button letter spacing",
+      "button_casing": "Button casing",
+      "button_casing_options": {
+        "normal": "Normal",
+        "lowercase": "Lowercase",
+        "uppercase": "Uppercase"
+      },
+      "font_info": "Selecting different fonts can affect the speed of your online store. Learn more about [system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
+    },
+    "currency_format": {
+      "name": "Currency format",
+      "currency_codes": "Currency codes",
+      "currency_codes_paragraph": "Cart and checkout total prices always show currency codes. Example: $1.00 USD.",
+      "show_currency_codes": "Show currency codes"
+    },
+    "animation": {
+      "name": "Animation",
+      "minimize_motion_paragraph": "Users who configured their preferences to minimize non-essential motion will automatically experience reduced animations.",
+      "show_button_transition": "Show button transition",
+      "show_image_zoom_on_hover": "Show image zoom on hover",
+      "show_image_zoom_on_hover_info": "Applies to different sections such as collection list, mega-menu...",
+      "stagger_products_apparition": "Reveal products one by one",
+      "stagger_blog_posts_apparition": "Reveal blog posts one by one",
+      "stagger_menu_apparition": "Reveal menu items one by one"
+    },
+    "color_swatch": {
+      "name": "Color swatch",
+      "round_color_swatches": "Round color swatches",
+      "configuration": "Configuration (deprecated)",
+      "configuration_info": "Native color swatch should be used instead. [Learn more](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches). Configuration based color swatches is deprecated and will be removed in the future. If you still need to use the configuration based system, you can [learn more](https://support.maestrooo.com/article/718-configuring-color-swatches) about the exact naming convention."
+    },
+    "product_card": {
+      "name": "Product card",
+      "product_image_category": "Product image",
+      "product_image_size": "Image size",
+      "product_image_size_options": {
+        "natural": "Natural",
+        "short": "Short (4:3)",
+        "square": "Square (1:1)",
+        "portrait": "Portrait (4:5)",
+        "tall": "Tall (2:3)",
+        "short_crop": "Short (4:3) - fill card",
+        "square_crop": "Square (1:1) - fill card",
+        "portrait_crop": "Portrait (4:5) - fill card",
+        "tall_crop": "Tall (2:3) - fill card"
+      },
+      "show_secondary_image_on_hover": "Show secondary image on hover",
+      "product_info_category": "Product info",
+      "text_font": "Text font",
+      "text_font_options": {
+        "heading": "Heading",
+        "body": "Body text"
+      },
+      "show_vendor": "Show vendor",
+      "product_title_max_lines": "Title maximum lines (0 to never truncate)",
+      "when_price_varies": "When price varies...",
+      "when_price_varies_options": {
+        "from_price": "Show min price (e.g.: \"From $15\")",
+        "max_price": "Show max price (e.g.: \"$35\")"
+      },
+      "color_display_mode": "Color display mode",
+      "color_display_mode_options": {
+        "hide": "Hide",
+        "count": "Count",
+        "swatch": "Swatch"
+      },
+      "rating_category": "Product rating",
+      "rating_category_info": "To display a rating, add a product rating app. [Learn more](https://apps.shopify.com/categories/store-design-social-proof-product-reviews)",
+      "show_product_rating": "Show product rating",
+      "show_product_rating_if_empty": "Show if no reviews",
+      "show_product_rating_as": "Show product rating as...",
+      "show_product_rating_as_options": {
+        "rating": "Average rating (e.g. \"4.5\")",
+        "count": "Count (e.g. \"3 reviews\")"
+      },
+      "promotion_category": "Promotion",
+      "show_quick_buy": "Show quick buy",
+      "show_sold_out_badge": "Show sold out badge",
+      "show_discount_badge": "Show discount badge",
+      "show_discount_as": "Show discount as...",
+      "show_discount_as_options": {
+        "percentage": "Percentage",
+        "saving": "Saving"
+      }
+    },
+    "cart": {
+      "name": "Cart",
+      "cart_type": "Cart type",
+      "cart_type_options": {
+        "drawer": "Drawer",
+        "message": "Message",
+        "page": "Page"
+      },
+      "cart_icon": "Cart icon",
+      "cart_icon_options": {
+        "shopping_bag": "Shopping bag",
+        "shopping_bag_sharp": "Shopping bag (sharp)",
+        "shopping_cart": "Shopping cart",
+        "tote_bag": "Tote bag"
+      },
+      "empty_cart_link": "Empty cart link",
+      "free_shipping_bar_category": "Free shipping message",
+      "free_shipping_bar_category_info": "Show a shipping message advancement on cart page and cart drawer. Configure your [shipping rates](/admin/settings/shipping) to match the amount.",
+      "show_shipping_bar": "Show shipping message",
+      "free_shipping_bar_minimum_amount": "Free shipping minimum amount",
+      "free_shipping_bar_minimum_amount_placeholder": "E.g.: 50",
+      "free_shipping_bar_minimum_amount_info": "Indicate the value in your store main currency, without currency code. To have different amount per market, use the [Translate & Adapt app](https://apps.shopify.com/translate-and-adapt)."
+    },
+    "social_media": {
+      "name": "Social media",
+      "accounts": "Accounts"
+    },
+    "favicon": {
+      "name": "Favicon",
+      "image": "Image",
+      "image_info": "180 x 180px .png recommended"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Slideshow
+ * ----------------------------------------------------------------------------
+ */
+.shopify-section--slideshow {
+  position: relative;
+}
+
+.Slideshow--fullscreen {
+  height: 100vh;
+}
+
+@supports (--css: variables) {
+  .js .Slideshow--fullscreen {
+    height: calc(var(--window-height) - (var(--header-height) * 0) - 0px);
+    height: calc(var(--window-height) - (var(--header-height) * var(--header-is-not-transparent, 0)) - var(--announcement-bar-height, 0px));
+    max-height: 100vh;
+  }
+}
+/* Slideshow transition are handled in JavaScript, so while we use Flickity, we need to disable any transition */
+.js .Slideshow__Carousel .Slideshow__Slide {
+  transition: none;
+}
+.js .Slideshow__Carousel .Slideshow__Slide.is-selected {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1007px) {
+	.Slideshow__Slide--fiftyFifty {
+	    z-index: 1;
+	}
+
+	.Slideshow__Slide--fiftyFiftySecond {
+	    z-index: 0;
+	}
+}
+
+
+
+.Slideshow__ImageContainer,
+.Slideshow__VideoContainer {
+  height: 100%;
+}
+
+.Slideshow--fullscreen .Slideshow__Image,
+.Slideshow--fullscreen .Slideshow__Video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: "object-fit: cover; object-position: center;";
+  /* polyfill for IE */
+}
+
+.Slideshow__Image,
+.Slideshow__Video {
+  z-index: 0;
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .js .Slideshow__Image,
+  .js .Slideshow__Video {
+    opacity: 0;
+  }
+}
+
+.Slideshow__Content {
+  position: absolute;
+  padding: 0 20px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Slideshow__Content--middleLeft,
+.Slideshow__Content--bottomLeft {
+  text-align: left;
+}
+.Slideshow__Content--middleLeft .ButtonGroup,
+.Slideshow__Content--bottomLeft .ButtonGroup {
+  justify-content: flex-start;
+}
+
+.Slideshow__Content--middleCenter,
+.Slideshow__Content--bottomCenter {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Slideshow__Content--middleRight,
+.Slideshow__Content--bottomRight {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Slideshow__Content--middleRight .ButtonGroup,
+.Slideshow__Content--bottomRight .ButtonGroup {
+  justify-content: flex-end;
+}
+
+.Slideshow__Content--bottomLeft,
+.Slideshow__Content--bottomCenter,
+.Slideshow__Content--bottomRight {
+  top: auto;
+  bottom: 20px;
+  left: 0;
+  transform: none;
+}
+
+.Slideshow__Content--topCenter .SectionHeader,
+.Slideshow__Content--middleCenter .SectionHeader,
+.Slideshow__Content--bottomCenter .SectionHeader {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.js .Slideshow__Content .SectionHeader {
+  opacity: 0;
+}
+
+.Slideshow__ScrollButton {
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: -25px;
+}
+
+.Slideshow__Carousel--withScrollButton {
+  margin-bottom: 25px;
+}
+
+.Slideshow--fullscreen .Slideshow__ScrollButton {
+  bottom: 10px;
+}
+.Slideshow--fullscreen .Slideshow__Carousel--withScrollButton {
+  max-height: calc(100% - 35px);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1008px) {
+	.Slideshow__Content {
+	  padding: 0 32px;
+	}
+	
+	.Slideshow__Content--bottomLeft,
+	.Slideshow__Content--bottomCenter,
+	.Slideshow__Content--bottomRight {
+	  bottom: 32px;
+	}
+	
+	.Slideshow__Slide--fiftyFifty .SectionHeader,
+	.Slideshow__Slide--fiftyFifty + .Slideshow__Slide .SectionHeader {
+	    max-width: calc(50% - 8px);
+	}
+	
+	.Slideshow__Slide--fiftyFifty .Slideshow__Content .SectionHeader__Description,
+	.Slideshow__Slide--fiftyFifty + .Slideshow__Slide .Slideshow__Content .SectionHeader__Description {
+		max-width: 100%;
+	}
+
+	.Slideshow__Slide--fiftyFifty,
+	.Slideshow__Slide--fiftyFifty + .Slideshow__Slide {
+	    width: 50%;
+	}
+
+	.js .Carousel--fadeIn .Slideshow__Slide--fiftyFifty + .Slideshow__Slide {
+	    left: 50% !important;
+		position: absolute;
+		top: 0;
+	}
+}

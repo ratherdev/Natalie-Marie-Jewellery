@@ -1,0 +1,462 @@
+{%- assign currentMetal = product.metafields.custom.metal.value -%}
+{%- assign currentStone = product.metafields.custom.primary_stone.value -%}
+{%- assign currentWidth = product.metafields.custom.width.value -%}
+{%- assign additionalDrawersHtml = '' -%} 
+
+
+{%- if stitch_metals and currentMetal != blank -%}
+	{%- assign swatchLabel = 'Metal' -%}
+	{%- assign metalCount = 0 -%}
+	{%- capture metals -%}
+		{%- for subProduct in product.metafields.custom.group_products.value -%}
+			{% assign ignore = subProduct.metafields.custom.ignore_inventory.value | default: false %}
+			{%- assign is_available = subProduct.available -%}
+
+  {%- if ignore == true -%}
+    {%- assign is_available = true -%}
+  {%- endif -%}
+			{%- if is_available -%}
+				{%- assign metaObject = subProduct.metafields.custom.metal.value -%}
+				{%- assign validationStone = subProduct.metafields.custom.primary_stone.value -%}
+				{%- assign validationWidth = subProduct.metafields.custom.width.value -%}
+		
+				{%- if stitch_stones and currentStone != blank  -%}
+					{%- if currentStone.system.id != validationStone.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+				
+				{%- if stitch_width and currentWidth != blank  -%}
+					{%- if currentWidth.system.id != validationWidth.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+		
+				{%- if metaObject != blank -%}
+					{%- assign metalCount = metalCount | plus: 1 -%}
+					<li class="HorizontalList__Item">
+						<a href="{{ subProduct.url }}" class="ColorSwatch {% if metaObject.system.id == currentMetal.system.id %}is-active{% endif %}">
+							{%- assign media = metaObject.swatch.value -%}
+							<div class="Swatch__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+								{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+						        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+								<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+									data-src="{{ image_url }}"
+									data-optimumx="1.2"
+									data-widths="[{{ supported_sizes }}]"
+									data-sizes="auto"
+									alt="{{ media.alt | escape }}">
+
+								<noscript>
+									<img class="Swatch__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+								</noscript>
+							</div>
+						</a>
+			
+						<span class="ToolTip">
+							<header class="SectionHeader">
+								<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+									<span><p><strong>{{ swatchLabel }}</strong></p></span>
+								</h3>
+								<h2 class="SectionHeader__Heading Heading u-h3">
+									<span><p>{{ metaObject.title }}</p></span>
+								</h2>
+								<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+									{{ metaObject.tooltip | metafield_tag }}
+								</div>
+								{%- assign media = metaObject.main_image.value -%}
+								{%- if media != blank -%}
+									<div class="ToolTip--image">
+										<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+											{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+									        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+											<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+												data-src="{{ image_url }}"
+												data-optimumx="1.2"
+												data-widths="[{{ supported_sizes }}]"
+												data-sizes="auto"
+												alt="{{ media.alt | escape }}">
+
+											<noscript>
+												<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+											</noscript>
+										</div>
+									</div>
+								{%- endif -%}
+							</header>
+						</span>
+					</li>
+				{%- endif -%}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endcapture -%}
+	
+	{%- for option in product.options_with_values -%}
+		{%- assign downcase_option = option.name | downcase -%}
+		{%- if downcase_option contains 'carat' and option.values.size == 1 -%}
+			{%- assign metalCarat = option.values.first -%}
+		{%- endif -%}
+	{%- endfor -%}
+	
+	{% if metalCount <= 1 %}
+		{%- assign metalCount = 1 -%}
+		{%- capture metals -%}
+			{%- assign metaObject = currentMetal -%}
+			{%- if metaObject != blank -%}
+				<li class="HorizontalList__Item">
+					<a href="{{ subProduct.url }}" class="ColorSwatch {% if metaObject.system.id == currentMetal.system.id %}is-active{% endif %}">
+						{%- assign media = metaObject.swatch.value -%}
+						<div class="Swatch__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+							{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+					        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+							<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+								data-src="{{ image_url }}"
+								data-optimumx="1.2"
+								data-widths="[{{ supported_sizes }}]"
+								data-sizes="auto"
+								alt="{{ media.alt | escape }}">
+
+							<noscript>
+								<img class="Swatch__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+							</noscript>
+						</div>
+					</a>
+		
+					<span class="ToolTip">
+						<header class="SectionHeader">
+							<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+								<span><p><strong>{{ swatchLabel }}</strong></p></span>
+							</h3>
+							<h2 class="SectionHeader__Heading Heading u-h3">
+								<span><p>{{ metaObject.title }}</p></span>
+							</h2>
+							<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+								{{ metaObject.tooltip | metafield_tag }}
+							</div>
+							{%- assign media = metaObject.main_image.value -%}
+							{%- if media != blank -%}
+								<div class="ToolTip--image">
+									<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+										{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+								        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+										<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+											data-src="{{ image_url }}"
+											data-optimumx="1.2"
+											data-widths="[{{ supported_sizes }}]"
+											data-sizes="auto"
+											alt="{{ media.alt | escape }}">
+
+										<noscript>
+											<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+										</noscript>
+									</div>
+								</div>
+							{%- endif -%}
+						</header>
+					</span>
+				</li>
+			{%- endif -%}
+		{%- endcapture -%}
+	{% endif %}
+	
+	{%- if mode == 'text' -%}
+		{%- if metalCount > 1 -%}
+			<div class="MetalOptions">
+				<span class="Text--highlight">{{ metalCount }} Metals</span>
+			</div>
+		{%- else -%}
+			<div class="MetalOptions">
+				<span class="Text--highlight">{% if metalCarat != blank %}{{ metalCarat }} {% endif %}{{ currentMetal.title }}</span>
+			</div>
+		{%- endif -%}
+	{%- else -%}
+		<div class="ProductForm__Option ProductForm__Option--labelled Product-{{ product.id }}" data-group-property="{{ swatchLabel | downcase }}">
+			<span class="ProductForm__Label">{{ swatchLabel }}: 
+				{%- assign drawerID = product.id | append: '-metal-drawer' -%}
+				{%- assign drawerTitle = '' -%}
+				{%- assign drawerFooterContent = '' -%}
+				{%- assign metaObject = currentMetal -%}
+				
+				{%- capture drawerContent -%}
+					<header class="SectionHeader">
+						<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+							<span><p><strong>{{ swatchLabel }}</strong></p></span>
+						</h3>
+						<h2 class="SectionHeader__Heading Heading u-h3">
+							<span><p>{{ metaObject.title }}</p></span>
+						</h2>
+						<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+							{{ metaObject.tooltip | metafield_tag }}
+						</div>
+						{%- assign media = metaObject.main_image.value -%}
+						{%- if media != blank -%}
+							<div class="ToolTip--image">
+								<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+									{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+							        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+									<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+										data-src="{{ image_url }}"
+										data-optimumx="1.2"
+										data-widths="[{{ supported_sizes }}]"
+										data-sizes="auto"
+										alt="{{ media.alt | escape }}">
+
+									<noscript>
+										<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+									</noscript>
+								</div>
+							</div>
+						{%- endif -%}
+					</header>
+				{%- endcapture -%}
+				
+				{%- capture additionalDrawerHtml -%}
+				  	{%- render 'additional-drawer', 
+						drawerID: drawerID, 
+						drawerTitle: drawerTitle, 
+						drawerContent: drawerContent, 
+						drawerFooterContent: drawerFooterContent
+					-%}
+				{%- endcapture -%}
+
+				{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+	
+				{%- if additionalDrawerHtml != blank -%}
+					<div class="CustomOptionLabel Link Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{% if metalCarat != blank %}{{ metalCarat }} {% endif %}{{ currentMetal.title }}">{% if metalCarat != blank %}{{ metalCarat }} {% endif %}{{ currentMetal.title }}</div>
+				{%- else -%}
+					<div class="CustomOptionLabel Link Link--underline">{% if metalCarat != blank %}{{ metalCarat }} {% endif %}{{ currentMetal.title }}</div>
+				{%- endif -%}
+			</span>
+			<div class="ColorSwatchList_Wrapper">
+				<ul class="ColorSwatchList HorizontalList">
+					{{ metals }}
+				</ul>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endif -%}
+
+{%- if stitch_stones and currentStone != blank and mode == 'swatch' -%}
+	{%- assign swatchLabel = 'Stone' -%}
+	{%- capture stones -%}
+		
+		{%- for subProduct in product.metafields.custom.group_products.value -%}
+		{% assign ignore = subProduct.metafields.custom.ignore_inventory.value | default: false %}
+			{%- assign is_available = subProduct.available -%}
+
+  {%- if ignore == true -%}
+    {%- assign is_available = true -%}
+  {%- endif -%}
+  		{% comment %} {%- if is_available -%} {% endcomment %}
+				{%- assign metaObject = subProduct.metafields.custom.primary_stone.value -%}
+				{%- assign validationMetal = subProduct.metafields.custom.metal.value -%}
+				{%- assign validationWidth = subProduct.metafields.custom.width.value -%}
+		
+				{%- if stitch_metals and currentMetal != blank  -%}
+					{%- if currentMetal.system.id != validationMetal.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+				
+				{%- if stitch_width and currentWidth != blank  -%}
+					{%- if currentWidth.system.id != validationWidth.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+		
+				{%- if metaObject != blank -%}
+					<li class="HorizontalList__Item">
+						<a href="{{ subProduct.url }}" class="ColorSwatch {% if metaObject.system.id == currentStone.system.id %}is-active{% endif %}">
+							{%- assign media = metaObject.swatch.value -%}
+							<div class="Swatch__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+								{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+						        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+								<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+									data-src="{{ image_url }}"
+									data-optimumx="1.2"
+									data-widths="[{{ supported_sizes }}]"
+									data-sizes="auto"
+									alt="{{ media.alt | escape }}">
+
+								<noscript>
+									<img class="Swatch__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+								</noscript>
+							</div>
+						</a>
+			
+						<span class="ToolTip">
+							<header class="SectionHeader">
+								<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+									<span><p><strong>{{ swatchLabel }}</strong></p></span>
+								</h3>
+								<h2 class="SectionHeader__Heading Heading u-h3">
+									<span><p>{{ metaObject.title }}</p></span>
+								</h2>
+								<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+									{{ metaObject.tooltip | metafield_tag }}
+								</div>
+								{%- assign media = metaObject.main_image.value -%}
+								{%- if media != blank -%}
+									<div class="ToolTip--image">
+										<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+											{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+									        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+											<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+												data-src="{{ image_url }}"
+												data-optimumx="1.2"
+												data-widths="[{{ supported_sizes }}]"
+												data-sizes="auto"
+												alt="{{ media.alt | escape }}">
+
+											<noscript>
+												<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+											</noscript>
+										</div>
+									</div>
+								{%- endif -%}
+						
+							</header>
+						</span>
+					</li>
+				{%- endif -%}
+			{% comment %} {%- endif -%} {% endcomment %}
+		{%- endfor -%}
+	{%- endcapture -%}
+	
+	{%- if stones != blank -%}
+		{%- if mode == 'text' -%}
+		
+		{%- else -%}
+			<div class="ProductForm__Option ProductForm__Option--labelled Product-{{ product.id }}" data-group-property="{{ swatchLabel | downcase }}">
+				<span class="ProductForm__Label">{{ swatchLabel }}: 
+					{%- assign drawerID = product.id | append: '-stone-drawer' -%}
+					{%- assign drawerTitle = '' -%}
+					{%- assign drawerFooterContent = '' -%}
+					{%- assign metaObject = currentStone -%}
+				
+					{%- capture drawerContent -%}
+						<header class="SectionHeader">
+							<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+								<span><p><strong>{{ swatchLabel }}</strong></p></span>
+							</h3>
+							<h2 class="SectionHeader__Heading Heading u-h3">
+								<span><p>{{ metaObject.title }}</p></span>
+							</h2>
+							<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+								{{ metaObject.tooltip | metafield_tag }}
+							</div>
+							{%- assign media = metaObject.main_image.value -%}
+							{%- if media != blank -%}
+								<div class="ToolTip--image">
+									<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+										{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+								        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+
+										<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+											data-src="{{ image_url }}"
+											data-optimumx="1.2"
+											data-widths="[{{ supported_sizes }}]"
+											data-sizes="auto"
+											alt="{{ media.alt | escape }}">
+
+										<noscript>
+											<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+										</noscript>
+									</div>
+								</div>
+							{%- endif -%}
+						</header>
+					{%- endcapture -%}
+				
+					{%- capture additionalDrawerHtml -%}
+					  	{%- render 'additional-drawer', 
+							drawerID: drawerID, 
+							drawerTitle: drawerTitle, 
+							drawerContent: drawerContent, 
+							drawerFooterContent: drawerFooterContent
+						-%}
+					{%- endcapture -%}
+
+					{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+	
+					{%- if additionalDrawerHtml != blank -%}
+						<div class="CustomOptionLabel Link Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ currentStone.title }}">{{ currentStone.title }}</div>
+					{%- else -%}
+						<div class="CustomOptionLabel Link Link--underline">{{ currentStone.title }}</div>
+					{%- endif -%}
+				</span>
+				<div class="ColorSwatchList_Wrapper">
+					<ul class="ColorSwatchList HorizontalList tt">
+						{{ stones }}
+					</ul>
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endif -%}
+{%- endif -%}
+
+{%- if stitch_width and currentWidth != blank and mode == 'swatch' -%}
+	{%- assign swatchLabel = 'Width' -%}
+	{%- capture widths -%}
+		
+		{%- for subProduct in product.metafields.custom.group_products.value -%}
+			{%- if subProduct.available -%}
+				{%- assign metaObject = subProduct.metafields.custom.width.value -%}
+				{%- assign validationMetal = subProduct.metafields.custom.metal.value -%}
+				{%- assign validationStone = subProduct.metafields.custom.primary_stone.value -%}
+		
+				{%- if stitch_metals and currentMetal != blank  -%}
+					{%- if currentMetal.system.id != validationMetal.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+				
+				{%- if stitch_stones and currentStone != blank  -%}
+					{%- if currentMetal.system.id != validationStone.system.id -%}
+						{% continue %}
+					{%- endif -%}
+				{%- endif -%}
+				
+				{%- assign expandCell = expandCell | plus: 1 -%}
+				
+				{%- if metaObject != blank -%}
+					<div class="Grid__Cell {% unless expandCell > 4 %}Grid__Cell--expand{% endunless %} 1/4">
+						<a href="{{ subProduct.url }}" class="SizeSwatch {% if metaObject.system.id == currentWidth.system.id %}is-active{% endif %} SizeSwatch--expand">{{ metaObject.title }}</a>
+					</div>
+				{%- endif -%}
+				
+			{%- endif -%}
+		{%- endfor -%}
+		
+	{%- endcapture -%}
+	
+	{%- if widths != blank -%}
+		{%- if mode == 'text' -%}
+		
+		{%- else -%}
+			<div class="ProductForm__Option ProductForm__Option--labelled Product-{{ product.id }}" data-group-property="{{ swatchLabel | downcase }}">
+				<span class="ProductForm__Label">{{ swatchLabel }}:</span>
+				<div class="Grid">
+					<div class="Grid__Cell 2/3--lap-and-up">
+						<div class="Grid">
+							{{ widths }}
+						</div>
+					</div>
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endif -%}
+{%- endif -%}
+
+{%- if additionalDrawersHtml != blank -%}
+	<div class="Product__OffScreen">
+		{{ additionalDrawersHtml }}
+	</div>
+{%- endif -%}

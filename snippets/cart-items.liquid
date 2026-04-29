@@ -1,0 +1,292 @@
+{%- assign for_drawer = false -%}
+
+{%- if section.id == 'mini-cart' -%}
+	{%- assign for_drawer = true -%}
+{%- endif -%}
+
+{% liquid
+	for line_item in cart.items
+		if line_item.properties != empty
+			for property in line_item.properties
+				if property.first == '_bundleId'
+					assign bundlePrices = bundlePrices | append: ', ' | append: property.last | append: '_' | append: line_item.final_price
+					
+					if line_item.variant.compare_at_price > line_item.variant.price
+						assign bundleOriginalPrices = bundleOriginalPrices | append: ', ' | append: property.last | append: '_' | append: line_item.variant.compare_at_price
+					else
+						assign bundleOriginalPrices = bundleOriginalPrices | append: ', ' | append: property.last | append: '_' | append: line_item.original_price
+					endif
+					
+					assign bundleLineItemKeys = bundleLineItemKeys | append: ', ' | append: property.last | append: '_' | append: line_item.key
+				endif
+			endfor
+		endif
+	endfor
+-%}
+
+{%- assign bundlePrices = bundlePrices | remove_first: ", " | split: ', ' -%}
+{%- assign bundleOriginalPrices = bundleOriginalPrices | remove_first: ", " | split: ', ' -%}
+{%- assign bundleLineItemKeys = bundleLineItemKeys | remove_first: ", " | split: ', ' -%}
+<div class="Cart__ItemList">
+	{%- for line_item in cart.items -%}
+	
+		{%- assign lineMetal = '' -%}
+		{%- assign lineItemPrice = 0 -%}
+		{%- assign lineItemOriginalPrice = 0 -%}
+		{%- assign lineItemKeys = '' -%}
+		{%- assign bundleId = '' -%}
+  	  	{%- assign mergeLineItem = false -%}
+		{%- assign hideQuantity = false -%}
+		{%- assign hideIncreaseQuantity = false -%}
+		
+		{%- capture lineProperties -%}
+			{%- if line_item.properties != empty -%}
+				{%- for property in line_item.properties -%}
+				
+					{%- if property.first == '_bundleId' -%}
+						{%- for bundlePrice in bundlePrices -%}
+							{%- assign bundle = bundlePrice | split: '_' | first | plus: 0 -%}
+							{%- if bundle == property.last -%}
+								{%- assign bundleId = property.last -%}
+								{%- assign priceMarkUp = bundlePrice | split: '_' | last | plus: 0 -%}
+								{%- assign lineItemPrice = lineItemPrice | plus: priceMarkUp -%}
+							{%- endif -%}
+						{%- endfor -%}
+						
+						{%- for bundleOriginalPrice in bundleOriginalPrices -%}
+							{%- assign bundle = bundleOriginalPrice | split: '_' | first | plus: 0 -%}
+							{%- if bundle == property.last -%}
+								{%- assign priceMarkUp = bundleOriginalPrice | split: '_' | last | plus: 0 -%}
+								{%- assign lineItemOriginalPrice = lineItemOriginalPrice | plus: priceMarkUp -%}
+							{%- endif -%}
+						{%- endfor -%}
+						
+						{%- for bundleLineItemKey in bundleLineItemKeys -%}
+							{%- assign bundle = bundleLineItemKey | split: '_' | first | plus: 0 -%}
+							{%- assign lineItemKey = bundleLineItemKey | split: '_' | last -%}
+							{%- if bundle == property.last -%}
+								{%- assign lineItemKeys = lineItemKeys | append: ', ' | append: lineItemKey -%}
+							{%- endif -%}
+						{%- endfor -%}
+					{%- endif -%}
+					
+					{%- if property.first == '_bundleMerge' and property.last == 'true' -%}
+						{%- assign mergeLineItem = true -%}
+					{%- endif -%}
+					
+					{%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+					{%- if property.last == blank or first_character_in_key == '_' -%}
+						{%- continue -%}
+					{%- endif -%}
+					
+					{%- if property.first == 'Metal' -%}
+						{%- capture lineMetal -%}
+							<p class="CartItem__Variant Text--highlight">{{ property.first }}: {{ property.last }}</p>
+						{%- endcapture -%}
+					{%- else -%}
+						<p class="CartItem__Variant Text--highlight">{{ property.first }}: {{ property.last }}</p>
+					{%- endif -%}
+					
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endcapture -%}
+		
+		{%- if mergeLineItem -%}
+			{%- continue -%}
+		{%- endif -%}
+		
+		{%- if lineItemPrice == 0 -%}
+			{%- assign lineItemPrice = line_item.final_price -%}
+		{%- endif -%}
+		
+		{%- if lineItemOriginalPrice == 0 and line_item.variant.compare_at_price > 0 -%}
+			{%- assign lineItemOriginalPrice = line_item.variant.compare_at_price -%}
+		{%- elsif lineItemOriginalPrice == 0 -%}
+			{%- assign lineItemOriginalPrice = line_item.original_price -%}
+		{%- endif -%}
+		
+		{%- if lineItemKeys == '' -%}
+			{%- assign lineItemKeys = line_item.key -%}
+		{%- endif -%}
+		
+		{%- assign lineItemKeys = lineItemKeys | remove_first: ", " -%}
+  
+		{%- if for_drawer -%}
+			<div class="CartItemWrapper">
+		{%- endif -%}
+
+		<div class="CartItem {% unless for_drawer %}Grid{% endunless %}">
+			<div class="{% unless for_drawer %}Grid__Cell 1/4{% endunless %} CartItem__ImageWrapper">
+					{%- assign media = line_item.image -%}
+					<div class="CartItem__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }});">
+						{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+			            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+						
+						<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+							data-src="{{ image_url }}"
+							data-optimumx="1.2"
+							data-widths="[{{ supported_sizes }}]"
+							data-sizes="auto"
+							alt="{{ media.alt | escape }}">
+
+						<noscript>
+							<img class="CartItem__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+						</noscript>
+					</div>
+			</div>
+			
+			{% unless for_drawer %}
+				<div class="Grid__Cell 1/16"></div>
+			{%- endunless -%}
+
+			<div class="CartItem__Info {% unless for_drawer %}Grid__Cell 11/16--pocket 7/16--lap-and-up{% endunless %}">
+				
+				<div class="CartItem__Meta--primary">
+					<h2 class="CartItem__Title Heading u-h5">
+						{%- liquid
+							assign product_title = line_item.product.title
+							if product_title contains '|'
+								assign raw_product_title_parts = product_title | split: '|'
+								assign raw_product_title_parts_first = raw_product_title_parts | first
+								assign raw_product_title_parts_last = raw_product_title_parts | last
+								assign product_title = raw_product_title_parts_first | append: '<span class="ProductMeta__SubTitle"> | <em>' | append: raw_product_title_parts_last | append: '</em></span>'
+							endif 
+						-%}
+						<a href="{{ line_item.url }}">{{ product_title }} {% if settings.show_product_sub_title and line_item.product.metafields.custom.sub_title != blank %}<span class="ProductMeta__SubTitle"> | <em>{{ line_item.product.metafields.custom.sub_title }}</em>{% endif %}</a>
+					</h2>
+					
+					<div class="CartItem__PriceList {% unless for_drawer %}hidden-lap-and-up{% endunless %}">
+						{%- if lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
+							<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
+							<span class="CartItem__OriginalPrice Price Price--compareAt">{{ lineItemOriginalPrice | money_with_currency | remove: '.00' }}</span>
+						{%- else -%}
+							<span class="CartItem__Price Price">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
+						{%- endif -%}
+
+						{%- if line_item.line_level_discount_allocations != blank -%}
+							<ul class="CartItem__DiscountList">
+								{%- for discount_allocation in line_item.line_level_discount_allocations -%}
+									<li class="CartItem__Discount">
+										{%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money_with_currency | remove: '.00' }}
+									</li>
+								{%- endfor -%}
+							</ul>
+						{%- endif -%}
+					</div>
+				</div>
+				<div class="CartItem__Meta">
+					{{ lineMetal }}
+					
+					{%- unless line_item.product.has_only_default_variant -%}
+						{%- if line_item.variant.option1 != blank and line_item.variant.option1 != 'Custom' -%}
+							<p class="CartItem__Variant Text--highlight">
+								{{ line_item.product.options[0] }}: {{ line_item.variant.option1 }}
+							</p>
+						{%- endif -%}
+				
+						{%- if line_item.variant.option2 != blank and line_item.variant.option2 != 'Custom' -%}
+							<p class="CartItem__Variant Text--highlight">
+								{{ line_item.product.options[1] }}: {{ line_item.variant.option2 }}
+							</p>
+						{%- endif -%}
+				
+						{%- if line_item.variant.option3 != blank and line_item.variant.option3 != 'Custom' -%}
+							<p class="CartItem__Variant Text--highlight">
+								{{ line_item.product.options[2] }}: {{ line_item.variant.option3 }}
+							</p>
+						{%- endif -%}
+					{%- endunless -%}
+		  
+					{{ lineProperties }}
+
+					{%- if line_item.selling_plan_allocation -%}
+						<p class="CartItem__PlanAllocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
+					{%- endif -%}
+
+					{%- if line_item.unit_price_measurement -%}
+						<div class="CartItem__UnitPriceMeasurement">
+							<div class="UnitPriceMeasurement Heading">
+								<span class="UnitPriceMeasurement__Price">{{ line_item.unit_price | money_with_currency | remove: '.00' }}</span>
+								<span class="UnitPriceMeasurement__Separator">/ </span>
+
+								{%- if line_item.unit_price_measurement.reference_value != 1 -%}
+									<span class="UnitPriceMeasurement__ReferenceValue">{{ line_item.unit_price_measurement.reference_value }}</span>
+								{%- endif -%}
+
+								<span class="UnitPriceMeasurement__ReferenceUnit">{{ line_item.unit_price_measurement.reference_unit }}</span>
+							</div>
+						</div>
+					{%- endif -%}
+				</div>
+
+				{%- capture item_actions -%}
+					<div class="CartItem__Actions" style="text-align: center">
+						{%- assign labelMetaDowncase = line_item.product.metafields.custom.label.value | downcase -%}
+						{%- if labelMetaDowncase contains 'one of a kind' -%}
+							{%- assign hideQuantity = true -%}
+						{%- endif -%}
+						
+						<div class="CartItem__QuantitySelector" {% if hideQuantity %}hidden{% endif %}>
+							<div class="QuantitySelector">
+								{%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+
+								<a class="QuantitySelector__Button Link Link--primary" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_minus_one }}" href="{{ routes.cart_change_url }}?quantity={{ quantity_minus_one }}&line={{ forloop.index }}" data-quantity="{{ quantity_minus_one }}" data-action="update-item-quantity" data-line-key="{{ lineItemKeys }}">
+									{%- render 'icon' with 'minus' -%}
+								</a>
+
+								<input type="text" name="updates[]" id="updates_{{ line_item.key }}" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" value="{{ line_item.quantity }}" data-line-key="{{ lineItemKeys }}">
+
+								{%- assign quantity_plus_one = line_item.quantity | plus: 1 -%}
+								{%- if line_item.variant.inventory_management == 'shopify' and line_item.variant.inventory_policy == 'deny' and line_item.variant.inventory_quantity <= quantity_plus_one -%}
+									{%- assign hideIncreaseQuantity = true -%}
+								{%- endif -%}
+								<a {% if hideIncreaseQuantity %}disabled{% endif %} class="QuantitySelector__Button Link Link--primary" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_plus_one }}" href="{{ routes.cart_change_url }}?quantity={{ quantity_plus_one }}&line={{ forloop.index }}" data-quantity="{{ quantity_plus_one }}" data-action="update-item-quantity" data-line-key="{{ lineItemKeys }}">
+									{%- render 'icon' with 'plus' -%}
+								</a>
+							</div>
+						</div>
+						
+						{%- unless for_drawer -%}
+							<a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" class="CartItem__Remove CartItem__Remove--desk Link Link--underline Link--underlineShort u-h8" data-quantity="0" data-action="remove-item" data-line-key="{{ lineItemKeys }}">{{ 'cart.items.remove' | t }}</a>
+						{%- endunless -%}
+						
+						<a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" class="CartItem__Remove CartItem__Remove--mobile u-h7 {% unless for_drawer %}hidden-lap-and-up{% endunless %}" data-quantity="0" data-action="remove-item" data-line-key="{{ lineItemKeys }}">{%- render 'icon' with 'close' -%}</a>
+					</div>
+				{%- endcapture -%}
+
+   			 	{{ item_actions }}
+			</div>
+			
+			{% unless for_drawer %}
+				<div class="Grid__Cell 1/16 hidden-pocket"></div>
+			{%- endunless -%}
+
+			{%- unless for_drawer -%}
+			
+				<div class="CartItem__LinePriceList {% unless for_drawer %}Grid__Cell 3/16 hidden-pocket{% endunless %}" {% if for_drawer %}style="text-align: right"{% endif %}>
+					{%- if lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
+						<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
+						<span class="CartItem__OriginalPrice Price Price--compareAt">{{ lineItemOriginalPrice | money_with_currency | remove: '.00' }}</span>
+					{%- else -%}
+						<span class="CartItem__Price Price">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
+					{%- endif -%}
+
+					{%- if line_item.line_level_discount_allocations != blank -%}
+						<ul class="CartItem__DiscountList">
+							{%- for discount_allocation in line_item.line_level_discount_allocations -%}
+								<li class="CartItem__Discount">
+									{%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money_with_currency | remove: '.00' }}
+								</li>
+							{%- endfor -%}
+						</ul>
+					{%- endif -%}
+				</div>
+			{%- endunless -%}
+		</div>
+
+		{%- if for_drawer -%}
+			</div>
+		{%- endif -%}
+	{%- endfor -%}
+</div>

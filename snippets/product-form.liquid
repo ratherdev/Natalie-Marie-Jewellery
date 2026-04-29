@@ -1,0 +1,1084 @@
+{%- comment -%}
+Those are the option names for which we automatically detect swatch. For the color, we use them to display a swatch, while
+for size, we use it to display a size chart (if applicable)
+{%- endcomment -%}
+
+{%- assign color_label = 'metal,color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
+{%- assign size_label = 'size,taille,größe,tamanho,tamaño,koko,サイズ' | split: ',' -%}
+{%- assign custom_size_label = 'ring size' | split: ',' -%}
+
+{%- assign product_popovers = '' -%}
+{%- assign show_option_label = false -%}
+
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+
+{%- assign additionalDrawersHtml = '' -%} 
+
+<div class="ProductForm__Variants">
+	{%- unless product.has_only_default_variant -%}
+		{%- assign show_metal_meta = true -%}
+		{%- assign show_width_meta = true -%}
+		
+		{%- for option in product.options_with_values -%}
+			{%- assign downcase_option = option.name | downcase -%}
+			{%- if downcase_option == 'metal' -%}
+				{%- assign show_metal_meta = false -%}
+			{%- endif -%}
+			{%- if downcase_option == 'width' -%}
+				{%- assign show_width_meta = false -%}
+			{%- endif -%}
+
+			{%- if block.settings.selector_mode == 'block' or color_label contains downcase_option and block.settings.show_color_swatch -%}
+				{%- assign show_option_label = true -%}
+			{%- endif -%}
+		{%- endfor -%}
+		
+		{%- if show_metal_meta and product.metafields.custom.metal.value != blank -%}
+			<input type="hidden" name="properties[Metal]" value="{{ product.metafields.custom.metal.value.title }}" data-active="true">
+		{%- endif -%}
+		
+		{%- if show_width_meta and product.metafields.custom.width.value != blank -%}
+			<input type="hidden" name="properties[Width]" value="{{ product.metafields.custom.width.value.title }}" data-active="true">
+		{%- endif -%}
+
+		{%- for option in product.options_with_values -%}
+			{%- assign downcase_option = option.name | downcase -%}
+			{%- capture popover_id -%}popover-{{ product.id }}-{{ section.id }}-{{ option.name | handle }}{%- endcapture -%}
+			
+			<div class="ProductForm__Option {% if show_option_label %}ProductForm__Option--labelled{% endif %} {% if option.values.size == 1 %}{% unless custom_size_label contains downcase_option %}hidden-pocket hidden-lap-and-up{% endunless %}{% endif %}" style="{% if downcase_option contains 'carat' %}order: 1{% endif %}">
+				
+				{%- if custom_size_label contains downcase_option -%}
+					{%- assign optionGuide = option.name | append: '-guide' | handle -%}
+					{%- assign metaobject = product.metafields.custom.size_guide.value -%}
+				{%- else -%}
+					{%- assign optionGuide = option.name | append: '-guide' | handle -%}
+					{%- assign metaobject = shop.metaobjects['guide'][optionGuide] -%}
+				{%- endif -%}
+				
+				{%- assign drawerID = optionGuide -%}
+				{%- assign guideButton = '' -%}
+				
+				{%- if metaobject != blank -%}
+					{%- capture additionalDrawerHtml -%}
+					  	{%- render 'additional-drawer', 
+							drawerID: drawerID, 
+							drawerTitle: '', 
+							drawerContent: '', 
+							drawerFooterContent: '',
+							metaobject: metaobject,
+							option: option
+						-%}
+					{%- endcapture -%}
+
+					{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+					{%- capture guideButton -%}
+						{%- if additionalDrawerHtml != blank -%}
+							<div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+						{%- endif -%}		
+					{%- endcapture -%}
+				{%- endif -%}
+				
+				{%- if show_option_label -%}
+					<div class="Grid">
+						<div class="Grid__Cell 2/3--lap-and-up">
+							<div class="ProductForm__LabelWrapper">
+								<span class="ProductForm__Label">
+									{{ option.name }}:
+
+									{% if color_label contains downcase_option and block.settings.show_color_swatch %}
+										<span class="ProductForm__SelectedValue">{{ option.selected_value }}</span>
+									{% endif %}
+								</span>
+					
+								{%- if guideButton != blank -%}
+									<div>
+										{{ guideButton }}
+									</div>
+								{%- endif -%}
+							</div>
+						</div>
+					</div>
+				{%- endif -%}
+				
+				{%- if custom_size_label contains downcase_option -%}
+					<div class="Grid">
+						<div class="Grid__Cell 2/3--lap-and-up">
+							<button type="button" class="ProductForm__Item" aria-expanded="false" data-action="open-drawer" data-drawer-id="{{ drawerID }}">
+								<span class="ProductForm__OptionName">{% unless show_option_label %}{{ option.name }}: {% endunless %}<span class="ProductForm__SelectedValue">Select ring size</span></span>
+								{%- render 'icon' with 'select-arrow-right' -%}
+							</button>
+						</div>
+						
+						<input id="ring_size" class="Form__Input" data-custom-label="Ring Size" type="hidden" name="properties[Ring Size]" required>
+					</div>
+				
+				{%- elsif color_label contains downcase_option and block.settings.show_color_swatch -%}
+				{% if color_label contains 'metal'  %}
+					<div class="Grid__Cell 2/3--lap-and-up" style="padding-left: 0;">
+					<div class="Grid">
+{%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+						{%- for value in option.values -%}
+							{%- assign downcase_value = value | downcase -%}
+							<div class="Grid__Cell Grid__Cell--expand 1/4">
+								<input id="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch__Radio" type="radio" name="option-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}" {% if value == option.selected_value %}checked="checked"{% endif %} data-option-position="{{ option.position }}">
+								<label for="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch SizeSwatch--expand {% if downcase_value == 'white' %}ColorSwatch--white{% endif %}" data-tooltip="{{ value | escape }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}">
+									<span>{{ value }}</span>
+								</label>
+							</div>
+						
+						{%- endfor -%}
+					</div>	</div>			
+							{% else %}
+					<ul class="ColorSwatchList HorizontalList HorizontalList--spacingTight">
+						{%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+						{%- for value in option.values -%}
+							{%- assign downcase_value = value | downcase -%}<li class="HorizontalList__Item">
+								<input id="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="ColorSwatch__Radio" type="radio" name="option-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}" {% if value == option.selected_value %}checked="checked"{% endif %} data-option-position="{{ option.position }}">
+								<label for="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="ColorSwatch ColorSwatch--large {% if downcase_value == 'white' %}ColorSwatch--white{% endif %}" data-tooltip="{{ value | escape }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}">
+									<span class="u-visually-hidden">{{ value }}</span>
+								</label>
+							</li>
+						
+						{%- endfor -%}
+					</ul>
+					{% endif %}
+				{%- elsif block.settings.selector_mode == 'block' -%}
+					<div class="Grid">
+						<div class="Grid__Cell 2/3--lap-and-up">
+							<div class="Grid">
+								{%- for value in option.values -%}
+									<div class="Grid__Cell {% unless option.values.size > 4 %}Grid__Cell--expand{% endunless %} 1/4">
+										<input id="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch__Radio" type="radio" name="option-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}" {% if value == option.selected_value %}checked="checked"{% endif %} data-option-position="{{ option.position }}">
+										<label for="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch SizeSwatch--expand">{{ value }}</label>
+									</div>
+								{%- endfor -%}
+							</div>
+						</div>
+					</div>
+				{%- else -%}
+					<div class="Grid">
+						<div class="Grid__Cell 2/3--lap-and-up">
+							<button type="button" class="ProductForm__Item" aria-expanded="false" aria-controls="{{ popover_id }}">
+								<span class="ProductForm__OptionName">{% unless show_option_label %}{{ option.name }}: {% endunless %}<span class="ProductForm__SelectedValue">{{ option.selected_value }}</span></span>
+								{%- render 'icon' with 'select-arrow' -%}
+							</button>
+						</div>
+					</div>
+						
+					{%- capture popover_html -%}
+						{%- if color_label contains downcase_option and block.settings.show_color_carousel -%}
+							{%- for value in option.values -%}
+								{%- if value == option.selected_value -%}
+									{%- assign initial_image_index = forloop.index0 -%}
+									{%- break -%}
+								{%- endif -%}
+							{%- endfor -%}
+
+							{%- capture flickity_options -%}
+							{
+								"prevNextButtons": true,
+								"pageDots": true,
+								"initialIndex": {{ initial_image_index }},
+								"arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+							}
+							{%- endcapture -%}
+
+							<div id="{{ popover_id }}" class="VariantSelector" aria-hidden="true">
+								{%- capture option_index -%}option{{ option.position }}{%- endcapture -%}
+
+								{%- assign option_indexes_excluded_color = '' -%}
+								{%- assign selected_variant_title_excluded_color = '' -%}
+
+								{%- for option_nested in product.options_with_values -%}
+									{%- if option_nested.position != option.position -%}
+										{%- assign option_indexes_excluded_color = option_indexes_excluded_color | append: option_nested.position | append: ',' -%}
+
+										{%- for option_nested_value in option_nested.values -%}
+											{%- if option_nested_value == option_nested.selected_value -%}
+												{%- assign selected_variant_title_excluded_color = selected_variant_title_excluded_color | append: option_nested_value -%}
+											{%- endif -%}
+										{%- endfor -%}
+									{%- endif -%}
+								{%- endfor -%}
+
+								{%- assign option_indexes_excluded_color = option_indexes_excluded_color | split: ',' | compact -%}
+
+								<div class="VariantSelector__Carousel Carousel" data-flickity-config='{{ flickity_options }}'>
+									{%- for value in option.values -%}
+										<div class="VariantSelector__Item Carousel__Cell {% if value == option.selected_value %}is-selected{% endif %}"
+											data-background-color="{{ value | split: ' ' | last | handle }}"
+											data-background-image="{{ value | handle | append: '.png' | asset_url }}"
+											data-option-position="{{ option.position }}"
+											data-option-value="{{ value | escape }}">
+										
+											{%- for variant in product.variants -%}
+												{%- if variant[option_index] == value -%}
+													{%- assign variant_image = variant.image | default: product.featured_image -%}
+
+													{%- assign variant_title_excluded_color = '' -%}
+													{%- for option_index_excluded_color in option_indexes_excluded_color -%}
+														{%- capture sub_option_index -%}option{{ option_index_excluded_color }}{%- endcapture -%}
+														{%- assign variant_title_excluded_color = variant_title_excluded_color | append: variant[sub_option_index] -%}
+													{%- endfor -%}
+
+													<div data-variant-title="{{ variant_title_excluded_color | escape }}" class="VariantSelector__ImageWrapper AspectRatio AspectRatio--withFallback" aria-hidden="{% if selected_variant_title_excluded_color == variant_title_excluded_color %}false{% else %}true{% endif %}" style="max-width: {{ variant_image.width }}px; padding-bottom: {{ 100.0 | divided_by: variant_image.aspect_ratio }}%; --aspect-ratio: {{ variant_image.aspect_ratio }}">
+														{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,800', image: variant_image -%}{%- endcapture -%}
+														{%- assign image_url = variant_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+														<img class="VariantSelector__Image Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ variant_image.alt | escape }}">
+														<span class="Image__Loader"></span>
+													</div>
+												{%- endif -%}
+											{%- endfor -%}
+										</div>
+									{%- endfor -%}
+								</div>
+
+								<div class="VariantSelector__Info">
+									<div class="VariantSelector__ChoiceList">
+										{%- for value in option.values -%}
+											{%- assign min_price_for_variant = product.price_max -%}
+
+											{%- for variant in product.variants -%}
+												{%- if variant[option_index] == value -%}
+													{%- assign min_price_for_variant = min_price_for_variant | at_most: variant.price -%}
+												{%- endif -%}
+											{%- endfor -%}
+
+											<div class="VariantSelector__Choice {% if value == option.selected_value %}is-selected{% endif %}">
+												<div class="VariantSelector__ChoiceColor">
+													{%- assign downcase_value = value | downcase -%}
+
+													{%- assign color_swatch_name = value | handle | append: '.png' -%}
+													{%- assign color_swatch_image = images[color_swatch_name] -%}
+
+													<span class="VariantSelector__ColorSwatch {% if downcase_value == 'white' %}VariantSelector__ColorSwatch--white{% endif %}" style="background-color: {{ value | replace: ' ', '' | downcase }}; {% if color_swatch_image != blank %}background-image: url({{ color_swatch_image | img_url: '64x64' }}){% endif %}"></span>
+													<span class="VariantSelector__ChoiceValue">{{ value }}</span>
+												</div>
+
+												<div class="VariantSelector__ChoicePrice" data-color-position="{{ option.position }}">
+													{%- if available_prices_for_option_value.size > 1 -%}
+														{%- capture formatted_min_price -%}<span>{{ min_price_for_variant | money }}</span>{%- endcapture -%}
+														<span class="Heading Text--subdued">{{ 'product.form.from_price_html' | t: min_price: formatted_min_price }}</span>
+													{%- else -%}
+														<span class="Heading Text--subdued">{{ min_price_for_variant | money }}</span>
+													{%- endif -%}
+												</div>
+											</div>
+										{%- endfor -%}
+									</div>
+
+									<button type="button" class="VariantSelector__Button Button Button--primary Button--full" data-action="select-variant">{{- 'product.form.select_model' | t -}}</button>
+								</div>
+							</div>
+						{%- else -%}
+							<div id="{{ popover_id }}" class="OptionSelector Popover Popover--withMinWidth" aria-hidden="true">
+								<header class="Popover__Header">
+									<button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover">{% render 'icon' with 'close' %}</button>
+									<span class="Popover__Title Heading u-h4">{{ option.name | escape }}</span>
+								</header>
+
+								<div class="Popover__Content">
+									<div class="Popover__ValueList" data-scrollable>
+										{%- for value in option.values -%}
+											<button type="button" class="Popover__Value {% if value == option.selected_value %}is-selected{% endif %} Heading Link Link--primary u-h6"
+												data-value="{{ value | escape }}"
+												data-option-position="{{ option.position }}"
+												data-action="select-value">
+												{{- value | escape -}}
+											</button>
+										{%- endfor -%}
+									</div>
+								</div>
+							</div>
+						{%- endif -%}
+					{%- endcapture -%}
+
+					{%- assign product_popovers = product_popovers | append: popover_html -%}
+				{%- endif -%}
+			</div>
+		{%- endfor -%}
+	
+		{%- if block.settings.stitch_stones or block.settings.stitch_metals -%}
+			{%- render 'product-stitching', stitch_width: true, stitch_stones: block.settings.stitch_stones, stitch_metals: block.settings.stitch_metals, product: product, mode: 'swatch' -%}
+		{%- endif -%}
+		
+		{%- if block.settings.enable_custom_line_properties and product.metafields.custom.custom_line_item_properties.value != blank -%}
+			
+			{%- assign custom_line_properties = '' -%}
+			{%- assign custom_line_properties_header = '' -%}
+			{%- assign required_custom_line_properties = '' -%}
+			{%- assign typeFaceList = '' -%}
+			
+			{%- for custom_line_property in product.metafields.custom.custom_line_item_properties.value -%}
+				{%- capture custom_line_property_html -%}
+					
+					{%- assign drawerID = custom_line_property.system.id | append: '-drawer' -%}
+					{%- assign metaobject = custom_line_property.guide.value -%}
+					{%- assign guideButton = '' -%}
+				
+					{%- if metaobject != blank -%}
+						{%- capture additionalDrawerHtml -%}
+						  	{%- render 'additional-drawer', 
+								drawerID: drawerID, 
+								drawerTitle: '', 
+								drawerContent: '', 
+								drawerFooterContent: '',
+								metaobject: metaobject,
+								option: option
+							-%}
+						{%- endcapture -%}
+
+						{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+						{%- capture guideButton -%}
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+							{%- endif -%}		
+						{%- endcapture -%}
+					{%- endif -%}
+				
+	                {%- case custom_line_property.system.type -%}
+						
+						{%- when 'product_custom_line_date' -%}
+							{%- assign additional_price_variant = custom_line_property.additional_price_variant.value -%}
+							
+							{%- capture custom_line_settings -%}
+							{
+							  "selector_id": "selectorId_{{ custom_line_property.system.id }}",
+							  "price": {{ additional_price_variant.price | json }}
+							}
+							{%- endcapture -%}
+							
+							<div id="customLineProperty_{{ custom_line_property.system.id }}" class="customLineProperty_Date customLineProperty--optional" data-custom-line-settings='{{ custom_line_settings }}'>
+								<div class="ProductForm__Option ProductForm__Option--labelled">
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value or custom_line_property.group.value == false %}2/3--lap-and-up{% endif %}">
+											{%- if custom_line_property.description.value != blank or custom_line_property.more_info.value -%}
+												<div class="ProductForm__MoreInfo">
+													{%- if custom_line_property.description.value != blank -%}
+														{{ custom_line_property.description | metafield_tag }}
+													{%- endif -%}
+													
+													{%- if custom_line_property.more_info.value != blank -%}
+														{%- assign metaobject = custom_line_property.more_info.value -%}
+														{%- assign drawerID = custom_line_property.system.id | append: '-' | append: metaobject.system.id | append: '-drawer' -%}
+														{%- if metaobject != blank -%}
+															{%- capture additionalDrawerHtml -%}
+															  	{%- render 'additional-drawer', 
+																	drawerID: drawerID, 
+																	drawerTitle: '', 
+																	drawerContent: '', 
+																	drawerFooterContent: '',
+																	metaobject: metaobject
+																-%}
+															{%- endcapture -%}
+
+															{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+															{%- if additionalDrawerHtml != blank -%}
+																<div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+															{%- endif -%}	
+														{%- endif -%}	
+													{%- endif -%}
+												</div>
+											{%- endif -%}
+											
+											<div class="ProductForm__LabelWrapper">
+												<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+													{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}: 
+										
+													{% if additional_price_variant != blank %}
+														<span class="ProductMeta__Price Price u-h6">
+															{%- if settings.currency_code_enabled -%}
+											                  {%- capture formatted_min_price -%}{{ additional_price_variant.price | money_with_currency | remove: '.00' }}{%- endcapture -%}
+											                {%- else -%}
+											                  {%- capture formatted_min_price -%}{{ additional_price_variant.price | money | remove: '.00' }}{%- endcapture -%}
+											                {%- endif -%}
+										
+												            ({{ formatted_min_price }})
+														</span>
+													{% endif %}
+												</span>
+					
+												{%- if guideButton != blank -%}
+													<div>
+														{{ guideButton }}
+													</div>
+												{%- endif -%}
+											</div>
+										</div>
+									</div>
+									
+									<div class="ProductForm__Grid Grid">
+										<div class="Grid__Cell 2/3--lap-and-up">
+									        <div class="Form__Group">
+												<div class="Form__Item">
+													<input 
+														type="date" 
+														class="Form__Input"
+														name="properties[{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}]" 
+														aria-label="{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}" 
+														{% if custom_line_property.required.value %}required{% endif %}
+														data-custom-label="{{ custom_line_property.label }}" 
+														{% if additional_price_variant != blank %}data-additional-fee-id="{{ additional_price_variant.id }}"{% endif %}
+														>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						{%- when 'product_custom_line_text' -%}
+							{%- assign additional_price_variant = custom_line_property.additional_price_variant.value -%}
+							{%- assign numberTypeFaces = 0 -%}
+							{%- assign defaultTypeFace = '' -%}
+							{%- assign defaultTypeCase = '' -%}
+							
+							{%- capture typeFaces -%}
+								{%- if custom_line_property.typeface.value != blank -%}
+									<div class="ProductForm__Option ProductForm__Option--labelled ProductForm__Option--bordered">
+										<span class="ProductForm__Label">
+											Select Font:
+										</span>
+							
+										<div class="Grid Grid--offsetBottom">
+											{%- for typeface in custom_line_property.typeface.value -%}
+												{%- assign fontFamily = typeface.display_name | split: '-' | first | handleize -%}
+												{%- assign fontCase = typeface.sub_title | handleize -%}
+												
+												{%- if forloop.first -%}
+													{%- assign defaultTypeFace = typeface.display_name | split: '-' | first | handleize -%}
+													{%- assign defaultTypeCase = typeface.sub_title | handleize -%}
+												{%- endif -%}
+												
+												{%- assign typeFaceList = typeFaceList | append: ', ' | append: fontFamily -%}
+												
+												{%- assign numberTypeFaces = numberTypeFaces | plus: 1 -%}
+												<div class="Grid__Cell 3/12--phone 3/12--tablet-and-up 2/12--widescreen">
+													
+													<input id="option-{{ typeface.system.id }}-{{ custom_line_property.system.id }}-{{ forloop.index }}" class="ColorSwatch__Radio" type="radio" name="properties[{{ custom_line_property.sub_heading }} {{ custom_line_property.label }} Typeface]" value="{{ typeface.title }} {{ typeface.sub_title }}" data-font-family="{{ fontFamily }}" data-font-case="{{ fontCase }}" {% if forloop.first %}checked="checked"{% endif %}>
+													<label for="option-{{ typeface.system.id }}-{{ custom_line_property.system.id }}-{{ forloop.index }}" class="TypeFaceSelector">
+														{%- assign media = typeface.image.value -%}
+														{%- if media != blank -%}
+															<div class="TypeFaceSelector__Media">
+																<div class="TypeFaceSelector__ImageWrapper AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+																	{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+															        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600,700,800', image: media -%}{%- endcapture -%}
+	
+																	<img class="TypeFaceSelector__Image Image--fadeIn Image--lazyLoad"
+																		data-src="{{ image_url }}"
+																		data-optimumx="1.2"
+																		data-widths="[{{ supported_sizes }}]"
+																		data-sizes="auto"
+																		alt="{{ media.alt | escape }}">
+
+																	<noscript>
+																		<img class="TypeFaceSelector__Image" src="{{ media | img_url: '1000x' }}" alt="{{ media.alt | escape }}">
+																	</noscript>
+																</div>
+															</div>
+														{%- endif -%}
+														<div class="TypeFaceSelector__MetaInfo">
+															<h3 class="Heading Heading--textFont Text--alignCenter u-h8">{{ typeface.title }}</h3>
+															{%- if typeface.sub_title != blank -%}
+																<h4 class="Heading Heading--textFont Text--alignCenter Text--highlight u-h8">{{ typeface.sub_title }}</h4>
+															{%- endif -%}
+														</div>
+													</label>
+												</div>
+											{%- endfor -%}
+										</div>
+									</div>
+								{%- endif -%}
+							{%- endcapture -%}
+							
+							{%- capture custom_line_settings -%}
+							{
+							  "selector_id": "selectorId_{{ custom_line_property.system.id }}",
+							  "price": {{ additional_price_variant.price | json }},
+							  "number_type_faces": {{ numberTypeFaces | json }},
+							  "defaultTypeFace": {{ defaultTypeFace | json }},
+							  "defaultTypeCase": {{ defaultTypeCase | json }}
+							}
+							{%- endcapture -%}
+							
+							<div id="customLineProperty_{{ custom_line_property.system.id }}" class="customLineProperty_Text customLineProperty--optional" data-custom-line-settings='{{ custom_line_settings }}'>
+								<div class="ProductForm__Option ProductForm__Option--labelled">
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value %}2/3--lap-and-up{% endif %}">
+											{%- if custom_line_property.description.value != blank or custom_line_property.more_info.value -%}
+												<div class="ProductForm__MoreInfo">
+													{%- if custom_line_property.description.value != blank -%}
+														{{ custom_line_property.description | metafield_tag }}
+													{%- endif -%}
+													
+													{%- if custom_line_property.more_info.value != blank -%}
+														{%- assign metaobject = custom_line_property.more_info.value -%}
+														{%- assign drawerID = custom_line_property.system.id | append: '-' | append: metaobject.system.id | append: '-drawer' -%}
+														{%- if metaobject != blank -%}
+															{%- capture additionalDrawerHtml -%}
+															  	{%- render 'additional-drawer', 
+																	drawerID: drawerID, 
+																	drawerTitle: '', 
+																	drawerContent: '', 
+																	drawerFooterContent: '',
+																	metaobject: metaobject
+																-%}
+															{%- endcapture -%}
+
+															{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+															{%- if additionalDrawerHtml != blank -%}
+																<div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+															{%- endif -%}	
+														{%- endif -%}	
+													{%- endif -%}
+												</div>
+											{%- endif -%}
+											
+											<div class="ProductForm__LabelWrapper">
+												<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+													{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}: 
+										
+													{% if additional_price_variant != blank %}
+														<span class="ProductMeta__Price Price u-h6">
+															{%- if settings.currency_code_enabled -%}
+											                  {%- capture formatted_min_price -%}{{ additional_price_variant.price | money_with_currency | remove: '.00' }}{%- endcapture -%}
+											                {%- else -%}
+											                  {%- capture formatted_min_price -%}{{ additional_price_variant.price | money | remove: '.00' }}{%- endcapture -%}
+											                {%- endif -%}
+										
+												            ({{ formatted_min_price }})
+														</span>
+													{% endif %}
+												</span>
+					
+												{%- if guideButton != blank -%}
+													<div>
+														{{ guideButton }}
+													</div>
+												{%- endif -%}
+											</div>
+											
+										</div>
+									</div>
+									
+									<div class="ProductForm__Grid Grid">
+										<div class="Grid__Cell 2/3--lap-and-up">
+									        <div class="Form__Group">
+												<div class="Form__Item">
+													{%- if custom_line_property.input_type == 'textarea' -%}
+														<textarea
+															class="Form__Textarea"
+															name="properties[{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}]" 
+															rows="3"
+															maxlength="{{ custom_line_property.maximum_characters | plus: 0 }}" 
+															placeholder="{{ custom_line_property.placeholder }}" 
+															{% if custom_line_property.required.value %}required{% endif %}
+															data-custom-label="{{ custom_line_property.label }}" 
+															{% if additional_price_variant != blank %}data-additional-fee-id="{{ additional_price_variant.id }}"{% endif %}
+															></textarea>
+															<p class="CharacterIndicator"><span>0</span>/{{ custom_line_property.maximum_characters | plus: 0 }}</p>
+													{%- else -%}
+														<input
+															type="text"
+															class="{%- if custom_line_property.input_type == 'textarea' -%}Form__Textarea{%- else -%}Form__Input{%- endif -%}"
+															name="properties[{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}]" 
+															maxlength="{{ custom_line_property.maximum_characters | plus: 0 }}" 
+															aria-label="{{ custom_line_property.placeholder }}" 
+															placeholder="{{ custom_line_property.placeholder }}" 
+															{% if custom_line_property.required.value %}required{% endif %}
+															data-custom-label="{{ custom_line_property.label }}" 
+															{% if additional_price_variant != blank %}data-additional-fee-id="{{ additional_price_variant.id }}"{% endif %}
+															>
+															<p class="CharacterIndicator"><span>0</span>/{{ custom_line_property.maximum_characters | plus: 0 }}</p>
+													{%- endif -%}
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								{%- if numberTypeFaces > 1 and typeFaces != blank -%}
+									{{ typeFaces }}
+								{%- endif -%}
+							</div>
+						
+						{%- when 'product_custom_line_variant_selector' -%}
+						
+							{%- assign additional_price_product = custom_line_property.product.value -%}
+							{%- assign secondary_additional_price_product = custom_line_property.secondary_add_on_product.value -%}
+							
+							{%- capture custom_line_settings -%}
+							{
+							  "maxVariants": {{ custom_line_property.number_of_variants | json }},
+							  "selector_id": "selectorId_{{ custom_line_property.system.id }}"
+							}
+							{%- endcapture -%}
+							
+							<div id="customLineProperty_{{ custom_line_property.system.id }}" class="customLineProperty_VariantSelector customLineProperty--optional" data-custom-line-settings='{{ custom_line_settings }}'>
+								
+								<div class="ProductForm__Option ProductForm__Option--labelled">
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value and custom_line_property.number_of_variants < 4 %}2/3--lap-and-up{% endif %}">
+											{%- if custom_line_property.description.value != blank or custom_line_property.more_info.value -%}
+												<div class="ProductForm__MoreInfo">
+													{%- if custom_line_property.description.value != blank -%}
+														{{ custom_line_property.description | metafield_tag }}
+													{%- endif -%}
+													
+													{%- if custom_line_property.more_info.value != blank -%}
+														{%- assign metaobject = custom_line_property.more_info.value -%}
+														{%- assign drawerID = custom_line_property.system.id | append: '-' | append: metaobject.system.id | append: '-drawer' -%}
+														{%- if metaobject != blank -%}
+															{%- capture additionalDrawerHtml -%}
+															  	{%- render 'additional-drawer', 
+																	drawerID: drawerID, 
+																	drawerTitle: '', 
+																	drawerContent: '', 
+																	drawerFooterContent: '',
+																	metaobject: metaobject
+																-%}
+															{%- endcapture -%}
+
+															{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+															{%- if additionalDrawerHtml != blank -%}
+																<div class="Link Link--tertiary Link--underline" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}">{{ metaobject.link_title }}</div>
+															{%- endif -%}	
+														{%- endif -%}	
+													{%- endif -%}
+												</div>
+											{%- endif -%}
+											
+											<div class="ProductForm__LabelWrapper">
+												<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+													{{ custom_line_property.sub_heading }} {{ custom_line_property.label }}: 
+													<span class="ProductMeta__Price Price u-h6">
+														{%- if settings.currency_code_enabled -%}
+										                  {%- capture formatted_min_price -%}{{ additional_price_product.price_min | money_with_currency | remove: '.00' }}{%- endcapture -%}
+										                {%- else -%}
+										                  {%- capture formatted_min_price -%}{{ additional_price_product.price_min | money | remove: '.00' }}{%- endcapture -%}
+										                {%- endif -%}
+	
+														{%- if additional_price_product.price_varies -%}
+											                (from {{ formatted_min_price }} each)
+														{%- elsif additional_price_product.price_min > 0 -%}
+											                ({{ formatted_min_price }} each)
+														{%- endif -%}
+													</span>
+												</span>
+					
+												{%- if guideButton != blank -%}
+													<div>
+														{{ guideButton }}
+													</div>
+												{%- endif -%}
+											</div>
+										</div>
+									</div>
+									
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value and custom_line_property.number_of_variants < 4 %}2/3--lap-and-up{% endif %}">
+									        <div class="Form__Group">
+												<div class="Form__Item">
+													<div class="AdditionalVariantList Grid">
+														{% for i in (1..custom_line_property.number_of_variants) %}
+															{%- assign inputID = 'selectorId_' | append: custom_line_property.system.id | append: '_' | append: i  -%}	
+															<div class="Grid__Cell">
+																<input type="hidden" id="{{ inputID }}" class="Form__Input" name="properties[{{ custom_line_property.sub_heading }} {{ custom_line_property.label }} {{ i }}]" data-custom-label="{{ custom_line_property.label }}" {% if custom_line_property.required.value and i == 1 %}required{% endif %}>
+																<label for="{{ inputID }}" class="AdditionalVariantSwatch">
+																</label>
+															</div>
+														{% endfor %}
+														<div class="Grid__Cell">
+															<button type="button" class="Text--highlight" data-action="remove-variant">{% render 'icon' with 'ghd-arrow-left' %}</button>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% if custom_line_property.secondary_add_on_subheading != blank %}
+								<div class="ProductForm__Option ProductForm__Option--labelled">
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value and custom_line_property.number_of_variants < 4 %}2/3--lap-and-up{% endif %}">
+											
+											<div class="ProductForm__LabelWrapper">
+												<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+													{{ custom_line_property.secondary_add_on_subheading }}: 
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="Grid">
+										<div class="Grid__Cell {% if custom_line_property.required.value and custom_line_property.number_of_variants < 4 %}2/3--lap-and-up{% endif %}">
+									        <div class="Form__Group">
+												<div class="Form__Item">
+													<div class="AdditionalVariantList Grid">
+														{% for i in (1..custom_line_property.number_of_variants) %}
+															{%- assign inputID = 'selectorId_' | append: custom_line_property.system.id | append: '_' | append: i  | append: '_secondary' -%}	
+															<div class="Grid__Cell">
+																<input type="hidden" id="{{ inputID }}" class="Form__Input" name="properties[{{ custom_line_property.secondary_add_on_subheading }} {{ i }}]" data-custom-label="{{ custom_line_property.label }}" {% if custom_line_property.required.value and i == 1 %}required{% endif %}>
+																<label for="{{ inputID }}" class="AdditionalVariantSwatch">
+																</label>
+															</div>
+														{% endfor %}
+														<div class="Grid__Cell">
+															<button type="button" class="Text--highlight" data-action="remove-secondary-variant">{% render 'icon' with 'ghd-arrow-left' %}</button>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% endif %}
+								<div class="scroll-wrapper">
+									<div vue-init id="scroll-{{ custom_line_property.system.id }}" class="ProductForm__Option ProductForm__Option--labelled ProductForm__Option--bordered">
+										<birthstone-selector inline-template>
+											<div>
+												{%- assign itemCount = 0 -%}
+												{%- capture variantPicker -%}
+													{%- for additionalVariant in additional_price_product.variants -%}
+														{%- assign additionalDrawerHtml = '' -%}
+														{%- if additionalVariant.available -%}
+															{%- assign itemCount = itemCount | plus: 1 -%}
+															<div class="Grid__Cell 3/12--phone 3/12--tablet-and-up 2/12--widescreen">
+																<div class="AdditionalVariant" data-variant-title="{{ additionalVariant.title }}{% if additionalVariant.metafields.custom.sub_title != blank %} | {{ additionalVariant.metafields.custom.sub_title }}{% endif %}" data-variant-id="{{ additionalVariant.id }}" data-variant-price="{{ additionalVariant.price }}">
+																	{%- assign media = additionalVariant.image -%}
+																	{%- if media != blank -%}
+																		<div class="AdditionalVariant__Media">
+																			<div class="AdditionalVariant__ImageWrapper AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+																				
+																				{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+																				{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600,700,800', image: media -%}{%- endcapture -%}
+
+																				{% assign stone_name = image_url | split: '/' | last | split: '_' | first | downcase %}
+					
+																				<img 
+																					@click="setGalleryToStone('{{ stone_name }}')"
+																					class="AdditionalVariant__Image Image--fadeIn Image--lazyLoad"
+																					data-src="{{ image_url }}"
+																					data-optimumx="1.2"
+																					data-widths="[{{ supported_sizes }}]"
+																					data-sizes="auto"
+																					alt="{{ media.alt | escape }}">
+		
+																				<noscript>
+																					<img class="AdditionalVariant__Image" src="{{ media | img_url: '1000x' }}" alt="{{ media.alt | escape }}">
+																				</noscript>
+																			</div>
+																		</div>
+																	{%- endif -%}
+																	
+																	<div class="AdditionalVariant__MetaInfo hidden-pocket hidden-lap">
+																		<h3 class="Heading Heading--textFont Text--alignCenter u-h8">{{ additionalVariant.title }}</h3>
+																		{%- if additionalVariant.metafields.custom.sub_title != blank -%}
+																			<h4 class="Heading Heading--textFont Text--alignCenter Text--highlight u-h8" >{{ additionalVariant.metafields.custom.sub_title }}</h4>
+																		{%- endif -%}
+																	</div>
+																	
+																	{%- capture tool_tip_content -%}
+																		{%- if additionalVariant.metafields.custom.stone.value != blank -%}
+																			{%- assign stoneObject = additionalVariant.metafields.custom.stone.value -%}
+																			{%- assign stoneImage = stoneObject['main_image'].value -%}
+																			{%- assign stoneTooltip = stoneObject['tooltip'] | metafield_tag -%}
+																			{%- assign stoneTitle = stoneObject['title'] -%}
+																		
+																			<span class="ToolTip">
+																				<header class="SectionHeader">
+																					<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+																						<span><p><strong>Stone</strong></p></span>
+																					</h3>
+																					<h2 class="SectionHeader__Heading Heading u-h3">
+																						<span><p>{{ stoneTitle }}</p></span>
+																					</h2>
+																					<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+																						{{ stoneTooltip }}
+																					</div>
+																					<div class="ToolTip--image">
+																						 {%- assign media = stoneImage -%}
+																						 <div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+																							 {% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+																							 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+							
+																							 <img class="Image--lazyLoad Image--fadeIn hide-no-js"
+																								 data-src="{{ image_url }}"
+																								 data-optimumx="1.2"
+																								 data-widths="[{{ supported_sizes }}]"
+																								 data-sizes="auto"
+																								 alt="{{ media.alt | escape }}">
+		
+																							 <noscript>
+																								 <img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+																							 </noscript>
+																						 </div>
+																			
+																					</div>
+																				</header>
+																			</span>
+																			
+																			{%- assign drawerTitle = '' -%}
+																			{%- assign drawerFooterContent = '' -%}
+																			{%- assign metaObject = stoneObject -%}
+																			{%- assign drawerID = custom_line_property.system.id | append: '-' | append: metaObject.system.id | append: '-drawer' -%}
+						
+																			{%- capture drawerContent -%}
+																				<header class="SectionHeader">
+																					<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6">
+																						<span><p><strong>Stone</strong></p></span>
+																					</h3>
+																					<h2 class="SectionHeader__Heading Heading u-h3">
+																						<span><p>{{ metaObject.title }}</p></span>
+																					</h2>
+																					<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+																						{{ metaObject.tooltip | metafield_tag }}
+																					</div>
+																					{%- assign media = metaObject.main_image.value -%}
+																					{%- if media != blank -%}
+																						<div class="ToolTip--image">
+																							<div class="Tooltip__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+																								{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+																								{%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+		
+																								<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+																									data-src="{{ image_url }}"
+																									data-optimumx="1.2"
+																									data-widths="[{{ supported_sizes }}]"
+																									data-sizes="auto"
+																									alt="{{ media.alt | escape }}">
+		
+																								<noscript>
+																									<img class="Tooltip__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+																								</noscript>
+																							</div>
+																						</div>
+																					{%- endif -%}
+																				</header>
+																			{%- endcapture -%}
+						
+																			{%- capture additionalDrawerHtml -%}
+																				  {%- render 'additional-drawer', 
+																					drawerID: drawerID, 
+																					drawerTitle: drawerTitle, 
+																					drawerContent: drawerContent, 
+																					drawerFooterContent: drawerFooterContent
+																				-%}
+																			{%- endcapture -%}
+		
+																			{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+																			
+																		{%- endif -%}
+																	{%- endcapture -%}
+																	
+																	{%- if tool_tip_content != blank -%}
+																		{{ tool_tip_content }}
+																	{%- endif -%}
+																</div>
+																
+																<div class="AdditionalVariant__MetaInfo hidden-desk-and-up">
+																	<h3 class="Heading Heading--textFont Text--alignCenter u-h8">{{ additionalVariant.title }}</h3>
+																	{%- if additionalVariant.metafields.custom.sub_title != blank -%}
+																		{%- if additionalDrawerHtml != blank -%}
+																			<h4 class="Heading Heading--textFont Text--alignCenter Text--highlight u-h8" data-action="open-drawer" data-drawer-id="{{ drawerID }}">
+																				<span class="">{{ additionalVariant.metafields.custom.sub_title }}</span>
+																			</h4>
+																		{%- else -%}
+																			<h4 class="Heading Heading--textFont Text--alignCenter Text--highlight u-h8" >{{ additionalVariant.metafields.custom.sub_title }}</h4>
+																		{%- endif -%}
+																	{%- endif -%}
+																</div>
+																
+															</div>
+														{%- endif -%}
+													{%- endfor -%}
+												{%- endcapture -%}
+
+												{%- capture secondaryVariantPicker -%}
+													{%- for additionalVariant in secondary_additional_price_product.variants -%}
+														{%- assign additionalDrawerHtml = '' -%}
+														{%- if additionalVariant.available -%}
+															{%- assign itemCount = itemCount | plus: 1 -%}
+															<div class="Grid__Cell 3/12--phone 3/12--tablet-and-up 2/12--widescreen">
+																<div class="SecondaryAdditionalVariant" data-variant-title="{{ additionalVariant.title }}{% if additionalVariant.metafields.custom.sub_title != blank %} | {{ additionalVariant.metafields.custom.sub_title }}{% endif %}" data-variant-id="{{ additionalVariant.id }}" data-variant-price="{{ additionalVariant.price }}">
+																	{%- assign media = additionalVariant.image -%}
+																	{%- if media != blank -%}
+																		<div class="AdditionalVariant__Media">
+																			<div class="AdditionalVariant__ImageWrapper AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+																				
+																				{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+																				{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600,700,800', image: media -%}{%- endcapture -%}
+
+																				{% assign stone_name = image_url | split: '/' | last | split: '_' | first | downcase %}
+					
+																				<img 
+																					@click="setGalleryToStone('{{ stone_name }}')"
+																					class="AdditionalVariant__Image Image--fadeIn Image--lazyLoad"
+																					data-src="{{ image_url }}"
+																					data-optimumx="1.2"
+																					data-widths="[{{ supported_sizes }}]"
+																					data-sizes="auto"
+																					alt="{{ media.alt | escape }}">
+		
+																				<noscript>
+																					<img class="AdditionalVariant__Image" src="{{ media | img_url: '1000x' }}" alt="{{ media.alt | escape }}">
+																				</noscript>
+																			</div>
+																		</div>
+																	{%- endif -%}
+																	
+																	<div class="AdditionalVariant__MetaInfo hidden-pocket hidden-lap">
+																		<h3 class="Heading Heading--textFont Text--alignCenter u-h8">{{ additionalVariant.title }}</h3>
+																		{%- if additionalVariant.metafields.custom.sub_title != blank -%}
+																			<h4 class="Heading Heading--textFont Text--alignCenter Text--highlight u-h8" >{{ additionalVariant.metafields.custom.sub_title }}</h4>
+																		{%- endif -%}
+																	</div>
+																	
+																</div>
+	
+															</div>
+														{%- endif -%}
+													{%- endfor -%}
+												{%- endcapture -%}
+											
+												<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+													Select {{ custom_line_property.label }}:
+												</span>
+											
+												<div class="Grid Grid--offsetBottom Grid--2rows" style="--item-count: {{ itemCount | divided_by: 2.00 | ceil }};">
+													{{ variantPicker }}
+												</div>
+												{% if custom_line_property.secondary_add_on_subheading != blank and secondaryVariantPicker %}
+													<span class="ProductForm__Label {% if custom_line_property.required.value %}ProductForm__Label--required{% endif %}">
+														Select {{ custom_line_property.secondary_add_on_subheading }}:
+													</span>
+
+													<div class="Grid Grid--offsetBottom Grid--2rows" style="--item-count: {{ itemCount | divided_by: 2.00 | ceil }};">
+														{{ secondaryVariantPicker }}
+													</div>
+												{% endif %}
+											</div>
+										</birthstone-selector>
+									</div>
+									<scroll-bar scroll-direction="horizontal" aria-controls="scroll-{{ custom_line_property.system.id }}" class="custom-scroll-bar hidden-lap-and-up fadeIn">
+										<button type="button" style="--item-count: {{ itemCount }};" class="custom-scroll-bar-slider"></button>
+									</scroll-bar>
+									<scroll-bar scroll-direction="vertical" aria-controls="scroll-{{ custom_line_property.system.id }}" class="custom-scroll-bar hidden-pocket fadeIn">
+										<button type="button" style="--item-count: {{ itemCount }};" class="custom-scroll-bar-slider"></button>
+									</scroll-bar>
+								</div>
+							</div>
+							
+					{%- endcase -%}
+				{%- endcapture -%}
+				
+				{%- if custom_line_property.required.value or custom_line_property.group.value == false -%}
+					{%- assign required_custom_line_properties = required_custom_line_properties | append: custom_line_property_html -%}
+				{%- else -%}
+					{%- capture custom_line_property_header_html -%}
+						<div class="Grid__Cell Grid__Cell--expand 1/4">
+							<div class="CustomLineProperties_Item" data-action="toggle-content" data-toggle-id="customLineProperty_{{ custom_line_property.system.id }}">
+								<div class="Text--alignLeft">
+									<span class="Heading Heading--textFont u-h7">{{ custom_line_property.label }}</span>
+									<span class="Heading Heading--textFont u-h7">{{ custom_line_property.sub_heading }}</span>
+								</div>
+								<div class="Text--alignRight">
+									<span id="selectorId_{{ custom_line_property.system.id }}__checkmark" class="Heading Heading--textFont u-h7">{% render 'icon' with 'checkmark' %}</span>
+									<span id="selectorId_{{ custom_line_property.system.id }}__price" class="Heading Heading--textFont u-h7"></span>
+								</div>
+							</div>
+						</div>
+					{%- endcapture -%}
+					{%- assign custom_line_properties_header = custom_line_properties_header | append: custom_line_property_header_html -%}
+					{%- assign custom_line_properties = custom_line_properties | append: custom_line_property_html -%}
+				{%- endif -%}
+				
+			{%- endfor -%}
+			
+			{%- if required_custom_line_properties != blank -%}
+				{{ required_custom_line_properties }}
+			{%- endif -%}
+			
+			{%- if custom_line_properties != blank -%}
+				<div class="ProductForm__Option">
+					<span class="ProductForm__Label">
+						{{- 'product.form.optional_customisations' | t -}}
+					</span>
+					
+					<div class="Grid CustomLineProperties_Header">
+						{{ custom_line_properties_header }}
+					</div>
+					
+					<div class="CustomLinePropertiesWrapper">
+						<div class="CustomLineProperties">
+							{{ custom_line_properties }}
+						</div>
+					</div>
+					
+				</div>
+			{%- endif -%}
+		{%- endif -%}
+		
+		<div class="no-js ProductForm__Option">
+			<div class="Select Select--primary">
+				{%- render 'icon' with 'select-arrow' -%}
+
+				<select id="product-select-{{ product.id }}" name="id" title="Variant">
+					{%- for variant in product.variants -%}
+						<option {% if variant == selected_variant %}selected="selected"{% endif %} {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+					{%- endfor -%}
+				</select>
+			</div>
+		</div>
+	{%- else -%}
+		<input type="hidden" name="id" data-sku="{{ selected_variant.sku }}" value="{{ selected_variant.id }}">
+	{%- endunless -%}
+</div>
+
+{%- if typeFaceList != blank -%}
+	{%- assign typeFaceList = typeFaceList | remove_first: ", " | split: ', ' | unique -%}
+	<style>
+	{%- for typeFace in typeFaceList -%}
+		{%- if typeFace != 'baskerville' and typeFace != 'arial' and typeFace != 'opensans' -%}
+			{%- assign typeFaceWoff2 = typeFace | append: '.woff2' -%}
+			{%- assign typeFaceWoff = typeFace | append: '.woff' -%}
+			@font-face {
+			    font-family: '{{ typeFace }}';
+			    src: url({{ typeFaceWoff2 | file_url }}) format('woff2'),
+			         url({{ typeFaceWoff | file_url }}) format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+		{%- endif -%}
+	{%- endfor -%}
+	</style>
+{%- endif -%}
+
+{%- comment -%}
+--------------------------------------------------------------------------------------------------------------------
+OFF SCREEN ELEMENTS
+
+Implementation note: in the past (with "include") we could accumulate the data and output it outside the snippet
+itself. However with the new "render" tag, everything that is captured inside cannot be used outside the snippet
+itself. As a consequence we are moving them in JavaScript. This allows to make sure that those elements are upper
+in the DOM tree, and do not show below the content
+--------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<div class="Product__OffScreen">
+	{{- product_popovers -}}
+	{%- if additionalDrawersHtml != blank -%}
+		{{ additionalDrawersHtml }}
+	{%- endif -%}
+</div>

@@ -1,0 +1,41 @@
+<div class="Container">
+  <header class="PageHeader {% unless section.settings.show_large %}PageHeader--narrow{% endunless %}">
+    <div class="SectionHeader">
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		<h1 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title | default: page.title }}</span></h1>
+    </div>
+  </header>
+
+  <div class="PageContent {% unless section.settings.show_large %}PageContent--narrow{% endunless %} Rte">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "class": "shopify-section--mainPage",
+  "settings": [
+	{
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading"
+	},
+	{
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+	  "info": "Leave blank to use default page title."
+	},
+	{
+      "type": "checkbox",
+      "id": "show_large",
+      "label": "Large width",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

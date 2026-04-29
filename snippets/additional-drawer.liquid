@@ -1,0 +1,320 @@
+{%- if metaobject != blank -%}
+	{%- assign drawerTitle = metaobject.title | metafield_tag -%}
+	{%- capture drawerContent -%}
+		{%- if metaobject.intro.value != blank -%}
+			{{ metaobject.intro | metafield_tag | 
+				replace: '<a href="', '<a class="Link Link--underline" href="' | 
+				replace: '<h1>', '<h1 class="Heading u-h1">' | 
+				replace: '<h2>', '<h2 class="Heading u-h2">' | 
+				replace: '<h3>', '<h3 class="Heading u-h3">' | 
+				replace: '<h4>', '<h4 class="Heading u-h4">' | 
+				replace: '<h5>', '<h5 class="Heading u-h5">' | 
+				replace: '<h6>', '<h6 class="Heading u-h6">'
+			 }}
+		{%- endif -%}
+		
+		{%- if metaobject.form.value != blank -%}
+			{%- assign formObject = metaobject.form.value -%}
+			<div class="DrawerContent--spaced">
+				{%- assign form_id = 'form-' | append: metaobject.system.id -%}
+				<custom-contact-form>
+					{% form 'contact', id: form_id, class: 'Form Form--spacingTight Form--justifyCenter MainForm' %}
+				        {%- if form.posted_successfully? -%}
+				          <p class="Alert Alert--success">{{ 'contact.form.successfully_sent' | t }}</p>
+				        {%- endif -%}
+
+				        {%- if form.errors -%}
+				          <div class="Form__Alert Alert Alert--error">
+				            <ul class="Alert__ErrorList">
+				              {%- for field in form.errors -%}
+				                {%- if field == 'form' -%}
+				                  <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+				                {%- else -%}
+				                  <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+				                {%- endif -%}
+				              {%- endfor -%}
+				            </ul>
+				          </div>
+				        {%- endif -%}
+					
+						<div class="Form__Item">
+							<input type="email" class="Form__Input" name="contact[email]" aria-label="Email*" placeholder="Email*" required>
+							<label class="Form__FloatingLabel">Email*</label>
+						</div>
+					
+						{%- for formInput in formObject.form_fields.value -%}
+							{% comment %} <span>{{ formInput.type  }}</span> {% endcomment %}
+							{%- if formInput.type == 'Text' -%}
+								<div class="Form__Item">
+									<input type="text" class="Form__Input" name="contact[{{ formInput.label }}]" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+									<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+								</div>
+							{%- elsif formInput.type == 'Text Area' -%}
+						        <div class="Form__Item">
+						          <textarea name="contact[{{ formInput.label }}]" cols="30" rows="10" class="Form__Textarea" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}></textarea>
+						          <label class="Form__FloatingLabel">{{ formInput.label }}</label>
+						        </div>
+							{%- elsif formInput.type == 'Tel' -%}
+								<div class="Form__Item">
+									<input type="tel" class="Form__Input" name="contact[{{ formInput.label }}]" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+									<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+								</div>
+							{%- elsif formInput.type == 'Product URL' and product != blank -%}
+								<input type="hidden" name="contact[{{ formInput.label }}]" aria-label="{{ formInput.label }}" value="{{ product.url }}">	
+							{%- elsif formInput.type == 'Product Data' and product != blank -%}
+								<input type="hidden" name="contact[Product Name]" aria-label="Product Name" value="{{ product.title }}">
+							{%- elsif formInput.type == 'Product Details' and product != blank -%}
+								<input type="hidden" name="contact[Product Details]" aria-label="Product Details" value="{{ product.title }}">
+							{%- elsif formInput.type == 'Ring Size' and product != blank -%}
+								<div class="Form__Item">
+									<input type="text" class="Form__Input" name="contact[{{ formInput.label }}]" aria-label="{{ formInput.label }}" placeholder="{{ formInput.placeholder }}" {% if formInput.required.value %}required{% endif %}>
+									<label class="Form__FloatingLabel">{{ formInput.label }}</label>
+								</div>
+							{%- endif -%}
+						{%- endfor -%}
+					
+						{%- if formObject.display_newsletter.value == true and enable_contact_form_subscribe -%}
+							{%- assign include_subscribe = true -%}
+							<div class="Form__CheckboxWrapper">
+								<input type="hidden" aria-label="Newsletter Subscribe" name="contact[Newsletter Subscribe]" value="No" />
+								<input type="checkbox" aria-label="Newsletter Subscribe" class="Form__Checkbox" name="contact[Newsletter Subscribe]" id="{{ formObject.system.id }}_subscribe" value="Yes" checked>
+								{% render 'icon' with 'checkmark' %}
+								<label for="{{ formObject.system.id }}_subscribe">Sign me up to the newsletter</label>
+							</div>
+						{%- endif -%}
+				   
+						<button type="submit" class="Form__Submit Button Button--primary Button--full">{{ formObject.submit_button }}</button>
+				  {% endform %}
+				  
+	  			  {%- if include_subscribe -%}
+				  	{%- assign form_id = 'subscribe-' | append: metaobject.system.id -%}
+	  			  	<div hidden>
+	  					{% form 'customer', id: form_id, class: 'SecondaryForm' %}
+	  					  <div class="email">
+	  					    <label for="email">Email</label>
+	  					    <input type="email" name="contact[email]" />
+	  					  </div>
+
+	  					  <div class="submit">
+	  					    <input type="submit" value="Sign up" />
+	  					  </div>
+	  					{% endform %}
+	  				</div>
+	  			{%- endif -%}
+			  </custom-contact-form>
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.html_content.value != blank -%}
+			<div class="DrawerContent--spaced !mt-5">
+				{{ metaobject.html_content.value }}
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.loop_content.value != blank -%}
+			<div class="DrawerContent--spaced">
+        		{%- capture loopContent -%}
+					{%- for metasubobject in metaobject.loop_content.value -%}
+						
+						{%- if forloop.first -%}
+							{%- assign metaobjectSystemType = metasubobject.system.type -%}
+						{%- else -%}
+							{%- if metasubobject.system.type != metaobjectSystemType -%}
+								{%- continue -%}
+							{%- endif -%}
+						{%- endif -%}
+						
+						{%- if metasubobject.system.type == "ring_size" -%}
+							<tr>
+								<td class="Text--alignCenter"
+									data-value="{%- if option.values contains metasubobject.nmj_size_aus_uk -%}{{ metasubobject.nmj_size_aus_uk }}{%- else -%}Custom{%- endif -%}"
+									data-true-value="{{ metasubobject.nmj_size_aus_uk }}"
+									data-option-position="{{ option.position }}"
+									data-action="select-value">
+										{{ metasubobject.nmj_size_aus_uk }}
+								</td>
+								<td class="Text--alignCenter">{{ metasubobject.international_diameter_mm }} / {{ metasubobject.circumference_mm }}</td>
+								<!-- <td class="Text--alignCenter">{{ metasubobject.circumference_mm }}</td> -->
+								<td class="Text--alignCenter">{{ metasubobject.usa_size }}</td>
+							</tr>
+							{%- unless forloop.last -%}
+								<tr class="spacer"><td></td></tr>
+							{%- endunless -%} 
+						{%- elsif metasubobject.system.type == "chain_size" -%}
+							<tr>
+								<td class="Text--alignCenter">{{ metasubobject.inches }}</td>
+								<td class="Text--alignCenter">{{ metasubobject.centimeters }}</td>
+							</tr>
+						{%- elsif metasubobject.system.type == "payment_options" -%}	
+							<div class="Grid__Cell 4/16">
+			 					{%- assign media = metasubobject.logo.value -%}
+			 					<div class="Payment__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+			 						{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+			 			            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,200,300,400,500,600,700,800,900', image: media -%}{%- endcapture -%}
+						
+			 						<img class="Image--lazyLoad Image--fadeIn hide-no-js"
+			 							data-src="{{ image_url }}"
+			 							data-optimumx="1.2"
+			 							data-widths="[{{ supported_sizes }}]"
+			 							data-sizes="auto"
+			 							alt="{{ media.alt | escape }}">
+
+			 						<noscript>
+			 							<img class="Payment__Image" src="{{ media | img_url: '240x' }}" alt="{{ media.alt | escape }}">
+			 						</noscript>
+			 					</div>
+							</div>
+							<div class="Grid__Cell Grid__Cell--bordered 2/16"></div>
+							<div class="Grid__Cell 2/16"></div>
+							<div class="Grid__Cell 8/16">
+						  		{{ metasubobject.copy | metafield_tag | 
+									replace: '<a href="', '<a class="Link Link--underline" href="' | 
+									replace: '<h1>', '<h1 class="Heading u-h1">' | 
+									replace: '<h2>', '<h2 class="Heading u-h2">' | 
+									replace: '<h3>', '<h3 class="Heading u-h3">' | 
+									replace: '<h4>', '<h4 class="Heading u-h4">' | 
+									replace: '<h5>', '<h5 class="Heading u-h5">' | 
+									replace: '<h6>', '<h6 class="Heading u-h6">' 
+								}}
+							</div>
+						{%- elsif metasubobject.system.type == "diamond_size" -%}
+							<tr>
+								{% comment %} <td class="Text--alignCenter"
+									data-value="{%- if option.values contains metasubobject.carat_weight -%}{{ metasubobject.carat_weight }}{%- else -%}Custom{%- endif -%}"
+									data-true-value="{{ metasubobject.carat_weight }}"
+									data-option-position="{{ option.position }}"
+									data-action="select-value">
+										{{ metasubobject.carat_weight }}
+								</td> {% endcomment %}
+								<td class="Text--alignCenter">{{ metasubobject.carat_weight }}</td>
+								<td class="Text--alignCenter">{{ metasubobject.diamond_type }}</td>
+								<td class="Text--alignCenter">{{ metasubobject.starting_price }}</td>
+							</tr>
+							{%- unless forloop.last -%}
+								<tr class="spacer"><td></td></tr>
+							{%- endunless -%} 
+						{%- endif -%}	
+					{%- endfor -%}
+				{%- endcapture -%}
+				{%- if loopContent != blank -%}
+					{%- if metaobjectSystemType == "ring_size" or metaobjectSystemType == "chain_size" or metaobjectSystemType == "diamond_size" -%}
+				        <div class="TableWrapper">
+							<table class="Table {% if metaobjectSystemType == 'ring_size' or metaobjectSystemType == "diamond_size" %}Table--noBorder{% endif %} Table--productSizing">
+								<thead>
+									<tr class="Heading--caps">
+										{%- if metaobjectSystemType == "ring_size" -%}
+											<th class="Text--alignCenter">NMJ SIZE (AUS/UK)</th>
+											<th class="Text--alignCenter">Internal Diameter / Circumference (MM)</th>
+											<!-- <th class="Text--alignCenter">CIRCUMFERENCE (MM)</th> -->
+											<th class="Text--alignCenter">USA SIZE</th>
+										{%- elsif metaobjectSystemType == "chain_size" -%}
+											<th class="Text--alignCenter">Inches</th>
+											<th class="Text--alignCenter">Centimeter</th>
+										{%- elsif metaobjectSystemType == "diamond_size" -%}
+											<th class="Text--alignCenter">CARAT WEIGHT (STONE SIZE)</th>
+											<th class="Text--alignCenter">DIAMOND TYPE</th>
+											<th class="Text--alignCenter">STARTING PRICE</th>
+										{%- endif -%}
+									</tr>
+								</thead>
+								<tbody>
+									{{ loopContent }}		
+								</tbody>
+							</table>
+						</div>
+					{%- elsif metaobjectSystemType == "payment_options" -%}
+						<div class="Grid Grid--paymentOptions">
+							{{ loopContent }}
+						</div>
+					{%- endif -%}	
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.media_title.value != blank -%}
+			<div class="DrawerContent--spaced">
+				{{ metaobject.media_title | metafield_tag }}
+			</div>
+		{%- endif -%}
+		
+		{%- if metaobject.media.value != blank -%}
+			{%- assign media = metaobject.media.value -%}
+	        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: media -%}{%- endcapture -%}
+			
+			<div class="DrawerContent--spaced">
+				<div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+					{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+					<img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ media.alt | escape }}">
+					<span class="Image__Loader"></span>
+				
+					<noscript>
+						<img src="{{ media | img_url: '800x' }}" alt="{{ media.alt | escape }}">
+					</noscript>
+				</div>
+			</div>
+		{%- endif -%}
+	
+		{%- if metaobject.faqs_title != blank -%}
+			<div class="DrawerContent--spaced">
+				{{ metaobject.faqs_title | metafield_tag }}
+			</div>
+		{%- endif -%}
+	
+		{% for faq in metaobject.faqs.value %}
+			{%- if faq.question != blank and faq.answer != blank -%}
+	            <div class="Collapsible">
+	              <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	                {{ faq.question }} <span class="Collapsible__Plus"></span>
+	              </button>
+
+	              <div class="Collapsible__Inner">
+	                <div class="Collapsible__Content">
+	                  <div class="Rte">
+	                    {{ faq.answer | metafield_tag }}
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+			{%- endif -%}
+		{% endfor %}
+	
+	{%- endcapture -%}
+
+	{%- capture drawerFooterContent -%}
+		{{ metaobject.footer | metafield_tag }}
+	{%- endcapture -%}
+{%- endif -%}
+
+<div id="{{ drawerID }}" class="Drawer Drawer--fromRight {% if metaobjectSystemType == 'ring_size' %}Drawer--variantSelector{% endif %} {% if drawerClass != blank %}{{ drawerClass }}{% endif %}" aria-hidden="true">
+	<div class="Drawer__Header">
+		<button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ 'header.navigation.close_cart' | t }}">
+			{%- render 'icon' with 'close' -%}
+		</button>
+	</div>
+
+	<div class="Cart Drawer__Content">
+		<div class="Drawer__Main" data-scrollable>
+			<div class="Drawer__Container">
+				<div class="Drawer__Title Heading Heading--textFont u-h6">{{ drawerTitle | upcase }}</div>
+            	{{ drawerContent | 
+					replace: '<a href="', '<a class="Link Link--underline" href="' |
+					replace: '<h1>', '<h1 class="Heading u-h1">' | 
+					replace: '<h2>', '<h2 class="Heading u-h2">' | 
+					replace: '<h3>', '<h3 class="Heading u-h3">' | 
+					replace: '<h4>', '<h4 class="Heading u-h4">' | 
+					replace: '<h5>', '<h5 class="Heading u-h5">' | 
+					replace: '<h6>', '<h6 class="Heading u-h6">'
+				}}
+			</div>
+		</div>
+		
+		{%- if drawerFooterContent != blank -%}
+			<div class="Drawer__Footer" data-drawer-animated-fade>
+				<div class="Drawer__Container">
+					{{ drawerFooterContent }}
+				</div>
+			</div>
+		{%- endif -%}
+    </div>
+</div>

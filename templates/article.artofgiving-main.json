@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "text_with_media_ceYLUU": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_aWbdVV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SIANREDGRAVE_NMJ_4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_aWbdVV"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>The Art Of Giving | Main Event</p>",
+        "description": "<p>A fresh and eye catching main for a warm Christmas day. </p><p>In partnership with Australian chef <a href=\"https://www.instagram.com/sian_redgrave/\" target=\"_blank\" title=\"https://www.instagram.com/sian_redgrave/\"><em><strong>Sian Redgrave</strong></em></a>, we’re excited to bring you the second edition of our festive menu, paired with our <a href=\"/collections/personalised-gift-guide\" target=\"_blank\" title=\"The Personalised Gift Guide\"><em><strong>Personalised Gift Guide</strong></em></a><em><strong>. </strong></em></p><p>It’s the most wonderful time of the year — so make it your own with gifts full of sentiment and story. From the subtle to the extravagant, designed to be personalised with birthstones, engravings and charms.</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_TxYzqp": {
+      "type": "content-list",
+      "blocks": {
+        "image_JNCQFA": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Fig Leaf Wrapped Fish With Saffron Aioli, Figs & Herbs</p>",
+            "description": "<p>INGREDIENTS: </p><ul><li>8 large fig leaves</li><li>1 three kilo pink snapper (or any other whole fish), gutted and scaled </li><li>1 lemon, sliced</li><li>1 tbsp butter </li><li>Handful fresh herbs (parsley, dill, thyme, oregano) </li><li>Drizzle of olive oil, salt +pepper</li><li>One egg yolk</li><li>1 clove garlic, finely minced </li><li>2 tsp white wine vinegar</li><li>Pinch sea salt flakes </li><li>1 tbsp boiling water</li><li>Pinch of saffron threads </li><li>½ cup grapeseed oil</li><li>¼ cup olive oil</li><li>6 figs halved</li><li>Fresh herbs to serve, parsley, basil, chervil, chives and watercress are all lovely here</li></ul><p>METHOD:</p><p>1. Preheat oven to 200°. Pat the fish fry with paper towel. Take a large baking tray & cover with baking paper. Lay down four of the leaves and place the fish on top. Stuff the cavity of the fish with lemon slices, butter, herbs, salt + pepper. Wrap with remaining leaves & secure with kitchen string. Drizzle with oil & roast for 20-25 minutes. Rest for 5 minutes before serving.</p><p>2. To make the aioli, steep the saffron in the boiling water. In a medium bowl, whisk the egg yolk, garlic, vinegar & salt. Slowly drizzle in the oil, continuously whisking until thick & smooth. Add the saffron  and water & whisk to combine.</p><p>3. Drizzle the figs with olive oil & grill on the cut size in a hot griddle pan. Pick the herbs, dress with olive oil & serve all together! <br/><br/><br/><em>Sian wears our </em><a href=\"/products/hattie-stacking-ring-birthstone-rose-gold\" target=\"_blank\" title=\"Hattie Stacking Ring | Birthstone\"><em>Hattie Stacking Ring</em></a><em>, </em><a href=\"/products/lottie-ring-diamond-yellow-gold\" target=\"_blank\" title=\"Lottie Ring | Diamonds\"><em>Lottie Ring</em></a><em>, </em><a href=\"/products/aisha-stacking-ring-birthstone-yellow-gold\" target=\"_blank\" title=\"Aisha Stacking Ring | Birthstone\"><em>Aisha Stacking Ring</em></a><em>, </em><a href=\"/products/aiona-stacking-ring-old-cut-diamond-yellow-gold\" target=\"_blank\" title=\"Aiona Stacking Ring | Old Cut Diamond\"><em>Aiona Stacking Ring</em></a><em> and </em><a href=\"/products/ora-necklace-revisited-make-your-own-ready-to-ship-yellow-gold\" target=\"_blank\" title=\"Ora Necklace: Revisited  | Make Your Own | Ready to Ship\"><em>Ora Necklace. </em></a></p><p></p><p></p>",
+            "description_mobile": "<p>INGREDIENTS: </p><ul><li>8 large fig leaves</li><li>1 three kilo pink snapper (or any other whole fish), gutted and scaled </li><li>1 lemon, sliced</li><li>1 tbsp butter </li><li>Handful fresh herbs (parsley, dill, thyme, oregano) </li><li>Drizzle of olive oil, salt +pepper</li><li>One egg yolk</li><li>1 clove garlic, finely minced </li><li>2 tsp white wine vinegar</li><li>Pinch sea salt flakes </li><li>1 tbsp boiling water</li><li>Pinch of saffron threads </li><li>½ cup grapeseed oil</li><li>¼ cup olive oil</li><li>6 figs halved</li><li>Fresh herbs to serve, parsley, basil, chervil, chives and watercress are all lovely here</li></ul><p>METHOD:</p><p>1. Preheat oven to 200°. Pat the fish fry with paper towel. Take a large baking tray & cover with baking paper. Lay down four of the leaves and place the fish on top. Stuff the cavity of the fish with lemon slices, butter, herbs, salt + pepper. Wrap with remaining leaves & secure with kitchen string. Drizzle with oil & roast for 20-25 minutes. Rest for 5 minutes before serving.</p><p>2. To make the aioli, steep the saffron in the boiling water. In a medium bowl, whisk the egg yolk, garlic, vinegar & salt. Slowly drizzle in the oil, continuously whisking until thick & smooth. Add the saffron  and water & whisk to combine.</p><p>3. Drizzle the figs with olive oil & grill on the cut size in a hot griddle pan. Pick the herbs, dress with olive oil & serve all together! <br/><br/><br/><em>Sian wears our </em><a href=\"/products/hattie-stacking-ring-birthstone-rose-gold\" target=\"_blank\" title=\"Hattie Stacking Ring | Birthstone\"><em>Hattie Stacking Ring</em></a><em>, </em><a href=\"/products/lottie-ring-diamond-yellow-gold\" target=\"_blank\" title=\"Lottie Ring | Diamonds\"><em>Lottie Ring</em></a><em>, </em><a href=\"/products/aisha-stacking-ring-birthstone-yellow-gold\" target=\"_blank\" title=\"Aisha Stacking Ring | Birthstone\"><em>Aisha Stacking Ring</em></a><em>, </em><a href=\"/products/aiona-stacking-ring-old-cut-diamond-yellow-gold\" target=\"_blank\" title=\"Aiona Stacking Ring | Old Cut Diamond\"><em>Aiona Stacking Ring</em></a><em> and </em><a href=\"/products/ora-necklace-revisited-make-your-own-ready-to-ship-yellow-gold\" target=\"_blank\" title=\"Ora Necklace: Revisited  | Make Your Own | Ready to Ship\"><em>Ora Necklace. </em></a></p><p></p><p></p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JNCQFA"
+      ],
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "left",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_TTnjyp": {
+      "type": "content-list",
+      "blocks": {
+        "image_EdWFfC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_582bb576-273f-435f-b73e-8018fe2630c1.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_dyrknr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_50aa5f26-5c10-473d-8d54-98e67f8713cd.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_peQEwx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_73a930aa-e5c5-4527-85fd-ee18ba42b9e9.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_EdWFfC",
+        "image_dyrknr",
+        "image_peQEwx"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_bVMpAT": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_cGakU3": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "personalised-gift-guide",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_cGakU3"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 8,
+        "enable_natual_scroll": false,
+        "subheading": "",
+        "title": "<p>Personalised Gift Guide</p>",
+        "description": "<p>Discover the pieces Sian Redgrave wears from our Personalised Gift Guide.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "EXPLORE NOW",
+        "button_1_link": "shopify://collections/personalised-gift-guide",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": false,
+        "show_article_header": false,
+        "show_article_content": true,
+        "show_large": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": true
+      }
+    }
+  },
+  "order": [
+    "text_with_media_ceYLUU",
+    "content_list_TxYzqp",
+    "content_list_TTnjyp",
+    "content_slider_bVMpAT",
+    "main"
+  ]
+}

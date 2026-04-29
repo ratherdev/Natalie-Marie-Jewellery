@@ -1,0 +1,306 @@
+{%- capture table_header -%}
+	{%- assign headerBlock = section.blocks | where: 'type','header' | first -%}
+	{%- if headerBlock != blank -%}
+		<thead>
+			<tr class="Heading--caps">
+				{%- for i in (1..6) -%}
+					{%- assign blockSetting = 'col_' | append: i -%}
+					{%- if headerBlock.settings[blockSetting] != blank -%}
+						<th class="Text--alignCenter">{{ headerBlock.settings[blockSetting] }}</th>
+						{%- assign columnCount = i -%}
+					{%- endif -%}
+				{%- endfor -%}
+			</tr>
+		</thead>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture table_content -%}
+	{%- for block in section.blocks -%}
+	    {%- case block.type -%}
+			{%- when 'header' -%}
+				{%- continue -%}
+				
+			{%- when 'row' -%}
+				<tr>
+					{%- for i in (1..6) -%}
+						{%- assign blockSetting = 'col_' | append: i -%}
+						{%- if block.settings[blockSetting] != blank -%}
+							<td class="Text--alignCenter" style="width: {{ 100 | divided_by: columnCount }}%;">{{ block.settings[blockSetting] }}</td>
+						{%- endif -%}
+					{%- endfor -%}
+				</tr>
+			
+		{%- endcase -%}
+			
+	{%- endfor -%}
+{%- endcapture -%}
+
+{%- capture text_content -%}
+	{%- if section.settings.subheading != blank -%}
+		<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+	{%- endif -%}
+
+	{%- if section.settings.title != blank -%}
+		<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+	{%- endif -%}
+
+	{%- if section.settings.description != blank -%}
+		<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+			{{ section.settings.description }}
+		</div>
+	{%- endif -%}
+
+	{%- if section.settings.button_1_text != blank and section.settings.button_2_text != blank -%}
+		{%- assign has_two_buttons = true -%}
+	{%- else -%}
+		{%- assign has_two_buttons = false -%}
+	{%- endif -%}
+
+	{%- if section.settings.button_1_text != blank or section.settings.button_2_text != blank -%}
+		<div class="SectionHeader__ButtonWrapper">
+			<div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+				{%- if section.settings.button_1_text != blank -%}
+					<a href="{{ section.settings.button_1_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</a>
+				{%- endif -%}
+
+				{%- if block.settings.button_2_text != blank -%}
+					<a href="{{ section.settings.button_2_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_2_text | escape }}</a>
+				{%- endif -%}
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- if table_content != blank -%}
+	<section class="Section Section--spacingExtraLarge" data-section-type="table" data-section-id="{{ section.id }}">
+		<div class="Container">
+			<div class="Grid">
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 12/16--lap-and-up">
+					{{ text_content }}
+					
+					{%- if table_header != blank or table_content != blank -%}
+						<div class="TableWrapper">
+							<table class="Table">
+								{{ table_header }}
+								<tbody>
+									{{ table_content }}
+								</tbody>
+							</table>
+						</div>
+					{%- endif -%}
+				</div>
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+			</div>
+		</div>
+	</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Size chart table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Title image",
+      "info": "1800 x 800px .jpg recommended"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "<p>Sub-heading</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<p>Heading</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+	{
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "top",
+      "info": "Sets the text and button position."
+    },
+	{
+      "type": "select",
+      "id": "colour_style",
+      "label": "Colour style",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark",
+      "info": "Sets the text and button colour."
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "underline",
+          "label": "Text underline"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary Button"
+        },
+        {
+          "value": "primary",
+          "label": "Primary Button"
+        }
+      ],
+      "default": "underline",
+      "info": "Sets the style for the button."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "header",
+	  "limit": 1,
+      "name": "Header",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "col_1",
+          "label": "Column 1 header"
+        },
+        {
+          "type": "richtext",
+          "id": "col_2",
+          "label": "Column 2 header"
+        },
+        {
+          "type": "richtext",
+          "id": "col_3",
+          "label": "Column 3 header"
+        },
+        {
+          "type": "richtext",
+          "id": "col_4",
+          "label": "Column 4 header"
+        },
+        {
+          "type": "richtext",
+          "id": "col_5",
+          "label": "Column 5 header"
+        },
+        {
+          "type": "richtext",
+          "id": "col_6",
+          "label": "Column 6 header"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "row",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "col_1",
+          "label": "Column 1 content"
+        },
+        {
+          "type": "richtext",
+          "id": "col_2",
+          "label": "Column 2 content"
+        },
+        {
+          "type": "richtext",
+          "id": "col_3",
+          "label": "Column 3 content"
+        },
+        {
+          "type": "richtext",
+          "id": "col_4",
+          "label": "Column 4 content"
+        },
+        {
+          "type": "richtext",
+          "id": "col_5",
+          "label": "Column 5 content"
+        },
+        {
+          "type": "richtext",
+          "id": "col_6",
+          "label": "Column 6 content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Size chart table",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

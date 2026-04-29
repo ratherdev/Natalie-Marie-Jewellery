@@ -1,0 +1,14 @@
+.ContentList__ContentWrapper {
+    margin-bottom: 32px;
+}
+
+.ContentList__ContentWrapper .ContentItem__BlockContent .SectionHeader {
+    padding-left: 32px;
+    width: 75%;
+}
+
+.ContentList .Grid {
+    margin-top: -16px;
+    margin-bottom: -16px;
+    justify-content: center;
+}

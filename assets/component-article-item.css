@@ -1,0 +1,114 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Article item
+ * ----------------------------------------------------------------------------
+ */
+
+.ArticleListWrapper {
+  max-width: 1260px;
+  margin: 0 auto 60px auto;
+}
+
+.ArticleList {
+  margin-bottom: -60px;
+}
+
+.ArticleList .Grid__Cell {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.js .features--show-element-staggering .ArticleItem {
+  visibility: hidden;
+}
+
+.ArticleItem__ImageWrapper {
+  display: block;
+  margin-bottom: 22px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.ArticleItem__Image {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: "object-fit: cover; object-position: center;";
+}
+
+.features--show-image-zooming .ArticleItem__Image {
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.features--show-image-zooming .ArticleList .ImageHero__ImageWrapper {
+  transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (-moz-touch-enabled: 0), (hover: hover) {
+  .features--show-image-zooming .ArticleItem:hover .ArticleItem__Image,
+  .features--show-image-zooming .ArticleList .ImageHero:hover .ImageHero__ImageWrapper {
+    transform: scale(1.2);
+  }
+}
+
+.ArticleItem__Category {
+  display: block;
+  color: var(--link-color);
+  margin-top: 4px;
+}
+
+@media screen and (min-width: 1008px) {
+	.ArticleItem__Category {
+	  display: inline-block;
+	  float: right;
+	  margin-top: 0px;
+	}
+}
+
+.ArticleItem__Excerpt {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 641px) {
+  .ArticleList--withFeatured .Grid__Cell:first-child {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .ArticleListWrapper {
+    margin-bottom: 50px;
+  }
+
+  .ArticleList {
+    margin-bottom: -50px;
+  }
+
+  .ArticleList--withFeatured .Grid__Cell:first-child {
+    margin-bottom: 50px;
+  }
+}
+
+.ArticleList .ContentItem__BlockContentWrapper {
+    margin-top: 0;
+    flex-grow: 0;
+}
+
+@media screen and (max-width: 1007px) {
+	.ArticleList .ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 8px;
+	}
+}
+
+@media screen and (min-width: 1008px) {
+	.ArticleList .ContentItem__BlockContentWrapper--noMedia {
+	    margin-left: 16px;
+	}
+}
+
+.ArticleList .ContentItem__BlockContentWrapper--noMedia {
+    min-height: 0;
+}

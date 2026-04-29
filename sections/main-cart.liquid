@@ -1,0 +1,207 @@
+{%- capture section_settings -%}
+{
+  "type": {{ settings.cart_type | json }},
+  "itemCount": {{ cart.item_count }},
+  "drawer": false,
+  "hasShippingEstimator": {% if section.settings.show_shipping_estimator and cart.item_count > 0 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section class="Section Section--spacingExtraLarge" data-section-id="{{ section.id }}" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  {%- if cart.item_count == 0 -%}
+    <div class="EmptyState">
+      <div class="Container">
+        <h1 class="EmptyState__Title Heading u-h5">{{ 'cart.general.empty' | t }}</h1>
+
+        {%- if settings.cart_show_free_shipping_threshold -%}
+          {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+          {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
+
+          <p class="Text--subdued">{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+        {%- endif -%}
+
+        <a href="{{ routes.all_products_collection_url }}" class="EmptyState__Action Button Button--primary">{{ 'cart.general.empty_button' | t }}</a>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="Container Cart Cart--page">
+	  
+	  <form action="{{ routes.cart_url }}" method="POST" class="Grid" novalidate>
+		  <div class="Grid__Cell 2/16--lap-and-up"></div>
+		
+		  <div class="Grid__Cell 8/16--lap-and-up">
+	          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+	          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+			  
+			  <header {{ block.shopify_attributes }}>
+			    <h3 class="Heading Heading--caps Heading--textFont u-h6"><span><strong>Review</strong></span></h3>
+
+			    <div class="SectionHeader">
+			      <h1 class="SectionHeader__Heading Heading u-h3">
+					  {%- assign pageTitle = 'cart.general.title' | t -%}
+					  {%- assign pageTitleArray = pageTitle | split: ' ' -%} 
+					  
+					  {%- for word in pageTitleArray -%}
+					  	{%- if forloop.last -%}
+							{%- break -%}
+						{%- endif -%}
+						{{ word | append: ' ' }}
+					  {%- endfor -%}
+					  
+					  <em>{{ pageTitle | split: ' ' | last }}</em>
+				  </h1>
+			    </div>
+			  </header>
+			  
+			  {% render 'cart-items' %}
+		  </div>
+		  
+		  <div class="Grid__Cell 4/16--lap-and-up">
+			  
+			  {%- capture cartAnnouncements -%}
+			      {%- if settings.cart_show_free_shipping_threshold -%}
+			        {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+			            {%- if cart.total_price >= threshold_in_cents -%}
+			              <p>{{- 'cart.general.free_shipping' | t -}}</p>
+			            {%- else -%}
+			              {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
+			              <p>{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+			            {%- endif -%}
+			      {%- endif -%}
+		  
+				  {%- for line_item in cart.items -%}
+					{%- if line_item.properties != empty -%}
+						{%- for property in line_item.properties -%}
+							{%- if property.first == '_Production Time' -%}
+								{%- assign productionTimes = productionTimes | append: ',' | append: property.last -%}
+								{%- break -%}
+							{%- endif -%}
+						{%- endfor -%}
+					{%- endif -%}
+				  {%- endfor -%}
+		  
+				  {%- assign productionTimes = productionTimes | remove_first: ',' | split: ',' | downcase -%}
+				  {%- assign productionTimesOrder = settings.production_times_order | strip_newlines | split: ',' -%}
+		  
+				  {%- for productionTimeOrder in productionTimesOrder -%}
+				  	{%- if productionTimes contains productionTimeOrder -%}
+						{%- assign productionTime = productionTimeOrder -%}
+						{%- break -%}
+					{%- endif -%}
+				  {%- endfor -%}
+		  
+				  <div class="Cart__ProductionTime">
+					  {%- if productionTime != blank -%}
+					  	Crafted for you | Estimated dispatch <span class="DispatchTime">{{ productionTime }}</span>
+					  {%- else -%}
+					  	{%- if cart.item_count > 0 -%}
+					  		<span class="DispatchTime">Ready for immediate dispatch</span>
+						{%- endif -%}
+					  {%- endif -%}
+				  </div>
+		  
+			      {%- if settings.cart_announcement != blank -%}
+				  	<p class="Text--highlight">{{ settings.cart_announcement }}</p>
+			      {%- endif -%}
+			  {%- endcapture -%}
+			  {%- if cartAnnouncements != blank -%}
+			  	<div class="Cart__Announcements">
+					<div class="Drawer__Container">
+						{{ cartAnnouncements }}
+					</div>
+				</div>
+			  {%- endif -%}
+              
+			  {%- if settings.cart_enable_notes -%}
+                <div class="Cart__NoteContainer">
+                  <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+                </div>
+              {%- endif -%}
+			  
+			  {%- if settings.enable_qreport -%}
+				  <div class="QReport_Wrapper">
+					  <div class="QReport_Button">
+						  {%- assign insuranceIncluded = cart.attributes['QReport Insurance'] -%}
+					  
+	  		              <div class="Form__CheckboxWrapper">
+	  						  <input type="hidden" name="attributes[QReport Insurance]" value="" />
+	  						  <input type="checkbox" class="Form__Checkbox" id="qreport_insurance" name="attributes[QReport Insurance]" value="Yes" {% if insuranceIncluded == 'Yes'  %}checked{% endif %}>
+	  						  {% render 'icon' with 'checkmark' %}
+							  <label for="qreport_insurance"></label>
+	  		              </div>
+					  
+					  </div>
+					  {%- if settings.qreport_copy != blank -%}
+							<div class="QReport_Copy">
+								{{ settings.qreport_copy | 
+									replace: '<a href="', '<a class="Link Link--underline" href="' | 
+									replace: '<h1>', '<h1 class="Heading u-h1">' | 
+									replace: '<h2>', '<h2 class="Heading u-h2">' | 
+									replace: '<h3>', '<h3 class="Heading u-h3">' | 
+									replace: '<h4>', '<h4 class="Heading u-h4">' | 
+									replace: '<h5>', '<h5 class="Heading u-h5">' | 
+									replace: '<h6>', '<h6 class="Heading u-h6">'
+								}}
+							</div>
+					  {%- endif -%}
+				  </div>
+			  {%- endif -%}
+			  
+              <div class="Cart__Recap Text--alignRight">
+                {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+
+                {%- if cart.cart_level_discount_applications != blank -%}
+                  {%- for discount_application in cart.cart_level_discount_applications -%}
+                    <p class="Cart__Discount Heading u-h6">{{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money }}</span></p>
+                  {%- endfor -%}
+                {%- endif -%}
+
+                <p class="Cart__Total u-h6">{{ 'cart.general.total' | t }}: <span>{{ cart.total_price | money_with_currency }}</span></p>
+
+                {%- if shipping_and_taxes_notice != blank -%}
+                  <p class="Cart__Taxes">{{ shipping_and_taxes_notice }}</p>
+                {%- endif -%}
+              
+              </div>
+			  
+			  <button type="submit" name="checkout" class="Cart__Checkout Cart__Checkout--center Button Button--primary Button--full">{{ 'cart.general.checkout' | t }}</button>
+			  
+				{%- capture payment_methods -%}
+					{%- for type in shop.enabled_payment_types -%}
+						<li class="HorizontalList__Item">{{ type | payment_type_svg_tag }}</li>
+					{%- endfor -%}
+	 				 {%- endcapture -%}
+
+				 {%- if payment_methods != blank -%}
+				 	<ul class="HorizontalList PaymentList">
+						{{ payment_methods }}
+					</ul>
+				{%- endif -%}
+		  </div>
+
+		  <div class="Grid__Cell 2/16--lap-and-up"></div>
+	  </form>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Cart page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_shipping_estimator",
+      "label": "Show shipping rates calculator",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_estimator_default_country",
+      "label": "Default country to use",
+      "info": "If your customer is logged-in, the country in his default shipping address will be selected.",
+      "default": "United States"
+    }
+  ]
+}
+{% endschema %}

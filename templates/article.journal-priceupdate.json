@@ -1,0 +1,392 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "edbb72f8-c606-4713-aca3-24d4accd0081": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16196641292457__edbb72f8-c606-4713-aca3-24d4accd0081-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Letter_To_Our_Community_Facebook_Video.png",
+            "mobile_image": "shopify://shop_images/Letter_To_Our_Community_Facebook_Video.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16196641292457__edbb72f8-c606-4713-aca3-24d4accd0081-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "<p><strong>Practising Evolution</strong></p>",
+        "title": "<p>What it means to grow without losing ourselves</p>",
+        "description": "<p>From time to time, it feels important to step outside the rhythm of campaigns and launches.</p><p><br/>This piece is a reflection on how NMJ has evolved, and how we’re balancing heart and commercial realities as we grow. It felt better suited to this space - slower, more intimate, and very real.</p><p><br/>I started NMJ almost by accident. An inspired art student with a vision (the type of a dreamer), of creating work in a deeply personal, connected way. I was lured by the alchemy of precious metals and the mystery of gemstones, while also drawn to in by the uncanny weight jewellery carries in matters of the heart. </p><p><br/>I have never been one to express my heart easefully (a quality pre-defined by my English roots!), but when I started making jewellery, I found windows through my craft into tender, heartfelt places - opportunities to create tangible things that were sometimes too hard for words.</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "22942553-01da-4697-89ac-f500b502883f": {
+      "type": "content-list",
+      "blocks": {
+        "cadafbd8-eb0d-4f74-8124-0088dae333b1": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>Looking back, I realise that this brand that carries my name is (and always has been) a true expression of my heart. </p><p><br/>Whether creating in close collaboration with loved ones in the earliest days of NMJ; or later designing our symbolic Sollune Necklace, when I reflect on what I am most proud of, it is this: I have allowed this work to flow from an honest, human place, and in doing so have made it really mean something to people.</p><p><br/>After thirteen years of business, I’ve found the quiet assuredness that comes with time, learning and lived experience. I can now balance our values with our needs; our ideals with our realities and creativity with commerciality. Some decisions may not make business sense in isolation, but every decision is made with integrity and intention. <br/>The challenge, of course, is that it can be difficult to apply a commercial lens to something held so close to the heart. <br/>One of the most unexpected challenges of founding a jewellery brand has been navigating a constantly shifting landscape. When I started out, laboratory grown diamonds were not even available in Australia; now they are the dominant stone choice domestically. In 2024, we believed gold prices had peaked - it turns out we had no idea what a peak could look like. </p><p><br/>Simply put, evolution in this industry is non-negotiable. </p>",
+            "description_mobile": "<p>Looking back, I realise that this brand that carries my name is (and always has been) a true expression of my heart. </p><p><br/>Whether creating in close collaboration with loved ones in the earliest days of NMJ; or later designing our symbolic Sollune Necklace, when I reflect on what I am most proud of, it is this: I have allowed this work to flow from an honest, human place, and in doing so have made it really mean something to people.</p><p><br/>After thirteen years of business, I’ve found the quiet assuredness that comes with time, learning and lived experience. I can now balance our values with our needs; our ideals with our realities and creativity with commerciality. Some decisions may not make business sense in isolation, but every decision is made with integrity and intention. <br/>The challenge, of course, is that it can be difficult to apply a commercial lens to something held so close to the heart. <br/>One of the most unexpected challenges of founding a jewellery brand has been navigating a constantly shifting landscape. When I started out, laboratory grown diamonds were not even available in Australia; now they are the dominant stone choice domestically. In 2024, we believed gold prices had peaked - it turns out we had no idea what a peak could look like. </p><p><br/>Simply put, evolution in this industry is non-negotiable. </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "cadafbd8-eb0d-4f74-8124-0088dae333b1"
+      ],
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "left",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "800eebd7-962e-4fa6-bc5d-8b818a1ba455": {
+      "type": "content-list",
+      "blocks": {
+        "image_dJmFNG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_655803b6-dfbc-470c-b7e8-7608187889fe.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "description_mobile": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_8tQFKx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_814e5b53-2702-4211-9a90-5454a225e596.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "description_mobile": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "template--16177341137065__800eebd7-962e-4fa6-bc5d-8b818a1ba455-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Nat_-_LTC_EDM_1.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "logo_image": "shopify://shop_images/Nat_-_LTC_EDM_1.png",
+            "subheading": "",
+            "title": "",
+            "description": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "description_mobile": "{{ article.metafields.custom.paragraph_4 | metafield_tag }}",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_dJmFNG",
+        "image_8tQFKx",
+        "template--16177341137065__800eebd7-962e-4fa6-bc5d-8b818a1ba455-image-1"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "5ed859f4-feae-4ca2-b150-81bf90a13813": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16196641292457__5ed859f4-feae-4ca2-b150-81bf90a13813-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_4169.jpg",
+            "mobile_image": "shopify://shop_images/IMG_4169.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16196641292457__5ed859f4-feae-4ca2-b150-81bf90a13813-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p><em>Every piece holds a quiet story of the hands that shaped it and the heart it was made for.</em></p>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_4Ui7t3": {
+      "type": "content-list",
+      "blocks": {
+        "image_AKwTrc": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>So what does evolution look like for us?<br/></p>",
+            "description": "<p>Last year, with the support of my team, we questioned almost everything - what we make, how we make it, and what a distilled expression of this brand looks like in its teenage years. We farewelled old designs to make space for new, listened closely to our customers, and evolved our ways to meet a modern, competitive marketplace.</p><p></p><p>What I have learnt is that even as a heart-led business, the truth is that we simply must balance commerciality with care. With that in mind, these are the key changes emerging as we step into 2026:  </p><p><br/></p><p><strong>Rebalancing</strong> </p><p>Pricing has always been something I approach with caution. We work in a high consideration category, and I know how long many clients sit with these decisions, often saving for months - sometimes years. Our clients are always at the front of my mind, and our intention is always to meet them where they are. </p><p>In recent months, our material prices have continued to climb at unprecedented rates. We have navigated this to the best of our ability, but with these changes ongoing, we have to approach this pragmatically. From March onwards, we will no longer be able to absorb ongoing gold price increases. Our pricing will be thoughtfully reviewed and updated, with care taken to maintain fairness, transparency, and trust. While the gold price remains volatile, we will be reevaluating regularly; and should material prices come down again, so will our prices. </p><p>While our customer is always my priority, this brand bares my name and I refuse to compromise on the quality, craftsmanship and distinct creative expression we have worked so hard to establish. As a business, there comes a point where we must adapt and move forward with our values leading the way. <br/></p><p><strong>Diversification</strong> </p><p>My goal has always been to meet our community where they are. I recognise that raising prices during a cost of living crisis can’t help but feel a little tone deaf. But I was taught that when you’re faced with an immovable obstacle, innovation becomes work of the heart too. </p><p>Over the past year, we’ve committed ourselves to diversifying our materials: natural stone beads, pearls, and charms which sit on cotton, rather than gold. Not a diffusion, but an expansion - a new expression of the same vision. No compromise, no shortcuts. Just a more sustainably accessible, yet still meaningful offering. </p><p>This diversification will continue this year, as we continue to explore new ways of creating which reflects a changing world. <br/></p><p><strong>Reinvention</strong></p><p>While evolving our offering, we’ve also revisited how we operate. We have always been a primarily made-to-order business, a model closely aligned with my original vision. As time passes, and as I myself grew into the business, I have come to recognise that sometimes a vision we held so dear, is no longer serving us, or our customer for that matter.  It takes strength and humility to recognise that and courage to step forward into the new.  </p><p>This year, in order to stabilise pricing and meet changing consumer expectations, we’ve introduced small production runs of our most-loved designs. Some of our bestselling designs will now be offered as 'Ready-To-Wear' products, and no longer made to order. This allows us to support last minute gifting, offer immediate dispatch, and still retain the option for personalisation. This change has taken a lot of work behind the scenes, a significant shift in our model that we have been navigating while still delivering upon the expectations of our community. </p><p>While the world has watched gold prices soar over the past months, the reality is the landscape has been shifting for years. Internally, we've been navigating these changes; innovating and reinventing wherever we can. The changes of this year have been many years in progress, as we continually try to improve the experience for our community while continuing to honour the promise we make to you, to craft with care, from your heart to our hands. <br/><br/>This is not a departure from who we’ve been, but a continuation, practised with more clarity, confidence, and the same level of devotion as ever.</p><p><strong> Thank you for being on this journey with us, it is an honour, always, to create with you. </strong></p><p></p>",
+            "description_mobile": "<p>Last year, with the support of my team, we questioned almost everything - what we make, how we make it, and what a distilled expression of this brand looks like in its teenage years. We farewelled old designs to make space for new, listened closely to our customers, and evolved our ways to meet a modern, competitive marketplace.</p><p></p><p>What I have learnt is that even as a heart-led business, the truth is that we simply must balance commerciality with care. With that in mind, these are the key changes emerging as we step into 2026:  </p><p><br/></p><p><strong>Rebalancing</strong> </p><p>Pricing has always been something I approach with caution. We work in a high consideration category, and I know how long many clients sit with these decisions, often saving for months - sometimes years. Our clients are always at the front of my mind, and our intention is always to meet them where they are. </p><p>In recent months, our material prices have continued to climb at unprecedented rates. We have navigated this to the best of our ability, but with these changes ongoing, we have to approach this pragmatically. From March onwards, we will no longer be able to absorb ongoing gold price increases. Our pricing will be thoughtfully reviewed and updated, with care taken to maintain fairness, transparency, and trust. While the gold price remains volatile, we will be reevaluating regularly; and should material prices come down again, so will our prices. </p><p>While our customer is always my priority, this brand bares my name and I refuse to compromise on the quality, craftsmanship and distinct creative expression we have worked so hard to establish. As a business, there comes a point where we must adapt and move forward with our values leading the way. <br/></p><p><strong>Diversification</strong> </p><p>My goal has always been to meet our community where they are. I recognise that raising prices during a cost of living crisis can’t help but feel a little tone deaf. But I was taught that when you’re faced with an immovable obstacle, innovation becomes work of the heart too. </p><p>Over the past year, we’ve committed ourselves to diversifying our materials: natural stone beads, pearls, and charms which sit on cotton, rather than gold. Not a diffusion, but an expansion - a new expression of the same vision. No compromise, no shortcuts. Just a more sustainably accessible, yet still meaningful offering. </p><p>This diversification will continue this year, as we continue to explore new ways of creating which reflects a changing world. <br/></p><p><strong>Reinvention</strong></p><p>While evolving our offering, we’ve also revisited how we operate. We have always been a primarily made-to-order business, a model closely aligned with my original vision. As time passes, and as I myself grew into the business, I have come to recognise that sometimes a vision we held so dear, is no longer serving us, or our customer for that matter.  It takes strength and humility to recognise that and courage to step forward into the new.  </p><p>This year, in order to stabilise pricing and meet changing consumer expectations, we’ve introduced small production runs of our most-loved designs. Some of our bestselling designs will now be offered as 'Ready-To-Wear' products, and no longer made to order. This allows us to support last minute gifting, offer immediate dispatch, and still retain the option for personalisation. This change has taken a lot of work behind the scenes, a significant shift in our model that we have been navigating while still delivering upon the expectations of our community. </p><p>While the world has watched gold prices soar over the past months, the reality is the landscape has been shifting for years. Internally, we've been navigating these changes; innovating and reinventing wherever we can. The changes of this year have been many years in progress, as we continually try to improve the experience for our community while continuing to honour the promise we make to you, to craft with care, from your heart to our hands. <br/><br/>This is not a departure from who we’ve been, but a continuation, practised with more clarity, confidence, and the same level of devotion as ever.</p><p><strong> Thank you for being on this journey with us, it is an honour, always, to create with you.</strong> </p><p></p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_AKwTrc"
+      ],
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "left",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "{{ article.metafields.custom.secondary_image.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "{{ article.metafields.custom.testimonial_quote | metafield_tag }}",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "884d01ad-b600-4477-9c36-abc832345ac1": {
+      "type": "content-slider",
+      "blocks": {
+        "b93719e8-d77d-40c6-b36b-e1aed00d9252": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "every-line-leads-to-you",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "b93719e8-d77d-40c6-b36b-e1aed00d9252"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 9,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>FALL IN LOVE WITH NMJ</strong></p>",
+        "title": "<p>Every Line Leads To You</p>",
+        "description": "<p>A symbol of falling in love, again and again. These pieces are made for the kind of love that feels uniquely yours – a ring that reflects not just who you are, but who you’ve become together.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Explore All",
+        "button_1_link": "shopify://collections/every-line-leads-to-you",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": false,
+        "show_article_header": false,
+        "show_article_content": false,
+        "show_large": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": true
+      }
+    }
+  },
+  "order": [
+    "edbb72f8-c606-4713-aca3-24d4accd0081",
+    "22942553-01da-4697-89ac-f500b502883f",
+    "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
+    "5ed859f4-feae-4ca2-b150-81bf90a13813",
+    "content_list_4Ui7t3",
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
+    "884d01ad-b600-4477-9c36-abc832345ac1",
+    "main"
+  ]
+}

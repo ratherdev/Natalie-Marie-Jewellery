@@ -1,0 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ec32b834-e4e2-4e87-8392-6d45f7b82d33": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SIANREDGRAVE_NMJ_8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>The Art Of Giving | Finishing Touch</p>",
+        "description": "<p>A celebration of an Australian tradition, inspired by Natalie Marie Jewellery designs and reimagined just for you.</p><p>As our final festive menu edition, crafted in partnership with Australian chef <a href=\"https://www.instagram.com/sian_redgrave/\" target=\"_blank\" title=\"https://www.instagram.com/sian_redgrave/\"><em><strong>Sian Redgrave</strong></em></a>, we bring you a sweet note to end on with your guests. </p><p>Paired with <a href=\"/collections/natalies-gift-guide\" target=\"_blank\" title=\"Natalie's Gift Guide\"><em><strong>Natalie's Gift Guide</strong></em></a>, these offerings have been hand-picked (and approved) by our founder. Full of special somethings for your wish list, bucket list and beyond, these fail-safe gift ideas are copied over from our founder’s own forever-favourites. </p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "22942553-01da-4697-89ac-f500b502883f": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Pavlova Bombe Alaska</p>",
+            "description": "<p>INGREDIENTS:</p><ul><li>1 store-bought pandoro</li><li>1.5 litre vanilla gelato, slightly softened </li><li>4 meringues, crumbled</li><li>2 punnets fresh cherries, raspberries, strawberries or fresh fruit you prefer</li><li>4 large egg whites</li><li>½ cup water</li><li>1 cup caster sugar</li><li>½ tsp cream of tartar</li><li>To decorate: candied orange peel and a mix of fresh fruit. To sugar the fruit, brush with egg white, sprinkle with caster sugar and allow to dry.</li></ul><p>METHOD:</p><p>1. Unwrap the pandoro. Take a serrated knife and cut the base of the pandoro off, around 2cm from the bottom. Hollow out the inside (don't let it go to waste). Halve the berries or chop your desired fruit and mix together with the gelato. Fold through the meringue.</p><p>2. Spoon the gelato into the pandoro & then seal with the base piece. Freeze for 4 hours or until frozen.</p><p>3. For the italian meringue, combine the sugar & water in a medium saucepan. Heat over a high heat until it reaches 116° on a candy thermometer. Meanwhile, in an electric mixer, whisk the egg white with cream of tartar until soft peaks form. When the sugar has reached its temperature slowly drizzle into the egg whites with the motor running. Whip until cooled + glossy. Spread over the pandoro & use a blow torch to caramelise. <br/><br/><br/><br/><em>Sian wears our </em><a href=\"/products/rumi-ring-diamonds-yellow-gold\" target=\"_blank\" title=\"Rumi Ring | Diamonds\"><em>Rumi Diamond Ring</em></a><em>, </em><a href=\"/products/rumi-ring-yellow-gold\" target=\"_blank\" title=\"Rumi Ring\"><em>Rumi Ring</em></a><em>, </em><a href=\"/products/organic-bangle-yellow-gold\" target=\"_blank\" title=\"Organic Bangle\"><em>Organic Bangle</em></a><em>, </em><a href=\"/products/ember-bracelet-yellow-gold\" target=\"_blank\" title=\"Ember Bracelet\"><em>Ember Bracelet</em></a><em>, </em><a href=\"/products/dali-ring-yellow-gold\" target=\"_blank\" title=\"Dalí Ring\"><em>Dali Ring</em></a><em> and </em><a href=\"/products/nessa-ring-vintage-inspired-yellow-gold\" target=\"_blank\" title=\"Nessa Ring | Vintage Inspired\"><em>Nessa Ring</em></a><em>.</em></p>",
+            "description_mobile": "<p>INGREDIENTS:</p><ul><li>1 store-bought pandoro</li><li>1.5 litre vanilla gelato, slightly softened </li><li>4 meringues, crumbled</li><li>2 punnets fresh cherries, raspberries, strawberries or fresh fruit you prefer</li><li>4 large egg whites</li><li>½ cup water</li><li>1 cup caster sugar</li><li>½ tsp cream of tartar</li><li>To decorate: candied orange peel and a mix of fresh fruit. To sugar the fruit, brush with egg white, sprinkle with caster sugar and allow to dry.</li></ul><p>METHOD:</p><p>1. Unwrap the pandoro. Take a serrated knife and cut the base of the pandoro off, around 2cm from the bottom. Hollow out the inside (don't let it go to waste). Halve the berries or chop your desired fruit and mix together with the gelato. Fold through the meringue.</p><p>2. Spoon the gelato into the pandoro & then seal with the base piece. Freeze for 4 hours or until frozen.</p><p>3. For the italian meringue, combine the sugar & water in a medium saucepan. Heat over a high heat until it reaches 116° on a candy thermometer. Meanwhile, in an electric mixer, whisk the egg white with cream of tartar until soft peaks form. When the sugar has reached its temperature slowly drizzle into the egg whites with the motor running. Whip until cooled + glossy. Spread over the pandoro & use a blow torch to caramelise. <br/><br/><br/><br/><em>Sian wears our </em><a href=\"/products/rumi-ring-diamonds-yellow-gold\" target=\"_blank\" title=\"Rumi Ring | Diamonds\"><em>Rumi Diamond Ring</em></a><em>, </em><a href=\"/products/rumi-ring-yellow-gold\" target=\"_blank\" title=\"Rumi Ring\"><em>Rumi Ring</em></a><em>, </em><a href=\"/products/organic-bangle-yellow-gold\" target=\"_blank\" title=\"Organic Bangle\"><em>Organic Bangle</em></a><em>, </em><a href=\"/products/ember-bracelet-yellow-gold\" target=\"_blank\" title=\"Ember Bracelet\"><em>Ember Bracelet</em></a><em>, </em><a href=\"/products/dali-ring-yellow-gold\" target=\"_blank\" title=\"Dalí Ring\"><em>Dali Ring</em></a><em> and </em><a href=\"/products/nessa-ring-vintage-inspired-yellow-gold\" target=\"_blank\" title=\"Nessa Ring | Vintage Inspired\"><em>Nessa Ring</em></a><em>.</em></p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SIANREDGRAVE_NMJ_7.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SIANREDGRAVE_NMJ_9.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-2",
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": false,
+        "show_article_header": false,
+        "show_article_content": false,
+        "show_large": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": true
+      }
+    },
+    "content_slider_nDWh6d": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_zj4fAz": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "natalies-gift-guide",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_zj4fAz"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 8,
+        "enable_natual_scroll": false,
+        "subheading": "",
+        "title": "<p>Natalie's Gift Guide</p>",
+        "description": "<p>Discover the pieces Sian wears from Natalie's Gift Guide. </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "EXPLORE NOW",
+        "button_1_link": "shopify://collections/natalies-gift-guide",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_thkdqV": {
+      "type": "content-list",
+      "blocks": {
+        "image_YqVdEr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_50aa5f26-5c10-473d-8d54-98e67f8713cd.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE THE RECIPE",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_UmVt3e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_7d6bf337-70c1-4300-be3d-81aa470dbad5.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE THE RECIPE",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_YqVdEr",
+        "image_UmVt3e"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "left",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    }
+  },
+  "order": [
+    "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
+    "22942553-01da-4697-89ac-f500b502883f",
+    "fe4a59da-74f2-4522-93d1-709dd4b43c45",
+    "main",
+    "content_slider_nDWh6d",
+    "content_list_thkdqV"
+  ]
+}

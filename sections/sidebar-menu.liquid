@@ -1,0 +1,403 @@
+{{ 'section-sidebar-menu.css' | asset_url | stylesheet_tag }}
+
+{%- assign main_menu_handle = section.settings.primary_menu | default: 'main-menu' -%}
+{%- assign main_menu = linklists[main_menu_handle] -%}
+{%- assign menu_swatch_config = settings.menu_swatch_config | newline_to_br | split: '<br />' -%}
+
+{%- assign mega_menu_names = '' -%}
+
+{%- for block in section.blocks -%}
+	{%- if block.type == 'mega_menu' -%}
+		{%- assign trim_mega_menu_name = block.settings.navigation_mega_menu | downcase | strip -%}
+		{%- assign mega_menu_names = mega_menu_names | append: trim_mega_menu_name | append: ',' -%}
+	{%- endif -%}
+{%- endfor -%}
+
+{%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
+  {%- assign country_selector = true -%}
+{%- endif -%}
+
+<section id="sidebar-menu" class="SidebarMenu Drawer Drawer--fromLeft" aria-hidden="true" data-section-id="{{ section.id }}" data-section-type="sidebar-menu">
+    <header class="Drawer__Header" data-drawer-animated-left>
+      <button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="sidebar-menu" aria-label="{{ 'header.navigation.close_sidebar' | t }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
+    </header>
+
+    <div class="Drawer__Content">
+      <div class="Drawer__Main" data-drawer-animated-left data-scrollable>
+		<div id="Search--mobile" class="Search--mobile">
+		  <div class="Search__Inner">
+		    <div class="Search__SearchBar">
+		      <form action="{{ routes.search_url }}" name="GET" role="search" class="Search__Form">
+		        <input type="search" class="Search__Input Heading Heading--textFont" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="{{ 'search.general.input_placeholder' | t }}" placeholder="{{ 'search.general.input_placeholder' | t }}" autofocus>
+		        <input type="hidden" name="type" value="product">
+		        <input type="hidden" name="options[prefix]" value="last">
+		      </form>
+		    </div>
+			
+			<div class="resetSearch">{% render 'icon' with 'ghd-arrow-left' %}</div>
+		    <div class="Search__Results" aria-hidden="true">
+      
+		    </div>
+		  </div>
+		</div>  
+        <div class="Drawer__Container">
+          <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary" aria-label="{{ 'header.navigation.sidebar_title' | t }}">
+            {%- for link in main_menu.links -%}
+                {%- assign downcased_link_title = link.title | downcase | strip -%}
+                {%- assign use_mega_menu = false -%}
+
+                {%- capture menu_item_dropdown -%}
+					{%- if mega_menu_names contains downcased_link_title -%}
+						{%- for block in section.blocks -%}
+							{%- assign downcased_mega_menu_name = block.settings.navigation_mega_menu | downcase -%}
+
+							{%- if downcased_mega_menu_name != downcased_link_title -%}
+								{%- continue -%}
+							{%- endif -%}
+
+							{%- assign use_mega_menu = true -%}
+							{%- assign push_image_count = 0 -%}
+
+							{%- if block.settings.push_1_image -%}
+								{{ 'component-content-item.css' | asset_url | stylesheet_tag }}
+								{%- assign push_image_count = push_image_count | plus: 1 -%}
+							{%- endif -%}
+
+							{%- if block.settings.push_2_image -%}
+								{%- assign push_image_count = push_image_count | plus: 1 -%}
+							{%- endif -%}
+							
+	  						<div class="Grid Grid--m Grid--spacerBottom">
+								{%- for i in (1..push_image_count) -%}
+	  								<div class="Grid__Cell 1/2">
+										
+										{%- assign button_style = 'underline' -%}
+										{%- assign content_position = 'underLeft' -%}
+										{%- assign colour_style = 'dark' -%}
+										
+										{%- assign pushMedia = 'push_' | append: i | append: '_image' -%}
+										{%- assign pushTitle = 'push_' | append: i | append: '_heading' -%}
+										{%- assign pushLink = 'push_' | append: i | append: '_url' -%}
+										
+										{%- assign media = block.settings[pushMedia] -%}
+										{%- assign push_title = block.settings[pushTitle] -%}
+										{%- assign push_url = block.settings[pushLink] -%}
+											
+
+										{%- capture contentItem -%}
+											<div class="ContentItem__ImageContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ media | img_url: '1x1', format: 'jpg' }});">
+												{% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+												<img class="ContentItem__Image Image--lazyLoad hide-no-js"
+													data-src="{{ image_url }}"
+													data-optimumx="1.2"
+													data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+													data-sizes="auto"
+													alt="{{ media.alt | escape }}">
+
+												<noscript>
+													<img class="ContentItem__Image" src="{{ media | img_url: '1000x' }}" alt="{{ media.alt | escape }}">
+												</noscript>
+											</div>
+											{%- capture contentItem_content -%}
+												{%- if push_title != blank -%}
+													<div class="SectionHeader__ButtonWrapper">
+														<div class="ButtonGroup ButtonGroup--spacingSmall">
+															{%- if push_title != blank -%}
+																{%- if push_url contains 'https://calendly.com/' -%}
+																	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+																	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+																	<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ push_url}}'});return false;">{{ block.settings.button_1_text | escape }}</button>
+																{%- else -%}
+																	<button onclick="location.href='{{ push_url }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ button_style }}{% endif %}">{{ push_title | escape }}</button>
+																{%- endif -%}
+															{%- endif -%}
+														</div>
+													</div>
+												{%- endif -%}
+											{%- endcapture -%}
+
+											{%- if contentItem_content != blank -%}
+												<div class="ContentItem__BlockContent ContentItem__BlockContent--{{ content_position }} ColourStyle--{{ colour_style }}">
+													<header class="SectionHeader">
+														{{ contentItem_content }}
+													</header>
+												</div>
+											{%- endif -%}
+
+										{%- endcapture -%}
+
+										{%- if contentItem != blank -%}
+											{%- comment -%}This code allows to cover a common use case where merchant would like to have a clickable image{%- endcomment -%}
+											{%- if push_url != blank -%}
+												{%- if push_url contains 'https://calendly.com/' -%}
+													<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+													<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+													<div class="ContentItem__Clickable ContentItem__BlockContentWrapper" onclick="Calendly.initPopupWidget({url: '{{ push_url }}'});return false;">
+														{{- contentItem -}}
+													</div>
+												{%- else -%}
+													<a href="{{ push_url }}" class="ContentItem__Clickable ContentItem__BlockContentWrapper">
+														{{- contentItem -}}
+													</a>
+												{%- endif -%}
+											{%- else -%}
+												<div class="ContentItem__BlockContentWrapper">
+													{{- contentItem -}}
+												</div>
+											{%- endif -%}
+										{%- endif -%}
+	  								</div>
+	  							{%- endfor -%}
+	  						</div>
+						{%- endfor -%}
+					{%- endif -%}
+				{%- endcapture -%}
+			
+				<div class="Collapsible Collapsible--multiExpand">
+	                {%- if link.links != blank -%}
+	                  <button class="Collapsible__Button Heading Heading--textFont Heading--caps" data-action="toggle-collapsible" {% if link.links != blank %}aria-expanded="false"{% endif %}>
+	                    <strong style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: link.title %}">{{- link.title | escape -}}</strong> <span class="Collapsible__Plus"></span>
+	                  </button>
+
+	                  <div class="Collapsible__Inner">
+	                    <div class="Collapsible__Content">
+                      
+						  <div class="Grid Grid--spacerTop {% unless menu_item_dropdown != blank %}Grid--spacerBottom{% endunless %} Grid--m">
+						  	{%- for sub_link in link.links -%}
+								<div class="Grid__Cell {% unless sub_link.links.size > 7 %}1/2{% endunless %}">
+		                            {%- if sub_link.links != blank -%}
+		                              <a href="{{ sub_link.url }}" class="Heading u-h4" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</a>
+		                              <div class="Grid Grid--spacerTop Grid--spacerBottom">
+		                                {%- for sub_sub_link in sub_link.links -%}
+		                                  <div class="Grid__Cell Grid__Cell--linklistItem {% if sub_link.links.size > 7 %}1/2{% endif %}">
+			  								{%- assign linkTitle = sub_sub_link.title | downcase -%}   
+			  								{%- if sub_sub_link.url contains 'https://calendly.com/' -%}
+			  									<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+			  									<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+			  									<button class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ sub_sub_link.url }}'});return false;" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_sub_link.title %}">{{ sub_sub_link.title | escape }}</button>
+			  								{%- else -%}
+			  									<a href="{{ sub_sub_link.url }}" class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_sub_link.title %}">{{ sub_sub_link.title | escape }}</a>
+			  								{%- endif -%}
+		                                  </div>
+		                                {%- endfor -%}
+		                              </div>
+		                            {%- else -%}
+		  								{%- assign linkTitle = sub_link.title | downcase -%}   
+		  								{%- if sub_link.url contains 'https://calendly.com/' -%}
+		  									<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		  									<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+		  									<button class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ sub_link.url }}'});return false;" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</button>
+		  								{%- else -%}
+		  									<a href="{{ sub_link.url }}" class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</a>
+		  								{%- endif -%}
+		                            {%- endif -%}
+								</div>
+							{%- endfor -%}
+						  </div>
+						  
+						  {%- if menu_item_dropdown != blank -%}
+						  	{{ menu_item_dropdown }}
+						  {%- endif -%}
+	                    </div>
+	                  </div>
+	                {%- else -%}
+	                  <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: link.title %}">{{ link.title | escape }}</a>
+	                {%- endif -%}
+				</div>
+            {%- endfor -%}
+          </nav>
+
+          {%- assign secondary_menu = linklists[section.settings.secondary_menu] -%}
+		  
+          <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
+            {%- for link in secondary_menu.links -%}
+				{% assign linkDownCase = link.title | downcase %}
+				
+                {%- if link.links != blank or linkDownCase contains 'currency' -%}
+					<div class="Collapsible Collapsible--multiExpand">
+	                  <button class="Collapsible__Button Heading Heading--textFont Heading--caps" data-action="toggle-collapsible" {% if link.links != blank %}aria-expanded="false"{% endif %} style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: link.title %}">
+	                    {% if linkDownCase == 'currency' %}{% if cart.currency.symbol %}{{ cart.currency.symbol }}{% endif %}{{ cart.currency.iso_code }}{% else %}{{- link.title | escape -}}{% endif %} {% unless linkDownCase == 'currency' %}<span class="Collapsible__Plus"></span>{% endunless %}
+	                  </button>
+
+	                  <div class="Collapsible__Inner">
+	                    <div class="Collapsible__Content">
+							
+								{%- if linkDownCase contains 'currency' -%}
+									{%- form 'localization', id: 'localization_form_side_bar', class: 'Grid Grid--m Grid--spacerTop Grid--spacerBottom' -%}
+											{%- for currency in form.available_currencies -%}
+												<div class="Grid__Cell 1/2">
+													<button type="submit" name="currency_code" class="Link Link--primary" value="{{ currency.iso_code }}" {% if currency.iso_code == form.current_currency.iso_code %}aria-current="true"{% endif %} >
+														{{ currency.symbol }}{{ currency.iso_code }}  
+													</button>
+												</div>
+											{%- endfor -%}
+									{%- endform -%}
+								{%- else -%}
+									<div class="Grid Grid--m Grid--spacerTop Grid--spacerBottom">
+									  	{%- for sub_link in link.links -%}
+											<div class="Grid__Cell {% unless sub_link.links.size > 7 %}1/2{% endunless %}">
+					                            {%- if sub_link.links != blank -%}
+					                              <a href="{{ sub_link.url }}" class="Heading u-h4" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</a>
+					                              <div class="Grid Grid--spacerTop Grid--spacerBottom">
+					                                {%- for sub_sub_link in sub_link.links -%}
+					                                  <div class="Grid__Cell Grid__Cell--linklistItem {% if sub_link.links.size > 7 %}1/2{% endif %}">
+						  								{%- assign linkTitle = sub_sub_link.title | downcase -%}   
+						  								{%- if sub_sub_link.url contains 'https://calendly.com/' -%}
+						  									<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						  									<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						  									<button class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ sub_sub_link.url }}'});return false;" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_sub_link.title %}">{{ sub_sub_link.title | escape }}</button>
+						  								{%- else -%}
+						  									<a href="{{ sub_sub_link.url }}" class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_sub_link.title %}">{{ sub_sub_link.title | escape }}</a>
+						  								{%- endif -%}
+					                                  </div>
+					                                {%- endfor -%}
+					                              </div>
+					                            {%- else -%}
+					  								{%- assign linkTitle = sub_link.title | downcase -%}   
+					  								{%- if sub_link.url contains 'https://calendly.com/' -%}
+					  									<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+					  									<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+					  									<button class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ sub_link.url }}'});return false;" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</button>
+					  								{%- else -%}
+					  									<a href="{{ sub_link.url }}" class="Link Link--primary {% if linkTitle == 'shop all' or linkTitle == 'discover all' or linkTitle == 'book consultation' %}Link--underline{% endif %}" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: sub_link.title %}">{{ sub_link.title | escape }}</a>
+					  								{%- endif -%}
+					                            {%- endif -%}
+											</div>
+										{%- endfor -%}
+									</div>	
+								{%- endif -%}
+								
+								
+								
+	                    </div>
+	                  </div>
+				  </div>
+                {%- else -%}
+					{% if linkDownCase contains 'account' %}
+						{%- if customer -%}
+							<div class="Collapsible">
+								<a href="{{ routes.account_url }}" class="Collapsible__Button Heading Heading--textFont">{{ 'header.navigation.account' | t }}</a>
+							</div>
+							<div class="Collapsible">
+								<a href="{{ routes.account_logout_url }}" class="Collapsible__Button Heading Heading--textFont">{{ 'header.navigation.log_out' | t }}</a>
+							</div>
+						{%- else -%}
+							<div class="Collapsible">
+								<a href="{{ routes.account_register_url }}" class="Collapsible__Button Heading Heading--textFont">{{ 'header.navigation.create_account' | t }}</a>
+							</div>
+							<div class="Collapsible">
+								<a href="{{ routes.account_login_url }}" class="Collapsible__Button Heading Heading--textFont">{{ 'header.navigation.log_in' | t }}</a>
+							</div>
+						{%- endif -%}
+					{% else %}
+						<div class="Collapsible">
+							<a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary" style="{% render 'label_swatch_style', label_swatch_config: menu_swatch_config, value: link.title %}">{{ link.title | escape }}</a>
+						</div>
+					{% endif %}
+                {%- endif -%}
+             
+            {%- endfor -%}
+          </nav>
+        </div>
+      </div>
+
+      {%- if section.settings.show_social_media -%}
+        {%- capture social_media -%}
+          {% render 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+        {%- endcapture -%}
+      {%- endif -%}
+
+      {%- if social_media != blank -%}
+        <aside class="Drawer__Footer" data-drawer-animated-bottom>
+          {%- if social_media != blank -%}
+            {{ social_media }}
+          {%- endif -%}
+        </aside>
+      {%- endif -%}
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sidebar menu",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "label": "Primary menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu",
+      "info": "This menu won't show dropdown items."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mega_menu",
+      "name": "Mega menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "navigation_mega_menu",
+          "label": "Menu item",
+          "info": "Enter menu item to apply a mega menu dropdown. [Learn more](http://support.maestrooo.com/article/149-navigation-enabling-and-configuring-mega-menu)."
+        },
+        {
+          "type": "header",
+          "content": "Image push 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "push_1_image",
+          "label": "Image",
+          "info": "740 x 460 px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "push_1_heading",
+          "label": "Heading",
+          "default": "Example heading"
+        },
+        {
+          "type": "url",
+          "id": "push_1_url",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "Image push 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "push_2_image",
+          "label": "Image",
+          "info": "740 x 460 px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "push_2_heading",
+          "label": "Heading",
+          "default": "Example heading"
+        },
+        {
+          "type": "url",
+          "id": "push_2_url",
+          "label": "Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,422 @@
+{%- capture section_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		{%- if section.settings.title != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+		{%- endif -%}
+	
+		{%- if section.settings.description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+				{{ section.settings.description }}
+			</div>
+		{%- endif -%}
+
+		{%- assign button_style = section.settings.button_style -%}
+		{%- assign additionalDrawersHtml = '' -%} 
+		
+		{%- assign button_1_metaobect = section.settings.button_1_metaobject | default: '' -%}
+		{%- assign button_1_text = section.settings.button_1_text | default: button_1_metaobect.link_title | default: '' -%}
+		{%- assign button_1_link = section.settings.button_1_link | default: '' -%}
+		{%- if button_1_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if button_1_metaobect != blank -%}
+						{%- assign metaobject = shop.metaobjects['guide'][button_1_metaobect] -%}
+				
+						{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+						{%- assign guideButton = '' -%}
+				
+						{%- if metaobject != blank -%}
+							{%- capture additionalDrawerHtml -%}
+							  	{%- render 'additional-drawer', 
+									drawerID: drawerID, 
+									drawerTitle: '', 
+									drawerContent: '', 
+									drawerFooterContent: '',
+									metaobject: metaobject,
+									option: option
+								-%}
+							{%- endcapture -%}
+
+							{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="ButtonGroup__Item cursor-pointer {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}" >{{ button_1_text | escape }}</div>
+							{%- endif -%}	
+						{%- endif -%}
+					{%- elsif button_1_link contains 'https://calendly.com/' -%}
+						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_1_link }}'});return false;">{{ button_1_text | escape }}</button>
+					{%- else -%}
+						{%- assign blockLinkFirstLetter = button_1_link | slice: 0 -%}
+						{%- if button_1_link contains shop.url or blockLinkFirstLetter == '/' -%}
+							<button onclick="location.href='{{ button_1_link }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}">{{ button_1_text | escape }}</button>
+						{%- else -%}
+							<button onclick="window.open('{{ button_1_link }}','_blank')" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}">{{ button_1_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+		
+		{%- assign button_2_metaobect = section.settings.button_2_metaobject | default: '' -%}
+		{%- assign button_2_text = section.settings.button_2_text | default: button_2_metaobect.link_title | default: '' -%}
+		{%- assign button_2_link = section.settings.button_2_link | default: '' -%}
+		{%- if button_2_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall">
+					{%- if button_2_metaobect != blank -%}
+						{%- assign metaobject = shop.metaobjects['guide'][button_2_metaobect] -%}
+				
+						{%- assign drawerID = metaobject.system.id | append: '-drawer' -%}
+						{%- assign guideButton = '' -%}
+				
+						{%- if metaobject != blank -%}
+							{%- capture additionalDrawerHtml -%}
+							  	{%- render 'additional-drawer', 
+									drawerID: drawerID, 
+									drawerTitle: '', 
+									drawerContent: '', 
+									drawerFooterContent: '',
+									metaobject: metaobject,
+									option: option
+								-%}
+							{%- endcapture -%}
+
+							{%- assign additionalDrawersHtml = additionalDrawersHtml | append: additionalDrawerHtml -%}
+					
+							{%- if additionalDrawerHtml != blank -%}
+								<div class="ButtonGroup__Item cursor-pointer {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}" data-action="open-drawer" data-drawer-id="{{ drawerID }}" aria-label="{{ metaobject.link_title }}" >{{ button_2_text | escape }}</div>
+							{%- endif -%}	
+						{%- endif -%}
+					{%- elsif button_2_link contains 'https://calendly.com/' -%}
+						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+						<button class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}" onclick="Calendly.initPopupWidget({url: '{{ button_2_link }}'});return false;">{{ button_2_text | escape }}</button>
+					{%- else -%}
+						{%- assign blockLinkFirstLetter = button_2_link | slice: 0 -%}
+						{%- if button_2_link contains shop.url or blockLinkFirstLetter == '/' -%}
+							<button onclick="location.href='{{ button_2_link }}'" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}">{{ button_2_text | escape }}</button>
+						{%- else -%}
+							<button onclick="window.open('{{ button_2_link }}','_blank')" class="ButtonGroup__Item {% if button_style == 'underline' %}Link Link--underlineNative{% else %}Button Button--full Button--{{ button_style }}{% endif %}">{{ button_2_text | escape }}</button>
+						{%- endif -%}
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+
+		
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="ThreeColumn__ContentWrapper Grid__Cell 4/16--lap-and-up">
+			<div class="ThreeColumn__Content ColourStyle--{{ section.settings.colour_style }}">
+				<header class="SectionHeader">
+					{{ text_content }}
+				</header>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture feature_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.feature_text != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h2"><span>{{ section.settings.feature_text }}</span></h2>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="ThreeColumn__ContentWrapper ThreeColumn__ContentWrapper--center Grid__Cell 14/16--pocket 4/16--lap-and-up">
+			<div class="ThreeColumn__Content ColourStyle--{{ section.settings.colour_style }}">
+				<header class="SectionHeader">
+					{{ text_content }}
+				</header>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+	
+{%- capture section_media -%}
+	{%- capture media_content -%}
+		{%- for block in section.blocks -%}
+			{%- if block.type == "video" -%}	
+				{%- if block.settings.video != blank -%}
+					{%- assign media = block.settings.video -%}
+					
+					
+					
+					<div class="ContentItem__BlockContentWrapper">
+						<div class="ThreeColumn__VideoContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ media.preview_image | img_url: '1x1', format: 'jpg' }});">
+							<video id="video-{{ block.id }}" controlsList="nodownload" class="ThreeColumn__Video lazyVideo" playsinline="playsinline" {% if block.settings.autoplay %}autoplay muted{% endif %} {% if block.settings.loop %}loop="loop"{% endif %} preload="metadata" poster="{{ media.preview_image | img_url: '1200x' }}">
+								{% for source in media.sources %}
+									{% if source.mime_type == 'application/x-mpegURL'%}{% continue %}{% endif %}
+									<source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+								{% endfor %}
+								<img src="{{ media.preview_image | img_url: '1200x' }}">
+							</video>
+						</div>
+						
+						{%- if block.settings.autoplay == false -%}	
+				  			{%- if block.settings.video != blank -%}
+								<div id="video-wrapper-{{ block.id }}" class="ContentItem__BlockContent ContentItem__BlockContent--middleCenter ColourStyle--light">
+									<header class="SectionHeader">
+							            <div class="SectionHeader__IconHolder">
+							              <video-toggle-play-button class="Video__PlayButton" aria-label="Play video" video-wrapper-element="video-wrapper-{{ block.id }}" aria-controls="video-{{ block.id }}">{% render 'icon' with 'play' %}</video-toggle-play-button>
+							            </div>
+									</header>	
+								</div>
+				  			{%- endif -%}
+						{%- endif -%}
+						
+					</div>
+				{%- endif -%}
+				
+				
+				
+			{%- else -%}
+				{%- if block.settings.image != blank -%}
+					<div class="ThreeColumn__ImageContainer AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+						{% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+						<img class="ThreeColumn__Image Image--lazyLoad hide-no-js"
+							data-src="{{ image_url }}"
+							data-optimumx="1.2"
+							data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+							data-sizes="auto"
+							alt="{{ block.settings.image.alt | escape }}">
+
+						<noscript>
+							<img class="ThreeColumn__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+						</noscript>
+					</div>
+				{%- endif -%}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endcapture -%}
+	
+	{%- if media_content != blank -%}
+		<div class="Grid__Cell 14/16--pocket 4/16--lap-and-up">
+			{{ media_content }}
+		</div>
+	{%- endif -%}
+		
+{%- endcapture -%}
+
+{%- if section_media != blank -%}
+	{{ 'section-three-column.css' | asset_url | stylesheet_tag }}
+	
+	<section class="Section Section--spacingExtraLarge" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="content-list" {% if section.settings.enable_dark %}data-section-theme="themeDark"{% endif %}>
+		<div class="Container">
+			<div class="ThreeColumn Grid">
+				<div class="Grid__Cell hidden-pocket 1/16--lap-and-up"></div>
+				{{- section_content -}}
+				<div class="Grid__Cell 1/16--pocket 1/16--lap-and-up"></div>
+				{{- feature_content -}}
+				<div class="Grid__Cell 1/16--pocket hidden-lap-and-up"></div>
+				<div class="Grid__Cell 1/16"></div>
+				{{- section_media -}}
+				<div class="Grid__Cell 1/16"></div>
+			</div>
+		</div>
+		<div class="Content__OffScreen">
+			{%- if additionalDrawersHtml != blank -%}
+				{{ additionalDrawersHtml }}
+			{%- endif -%}
+		</div>
+	</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Three column",
+  "max_blocks": 1,
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_dark",
+        "label": "Enable dark background",
+        "default": false
+      },
+	  {
+	    "type": "header",
+	    "content": "Text"
+	  },
+	  {
+	    "type": "image_picker",
+	    "id": "logo_image",
+	    "label": "Title image",
+	    "info": "1800 x 800px .jpg recommended"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "subheading",
+	    "label": "Sub-heading",
+	    "default": "<p>Slide title</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "title",
+	    "label": "Heading",
+	    "default": "<p>Tell your story</p>"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "description",
+	    "label": "Description"
+	  },
+	  {
+	    "type": "richtext",
+	    "id": "feature_text",
+	    "label": "Feature heading",
+	    "default": "<p>Feature text.</p>"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Text Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "colour_style",
+	    "label": "Colour style",
+	    "options": [
+	      {
+	        "value": "light",
+	        "label": "Light"
+	      },
+	      {
+	        "value": "dark",
+	        "label": "Dark"
+	      }
+	    ],
+	    "default": "dark",
+		"info": "Sets the text and button colour."
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button 1"
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_1_metaobject",
+	    "label": "Metafield string",
+	    "info": "Metafield must be a guide metaobject. Content will be displayed in a drawer."
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_1_text",
+	    "label": "Text"
+	  },
+	  {
+	    "type": "url",
+	    "id": "button_1_link",
+	    "label": "Link"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button 2"
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_2_metaobject",
+	    "label": "Metafield string",
+	    "info": "Metafield must be a guide metaobject. Content will be displayed in a drawer."
+	  },
+	  {
+	    "type": "text",
+	    "id": "button_2_text",
+	    "label": "Text"
+	  },
+	  {
+	    "type": "url",
+	    "id": "button_2_link",
+	    "label": "Link"
+	  },
+	  {
+	    "type": "header",
+	    "content": "Button Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "button_style",
+	    "label": "Button style",
+	    "options": [
+	      {
+	        "value": "underline",
+	        "label": "Text underline"
+	      },
+	      {
+	        "value": "secondary",
+	        "label": "Secondary Button"
+	      },
+	      {
+	        "value": "primary",
+	        "label": "Primary Button"
+	      }
+	    ],
+	    "default": "underline",
+	    "info": "Sets the style for the button."
+	  }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 800px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop video",
+          "default": true,
+		  "info": "If unchecked, titles will appear at the end of the video."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Three column",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,82 @@
+{%- unless product.type == 'Gift Card' -%}
+<!-- Klaviyo - Back In Stock -->
+<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+<script>
+
+	var klaviyo = klaviyo || [];
+
+	klaviyo.init({
+		account: "{{ settings.klaviyo_api_key }}",
+		{% if settings.klaviyo_list != blank %}
+			list: "{{ settings.klaviyo_list }}",
+		{% endif %}
+		platform: "shopify"
+	});
+
+	klaviyo.enable("backinstock", {
+		trigger: {
+			product_page_text: "{{ settings.klaviyo_product_page_trigger_text }}",
+			product_page_class: "Button Button--primary Button--full klaviyo-product-trigger active",
+			product_page_text_align: "center",
+			alternate_anchor: "AddToCartAnchor",
+			replace_anchor: false
+		},
+		modal: {
+			headline: "{% if settings.klaviyo_auto_headline %}{product_name}{% else %}{{ settings.klaviyo_headline }}{% endif %}",
+			body_content: "{{ settings.klaviyo_body_content }}",
+			newsletter_subscribe_label: "I agree to the terms & conditions and to receive promotional emails.",
+			email_field_label: "{{ settings.klaviyo_email_field_label }}",
+			button_label: "{{ settings.klaviyo_button_label }}",
+			subscription_success_label: "{{ settings.klaviyo_subscription_success_label }}",
+			footer_content: '',
+			additional_styles: {{ settings.klaviyo_additional_styles | json }},
+			drop_background_color: "#000",
+			background_color: "{{ settings.klaviyo_background_color }}",
+			text_color: "{{ settings.klaviyo_text_color }}",
+			button_text_color: "{{ settings.klaviyo_button_text_color }}",
+			button_background_color: "{{ settings.klaviyo_button_background_color }}",
+			close_button_color: "{{ settings.klaviyo_close_btn_color }}",
+			error_background_color: "{{ settings.klaviyo_error_background_color }}",
+			error_text_color: "{{ settings.klaviyo_error_text_color }}",
+			success_background_color: "{{ settings.klaviyo_success_background_color }}",
+			success_text_color: "{{ settings.klaviyo_success_text_color }}",
+			font_family: "Open Sans",
+			headers_font_family: "freight-big-pro, serif"
+		}
+	});
+	
+	document.addEventListener("variant:changed", function(event) {
+		let klaviyoNotifier = document.querySelector('.klaviyo-bis-notifier'),
+			klaviyoTrigger = document.querySelector('.klaviyo-bis-trigger');
+		
+		if (klaviyoNotifier){
+			if ( !event.detail.variant.available ) {
+				klaviyoNotifier.classList.add('active');
+				klaviyoTrigger.classList.add('active');
+			} 
+			else {
+				klaviyoNotifier.classList.remove('active');
+				klaviyoTrigger.classList.remove('active');
+			}
+		}
+	});
+	
+</script>
+<style>
+	.klaviyo-bis-trigger {
+	    width: 100% !important;
+		margin-top: 10px !important;
+	}
+	
+	.klaviyo-bis-trigger,
+	.laviyo-bis-notifier {
+		opacity: 0;
+		transition: 0.2s ease all;
+	}
+	
+	.klaviyo-bis-trigger.active,
+	.laviyo-bis-notifier.active {
+		opacity: 1;
+	}
+</style>
+{%- endunless -%}

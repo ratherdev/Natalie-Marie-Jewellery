@@ -1,0 +1,601 @@
+{%- assign recently_viewed_block = section.blocks | where: 'type', 'recently' | first -%}
+{%- assign tabsCount = 0 -%}
+{%- assign activeTabHeaderSet = false -%}
+
+{%- capture section_media -%} 
+	{%- for block in section.blocks -%}
+		{%- capture blockTypeStyling -%}
+			{%- if block.type == 'collection' -%}
+				{%- assign content = collections[block.settings.collection].products -%}
+				{{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+			{%- elsif block.type == 'recently' -%}
+				{%- if template.name == 'search' -%}
+					{%- assign content = search.results -%}
+					{{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+				{%- endif -%}
+			{%- elsif block.type == 'complementary' -%}
+				{%- if block.settings.use_first_cart_item and cart.item_count > 0  -%}
+					{%- assign contentProduct = cart.items.first.product -%}
+				{%- else -%}
+					{%- assign contentProduct = block.settings.contentProduct -%}
+				{%- endif -%}
+				{%- assign content = contentProduct.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
+				{{ 'component-product-item.css' | asset_url | stylesheet_tag }}	
+			{%- elsif block.type == 'related' -%}
+				{%- if block.settings.use_first_cart_item and cart.item_count > 0  -%}
+					{%- assign contentProduct = cart.items.first.product -%}
+				{%- else -%}
+					{%- assign contentProduct = block.settings.contentProduct -%}
+				{%- endif -%}
+				{%- assign content = contentProduct.metafields.shopify--discovery--product_recommendation.related_products.value -%}
+				{{ 'component-product-item.css' | asset_url | stylesheet_tag }}	
+			{%- else -%}
+				{%- assign content = blogs[block.settings.blog].articles -%}
+				{{ 'component-article-item.css' | asset_url | stylesheet_tag }}
+			{%- endif -%}
+		{%- endcapture -%}
+		
+		{%- capture slider_content -%}
+			{%- assign item_count = 0 -%}
+			{%- if block.type == 'blog' -%}
+				{%- for article in content limit: section.settings.grid_items_count -%}
+					{%- if article != blank -%}
+						<div class="Carousel__Cell">
+							{%- render 'article-item', article: article, block: block, hide_category_mobile: true -%}
+						</div>
+						{%- assign item_count = item_count | plus: 1 -%}
+					{%- endif -%}
+				{%- endfor -%}
+			{%- elsif block.type == 'recently' -%}	
+		        {%- assign parsed_terms = search.terms | split: ' OR ' -%}
+		        {%- for parsed_term in parsed_terms -%}
+					{%- assign id = parsed_term | split: 'id:' | last | times: 1 -%}
+					{%- for product in content limit: section.settings.grid_items_count -%}
+						{%- if product.id == id -%}
+							<div class="Carousel__Cell">
+								{%- render 'product-item', product: product, show_product_info: block.settings.show_product_info, show_vendor: block.settings.show_vendor, show_color_swatch: block.settings.show_color_swatch, show_labels: true -%}
+							</div>
+							{%- assign item_count = item_count | plus: 1 -%}
+							{%- break -%}
+						{%- endif -%}
+					{%- endfor -%}
+				{%- endfor -%}
+			{%- else -%}
+				{%- for product in content limit: section.settings.grid_items_count -%}
+					{%- if product != blank -%}
+						<div class="Carousel__Cell">
+							{%- render 'product-item', product: product, show_product_info: block.settings.show_product_info, show_vendor: block.settings.show_vendor, show_color_swatch: block.settings.show_color_swatch, show_labels: true -%}
+						</div>
+						{%- assign item_count = item_count | plus: 1 -%}
+					{%- endif -%}	
+				{%- endfor -%}
+			{%- endif -%}
+		
+		{%- endcapture -%}
+
+		{%- if slider_content != blank -%}
+			{%- capture flickity_options -%}
+			  {
+			    "prevNextButtons": {% if section.settings.text_position == 'top' %}true{% else %}false{% endif %},
+			    "pageDots": false,
+			    "wrapAround": false,
+			    "contain": true,
+			    "cellAlign": "left",
+			    "watchCSS": true,
+			    "dragThreshold": 8,
+			    "groupCells": true,
+			    "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+			  }
+			{%- endcapture -%}
+			
+			{{ blockTypeStyling }}
+			
+			<div class="TabPanel" id="block-{{ block.id }}" aria-hidden="{% if tabsCount == 0 and block.type != 'recently' %}false{% else %}true{% endif %}" role="tabpanel" {{ block.shopify_attributes }} data-block-type="{{ block.type }}">	
+				<div class="ContentSlider__SliderWrapper">
+					<div class="{% if section.settings.enable_natual_scroll %}Carousel--scroll{% endif %} ContentList ContentList--carousel {% if section.settings.text_position == 'left' %}ContentList--carouselLeft{% endif %} Carousel" data-flickity-config='{{ flickity_options }}' data-block-id="slideshow_{{ block.id }}">
+						{{ slider_content }}
+					</div>
+					{%- if section.settings.text_position == 'top' -%}
+			            <div class="Content__SlideshowNav {% if section.settings.enable_natual_scroll %}Content__SlideshowNav--scroller{% endif %}" id="slideshow_{{ block.id }}">
+							<div class="flickity-page-dots flickity-page-slider hidden-lap-and-up">
+				              {%- assign itemCountDivided = item_count | divided_by: 2.00 | ceil -%}
+							  {%- if section.settings.enable_natual_scroll -%}
+	  				              <button type="button" style="--item-count: {{itemCountDivided}};" aria-label="Slide to image" class="slider is-selected"></button>
+							  {%- else -%}
+	  				              {%- for i in (1..itemCountDivided) -%}
+	  				                <button type="button" aria-label="{{ 'product.slideshow.go_to_image' | t: i: i | escape }}" class="slider {% if forloop.index0 == 0 %}is-selected{% endif %}" data-index="{{ forloop.index0 }}"></button>
+	  				              {%- endfor -%}
+							  {%- endif -%}
+				            </div>
+							<div class="flickity-page-dots flickity-page-slider hidden-pocket">
+ 				              {%- assign itemCountDivided = item_count | divided_by: 3.00 | ceil -%}
+							  {%- if section.settings.enable_natual_scroll -%}
+	  				              <button type="button" style="--item-count: {{itemCountDivided}};" aria-label="Slide to image" class="slider is-selected"></button>
+							  {%- else -%}
+	  				              {%- for i in (1..itemCountDivided) -%}
+	  				                <button type="button" aria-label="{{ 'product.slideshow.go_to_image' | t: i: i | escape }}" class="slider {% if forloop.index0 == 0 %}is-selected{% endif %}" data-index="{{ forloop.index0 }}"></button>
+	  				              {%- endfor -%}
+							  {%- endif -%}
+				            </div>
+						</div>
+					{%- endif -%}
+				</div>
+			</div>
+			
+  	        {%- capture tabHeader -%}
+  	          <button class="Heading Heading--caps Heading--textFont u-h6 TabList__Item {% unless activeTabHeaderSet %}is-active{% endunless %}" data-action="toggle-tab" aria-controls="block-{{ block.id }}" aria-selected="{% if activeTabHeaderSet == false %}true{% else %}false{% endif %}" role="tab">
+  				  {{ block.settings.title }}
+  	          </button>
+			  {%- assign activeTabHeaderSet = true -%}
+  	        {%- endcapture -%}
+			
+			{%- assign tabHeaderHtml = tabHeaderHtml | append: tabHeader -%}
+			{%- assign tabsCount = tabsCount | plus: 1 -%}
+			
+		{%- endif -%}
+	{%- endfor -%}
+{%- endcapture -%}
+
+{%- capture section_content -%}
+	{%- capture text_content -%}
+		{%- if section.settings.subheading != blank -%}
+			<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+		{%- endif -%}
+
+		{%- if section.settings.title != blank -%}
+			<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+		{%- endif -%}
+		
+		<div class="SectionHeader__TabList TabList" role="tablist" {% if tabsCount < 2 and recently_viewed_block == blank %}hidden{% endif %}>
+			{{ tabHeaderHtml }}
+		</div>
+		
+		{%- if section.settings.description != blank -%}
+			<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+				{{ section.settings.description }}
+			</div>
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank and section.settings.button_2_text != blank -%}
+			{%- assign has_two_buttons = true -%}
+		{%- else -%}
+			{%- assign has_two_buttons = false -%}
+		{%- endif -%}
+
+		{%- if section.settings.button_1_text != blank or section.settings.button_2_text != blank -%}
+			<div class="SectionHeader__ButtonWrapper">
+				<div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+					{%- if section.settings.button_1_text != blank -%}
+						<a href="{{ section.settings.button_1_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</a>
+					{%- endif -%}
+
+					{%- if block.settings.button_2_text != blank -%}
+						<a href="{{ section.settings.button_2_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_2_text | escape }}</a>
+					{%- endif -%}
+				</div>
+			</div>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- if text_content != blank -%}
+		<div class="ContentSlider__ContentWrapper {% if section.settings.text_position == 'left' %}Grid__Cell 13/16--pocket 3/16--lap-and-up{% endif %}">
+			<div class="ContentSlider__Content ColourStyle--{{ section.settings.colour_style }}">
+				<header class="SectionHeader {% if section.settings.text_position == 'top' %}SectionHeader--center{% endif %}">
+					{{ text_content }}
+				</header>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture section_settings -%}
+{
+  "layout": {{ section.settings.text_position | json }},
+  "enable_natual_scroll": {{ section.settings.enable_natual_scroll | json }},
+  "enable_recently_viewed": {% if recently_viewed_block != blank %}true{% else %}false{% endif %},
+  "productId": {% if template.name == 'product' %}{{ product.id }}{% else %}null{% endif %},
+  "tabs_count": {{ tabsCount }},
+  "recently_block_id": {% if recently_viewed_block != blank %}{{ recently_viewed_block.id | prepend: 'block-' | json }}{% else %}null{% endif %}
+}
+{%- endcapture -%}
+
+
+<section class="Section Section--spacingExtraLarge {% if section.settings.enable_light %}Section--lightBackground{% endif %}" data-section-id="{{ section.id }}" data-section-type="content-slider" data-section-settings='{{ section_settings }}'>
+	<div class="Container">
+		{%- if section.settings.text_position == 'top' -%}
+			{{ section_content }}
+		{%- endif -%}
+		<div class="ContentSlider Grid">
+			{%- if section.settings.text_position == 'top' -%}
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 12/16--lap-and-up TabPanelWrapper">
+					{{ section_media }}
+				</div>
+				<div class="Grid__Cell 2/16--lap-and-up"></div>
+			{%- else -%}
+				{{ section_content }}
+				<div class="Grid__Cell 1/16--lap-and-up"></div>
+				<div class="Grid__Cell 12/16--lap-and-up TabPanelWrapper">
+					{{ section_media }}
+				</div>
+			{%- endif -%}
+		</div>
+		
+		{%- if section.settings.text_position == 'left' -%}
+            {%- for block in section.blocks -%}
+				<div class="Content__SlideshowNav {% if section.settings.enable_natual_scroll %}Content__SlideshowNav--scroller{% endif %}" id="slideshow_{{ block.id }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+					<div class="flickity-page-dots flickity-page-slider hidden-lap-and-up">
+		              {%- assign itemCountDivided = item_count | divided_by: 2.00 | ceil -%}
+					  {%- if section.settings.enable_natual_scroll -%}
+			              <button type="button" style="--item-count: {{itemCountDivided}};" aria-label="Slide to image" class="slider is-selected"></button>
+					  {%- else -%}
+			              {%- for i in (1..itemCountDivided) -%}
+			                <button type="button" aria-label="{{ 'product.slideshow.go_to_image' | t: i: i | escape }}" class="slider {% if forloop.index0 == 0 %}is-selected{% endif %}" data-index="{{ forloop.index0 }}"></button>
+			              {%- endfor -%}
+					  {%- endif -%}
+		            </div>
+					<div class="flickity-page-dots flickity-page-slider hidden-pocket">
+		              {%- assign itemCountDivided = item_count | divided_by: 3.00 | ceil -%}
+					  {%- if section.settings.enable_natual_scroll -%}
+			              <button type="button" style="--item-count: {{itemCountDivided}};" aria-label="Slide to image" class="slider is-selected"></button>
+					  {%- else -%}
+			              {%- for i in (1..itemCountDivided) -%}
+			                <button type="button" aria-label="{{ 'product.slideshow.go_to_image' | t: i: i | escape }}" class="slider {% if forloop.index0 == 0 %}is-selected{% endif %}" data-index="{{ forloop.index0 }}"></button>
+			              {%- endfor -%}
+					  {%- endif -%}
+		            </div>
+				</div>
+			{%- endfor -%}
+		{%- endif -%}
+		
+	</div>
+	
+	{% if section_media == blank %}
+        <style>
+			#shopify-section-{{ section.id }} {
+				display: none;
+			}
+        </style>
+	{% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Content slider",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+	    {
+	      "type": "richtext",
+	      "id": "title",
+	      "label": "Heading",
+	      "default": "<p><strong>Collection</strong></p>"
+	    },
+		{
+	      "type": "collection",
+	      "id": "collection",
+	      "label": "Collection"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_product_info",
+	      "label": "Show product info",
+	      "default": true
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_vendor",
+	      "label": "Show vendor",
+	      "default": false
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_color_swatch",
+	      "label": "Show color swatch",
+	      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+	      "default": false
+	    }
+	  ]
+    },
+    {
+      "type": "related",
+      "name": "Related products",
+      "limit": 1,
+      "settings": [
+	    {
+	      "type": "product",
+	      "id": "contentProduct",
+	      "label": "Product"
+	    },
+		{
+	      "type": "checkbox",
+	      "id": "use_first_cart_item",
+	      "label": "Use first cart item",
+	      "default": false
+	    },
+		{
+	      "type": "richtext",
+	      "id": "title",
+	      "label": "Heading",
+	      "default": "<p><strong>Related Products</strong></p>"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_product_info",
+	      "label": "Show product info",
+	      "default": true
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_vendor",
+	      "label": "Show vendor",
+	      "default": false
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_color_swatch",
+	      "label": "Show color swatch",
+	      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+	      "default": false
+	    }
+	  ]
+    },
+    {
+      "type": "complementary",
+      "name": "Complementary products",
+      "limit": 1,
+      "settings": [
+	    {
+	      "type": "product",
+	      "id": "contentProduct",
+	      "label": "Product"
+	    },
+		{
+	      "type": "checkbox",
+	      "id": "use_first_cart_item",
+	      "label": "Use first cart item",
+	      "default": false
+	    },
+	    {
+	      "type": "richtext",
+	      "id": "title",
+	      "label": "Heading",
+	      "default": "<p><strong>Complementary Products</strong></p>"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_product_info",
+	      "label": "Show product info",
+	      "default": true
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_vendor",
+	      "label": "Show vendor",
+	      "default": false
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_color_swatch",
+	      "label": "Show color swatch",
+	      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+	      "default": false
+	    }
+	  ]
+    },
+    {
+      "type": "recently",
+      "name": "Recently viewed",
+      "limit": 1,
+      "settings": [
+	    {
+	      "type": "richtext",
+	      "id": "title",
+	      "label": "Heading",
+	      "default": "<p><strong>Recently Viewed</strong></p>"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_product_info",
+	      "label": "Show product info",
+	      "default": true
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_vendor",
+	      "label": "Show vendor",
+	      "default": false
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_color_swatch",
+	      "label": "Show color swatch",
+	      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+	      "default": false
+	    }
+	  ]
+    },
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+	    {
+	      "type": "richtext",
+	      "id": "title",
+	      "label": "Heading",
+	      "default": "<p><strong>Blog</strong></p>"
+	    },
+		{
+	      "type": "blog",
+	      "id": "blog",
+	      "label": "Blog"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_category",
+	      "label": "Show article category",
+	      "info": "The first article's tag is used as the main category.",
+	      "default": false
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "show_exerpt",
+	      "label": "Show article exerpt",
+	      "default": false
+	    }
+	  ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_light",
+      "label": "Enable light background",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "grid_items_count",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "label": "Items to show",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_natual_scroll",
+      "label": "Enable natural scroll",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Title image",
+      "info": "1800 x 800px .jpg recommended"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "<p>Slide title</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<p>Tell your story</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+	{
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "top",
+      "info": "Sets the text and button position."
+    },
+	{
+      "type": "select",
+      "id": "colour_style",
+      "label": "Colour style",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark",
+      "info": "Sets the text and button colour."
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "underline",
+          "label": "Text underline"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary Button"
+        },
+        {
+          "value": "primary",
+          "label": "Primary Button"
+        }
+      ],
+      "default": "underline",
+      "info": "Sets the style for the button."
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "Content slider",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

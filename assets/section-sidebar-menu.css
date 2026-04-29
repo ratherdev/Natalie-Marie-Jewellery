@@ -1,0 +1,241 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Sidebar
+ * ----------------------------------------------------------------------------
+ */
+.SidebarMenu {
+  height: 100%;
+  background: var(--navigation-background);
+  color: var(--navigation-text-color);
+}
+
+.SidebarMenu .Heading:not(.ProductItem__Label),
+.supports-hover .SidebarMenu .Link--primary:hover {
+  color: var(--navigation-text-color);
+}
+
+.SidebarMenu .Text--subdued {
+  color: var(--navigation-text-color-light);
+}
+
+.SidebarMenu .Collapsible,
+.SidebarMenu .Linklist {
+  border-color: var(--navigation-border-color);
+}
+
+.SidebarMenu__Nav .Collapsible:first-child {
+  border-top: none;
+}
+
+/* We need to do that to add extra padding for scroll, as Safari on Mac and iOS has some issue with directly adding a padding-bottom */
+.SidebarMenu .Drawer__Main::after {
+  display: block;
+  content: "";
+  height: 35px;
+}
+
+.SidebarMenu__Nav--secondary {
+  margin-top: 28px;
+}
+
+.SidebarMenu .Drawer__Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  box-shadow: 0 1px var(--navigation-border-color) inset;
+  color: var(--navigation-text-color-light);
+}
+
+.SidebarMenu__CurrencySelector,
+.SidebarMenu__Social {
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.SidebarMenu__CurrencySelector {
+  width: 120px;
+  flex: none;
+  text-align: center;
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 11px));
+}
+.SidebarMenu__CurrencySelector .Select {
+  display: inline-block;
+}
+
+@supports (padding: max(0px)) {
+  .SidebarMenu__CurrencySelector,
+  .SidebarMenu__Social {
+    padding-bottom: max(6px, env(safe-area-inset-bottom, 0px) + 6px);
+  }
+}
+
+/* All this code is pretty ugly hack just to comply with some Shopify strict rules... */
+@supports (display: grid) {
+  .SidebarMenu__Social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 34px);
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
+
+.SidebarMenu__CurrencySelector + .SidebarMenu__Social {
+  border-left: 1px solid var(--navigation-border-color);
+}
+
+.SidebarMenu .Drawer__Content::before,
+.SidebarMenu .Drawer__Footer::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.SidebarMenu .Drawer__Content::before {
+  top: 0;
+  height: 25px;
+  background-image: linear-gradient(var(--navigation-background), rgba(var(--navigation-background-rgb), 0.6) 40%, rgba(var(--navigation-background-rgb), 0));
+}
+
+.SidebarMenu .Drawer__Footer::before {
+  bottom: 100%;
+  height: 30px;
+  background-image: linear-gradient(rgba(var(--navigation-background-rgb), 0), rgba(var(--navigation-background-rgb), 0.6) 40%, var(--navigation-background));
+}
+
+#sidebar-menu .Drawer__Close {
+    right: 20px;
+    left: unset;
+	top: 26px;
+}
+
+@media screen and (max-width: 640px) {
+	.SidebarMenu {
+		background: transparent;
+	}
+	
+	#sidebar-menu .Drawer__Content {
+	    background: var(--navigation-background)
+	}
+	
+	.sideBarMenu--open #sidebar-menu .Drawer__Close {
+		opacity: 1;
+	}
+
+	.sideBarMenu--open #shopify-section-header {
+	    pointer-events: none;
+	}
+	
+	#sidebar-menu .Drawer__Close {
+	    top: 20px;
+	    transition: opacity 0.5s var(--drawer-transition-timing);
+		opacity: 0;
+	}
+	
+	
+	#shopify-section-header .Header__Icon {
+	    transition: opacity 0.5s var(--drawer-transition-timing);
+		opacity: 1;
+	}
+
+	.sideBarMenu--open #shopify-section-header .Header__Icon {
+	    opacity: 0;
+	}
+}
+
+.Search--mobile {
+    display: block;
+    width: 100%;
+    background: var(--background);
+    transition: transform .15s ease-in-out,opacity .15s ease-in-out,visibility .15s ease-in-out;
+	position: relative;
+	z-index: 1;
+}
+
+.Search--mobile .Search__SearchBar {
+    padding: 16px 20px;
+}
+
+.SidebarMenu .Search__SearchBar {
+    padding: 16px 20px;
+}
+
+.SidebarMenu .Drawer__Content:before {
+    display: none;
+}
+
+.SidebarMenu .Drawer__Container {
+    padding: 20px;
+}
+
+.SidebarMenu .Collapsible__Content {
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.SidebarMenu .Collapsible .Collapsible {
+	margin-left: 0;
+}
+
+.SidebarMenu .Collapsible .Linklist--bordered {
+	border: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.SidebarMenu .Collapsible__Button {
+	border-bottom: none;
+	padding: 10px 0;
+}
+
+.SidebarMenu .Collapsible__Plus {
+	bottom: 15px;
+}
+
+.SidebarMenu .Grid.Grid--m .Grid__Cell {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.SidebarMenu .Grid .Grid__Cell--linklistItem:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.SidebarMenu .Grid--spacerBottom {
+    margin-bottom: 36px;
+}
+
+.SidebarMenu .Grid--spacerTop {
+    margin-top: 10px;
+}
+
+.SidebarMenu__Nav--secondary {
+    border-top: 1px solid var(--border-color);
+    padding-top: 38px;
+	text-align: left;
+}
+
+.SidebarMenu .Drawer__Main {
+  padding: 0px;
+  max-width: none;
+}
+
+@media screen and (min-width: 1008px) {
+  .SidebarMenu .Drawer__Content::before {
+    height: 40px;
+  }
+
+  .SidebarMenu .Drawer__Main::after {
+    height: 60px;
+  }
+
+  .SidebarMenu .Drawer__Footer::before {
+    height: 70px;
+  }
+}
+

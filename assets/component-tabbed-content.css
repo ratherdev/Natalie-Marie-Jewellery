@@ -1,0 +1,64 @@
+.TabbedHeader {
+    display: flex;
+	overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: calc(100% + 40px);
+}
+
+.TabbedContent {
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    transition: height .5s ease,box-shadow .5s ease;
+	position: relative;
+}
+
+.TabbedHeaderItem {
+    padding-right: 32px;
+	cursor: pointer;
+}
+
+.TabbedHeaderItem.is-active {
+    color: var(--link-color);
+}
+
+.TabbedContent .Accordion__ImageWrapper {
+    margin-top: 0;
+}
+
+.TabbedContentItem {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+.TabbedContentItem.is-active {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .5s ease;
+    transition-delay: .25s;
+	position: relative;
+}
+
+.TabbedHeader .Accordion__Section.Heading,
+.TabbedHeader .Accordion__Section.Heading:first-child {
+    margin-top: 0px;
+}
+
+.TabbedHeader .Accordion__Section.Heading {
+	white-space: nowrap
+}
+
+.TabbedHeader .Accordion__Section:last-child {
+    padding-right: 0;
+}

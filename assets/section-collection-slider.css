@@ -1,0 +1,38 @@
+.CollectionSlider__ContentWrapper {
+    align-self: center;
+	position: relative;
+	z-index: 1;
+}
+
+.CollectionSlider__ContentWrapper .ButtonGroup {
+	justify-content: flex-start;
+}
+
+.CollectionSlider__ContentWrapper .SectionHeader--center .ButtonGroup {
+    justify-content: center;
+}
+
+.CollectionSlider__SliderWrapper .ProductList--carousel .Carousel__Cell {
+	width: 33.33333%;
+	padding: 0 calc(var(--horizontal-spacing-four-products-per-row) / 2);
+}
+
+.CollectionSlider__SliderWrapper .ProductList--carousel {
+	margin: 0 -16px;
+}
+
+.CollectionSlider__SliderWrapper .ProductList--carousel.ProductList--carouselLeft .Carousel__Cell {
+	padding: 0 var(--horizontal-spacing-four-products-per-row) 0 0;
+}
+
+.CollectionSlider__SliderWrapper .ProductList--carousel.ProductList--carouselLeft {
+	margin: 0 -32px 0 0;
+}
+
+[data-section-type="collection-slider"] {
+    overflow: hidden;
+}
+
+.CollectionSlider__ContentWrapper .SectionHeader.SectionHeader--center {
+    margin-bottom: 32px;
+}

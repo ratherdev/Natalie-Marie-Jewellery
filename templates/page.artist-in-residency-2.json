@@ -122,7 +122,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "sapphire-wedding-rings",
+            "collection": "elisha-jackson",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -132,18 +132,17 @@
       "block_order": [
         "4e90ce6d-082e-433e-94d0-a31d9281d71b"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "subheading": "<p><strong>ARTIST IN RESIDENCY </strong></p>",
+        "title": "<p>Elisha Jackson</p>",
+        "description": "<p>\"Many of the works I make are designed to evoke a sense of history, of uncovering something lost or precious. When I create, I don't usually set out to tell a specific story or memory, but am always mindful of and grateful for the opportunity to evoke such things in the viewer in a way that is unique to them.\"</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/sapphire-wedding-rings",
+        "button_1_text": "Discover now",
+        "button_1_link": "shopify://collections/elisha-jackson",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -156,7 +155,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "plain-wedding-rings",
+            "collection": "cloud-may-studio",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -166,18 +165,17 @@
       "block_order": [
         "1eff8145-4f47-4d80-a9b7-fdcab500dd84"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>Plain <em>Wedding Rings</em></p>",
-        "description": "<p>With metal as the hero, discover our edit of Plain Wedding Rings.</p>",
+        "subheading": "<p><strong>ARTIST IN RESIDENCY </strong></p>",
+        "title": "<p><em>Cloud May Studio</em></p>",
+        "description": "<p>\"Looking back, the genesis of my practice feels less like a choice and more like a gentle, persistent calling, a search for weaving that spanned my entire life.\"</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/plain-wedding-rings",
+        "button_1_text": "View Their Work",
+        "button_1_link": "shopify://collections/cloud-may-studio",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

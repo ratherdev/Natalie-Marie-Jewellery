@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_2611.jpg"
+            "image": "shopify://shop_images/250116-charlotteolli-fg-481.jpg"
           }
         }
       },
@@ -32,7 +32,7 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>NMJ Lovers | Jamie and Zac</p>",
+        "title": "<p>NMJ Lovers | Charlotte and Olli</p>",
         "description": "<p>For this chapter of NMJ Lovers, we step into Jamie and Zac’s story. One that feels written in the quiet in-betweens, long before any defining moment.</p><p>They first met in high school, opposites in many ways, yet always orbiting one another. What began as a chance crossing in a small country town became something that unfolded over years. Shaped by timing, distance, and the feeling that somehow, they would have found each other regardless. As Jamie reflects, theirs is a love that feels like a series of sliding doors moments, where every path, every choice, led them back to one another.</p>",
         "colour_style": "dark",
         "button_1_text": "",
@@ -46,7 +46,7 @@
         "image_WpFtw6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_2624.jpg"
+            "image": "shopify://shop_images/250116-charlotteolli-fg-511.jpg"
           }
         }
       },
@@ -136,10 +136,10 @@
     "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
       "type": "content-list",
       "blocks": {
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/22.jpg",
+            "image": "shopify://shop_images/250116-charlotteolli-fg-519.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -168,10 +168,10 @@
             "metaobject_devices": ""
           }
         },
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/18.jpg",
+            "image": "shopify://shop_images/250116-charlotteolli-fg-480.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -202,8 +202,8 @@
         }
       },
       "block_order": [
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3",
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1"
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1",
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3"
       ],
       "settings": {
         "grid_items_count": 2,
@@ -279,7 +279,7 @@
         "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/19.jpg"
+            "image": "shopify://shop_images/Screenshot_2026-04-22_at_10.53.26_PM.png"
           }
         }
       },
@@ -363,39 +363,7 @@
         "image_JJQVHL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/23.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_ke4hF9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/21.jpg",
+            "image": "shopify://shop_images/250116-charlotteolli-fg-167-Enhanced-NR-2.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -426,8 +394,7 @@
         }
       },
       "block_order": [
-        "image_JJQVHL",
-        "image_ke4hF9"
+        "image_JJQVHL"
       ],
       "settings": {
         "grid_items_count": 2,

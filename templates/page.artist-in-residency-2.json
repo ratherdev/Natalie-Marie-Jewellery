@@ -1,1 +1,409 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"subheading":"<p><strong>{{ page.metafields.custom.sub_title.value }}<\/strong><\/p>","title":"","show_large":false}},"d469c0ba-1ca5-4517-8eaf-346749a7ac37":{"type":"three-column","blocks":{"template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/2_7d81c8ff-e2bb-4c98-ac42-e3eda91fb7f3.png","mobile_image":"shopify:\/\/shop_images\/2_7d81c8ff-e2bb-4c98-ac42-e3eda91fb7f3.png"}}},"block_order":["template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0"],"settings":{"enable_dark":false,"subheading":"<p><strong>Celebrating Creativity<\/strong><\/p>","title":"<p>Artist In Residency <\/p>","description":"<p>At Natalie Marie Jewellery, we celebrate creativity in all its forms. Our <em>Artist in Residency<\/em> program offers a platform for local Australian artists to showcase their work within our showrooms — transforming our spaces into evolving galleries of art and craftsmanship.<\/p><p>Each season, we feature a new artist whose work aligns with our values of intentional creation and thoughtful design. Their pieces are available to view and purchase in-store and online, offering our community the opportunity to connect with art that inspires and uplifts.<\/p><p>We invite you to experience the beauty of local artistry on your next visit.<\/p>","feature_text":"<p>Where jewellery meets art — featuring  artists in residence, exclusively in our showrooms.<\/p>","colour_style":"dark","button_1_metaobject":"","button_1_text":"","button_1_link":"","button_2_metaobject":"","button_2_text":"","button_2_link":"","button_style":"underline"}},"collection_on_page_MXer6X":{"type":"collection-on-page","blocks":{"disruptor_tile_zLkigC":{"type":"disruptor_tile","settings":{"devices":"all","autoplay":false,"loop":false,"background":"#f8f6f2","overlay":false,"content_position":"middle_left","subheading":"<p><strong> Artist In Residency <\/strong><\/p>","heading":"","description":"<h2><em>Adam Leng<br\/><\/em><\/h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.<\/p>","description_mobile":"<h2><em>Adam Leng<br\/><\/em><\/h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.<\/p>"}}},"block_order":["disruptor_tile_zLkigC"],"name":"Collection on Page","settings":{"collection":"adam-leng","grid_items_per_page":48,"disruptor_tile_positions":"1","mobile_items_per_row":"2","tablet_items_per_row":"4","desktop_items_per_row":"4","show_vendor":false,"show_color_swatch":true}},"112a30e4-a267-406a-a245-0f5c0ab42213":{"type":"content-slider","blocks":{"fa090c1f-de05-41b4-8eba-d58cc1ba3719":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"adam-leng","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["fa090c1f-de05-41b4-8eba-d58cc1ba3719"],"disabled":true,"settings":{"enable_light":false,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong> Artist In Residency <\/strong><\/p>","title":"<h1><em>Adam Leng<\/em><\/h1>","description":"<p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/adam-leng","button_2_text":"","button_2_link":"","button_style":"underline"}},"732e5ea5-9a1d-4b67-983d-9a2a4c8e545f":{"type":"content-slider","blocks":{"4e90ce6d-082e-433e-94d0-a31d9281d71b":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"sapphire-wedding-rings","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["4e90ce6d-082e-433e-94d0-a31d9281d71b"],"disabled":true,"settings":{"enable_light":true,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>Sapphire <em>Wedding Rings<\/em><\/p>","description":"<p>Explore our edit of Sapphire Wedding Rings. <\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/sapphire-wedding-rings","button_2_text":"","button_2_link":"","button_style":"underline"}},"60fc5e9c-0f48-4004-a7bb-117ed02afc55":{"type":"content-slider","blocks":{"1eff8145-4f47-4d80-a9b7-fdcab500dd84":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"plain-wedding-rings","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["1eff8145-4f47-4d80-a9b7-fdcab500dd84"],"disabled":true,"settings":{"enable_light":false,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>Plain <em>Wedding Rings<\/em><\/p>","description":"<p>With metal as the hero, discover our edit of Plain Wedding Rings.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/plain-wedding-rings","button_2_text":"","button_2_link":"","button_style":"underline"}},"f4cbf1ef-4a63-4243-92ce-30c74c264480":{"type":"content-slider","blocks":{"a5dc43a7-23a2-4efa-ba8b-46b4de5b9970":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"diamond-wedding-rings","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"],"disabled":true,"settings":{"enable_light":true,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>Diamond <em>Wedding Rings<\/em><\/p>","description":"<p>Explore our edit of Diamond Wedding Rings.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/diamond-wedding-rings","button_2_text":"","button_2_link":"","button_style":"underline"}},"f9e39ec7-e645-46ae-9dbc-6e1d553ff208":{"type":"content-slider","blocks":{"7f5509c5-b96a-4a5e-8286-c69d1b950c88":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"for-your-groom-and-groomsmen","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["7f5509c5-b96a-4a5e-8286-c69d1b950c88"],"disabled":true,"settings":{"enable_light":false,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>For your <em>Groom & Groomsmen<\/em><\/p>","description":"<p>For the ones who stand by your side, NMJ's curation of customisable lapel pins, tie bars and signet rings will be treasured for your special day and beyond.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/for-your-groom-and-groomsmen","button_2_text":"","button_2_link":"","button_style":"underline"}},"2f49be64-87a3-4a0f-acaa-523f2c948a4f":{"type":"content-slider","blocks":{"6f066745-905a-498b-bf03-dcdadacb9c71":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"something-blue","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["6f066745-905a-498b-bf03-dcdadacb9c71"],"disabled":true,"settings":{"enable_light":true,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>Something <em>Blue<\/em><\/p>","description":"<p>Symbolising good luck, the incorporation of blue in a bridal ensemble is an artful nod to the past with a gaze fixed on the future.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/something-blue","button_2_text":"","button_2_link":"","button_style":"underline"}},"add4ba56-5e9f-4505-8592-a45e0c9daf51":{"type":"content-slider","blocks":{"9c225558-164e-4699-ab9f-70acd9789493":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"for-your-bridesmaids","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["9c225558-164e-4699-ab9f-70acd9789493"],"disabled":true,"settings":{"enable_light":true,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>For your <em>Bridesmaids<\/em><\/p>","description":"<p>Honour the cherished loves in your life with our collection of sentimental, forever pieces; precious tokens of everlasting friendships.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/for-your-bridesmaids","button_2_text":"","button_2_link":"","button_style":"underline"}},"25a802f4-35c6-4714-bf2e-555a50f3f689":{"type":"content-slider","blocks":{"3aaa1e55-5aff-45c5-8ac6-d84a64448de3":{"type":"collection","settings":{"title":"<p><strong>Collection<\/strong><\/p>","collection":"something-sentimental-collection","show_product_info":true,"show_vendor":false,"show_color_swatch":true}}},"block_order":["3aaa1e55-5aff-45c5-8ac6-d84a64448de3"],"disabled":true,"settings":{"enable_light":false,"grid_items_count":20,"enable_natual_scroll":true,"subheading":"<p><strong>Wedding Collective<\/strong><\/p>","title":"<p>Something <em>New<\/em><\/p>","description":"<p>On this day, the beauty lies in the small details. Curated for timelessness in mind, these consciously crafted gifts are perfect expressions of your milestone.<\/p>","text_position":"left","colour_style":"dark","button_1_text":"Shop All","button_1_link":"shopify:\/\/collections\/something-sentimental-collection","button_2_text":"","button_2_link":"","button_style":"underline"}},"1680065391ebf6b294":{"type":"apps","blocks":{"7bb043e9-1b61-4054-a91b-ef2fdb59b58d":{"type":"shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5","settings":{"title":"","title_color":"","title_size_v2":0,"alignment":"center","instafeed_margin_top":0,"instafeed_margin_bottom":0,"instafeed_margin_sides":0,"show_instagram_link":false,"link_alignment":"left","link_color":"#000000","background_color":"","feed_id":"","html_area":""}}},"block_order":["7bb043e9-1b61-4054-a91b-ef2fdb59b58d"],"settings":{"include_margins":true,"subheading":"<p><strong>Instagram<\/strong><\/p>","title":"<p>Shop our <em>feed<\/em><\/p>","description":"","colour_style":"dark","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":"","button_style":"underline"}}},"order":["main","d469c0ba-1ca5-4517-8eaf-346749a7ac37","collection_on_page_MXer6X","112a30e4-a267-406a-a245-0f5c0ab42213","732e5ea5-9a1d-4b67-983d-9a2a4c8e545f","60fc5e9c-0f48-4004-a7bb-117ed02afc55","f4cbf1ef-4a63-4243-92ce-30c74c264480","f9e39ec7-e645-46ae-9dbc-6e1d553ff208","2f49be64-87a3-4a0f-acaa-523f2c948a4f","add4ba56-5e9f-4505-8592-a45e0c9daf51","25a802f4-35c6-4714-bf2e-555a50f3f689","1680065391ebf6b294"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "subheading": "<p><strong>{{ page.metafields.custom.sub_title.value }}</strong></p>",
+        "title": "",
+        "show_large": false
+      }
+    },
+    "d469c0ba-1ca5-4517-8eaf-346749a7ac37": {
+      "type": "three-column",
+      "blocks": {
+        "template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_7d81c8ff-e2bb-4c98-ac42-e3eda91fb7f3.png",
+            "mobile_image": "shopify://shop_images/2_7d81c8ff-e2bb-4c98-ac42-e3eda91fb7f3.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0"
+      ],
+      "settings": {
+        "enable_dark": false,
+        "subheading": "<p><strong>Celebrating Creativity</strong></p>",
+        "title": "<p>Artist In Residency </p>",
+        "description": "<p>At Natalie Marie Jewellery, we celebrate creativity in all its forms. Our <em>Artist in Residency</em> program offers a platform for local Australian artists to showcase their work within our showrooms — transforming our spaces into evolving galleries of art and craftsmanship.</p><p>Each season, we feature a new artist whose work aligns with our values of intentional creation and thoughtful design. Their pieces are available to view and purchase in-store and online, offering our community the opportunity to connect with art that inspires and uplifts.</p><p>We invite you to experience the beauty of local artistry on your next visit.</p>",
+        "feature_text": "<p>Where jewellery meets art — featuring  artists in residence, exclusively in our showrooms.</p>",
+        "colour_style": "dark",
+        "button_1_metaobject": "",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_metaobject": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "collection_on_page_MXer6X": {
+      "type": "collection-on-page",
+      "blocks": {
+        "disruptor_tile_zLkigC": {
+          "type": "disruptor_tile",
+          "settings": {
+            "devices": "all",
+            "autoplay": false,
+            "loop": false,
+            "background": "#f8f6f2",
+            "overlay": false,
+            "content_position": "middle_left",
+            "subheading": "<p><strong> Artist In Residency </strong></p>",
+            "heading": "",
+            "description": "<h2><em>Adam Leng<br/></em></h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.</p>",
+            "description_mobile": "<h2><em>Adam Leng<br/></em></h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "disruptor_tile_zLkigC"
+      ],
+      "name": "Collection on Page",
+      "settings": {
+        "collection": "adam-leng",
+        "grid_items_per_page": 48,
+        "disruptor_tile_positions": "1",
+        "mobile_items_per_row": "2",
+        "tablet_items_per_row": "4",
+        "desktop_items_per_row": "4",
+        "show_vendor": false,
+        "show_color_swatch": true
+      }
+    },
+    "112a30e4-a267-406a-a245-0f5c0ab42213": {
+      "type": "content-slider",
+      "blocks": {
+        "fa090c1f-de05-41b4-8eba-d58cc1ba3719": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "loralee-jade",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "fa090c1f-de05-41b4-8eba-d58cc1ba3719"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong> Artist In Residency </strong></p>",
+        "title": "<h1><em>Loralee Jade </em></h1>",
+        "description": "<p>Guided by the same mantras that inspire our pieces, Loralee’s work channels introspection through each delicate brushstroke. Painting directly onto silk, her process mirrors the fluidity of intention itself.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Explore Her Work",
+        "button_1_link": "shopify://collections/loralee-jade",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
+      "type": "content-slider",
+      "blocks": {
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "sapphire-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
+        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/sapphire-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "60fc5e9c-0f48-4004-a7bb-117ed02afc55": {
+      "type": "content-slider",
+      "blocks": {
+        "1eff8145-4f47-4d80-a9b7-fdcab500dd84": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "plain-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "1eff8145-4f47-4d80-a9b7-fdcab500dd84"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>Plain <em>Wedding Rings</em></p>",
+        "description": "<p>With metal as the hero, discover our edit of Plain Wedding Rings.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/plain-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
+      "type": "content-slider",
+      "blocks": {
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "diamond-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>Diamond <em>Wedding Rings</em></p>",
+        "description": "<p>Explore our edit of Diamond Wedding Rings.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/diamond-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208": {
+      "type": "content-slider",
+      "blocks": {
+        "7f5509c5-b96a-4a5e-8286-c69d1b950c88": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "for-your-groom-and-groomsmen",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "7f5509c5-b96a-4a5e-8286-c69d1b950c88"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>For your <em>Groom & Groomsmen</em></p>",
+        "description": "<p>For the ones who stand by your side, NMJ's curation of customisable lapel pins, tie bars and signet rings will be treasured for your special day and beyond.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/for-your-groom-and-groomsmen",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "2f49be64-87a3-4a0f-acaa-523f2c948a4f": {
+      "type": "content-slider",
+      "blocks": {
+        "6f066745-905a-498b-bf03-dcdadacb9c71": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "something-blue",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "6f066745-905a-498b-bf03-dcdadacb9c71"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>Something <em>Blue</em></p>",
+        "description": "<p>Symbolising good luck, the incorporation of blue in a bridal ensemble is an artful nod to the past with a gaze fixed on the future.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/something-blue",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "add4ba56-5e9f-4505-8592-a45e0c9daf51": {
+      "type": "content-slider",
+      "blocks": {
+        "9c225558-164e-4699-ab9f-70acd9789493": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "for-your-bridesmaids",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "9c225558-164e-4699-ab9f-70acd9789493"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>For your <em>Bridesmaids</em></p>",
+        "description": "<p>Honour the cherished loves in your life with our collection of sentimental, forever pieces; precious tokens of everlasting friendships.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/for-your-bridesmaids",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "25a802f4-35c6-4714-bf2e-555a50f3f689": {
+      "type": "content-slider",
+      "blocks": {
+        "3aaa1e55-5aff-45c5-8ac6-d84a64448de3": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "something-sentimental-collection",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "3aaa1e55-5aff-45c5-8ac6-d84a64448de3"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Wedding Collective</strong></p>",
+        "title": "<p>Something <em>New</em></p>",
+        "description": "<p>On this day, the beauty lies in the small details. Curated for timelessness in mind, these consciously crafted gifts are perfect expressions of your milestone.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/something-sentimental-collection",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "1680065391ebf6b294": {
+      "type": "apps",
+      "blocks": {
+        "7bb043e9-1b61-4054-a91b-ef2fdb59b58d": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "7bb043e9-1b61-4054-a91b-ef2fdb59b58d"
+      ],
+      "settings": {
+        "include_margins": true,
+        "subheading": "<p><strong>Instagram</strong></p>",
+        "title": "<p>Shop our <em>feed</em></p>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
+    "collection_on_page_MXer6X",
+    "112a30e4-a267-406a-a245-0f5c0ab42213",
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
+    "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
+    "f4cbf1ef-4a63-4243-92ce-30c74c264480",
+    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208",
+    "2f49be64-87a3-4a0f-acaa-523f2c948a4f",
+    "add4ba56-5e9f-4505-8592-a45e0c9daf51",
+    "25a802f4-35c6-4714-bf2e-555a50f3f689",
+    "1680065391ebf6b294"
+  ]
+}

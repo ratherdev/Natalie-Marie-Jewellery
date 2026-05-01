@@ -145,20 +145,30 @@ function initMasonryPagination(section) {
   const perPage = parseInt(section.dataset.perPage);
   let currentItems = perPage;
 
+  // ✅ RESET EVERYTHING FIRST (IMPORTANT)
+  items.forEach(item => item.style.display = "none");
+
+  if (btn) {
+    const newBtn = btn.cloneNode(true); // remove old listeners
+    btn.parentNode.replaceChild(newBtn, btn);
+  }
+
+  const freshBtn = section.querySelector(".load-more-btn");
+
   function showItems() {
     items.forEach((item, index) => {
       item.style.display = index < currentItems ? "block" : "none";
     });
 
-    if (btn) {
-      btn.style.display = currentItems >= items.length ? "none" : "inline-block";
+    if (freshBtn) {
+      freshBtn.style.display = currentItems >= items.length ? "none" : "inline-block";
     }
   }
 
   showItems();
 
-  if (btn) {
-    btn.addEventListener("click", function () {
+  if (freshBtn) {
+    freshBtn.addEventListener("click", function () {
       currentItems += perPage;
       showItems();
 
@@ -180,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* INIT IN CUSTOMIZER */
+/* 🔥 CUSTOMIZER FIX (CRITICAL) */
 document.addEventListener("shopify:section:load", function (e) {
   if (e.target.classList.contains("masonry-gallery-advance")) {
     initMasonryPagination(e.target);
@@ -191,6 +201,18 @@ document.addEventListener("shopify:section:select", function (e) {
   if (e.target.classList.contains("masonry-gallery-advance")) {
     initMasonryPagination(e.target);
   }
+});
+
+/* 🔥 THIS IS THE REAL FIX FOR SETTINGS CHANGE */
+document.addEventListener("shopify:section:reorder", function () {
+  document.querySelectorAll(".masonry-gallery-advance").forEach(section => {
+    initMasonryPagination(section);
+  });
+});
+
+document.addEventListener("shopify:block:select", function (e) {
+  const section = e.target.closest(".masonry-gallery-advance");
+  if (section) initMasonryPagination(section);
 });
 </script>
 

@@ -379,13 +379,17 @@ for size, we use it to display a size chart (if applicable)
 		{%- endfor -%}
 	
 		{%- if block.settings.stitch_stones or block.settings.stitch_metals -%}
-			{%- render 'signature-product-stitching', 
+			{% comment %} {%- render 'signature-product-stitching', 
 				stitch_width: true, 
 				stitch_stones: block.settings.stitch_stones, 
 				stitch_metals: block.settings.stitch_metals, 
 				product: product, 
 				mode: 'swatch' 
-			-%}
+			-%} {% endcomment %}
+
+			{%- render 'product-stitching', stitch_width: true, stitch_stones: block.settings.stitch_stones, stitch_metals: block.settings.stitch_metals, product: product, mode: 'swatch' -%}
+
+
 		{%- endif -%}
 		
 		{%- if block.settings.enable_custom_line_properties and product.metafields.custom.custom_line_item_properties.value != blank -%}

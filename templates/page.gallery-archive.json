@@ -346,7 +346,7 @@
       "settings": {
         "columns_desktop": 4,
         "columns_mobile": 2,
-        "items_per_page": 5,
+        "items_per_page": 25,
         "button_text": "Load More",
         "gap": 6,
         "radius": 0,

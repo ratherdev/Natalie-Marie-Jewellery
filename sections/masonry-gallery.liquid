@@ -15,7 +15,7 @@
   overflow: hidden;
   background: #fff;
   position: relative;
-  display: none; /* pagination control */
+  display: none;
 }
 
 .gallery-item img {
@@ -67,11 +67,7 @@
   text-align: center;
   margin-top: 30px;
 }
-.load-more-btn {
-	background: #000;
-	padding: 9px 25px;
-	color: #fff;
-}
+
 /* mobile */
 @media (max-width: 768px) {
   .gallery-grid {
@@ -84,8 +80,12 @@
 }
 </style>
 
-<section class="masonry-gallery masonry-gallery-advance" id="section-{{ section.id }}">
-  
+<section 
+  class="masonry-gallery masonry-gallery-advance"
+  id="section-{{ section.id }}"
+  data-per-page="{{ section.settings.items_per_page }}"
+>
+
   {% if section.settings.title != blank %}
     <h2>{{ section.settings.title }}</h2>
   {% endif %}
@@ -97,7 +97,7 @@
   <div class="gallery-grid">
     {% for block in section.blocks %}
       <div class="gallery-item ratio-{{ block.settings.image_ratio }} gallery-page-item">
-        
+
         {% if block.settings.link != blank %}
           <a href="{{ block.settings.link }}">
         {% endif %}
@@ -122,7 +122,6 @@
     {% endfor %}
   </div>
 
-  <!-- Load More Button -->
   <div class="load-more-wrapper">
     <button class="load-more-btn button button--primary">
       {{ section.settings.button_text }}
@@ -132,51 +131,62 @@
 </section>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+function initMasonryPagination(section) {
 
-  document.querySelectorAll(".masonry-gallery-advance").forEach(section => {
+  const items = section.querySelectorAll(".gallery-page-item");
+  const btn = section.querySelector(".load-more-btn");
 
-    const items = section.querySelectorAll(".gallery-page-item");
-    const btn = section.querySelector(".load-more-btn");
+  if (!items.length) return;
 
-    if (!items.length) return;
+  const perPage = parseInt(section.dataset.perPage);
+  let currentItems = perPage;
 
-    const perPage = {{ section.settings.items_per_page }};
-    let currentItems = perPage;
-
-    function showItems() {
-      items.forEach((item, index) => {
-        item.style.display = index < currentItems ? "block" : "none";
-      });
-
-      // hide button when all items shown
-      if (currentItems >= items.length) {
-        if (btn) btn.style.display = "none";
-      } else {
-        if (btn) btn.style.display = "inline-block";
-      }
-    }
-
-    showItems();
+  function showItems() {
+    items.forEach((item, index) => {
+      item.style.display = index < currentItems ? "block" : "none";
+    });
 
     if (btn) {
-      btn.addEventListener("click", function () {
-        currentItems += perPage;
-        showItems();
-
-        // smooth scroll
-        const nextItem = items[currentItems - perPage];
-        if (nextItem) {
-          window.scrollTo({
-            top: nextItem.offsetTop - 100,
-            behavior: "smooth"
-          });
-        }
-      });
+      btn.style.display = currentItems >= items.length ? "none" : "inline-block";
     }
+  }
 
+  showItems();
+
+  if (btn) {
+    btn.addEventListener("click", function () {
+      currentItems += perPage;
+      showItems();
+
+      const nextItem = items[currentItems - perPage];
+      if (nextItem) {
+        window.scrollTo({
+          top: nextItem.offsetTop - 100,
+          behavior: "smooth"
+        });
+      }
+    });
+  }
+}
+
+/* INIT ON PAGE LOAD */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".masonry-gallery-advance").forEach(section => {
+    initMasonryPagination(section);
   });
+});
 
+/* INIT IN CUSTOMIZER */
+document.addEventListener("shopify:section:load", function (e) {
+  if (e.target.classList.contains("masonry-gallery-advance")) {
+    initMasonryPagination(e.target);
+  }
+});
+
+document.addEventListener("shopify:section:select", function (e) {
+  if (e.target.classList.contains("masonry-gallery-advance")) {
+    initMasonryPagination(e.target);
+  }
 });
 </script>
 

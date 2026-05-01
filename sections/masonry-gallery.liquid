@@ -3,13 +3,11 @@
   padding: 40px 20px;
 }
 
-/* COLUMN MASONRY */
 .gallery-grid {
   column-count: {{ section.settings.columns_desktop }};
   column-gap: {{ section.settings.gap }}px;
 }
 
-/* ITEM */
 .gallery-item {
   break-inside: avoid;
   margin-bottom: {{ section.settings.gap }}px;
@@ -17,61 +15,35 @@
   overflow: hidden;
   background: #fff;
   position: relative;
+  display: none; /* important for pagination */
 }
 
-/* IMAGE */
 .gallery-item img {
   width: 100%;
   display: block;
   border-radius: {{ section.settings.radius }}px;
 }
 
-/* ========================= */
-/* IMAGE RATIO CONTROLS */
-/* ========================= */
+/* ratios */
+.ratio-natural img { height: auto; }
 
-/* Full (default) */
-.ratio-natural img {
-  height: auto;
-}
+.ratio-square { aspect-ratio: 1/1; }
+.ratio-square img { width:100%; height:100%; object-fit:cover; }
 
-/* Square */
-.ratio-square {
-  aspect-ratio: 1 / 1;
-}
+.ratio-rectangle { aspect-ratio: 4/5; }
+.ratio-rectangle img { width:100%; height:100%; object-fit:cover; }
 
-.ratio-square img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Rectangle */
-.ratio-rectangle {
-  aspect-ratio: 4 / 5;
-}
-
-.ratio-rectangle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ========================= */
-/* TEXT STYLING */
-/* ========================= */
-
+/* text */
 .masonry-gallery-advance h2 {
   font-family: "BaskervilleDisplayPT";
   font-size: 50px;
-  margin: 0 auto;
   text-align: center;
 }
 
 .masonry-gallery-advance > p {
   font-size: 16px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   padding: 8px 0 50px;
 }
@@ -90,12 +62,13 @@
   margin-bottom: 10px;
 }
 
-.gallery-item a {
-  text-decoration: none;
-  color: inherit;
+/* pagination button */
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 30px;
 }
 
-/* MOBILE */
+/* mobile */
 @media (max-width: 768px) {
   .gallery-grid {
     column-count: {{ section.settings.columns_mobile }};
@@ -106,7 +79,6 @@
   }
 }
 </style>
-
 <section class="masonry-gallery masonry-gallery-advance">
   
   {% if section.settings.title != blank %}
@@ -117,9 +89,9 @@
     <p>{{ section.settings.description }}</p>
   {% endif %}
 
-  <div class="gallery-grid">
+  <div class="gallery-grid" id="galleryGrid">
     {% for block in section.blocks %}
-      <div class="gallery-item ratio-{{ block.settings.image_ratio }}">
+      <div class="gallery-item ratio-{{ block.settings.image_ratio }} gallery-page-item">
         
         {% if block.settings.link != blank %}
           <a href="{{ block.settings.link }}">
@@ -144,8 +116,53 @@
       </div>
     {% endfor %}
   </div>
-</section>
 
+  <!-- Load More -->
+  <div class="load-more-wrapper">
+    <button id="loadMoreBtn" class="button button--primary">
+      {{ section.settings.button_text }}
+    </button>
+  </div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const items = document.querySelectorAll(".gallery-page-item");
+  const btn = document.getElementById("loadMoreBtn");
+
+  const perPage = {{ section.settings.items_per_page }};
+  let currentItems = perPage;
+
+  function showItems() {
+    items.forEach((item, index) => {
+      if (index < currentItems) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    if (currentItems >= items.length) {
+      btn.style.display = "none";
+    }
+  }
+
+  showItems();
+
+  btn.addEventListener("click", function () {
+    currentItems += perPage;
+    showItems();
+
+    // smooth scroll
+    window.scrollTo({
+      top: items[currentItems - perPage].offsetTop - 100,
+      behavior: "smooth"
+    });
+  });
+
+});
+</script>
 {% schema %}
 {
   "name": "Masonry Gallery Advanced",
@@ -167,6 +184,21 @@
       "max": 3,
       "step": 1,
       "default": 2
+    },
+    {
+      "type": "range",
+      "id": "items_per_page",
+      "label": "Images per page",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "default": 25
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Load More Button Text",
+      "default": "Load More"
     },
     {
       "type": "range",

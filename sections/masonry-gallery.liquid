@@ -15,7 +15,7 @@
   overflow: hidden;
   background: #fff;
   position: relative;
-  display: none; /* important for pagination */
+  display: none; /* pagination control */
 }
 
 .gallery-item img {
@@ -62,7 +62,7 @@
   margin-bottom: 10px;
 }
 
-/* pagination button */
+/* button */
 .load-more-wrapper {
   text-align: center;
   margin-top: 30px;
@@ -79,7 +79,8 @@
   }
 }
 </style>
-<section class="masonry-gallery masonry-gallery-advance">
+
+<section class="masonry-gallery masonry-gallery-advance" id="section-{{ section.id }}">
   
   {% if section.settings.title != blank %}
     <h2>{{ section.settings.title }}</h2>
@@ -89,7 +90,7 @@
     <p>{{ section.settings.description }}</p>
   {% endif %}
 
-  <div class="gallery-grid" id="galleryGrid">
+  <div class="gallery-grid">
     {% for block in section.blocks %}
       <div class="gallery-item ratio-{{ block.settings.image_ratio }} gallery-page-item">
         
@@ -117,52 +118,64 @@
     {% endfor %}
   </div>
 
-  <!-- Load More -->
+  <!-- Load More Button -->
   <div class="load-more-wrapper">
-    <button id="loadMoreBtn" class="button button--primary">
+    <button class="load-more-btn button button--primary">
       {{ section.settings.button_text }}
     </button>
   </div>
 
 </section>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const items = document.querySelectorAll(".gallery-page-item");
-  const btn = document.getElementById("loadMoreBtn");
+  document.querySelectorAll(".masonry-gallery-advance").forEach(section => {
 
-  const perPage = {{ section.settings.items_per_page }};
-  let currentItems = perPage;
+    const items = section.querySelectorAll(".gallery-page-item");
+    const btn = section.querySelector(".load-more-btn");
 
-  function showItems() {
-    items.forEach((item, index) => {
-      if (index < currentItems) {
-        item.style.display = "block";
+    if (!items.length) return;
+
+    const perPage = {{ section.settings.items_per_page }};
+    let currentItems = perPage;
+
+    function showItems() {
+      items.forEach((item, index) => {
+        item.style.display = index < currentItems ? "block" : "none";
+      });
+
+      // hide button when all items shown
+      if (currentItems >= items.length) {
+        if (btn) btn.style.display = "none";
       } else {
-        item.style.display = "none";
+        if (btn) btn.style.display = "inline-block";
       }
-    });
-
-    if (currentItems >= items.length) {
-      btn.style.display = "none";
     }
-  }
 
-  showItems();
-
-  btn.addEventListener("click", function () {
-    currentItems += perPage;
     showItems();
 
-    // smooth scroll
-    window.scrollTo({
-      top: items[currentItems - perPage].offsetTop - 100,
-      behavior: "smooth"
-    });
+    if (btn) {
+      btn.addEventListener("click", function () {
+        currentItems += perPage;
+        showItems();
+
+        // smooth scroll
+        const nextItem = items[currentItems - perPage];
+        if (nextItem) {
+          window.scrollTo({
+            top: nextItem.offsetTop - 100,
+            behavior: "smooth"
+          });
+        }
+      });
+    }
+
   });
 
 });
 </script>
+
 {% schema %}
 {
   "name": "Masonry Gallery Advanced",

@@ -1,0 +1,843 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ec32b834-e4e2-4e87-8392-6d45f7b82d33": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/250116-charlotteolli-fg-481.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>NMJ Lovers | Charlotte and Olli</p>",
+        "description": "<p>For this chapter of NMJ Lovers, we step into Charlotte and Olli’s story — one that began long before either of them could have known what it would become.</p><p>From meeting in high school to building a life together over 14 years, their relationship has been shaped by growing up side by side — through young love, parenthood and the quiet, everyday moments that matter most. What began as something innocent has evolved into a deep partnership, grounded in friendship, loyalty and a shared life they’ve created together.</p><p>A story of choosing one another, again and again.</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "text_with_media_aj4gXB": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_WpFtw6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/250116-charlotteolli-fg-511.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_WpFtw6"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>“I would still choose Olli over and over and over again - <em>I truly couldn’t imagine doing life with anyone else.</em>”</p>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc": {
+      "type": "seo-copy",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "content_intro": "<p><strong>DO: BUY WHAT YOU LOVE</strong></p><p><em>Natalie: </em>Simply, a piece of vintage jewellery should be chosen because it resonates with you, and because you fall in love with it. Not only are they imbued with the histories and stories of their past owners, but vintage jewellery also provides an opportunity to embrace sustainable purchasing habits – offering once-cherished designs a second (or third) lease on life.</p><p>I have always had a love for vintage jewellery, or vintage anything really. I used to spend hours in op shops collecting all sorts of odd finds – furniture, clothes, hats, even once a vintage suitcase which I used to transport and display my first ever collection! I love the mystery and enigmatic nature of vintage pieces, the opportunity for speculation on their history and journey. I also have a deep reverence for the incredible craftsmanship many of these piece’s hold. So much tradition and heritage exists in every tiny detail, which is where my love for vintage jewellery originates from.</p><p>I encourage you to find your spark. Is it a particular stone colour or cut, the setting or design style or maybe even the piece’s provenance and era that speaks to you? Is it because it reminds you of a place, someone special or loved ones from generations past? I always like to remind clients that jewellery doesn’t have to be engraved or marked with a special stone to become solely yours – it can be anything about the piece that sparks a feeling or takes you back to a moment in time.</p><p>There’s a sense of romance and allure inherit in vintage pieces, and finding the perfect design should feel akin to falling in love: a lightning bolt of recognition; the sense that you two were destined to be connected.</p>",
+        "content": ""
+      }
+    },
+    "22942553-01da-4697-89ac-f500b502883f": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>Let’s go back to the beginning, how did you meet?</strong></p><p>Olli and I met in year 7 in high school and for me, it was literally love at first sight. He had the sweetest English accent, surfer hair and was the same height as me (we were both short). We were in a few of the same classes and the same friendship group too! I used to go and watch his band play at lunchtimes in an empty classroom. I got invited to his 13th birthday disco party and funnily enough, we actually also lived on the same street twice growing up (talk about fate). The first time we didn’t realise, the second time he lived a few hundred metres away and we used to say hi whenever we passed each other. It wasn’t until a New Years Eve party of 2012-13 that we properly caught up again and started chatting and then eventually dating. </p><p></p><p><strong>In what ways do you feel your relationship has changed or grown, and in what ways has it remained the same?</strong></p><p>Our relationship has grown and changed so much since the beginning. We have been together for 14 years now and in that time have had 3 beautiful kids that we are besotted with. We had our first child fairly young so we had to mature quite quickly to get through the challenges of parenting together and figuring life out. We still love spending our days together with our kids and have the same interests and hobbies. We both enjoy being outside, watching movies together and seeing friends and family. We are each other's biggest fans and biggest supporters and I wouldn’t have it any other way. We’ve definitely grown as a team and still love each other so much. </p>",
+            "description_mobile": "<p><strong>Let’s go back to the beginning, how did you meet?</strong></p><p>Olli and I met in year 7 in high school and for me, it was literally love at first sight. He had the sweetest English accent, surfer hair and was the same height as me (we were both short). We were in a few of the same classes and the same friendship group too! I used to go and watch his band play at lunchtimes in an empty classroom. I got invited to his 13th birthday disco party and funnily enough, we actually also lived on the same street twice growing up (talk about fate). The first time we didn’t realise, the second time he lived a few hundred metres away and we used to say hi whenever we passed each other. It wasn’t until a New Years Eve party of 2012-13 that we properly caught up again and started chatting and then eventually dating. </p><p></p><p><strong>In what ways do you feel your relationship has changed or grown, and in what ways has it remained the same?</strong></p><p>Our relationship has grown and changed so much since the beginning. We have been together for 14 years now and in that time have had 3 beautiful kids that we are besotted with. We had our first child fairly young so we had to mature quite quickly to get through the challenges of parenting together and figuring life out. We still love spending our days together with our kids and have the same interests and hobbies. We both enjoy being outside, watching movies together and seeing friends and family. We are each other's biggest fans and biggest supporters and I wouldn’t have it any other way. We’ve definitely grown as a team and still love each other so much. </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/250116-charlotteolli-fg-519.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/250116-charlotteolli-fg-480.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1",
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>Charlotte, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>ABSOLUTELY STOKED!!! It was my dream ring. I was so so excited to see it!  All those hours of scrolling past the same ring multiple times while I was laying on Olli’s lap (making sure he was looking over my shoulder at my phone) paid off. Also saving it to my phone multiple times! I also sent it to my best friend (because who doesn’t). Still love it to this day! </p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>Olli proposed in 2018 in Tuscany in Italy with our oldest who was 3 at the time and it was incredibly special. Our 3-year-old took the proposal photo, and it was just all around the most magical dreamy day. He saved for a while for this ring and hid it for 2 months and then held onto it all throughout Europe until we got to Tuscany where he knew it was my absolute dream location (after my favourite movie) so I was really happy! Our wedding band is also from NMJ and it complements my ring so well. Our wedding day was a long time coming, we were engaged for 7 years so to finally be married was so incredible and to share the same last name with my husband and kids is really special! </p>",
+            "description_mobile": "<p><strong>Charlotte, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>ABSOLUTELY STOKED!!! It was my dream ring. I was so so excited to see it!  All those hours of scrolling past the same ring multiple times while I was laying on Olli’s lap (making sure he was looking over my shoulder at my phone) paid off. Also saving it to my phone multiple times! I also sent it to my best friend (because who doesn’t). Still love it to this day! </p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>Olli proposed in 2018 in Tuscany in Italy with our oldest who was 3 at the time and it was incredibly special. Our 3-year-old took the proposal photo, and it was just all around the most magical dreamy day. He saved for a while for this ring and hid it for 2 months and then held onto it all throughout Europe until we got to Tuscany where he knew it was my absolute dream location (after my favourite movie) so I was really happy! Our wedding band is also from NMJ and it complements my ring so well. Our wedding day was a long time coming, we were engaged for 7 years so to finally be married was so incredible and to share the same last name with my husband and kids is really special! </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-04-22_at_10.53.26_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>“<em>Our 3 year old took the proposal photo</em>, and it was just the most magical, dreamy day - something we’ll treasure forever.”</p>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "800eebd7-962e-4fa6-bc5d-8b818a1ba455": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__800eebd7-962e-4fa6-bc5d-8b818a1ba455-image-1": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>What is something that has surprised you about marriage – perhaps a misconception proven wrong, or an assumption proven right?</strong></p><p>We have been together for so long that in some ways we already felt like we were married! But what has surprised us is how much more love we have for each other if that is even possible! I would still choose Olli over and over and over again. I love seeing him as a Dad and I love that he still manages to surprise me with random things such as creating restaurants at home with our kids and taking me on thoughtful dates.</p><p><strong>Oliver, we’d love to know why you chose NMJ to help create the perfect engagement ring for Charlotte. How was your experience and how did you end up with the design that you did?</strong></p><p>Charlotte had her eye on a ring from there for a while! I went in one day and worked with the designer on the sizing and the style of ring and then went from there. They were so helpful and really made the moment more exciting and special. I loved all the extra little touches they included with the ring as well. </p>",
+            "description_mobile": "<p><strong>What is something that has surprised you about marriage – perhaps a misconception proven wrong, or an assumption proven right?</strong></p><p>We have been together for so long that in some ways we already felt like we were married! But what has surprised us is how much more love we have for each other if that is even possible! I would still choose Olli over and over and over again. I love seeing him as a Dad and I love that he still manages to surprise me with random things such as creating restaurants at home with our kids and taking me on thoughtful dates.</p><p><strong>Oliver, we’d love to know why you chose NMJ to help create the perfect engagement ring for Charlotte. How was your experience and how did you end up with the design that you did?</strong></p><p>Charlotte had her eye on a ring from there for a while! I went in one day and worked with the designer on the sizing and the style of ring and then went from there. They were so helpful and really made the moment more exciting and special. I loved all the extra little touches they included with the ring as well. </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__800eebd7-962e-4fa6-bc5d-8b818a1ba455-image-1"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_6fdrqw": {
+      "type": "content-list",
+      "blocks": {
+        "image_JJQVHL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/250116-charlotteolli-fg-167-Enhanced-NR-2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JJQVHL"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_QdVqEa": {
+      "type": "content-list",
+      "blocks": {
+        "image_y43eJM": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>What is one of your favourite moments from your special day?</strong></p><p>Olli - I love that we got engaged in both of our favourite places (Tuscany) and that our son took the perfect photo of the special moment. I told him a few days before that I would be giving Mummy something super special and he had to keep it a secret. There were a few times when he almost told her, but he did so well on the day with the camera capturing the moment! </p><p>Charlotte - My favourite moment was when Olli got down on one knee and said why he wanted to marry me! Having our son there as well to share in the moment and the happiness after was pure magic. We went out for dinner to a cute little Italian restaurant that was in our villa where we were staying and there was a band playing, we had seafood marinara, pizzas and a lamb shoulder and it was all around just the most special day.  </p><p></p><p>Olli - My favourite moment of our wedding was when Charlotte and my kids walked in. I’ll never forget that! <br/></p><p>Charlotte - My favourite moment of our wedding was hearing Olli’s vows and seeing his face as I walked down the aisle. Such a beautiful moment, I definitely had to hold back the tears! </p>",
+            "description_mobile": "<p><strong>What is one of your favourite moments from your special day?</strong></p><p>Olli - I love that we got engaged in both of our favourite places (Tuscany) and that our son took the perfect photo of the special moment. I told him a few days before that I would be giving Mummy something super special and he had to keep it a secret. There were a few times when he almost told her, but he did so well on the day with the camera capturing the moment! </p><p>Charlotte - My favourite moment was when Olli got down on one knee and said why he wanted to marry me! Having our son there as well to share in the moment and the happiness after was pure magic. We went out for dinner to a cute little Italian restaurant that was in our villa where we were staying and there was a band playing, we had seafood marinara, pizzas and a lamb shoulder and it was all around just the most special day.  </p><p></p><p>Olli - My favourite moment of our wedding was when Charlotte and my kids walked in. I’ll never forget that! <br/></p><p>Charlotte - My favourite moment of our wedding was hearing Olli’s vows and seeing his face as I walked down the aisle. Such a beautiful moment, I definitely had to hold back the tears! </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_y43eJM"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_xjc9rD": {
+      "type": "content-list",
+      "blocks": {
+        "image_Tphx6A": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>Wedding Photography -</strong> Lisa Katrina Photography @lisakatrinaphotography</p>",
+            "description_mobile": "<p><strong>Wedding Photography -</strong> Lisa Katrina Photography @lisakatrinaphotography</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Tphx6A"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "off_grid_HhNffM": {
+      "type": "off-grid",
+      "blocks": {
+        "image_GjBazG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_963254db-705b-4a24-8a98-14a00dfe98fe.png",
+            "link": ""
+          }
+        },
+        "image_HeaN8f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-01-22_at_12.36.16_pm.png",
+            "link": ""
+          }
+        },
+        "image_QQ7VEb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/17_e3df71d6-9aea-4629-9d69-bf015e9a2c23.png",
+            "link": ""
+          }
+        },
+        "image_8xXL8q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/19_2dc68804-9c39-4479-b430-ad5898ba3ea5.png",
+            "link": ""
+          }
+        },
+        "image_UTXFYP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-01-22_at_12.35.56_pm.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_GjBazG",
+        "image_HeaN8f",
+        "image_QQ7VEb",
+        "image_8xXL8q",
+        "image_UTXFYP"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_dark": false,
+        "remove_spacing_bottom": false,
+        "subheading": "",
+        "title": "<p>“Putting our relationship first has had the most beautiful knock-on effect on everything that follows.”</p>",
+        "description": "",
+        "feature_text": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_YaW6gH": {
+      "type": "content-list",
+      "blocks": {
+        "image_nhAEQq": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><strong>Hidden within both of your wedding bands is a set of hidden birthstones, tell us what this special addition symbolises and how you chose your wedding rings. </strong><br/><br/>Isaac: The inclusion of the birthstones really symbolised an extra detail to denote the bond between us, on top of everything else. <br/><br/>Tully: The Natalie Marie Jewellery team really helped me to articulate the vision I had for such an important forever piece. I wanted something personal with a sense of timeless permanency to it. The band is both elegant and handsome to the viewer, yet encloses a precious secret that is Isaac’s birth-stone against my skin and bone.</p><p> </p><p><strong>What do you love most about your life together today?</strong><br/><br/>Isaac: Having just celebrated our first wedding anniversary and almost six years together it never ceases to amaze me how fun the smallest moments of an ordinary day is with Tully. Simple things like welcoming each other home from work, or walking to the markets together on the weekend. The older I get it is these moments I increasingly hold close to my heart.<br/><br/>Tully: To be quite honest, “Isaac” and “life” are almost synonyms to me. As W.H Auden put it, Isaac is “my working week and my Sunday rest,” and I fell in love with life in falling in love with Isaac.</p><p><br/></p><p><strong>At NMJ, at the heart of everything we do is love. Tough question, but tell us, what do you know about love?</strong><br/><br/>Isaac: From the short time we have spent together I know that love is constantly promising to work on all aspects of our relationship together. It is that promise to be there for tomorrow. As romantic as love is, I also appreciate the soberness that love can also be. The calm assured resolve to be there together.<br/><br/>Tully: Love is hard work, but love is the meaning of it all.</p>",
+            "description_mobile": "<p><strong>Hidden within both of your wedding bands is a set of hidden birthstones, tell us what this special addition symbolises and how you chose your wedding rings. </strong><br/><br/>Isaac: The inclusion of the birthstones really symbolised an extra detail to denote the bond between us, on top of everything else. <br/><br/>Tully: The Natalie Marie Jewellery team really helped me to articulate the vision I had for such an important forever piece. I wanted something personal with a sense of timeless permanency to it. The band is both elegant and handsome to the viewer, yet encloses a precious secret that is Isaac’s birth-stone against my skin and bone.</p><p> </p><p><strong>What do you love most about your life together today?</strong><br/><br/>Isaac: Having just celebrated our first wedding anniversary and almost six years together it never ceases to amaze me how fun the smallest moments of an ordinary day is with Tully. Simple things like welcoming each other home from work, or walking to the markets together on the weekend. The older I get it is these moments I increasingly hold close to my heart.<br/><br/>Tully: To be quite honest, “Isaac” and “life” are almost synonyms to me. As W.H Auden put it, Isaac is “my working week and my Sunday rest,” and I fell in love with life in falling in love with Isaac.</p><p><br/></p><p><strong>At NMJ, at the heart of everything we do is love. Tough question, but tell us, what do you know about love?</strong><br/><br/>Isaac: From the short time we have spent together I know that love is constantly promising to work on all aspects of our relationship together. It is that promise to be there for tomorrow. As romantic as love is, I also appreciate the soberness that love can also be. The calm assured resolve to be there together.<br/><br/>Tully: Love is hard work, but love is the meaning of it all.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nhAEQq"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_RW9bAK": {
+      "type": "content-list",
+      "blocks": {
+        "image_K8bPNe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_13e99f03-4a3a-4177-8939-483c74a89c9c.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_UYfpWr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/16_e6a45e68-ad0c-4efc-9e93-1a2388c0a570.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_daiDPW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_49715ee5-dc6b-446c-bf03-b7d5183469a3.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_K8bPNe",
+        "image_UYfpWr",
+        "image_daiDPW"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_rRqtDA": {
+      "type": "content-list",
+      "blocks": {
+        "image_NKypUN": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>Rach wears a one of a kind Bespoke piece, using family heirloom diamonds. Nic wears a XXXXXX.  </p><p></p><p>There’s nothing quite like allowing your imagination to take the lead, and watching a piece of jewellery come to life from conception to first wear. Book your <a href=\"https://www.nataliemariejewellery.com/pages/bespoke-process\" target=\"_blank\" title=\"https://www.nataliemariejewellery.com/pages/bespoke-process\">bespoke appointment</a> today.</p>",
+            "description_mobile": "<p>Rach wears a one of a kind Bespoke piece, using family heirloom diamonds. Nic wears a XXXXXX.  </p><p></p><p>There’s nothing quite like allowing your imagination to take the lead, and watching a piece of jewellery come to life from conception to first wear. Book your <a href=\"https://www.nataliemariejewellery.com/pages/bespoke-process\" target=\"_blank\" title=\"https://www.nataliemariejewellery.com/pages/bespoke-process\">bespoke appointment</a> today.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NKypUN"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": false,
+        "show_article_header": false,
+        "show_article_content": false,
+        "show_large": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": true
+      }
+    }
+  },
+  "order": [
+    "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
+    "text_with_media_aj4gXB",
+    "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
+    "22942553-01da-4697-89ac-f500b502883f",
+    "fe4a59da-74f2-4522-93d1-709dd4b43c45",
+    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
+    "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
+    "content_list_6fdrqw",
+    "content_list_QdVqEa",
+    "content_list_xjc9rD",
+    "off_grid_HhNffM",
+    "content_list_YaW6gH",
+    "content_list_RW9bAK",
+    "content_list_rRqtDA",
+    "main"
+  ]
+}

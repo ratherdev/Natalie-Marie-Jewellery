@@ -776,7 +776,9 @@
 												{% if template.suffix == 'signature-bespoke' %}
 													<p class="ProductForm__Inventory" {{ block.shopify_attributes }} {% if hasRingSizeSelector %}style="opacity: 0;"{% endif %}>
 														{%- if product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold or product.selected_or_first_available_variant.inventory_management == blank -%}
-															{%- render 'icon', icon: 'checkmark' -%} <span class="DispatchTime">Ready for immediate dispatch</span>
+															{%- unless product.metafields.custom.hide_ready_dispatch_time -%}
+																{%- render 'icon', icon: 'checkmark' -%} <span class="DispatchTime">Ready for immediate dispatch</span>
+															{%- endunless -%}
 														{%- else -%}
 															{%- render 'icon', icon: 'checkmark' -%} Crafted for you | Estimated dispatch <span class="DispatchTime">{{ product.metafields.custom.dispatch }}</span>
 														{%- endif -%}
@@ -785,9 +787,9 @@
 												{%- if product.available -%}
 													<p class="ProductForm__Inventory" {{ block.shopify_attributes }} {% if hasRingSizeSelector %}style="opacity: 0;"{% endif %}>
 													{%- if product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold or product.selected_or_first_available_variant.inventory_management == blank -%}
-														{%- if product.id != 8948389052585 -%}
+														{%- unless product.metafields.custom.hide_ready_dispatch_time -%}
 															{%- render 'icon', icon: 'checkmark' -%} <span class="DispatchTime">Ready for immediate dispatch</span>
-														{%- endif -%}
+														{%- endunless -%}
 														{% comment %} {%- if product.metafields.custom.dispatch != blank -%}
 															{%- render 'icon', icon: 'information' -%} Crafted for you | Estimated dispatch <span class="DispatchTime">{{ product.metafields.custom.dispatch }}</span>
 														{% else %}	

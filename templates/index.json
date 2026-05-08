@@ -15,17 +15,17 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Mothers_Day_Homepage.png",
-            "mobile_image": "shopify://shop_images/Mothers_Day_Homepage.png",
+            "image": "shopify://shop_images/0J9A7648.jpg",
+            "mobile_image": "shopify://shop_images/0J9A7648.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>15% off </p>",
-            "title": "<p><em>For the one who gave you everything</em></p>",
-            "description": "<p>Our birthstone collection is designed to honour the moments, people, and memories that shape you - subtle, personal, and deeply considered.<br/><br/>For a limited time, <strong>enjoy 15% off</strong> our birthstone edit.</p>",
+            "subheading": "<p>INTRODUCING</p>",
+            "title": "<p>Sollune Mobile | <em>NMJ X Bobby Clark</em></p>",
+            "description": "<p>Designed in collaboration with artist <a href=\"https://www.instagram.com/bobbyclark____/?hl=en\" target=\"_blank\"><span style=\"text-decoration:underline\">Bobby Clark</span></a><span style=\"text-decoration:underline\">, </span>the Sollune has been reimagined as a kinetic mobile, bringing the sun, moon, and stars into your space. Intended as an heirloom to be treasured for generations to come.</p>",
             "colour_style": "light",
-            "button_1_text": "Shop The Offer",
-            "button_1_link": "shopify://collections/birthstone-collection-nmj",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/sollune-mobile-nmjxbobbyclark",
             "button_style": "underline"
           }
         },

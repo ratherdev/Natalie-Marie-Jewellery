@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "carry-your-story-close",
+            "collection": "engagement-rings",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>REDEEM YOUR BIRTHSTONE OFFER</p>",
-        "title": "<p><em>Carry Your Story Close</em></p>",
-        "description": "<p>Our birthstone collection honours the moments, people, and memories that shape you. Subtle, personal, and made to last.<br/><br/>For a limited time,<strong> enjoy a complimentary birthstone addition </strong>to your piece, or <strong>15% off our personalised pieces.</strong></p>",
+        "subheading": "<p>ENGAGEMENT</p>",
+        "title": "<p>Talismans of <em>forever</em></p>",
+        "description": "<p>A conduit for a question; a symbol of forever. Our engagement range is an authentic manifestation of your love stories.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/carry-your-story-close",
+        "button_1_link": "shopify://collections/engagement-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

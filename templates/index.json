@@ -50,17 +50,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Website_Resizes_63.png",
-            "mobile_image": "shopify://shop_images/Website_Resizes_63.png",
+            "image": "shopify://shop_images/Helena_Journal_Images_2.jpg",
+            "mobile_image": "shopify://shop_images/Helena_Journal_Images_2.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p><strong>A Gift Just for You</strong></p>",
-            "title": "<p><em>Complimentary Birthstone</em></p>",
-            "description": "<p>For a limited time, we’re offering a complimentary birthstone with every eligible piece – a gift to mark what matters most. Use code: <strong>NMJBIRTHSTONE</strong> at checkout.</p>",
+            "subheading": "<p>An expression of grounding and grace</p>",
+            "title": "<p><em>Grounded in jade. Crafted for stillness.</em></p>",
+            "description": "<p>For where intuition leads, balance follows.<br/>Discover the Saira collection - a quiet meditation on grounding, grace, and the beauty of becoming.</p>",
             "colour_style": "light",
             "button_1_text": "Shop Now",
-            "button_1_link": "shopify://collections/complimentary-birthstone",
+            "button_1_link": "shopify://collections/saira",
             "button_style": "underline"
           }
         },

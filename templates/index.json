@@ -12,6 +12,45 @@
     "097f4421-1065-41b5-b18d-fa4b0294968a": {
       "type": "slideshow",
       "blocks": {
+        "56bb69ec-fd48-426b-8115-26a4ed674f40": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/IMG_5889.mp4",
+            "fifty_fifty": true,
+            "autoplay": true,
+            "loop": true,
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "subheading": "<p>SUMMER ESSENTIALS</p>",
+            "title": "<p>Introducing Sashi</p>",
+            "description": "<p>Crafted to be a never-fail summer companion: organic in shape, versatile in design, and evocative of the natural world.</p>",
+            "colour_style": "light",
+            "button_1_text": "Explore",
+            "button_1_link": "shopify://collections/styled-with-sashi",
+            "button_style": "underline"
+          }
+        },
+        "video_qWnByf": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/IMG_5889.mp4",
+            "mobile_video": "shopify://files/videos/IMG_5889.mp4",
+            "fifty_fifty": true,
+            "autoplay": true,
+            "loop": true,
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "subheading": "<p>For the Women Who Shape Us</p>",
+            "title": "<p><em>Sana</em></p>",
+            "description": "<p>To be human is to feel—deeply and instinctively. And it is perhaps the beating heart of a woman’s power: holding space for others while carving space for oneself.</p>",
+            "colour_style": "light",
+            "button_1_text": "Shop The Collection",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/sana",
+            "button_style": "underline"
+          }
+        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
@@ -63,53 +102,14 @@
             "button_1_link": "shopify://collections/saira",
             "button_style": "underline"
           }
-        },
-        "video_qWnByf": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/Ecom Imagery .mp4",
-            "mobile_video": "shopify://files/videos/Ecom Imagery .mp4",
-            "fifty_fifty": true,
-            "autoplay": true,
-            "loop": true,
-            "apply_overlay": true,
-            "content_position": "bottomLeft",
-            "subheading": "<p>For the Women Who Shape Us</p>",
-            "title": "<p><em>Sana</em></p>",
-            "description": "<p>To be human is to feel—deeply and instinctively. And it is perhaps the beating heart of a woman’s power: holding space for others while carving space for oneself.</p>",
-            "colour_style": "light",
-            "button_1_text": "Shop The Collection",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/sana",
-            "button_style": "underline"
-          }
-        },
-        "56bb69ec-fd48-426b-8115-26a4ed674f40": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/1_Web-Banner-Sashi-LAUNCH.mp4",
-            "fifty_fifty": true,
-            "autoplay": true,
-            "loop": true,
-            "apply_overlay": false,
-            "content_position": "bottomRight",
-            "subheading": "<p>SUMMER ESSENTIALS</p>",
-            "title": "<p>Introducing Sashi</p>",
-            "description": "<p>Crafted to be a never-fail summer companion: organic in shape, versatile in design, and evocative of the natural world.</p>",
-            "colour_style": "light",
-            "button_1_text": "Explore",
-            "button_1_link": "shopify://collections/styled-with-sashi",
-            "button_style": "underline"
-          }
         }
       },
       "block_order": [
+        "56bb69ec-fd48-426b-8115-26a4ed674f40",
+        "video_qWnByf",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c",
-        "177ec424-4f77-417c-abfd-95b841c1986f",
-        "video_qWnByf",
-        "56bb69ec-fd48-426b-8115-26a4ed674f40"
+        "177ec424-4f77-417c-abfd-95b841c1986f"
       ],
       "settings": {
         "show_fullscreen": true,

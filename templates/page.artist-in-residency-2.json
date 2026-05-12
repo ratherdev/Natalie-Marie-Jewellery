@@ -60,10 +60,10 @@
             "background": "#f8f6f2",
             "overlay": false,
             "content_position": "middle_left",
-            "subheading": "<p><strong> Residency Archive </strong></p>",
+            "subheading": "<p><strong>Artist In Residency </strong></p>",
             "heading": "",
-            "description": "<h2><em>Adam Leng<br/></em></h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.</p>",
-            "description_mobile": "<h2><em>Adam Leng<br/></em></h2><p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.</p>"
+            "description": "<h2><em>Bobby Clark<br/></em></h2><p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>",
+            "description_mobile": "<h2><em>Bobby Clark </em></h2><h2></h2><p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>"
           }
         }
       },
@@ -72,7 +72,7 @@
       ],
       "name": "Collection on Page",
       "settings": {
-        "collection": "adam-leng",
+        "collection": "bobby-clark",
         "grid_items_per_page": 48,
         "disruptor_tile_positions": "1",
         "mobile_items_per_row": "2",

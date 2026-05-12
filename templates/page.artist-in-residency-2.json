@@ -89,7 +89,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "loralee-jade",
+            "collection": "adam-leng",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -98,6 +98,39 @@
       },
       "block_order": [
         "fa090c1f-de05-41b4-8eba-d58cc1ba3719"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Residency Archive </strong></p>",
+        "title": "<h1><em>Adam Leng </em></h1>",
+        "description": "<p>Adam Leng is a proud First Nations man, born and raised on Yugambeh country. In collaboration with our Saira Launch, Adam has created this collection of works in honour of his partner Layne, and their daughter Bobby.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Explore His Work",
+        "button_1_link": "shopify://collections/adam-leng",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_K78rQw": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_9fWAMp": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "loralee-jade",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_9fWAMp"
       ],
       "settings": {
         "enable_light": false,
@@ -395,6 +428,7 @@
     "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
     "collection_on_page_MXer6X",
     "112a30e4-a267-406a-a245-0f5c0ab42213",
+    "content_slider_K78rQw",
     "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
     "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
     "f4cbf1ef-4a63-4243-92ce-30c74c264480",

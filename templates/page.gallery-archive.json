@@ -140,6 +140,16 @@
             "image_ratio": "square"
           }
         },
+        "image_7F68F7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/101.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_9wphkD": {
           "type": "image",
           "settings": {
@@ -230,16 +240,6 @@
             "image_ratio": "natural"
           }
         },
-        "image_7F68F7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/101.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_J3L88p": {
           "type": "image",
           "settings": {
@@ -258,6 +258,7 @@
         "image_tGAVbE",
         "image_AfNabX",
         "image_d6EELr",
+        "image_7F68F7",
         "image_9wphkD",
         "image_QRhK39",
         "image_DHRp7L",
@@ -267,7 +268,6 @@
         "image_TiJpnk",
         "image_tGeerw",
         "image_bPi6nX",
-        "image_7F68F7",
         "image_J3L88p"
       ],
       "name": "Masonry Gallery",

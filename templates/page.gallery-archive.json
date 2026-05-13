@@ -189,6 +189,16 @@
             "link": "",
             "image_ratio": "square"
           }
+        },
+        "image_9wphkD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/96.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
         }
       },
       "block_order": [
@@ -202,7 +212,8 @@
         "image_AB4nJF",
         "image_tGAVbE",
         "image_LAf6D3",
-        "image_QRhK39"
+        "image_QRhK39",
+        "image_9wphkD"
       ],
       "name": "Masonry Gallery",
       "settings": {
@@ -213,7 +224,7 @@
         "gap": 6,
         "radius": 0,
         "title": "Gallery",
-        "description": "From the marquise diamond born of Louis XV’s love for his paramour to the mysteries of the Hope Diamond, these alluring and timelessly precious stones have captivated humankind for"
+        "description": "Discover unique diamond shapes, signature settings, mixed metals, layering inspiration, and one-of-a-kind bespoke creation. From intimate proposals and wedding celebrations to design inspiration. The Gallery is designed to help you envision what is possible when creating a piece that feels entirely your own."
       }
     },
     "masonry_gallery_wXbjhM": {

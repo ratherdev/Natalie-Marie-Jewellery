@@ -100,6 +100,26 @@
             "image_ratio": "natural"
           }
         },
+        "image_knJxiJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/86.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_tGAVbE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/89_23e9807c-bad5-4a4c-8793-b044d223e919.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_AfNabX": {
           "type": "image",
           "settings": {
@@ -130,20 +150,20 @@
             "image_ratio": "square"
           }
         },
+        "image_QRhK39": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/91_14f0fb01-334e-4ca2-adfe-cf13efd6e504.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "square"
+          }
+        },
         "image_DHRp7L": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/94.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_knJxiJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/86.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -160,16 +180,6 @@
             "image_ratio": "square"
           }
         },
-        "image_tGAVbE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/89_23e9807c-bad5-4a4c-8793-b044d223e919.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_LAf6D3": {
           "type": "image",
           "settings": {
@@ -178,16 +188,6 @@
             "desc": "",
             "link": "",
             "image_ratio": "natural"
-          }
-        },
-        "image_QRhK39": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/91_14f0fb01-334e-4ca2-adfe-cf13efd6e504.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "square"
           }
         },
         "image_9wphkD": {
@@ -204,15 +204,15 @@
       "block_order": [
         "image_rN3ixE",
         "image_ify6AR",
+        "image_knJxiJ",
+        "image_tGAVbE",
         "image_AfNabX",
         "image_tGeerw",
         "image_d6EELr",
-        "image_DHRp7L",
-        "image_knJxiJ",
-        "image_AB4nJF",
-        "image_tGAVbE",
-        "image_LAf6D3",
         "image_QRhK39",
+        "image_DHRp7L",
+        "image_AB4nJF",
+        "image_LAf6D3",
         "image_9wphkD"
       ],
       "name": "Masonry Gallery",

@@ -273,7 +273,7 @@
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,
-        "columns_mobile": 2,
+        "columns_mobile": 3,
         "items_per_page": 25,
         "button_text": "Load More",
         "gap": 6,

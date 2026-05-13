@@ -93,18 +93,17 @@
         "image_ify6AR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_60.png",
-            "title": "wfqwe",
-            "desc": "loreon desc",
+            "image": "shopify://shop_images/83.png",
+            "title": "",
+            "desc": "",
             "link": "",
             "image_ratio": "natural"
           }
         },
         "image_AfNabX": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_59.png",
+            "image": "shopify://shop_images/84.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -113,9 +112,8 @@
         },
         "image_tGeerw": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/This_chapter_revisits_Rachel_and_Nic_whose_story_is_deeply_interwoven_with_our_own._Rachel_was_one_of_Natalie_Marie_Jewellery_s_very_first_bespoke_clients._Entrusting_Natalie_to_rewor_08b02954-baa1-415e-9fb8-c027563850c4.png",
+            "image": "shopify://shop_images/85.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -124,7 +122,6 @@
         },
         "image_d6EELr": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/the_wedding_collective_imager_for_the_site.png",
             "title": "",
@@ -135,7 +132,6 @@
         },
         "image_DHRp7L": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
             "title": "",
@@ -146,9 +142,8 @@
         },
         "image_knJxiJ": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0757.jpg",
+            "image": "shopify://shop_images/86.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -157,9 +152,8 @@
         },
         "image_AB4nJF": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/13_8b106b90-b14b-421b-b0ce-d18563510203.png",
+            "image": "shopify://shop_images/87.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -168,9 +162,8 @@
         },
         "image_tGAVbE": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
+            "image": "shopify://shop_images/89_23e9807c-bad5-4a4c-8793-b044d223e919.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -179,9 +172,8 @@
         },
         "image_LAf6D3": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/12_4dfb1630-98aa-4213-bc47-be548af7705a.png",
+            "image": "shopify://shop_images/90_97fe50b6-792f-44ee-b970-3be3135911bf.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -190,9 +182,8 @@
         },
         "image_QRhK39": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_58.png",
+            "image": "shopify://shop_images/91_14f0fb01-334e-4ca2-adfe-cf13efd6e504.png",
             "title": "",
             "desc": "",
             "link": "",

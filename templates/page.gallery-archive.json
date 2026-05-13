@@ -29,7 +29,8 @@
         "image_qTXmND": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJ_Dec22_-325.jpg"
+            "image": "shopify://shop_images/Bespoke.png",
+            "mobile_image": "shopify://shop_images/Bespoke.png"
           }
         }
       },
@@ -38,10 +39,10 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>Guide</strong></p>",
-        "title": "<p>Natural Diamonds: <em>Conscious Sourcing</em>​</p>",
-        "description": "<p>From the marquise diamond born of Louis XV’s love for his paramour to the mysteries of the Hope Diamond, these alluring and timelessly precious stones have captivated humankind for thousands of years. With a beauty that is so pure, and a quiet resilience, diamonds will forever remain the most revered stone, symbolising eternal love and strength. ​</p><p>​</p><p>Finding the diamond that is the perfect stone for your piece can feel daunting, but we have taken the time to distil the finer elements of what to look for. Whether you hope to find a natural diamond, or a laboratory grown diamond, or if you wish for a certain colour that resonates personally, we can assist in finding the stone that is perfect for you. ​</p>",
-        "feature_text": "<p>We pride ourselves in providing <em>genuine</em>, accurate information on what to look for in the <em>ideal diamond</em>. </p>",
+        "subheading": "<p><strong>The Gallery </strong></p>",
+        "title": "<h3><em>Inspired by You</em></h3>",
+        "description": "<p>Our Gallery is a celebration of the women who wear Natalie Marie Jewellery, showcasing real bespoke creations, meaningful milestones, and everyday styling from our NMJ community.</p><p>From modern heirlooms designed to mark life’s most treasured occasions to organically curated ring stacks collected over time, each image offers a glimpse into the artistry and individuality behind every piece. Thoughtfully crafted and deeply personal, no two stories are ever the same.</p><p>Whether you are beginning your bespoke journey, searching for inspiration for your dream engagement ring, or discovering new ways to style your collection, we invite you to explore the designs, details, and moments shared by our clients and NMJ lovers around the world.</p>",
+        "feature_text": "<p><em>Every bespoke piece tells a story — a moment captured in sentiment. </em></p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -75,6 +76,154 @@
     "17763162564215f340": {
       "type": "_blocks",
       "settings": {}
+    },
+    "masonry_gallery_ijKf9i": {
+      "type": "masonry-gallery",
+      "blocks": {
+        "image_rN3ixE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_ify6AR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WebsiteResizes_60.png",
+            "title": "wfqwe",
+            "desc": "loreon desc",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_AfNabX": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/WebsiteResizes_59.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_tGeerw": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/This_chapter_revisits_Rachel_and_Nic_whose_story_is_deeply_interwoven_with_our_own._Rachel_was_one_of_Natalie_Marie_Jewellery_s_very_first_bespoke_clients._Entrusting_Natalie_to_rewor_08b02954-baa1-415e-9fb8-c027563850c4.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_d6EELr": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/the_wedding_collective_imager_for_the_site.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "square"
+          }
+        },
+        "image_DHRp7L": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_knJxiJ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/251103_NMJ_0757.jpg",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_AB4nJF": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/13_8b106b90-b14b-421b-b0ce-d18563510203.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "square"
+          }
+        },
+        "image_tGAVbE": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_LAf6D3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/12_4dfb1630-98aa-4213-bc47-be548af7705a.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_QRhK39": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/WebsiteResizes_58.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "square"
+          }
+        }
+      },
+      "block_order": [
+        "image_rN3ixE",
+        "image_ify6AR",
+        "image_AfNabX",
+        "image_tGeerw",
+        "image_d6EELr",
+        "image_DHRp7L",
+        "image_knJxiJ",
+        "image_AB4nJF",
+        "image_tGAVbE",
+        "image_LAf6D3",
+        "image_QRhK39"
+      ],
+      "name": "Masonry Gallery",
+      "settings": {
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "items_per_page": 25,
+        "button_text": "Load More",
+        "gap": 6,
+        "radius": 0,
+        "title": "Gallery",
+        "description": "From the marquise diamond born of Louis XV’s love for his paramour to the mysteries of the Hope Diamond, these alluring and timelessly precious stones have captivated humankind for"
+      }
     },
     "masonry_gallery_wXbjhM": {
       "type": "masonry-gallery",
@@ -203,150 +352,12 @@
         "image_mARCwX",
         "image_khRVx9"
       ],
+      "disabled": true,
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,
         "columns_mobile": 2,
         "items_per_page": 5,
-        "button_text": "Load More",
-        "gap": 6,
-        "radius": 0,
-        "title": "Gallery",
-        "description": "From the marquise diamond born of Louis XV’s love for his paramour to the mysteries of the Hope Diamond, these alluring and timelessly precious stones have captivated humankind for"
-      }
-    },
-    "masonry_gallery_ijKf9i": {
-      "type": "masonry-gallery",
-      "blocks": {
-        "image_rN3ixE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/144.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_ify6AR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_60.png",
-            "title": "wfqwe",
-            "desc": "loreon desc",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_AfNabX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_59.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_tGeerw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/This_chapter_revisits_Rachel_and_Nic_whose_story_is_deeply_interwoven_with_our_own._Rachel_was_one_of_Natalie_Marie_Jewellery_s_very_first_bespoke_clients._Entrusting_Natalie_to_rewor_08b02954-baa1-415e-9fb8-c027563850c4.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_d6EELr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/the_wedding_collective_imager_for_the_site.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "square"
-          }
-        },
-        "image_DHRp7L": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_knJxiJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0757.jpg",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_AB4nJF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/13_8b106b90-b14b-421b-b0ce-d18563510203.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "square"
-          }
-        },
-        "image_tGAVbE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bespoke_imagery_for_the_site_2.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_LAf6D3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/12_4dfb1630-98aa-4213-bc47-be548af7705a.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_QRhK39": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_58.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "square"
-          }
-        }
-      },
-      "block_order": [
-        "image_rN3ixE",
-        "image_ify6AR",
-        "image_AfNabX",
-        "image_tGeerw",
-        "image_d6EELr",
-        "image_DHRp7L",
-        "image_knJxiJ",
-        "image_AB4nJF",
-        "image_tGAVbE",
-        "image_LAf6D3",
-        "image_QRhK39"
-      ],
-      "name": "Masonry Gallery",
-      "settings": {
-        "columns_desktop": 4,
-        "columns_mobile": 2,
-        "items_per_page": 25,
         "button_text": "Load More",
         "gap": 6,
         "radius": 0,
@@ -363,7 +374,7 @@
     "17763150284d88d0eb",
     "177631616271864db5",
     "17763162564215f340",
-    "masonry_gallery_wXbjhM",
-    "masonry_gallery_ijKf9i"
+    "masonry_gallery_ijKf9i",
+    "masonry_gallery_wXbjhM"
   ]
 }

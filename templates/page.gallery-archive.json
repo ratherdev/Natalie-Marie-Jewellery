@@ -274,11 +274,11 @@
       "settings": {
         "columns_desktop": 4,
         "columns_mobile": 3,
-        "items_per_page": 25,
+        "items_per_page": 50,
         "button_text": "Load More",
         "gap": 6,
         "radius": 0,
-        "title": "Gallery",
+        "title": "",
         "description": "Discover unique diamond shapes, signature settings, mixed metals, layering inspiration, and one-of-a-kind bespoke creation. From intimate proposals and wedding celebrations to design inspiration. The Gallery is designed to help you envision what is possible when creating a piece that feels entirely your own."
       }
     },
@@ -409,6 +409,7 @@
         "image_mARCwX",
         "image_khRVx9"
       ],
+      "disabled": true,
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,

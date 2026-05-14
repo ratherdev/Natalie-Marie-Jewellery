@@ -37,6 +37,9 @@
       "block_order": [
         "image_qTXmND"
       ],
+      "custom_css": [
+        ".Section--spacingExtraLarge {margin-bottom: 0px;}"
+      ],
       "settings": {
         "enable_dark": false,
         "subheading": "<p><strong>The Gallery </strong></p>",
@@ -270,6 +273,7 @@
         "image_J3L88p",
         "image_TiJpnk"
       ],
+      "custom_css": [],
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,

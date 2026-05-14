@@ -4,7 +4,8 @@
 }
 
 .gallery-grid {
-  column-count: {{ section.settings.columns_desktop }};
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
   column-gap: {{ section.settings.gap }}px;
 }
 
@@ -76,7 +77,7 @@
 /* mobile */
 @media (max-width: 768px) {
   .gallery-grid {
-    column-count: {{ section.settings.columns_mobile }};
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
   }
 
   .masonry-gallery-advance h2 {
@@ -85,7 +86,7 @@
 }
 </style>
 
-<section 
+<section
   class="masonry-gallery masonry-gallery-advance"
   id="section-{{ section.id }}"
   data-per-page="{{ section.settings.items_per_page }}"

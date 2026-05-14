@@ -231,8 +231,8 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p><strong>Jordy, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>I loved (and still love) it! I’d been sending Tom Natalie Marie rings for a few months, but I knew that this sapphire stood out to us both as a favourite. It’s unique, beautiful, and my birth stone.</p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>A memory that stands out is going to the NMJ store for a day trip (it was a few hours away from us) to try on wedding bands. We had our dogs who were lucky enough to come too! The excitement of finding bands that stood out to us, exploring somewhere new, going to the beach. It was a day that makes my ring feel so personal and special.</p>",
-            "description_mobile": "<p><strong>Jordy, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>I loved (and still love) it! I’d been sending Tom Natalie Marie rings for a few months, but I knew that this sapphire stood out to us both as a favourite. It’s unique, beautiful, and my birth stone.</p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>A memory that stands out is going to the NMJ store for a day trip (it was a few hours away from us) to try on wedding bands. We had our dogs who were lucky enough to come too! The excitement of finding bands that stood out to us, exploring somewhere new, going to the beach. It was a day that makes my ring feel so personal and special.</p>",
+            "description": "<p><strong>Jordy, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>I loved (and still love) it! I’d been sending Tom Natalie Marie rings for a few months, but I knew that this sapphire stood out to us both as a favourite. It’s unique, beautiful, and my birthstone.</p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>A memory that stands out is going to the NMJ store for a day trip (it was a few hours away from us) to try on wedding bands. We had our dogs who were lucky enough to come too! The excitement of finding bands that stood out to us, exploring somewhere new, going to the beach. It was a day that makes my ring feel so personal and special.</p>",
+            "description_mobile": "<p><strong>Jordy, what was your reaction when you saw your engagement ring for the first time?</strong></p><p>I loved (and still love) it! I’d been sending Tom Natalie Marie rings for a few months, but I knew that this sapphire stood out to us both as a favourite. It’s unique, beautiful, and my birthstone.</p><p><strong>Beyond the physical aesthetics, can you delve into the sentimental value your NMJ pieces hold for you? Are there particular moments or memories attached to them that stand out?</strong></p><p>A memory that stands out is going to the NMJ store for a day trip (it was a few hours away from us) to try on wedding bands. We had our dogs who were lucky enough to come too! The excitement of finding bands that stood out to us, exploring somewhere new, going to the beach. It was a day that makes my ring feel so personal and special.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -357,6 +357,60 @@
         "button_style": "underline"
       }
     },
+    "content_list_6fdrqw": {
+      "type": "content-list",
+      "blocks": {
+        "image_JJQVHL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Photo_14-5-2023_16_36_59.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JJQVHL"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "content_list_w9dbVe": {
       "type": "content-list",
       "blocks": {
@@ -399,60 +453,6 @@
       "name": "Content list",
       "settings": {
         "grid_items_count": 3,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_6fdrqw": {
-      "type": "content-list",
-      "blocks": {
-        "image_JJQVHL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_36_59.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_JJQVHL"
-      ],
-      "settings": {
-        "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",

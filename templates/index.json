@@ -54,8 +54,8 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled.png",
-            "mobile_image": "shopify://shop_images/Untitled.png",
+            "image": "shopify://shop_images/Untitled_1.png",
+            "mobile_image": "shopify://shop_images/Untitled_1.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",

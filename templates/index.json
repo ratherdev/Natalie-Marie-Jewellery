@@ -89,17 +89,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Helena_Journal_Images_2.jpg",
-            "mobile_image": "shopify://shop_images/Helena_Journal_Images_2.jpg",
+            "image": "shopify://shop_images/Untitled.png",
+            "mobile_image": "shopify://shop_images/Untitled.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p>An expression of grounding and grace</p>",
-            "title": "<p><em>Grounded in jade. Crafted for stillness.</em></p>",
-            "description": "<p>For where intuition leads, balance follows.<br/>Discover the Saira collection - a quiet meditation on grounding, grace, and the beauty of becoming.</p>",
+            "subheading": "<p>The setting our community can’t get enough of</p>",
+            "title": "<p><em>Most Loved  </em>For A Reason</p>",
+            "description": "<p>An ode to times past with art deco architecture sensibilities, this timeless design speaks of elegance, opulence, and almost an otherworldly beauty.</p>",
             "colour_style": "light",
             "button_1_text": "Shop Now",
-            "button_1_link": "shopify://collections/saira",
+            "button_1_link": "shopify://collections/triology-engagement",
             "button_style": "underline"
           }
         }

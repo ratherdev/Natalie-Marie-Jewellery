@@ -51,6 +51,23 @@
             "button_style": "underline"
           }
         },
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled.png",
+            "mobile_image": "shopify://shop_images/Untitled.png",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "bottomLeft",
+            "subheading": "<p>The ring our community can’t get enough of</p>",
+            "title": "<p><em>Most Loved  </em>For A Reason</p>",
+            "description": "<p>An ode to times past with art deco architecture sensibilities, this timeless design speaks of elegance, opulence, and almost an otherworldly beauty.</p>",
+            "colour_style": "light",
+            "button_1_text": "Shop Now",
+            "button_1_link": "shopify://collections/triology-engagement",
+            "button_style": "underline"
+          }
+        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
@@ -58,7 +75,7 @@
             "mobile_image": "shopify://shop_images/0J9A7648.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
-            "content_position": "bottomLeft",
+            "content_position": "bottomRight",
             "subheading": "<p>INTRODUCING</p>",
             "title": "<p>Sollune Mobile | <em>NMJ X Bobby Clark</em></p>",
             "description": "<p>Designed in collaboration with artist <a href=\"https://www.instagram.com/bobbyclark____/?hl=en\" target=\"_blank\"><span style=\"text-decoration:underline\">Bobby Clark</span></a><span style=\"text-decoration:underline\">, </span>the Sollune has been reimagined as a kinetic mobile, bringing the sun, moon, and stars into your space. Intended as an heirloom to be treasured for generations to come.</p>",
@@ -85,31 +102,14 @@
             "button_1_link": "shopify://collections/saira",
             "button_style": "underline"
           }
-        },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled.png",
-            "mobile_image": "shopify://shop_images/Untitled.png",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p>The ring our community can’t get enough of</p>",
-            "title": "<p><em>Most Loved  </em>For A Reason</p>",
-            "description": "<p>An ode to times past with art deco architecture sensibilities, this timeless design speaks of elegance, opulence, and almost an otherworldly beauty.</p>",
-            "colour_style": "light",
-            "button_1_text": "Shop Now",
-            "button_1_link": "shopify://collections/triology-engagement",
-            "button_style": "underline"
-          }
         }
       },
       "block_order": [
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
         "video_qWnByf",
+        "177ec424-4f77-417c-abfd-95b841c1986f",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
-        "a917b1c4-d9a7-463a-b2cf-d26e83df324c",
-        "177ec424-4f77-417c-abfd-95b841c1986f"
+        "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],
       "settings": {
         "show_fullscreen": true,

@@ -256,7 +256,7 @@
         "image_9NtgzP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/98.png",
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_1.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -266,7 +266,7 @@
         "image_gYXUdm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/98.png",
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_2.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -276,7 +276,7 @@
         "image_9mNLrh": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/98.png",
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_3.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -315,7 +315,7 @@
         "button_text": "Load More",
         "gap": 6,
         "radius": 0,
-        "title": "Bespoke Gallery",
+        "title": "",
         "description": "Discover unique diamond shapes, signature settings, mixed metals, layering inspiration, and one-of-a-kind bespoke creation. From intimate proposals and wedding celebrations to design inspiration. The Gallery is designed to help you envision what is possible when creating a piece that feels entirely your own."
       }
     },

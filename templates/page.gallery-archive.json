@@ -29,8 +29,8 @@
         "image_qTXmND": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Bespoke.png",
-            "mobile_image": "shopify://shop_images/Bespoke.png"
+            "image": "shopify://shop_images/Bespoke_1.png",
+            "mobile_image": "shopify://shop_images/Bespoke_1.png"
           }
         }
       },

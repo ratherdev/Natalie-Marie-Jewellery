@@ -515,6 +515,46 @@
         "title": "Cluster",
         "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance—each one distinct, like the relationship it represents."
       }
+    },
+    "masonry_gallery_Y6ywqq": {
+      "type": "masonry-gallery",
+      "blocks": {
+        "image_BiAhL9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/101.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_cmH6d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/99.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        }
+      },
+      "block_order": [
+        "image_BiAhL9",
+        "image_cmH6d7"
+      ],
+      "name": "Masonry Gallery Advanced",
+      "settings": {
+        "columns_desktop": 5,
+        "columns_mobile": 2,
+        "items_per_page": 25,
+        "button_text": "Load More",
+        "gap": 16,
+        "radius": 0,
+        "title": "Wrap",
+        "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance—each one distinct, like the relationship it represents."
+      }
     }
   },
   "order": [
@@ -528,6 +568,7 @@
     "masonry_gallery_ijKf9i",
     "masonry_gallery_pdhTaU",
     "masonry_gallery_wXbjhM",
-    "masonry_gallery_kWdT8E"
+    "masonry_gallery_kWdT8E",
+    "masonry_gallery_Y6ywqq"
   ]
 }

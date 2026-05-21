@@ -278,6 +278,7 @@
         },
         "image_P34Jtf": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/This_chapter_revisits_Rachel_and_Nic_whose_story_is_deeply_interwoven_with_our_own._Rachel_was_one_of_Natalie_Marie_Jewellery_s_very_first_bespoke_clients._Entrusting_Natalie_to_rewor_08b02954-baa1-415e-9fb8-c027563850c4.png",
             "title": "",

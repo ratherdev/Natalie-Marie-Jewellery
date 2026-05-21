@@ -455,6 +455,26 @@
     "masonry_gallery_kWdT8E": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_dmnxBz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_17.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_x4DdCK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_16.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_qEWg7z": {
           "type": "image",
           "settings": {
@@ -477,6 +497,8 @@
         }
       },
       "block_order": [
+        "image_dmnxBz",
+        "image_x4DdCK",
         "image_qEWg7z",
         "image_NrQP9r"
       ],

@@ -250,8 +250,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Bespoke_Imagery_Gallery_9.png",
-            "title": "wfqwe",
-            "desc": "loreon desc",
+            "title": "",
+            "desc": "",
             "link": "",
             "image_ratio": "natural"
           }

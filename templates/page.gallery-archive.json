@@ -205,6 +205,7 @@
         },
         "image_gYXUdm": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Bespoke_Imagery_Gallery_2.png",
             "title": "",

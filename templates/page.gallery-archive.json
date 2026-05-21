@@ -313,7 +313,7 @@
         "columns_mobile": 3,
         "items_per_page": 50,
         "button_text": "Load More",
-        "gap": 6,
+        "gap": 10,
         "radius": 0,
         "title": "",
         "description": ""

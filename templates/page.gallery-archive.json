@@ -243,6 +243,68 @@
         "description": "A singular stone, a commitment to craftsmanship and sustainability, embodying timeless love."
       }
     },
+    "masonry_gallery_pdhTaU": {
+      "type": "masonry-gallery",
+      "blocks": {
+        "image_LgyRQL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_10.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_CrxjNy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_8.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_zaJFRp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/85.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
+        "image_9kVKBB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_15.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        }
+      },
+      "block_order": [
+        "image_LgyRQL",
+        "image_CrxjNy",
+        "image_zaJFRp",
+        "image_9kVKBB"
+      ],
+      "name": "Masonry Gallery Advanced",
+      "settings": {
+        "columns_desktop": 5,
+        "columns_mobile": 2,
+        "items_per_page": 25,
+        "button_text": "Load More",
+        "gap": 16,
+        "radius": 12,
+        "title": "Toi Et Moi",
+        "description": "Toi et Moi (French for \"you and me\") is a deeply romantic jewelry design featuring two stones side-by-side. Symbolizing two souls intertwined."
+      }
+    },
     "masonry_gallery_wXbjhM": {
       "type": "masonry-gallery",
       "blocks": {
@@ -400,6 +462,7 @@
     "177631616271864db5",
     "17763162564215f340",
     "masonry_gallery_ijKf9i",
+    "masonry_gallery_pdhTaU",
     "masonry_gallery_wXbjhM"
   ]
 }

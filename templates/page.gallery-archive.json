@@ -440,7 +440,6 @@
         "image_mARCwX",
         "image_khRVx9"
       ],
-      "disabled": true,
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,
@@ -451,6 +450,20 @@
         "radius": 0,
         "title": "Trilogy",
         "description": "Each Trilogy Engagement Ring captures the beauty of your shared journey—three stones representing your past, your present, and your forever. Designed with exceptional craftsmanship and ethically sourced materials, each piece tells a story that’s uniquely yours."
+      }
+    },
+    "masonry_gallery_kWdT8E": {
+      "type": "masonry-gallery",
+      "name": "Masonry Gallery Advanced",
+      "settings": {
+        "columns_desktop": 5,
+        "columns_mobile": 2,
+        "items_per_page": 25,
+        "button_text": "Load More",
+        "gap": 16,
+        "radius": 0,
+        "title": "",
+        "description": ""
       }
     }
   },
@@ -464,6 +477,7 @@
     "17763162564215f340",
     "masonry_gallery_ijKf9i",
     "masonry_gallery_pdhTaU",
-    "masonry_gallery_wXbjhM"
+    "masonry_gallery_wXbjhM",
+    "masonry_gallery_kWdT8E"
   ]
 }

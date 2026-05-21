@@ -83,50 +83,10 @@
     "masonry_gallery_ijKf9i": {
       "type": "masonry-gallery",
       "blocks": {
-        "image_tGAVbE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_10.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_rN3ixE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/95.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_ify6AR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_4.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_knJxiJ": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/86.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_AfNabX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_5.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -143,40 +103,10 @@
             "image_ratio": "square"
           }
         },
-        "image_7F68F7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/101.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_9wphkD": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/96.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_QRhK39": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_6.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "square"
-          }
-        },
-        "image_DHRp7L": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_8.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -197,26 +127,6 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/90_97fe50b6-792f-44ee-b970-3be3135911bf.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_F6qKeN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/97.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
-        "image_tGeerw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/99.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -272,39 +182,19 @@
             "link": "",
             "image_ratio": "natural"
           }
-        },
-        "image_9mNLrh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_3.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
         }
       },
       "block_order": [
-        "image_tGAVbE",
-        "image_rN3ixE",
-        "image_ify6AR",
         "image_knJxiJ",
-        "image_AfNabX",
         "image_d6EELr",
-        "image_7F68F7",
         "image_9wphkD",
-        "image_QRhK39",
-        "image_DHRp7L",
         "image_AB4nJF",
         "image_LAf6D3",
-        "image_F6qKeN",
-        "image_tGeerw",
         "image_bPi6nX",
         "image_J3L88p",
         "image_TiJpnk",
         "image_9NtgzP",
-        "image_gYXUdm",
-        "image_9mNLrh"
+        "image_gYXUdm"
       ],
       "custom_css": [],
       "name": "Masonry Gallery",
@@ -315,8 +205,8 @@
         "button_text": "Load More",
         "gap": 10,
         "radius": 0,
-        "title": "",
-        "description": ""
+        "title": "Solitaire",
+        "description": "A singular stone, a commitment to craftsmanship and sustainability, embodying timeless love."
       }
     },
     "masonry_gallery_wXbjhM": {

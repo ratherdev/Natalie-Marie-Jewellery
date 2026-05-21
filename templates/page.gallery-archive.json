@@ -325,7 +325,7 @@
         "image_7T43Uz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/144.png",
+            "image": "shopify://shop_images/97.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -335,7 +335,7 @@
         "image_KQbXRe": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_60.png",
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_9.png",
             "title": "wfqwe",
             "desc": "loreon desc",
             "link": "",
@@ -345,7 +345,7 @@
         "image_LMQkpD": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_59.png",
+            "image": "shopify://shop_images/97.png",
             "title": "",
             "desc": "",
             "link": "",
@@ -446,7 +446,6 @@
         "image_mARCwX",
         "image_khRVx9"
       ],
-      "disabled": true,
       "name": "Masonry Gallery",
       "settings": {
         "columns_desktop": 4,
@@ -455,8 +454,8 @@
         "button_text": "Load More",
         "gap": 6,
         "radius": 0,
-        "title": "Gallery",
-        "description": "From the marquise diamond born of Louis XV’s love for his paramour to the mysteries of the Hope Diamond, these alluring and timelessly precious stones have captivated humankind for"
+        "title": "Trilogy",
+        "description": "Each Trilogy Engagement Ring captures the beauty of your shared journey—three stones representing your past, your present, and your forever. Designed with exceptional craftsmanship and ethically sourced materials, each piece tells a story that’s uniquely yours."
       }
     }
   },

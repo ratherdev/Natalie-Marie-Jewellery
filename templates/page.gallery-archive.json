@@ -576,6 +576,35 @@
         "title": "Wrap",
         "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance—each one distinct, like the relationship it represents."
       }
+    },
+    "masonry_gallery_7KKzec": {
+      "type": "masonry-gallery",
+      "blocks": {
+        "image_qKK94c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_21.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        }
+      },
+      "block_order": [
+        "image_qKK94c"
+      ],
+      "name": "Masonry Gallery Advanced",
+      "settings": {
+        "columns_desktop": 5,
+        "columns_mobile": 2,
+        "items_per_page": 25,
+        "button_text": "Load More",
+        "gap": 16,
+        "radius": 12,
+        "title": "Halo",
+        "description": ""
+      }
     }
   },
   "order": [
@@ -590,6 +619,7 @@
     "masonry_gallery_pdhTaU",
     "masonry_gallery_wXbjhM",
     "masonry_gallery_kWdT8E",
-    "masonry_gallery_Y6ywqq"
+    "masonry_gallery_Y6ywqq",
+    "masonry_gallery_7KKzec"
   ]
 }

@@ -71,17 +71,17 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/0J9A7648.jpg",
-            "mobile_image": "shopify://shop_images/0J9A7648.jpg",
+            "image": "shopify://shop_images/260114_NMJ_19_0524.jpg",
+            "mobile_image": "shopify://shop_images/260114_NMJ_19_0524.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p>INTRODUCING</p>",
-            "title": "<p>Sollune Mobile | <em>NMJ X Bobby Clark</em></p>",
-            "description": "<p>Designed in collaboration with artist <a href=\"https://www.instagram.com/bobbyclark____/?hl=en\" target=\"_blank\"><span style=\"text-decoration:underline\">Bobby Clark</span></a><span style=\"text-decoration:underline\">, </span>the Sollune has been reimagined as a kinetic mobile, bringing the sun, moon, and stars into your space. Intended as an heirloom to be treasured for generations to come.</p>",
+            "subheading": "<p>Your everyday Signature </p>",
+            "title": "<p><em>Meet Queenie </em></p>",
+            "description": "<p>Delicate by design and timeless by nature, the Queenie Necklace is an everyday heirloom inspired by one of our founder’s vintage treasures and named after Natalie’s great-grandmother, Queenie.</p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://products/sollune-mobile-nmjxbobbyclark",
+            "button_1_link": "shopify://collections/the-queenie-edit",
             "button_style": "underline"
           }
         },

@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "engagement-rings",
+            "collection": "personalised-rings",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>ENGAGEMENT</p>",
-        "title": "<p>Talismans of <em>forever</em></p>",
-        "description": "<p>A conduit for a question; a symbol of forever. Our engagement range is an authentic manifestation of your love stories.</p>",
+        "subheading": "<p>Personalised Rings</p>",
+        "title": "<p>Crafted to Tell Your Story</p>",
+        "description": "<p>Expertly crafted by hand at Natalie Marie Jewellery, each ring invites you to express your individuality—whether through a meaningful engraving, distinctive birthstone.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/engagement-rings",
+        "button_1_link": "shopify://collections/personalised-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -559,7 +559,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "stud-earrings",
+            "collection": "pearls-natural-beads-bracelets",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -573,13 +573,13 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Earrings</strong></p>",
-        "title": "<p>Stud <em>Earrings</em></p>",
-        "description": "<p>From everyday wear to statement pieces, these earrings are crafted to speak softly or turn heads – a perfect pair for your collection.</p>",
+        "subheading": "<p><strong>Bracelets</strong></p>",
+        "title": "<p>Pearls & Natural Beads</p>",
+        "description": "<p>Discover our Pearls & Natural Beads collection. Featuring lustrous pearls and hand-selected gemstone beads, crafted to bring refined texture and subtle colour.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/stud-earrings",
+        "button_1_link": "shopify://collections/pearls-natural-beads-bracelets",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

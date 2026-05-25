@@ -51,37 +51,37 @@
             "button_style": "underline"
           }
         },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_1.png",
-            "mobile_image": "shopify://shop_images/Untitled_1.png",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomLeft",
-            "subheading": "<p>The ring our community can’t get enough of</p>",
-            "title": "<p><em>Most Loved  </em>For A Reason</p>",
-            "description": "<p>An ode to times past with art deco architecture sensibilities, this timeless design speaks of elegance, opulence, and almost an otherworldly beauty.</p>",
-            "colour_style": "light",
-            "button_1_text": "Shop Now",
-            "button_1_link": "shopify://collections/triology-engagement",
-            "button_style": "underline"
-          }
-        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/260114_NMJ_19_0524.jpg",
-            "mobile_image": "shopify://shop_images/260114_NMJ_19_0524.jpg",
+            "image": "shopify://shop_images/Queenie.png",
+            "mobile_image": "shopify://shop_images/Queenie.png",
             "apply_overlay": true,
             "fifty_fifty": true,
-            "content_position": "bottomRight",
+            "content_position": "middleRight",
             "subheading": "<p>Your everyday Signature </p>",
             "title": "<p><em>Meet Queenie </em></p>",
             "description": "<p>Delicate by design and timeless by nature, the Queenie Necklace is an everyday heirloom inspired by one of our founder’s vintage treasures and named after Natalie’s great-grandmother, Queenie.</p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
             "button_1_link": "shopify://collections/the-queenie-edit",
+            "button_style": "underline"
+          }
+        },
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vintage_Inspired_1080_x_1350_px_2.png",
+            "mobile_image": "shopify://shop_images/Vintage_Inspired_1080_x_1350_px_2.png",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "middleRight",
+            "subheading": "<p>Crafted for the modern romantic</p>",
+            "title": "<p>Vintage Inspired </p>",
+            "description": "<p>Romantic, timeless and rich with character — our vintage inspired engagement and wedding rings are designed to capture the beauty of heirloom jewellery. Drawing inspiration from the intricate craftsmanship of Art Deco, Victorian and antique eras.</p>",
+            "colour_style": "light",
+            "button_1_text": "Shop Now",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/vintage-inspired-engagement-wedding-rings",
             "button_style": "underline"
           }
         },
@@ -107,8 +107,8 @@
       "block_order": [
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
         "video_qWnByf",
-        "177ec424-4f77-417c-abfd-95b841c1986f",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
+        "177ec424-4f77-417c-abfd-95b841c1986f",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],
       "settings": {

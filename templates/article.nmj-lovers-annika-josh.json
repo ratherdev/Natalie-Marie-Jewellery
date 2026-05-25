@@ -220,93 +220,6 @@
         "button_style": "underline"
       }
     },
-    "content_list_8TRj6B": {
-      "type": "content-list",
-      "blocks": {
-        "image_rdgQcV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/annikajosh-460.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_LacbEU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/annikajosh-65.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_rdgQcV",
-        "image_LacbEU"
-      ],
-      "settings": {
-        "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
       "type": "content-list",
       "blocks": {
@@ -431,6 +344,93 @@
       ],
       "settings": {
         "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_8TRj6B": {
+      "type": "content-list",
+      "blocks": {
+        "image_rdgQcV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/annikajosh-460.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_LacbEU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/annikajosh-65.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rdgQcV",
+        "image_LacbEU"
+      ],
+      "settings": {
+        "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
@@ -579,10 +579,10 @@
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
     "fe4a59da-74f2-4522-93d1-709dd4b43c45",
-    "content_list_8TRj6B",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
+    "content_list_8TRj6B",
     "content_list_xjc9rD",
     "off_grid_HhNffM",
     "main"

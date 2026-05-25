@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_09_27.jpg"
+            "image": "shopify://shop_images/annikajoshFILM-48.jpg"
           }
         }
       },
@@ -32,7 +32,7 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>NMJ Lovers | Jordy and Tom</p>",
+        "title": "<p>NMJ Lovers | Annika and Josh</p>",
         "description": "<p>For this chapter of NMJ Lovers, we step into Jordy and Tom’s story. One shaped by growing up together, embracing change side by side, and finding comfort in the life they’ve built along the way.</p><p>They first met at a party in their late teens, encouraged there by a mutual friend with a clear intention in mind. Between late-night conversation and a shared box of KFC, something effortless began. </p><p>What followed was years of growing together through new cities, shifting seasons of life, evolving careers, and changing friendships. <em>Through it all, their relationship remained grounded in something steady.</em> A deep sense of loyalty, partnership, and choosing one another at every stage.</p><p>A love story rooted in growth, familiarity, and the beauty of building a life together.</p>",
         "colour_style": "dark",
         "button_1_text": "",
@@ -46,7 +46,7 @@
         "image_WpFtw6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_23_23.jpg"
+            "image": "shopify://shop_images/annikajosh-508.jpg"
           }
         }
       },
@@ -139,7 +139,7 @@
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_36_23.jpg",
+            "image": "shopify://shop_images/annikajoshFILM-10.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -171,7 +171,7 @@
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_15_57_06.jpg",
+            "image": "shopify://shop_images/annikajosh-377.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -204,6 +204,93 @@
       "block_order": [
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3",
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_8TRj6B": {
+      "type": "content-list",
+      "blocks": {
+        "image_rdgQcV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/annikajosh-460.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_LacbEU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/annikajosh-65.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rdgQcV",
+        "image_LacbEU"
       ],
       "settings": {
         "grid_items_count": 2,
@@ -279,7 +366,7 @@
         "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_37_26.jpg"
+            "image": "shopify://shop_images/annikajoshFILM-55.jpg"
           }
         }
       },
@@ -357,115 +444,6 @@
         "button_style": "underline"
       }
     },
-    "content_list_6fdrqw": {
-      "type": "content-list",
-      "blocks": {
-        "image_JJQVHL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_16_36_59.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_JJQVHL"
-      ],
-      "settings": {
-        "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_w9dbVe": {
-      "type": "content-list",
-      "blocks": {
-        "image_eXKaVr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Photo_14-5-2023_15_54_34.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_eXKaVr"
-      ],
-      "name": "Content list",
-      "settings": {
-        "grid_items_count": 3,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "content_list_xjc9rD": {
       "type": "content-list",
       "blocks": {
@@ -477,8 +455,8 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p><strong>Wedding Photography -</strong> Carla Mitchell @carlamitchellphotography</p>",
-            "description_mobile": "<p><strong>Wedding Photography -</strong> Carla Mitchell @carlamitchellphotography </p>",
+            "description": "<p><strong>Wedding Photography -</strong> Hayley Rafton @hayleyrafton</p>",
+            "description_mobile": "<p><strong>Wedding Photography -</strong> Hayley Rafton @hayleyrafton </p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -601,11 +579,10 @@
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
     "fe4a59da-74f2-4522-93d1-709dd4b43c45",
+    "content_list_8TRj6B",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
-    "content_list_6fdrqw",
-    "content_list_w9dbVe",
     "content_list_xjc9rD",
     "off_grid_HhNffM",
     "main"

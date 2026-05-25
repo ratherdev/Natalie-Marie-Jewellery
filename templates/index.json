@@ -55,7 +55,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Queenie_2.png",
-            "mobile_image": "shopify://shop_images/Queenie_2.png",
+            "mobile_image": "shopify://shop_images/Queenie_3.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",

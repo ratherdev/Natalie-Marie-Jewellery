@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "personalised-rings",
+            "collection": "a-year-worth-celebrating",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>Personalised Rings</p>",
-        "title": "<p>Crafted to Tell Your Story</p>",
-        "description": "<p>Expertly crafted by hand at Natalie Marie Jewellery, each ring invites you to express your individuality—whether through a meaningful engraving, distinctive birthstone.</p>",
+        "subheading": "<p>Enjoy up to 15% off</p>",
+        "title": "<p>A Year Worth Celebrating</p>",
+        "description": "<p>Celebrating one year in Paddington with exclusive offers across our <em>community’s</em> most-loved pieces.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/personalised-rings",
+        "button_1_link": "shopify://collections/a-year-worth-celebrating",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

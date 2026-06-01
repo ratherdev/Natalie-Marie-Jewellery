@@ -51,6 +51,23 @@
             "button_style": "underline"
           }
         },
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/251103_NMJ_0500.jpg",
+            "mobile_image": "shopify://shop_images/251103_NMJ_0500.jpg",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "bottomLeft",
+            "subheading": "<p>Enjoy Up to 15% off</p>",
+            "title": "<p>A Year Worth Celebrating</p>",
+            "description": "<p>Enjoy up to 15% off engagement, ceremonial and fine jewellery for a limited time. Celebrating one year in Paddington with exclusive offers across our <em>community’s</em> most-loved pieces.</p>",
+            "colour_style": "light",
+            "button_1_text": "Shop Now",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/a-year-worth-celebrating?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
+            "button_style": "underline"
+          }
+        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
@@ -65,23 +82,6 @@
             "colour_style": "light",
             "button_1_text": "Explore Now",
             "button_1_link": "shopify://collections/the-queenie-edit",
-            "button_style": "underline"
-          }
-        },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Vintage_Inspired_1080_x_1350_px_2.png",
-            "mobile_image": "shopify://shop_images/Vintage_Inspired_1080_x_1350_px_2.png",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p>Crafted for the modern romantic</p>",
-            "title": "<p><em>Vintage Inspired </em></p>",
-            "description": "<p>Romantic, timeless and rich with character — our vintage inspired engagement and wedding rings are designed to capture the beauty of heirloom jewellery. Drawing inspiration from the intricate craftsmanship of Art Deco, Victorian and antique eras.</p>",
-            "colour_style": "light",
-            "button_1_text": "Shop Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/vintage-inspired-engagement-wedding-rings",
             "button_style": "underline"
           }
         },
@@ -107,8 +107,8 @@
       "block_order": [
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
         "video_qWnByf",
-        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "177ec424-4f77-417c-abfd-95b841c1986f",
+        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],
       "settings": {

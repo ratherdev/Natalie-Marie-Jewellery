@@ -44,7 +44,7 @@
         "enable_dark": false,
         "subheading": "<p><strong>The Gallery </strong></p>",
         "title": "<h3><em>Inspired by You</em></h3>",
-        "description": "<p>Our Gallery is a celebration of the women who wear Natalie Marie Jewellery, showcasing real bespoke creations, meaningful milestones, and everyday styling from our NMJ community.</p><p>From modern heirlooms designed to mark life’s most treasured occasions to organically curated ring stacks collected over time, each image offers a glimpse into the artistry and individuality behind every piece. Thoughtfully crafted and deeply personal, no two stories are ever the same.</p><p>Whether you are beginning your bespoke journey, searching for inspiration for your dream engagement ring, or discovering new ways to style your collection, we invite you to explore the designs, details, and moments shared by our clients and NMJ lovers around the world.</p>",
+        "description": "<p>Our Gallery is a celebration of thelovers who wear Natalie Marie Jewellery, showcasing real bespoke creations, meaningful milestones, and everyday styling from our NMJ community. Whether you are beginning your bespoke journey, searching for inspiration, or discovering new ways to style your collection, we invite you to explore the designs, details, and moments shared by our NMJ lovers around the world.</p>",
         "feature_text": "<p><em>Every bespoke piece tells a story — a moment captured in sentiment. </em></p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
@@ -242,7 +242,7 @@
         "gap": 10,
         "radius": 0,
         "title": "Solitaire",
-        "description": "A singular stone, a commitment to craftsmanship and sustainability, embodying timeless love. Defined by its simplicity, the Solitaire Engagement Ring allows exceptional gemstones to take centre stage, celebrating their natural beauty with understated elegance. Handcrafted to endure for generations, each piece is a refined expression of devotion."
+        "description": "A singular stone, a commitment to craftsmanship and sustainability, embodying timeless love. Defined by its simplicity, the Solitaire Engagement Ring allows exceptional gemstones to take centre stage, celebrating their natural beauty."
       }
     },
     "masonry_gallery_pdhTaU": {
@@ -315,7 +315,7 @@
         "gap": 16,
         "radius": 12,
         "title": "Toi Et Moi",
-        "description": "French for \"you and me\", the Toi et Moi engagement ring is a deeply romantic design featuring two stones set side by side. Symbolising two souls intertwined, each stone represents an individual journey brought together in perfect harmony. Thoughtfully handcrafted, every piece is a timeless celebration of connection, balance, and enduring love."
+        "description": "French for \"you and me\", the Toi et Moi engagement ring is a deeply romantic design featuring two stones set side by side. Symbolising two souls intertwined, each stone represents an individual journey brought together in perfect harmony."
       }
     },
     "masonry_gallery_wXbjhM": {
@@ -472,7 +472,7 @@
         "gap": 6,
         "radius": 0,
         "title": "Trilogy",
-        "description": "Each Trilogy Engagement Ring captures the beauty of your shared journey—three stones representing your past, your present, and your forever. Designed with exceptional craftsmanship and ethically sourced materials, each piece tells a story that’s uniquely yours."
+        "description": "Each Trilogy Engagement Ring captures the beauty of your shared journey—three stones representing your past, your present, and your forever."
       }
     },
     "masonry_gallery_kWdT8E": {
@@ -545,7 +545,7 @@
         "gap": 16,
         "radius": 0,
         "title": "Cluster",
-        "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance—each one distinct, like the relationship it represents."
+        "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance."
       }
     },
     "masonry_gallery_Y6ywqq": {
@@ -618,7 +618,7 @@
         "gap": 16,
         "radius": 0,
         "title": "Wrap",
-        "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance—each one distinct, like the relationship it represents."
+        "description": "Every Cluster Engagement Ring is a handcrafted expression of intentional design. Using ethically sourced stones, our artisans create clusters that evoke a sense of movement and balance."
       }
     },
     "masonry_gallery_7KKzec": {
@@ -691,7 +691,7 @@
         "gap": 16,
         "radius": 0,
         "title": "Halo",
-        "description": "Every Halo Engagement Ring is designed to illuminate the beauty of its centre stone. Thoughtfully arranged to enhance light, dimension, and brilliance, each design creates a sense of radiance from every angle. Handcrafted with intention, every piece balances timeless elegance with modern refinement."
+        "description": "Every Halo Engagement Ring is designed to illuminate the beauty of its centre stone. Thoughtfully arranged to enhance light, dimension, and brilliance, each design creates a sense of radiance from every angle."
       }
     }
   },

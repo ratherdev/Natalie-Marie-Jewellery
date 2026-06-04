@@ -24,7 +24,7 @@
         "template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/wedding.png"
+            "image": "shopify://shop_images/1_0b7cceae-2619-4cb7-9a4a-2bed2d3e1264.png"
           }
         }
       },
@@ -38,35 +38,128 @@
         "description": "<p>The NMJ Wedding Directory isn’t your typical directory; we have tightly curated a collection of vendors that the team here at Natalie Marie have personally worked with and feel proud to recommend; from wedding photographers to florists, venues to stylists, explore some of our local favourites.</p>",
         "feature_text": "<p>A curated collection of <em>vendors</em> that the team here at Natalie Marie have personally worked with and feel proud to <em>recommend</em>.</p>",
         "colour_style": "dark",
+        "button_1_metaobject": "",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_metaobject": "",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },
-    "60fc5e9c-0f48-4004-a7bb-117ed02afc55": {
-      "type": "content-slider",
+    "content_list_mHLFER": {
+      "type": "content-list",
       "blocks": {
-        "05e03abe-6fab-4994-81ad-edffd0da104d": {
-          "type": "blog",
+        "image_3tWYG7": {
+          "type": "image",
           "settings": {
-            "title": "<p><strong>Blog</strong></p>",
-            "blog": "bridal-wear",
-            "show_category": true,
-            "show_exerpt": true
+            "image": "shopify://shop_images/8_e3c8dab0-6616-4ba0-a488-b1a70da25cc6.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>Karen Willis Holmes</p>",
+            "description": "<p>Since 2000, KAREN WILLIS HOLMES has been designing handcrafted wedding gowns for modern brides seeking timeless elegance and exceptional craftsmanship. With boutiques in Sydney, Melbourne, Brisbane, Perth, and New York, the brand is renowned for its personalised bridal experience, helping every bride find a gown that reflects her unique style and vision.</p>",
+            "description_mobile": "<p>Since 2000, KAREN WILLIS HOLMES has crafted timeless, handcrafted wedding gowns for modern brides, offering a personalised bridal experience across Australia and New York.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://karenwillisholmes.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_TqLAXY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_10f02f8f-ddc5-4001-ac66-8fb6e1f7f5ea.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Bridal Wear</p>",
+            "title": "<p>Prea James</p>",
+            "description": "<p>Founded in 2012, Prea James is an Australian bridal designer known for creating gowns for the relaxed, modern bride. Designed and made in Australia, each gown embodies understated elegance, exceptional fit, and thoughtful hand-finished details. Loved for its effortless sophistication, Prea James celebrates women who are confident, design-conscious, and seeking a unique yet timeless look for their wedding day.</p>",
+            "description_mobile": "<p>Founded in 2012, Prea James is an Australian bridal designer known for effortlessly elegant gowns, exceptional fit, and modern designs for the contemporary bride.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://preajames.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_eXqgCc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_849cb602-8e5d-4754-8941-611b229fba4e.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>L'eto Bridal</p>",
+            "description": "<p>L’eto Bridal is an Australian bridal label known for reimagining classic silhouettes through a contemporary lens. Designed and made locally in Sydney, each gown reflects the brand’s commitment to thoughtful design, craftsmanship, and sustainability. With fluid shapes and modern elegance, L’eto Bridal creates pieces for brides seeking a meaningful connection to the brands they choose to wear on their wedding day.</p>",
+            "description_mobile": "<p>L'eto Bridal creates modern, fashion-forward wedding gowns with a focus on effortless elegance, personalised service, and helping brides find a dress that feels uniquely their own.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.letobridal.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "05e03abe-6fab-4994-81ad-edffd0da104d"
+        "image_3tWYG7",
+        "image_TqLAXY",
+        "image_eXqgCc"
       ],
+      "name": "Content list",
       "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Directory</strong></p>",
-        "title": "<p>Bridal <em>Wear</em></p>",
-        "description": "<p>A curated edit of Bridal Wear that the Natalie Marie team have personally worked with and feel proud to recommend.</p>",
-        "text_position": "left",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "<p>OUR MOST-LOVED</p>",
+        "title": "<h4>Bridal Wear</h4>",
+        "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -75,30 +168,119 @@
         "button_style": "underline"
       }
     },
-    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
-      "type": "content-slider",
+    "content_list_hJR3qx": {
+      "type": "content-list",
       "blocks": {
-        "0a06a6c6-26c2-49bf-a70f-c1549d7b0579": {
-          "type": "blog",
+        "image_3zUdbd": {
+          "type": "image",
           "settings": {
-            "title": "<p><strong>Blog</strong></p>",
-            "blog": "photographers",
-            "show_category": true,
-            "show_exerpt": true
+            "image": "shopify://shop_images/4_58127fe7-0fc2-4aaf-aeeb-cec03abe0c98.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Bridal Wear</p>",
+            "title": "<p>Aston Bridal</p>",
+            "description": "<p>Aston Bridal is an Australian bridal label celebrated for its modern, fashion-forward gowns that blend contemporary design with timeless elegance. Designed for brides who value individuality and effortless sophistication, each collection showcases impeccable craftsmanship and thoughtful detailing. Located just across the road from our Avalon showroom, Aston Bridal are our wonderful neighbours and friends - making them a much-loved part of our local bridal community.</p>",
+            "description_mobile": "<p>Our wonderful neighbours and friends, Aston Bridal is an Australian bridal label known for modern, fashion-forward gowns that blend contemporary design with timeless elegance.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.astonbridal.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_ba9WcQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_01ab09ef-0894-458f-815d-8885977702e8.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>Bloom</p>",
+            "description": "<p>Founded in Brisbane by Samantha Burgess, Bloom is a contemporary bridal boutique for fashion-conscious brides seeking something distinctive and refined. Known for its carefully curated selection of designers, Bloom embraces modern bridal style with a focus on individuality, craftsmanship, and conscious design. Through its intimate boutique experience, Bloom helps Brisbane brides discover gowns that feel effortlessly elegant, fashion-forward, and uniquely their own.</p>",
+            "description_mobile": "<p>Founded in Brisbane, Bloom is a contemporary bridal boutique known for its curated designer collections, modern style, and personalised experience for fashion-conscious brides.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.bloomaustralia.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_V67m3R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_f5598efd-82cd-417d-9587-e6e39f563401.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>Floure Studio</p>",
+            "description": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
+            "description_mobile": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://flourestudio.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "0a06a6c6-26c2-49bf-a70f-c1549d7b0579"
+        "image_3zUdbd",
+        "image_ba9WcQ",
+        "image_V67m3R"
       ],
+      "name": "Content list",
       "settings": {
-        "enable_light": true,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Directory</strong></p>",
-        "title": "<p>Photographers</p>",
-        "description": "<p>A curated edit of Photographers that the Natalie Marie team have personally worked with and feel proud to recommend.</p>",
-        "text_position": "left",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -107,94 +289,119 @@
         "button_style": "underline"
       }
     },
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
-      "type": "content-slider",
+    "content_list_MAJCRG": {
+      "type": "content-list",
       "blocks": {
-        "c8c237b3-dd81-427b-b994-5247e82e9483": {
-          "type": "blog",
+        "image_AJVVF4": {
+          "type": "image",
           "settings": {
-            "title": "<p><strong>Blog</strong></p>",
-            "blog": "venues",
-            "show_category": true,
-            "show_exerpt": true
+            "image": "shopify://shop_images/2_af50fa67-c394-4db7-adc8-a3bcdd60e5db.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>Madame Tulle</p>",
+            "description": "<p>Founded in 2014 by Kay after her own search for the perfect wedding veil, Madame Tulle creates handcrafted bridal veils designed to feel modern, romantic, and uniquely personal. Inspired by the belief that every bridal accessory should feel just as special as the gown itself, each piece is thoughtfully designed and made with care. Today, Madame Tulle is loved by brides and boutiques alike for its timeless designs, beautiful craftsmanship, and attention to detail.</p>",
+            "description_mobile": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.madametulle.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_c7w9wG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bridal_Carousel_Web.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Bridal Wear</p>",
+            "title": "<p>Hera Couture</p>",
+            "description": "<p>Founded by New Zealand designer Katie Yeung, Hera Couture is renowned for its modern yet timeless approach to bridal fashion. Combining exceptional fit, luxurious fabrics, and meticulous craftsmanship, each gown is designed to celebrate confidence, individuality, and beauty. Loved by brides around the world, Hera Couture creates elegant, fashion-forward designs that feel as empowering as they are unforgettable.</p>",
+            "description_mobile": "<p>Founded in 2012, Prea James is an Australian bridal designer known for creating gowns for the relaxed, modern bride. Designed and made in Australia, each gown embodies understated elegance, exceptional fit, and thoughtful hand-finished details. Loved for its effortless sophistication, Prea James celebrates women who are confident, design-conscious, and seeking a unique yet timeless look for their wedding day.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://heracouture.co.nz",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_MchM39": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "c8c237b3-dd81-427b-b994-5247e82e9483"
+        "image_AJVVF4",
+        "image_c7w9wG",
+        "image_MchM39"
       ],
+      "name": "Content list",
       "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Directory</strong></p>",
-        "title": "<p>Venues</p>",
-        "description": "<p>A curated edit of Venues that the Natalie Marie team have personally worked with and feel proud to recommend.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "2f49be64-87a3-4a0f-acaa-523f2c948a4f": {
-      "type": "content-slider",
-      "blocks": {
-        "c234ad62-4fef-46f5-b810-5dde0602c6ff": {
-          "type": "blog",
-          "settings": {
-            "title": "<p><strong>Blog</strong></p>",
-            "blog": "florists",
-            "show_category": true,
-            "show_exerpt": true
-          }
-        }
-      },
-      "block_order": [
-        "c234ad62-4fef-46f5-b810-5dde0602c6ff"
-      ],
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Directory</strong></p>",
-        "title": "<p>Florists</p>",
-        "description": "<p>A curated edit of Florists that the Natalie Marie team have personally worked with and feel proud to recommend.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "25a802f4-35c6-4714-bf2e-555a50f3f689": {
-      "type": "content-slider",
-      "blocks": {
-        "184da8ed-d267-4114-9df4-e089225ab4ea": {
-          "type": "blog",
-          "settings": {
-            "title": "<p><strong>Blog</strong></p>",
-            "blog": "final-touches",
-            "show_category": true,
-            "show_exerpt": true
-          }
-        }
-      },
-      "block_order": [
-        "184da8ed-d267-4114-9df4-e089225ab4ea"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Directory</strong></p>",
-        "title": "<p>Final <em>Touches</em></p>",
-        "description": "<p>A curated edit of vendors that the Natalie Marie team have personally worked with and feel proud to recommend.</p>",
-        "text_position": "left",
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -242,6 +449,18 @@
         "719ce863-6d03-43b1-8008-1f856a76e738": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
@@ -266,11 +485,9 @@
   "order": [
     "main",
     "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
-    "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
-    "f4cbf1ef-4a63-4243-92ce-30c74c264480",
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
-    "2f49be64-87a3-4a0f-acaa-523f2c948a4f",
-    "25a802f4-35c6-4714-bf2e-555a50f3f689",
+    "content_list_mHLFER",
+    "content_list_hJR3qx",
+    "content_list_MAJCRG",
     "dfcc897e-3e6d-4a2f-ad62-f4b7e7b73bd9",
     "1680065558ff519d7a"
   ]

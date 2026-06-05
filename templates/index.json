@@ -54,7 +54,7 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0500.jpg",
+            "image": "shopify://shop_images/251103_NMJ_0963.jpg",
             "mobile_image": "shopify://shop_images/251103_NMJ_0500.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
@@ -559,7 +559,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "pearls-natural-beads-bracelets",
+            "collection": "bobby-clark",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -573,13 +573,13 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Bracelets</strong></p>",
-        "title": "<p>Pearls & Natural Beads</p>",
-        "description": "<p>Discover our Pearls & Natural Beads collection. Featuring lustrous pearls and hand-selected gemstone beads, crafted to bring refined texture and subtle colour.</p>",
+        "subheading": "<p><strong>Celebrating Creativity</strong></p>",
+        "title": "<p>Artist In Residency</p>",
+        "description": "<p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. </p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/pearls-natural-beads-bracelets",
+        "button_1_link": "https://www.nataliemariejewellery.com/pages/artist-in-residency",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

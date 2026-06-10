@@ -810,6 +810,16 @@
     "masonry_gallery_7KKzec": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_kHF6RG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_46.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_xkmMNk": {
           "type": "image",
           "settings": {
@@ -862,6 +872,7 @@
         }
       },
       "block_order": [
+        "image_kHF6RG",
         "image_xkmMNk",
         "image_gchPY6",
         "image_ADdqXr",

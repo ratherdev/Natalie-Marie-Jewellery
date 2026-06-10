@@ -332,6 +332,16 @@
     "masonry_gallery_wXbjhM": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_7GDi6e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_34.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_dVmtG3": {
           "type": "image",
           "settings": {
@@ -471,6 +481,7 @@
         }
       },
       "block_order": [
+        "image_7GDi6e",
         "image_dVmtG3",
         "image_CCqBET",
         "image_KQbXRe",

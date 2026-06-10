@@ -83,15 +83,6 @@
     "masonry_gallery_ijKf9i": {
       "type": "masonry-gallery",
       "blocks": {
-        "image_ddr7iQ": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_wmwLMK": {
           "type": "image",
           "settings": {
@@ -287,7 +278,6 @@
         }
       },
       "block_order": [
-        "image_ddr7iQ",
         "image_wmwLMK",
         "image_afHBLP",
         "image_b4eYiC",

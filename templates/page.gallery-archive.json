@@ -884,16 +884,6 @@
             "image_ratio": "natural"
           }
         },
-        "image_xkmMNk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/121.png",
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_gchPY6": {
           "type": "image",
           "settings": {
@@ -940,7 +930,6 @@
         "image_jPFYfN",
         "image_kHF6RG",
         "image_AHBP39",
-        "image_xkmMNk",
         "image_gchPY6",
         "image_ADdqXr",
         "image_wkDAkq",

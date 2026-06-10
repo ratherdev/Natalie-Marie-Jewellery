@@ -844,6 +844,15 @@
     "masonry_gallery_7KKzec": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_RpbTKA": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_jPFYfN": {
           "type": "image",
           "settings": {
@@ -916,6 +925,7 @@
         }
       },
       "block_order": [
+        "image_RpbTKA",
         "image_jPFYfN",
         "image_kHF6RG",
         "image_xkmMNk",

@@ -93,15 +93,6 @@
             "image_ratio": "natural"
           }
         },
-        "image_hA3R6D": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "desc": "",
-            "link": "",
-            "image_ratio": "natural"
-          }
-        },
         "image_b4eYiC": {
           "type": "image",
           "settings": {
@@ -278,7 +269,6 @@
       },
       "block_order": [
         "image_kV9eUC",
-        "image_hA3R6D",
         "image_b4eYiC",
         "image_T3Tycx",
         "image_xeiEVD",

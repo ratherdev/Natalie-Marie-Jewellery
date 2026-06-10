@@ -847,6 +847,7 @@
         "image_RpbTKA": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_52.png",
             "title": "",
             "desc": "",
             "link": "",

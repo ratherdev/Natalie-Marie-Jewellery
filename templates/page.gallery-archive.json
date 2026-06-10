@@ -83,6 +83,16 @@
     "masonry_gallery_ijKf9i": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_T3Tycx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_38.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_xeiEVD": {
           "type": "image",
           "settings": {
@@ -238,6 +248,7 @@
         }
       },
       "block_order": [
+        "image_T3Tycx",
         "image_xeiEVD",
         "image_WaU98A",
         "image_AF3wVy",
@@ -533,6 +544,16 @@
     "masonry_gallery_kWdT8E": {
       "type": "masonry-gallery",
       "blocks": {
+        "image_ypYzn9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bespoke_Imagery_Gallery_37.png",
+            "title": "",
+            "desc": "",
+            "link": "",
+            "image_ratio": "natural"
+          }
+        },
         "image_qLD9m7": {
           "type": "image",
           "settings": {
@@ -585,6 +606,7 @@
         }
       },
       "block_order": [
+        "image_ypYzn9",
         "image_qLD9m7",
         "image_dmnxBz",
         "image_x4DdCK",

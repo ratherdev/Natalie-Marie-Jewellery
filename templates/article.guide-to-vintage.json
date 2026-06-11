@@ -337,7 +337,7 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
-            "subheading": "<p>XXX</p>",
+            "subheading": "<p>Australian Sapphire</p>",
             "title": "<h3>Mathilde Ring </h3>",
             "description": "<p>The Mathilde Ring is a celebration of old-world romance and mindful craftsmanship. Centred around a unique Australian Parti Sapphire and framed by a halo of fancy shape diamonds, each piece is designed to honour the individuality of its stone. A modern heirloom, created just for you.</p>",
             "description_mobile": "<p>The Mathilde Ring is a celebration of old-world romance and mindful craftsmanship. Centred around a unique Australian Parti Sapphire and framed by a halo of fancy shape diamonds, each piece is designed to honour the individuality of its stone. A modern heirloom, created just for you.</p>",
@@ -597,7 +597,7 @@
       ],
       "settings": {
         "grid_items_count": 2,
-        "grid_items_count_pocket": "1/1",
+        "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
         "title": "",

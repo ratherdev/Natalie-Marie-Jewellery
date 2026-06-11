@@ -526,10 +526,42 @@
     "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
       "type": "content-list",
       "blocks": {
+        "image_LULerC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sketches_-_New_Jan_-_3.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_Journal_2_88ee367e-b4f3-4766-9bd2-0ffce2c28b7f.png",
+            "image": "shopify://shop_images/Sketches_-_New_Jan_-_2.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
@@ -560,6 +592,7 @@
         }
       },
       "block_order": [
+        "image_LULerC",
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3"
       ],
       "settings": {

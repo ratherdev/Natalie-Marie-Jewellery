@@ -537,18 +537,18 @@
         "image_bRJgCR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_7ba8c3ee-514c-4490-8b41-f44228b4d46e.png",
+            "image": "shopify://shop_images/Ciara_Matthew-29_jpg.webp",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "<p>PHOTOGRAPHY</p>",
-            "title": "<p>Tealily Weddings</p>",
-            "description": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
-            "description_mobile": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
+            "title": "<p>Matt Godkin</p>",
+            "description": "<p>Matt Godkin specialises in capturing weddings as they naturally unfold, focusing on genuine connection, candid moments, and thoughtful composition. The result is a collection of images that feels authentic, elegant, and uniquely yours.</p>",
+            "description_mobile": "<p>Matt Godkin specialises in capturing weddings as they naturally unfold, focusing on genuine connection, candid moments, and thoughtful composition. The result is a collection of images that feels authentic, elegant, and uniquely yours.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://tealilyphotography.com",
+            "button_1_link": "https://www.mattgodkin.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -598,7 +598,64 @@
             "metaobject_devices": ""
           }
         },
-        "image_PUzkg6": {
+        "image_pdxj93": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_7ba8c3ee-514c-4490-8b41-f44228b4d46e.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PHOTOGRAPHY</p>",
+            "title": "<p>Tealily Weddings</p>",
+            "description": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
+            "description_mobile": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://tealilyphotography.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bRJgCR",
+        "image_WAkCbj",
+        "image_pdxj93"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_TB3NyL": {
+      "type": "content-list",
+      "blocks": {
+        "image_ihNetf": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/6_ad5fcdb1-b267-4c43-9f9d-d4ae8dda02c8.png",
@@ -629,16 +686,47 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
+        },
+        "image_d6wRFp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/704702472_18585064213024061_9019168129690119953_n.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PHOTOGRAPHY</p>",
+            "title": "<p>Alex Marks</p>",
+            "description": "<p>Alex Marks is a Sydney-based wedding photographer known for his relaxed, people-focused approach and timeless storytelling. With over two decades of experience, he captures authentic moments, genuine emotion, and the unique connections that make every wedding unforgettable.</p>",
+            "description_mobile": "<p>Alex Marks is a Sydney-based wedding photographer known for his relaxed, people-focused approach and timeless storytelling. With over two decades of experience, he captures authentic moments, genuine emotion, and the unique connections that make every wedding unforgettable.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://alexmarks.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
         }
       },
       "block_order": [
-        "image_bRJgCR",
-        "image_WAkCbj",
-        "image_PUzkg6"
+        "image_ihNetf",
+        "image_d6wRFp"
       ],
       "name": "Content list",
       "settings": {
-        "grid_items_count": 3,
+        "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
@@ -732,6 +820,7 @@
     "content_list_MAJCRG",
     "content_list_BD6bag",
     "content_list_MYYPDw",
+    "content_list_TB3NyL",
     "dfcc897e-3e6d-4a2f-ad62-f4b7e7b73bd9",
     "1680065558ff519d7a"
   ]

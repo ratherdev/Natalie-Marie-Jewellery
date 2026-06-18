@@ -54,17 +54,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0253-2.jpg",
-            "mobile_image": "shopify://shop_images/251103_NMJ_0253-2.jpg",
+            "image": "shopify://shop_images/251103_NMJ_0556.jpg",
+            "mobile_image": "shopify://shop_images/251103_NMJ_0556.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>Enjoy Up to 15% off</p>",
-            "title": "<p><em>Final Days </em></p>",
-            "description": "<p>Enjoy up to 15% off engagement, ceremonial and fine jewellery for a limited time. Celebrating one year in Paddington with exclusive offers across our <em>community’s</em> most-loved pieces.</p>",
+            "subheading": "<p>Some moments change everything</p>",
+            "title": "<p><em>Marker Of Moments </em></p>",
+            "description": "<p>From the \"yes\" to the wedding day and every anniversary beyond, discover fine jewellery, engagement rings and wedding bands crafted to celebrate life’s most meaningful moments.</p>",
             "colour_style": "light",
             "button_1_text": "Shop Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/a-year-worth-celebrating?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
+            "button_1_link": "shopify://collections/mark-the-moment",
             "button_style": "underline"
           }
         },

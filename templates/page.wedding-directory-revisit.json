@@ -949,6 +949,182 @@
         "button_style": "underline"
       }
     },
+    "content_list_gcNXTc": {
+      "type": "content-list",
+      "blocks": {
+        "image_yPgWYT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/YDBC.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PLANNER & STYLIST</p>",
+            "title": "<p>Your Day By Chloe</p>",
+            "description": "<p>Your Day By Chloe is a luxury wedding planning and styling studio known for creating elegant, joy-filled celebrations with effortless precision. With a thoughtful, personalised approach, Chloe helps couples feel truly present on their wedding day, bringing every detail together seamlessly while crafting an experience that feels uniquely theirs.</p>",
+            "description_mobile": "<p>Your Day By Chloe is a luxury wedding planning and styling studio known for creating elegant, joy-filled celebrations with effortless precision. With a thoughtful, personalised approach, Chloe helps couples feel truly present on their wedding day, bringing every detail together seamlessly while crafting an experience that feels uniquely theirs.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.yourdaybychloe.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_n8xD9R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PLACES_LB.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST</p>",
+            "title": "<p>Places Of LB</p>",
+            "description": "<p>Place of LB is a boutique wedding planning and styling studio founded by Laice Bollen, creating deeply personal celebrations that blend thoughtful design, storytelling, and impeccable execution. Inspired by fashion, art, and hospitality, Place of LB crafts bespoke wedding experiences that feel elegant, meaningful, and entirely unique to each couple.</p>",
+            "description_mobile": "<p>Place of LB is a boutique wedding planning and styling studio founded by Laice Bollen, creating deeply personal celebrations that blend thoughtful design, storytelling, and impeccable execution. Inspired by fashion, art, and hospitality, Place of LB crafts bespoke wedding experiences that feel elegant, meaningful, and entirely unique to each couple.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.ffoliar.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_yPgWYT",
+        "image_n8xD9R"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "<p>OUR MOST-LOVED</p>",
+        "title": "<h4>Stylists & Planners</h4>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_xBdFJm": {
+      "type": "content-list",
+      "blocks": {
+        "image_PK8Vag": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PALOMA.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PLANNER & STYLIST</p>",
+            "title": "<p>Paloma Events</p>",
+            "description": "<p>Paloma Events is a boutique wedding planning and design studio known for creating thoughtfully curated celebrations that feel deeply personal and effortlessly refined. Led by creative director Brooke, the team blends expert planning, styling, and creative direction to craft unforgettable wedding experiences with beauty, heart, and impeccable attention to detail.</p>",
+            "description_mobile": "<p>Paloma Events is a boutique wedding planning and design studio known for creating thoughtfully curated celebrations that feel deeply personal and effortlessly refined. Led by creative director Brooke, the team blends expert planning, styling, and creative direction to craft unforgettable wedding experiences with beauty, heart, and impeccable attention to detail.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.palomaevents.co",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_7N77nR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vendor_Downloads-4.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PLANNER & STYLIST</p>",
+            "title": "<p>The State Of Studio</p>",
+            "description": "<p>The State Of is a Newcastle-based wedding planning, styling, and stationery studio creating thoughtful, design-led celebrations for couples who value style, substance, and a seamless experience. With a refined eye for detail and a focus on timeless design, they craft weddings that feel effortlessly beautiful, deeply personal, and uniquely considered.</p>",
+            "description_mobile": "<p>The State Of is a Newcastle-based wedding planning, styling, and stationery studio creating thoughtful, design-led celebrations for couples who value style, substance, and a seamless experience. With a refined eye for detail and a focus on timeless design, they craft weddings that feel effortlessly beautiful, deeply personal, and uniquely considered.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://thestateof.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_PK8Vag",
+        "image_7N77nR"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "content_list_nyML8j": {
       "type": "content-list",
       "blocks": {
@@ -1153,6 +1329,8 @@
     "content_list_TB3NyL",
     "content_list_rypWAL",
     "content_list_im9xNi",
+    "content_list_gcNXTc",
+    "content_list_xBdFJm",
     "content_list_nyML8j",
     "dfcc897e-3e6d-4a2f-ad62-f4b7e7b73bd9",
     "1680065558ff519d7a"

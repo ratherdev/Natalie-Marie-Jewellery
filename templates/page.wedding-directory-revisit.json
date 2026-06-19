@@ -864,10 +864,10 @@
     "content_list_im9xNi": {
       "type": "content-list",
       "blocks": {
-        "image_VjLPXb": {
+        "image_AHJEGV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/640404713_18082280393597164_2708250970383734333_n.jpg",
+            "image": "shopify://shop_images/11_62321e40-0195-4d79-90d7-979bab84cff5.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -878,7 +878,7 @@
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.aniellabatten.com",
+            "button_1_link": "https://www.theabstractflorist.com.au",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -896,53 +896,21 @@
             "metaobject_devices": ""
           }
         },
-        "image_XLjp8U": {
+        "image_w3b9e9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/8_658ea78f-c1f7-4d64-b6ab-2fa08ed97914.png",
+            "image": "shopify://shop_images/Vendor_Downloads-3.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
-            "subheading": "<p>CELEBRANT</p>",
-            "title": "<p>Novera </p>",
-            "description": "<p>Ally Cooper of Novera Ceremonies creates warm, heartfelt ceremonies that feel deeply personal and beautifully authentic. With a calm presence and thoughtful storytelling, Ally crafts meaningful moments that allow couples to feel truly present as they celebrate their love.</p>",
-            "description_mobile": "<p>Ally Cooper of Novera Ceremonies creates warm, heartfelt ceremonies that feel deeply personal. With a calm presence and thoughtful storytelling, Ally crafts meaningful moments that allow couples to feel truly present.</p>",
+            "subheading": "<p>FLORIST</p>",
+            "title": "<p>Ffoliar</p>",
+            "description": "<p>Ffoliar is a floral design studio led by Sammy Bate, specialising in bespoke wedding florals, botanical styling, and creative event design. Known for sculptural arrangements, layered textures, and an artistic approach, Ffoliar creates thoughtful floral experiences that feel elegant, expressive, and entirely unique.</p>",
+            "description_mobile": "<p>Ffoliar is a floral design studio led by Sammy Bate, specialising in bespoke wedding florals, botanical styling, and creative event design. Known for sculptural arrangements, layered textures, and an artistic approach, Ffoliar creates thoughtful floral experiences that feel elegant, expressive, and entirely unique.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.noveraceremonies.com.au",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_CQpk3B": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_260aff20-461b-4cc0-9e15-43f2398bb31e.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>CELEBRANT & PHOTOGRAPHY</p>",
-            "title": "<p>Hungry Hearts Co</p>",
-            "description": "<p>A celebrant and photography duo known for their heartfelt storytelling, documentary-style imagery, and people-first approach. With a focus on genuine connection and unforgettable experiences, they create weddings that feel relaxed, meaningful, and uniquely personal.</p>",
-            "description_mobile": "<p>A celebrant and photography duo known for their heartfelt storytelling, documentary-style imagery, and people-first approach. With a focus on genuine connection and unforgettable experiences, they create weddings that feel relaxed, meaningful, and uniquely personal.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://hungryheartsco.com",
+            "button_1_link": "https://www.ffoliar.com.au",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -962,17 +930,137 @@
         }
       },
       "block_order": [
-        "image_VjLPXb",
-        "image_XLjp8U",
-        "image_CQpk3B"
+        "image_AHJEGV",
+        "image_w3b9e9"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "<p>OUR MOST-LOVED</p>",
+        "title": "<h4>Florists</h4>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_nyML8j": {
+      "type": "content-list",
+      "blocks": {
+        "image_WAchRM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vendor_Downloads-2.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST & WEDDING CONSULTANT</p>",
+            "title": "<p>Maison G</p>",
+            "description": "<p>Maison G Studio is a creative consultancy and floral studio for weddings, events, and brands, where every project begins with your story. Blending thoughtful event design with bespoke floristry, they create beautifully curated experiences that feel personal, intentional, and unforgettable.</p>",
+            "description_mobile": "<p>Maison G Studio is a creative consultancy and floral studio for weddings, events, and brands, where every project begins with your story. Blending thoughtful event design with bespoke floristry, they create beautifully curated experiences that feel personal, intentional, and unforgettable.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.instagram.com/maison_gstudio/",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_zCtaT4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12_b76f36e6-133b-46a0-b084-1208eb2bdde5.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST </p>",
+            "title": "<p>Wild Lotus</p>",
+            "description": "<p>Wild Lotus Florist creates lush, bespoke wedding florals inspired by nature, seasonality, and each couple’s unique vision. Known for their vibrant designs and personal approach, they craft everything from romantic bouquets to striking floral installations that bring weddings to life with beauty and creativity.</p>",
+            "description_mobile": "<p>Wild Lotus Florist creates lush, bespoke wedding florals inspired by nature, seasonality, and each couple’s unique vision. Known for their vibrant designs and personal approach, they craft everything from romantic bouquets to striking floral installations that bring weddings to life with beauty and creativity.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://wildlotusflorist.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_6YUqUt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/13_50e867a5-76fc-4264-b925-7515ee800908.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST</p>",
+            "title": "<p>Fika Floristry</p>",
+            "description": "<p>Fika Floristry creates thoughtfully curated floral experiences with a focus on sustainability, seasonality, and natural beauty. Known for their organic, garden-inspired designs, Fika brings a relaxed yet refined approach to weddings, crafting florals that feel both meaningful and effortlessly beautiful.</p>",
+            "description_mobile": "<p>Fika Floristry creates thoughtfully curated floral experiences with a focus on sustainability, seasonality, and natural beauty. Known for their organic, garden-inspired designs, Fika brings a relaxed yet refined approach to weddings, crafting florals that feel both meaningful and effortlessly beautiful.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.instagram.com/fika_floristry/",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_WAchRM",
+        "image_zCtaT4",
+        "image_6YUqUt"
       ],
       "name": "Content list",
       "settings": {
         "grid_items_count": 3,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
-        "subheading": "<p>OUR MOST-LOVED</p>",
-        "title": "<h4>Florists</h4>",
+        "subheading": "",
+        "title": "",
         "description": "",
         "colour_style": "dark",
         "button_1_text": "",
@@ -1065,6 +1153,7 @@
     "content_list_TB3NyL",
     "content_list_rypWAL",
     "content_list_im9xNi",
+    "content_list_nyML8j",
     "dfcc897e-3e6d-4a2f-ad62-f4b7e7b73bd9",
     "1680065558ff519d7a"
   ]

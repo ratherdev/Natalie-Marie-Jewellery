@@ -35,7 +35,7 @@
         "enable_dark": false,
         "subheading": "<p><strong>Directory</strong></p>",
         "title": "<p>NMJ <em>Wedding</em></p>",
-        "description": "<p>The NMJ Wedding Directory isn’t your typical directory; we have tightly curated a collection of vendors that the team here at Natalie Marie have personally worked with and feel proud to recommend; from wedding photographers to florists, venues to stylists, explore some of our local favourites.</p>",
+        "description": "<p>The NMJ Wedding Directory isn’t your typical directory; we have tightly curated a collection of vendors that the team here at Natalie Marie have personally worked with and feel proud to recommend; from wedding photographers and videographers, to florists and planners, explore some of our local favourites.</p>",
         "feature_text": "<p>A curated collection of <em>vendors</em> that the team here at Natalie Marie have personally worked with and feel proud to <em>recommend</em>.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
@@ -89,14 +89,14 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
-            "subheading": "<p>FLORIST</p>",
+            "subheading": "<p>PLANNER & STYLIST</p>",
             "title": "<p>Places Of LB</p>",
             "description": "<p>Place of LB is a boutique wedding planning and styling studio founded by Laice Bollen, creating deeply personal celebrations that blend thoughtful design, storytelling, and impeccable execution. Inspired by fashion, art, and hospitality, Place of LB crafts bespoke wedding experiences that feel elegant, meaningful, and entirely unique to each couple.</p>",
             "description_mobile": "<p>Place of LB is a boutique wedding planning and styling studio founded by Laice Bollen, creating deeply personal celebrations that blend thoughtful design, storytelling, and impeccable execution. Inspired by fashion, art, and hospitality, Place of LB crafts bespoke wedding experiences that feel elegant, meaningful, and entirely unique to each couple.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.ffoliar.com.au",
+            "button_1_link": "https://www.placeoflb.com.au",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -122,7 +122,7 @@
       "name": "Content list",
       "settings": {
         "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
+        "grid_items_count_pocket": "1/1",
         "text_align": "center",
         "subheading": "<p>OUR MOST-LOVED</p>",
         "title": "<h4>Stylists & Planners</h4>",
@@ -148,7 +148,7 @@
             "subheading": "<p>PLANNER & STYLIST</p>",
             "title": "<p>Paloma Events</p>",
             "description": "<p>Paloma Events is a boutique wedding planning and design studio known for creating thoughtfully curated celebrations that feel deeply personal and effortlessly refined. Led by creative director Brooke, the team blends expert planning, styling, and creative direction to craft unforgettable wedding experiences with beauty, heart, and impeccable attention to detail.</p>",
-            "description_mobile": "<p>Paloma Events is a boutique wedding planning and design studio known for creating thoughtfully curated celebrations that feel deeply personal and effortlessly refined. Led by creative director Brooke, the team blends expert planning, styling, and creative direction to craft unforgettable wedding experiences with beauty, heart, and impeccable attention to detail.</p>",
+            "description_mobile": "<p>A boutique wedding planning and design studio creating beautifully curated celebrations through expert planning, styling, and creative direction.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
@@ -180,7 +180,7 @@
             "subheading": "<p>PLANNER & STYLIST</p>",
             "title": "<p>The State Of Studio</p>",
             "description": "<p>The State Of is a Newcastle-based wedding planning, styling, and stationery studio creating thoughtful, design-led celebrations for couples who value style, substance, and a seamless experience. With a refined eye for detail and a focus on timeless design, they craft weddings that feel effortlessly beautiful, deeply personal, and uniquely considered.</p>",
-            "description_mobile": "<p>The State Of is a Newcastle-based wedding planning, styling, and stationery studio creating thoughtful, design-led celebrations for couples who value style, substance, and a seamless experience. With a refined eye for detail and a focus on timeless design, they craft weddings that feel effortlessly beautiful, deeply personal, and uniquely considered.</p>",
+            "description_mobile": "<p>A Newcastle-based wedding planning, styling, and stationery studio creating thoughtful, design-led celebrations with a timeless and personal touch.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
@@ -226,21 +226,21 @@
     "content_list_mHLFER": {
       "type": "content-list",
       "blocks": {
-        "image_3tWYG7": {
+        "image_eXqgCc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/8_e3c8dab0-6616-4ba0-a488-b1a70da25cc6.png",
+            "image": "shopify://shop_images/7_849cb602-8e5d-4754-8941-611b229fba4e.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "<p>BRIDAL WEAR</p>",
-            "title": "<p>Karen Willis Holmes</p>",
-            "description": "<p>Since 2000, KAREN WILLIS HOLMES has been designing handcrafted wedding gowns for modern brides seeking timeless elegance and exceptional craftsmanship. With boutiques in Sydney, Melbourne, Brisbane, Perth, and New York, the brand is renowned for its personalised bridal experience, helping every bride find a gown that reflects her unique style and vision.</p>",
-            "description_mobile": "<p>Since 2000, KAREN WILLIS HOLMES has crafted timeless, handcrafted wedding gowns for modern brides, offering a personalised bridal experience across Australia and New York.</p>",
+            "title": "<p>L'eto Bridal</p>",
+            "description": "<p>L’eto Bridal is an Australian bridal label known for reimagining classic silhouettes through a contemporary lens. Designed and made locally in Sydney, each gown reflects the brand’s commitment to thoughtful design, craftsmanship, and sustainability. With fluid shapes and modern elegance, L’eto Bridal creates pieces for brides seeking a meaningful connection to the brands they choose to wear on their wedding day.</p>",
+            "description_mobile": "<p>L'eto Bridal creates modern, fashion-forward wedding gowns with a focus on effortless elegance, personalised service, and helping brides find a dress that feels uniquely their own.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://karenwillisholmes.com",
+            "button_1_link": "https://www.letobridal.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -290,21 +290,21 @@
             "metaobject_devices": ""
           }
         },
-        "image_eXqgCc": {
+        "image_aGfp4M": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/7_849cb602-8e5d-4754-8941-611b229fba4e.png",
+            "image": "shopify://shop_images/5_f5598efd-82cd-417d-9587-e6e39f563401.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "<p>BRIDAL WEAR</p>",
-            "title": "<p>L'eto Bridal</p>",
-            "description": "<p>L’eto Bridal is an Australian bridal label known for reimagining classic silhouettes through a contemporary lens. Designed and made locally in Sydney, each gown reflects the brand’s commitment to thoughtful design, craftsmanship, and sustainability. With fluid shapes and modern elegance, L’eto Bridal creates pieces for brides seeking a meaningful connection to the brands they choose to wear on their wedding day.</p>",
-            "description_mobile": "<p>L'eto Bridal creates modern, fashion-forward wedding gowns with a focus on effortless elegance, personalised service, and helping brides find a dress that feels uniquely their own.</p>",
+            "title": "<p>Floure Studio</p>",
+            "description": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
+            "description_mobile": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.letobridal.com",
+            "button_1_link": "https://flourestudio.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -324,9 +324,9 @@
         }
       },
       "block_order": [
-        "image_3tWYG7",
+        "image_eXqgCc",
         "image_TqLAXY",
-        "image_eXqgCc"
+        "image_aGfp4M"
       ],
       "name": "Content list",
       "settings": {
@@ -379,6 +379,38 @@
             "metaobject_devices": ""
           }
         },
+        "image_B3mhbT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_e3c8dab0-6616-4ba0-a488-b1a70da25cc6.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>BRIDAL WEAR</p>",
+            "title": "<p>Karen Willis Holmes</p>",
+            "description": "<p>Since 2000, KAREN WILLIS HOLMES has been designing handcrafted wedding gowns for modern brides seeking timeless elegance and exceptional craftsmanship. With boutiques in Sydney, Melbourne, Brisbane, Perth, and New York, the brand is renowned for its personalised bridal experience, helping every bride find a gown that reflects her unique style and vision.</p>",
+            "description_mobile": "<p>Since 2000, KAREN WILLIS HOLMES has crafted timeless, handcrafted wedding gowns for modern brides, offering a personalised bridal experience across Australia and New York.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://karenwillisholmes.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
         "image_ba9WcQ": {
           "type": "image",
           "settings": {
@@ -410,44 +442,12 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
-        },
-        "image_V67m3R": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5_f5598efd-82cd-417d-9587-e6e39f563401.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>BRIDAL WEAR</p>",
-            "title": "<p>Floure Studio</p>",
-            "description": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
-            "description_mobile": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://flourestudio.com",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
         }
       },
       "block_order": [
         "image_3zUdbd",
-        "image_ba9WcQ",
-        "image_V67m3R"
+        "image_B3mhbT",
+        "image_ba9WcQ"
       ],
       "name": "Content list",
       "settings": {
@@ -478,7 +478,7 @@
             "subheading": "<p>BRIDAL WEAR</p>",
             "title": "<p>Madame Tulle</p>",
             "description": "<p>Founded in 2014 by Kay after her own search for the perfect wedding veil, Madame Tulle creates handcrafted bridal veils designed to feel modern, romantic, and uniquely personal. Inspired by the belief that every bridal accessory should feel just as special as the gown itself, each piece is thoughtfully designed and made with care. Today, Madame Tulle is loved by brides and boutiques alike for its timeless designs, beautiful craftsmanship, and attention to detail.</p>",
-            "description_mobile": "<p>Founded by Australian designer Flourenchia, FLOURE Studio creates bridal gowns that celebrate artistry, individuality, and timeless craftsmanship. Inspired by generations of sewing tradition, each gown is thoughtfully designed in Australia and handcrafted using luxurious fabrics and couture techniques. With a focus on modern elegance and meaningful design, FLOURE Studio creates pieces that feel deeply personal to every bride who wears them.</p>",
+            "description_mobile": "<p>Founded in 2014 by Kay, Madame Tulle creates handcrafted bridal veils that are modern, romantic, and beautifully personal. Loved by brides and boutiques alike, each piece is thoughtfully designed with timeless style and exceptional craftsmanship.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
@@ -510,7 +510,7 @@
             "subheading": "<p>Bridal Wear</p>",
             "title": "<p>Hera Couture</p>",
             "description": "<p>Founded by New Zealand designer Katie Yeung, Hera Couture is renowned for its modern yet timeless approach to bridal fashion. Combining exceptional fit, luxurious fabrics, and meticulous craftsmanship, each gown is designed to celebrate confidence, individuality, and beauty. Loved by brides around the world, Hera Couture creates elegant, fashion-forward designs that feel as empowering as they are unforgettable.</p>",
-            "description_mobile": "<p>Founded in 2012, Prea James is an Australian bridal designer known for creating gowns for the relaxed, modern bride. Designed and made in Australia, each gown embodies understated elegance, exceptional fit, and thoughtful hand-finished details. Loved for its effortless sophistication, Prea James celebrates women who are confident, design-conscious, and seeking a unique yet timeless look for their wedding day.</p>",
+            "description_mobile": "<p>Founded by New Zealand designer Katie Yeung, Hera Couture creates modern, timeless bridal gowns known for exceptional fit, luxurious fabrics, and expert craftsmanship. Designed to celebrate confidence and individuality, each gown blends elegance with contemporary style.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
@@ -573,7 +573,7 @@
       "name": "Content list",
       "settings": {
         "grid_items_count": 2,
-        "grid_items_count_pocket": "1/1",
+        "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
         "title": "",
@@ -742,38 +742,6 @@
             "metaobject_devices": ""
           }
         },
-        "image_WAkCbj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5_dea80612-eeeb-4880-bb2e-9dfe5f98624e.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>PHOTOGRAPHY</p>",
-            "title": "<p>Weddings By Samantha Riles</p>",
-            "description": "<p>Samantha Riles captures weddings with a refined, editorial approach that feels natural, relaxed, and deeply personal. Based in Sydney and available worldwide, she focuses on authentic moments, genuine connection, and timeless imagery that beautifully tells each couple’s unique love story.</p>",
-            "description_mobile": "<p>Samantha Riles captures weddings with a refined, editorial approach that feels natural, relaxed, and deeply personal. Based in Sydney and available worldwide, she focuses on authentic moments, genuine connection, and timeless imagery that beautifully tells each couple’s unique love story.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.samanthariles.com",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
         "image_pdxj93": {
           "type": "image",
           "settings": {
@@ -784,7 +752,7 @@
             "subheading": "<p>PHOTOGRAPHY</p>",
             "title": "<p>Tealily Weddings</p>",
             "description": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
-            "description_mobile": "<p>Tealily Photography offers documentary-style wedding photography that captures the genuine emotion, connections, and moments that make your day unique. Led by Trish, each wedding is documented with a timeless, unobtrusive approach, creating heartfelt images that tell your love story beautifully.</p>",
+            "description_mobile": "<p>Tealily Photography captures weddings with a documentary-style approach, creating timeless, heartfelt images that beautifully reflect the genuine moments and emotions of your day.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
@@ -805,12 +773,44 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
+        },
+        "image_WqEQbi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_ad5fcdb1-b267-4c43-9f9d-d4ae8dda02c8.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>PHOTOGRAPHY</p>",
+            "title": "<p>Amelia Rushforth</p>",
+            "description": "<p>Amelia Rushforth is a Byron Bay-based photographer known for her relaxed, natural style and ability to capture honest, emotion-filled moments. Blending an editorial eye with a love of light and storytelling, she creates timeless imagery that feels authentic, effortless, and deeply personal.</p>",
+            "description_mobile": "<p>Amelia Rushforth is a Byron Bay-based photographer known for her relaxed, natural style and ability to capture honest, emotion-filled moments. Blending an editorial eye with a love of light and storytelling, she creates timeless imagery that feels authentic, effortless, and deeply personal.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://ameliarushforth.com",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
         }
       },
       "block_order": [
         "image_bRJgCR",
-        "image_WAkCbj",
-        "image_pdxj93"
+        "image_pdxj93",
+        "image_WqEQbi"
       ],
       "name": "Content list",
       "settings": {
@@ -831,21 +831,21 @@
     "content_list_TB3NyL": {
       "type": "content-list",
       "blocks": {
-        "image_ihNetf": {
+        "image_AwxnbN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/6_ad5fcdb1-b267-4c43-9f9d-d4ae8dda02c8.png",
+            "image": "shopify://shop_images/5_dea80612-eeeb-4880-bb2e-9dfe5f98624e.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "<p>PHOTOGRAPHY</p>",
-            "title": "<p>Amelia Rushforth</p>",
-            "description": "<p>Amelia Rushforth is a Byron Bay-based photographer known for her relaxed, natural style and ability to capture honest, emotion-filled moments. Blending an editorial eye with a love of light and storytelling, she creates timeless imagery that feels authentic, effortless, and deeply personal.</p>",
-            "description_mobile": "<p>Amelia Rushforth is a Byron Bay-based photographer known for her relaxed, natural style and ability to capture honest, emotion-filled moments. Blending an editorial eye with a love of light and storytelling, she creates timeless imagery that feels authentic, effortless, and deeply personal.</p>",
+            "title": "<p>Weddings By Samantha Riles</p>",
+            "description": "<p>Samantha Riles captures weddings with a refined, editorial approach that feels natural, relaxed, and deeply personal. Based in Sydney and available worldwide, she focuses on authentic moments, genuine connection, and timeless imagery that beautifully tells each couple’s unique love story.</p>",
+            "description_mobile": "<p>Samantha Riles captures weddings with a refined, editorial approach that feels natural, relaxed, and deeply personal. Based in Sydney and available worldwide, she focuses on authentic moments, genuine connection, and timeless imagery that beautifully tells each couple’s unique love story.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://ameliarushforth.com",
+            "button_1_link": "https://www.samanthariles.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -897,7 +897,7 @@
         }
       },
       "block_order": [
-        "image_ihNetf",
+        "image_AwxnbN",
         "image_d6wRFp"
       ],
       "name": "Content list",
@@ -919,21 +919,21 @@
     "content_list_rypWAL": {
       "type": "content-list",
       "blocks": {
-        "image_EqLBwE": {
+        "image_mHKbjL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_695be24d-230e-497e-b57a-d5233c527bf5.png",
+            "image": "shopify://shop_images/HUNGRY_HEARTS.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
-            "subheading": "<p>CELEBRANT & CONTENT CREATION</p>",
-            "title": "<p>Aniella Batten</p>",
-            "description": "<p>Aniella Batten is a Sydney-based celebrant and content creator known for crafting meaningful ceremonies and capturing authentic moments with style and care. Blending warmth, creativity, and storytelling, she creates wedding experiences that feel personal, memorable, and true to every couple.</p>",
-            "description_mobile": "<p>Sydney-based celebrant and content creator known for crafting meaningful ceremonies and capturing authentic moments. Blending warmth, creativity, and storytelling, she creates wedding experiences that feel true to every couple.</p>",
+            "subheading": "<p>CELEBRANT & PHOTOGRAPHY</p>",
+            "title": "<p>Hungry Hearts Co</p>",
+            "description": "<p>A celebrant and photography duo known for their heartfelt storytelling, documentary-style imagery, and people-first approach. With a focus on genuine connection and unforgettable experiences, they create weddings that feel relaxed, meaningful, and uniquely personal.</p>",
+            "description_mobile": "<p>A celebrant and photography duo known for heartfelt storytelling, documentary-style imagery, and creating relaxed, meaningful wedding experiences.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.aniellabatten.com",
+            "button_1_link": "https://hungryheartsco.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -983,21 +983,21 @@
             "metaobject_devices": ""
           }
         },
-        "image_mHKbjL": {
+        "image_EqLBwE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/HUNGRY_HEARTS.png",
+            "image": "shopify://shop_images/1_695be24d-230e-497e-b57a-d5233c527bf5.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
-            "subheading": "<p>CELEBRANT & PHOTOGRAPHY</p>",
-            "title": "<p>Hungry Hearts Co</p>",
-            "description": "<p>A celebrant and photography duo known for their heartfelt storytelling, documentary-style imagery, and people-first approach. With a focus on genuine connection and unforgettable experiences, they create weddings that feel relaxed, meaningful, and uniquely personal.</p>",
-            "description_mobile": "<p>A celebrant and photography duo known for their heartfelt storytelling, documentary-style imagery, and people-first approach. With a focus on genuine connection and unforgettable experiences, they create weddings that feel relaxed, meaningful, and uniquely personal.</p>",
+            "subheading": "<p>CELEBRANT & CONTENT CREATION</p>",
+            "title": "<p>Aniella Batten</p>",
+            "description": "<p>Aniella Batten is a Sydney-based celebrant and content creator known for crafting meaningful ceremonies and capturing authentic moments with style and care. Blending warmth, creativity, and storytelling, she creates wedding experiences that feel personal, memorable, and true to every couple.</p>",
+            "description_mobile": "<p>Sydney-based celebrant and content creator known for crafting meaningful ceremonies and capturing authentic moments. Blending warmth, creativity, and storytelling, she creates wedding experiences that feel true to every couple.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://hungryheartsco.com",
+            "button_1_link": "https://www.aniellabatten.com",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -1017,9 +1017,9 @@
         }
       },
       "block_order": [
-        "image_EqLBwE",
+        "image_mHKbjL",
         "image_AjCXEm",
-        "image_mHKbjL"
+        "image_EqLBwE"
       ],
       "name": "Content list",
       "settings": {
@@ -1040,7 +1040,159 @@
     "content_list_im9xNi": {
       "type": "content-list",
       "blocks": {
-        "image_AHJEGV": {
+        "image_bg6byT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vendor_Downloads-3.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST</p>",
+            "title": "<p>Ffoliar</p>",
+            "description": "<p>Ffoliar is a floral design studio led by Sammy Bate, specialising in bespoke wedding florals, botanical styling, and creative event design. Known for sculptural arrangements, layered textures, and an artistic approach, Ffoliar creates thoughtful floral experiences that feel elegant, expressive, and entirely unique.</p>",
+            "description_mobile": "<p>Led by Sammy Bate, Ffoliar creates bespoke wedding florals known for sculptural designs, layered textures, and an artistic, elegant style.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.ffoliar.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_Rnc3ih": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vendor_Downloads-2.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST & WEDDING CONSULTANT</p>",
+            "title": "<p>Maison G</p>",
+            "description": "<p>Maison G Studio is a creative consultancy and floral studio for weddings, events, and brands, where every project begins with your story. Blending thoughtful event design with bespoke floristry, they create beautifully curated experiences that feel personal, intentional, and unforgettable.</p>",
+            "description_mobile": "<p>A creative consultancy and floral studio crafting bespoke florals and thoughtfully designed wedding experiences inspired by each client’s story.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.instagram.com/maison_gstudio/",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bg6byT",
+        "image_Rnc3ih"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "<p>OUR MOST-LOVED</p>",
+        "title": "<h4>Florists</h4>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_nyML8j": {
+      "type": "content-list",
+      "blocks": {
+        "image_cRHVwC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12_b76f36e6-133b-46a0-b084-1208eb2bdde5.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST </p>",
+            "title": "<p>Wild Lotus</p>",
+            "description": "<p>Wild Lotus Florist creates lush, bespoke wedding florals inspired by nature, seasonality, and each couple’s unique vision. Known for their vibrant designs and personal approach, they craft everything from romantic bouquets to striking floral installations that bring weddings to life with beauty and creativity.</p>",
+            "description_mobile": "<p>Bespoke wedding florals inspired by nature and seasonality, bringing each celebration to life with vibrant, creative designs.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://wildlotusflorist.com.au",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_ymbbnc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/13_50e867a5-76fc-4264-b925-7515ee800908.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>FLORIST</p>",
+            "title": "<p>Fika Floristry</p>",
+            "description": "<p>Fika Floristry creates thoughtfully curated floral experiences with a focus on sustainability, seasonality, and natural beauty. Known for their organic, garden-inspired designs, Fika brings a relaxed yet refined approach to weddings, crafting florals that feel both meaningful and effortlessly beautiful.</p>",
+            "description_mobile": "<p>Fika Floristry creates sustainable, garden-inspired wedding florals with a natural, refined style that feels effortlessly beautiful.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "EXPLORE NOW",
+            "button_1_link": "https://www.instagram.com/fika_floristry/",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_tj6k8t": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/11_62321e40-0195-4d79-90d7-979bab84cff5.png",
@@ -1071,164 +1223,12 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
-        },
-        "image_w3b9e9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Vendor_Downloads-3.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>FLORIST</p>",
-            "title": "<p>Ffoliar</p>",
-            "description": "<p>Ffoliar is a floral design studio led by Sammy Bate, specialising in bespoke wedding florals, botanical styling, and creative event design. Known for sculptural arrangements, layered textures, and an artistic approach, Ffoliar creates thoughtful floral experiences that feel elegant, expressive, and entirely unique.</p>",
-            "description_mobile": "<p>Ffoliar is a floral design studio led by Sammy Bate, specialising in bespoke wedding florals, botanical styling, and creative event design. Known for sculptural arrangements, layered textures, and an artistic approach, Ffoliar creates thoughtful floral experiences that feel elegant, expressive, and entirely unique.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.ffoliar.com.au",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
         }
       },
       "block_order": [
-        "image_AHJEGV",
-        "image_w3b9e9"
-      ],
-      "name": "Content list",
-      "settings": {
-        "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "<p>OUR MOST-LOVED</p>",
-        "title": "<h4>Florists</h4>",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_nyML8j": {
-      "type": "content-list",
-      "blocks": {
-        "image_WAchRM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Vendor_Downloads-2.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>FLORIST & WEDDING CONSULTANT</p>",
-            "title": "<p>Maison G</p>",
-            "description": "<p>Maison G Studio is a creative consultancy and floral studio for weddings, events, and brands, where every project begins with your story. Blending thoughtful event design with bespoke floristry, they create beautifully curated experiences that feel personal, intentional, and unforgettable.</p>",
-            "description_mobile": "<p>Maison G Studio is a creative consultancy and floral studio for weddings, events, and brands, where every project begins with your story. Blending thoughtful event design with bespoke floristry, they create beautifully curated experiences that feel personal, intentional, and unforgettable.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.instagram.com/maison_gstudio/",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_zCtaT4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/12_b76f36e6-133b-46a0-b084-1208eb2bdde5.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>FLORIST </p>",
-            "title": "<p>Wild Lotus</p>",
-            "description": "<p>Wild Lotus Florist creates lush, bespoke wedding florals inspired by nature, seasonality, and each couple’s unique vision. Known for their vibrant designs and personal approach, they craft everything from romantic bouquets to striking floral installations that bring weddings to life with beauty and creativity.</p>",
-            "description_mobile": "<p>Wild Lotus Florist creates lush, bespoke wedding florals inspired by nature, seasonality, and each couple’s unique vision. Known for their vibrant designs and personal approach, they craft everything from romantic bouquets to striking floral installations that bring weddings to life with beauty and creativity.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://wildlotusflorist.com.au",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_6YUqUt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/13_50e867a5-76fc-4264-b925-7515ee800908.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "<p>FLORIST</p>",
-            "title": "<p>Fika Floristry</p>",
-            "description": "<p>Fika Floristry creates thoughtfully curated floral experiences with a focus on sustainability, seasonality, and natural beauty. Known for their organic, garden-inspired designs, Fika brings a relaxed yet refined approach to weddings, crafting florals that feel both meaningful and effortlessly beautiful.</p>",
-            "description_mobile": "<p>Fika Floristry creates thoughtfully curated floral experiences with a focus on sustainability, seasonality, and natural beauty. Known for their organic, garden-inspired designs, Fika brings a relaxed yet refined approach to weddings, crafting florals that feel both meaningful and effortlessly beautiful.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "EXPLORE NOW",
-            "button_1_link": "https://www.instagram.com/fika_floristry/",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_WAchRM",
-        "image_zCtaT4",
-        "image_6YUqUt"
+        "image_cRHVwC",
+        "image_ymbbnc",
+        "image_tj6k8t"
       ],
       "name": "Content list",
       "settings": {

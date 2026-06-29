@@ -127,9 +127,9 @@
         "description": "",
         "text_position": "top",
         "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
+        "button_1_text": "Book Byron Atelier",
+        "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371/?locations=Del%20Rainbow%20",
+        "button_2_text": "Book Byron Atelier",
         "button_2_link": "",
         "button_style": "underline"
       }

@@ -31,11 +31,11 @@
         "feature_text": "<p>An exclusive, <em>one-on-one </em>design experience beyond our Sydney <em>showrooms.</em></p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
-        "button_1_text": "",
-        "button_1_link": "",
+        "button_1_text": "Book Byron Atelier",
+        "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371/?locations=Del%20Rainbow%20",
         "button_2_metaobject": "booking-byron-ceremonial-atelier",
         "button_2_text": "BOOK NOW",
-        "button_2_link": "",
+        "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371/?locations=Del%20Rainbow%20",
         "button_style": "primary"
       }
     },

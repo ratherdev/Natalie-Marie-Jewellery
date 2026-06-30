@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "diamond-necklaces",
+            "collection": "archive-sale-1",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>celebrate life’s milestones</strong></p>",
-        "title": "<p>Diamond Necklaces</p>",
-        "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design.</p>",
+        "subheading": "<p><strong>30% OFF</strong></p>",
+        "title": "<p>Archive Sale</p>",
+        "description": "<p>A collection of our signature pieces return for a limited time.​ For one week only, enjoy 30% off a curated selection of archive styles.  ​Available exclusively online in limited quantities.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/diamond-necklaces",
+        "button_1_link": "shopify://collections/archive-sale-1",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

@@ -553,8 +553,8 @@
         "collection_BJhdkK": {
           "type": "collection",
           "settings": {
-            "title": "<p><strong>Wedding Rings For Her</strong></p>",
-            "collection": "",
+            "title": "<p><strong>Diamond Collection</strong></p>",
+            "collection": "diamond-collection",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -568,13 +568,13 @@
         "enable_light": false,
         "grid_items_count": 8,
         "enable_natual_scroll": false,
-        "subheading": "<p> <strong>CEREMONIAL</strong></p>",
-        "title": "<p> Explore <em>Wedding Bands</em></p>",
-        "description": "<p>Eternal bonds, symbolic of vows taken. Wedding bands are gestures of forever, exchanged in harmony with the one you love.</p>",
+        "subheading": "",
+        "title": "<p>Diamond Collection</p>",
+        "description": "<p>Mark every chapter with diamonds chosen to last a lifetime. Featuring natural white, champagne and laboratory-grown diamonds, our collection of rings, necklaces and earrings is thoughtfully crafted to celebrate anniversaries, milestones and the moments that deserve to be remembered forever.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "EXPLORE NOW",
-        "button_1_link": "shopify://collections/wedding-rings-all",
+        "button_1_link": "shopify://collections/diamond-collection",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

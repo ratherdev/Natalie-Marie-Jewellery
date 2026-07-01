@@ -444,7 +444,7 @@
         "image_q3WXTc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OOAKV018Front-2.jpg",
+            "image": "shopify://shop_images/OOAKV012Front.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
@@ -455,7 +455,7 @@
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "EXPLORE NOW",
-            "button_1_link": "shopify://products/ruler-of-my-heart-locket",
+            "button_1_link": "shopify://products/as-long-as-there-is-love-solitaire-ruby",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",

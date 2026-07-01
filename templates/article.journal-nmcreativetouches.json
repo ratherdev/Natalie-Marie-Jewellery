@@ -844,12 +844,12 @@
         "subheading": "",
         "title": "<p>For The Bride</p>",
         "description": "<p>Jewellery crafted with care to accompany your wedding day and every milestone after. From bridal-ready earrings and necklaces to refined bracelets, each piece is designed to complement your moment and endure your story.</p>",
-        "text_position": "top",
+        "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "EXPLORE NOW",
-        "button_2_link": "shopify://collections/for-the-bride",
+        "button_1_text": "EXPLORE NOW",
+        "button_1_link": "shopify://collections/for-the-bride",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     }

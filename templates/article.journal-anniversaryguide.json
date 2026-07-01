@@ -554,7 +554,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Wedding Rings For Her</strong></p>",
-            "collection": "wedding-rings-all",
+            "collection": "",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false

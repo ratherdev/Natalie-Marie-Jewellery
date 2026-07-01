@@ -407,37 +407,6 @@
         "button_style": "underline"
       }
     },
-    "text_with_media_NQrK7z": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_wQ3gfz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OOAKV012Front.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_wQ3gfz"
-      ],
-      "settings": {
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "middleLeft",
-        "subheading": "<p>Mozambique Ruby</p>",
-        "title": "<p>'As Long As There Is Love' Solitaire</p>",
-        "description": "<p>Ruby, with its rich red hue, has long been a totem of love, passion, and power. Known as the ‘king of gemstones,’ it has been treasured across cultures for its deep, fiery colour, often associated with the heart. </p><p>In ancient times, rubies were believed to protect warriors in battle and ward off evil. But they also illustrated vitality and life force, making them popular in romantic jewellery as tokens of intense love and commitment. </p><p>Wrapping wire work, and small metal details paired with our Vieira Setting, a Natalie Marie Jewellery take on a vintage scalloped setting, this piece encourages us to think of all the elements involved in love, and act as a reminder of their importance as a whole.</p>",
-        "colour_style": "dark",
-        "button_1_text": "EXPLORE NOW",
-        "button_1_link": "shopify://products/as-long-as-there-is-love-solitaire-ruby",
-        "button_style": "secondary"
-      }
-    },
     "content_list_QeNEja": {
       "type": "content-list",
       "blocks": {
@@ -511,7 +480,7 @@
         "image_6eFFMi"
       ],
       "settings": {
-        "grid_items_count": 3,
+        "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
@@ -536,7 +505,7 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p><strong>45TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Pearl<br/><strong>Modern:</strong> Diamond<br/><strong>Metal or Gemstone:</strong> Pearl</p><p>Pearl returns at 30 years and it feels especially right here. Layer by layer, over time, something luminous is formed – it’s not perfect in spite of that process, but because of it. Diamonds add brightness to the milestone, but pearls give it soul: patient and intimate.</p><p><br/></p><p><strong>45TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Coral<br/><strong>Modern:</strong> Jade<br/><strong>Metal or Gemstone:</strong> Emerald</p><p>Coral, jade and emerald each bring their own sense of life to the 35th year. There is colour and vitality, and the feeling of something still <em>moving</em>. This is a milestone for a love that has not stood still, but continued to deepen and find new forms.<br/><br/><br/><strong>50TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Ruby<br/><strong>Modern:</strong> Ruby<br/><strong>Metal or Gemstone:</strong> Ruby</p><p>Ruby is all heart. Deep red, vivid and unmistakable, it has long been tied to passion, courage and devotion. After 40 years, it feels less like a symbol of new romance and more like a tribute to love that has kept its warmth through time, change, family, memory and everything in between.</p>",
+            "description": "<p><strong>50TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Gold<br/><strong>Modern:</strong> Gold<br/><strong>Metal or Gemstone:</strong> Gold</p><p>50 years is golden for a reason – the metal holds warmth and history. It’s passed down, worn close, treasured as more than simply a celebration of years; it is a celebration of everything those years have held: the ordinary days, the defining moments, the family stories, the life built together.</p><p> </p><p><strong>55TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Emerald<br/><strong>Modern:</strong> Emerald<br/><strong>Metal or Gemstone:</strong> Emerald</p><p>Emerald marks 55 years with a real sense of growth and renewal. Its green is rich and alive, a reminder that even the longest love is not finished becoming, and honours a relationship that has continued to shift and flourish across the years.</p><p> </p><p><strong>60TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Diamond<br/><strong>Modern:</strong> Diamond<br/><strong>Metal or Gemstone:</strong> Diamond</p><p>The 60th anniversary is marked by diamond: rare, enduring and formed under time and pressure. It’s a fitting tribute to a love that has lasted not by chance, but by care; by choosing each other again and again; by making a life, and then staying to see it shine.</p>",
             "description_mobile": "<p><strong>1ST ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Paper<br/><strong>Modern:</strong> Clocks<br/><strong>Metal or Gemstone:</strong> Gold</p><p>The first year is still so close to the beginning, and paper feels fitting: a page, a letter, a photograph, the first chapter still being written. Clocks offer a reminder of the time you are now building together, while gold brings warmth and permanence to this earliest milestone.</p><p><br/></p><p><strong>5TH ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Wood<br/><strong>Modern:</strong> Silverware<br/><strong>Metal or Gemstone:</strong> Sapphire</p><p>Wood is about roots, and five years in, a marriage has usually found some of its foundations. Sapphire, long associated with loyalty and sincerity, brings a steadiness to this anniversary.<br/><br/><br/><strong>10th ANNIVERSARY</strong></p><p><strong>Traditional:</strong> Tin or Aluminium<br/><strong>Modern:</strong> Diamond Jewellery<br/><strong>Metal or Gemstone:</strong> Diamond</p><p>Ten years deserves something with a little brilliance, and while tin and aluminium may seem like humble materials, they’re flexible, useful and enduring – qualities any long love knows well. Diamond brings the ceremony of the milestone into focus: a decade of choosing each other, and a future still opening up ahead.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -576,37 +545,6 @@
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
-      }
-    },
-    "text_with_media_7BhdEF": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_UJ9Tx7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OOAKV013Front.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_UJ9Tx7"
-      ],
-      "settings": {
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "middleLeft",
-        "subheading": "<p>Sapphire & Diamond</p>",
-        "title": "<p>'Cresent Moon' Shield Ring</p>",
-        "description": "<p>The crescent moon is a symbol of femininity, representing the transition from one phase of life to another. </p><p>Inspired by Warren B Davis’ artwork ‘Crescent Moon’ circa 1895, which features a poetic feminine shape, and it’s intrinsic connection to the cycles of the moon.</p><p>In ancient cultures, the crescent moon was associated with goddesses, fertility, and the cyclical nature of life, reflecting the waxing and waning phases of the moon. In vintage jewellery, this motif has a rich history of celebrating womanhood and is used within our Crescent Moon ring as an indication of the power of feminine energy. <br/><br/></p><p></p>",
-        "colour_style": "dark",
-        "button_1_text": "EXPLORE NOW",
-        "button_1_link": "shopify://products/crescent-moon-shield-ring-sapphire-and-diamond",
-        "button_style": "secondary"
       }
     },
     "content_slider_8GfNBN": {
@@ -664,10 +602,8 @@
     "content_list_PRU9gL",
     "content_slider_T9NR7F",
     "content_list_wQQnew",
-    "text_with_media_NQrK7z",
     "content_list_QeNEja",
     "content_list_BPNABb",
-    "text_with_media_7BhdEF",
     "content_slider_8GfNBN",
     "main"
   ]

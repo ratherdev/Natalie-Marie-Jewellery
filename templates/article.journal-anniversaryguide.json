@@ -553,7 +553,7 @@
         "collection_BJhdkK": {
           "type": "collection",
           "settings": {
-            "title": "<p><strong>Diamond Collection</strong></p>",
+            "title": "<p><strong>Diamond Collection </strong></p>",
             "collection": "diamond-collection",
             "show_product_info": true,
             "show_vendor": false,

@@ -378,42 +378,6 @@
     },
     "content_list_4rQEcp": {
       "type": "content-list",
-      "blocks": {
-        "image_hVqnB3": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "<h3><em>“Music has always been the language of our relationship, and certain songs have become markers of the moments, people, and places that shaped us. On our wedding day we carefully curated songs for milestone moments that carried those memories. Melodies that reminded us of family, or moments along our journey, and songs that honoured the people who built the path to our life together. What is beautiful is that those songs have stayed with us, quietly threading through our everyday moments. Now, as our children grow up, those same tunes surface in our home and travels, embedding themselves into their memories too, so the soundtrack of our love story keeps unfolding.” </em></h3><h3>- Natalie, Founder. </h3>",
-            "description_mobile": "<h3><em>“Music has always been the language of our relationship, and certain songs have become markers of the moments, people, and places that shaped us. On our wedding day we carefully curated songs for milestone moments that carried those memories. Melodies that reminded us of family, or moments along our journey, and songs that honoured the people who built the path to our life together. What is beautiful is that those songs have stayed with us, quietly threading through our everyday moments. Now, as our children grow up, those same tunes surface in our home and travels, embedding themselves into their memories too, so the soundtrack of our love story keeps unfolding.” </em></h3><h3>- Natalie, Founder. </h3>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_hVqnB3"
-      ],
       "settings": {
         "grid_items_count": 1,
         "grid_items_count_pocket": "1/1",
@@ -527,8 +491,8 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p><strong>Ask The Only Question That Matters</strong></p><p>Keep asking: “Does this feel like us?” If it does, you’re building a day that will live in memory as vividly as the vows themselves – a day where, for everyone there, it feels so good to know two people so in love.<br/></p>",
-            "description_mobile": "<p><strong>Ask The Only Question That Matters</strong></p><p>Keep asking: “Does this feel like us?” If it does, you’re building a day that will live in memory as vividly as the vows themselves – a day where, for everyone there, it feels so good to know two people so in love.</p>",
+            "description": "<p><strong>A Few Styling Considerations</strong></p><p>While there are no rules when it comes to bridal jewellery, these considerations can help guide your edit:</p><p>— Intricate or high necklines often pair beautifully with statement earrings and a refined bracelet.</p><p>— Open, strapless or sweetheart necklines create space for a necklace to become part of the story.</p><p>— Hair worn up allows earrings to take centre stage. </p><p>— Hair worn down may call for pieces with more movement, length and presence.</p><p>— When in doubt, choose one hero piece and allow it to draw the eye. </p><p>The most considered bridal edits are often the most effortless. Thoughtfully chosen pieces that complement your gown, reflect your personal style and feel true to you. Choose pieces that feel timeless. Pieces that feel personal and the designs you'll treasure long beyond the wedding day, carrying the memory of where your story began.</p>",
+            "description_mobile": "<p><strong>A Few Styling Considerations</strong></p><p>While there are no rules when it comes to bridal jewellery, these considerations can help guide your edit:</p><p>— Intricate or high necklines often pair beautifully with statement earrings and a refined bracelet.</p><p>— Open, strapless or sweetheart necklines create space for a necklace to become part of the story.</p><p>— Hair worn up allows earrings to take centre stage. </p><p>— Hair worn down may call for pieces with more movement, length and presence.</p><p>— When in doubt, choose one hero piece and allow it to draw the eye. </p><p>The most considered bridal edits are often the most effortless. Thoughtfully chosen pieces that complement your gown, reflect your personal style and feel true to you. Choose pieces that feel timeless. Pieces that feel personal and the designs you'll treasure long beyond the wedding day, carrying the memory of where your story began.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",

@@ -389,7 +389,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "the-language-of-love",
+            "collection": "bridal-edit",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -408,8 +408,8 @@
         "description": "<p>At the heart of our new six-piece collection is a hidden script: morse code messages carrying vows in gold and freshwater pearls. Whether chosen for a wedding day or simply as a vow for a lifetime, organic silhouettes and woven silk threads in three tones complete each piece, designed to hold a message that’s yours alone.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "SHOP NOW",
-        "button_1_link": "shopify://collections/the-language-of-love",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-edit",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

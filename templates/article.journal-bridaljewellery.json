@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_154aa758-153e-4ce0-a578-612b869eb4e2.png"
+            "image": "shopify://shop_images/231114_NMJ_0746_Web_23112ec5-259a-4ab5-bd6e-de08580bd42f.jpg"
           }
         }
       },
@@ -29,11 +29,11 @@
         "klaviyo_form_id": "",
         "media_position": "left",
         "media_position_mobile": "bottom",
-        "media_width": "6",
+        "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "<p>Choosing Your Bridal Jewellery</p>",
         "title": "<p>A Guide to Styling Your Wedding Day Edit</p>",
-        "description": "<p>There are few moments in life where every detail carries such meaning.</p><p>The gown chosen after months of searching. The flowers held tightly before walking down the aisle. The jewellery carefully fastened in the quiet moments before walking down the aisle. These pieces become part of the memories you will carry forever. Worn as you exchange vows, embrace loved ones and step into a new chapter, they become woven into the story of the day itself.</p><p>Yet the beauty of your bridal jewellery lies in what happens after.</p><p>Returning for anniversaries, celebrations and moments both big and small, becoming treasured reminders of where your story began.</p><p>When choosing your bridal jewellery, begin not with trends or rules, but with reflection. Consider the details that make you feel most like yourself and the pieces you can imagine reaching for long after the day has passed.</p><p>Thoughtfully considered, deeply personal and designed to be cherished for years to come.</p>",
+        "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -60,8 +60,8 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p><strong>Curating Your Bridal Look</strong></p><p>As you begin curating the pieces you'll wear on your wedding day, consider how each element speaks to the next. The silhouette of your gown. The way your hair is styled. The details that feel most like you.</p><p>A high neckline may ask for little more than a sculptural earring, paired with a bracelet. A clean, open neckline creates space for a necklace to become part of the story, drawing the eye and complimenting your gown. </p>",
-            "description_mobile": "<p><strong>Curating Your Bridal Look</strong></p><p>As you begin curating the pieces you'll wear on your wedding day, consider how each element speaks to the next. The silhouette of your gown. The way your hair is styled. The details that feel most like you.</p><p>A high neckline may ask for little more than a sculptural earring, paired with a bracelet. A clean, open neckline creates space for a necklace to become part of the story, drawing the eye and complimenting your gown. </p>",
+            "description": "<p>There are few moments in life where every detail carries such meaning.</p><p>The gown chosen after months of searching. The flowers held tightly before walking down the aisle. The jewellery carefully fastened in the quiet moments before walking down the aisle. These pieces become part of the memories you will carry forever. Worn as you exchange vows, embrace loved ones and step into a new chapter, they become woven into the story of the day itself.</p><p>Yet the beauty of your bridal jewellery lies in what happens after.</p><p>Returning for anniversaries, celebrations and moments both big and small, becoming treasured reminders of where your story began.</p><p>When choosing your bridal jewellery, begin not with trends or rules, but with reflection. Consider the details that make you feel most like yourself and the pieces you can imagine reaching for long after the day has passed.</p><p>Thoughtfully considered, deeply personal and designed to be cherished for years to come.</p>",
+            "description_mobile": "<p>There are few moments in life where every detail carries such meaning.</p><p>The gown chosen after months of searching. The flowers held tightly before walking down the aisle. The jewellery carefully fastened in the quiet moments before walking down the aisle. These pieces become part of the memories you will carry forever. Worn as you exchange vows, embrace loved ones and step into a new chapter, they become woven into the story of the day itself.</p><p>Yet the beauty of your bridal jewellery lies in what happens after.</p><p>Returning for anniversaries, celebrations and moments both big and small, becoming treasured reminders of where your story began.</p><p>When choosing your bridal jewellery, begin not with trends or rules, but with reflection. Consider the details that make you feel most like yourself and the pieces you can imagine reaching for long after the day has passed.</p><p>Thoughtfully considered, deeply personal and designed to be cherished for years to come.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -102,34 +102,56 @@
         "button_style": "underline"
       }
     },
-    "text_with_media_8tf3wj": {
-      "type": "text-with-media",
+    "content_list_gempnj": {
+      "type": "content-list",
       "blocks": {
-        "image_BKzEcp": {
+        "image_RNWGRr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_31194160-28eb-4a53-84e5-d545b8d04320.png"
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p><br/><strong>Curating Your Bridal Look</strong></p><p>As you begin curating the pieces you'll wear on your wedding day, consider how each element speaks to the next. The silhouette of your gown. The way your hair is styled. The details that feel most like you.</p><p>A high neckline may ask for little more than a sculptural earring, paired with a bracelet. A clean, open neckline creates space for a necklace to become part of the story, drawing the eye and complimenting your gown. </p>",
+            "description_mobile": "<p><br/><strong>Curating Your Bridal Look</strong></p><p>As you begin curating the pieces you'll wear on your wedding day, consider how each element speaks to the next. The silhouette of your gown. The way your hair is styled. The details that feel most like you.</p><p>A high neckline may ask for little more than a sculptural earring, paired with a bracelet. A clean, open neckline creates space for a necklace to become part of the story, drawing the eye and complimenting your gown. </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "image_BKzEcp"
+        "image_RNWGRr"
       ],
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "middleLeft",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
         "subheading": "",
-        "title": "<h3>“Connor and I care so deeply about our community<em> - the people around us have been the welcomed third person in our relationship since the very beginning – from family, to dear friends. </em>We wrote each of our guests a letter to thank them for coming and printed off a fun polaroid of a moment we’ve shared together<em> as our place cards – this was our token to them of how much their presence meant to us on the day. </em>We also did one for each other as a surprise on the day <em>– such special memories I’ll keep forever!” </em></h3><h3><br/>- Shona, Head Designer. </h3>",
+        "title": "",
         "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },
@@ -187,179 +209,6 @@
       }
     },
     "content_list_cLC3re": {
-      "type": "content-list",
-      "blocks": {
-        "image_PWRQKz": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "<h3><em>“We chose the iconic Rose Seidler House as the backdrop to our day, a place that speaks to our shared love of design and mid-century architecture. Colour became the thread that tied it all together - playful, modern yet nostalgic - a reflection of the fun, childlike joy we wanted our wedding to hold. It felt true to us and our relationship: vibrant, full of character, and rooted in the things we love most.” </em></h3><h3>- Madeleine, Social Media Coordinator. </h3>",
-            "description_mobile": "<h3><em>“We chose the iconic Rose Seidler House as the backdrop to our day, a place that speaks to our shared love of design and mid-century architecture. Colour became the thread that tied it all together - playful, modern yet nostalgic - a reflection of the fun, childlike joy we wanted our wedding to hold. It felt true to us and our relationship: vibrant, full of character, and rooted in the things we love most.” </em></h3><h3>- Madeleine, Social Media Coordinator. </h3>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_PWRQKz"
-      ],
-      "settings": {
-        "grid_items_count": 1,
-        "grid_items_count_pocket": "1/1",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_Uzt9PU": {
-      "type": "content-list",
-      "blocks": {
-        "image_yKkJLj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_07e20a95-a722-4b13-a934-3ba3c9800f75.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_Df3jcX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5_d7dcaf72-5e20-43ee-9ec2-b11643b56e0a.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_kx9f7Q": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/3_15940fbe-c1ba-4b4e-9209-b7fbdb272533.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_yKkJLj",
-        "image_Df3jcX",
-        "image_kx9f7Q"
-      ],
-      "settings": {
-        "grid_items_count": 3,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_WdDQeM": {
       "type": "content-list",
       "settings": {
         "grid_items_count": 1,
@@ -584,11 +433,9 @@
     "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
-    "text_with_media_8tf3wj",
+    "content_list_gempnj",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
     "content_list_cLC3re",
-    "content_list_Uzt9PU",
-    "content_list_WdDQeM",
     "content_list_4rQEcp",
     "content_list_TcC7i9",
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455",

@@ -155,6 +155,72 @@
         "button_style": "underline"
       }
     },
+    "content_slider_GtpDNG": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_e6TDz7": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-earrings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_e6TDz7"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 8,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Earrings</p>",
+        "description": "<p>A considered collection of diamond and pearl earrings, from understated studs to elegant drops.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-earrings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_jVdT7y": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_bpUMhU": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-necklaces",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_bpUMhU"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 5,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Necklaces</p>",
+        "description": "<p>Timeless diamond and pearl necklaces, handcrafted in refined silhouettes to complement your bridal look.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-necklaces",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
       "type": "content-list",
       "blocks": {
@@ -237,39 +303,6 @@
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_slider_GtpDNG": {
-      "type": "content-slider",
-      "blocks": {
-        "collection_e6TDz7": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "bridal-earrings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": false
-          }
-        }
-      },
-      "block_order": [
-        "collection_e6TDz7"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "",
-        "title": "<p>Earrings</p>",
-        "description": "<p>A considered collection of diamond and pearl earrings, from understated studs to elegant drops.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "shopify://collections/bridal-earrings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -362,6 +395,39 @@
         "button_style": "underline"
       }
     },
+    "content_slider_689HQc": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_Lnp8QX": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-edit",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_Lnp8QX"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 5,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Bracelets</p>",
+        "description": "<p>Refined diamond and pearl designs, handcrafted to complement every bridal style.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-edit",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455": {
       "type": "content-list",
       "blocks": {
@@ -410,39 +476,6 @@
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_slider_689HQc": {
-      "type": "content-slider",
-      "blocks": {
-        "collection_Lnp8QX": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "bridal-edit",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": false
-          }
-        }
-      },
-      "block_order": [
-        "collection_Lnp8QX"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 5,
-        "enable_natual_scroll": true,
-        "subheading": "",
-        "title": "<p>Bracelets</p>",
-        "description": "<p>Refined diamond and pearl designs, handcrafted to complement every bridal style.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "shopify://collections/bridal-edit",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -500,13 +533,14 @@
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
     "content_list_gempnj",
+    "content_slider_GtpDNG",
+    "content_slider_jVdT7y",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
     "content_list_cLC3re",
     "content_list_4rQEcp",
-    "content_slider_GtpDNG",
     "content_list_TcC7i9",
-    "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
     "content_slider_689HQc",
+    "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
     "content_slider_nWGzjp",
     "main"
   ]

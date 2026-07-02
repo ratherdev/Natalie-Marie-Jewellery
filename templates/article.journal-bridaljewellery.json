@@ -401,7 +401,7 @@
       ],
       "settings": {
         "enable_light": false,
-        "grid_items_count": 8,
+        "grid_items_count": 5,
         "enable_natual_scroll": true,
         "subheading": "",
         "title": "<p>Bracelets</p>",
@@ -410,6 +410,72 @@
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "shopify://collections/bridal-edit",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_GtpDNG": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_e6TDz7": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-edit",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_e6TDz7"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 8,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Earrings</p>",
+        "description": "<p>A considered collection of diamond and pearl earrings, from understated studs to elegant drops.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-earrings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_nWGzjp": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_tCWGgC": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-edit",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_tCWGgC"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 8,
+        "enable_natual_scroll": true,
+        "subheading": "<p>NEW COLLECTION</p>",
+        "title": "<p>Fleur</p>",
+        "description": "<p>Inspired by the beauty of flowers in bloom, Fleur was crafted to honour the celebrations that seem to pass in the blink of an eye, capturing the beauty of the present moment and transforming it into something enduring.</p><p> </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -440,6 +506,8 @@
     "content_list_TcC7i9",
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455",
     "content_slider_689HQc",
+    "content_slider_GtpDNG",
+    "content_slider_nWGzjp",
     "main"
   ]
 }

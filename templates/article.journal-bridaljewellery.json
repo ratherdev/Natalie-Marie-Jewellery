@@ -188,39 +188,6 @@
         "button_style": "underline"
       }
     },
-    "content_slider_jVdT7y": {
-      "type": "content-slider",
-      "blocks": {
-        "collection_bpUMhU": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "bridal-necklaces",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": false
-          }
-        }
-      },
-      "block_order": [
-        "collection_bpUMhU"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 5,
-        "enable_natual_scroll": true,
-        "subheading": "",
-        "title": "<p>Necklaces</p>",
-        "description": "<p>Timeless diamond and pearl necklaces, handcrafted in refined silhouettes to complement your bridal look.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "shopify://collections/bridal-necklaces",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
       "type": "content-list",
       "blocks": {
@@ -269,6 +236,39 @@
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_jVdT7y": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_bpUMhU": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-necklaces",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_bpUMhU"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 5,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Necklaces</p>",
+        "description": "<p>Timeless diamond and pearl necklaces, handcrafted in refined silhouettes to complement your bridal look.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-necklaces",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -534,8 +534,8 @@
     "22942553-01da-4697-89ac-f500b502883f",
     "content_list_gempnj",
     "content_slider_GtpDNG",
-    "content_slider_jVdT7y",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
+    "content_slider_jVdT7y",
     "content_list_cLC3re",
     "content_list_4rQEcp",
     "content_list_TcC7i9",

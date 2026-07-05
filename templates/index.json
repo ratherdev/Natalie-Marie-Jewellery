@@ -54,34 +54,34 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/230904_NMJ_37__3351.jpg",
-            "mobile_image": "shopify://shop_images/230904_NMJ_37__3351.jpg",
+            "image": "shopify://shop_images/NMJ_Launch_Low_91.jpg",
+            "mobile_image": "shopify://shop_images/NMJ_Launch_Low_91.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "",
-            "title": "<p><em>Archive Sale</em></p>",
-            "description": "<p>A collection of our signature pieces return for a limited time. For one week only, enjoy 30% off a curated selection of archive styles. Available exclusively online in limited quantities.</p>",
+            "subheading": "<p>Everyday Foundations</p>",
+            "title": "<p><em>A Foundation For Your Story</em></p>",
+            "description": "<p>Build a piece that is uniquely yours. Layer meaningful charms onto your favourite chain or beaded necklace, creating a modern heirloom that evolves alongside life's milestones.</p>",
             "colour_style": "light",
             "button_1_text": "Shop Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/archive-sale-1",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/necklaces?filter.p.m.custom.filter_metal=Yellow%20Gold",
             "button_style": "underline"
           }
         },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Queenie_3.png",
-            "mobile_image": "shopify://shop_images/Queenie_3.png",
+            "image": "shopify://shop_images/Website_Resizes_90.png",
+            "mobile_image": "shopify://shop_images/Website_Resizes_90.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p>Your Everyday Signature </p>",
-            "title": "<p><em>Meet Queenie </em></p>",
-            "description": "<p>Delicate by design and timeless by nature, the Queenie Necklace is an everyday heirloom inspired by one of our founder’s vintage treasures and named after Natalie’s great-grandmother, Queenie.</p>",
+            "subheading": "<p>A Lifetime Of Meaning</p>",
+            "title": "<p><em>Modern Brilliance</em></p>",
+            "description": "<p>From classic solitaire designs, trilogy rings, or unique cluster settings Designed for everyday wear and a lifetime of meaning. </p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://collections/the-queenie-edit",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/laboratory-grown-diamond-engagement-ring?filter.p.m.custom.filter_metal=Yellow%20Gold",
             "button_style": "underline"
           }
         },
@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "archive-sale-1",
+            "collection": "laboratory-grown-diamond-engagement-ring",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>30% OFF</strong></p>",
-        "title": "<p>Archive Sale</p>",
-        "description": "<p>A collection of our signature pieces return for a limited time.​ For one week only, enjoy 30% off a curated selection of archive styles.  ​Available exclusively online in limited quantities.</p>",
+        "subheading": "<p><strong>Laboratory-Grown Diamond Engagement Rings</strong></p>",
+        "title": "<p>Thoughtfully Crafted</p>",
+        "description": "<p>From classic solitaire designs, trilogy rings, or unique cluster settings Designed for everyday wear and a lifetime of meaning</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/archive-sale-1",
+        "button_1_link": "shopify://collections/laboratory-grown-diamond-engagement-ring",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

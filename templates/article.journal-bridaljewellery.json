@@ -51,42 +51,7 @@
     },
     "22942553-01da-4697-89ac-f500b502883f": {
       "type": "content-list",
-      "blocks": {
-        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "<p>There are few moments in life where every detail carries such meaning.</p><p>The gown chosen after months of searching. The flowers held tightly before walking down the aisle. The jewellery carefully fastened in the quiet moments before walking down the aisle. These pieces become part of the memories you will carry forever. Worn as you exchange vows, embrace loved ones and step into a new chapter, they become woven into the story of the day itself.</p><p>Yet the beauty of your bridal jewellery lies in what happens after.</p><p>Returning for anniversaries, celebrations and moments both big and small, becoming treasured reminders of where your story began.</p><p>When choosing your bridal jewellery, begin not with trends or rules, but with reflection. Consider the details that make you feel most like yourself and the pieces you can imagine reaching for long after the day has passed.</p><p>Thoughtfully considered, deeply personal and designed to be cherished for years to come.</p>",
-            "description_mobile": "<p>There are few moments in life where every detail carries such meaning.</p><p>The gown chosen after months of searching. The flowers held tightly before walking down the aisle. The jewellery carefully fastened in the quiet moments before walking down the aisle. These pieces become part of the memories you will carry forever. Worn as you exchange vows, embrace loved ones and step into a new chapter, they become woven into the story of the day itself.</p><p>Yet the beauty of your bridal jewellery lies in what happens after.</p><p>Returning for anniversaries, celebrations and moments both big and small, becoming treasured reminders of where your story began.</p><p>When choosing your bridal jewellery, begin not with trends or rules, but with reflection. Consider the details that make you feel most like yourself and the pieces you can imagine reaching for long after the day has passed.</p><p>Thoughtfully considered, deeply personal and designed to be cherished for years to come.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3"
-      ],
+      "disabled": true,
       "settings": {
         "grid_items_count": 3,
         "grid_items_count_pocket": "1/2",

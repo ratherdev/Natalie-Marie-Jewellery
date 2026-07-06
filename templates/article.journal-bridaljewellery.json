@@ -311,38 +311,6 @@
     "content_list_TcC7i9": {
       "type": "content-list",
       "blocks": {
-        "image_KhLy7P": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1_b019926e-7f8b-46d5-bacc-804032fe8b82.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
         "image_WNyLTC": {
           "type": "image",
           "settings": {
@@ -374,14 +342,79 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
+        },
+        "image_kqYkHB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_b019926e-7f8b-46d5-bacc-804032fe8b82.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_KhLy7P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_fda63940-38ce-4802-9735-509c1aa8b01b.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
         }
       },
       "block_order": [
-        "image_KhLy7P",
-        "image_WNyLTC"
+        "image_WNyLTC",
+        "image_kqYkHB",
+        "image_KhLy7P"
       ],
       "settings": {
-        "grid_items_count": 2,
+        "grid_items_count": 3,
         "grid_items_count_pocket": "1/1",
         "text_align": "center",
         "subheading": "",

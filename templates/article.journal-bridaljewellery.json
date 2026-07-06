@@ -153,126 +153,6 @@
         "button_style": "underline"
       }
     },
-    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
-      "type": "content-list",
-      "blocks": {
-        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "<p>The way you choose to style your hair offers its own opportunity for expression. Swept back and pinned away, it allows a statement earring to take centre stage, reflecting light with every turn of the head. Worn softly down, jewellery becomes something discovered between movement and remembered in photographs for years to come.</p><p>Many of our most-loved bridal earrings are inspired by organic floral forms and delicate petals, a design language that has evolved into our Fleur Collection. Designed to feel refined yet distinctive, they offer a sense of occasion while remaining timeless enough to be worn well beyond your wedding day.</p><p>There is beauty in balance. In allowing one piece to hold focus while the others quietly support it. The most considered bridal styling comes not from adding more, but from thoughtfully choosing pieces that complement your gown and feel unmistakably like you.</p><p>The pieces you choose should never compete with your dress, but rather become an extension of it. An extension of you.</p><p>Long after the flowers have faded and the celebrations have drawn to a close, these pieces remain. Worn through future milestones, anniversaries and celebrations, they become woven into the chapters that follow.</p>",
-            "description_mobile": "<p>The way you choose to style your hair offers its own opportunity for expression. Swept back and pinned away, it allows a statement earring to take centre stage, reflecting light with every turn of the head. Worn softly down, jewellery becomes something discovered between movement and remembered in photographs for years to come.</p><p>Many of our most-loved bridal earrings are inspired by organic floral forms and delicate petals, a design language that has evolved into our Fleur Collection. Designed to feel refined yet distinctive, they offer a sense of occasion while remaining timeless enough to be worn well beyond your wedding day.</p><p>There is beauty in balance. In allowing one piece to hold focus while the others quietly support it. The most considered bridal styling comes not from adding more, but from thoughtfully choosing pieces that complement your gown and feel unmistakably like you.</p><p>The pieces you choose should never compete with your dress, but rather become an extension of it. An extension of you.</p><p>Long after the flowers have faded and the celebrations have drawn to a close, these pieces remain. Worn through future milestones, anniversaries and celebrations, they become woven into the chapters that follow.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3"
-      ],
-      "settings": {
-        "grid_items_count": 1,
-        "grid_items_count_pocket": "1/1",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_slider_jVdT7y": {
-      "type": "content-slider",
-      "blocks": {
-        "collection_bpUMhU": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "bridal-necklaces",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": false
-          }
-        }
-      },
-      "block_order": [
-        "collection_bpUMhU"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 5,
-        "enable_natual_scroll": true,
-        "subheading": "",
-        "title": "<p>Necklaces</p>",
-        "description": "<p>Timeless diamond and pearl necklaces, handcrafted in refined silhouettes to complement your bridal look.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "shopify://collections/bridal-necklaces",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_cLC3re": {
-      "type": "content-list",
-      "settings": {
-        "grid_items_count": 1,
-        "grid_items_count_pocket": "1/1",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "content_list_4rQEcp": {
-      "type": "content-list",
-      "settings": {
-        "grid_items_count": 1,
-        "grid_items_count_pocket": "1/1",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "content_list_TcC7i9": {
       "type": "content-list",
       "blocks": {
@@ -380,6 +260,126 @@
       ],
       "settings": {
         "grid_items_count": 3,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
+      "type": "content-list",
+      "blocks": {
+        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>The way you choose to style your hair offers its own opportunity for expression. Swept back and pinned away, it allows a statement earring to take centre stage, reflecting light with every turn of the head. Worn softly down, jewellery becomes something discovered between movement and remembered in photographs for years to come.</p><p>Many of our most-loved bridal earrings are inspired by organic floral forms and delicate petals, a design language that has evolved into our Fleur Collection. Designed to feel refined yet distinctive, they offer a sense of occasion while remaining timeless enough to be worn well beyond your wedding day.</p><p>There is beauty in balance. In allowing one piece to hold focus while the others quietly support it. The most considered bridal styling comes not from adding more, but from thoughtfully choosing pieces that complement your gown and feel unmistakably like you.</p><p>The pieces you choose should never compete with your dress, but rather become an extension of it. An extension of you.</p><p>Long after the flowers have faded and the celebrations have drawn to a close, these pieces remain. Worn through future milestones, anniversaries and celebrations, they become woven into the chapters that follow.</p>",
+            "description_mobile": "<p>The way you choose to style your hair offers its own opportunity for expression. Swept back and pinned away, it allows a statement earring to take centre stage, reflecting light with every turn of the head. Worn softly down, jewellery becomes something discovered between movement and remembered in photographs for years to come.</p><p>Many of our most-loved bridal earrings are inspired by organic floral forms and delicate petals, a design language that has evolved into our Fleur Collection. Designed to feel refined yet distinctive, they offer a sense of occasion while remaining timeless enough to be worn well beyond your wedding day.</p><p>There is beauty in balance. In allowing one piece to hold focus while the others quietly support it. The most considered bridal styling comes not from adding more, but from thoughtfully choosing pieces that complement your gown and feel unmistakably like you.</p><p>The pieces you choose should never compete with your dress, but rather become an extension of it. An extension of you.</p><p>Long after the flowers have faded and the celebrations have drawn to a close, these pieces remain. Worn through future milestones, anniversaries and celebrations, they become woven into the chapters that follow.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_jVdT7y": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_bpUMhU": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bridal-necklaces",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_bpUMhU"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 5,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p>Necklaces</p>",
+        "description": "<p>Timeless diamond and pearl necklaces, handcrafted in refined silhouettes to complement your bridal look.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "shopify://collections/bridal-necklaces",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_cLC3re": {
+      "type": "content-list",
+      "settings": {
+        "grid_items_count": 1,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_4rQEcp": {
+      "type": "content-list",
+      "settings": {
+        "grid_items_count": 1,
         "grid_items_count_pocket": "1/1",
         "text_align": "center",
         "subheading": "",
@@ -652,11 +652,11 @@
     "22942553-01da-4697-89ac-f500b502883f",
     "content_list_gempnj",
     "content_slider_GtpDNG",
+    "content_list_TcC7i9",
     "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
     "content_slider_jVdT7y",
     "content_list_cLC3re",
     "content_list_4rQEcp",
-    "content_list_TcC7i9",
     "content_list_6mWqeC",
     "content_slider_689HQc",
     "800eebd7-962e-4fa6-bc5d-8b818a1ba455",

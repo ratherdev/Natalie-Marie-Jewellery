@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJxEFFIES_HIGH_82.jpg"
+            "image": "shopify://shop_images/IMG_0300_2_copy.jpg"
           }
         }
       },
@@ -96,10 +96,10 @@
     "content_list_8qbN8J": {
       "type": "content-list",
       "blocks": {
-        "image_3Tc4My": {
+        "image_8mVEK8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJxEFFIES_HIGH_207.jpg",
+            "image": "shopify://shop_images/000014610005.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -128,10 +128,10 @@
             "metaobject_devices": ""
           }
         },
-        "image_8mVEK8": {
+        "image_3Tc4My": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/F0A9160-2.jpg",
+            "image": "shopify://shop_images/NMJxEFFIES_HIGH_207.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -194,8 +194,8 @@
         }
       },
       "block_order": [
-        "image_3Tc4My",
         "image_8mVEK8",
+        "image_3Tc4My",
         "image_nEiYac"
       ],
       "settings": {

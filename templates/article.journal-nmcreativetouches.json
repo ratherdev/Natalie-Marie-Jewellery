@@ -450,7 +450,7 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "<p>Honour The People Who Helped Shape Your Story</p>",
-            "description": "<p>A wedding is not only a celebration of two people. It is also a celebration of everyone who helped bring them together.</p><p>For Natalie and Dan, honouring family became one of the most meaningful parts of their ceremony.</p><p>\"We both took a moment to thank our mothers for their guidance, love and support, and ultimately for helping us find our way to one another.\"</p><p>As jewellery has always held such a significant part of their story, they also chose to include a tradition that felt deeply aligned with what wedding rings represent.</p><p>Their rings were passed throughout the ceremony in a small palm-shaped dish for a traditional ring warming, allowing every guest to hold them briefly and quietly offer a blessing before they exchanged vows.</p><p>\"We wanted our wedding rings to carry not only our commitment, but the love and energy of everyone who was there with us.\"</p><p>Family heritage also found its place throughout the celebration. With Natalie's family travelling from England, British traditions were woven into the menu through Eton Mess for dessert and a Victoria Sponge-inspired wedding cake, creating familiar moments that made loved ones feel at home.</p><p>Welcome traditions but don't be afraid to thoughtfully reinterpret them to reflect your own story, make them your own and in a way that speaks to your story as a couple and your guests. </p>",
+            "description": "<p>A wedding is not only a celebration of two people. It is also a celebration of everyone who helped bring them together.</p><p>For Natalie and Dan, honouring family became one of the most meaningful parts of their ceremony.</p><p>\"We both took a moment to thank our mothers for their guidance, love and support, and ultimately for helping us find our way to one another.\"</p>",
             "description_mobile": "<p>A wedding is not only a celebration of two people. It is also a celebration of everyone who helped bring them together.</p><p>For Natalie and Dan, honouring family became one of the most meaningful parts of their ceremony.</p><p>\"We both took a moment to thank our mothers for their guidance, love and support, and ultimately for helping us find our way to one another.\"</p><p>As jewellery has always held such a significant part of their story, they also chose to include a tradition that felt deeply aligned with what wedding rings represent.</p><p>Their rings were passed throughout the ceremony in a small palm-shaped dish for a traditional <em>ring warming</em>, allowing every guest to hold them briefly and quietly offer a blessing before they exchanged vows.</p><p>\"We wanted our wedding rings to carry not only our commitment, but the love and energy of everyone who was there with us.\"</p><p>Family heritage also found its place throughout the celebration. With Natalie's family travelling from England, British traditions were woven into the menu through Eton Mess for dessert and a Victoria Sponge-inspired wedding cake, creating familiar moments that made loved ones feel at home.</p><p>Welcome traditions but don't be afraid to thoughtfully reinterpret them to reflect your own story, make them your own and in a way that speaks to your story as a couple and your guests. </p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -489,6 +489,90 @@
         "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_4KdqAK": {
+      "type": "content-list",
+      "blocks": {
+        "image_g4QLYF": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>Family heritage also found its place throughout the celebration. With Natalie's family travelling from England, British traditions were woven into the menu through Eton Mess for dessert and a Victoria Sponge-inspired wedding cake, creating familiar moments that made loved ones feel at home.</p><p>Welcome traditions but don't be afraid to thoughtfully reinterpret them to reflect your own story, make them your own and in a way that speaks to your story as a couple and your guests. </p>",
+            "description_mobile": "<p>Family heritage also found its place throughout the celebration. With Natalie's family travelling from England, British traditions were woven into the menu through Eton Mess for dessert and a Victoria Sponge-inspired wedding cake, creating familiar moments that made loved ones feel at home.</p><p>Welcome traditions but don't be afraid to thoughtfully reinterpret them to reflect your own story, make them your own and in a way that speaks to your story as a couple and your guests. </p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_g4QLYF"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "text_with_media_haJ6yM": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_pdmaFc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Edit.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_pdmaFc"
+      ],
+      "settings": {
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_position_mobile": "bottom",
+        "media_width": "6",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "",
+        "description": "<p>As jewellery has always held such a significant part of their story, they also chose to include a tradition that felt deeply aligned with what wedding rings represent.</p><p>Their rings were passed throughout the ceremony in a small palm-shaped dish for a traditional ring warming, allowing every guest to hold them briefly and quietly offer a blessing before they exchanged vows.</p><p>\"We wanted our wedding rings to carry not only our commitment, but the love and energy of everyone who was there with us.\"</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_style": "underline"
       }
     },
@@ -1035,6 +1119,8 @@
     "content_list_drW7jD",
     "content_list_9XWGYG",
     "content_list_D7Nrpt",
+    "content_list_4KdqAK",
+    "text_with_media_haJ6yM",
     "content_list_pQJTtf",
     "content_list_TcC7i9",
     "content_list_QRht9g",

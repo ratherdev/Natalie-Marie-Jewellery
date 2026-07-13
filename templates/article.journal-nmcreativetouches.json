@@ -771,38 +771,6 @@
             "metaobject_devices": ""
           }
         },
-        "image_77HUpr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/000014610005.jpg",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
         "image_eX8eJF": {
           "type": "image",
           "settings": {
@@ -838,11 +806,10 @@
       },
       "block_order": [
         "image_64JkWR",
-        "image_77HUpr",
         "image_eX8eJF"
       ],
       "settings": {
-        "grid_items_count": 3,
+        "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",
         "text_align": "center",
         "subheading": "",
@@ -893,6 +860,90 @@
       },
       "block_order": [
         "image_pd7nKg"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "text_with_media_kc7Uy4": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_dMfb4H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sophie_Wedding_Imagery.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_dMfb4H"
+      ],
+      "settings": {
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "6",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "",
+        "description": "<p>During Sophie's reception, held in a beach shack where she and her husband first met, the power suddenly went out. Instead of panic, their guests simply adapted. Friends removed fairy lights from the palm trees and wrapped them around the couple. Someone wheeled over a motorbike and turned on its headlights. Another connected an iPhone to a portable speaker.</p><p>\"The party just continued. It reminded us that it isn't perfect plans that make a wedding unforgettable. It's the people you surround yourself with.\"</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_pQNCQe": {
+      "type": "content-list",
+      "blocks": {
+        "image_xpRVEB": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>For Elsa, what began as every bride's worst nightmare became one of the stories she treasures most.</p><p>Just moments before walking down the aisle, her first dress ripped, leaving her bridesmaids hurriedly sewing her into it before the ceremony. Later that evening, after changing into her second dress, her husband spilled red wine down the front of her gown.</p><p>Gathered together in a tiny bathroom, her bridesmaids and closest girlfriends armed themselves with whitening toothpaste, Dyson hairdryers and plenty of determination to rescue the dress, for the second time.</p><p>Looking back, it wasn't the mishaps she remembers most, but the laughter, camaraderie and overwhelming reminder of lucky she was to have the right people by her side.</p><p>\"Looking back, those moments became some of my favourite memories from the entire day. As chaotic as they felt at the time, they became a beautiful reminder of just how lucky I am to be surrounded by friendships I treasure so deeply. The women who have stood beside me through every chapter of my life were there once again, quite literally holding me together.\"</p>",
+            "description_mobile": "<p>No wedding unfolds exactly as planned.</p><p>Often, it is the unexpected moments that become the stories retold for years to come.</p><p>During Sophie's reception, held in a beach shack where she and her husband first met, the power suddenly went out.</p><p>Instead of panic, their guests simply adapted.</p><p>Friends removed fairy lights from the palm trees and wrapped them around the couple. Someone wheeled over a motorbike and turned on its headlights. Another connected an iPhone to a portable speaker.</p><p>\"The party just continued. It reminded us that it isn't perfect plans that make a wedding unforgettable. It's the people you surround yourself with.\"</p><p>For Elsa, what began as every bride's worst nightmare became one of the stories she treasures most.</p><p>Just moments before walking down the aisle, her first dress ripped, leaving her bridesmaids hurriedly sewing her into it before the ceremony. Later that evening, after changing into her second dress, her husband spilled red wine down the front of her gown.</p><p>Gathered together in a tiny bathroom, her bridesmaids and closest girlfriends armed themselves with whitening toothpaste, Dyson hairdryers and plenty of determination to rescue the dress, for the second time.</p><p>Looking back, it wasn't the mishaps she remembers most, but the laughter, camaraderie and overwhelming reminder of lucky she was to have the right people by her side.</p><p>\"Looking back, those moments became some of my favourite memories from the entire day. As chaotic as they felt at the time, they became a beautiful reminder of just how lucky I am to be surrounded by friendships I treasure so deeply. The women who have stood beside me through every chapter of my life were there once again, quite literally holding me together.\"</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xpRVEB"
       ],
       "settings": {
         "grid_items_count": 3,
@@ -1126,6 +1177,8 @@
     "content_list_QRht9g",
     "content_list_fbRRik",
     "content_list_w8F9Tb",
+    "text_with_media_kc7Uy4",
+    "content_list_pQNCQe",
     "content_list_bHbwHy",
     "text_with_media_Fif3rL",
     "content_list_Yh7w4M",

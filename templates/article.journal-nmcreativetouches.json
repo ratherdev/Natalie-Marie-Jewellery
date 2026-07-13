@@ -492,6 +492,37 @@
         "button_style": "underline"
       }
     },
+    "text_with_media_haJ6yM": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_pdmaFc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Edit.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_pdmaFc"
+      ],
+      "settings": {
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_position_mobile": "bottom",
+        "media_width": "6",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "",
+        "description": "<p>As jewellery has always held such a significant part of their story, they also chose to include a tradition that felt deeply aligned with what wedding rings represent.</p><p>Their rings were passed throughout the ceremony in a small palm-shaped dish for a traditional ring warming, allowing every guest to hold them briefly and quietly offer a blessing before they exchanged vows.</p><p>\"We wanted our wedding rings to carry not only our commitment, but the love and energy of everyone who was there with us.\"</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
     "content_list_4KdqAK": {
       "type": "content-list",
       "blocks": {
@@ -542,37 +573,6 @@
         "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_haJ6yM": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_pdmaFc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Edit.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_pdmaFc"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "middleLeft",
-        "subheading": "",
-        "title": "",
-        "description": "<p>As jewellery has always held such a significant part of their story, they also chose to include a tradition that felt deeply aligned with what wedding rings represent.</p><p>Their rings were passed throughout the ceremony in a small palm-shaped dish for a traditional ring warming, allowing every guest to hold them briefly and quietly offer a blessing before they exchanged vows.</p><p>\"We wanted our wedding rings to carry not only our commitment, but the love and energy of everyone who was there with us.\"</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
         "button_style": "underline"
       }
     },
@@ -1119,8 +1119,8 @@
     "content_list_drW7jD",
     "content_list_9XWGYG",
     "content_list_D7Nrpt",
-    "content_list_4KdqAK",
     "text_with_media_haJ6yM",
+    "content_list_4KdqAK",
     "content_list_pQJTtf",
     "content_list_TcC7i9",
     "content_list_QRht9g",

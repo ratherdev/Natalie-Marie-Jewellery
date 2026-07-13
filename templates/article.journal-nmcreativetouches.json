@@ -50,8 +50,8 @@
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "",
-            "title": "<p>Create Moments That Invite Connection</p>",
-            "description": "<p>Some of the most memorable weddings don't simply bring people together, they create opportunities for guests to feel like part of the story.</p><p>Sometimes this happens through a thoughtful shift in perspective. Other times, it's through a conversation, a shared activity or a small detail that invites connection between the people who have gathered to celebrate you.</p><p>For Head Designer Shona, one thoughtful decision was simply changing where their parents were seated during the ceremony.</p><p>\"We chose to have our parents seated on the opposite side of the aisle from where we were standing. It allowed them to see our faces as we made our vows to one another. It was a small shift that made a meaningful difference.\"</p><p>Connection extended beyond the ceremony itself. During cocktail hour, rather than leaving guests to navigate introductions, Shona and her husband created a relationship-themed crossword featuring stories and memories only certain friends and family would know.</p><p>\"It encouraged people to mingle, laugh and work together over a drink. It became such a lovely conversation starter.\"</p><p>For Elsa, our Marketing Manager, rather than traditional napkins, each one featured handwritten excerpts from anniversary cards and love letters exchanged throughout their relationship, quietly allowing guests to discover the moments that had shaped their journey together.</p><p>Before her destination wedding in Vietnam, Sophie created a shared experience before the celebrations had even begun. Guests were divided into England versus Australia for a playful boat race they affectionately named the Ashes.</p><p>\"It meant so many people who had never met before were already laughing and bonding before the wedding day itself.\"</p><p>Whether through games, shared experiences or thoughtful storytelling, these creative touches invite guests to become part of your story, rather than simply witness it.</p>",
+            "title": "",
+            "description": "<p>Some of the most memorable weddings don't simply bring people together, they create opportunities for guests to feel like part of the story.</p><p>Sometimes this happens through a thoughtful shift in perspective. Other times, it's through a conversation, a shared activity or a small detail that invites connection between the people who have gathered to celebrate you.</p><p>For Head Designer Shona, one thoughtful decision was simply changing where their parents were seated during the ceremony.</p><p>\"We chose to have our parents seated on the opposite side of the aisle from where we were standing. It allowed them to see our faces as we made our vows to one another. It was a small shift that made a meaningful difference.\"</p><p>Connection extended beyond the ceremony itself. During cocktail hour, rather than leaving guests to navigate introductions, Shona and her husband created a relationship-themed crossword featuring stories and memories only certain friends and family would know.</p><p>\"It encouraged people to mingle, laugh and work together over a drink. It became such a lovely conversation starter.\"</p>",
             "description_mobile": "<p>Some of the most memorable weddings don't simply bring people together, they create opportunities for guests to feel like part of the story.</p><p>Sometimes this happens through a thoughtful shift in perspective. Other times, it's through a conversation, a shared activity or a small detail that invites connection between the people who have gathered to celebrate you.</p><p>For Head Designer Shona, one thoughtful decision was simply changing where their parents were seated during the ceremony.</p><p>\"We chose to have our parents seated on the opposite side of the aisle from where we were standing. It allowed them to see our faces as we made our vows to one another. It was a small shift that made a meaningful difference.\"</p><p>Connection extended beyond the ceremony itself. During cocktail hour, rather than leaving guests to navigate introductions, Shona and her husband created a relationship-themed crossword featuring stories and memories only certain friends and family would know.</p><p>\"It encouraged people to mingle, laugh and work together over a drink. It became such a lovely conversation starter.\"</p><p>For Elsa, our Marketing Manager, rather than traditional napkins, each one featured handwritten excerpts from anniversary cards and love letters exchanged throughout their relationship, quietly allowing guests to discover the moments that had shaped their journey together.</p><p>Before her destination wedding in Vietnam, Sophie created a shared experience before the celebrations had even begun. Guests were divided into England versus Australia for a playful boat race they affectionately named the Ashes.</p><p>\"It meant so many people who had never met before were already laughing and bonding before the wedding day itself.\"</p><p>Whether through games, shared experiences or thoughtful storytelling, these creative touches invite guests to become part of your story, rather than simply witness it.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -77,6 +77,59 @@
       },
       "block_order": [
         "template--16177341137065__22942553-01da-4697-89ac-f500b502883f-image-3"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_RCPtyC": {
+      "type": "content-list",
+      "blocks": {
+        "image_QR7JKh": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "<p>For Elsa, our Marketing Manager, rather than traditional napkins, each one featured handwritten excerpts from anniversary cards and love letters exchanged throughout their relationship, quietly allowing guests to discover the moments that had shaped their journey together.</p><p>Before her destination wedding in Vietnam, Sophie created a shared experience before the celebrations had even begun. Guests were divided into England versus Australia for a playful boat race they affectionately named the Ashes.</p><p>\"It meant so many people who had never met before were already laughing and bonding before the wedding day itself.\"</p><p>Whether through games, shared experiences or thoughtful storytelling, these creative touches invite guests to become part of your story, rather than simply witness it.</p>",
+            "description_mobile": "<p>Some of the most memorable weddings don't simply bring people together, they create opportunities for guests to feel like part of the story.</p><p>Sometimes this happens through a thoughtful shift in perspective. Other times, it's through a conversation, a shared activity or a small detail that invites connection between the people who have gathered to celebrate you.</p><p>For Head Designer Shona, one thoughtful decision was simply changing where their parents were seated during the ceremony.</p><p>\"We chose to have our parents seated on the opposite side of the aisle from where we were standing. It allowed them to see our faces as we made our vows to one another. It was a small shift that made a meaningful difference.\"</p><p>Connection extended beyond the ceremony itself. During cocktail hour, rather than leaving guests to navigate introductions, Shona and her husband created a relationship-themed crossword featuring stories and memories only certain friends and family would know.</p><p>\"It encouraged people to mingle, laugh and work together over a drink. It became such a lovely conversation starter.\"</p><p>For Elsa, our Marketing Manager, rather than traditional napkins, each one featured handwritten excerpts from anniversary cards and love letters exchanged throughout their relationship, quietly allowing guests to discover the moments that had shaped their journey together.</p><p>Before her destination wedding in Vietnam, Sophie created a shared experience before the celebrations had even begun. Guests were divided into England versus Australia for a playful boat race they affectionately named the Ashes.</p><p>\"It meant so many people who had never met before were already laughing and bonding before the wedding day itself.\"</p><p>Whether through games, shared experiences or thoughtful storytelling, these creative touches invite guests to become part of your story, rather than simply witness it.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": false,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QR7JKh"
       ],
       "settings": {
         "grid_items_count": 3,
@@ -250,6 +303,126 @@
         "image_YBeX8k",
         "image_4zrwKC",
         "image_p4Ay7M"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_8qbN8J": {
+      "type": "content-list",
+      "blocks": {
+        "image_3Tc4My": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NMJxEFFIES_HIGH_207.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_8mVEK8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/F0A9160-2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_nEiYac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shona_NMJ_Lovers_Imagery.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_3Tc4My",
+        "image_8mVEK8",
+        "image_nEiYac"
       ],
       "settings": {
         "grid_items_count": 3,
@@ -857,6 +1030,8 @@
   "order": [
     "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
     "22942553-01da-4697-89ac-f500b502883f",
+    "content_list_8qbN8J",
+    "content_list_RCPtyC",
     "content_list_drW7jD",
     "content_list_9XWGYG",
     "content_list_D7Nrpt",

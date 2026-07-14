@@ -503,7 +503,7 @@
         "image_WManzp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014620008.jpg",
+            "image": "shopify://shop_images/000014600005.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",

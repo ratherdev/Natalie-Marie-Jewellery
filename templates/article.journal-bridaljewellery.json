@@ -606,7 +606,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "bridal-edit",
+            "collection": "fleur",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -622,7 +622,7 @@
         "enable_natual_scroll": true,
         "subheading": "<p>NEW COLLECTION</p>",
         "title": "<p>Fleur</p>",
-        "description": "<p>Inspired by the beauty of flowers in bloom, Fleur was crafted to honour the celebrations that seem to pass in the blink of an eye, capturing the beauty of the present moment and transforming it into something enduring.</p><p> </p>",
+        "description": "<p>Inspired by the beauty of flowers in bloom, Fleur was crafted to honour the celebrations that seem to pass in the blink of an eye, capturing the beauty of the present moment and transforming it into something enduring.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "",

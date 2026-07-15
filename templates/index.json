@@ -559,7 +559,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "bobby-clark",
+            "collection": "diamond-necklaces",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -573,13 +573,13 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Celebrating Creativity</strong></p>",
-        "title": "<p>Artist In Residency</p>",
-        "description": "<p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. </p>",
+        "subheading": "<p><strong>Diamonds that celebrate life’s milestones</strong></p>",
+        "title": "<p>Diamond Necklaces</p>",
+        "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour the moments, memories and milestones that shape your story.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "https://www.nataliemariejewellery.com/pages/artist-in-residency",
+        "button_1_link": "shopify://collections/diamond-necklaces",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

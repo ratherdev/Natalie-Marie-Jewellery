@@ -187,6 +187,16 @@
               "push_2_url": "shopify://pages/bespoke-process"
             }
           },
+          "mega_menu_UxTNy3": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "",
+              "push_1_heading": "Example heading",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_url": ""
+            }
+          },
           "mega_menu_xWwYrV": {
             "type": "mega_menu",
             "settings": {
@@ -218,6 +228,7 @@
           "12f26022-41fc-4288-9d83-7429a4743c2a",
           "mega_menu_nCJcQz",
           "72a0fe2e-d007-487a-976a-4100f2acb7f4",
+          "mega_menu_UxTNy3",
           "mega_menu_xWwYrV",
           "a5c49f11-ae36-4c9d-9156-70cbb479ab0a"
         ],
@@ -288,9 +299,9 @@
             "type": "mega_menu",
             "settings": {
               "navigation_mega_menu": "FINE JEWELLERY",
-              "push_1_image": "shopify://shop_images/Eirene_Trio_for_web_3.png",
-              "push_1_heading": "Pendant Necklaces",
-              "push_1_url": "shopify://collections/pendant-necklaces",
+              "push_1_image": "shopify://shop_images/Untitled-14July2026at13.13.51-3.png",
+              "push_1_heading": "Earrings",
+              "push_1_url": "shopify://collections/earrings",
               "push_2_image": "shopify://shop_images/Eirene_Trio_for_web_2.png",
               "push_2_heading": "Ready To Wear",
               "push_2_url": "shopify://collections/ready-to-wear",

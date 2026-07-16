@@ -15,7 +15,6 @@
         "template--16196641292457__edbb72f8-c606-4713-aca3-24d4accd0081-image-1": {
           "type": "image",
           "settings": {
-            "image": "{{ article.metafields.custom.title_image.value }}",
             "mobile_image": "{{ article.metafields.custom.title_image.value }}"
           }
         }
@@ -29,11 +28,12 @@
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
+        "media_position_mobile": "bottom",
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "<p><strong>NMJ Lovers</strong></p>",
-        "title": "<p>{{ article.title }}</p>",
-        "description": "{{ article.metafields.custom.paragraph_1 | metafield_tag }}",
+        "title": "<p>Worn Before, Worn Again</p>",
+        "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -112,6 +112,7 @@
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
+        "media_position_mobile": "bottom",
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
@@ -489,6 +490,7 @@
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
+        "media_position_mobile": "bottom",
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",

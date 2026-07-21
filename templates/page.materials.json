@@ -34,9 +34,9 @@
       "settings": {
         "enable_dark": false,
         "subheading": "<p><strong>Materials</strong></p>",
-        "title": "<p>Form, Light & Expression</p>",
-        "description": "<p>The shape of a gemstone is one of the most defining elements of a piece.<br/></p><p>It influences not only how a stone looks, but how it interacts with light, how it sits on the hand, and how it feels to wear. Each shape carries its own visual language - some soft and organic, others structured and precise.</p>",
-        "feature_text": "<p>We see shape as an extension of personal expression - a balance between proportion, character and intention.</p>",
+        "title": "<p>A Foundation in Form & Tone</p>",
+        "description": "<p>The metal you choose forms the foundation of your jewellery - shaping not only its aesthetic, but how it wears, ages, and becomes part of your everyday.</p><p><br/>Each metal carries its own tone, character and set of properties. From the warmth of yellow gold to the softness of silver, these materials are chosen not only for how they look, but for how they feel over time.</p>",
+        "feature_text": "<p>At Natalie Marie Jewellery, we approach metals with the same intention as our stones - prioritising quality, longevity and responsible sourcing.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -71,8 +71,8 @@
         "media_width": "6",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>What is a Stone Shape?</p>",
-        "description": "<p>Stone shape refers to the outline or silhouette of a gemstone when viewed from above. While often used interchangeably with “cut”, shape and cut have a distinct difference:<br/></p><ul><li>Shape describes the overall form (round, oval, pear)</li><li>Cut refers to how the facets are arranged to reflect light<br/></li></ul><p>Together, they define the personality of a stone.</p>",
+        "title": "<p>Our Approach</p>",
+        "description": "<p>We work with a considered combination of new and recycled materials, depending on the design and performance required.</p><p>At Natalie Marie Jewellery, we prioritise the use of certified Australian gold wherever possible across our online collections, bespoke creations, and One of a Kind pieces.</p><p>We partner with accredited suppliers who align with our due diligence framework. <br/></p><p>We prioritise traceability and transparency wherever possible. </p><p>We recycle all studio scrap and excess materials through accredited refineries.<br/>We continue to evolve our sourcing practices as part of our ongoing sustainability journey. </p><p>Each metal is alloyed to ensure durability, wearability, and longevity to ensure it will be treasured for generations.<br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -132,8 +132,8 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<ul><li><em>Round</em></li></ul>",
-        "description": "<p>The most classic and widely recognised shape.<br/></p><ul><li>Symmetrical and balanced</li><li>Designed for maximum light reflection</li><li>Timeless and versatile</li></ul><p>Round stones offer a sense of familiarity and refinement - an enduring choice that transcends trends.</p>",
+        "title": "<p><em>Rose Gold</em></p>",
+        "description": "<p>Soft, Romantic & Distinctive</p><p>Rose gold is created by alloying gold with copper, giving it its signature blush tone.<br/></p><ul><li>Warm, pink undertone</li><li>Subtle yet distinctive</li><li>Complements a wide range of skin tones</li></ul><p>Rose gold offers a softer interpretation of gold - romantic, modern, and quietly expressive.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -193,8 +193,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Oval</em></p>",
-        "description": "<p>An elongated variation of the round shape.<br/></p><ul><li>Soft, fluid silhouette</li><li>Creates the illusion of greater size</li><li>Elegant and elongating on the hand<br/></li></ul><p>Oval stones feel both classic and contemporary, with a subtle sense of movement.</p>",
+        "title": "<p><em>White Gold</em></p>",
+        "description": "<p>Refined & Contemporary<br/>White gold is created by alloying gold with white metals such as palladium or silver, resulting in a cooler-toned finish.<br/>It is typically coated with rhodium plating to enhance its brightness.<br/></p><ul><li>Cool, silvery appearance</li><li>Polished and luminous</li><li>May require re-plating over time to maintain its finish</li></ul><p>White gold feels clean, modern and refined, offering a contemporary alternative to traditional gold tones.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -224,163 +224,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Cushion</em></p>",
-        "description": "<p>A square or rectangular shape with softly rounded corners.</p><ul><li>Romantic, pillowy form</li><li>Balanced brilliance and depth</li><li>Often associated with vintage-inspired design</li></ul><p>Cushion cuts offer a sense of softness and warmth.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_YQbEtm": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_kCH8gH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_kCH8gH"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Emerald</em></p>",
-        "description": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_tG8qCR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_n7cQVB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_n7cQVB"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Radiant</em></p>",
-        "description": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_QKVKmB": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_pLUtmg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_pLUtmg"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Pear</em></p>",
-        "description": "<p>A teardrop-shaped stone combining round and marquise elements.</p><ul><li>Soft, asymmetrical silhouette</li><li>Elongating effect</li><li>Distinctive and expressive<br/></li></ul><p>Pear shapes feel both delicate and directional.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_7Pq67k": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_3pJzgy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_3pJzgy"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Marquise</em></p>",
-        "description": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_8EE9gR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_cFgMgY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_cFgMgY"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Asscher</em></p>",
-        "description": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
+        "title": "<p><em>Sterling Silver</em></p>",
+        "description": "<p>Understated & Versatile<br/>Sterling silver is a precious metal composed of 92.5% pure silver, alloyed for strength and durability.</p><ul><li>Soft, cool-toned appearance</li><li>Lightweight and versatile<br/></li></ul><p>Silver will naturally oxidise over time, developing a darker patina, which can be polished back to its original brightness.<br/>It offers a sense of ease - effortless, minimal and quietly considered.<br/><strong>Choosing Your Metal</strong><br/>The metal you choose should feel aligned with both your aesthetic and your lifestyle.<br/>Consider:<br/></p><ul><li><strong>Tone</strong> — warm vs cool. What suits your skin tone & any coloured stones you will incorporate into your piece.</li><li><strong>Durability</strong> — how the piece will be worn daily and what your lifestyle dictates. </li><li><strong>Maintenance</strong> — Do you want something low maintenance or are you committed to upkeeping a higher demand alloy. </li><li><strong>Longevity</strong> — how the piece will age and be worn in years to come, what is the most timeless choice? </li></ul><p><br/>Often, your choice is intuitive - a connection to colour, feeling, or familiarity. Choosing the metal which best suits you is key. <br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -440,8 +285,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p>Our Perspective</p>",
-        "description": "<p>We approach stone shapes as part of a broader design conversation. Each piece is considered holistically:<br/></p><ul><li>The relationship between stone and setting</li><li>The balance of proportion and scale</li><li>The way the piece will be worn over time<br/></li></ul><p>A well-chosen shape does more than define a stone - it shapes how it becomes part of you.</p>",
+        "title": "<p>A Note on Responsibility</p>",
+        "description": "<p>The sourcing of precious metals is complex.<br/>While recycled materials are often considered a more sustainable option, they can present limitations in traceability. Similarly, newly mined materials require careful consideration of environmental and social impact.<br/>Our approach is to:<br/></p><ul><li>Work with<strong> trusted, accredited suppliers</strong></li><li>Source materials with c<strong>lear standards and accountability</strong></li><li>Continuously review and improve our practices</li></ul><p>We believe responsible sourcing is not defined by a single solution, but by <strong>ongoing transparency, education and evolution.</strong></p><p>Metal is more than a material - it is what carries a piece through time.</p><p>Drawn from the earth and transformed by fire and hand, it holds the stone, shapes the form, and absorbs the rhythm of daily wear.<br/> <br/>Chosen with intention, it becomes enduring: a quiet foundation for stories still unfolding.<br/><br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -559,11 +404,6 @@
     "86931031-bd17-4f8a-a3c3-f113e451f5fb",
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3",
     "5745a96a-89f1-43ff-b4e6-2d5a49f7d900",
-    "text_with_media_YQbEtm",
-    "text_with_media_tG8qCR",
-    "text_with_media_QKVKmB",
-    "text_with_media_7Pq67k",
-    "text_with_media_8EE9gR",
     "e519b54b-e820-4452-8c63-5cadf8033400",
     "e7136397-43a9-471b-af79-b0bf6bbe2e84",
     "a101aea1-959f-4f0f-85b6-2d9702efd65e",

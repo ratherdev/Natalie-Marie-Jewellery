@@ -74,7 +74,7 @@
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/crown-wedding-rings",
+        "button_1_link": "https://www.nataliemariejewellery.com/collections/crown-wedding-rings?filter.p.m.custom.filter_metal=Yellow%20Gold",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

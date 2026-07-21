@@ -33,8 +33,8 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p>Choose the Stone That Speaks to You</p>",
+        "subheading": "<p><strong>The Wedding Collective </strong></p>",
+        "title": "<p><em>Handcrafted</em> to Mark Your Forever</p>",
         "description": "<p>Find the wedding band that reflects your personal style. From the timeless brilliance of laboratory-grown diamonds to the understated beauty of sapphires and refined plain gold designs, explore our handcrafted collection by stone and discover the piece that feels uniquely yours.</p>",
         "feature_text": "<p>From <em>timeless</em> diamonds to <em>meaningful </em>sapphires, discover a wedding band to <em>endure</em>.</p>",
         "colour_style": "dark",
@@ -42,39 +42,6 @@
         "button_1_text": "",
         "button_1_link": "",
         "button_2_metaobject": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
-      "type": "content-slider",
-      "blocks": {
-        "4e90ce6d-082e-433e-94d0-a31d9281d71b": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "sapphire-wedding-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "4e90ce6d-082e-433e-94d0-a31d9281d71b"
-      ],
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/sapphire-wedding-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -97,18 +64,116 @@
       "block_order": [
         "fa090c1f-de05-41b4-8eba-d58cc1ba3719"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>WEDDING COLLECTIVE</strong></p>",
+        "subheading": "<p><strong>Shop By Style</strong></p>",
         "title": "<p>Crown <em>Wedding Rings</em></p>",
         "description": "<p>A piece for all stories; a pair for your personal duet. Discover Crown Wedding Rings.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
         "button_1_link": "shopify://collections/crown-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
+      "type": "content-slider",
+      "blocks": {
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "mined-diamond",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
+      ],
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Shop By Stone</strong></p>",
+        "title": "<p><em>Natural Diamond</em> Wedding Rings</p>",
+        "description": "<p>Celebrate lasting commitment with our Natural Diamond Wedding Rings, each handcrafted in our Sydney studio with precision and care.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/mined-diamond",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "2f49be64-87a3-4a0f-acaa-523f2c948a4f": {
+      "type": "content-slider",
+      "blocks": {
+        "6f066745-905a-498b-bf03-dcdadacb9c71": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "plain-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "6f066745-905a-498b-bf03-dcdadacb9c71"
+      ],
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Shop By Style</strong></p>",
+        "title": "<p>Plain <em>Wedding Rings</em></p>",
+        "description": "<p>Eternal bonds, symbolic of vows taken. Wedding bands are gestures of forever, exchanged in harmony with the one you love.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/plain-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208": {
+      "type": "content-slider",
+      "blocks": {
+        "7f5509c5-b96a-4a5e-8286-c69d1b950c88": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "champagne-diamond-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "7f5509c5-b96a-4a5e-8286-c69d1b950c88"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Shop By Stone</strong></p>",
+        "title": "<p><em>Champagne Diamond </em>Wedding Rings </p>",
+        "description": "<p>Each ring is handcrafted using champagne diamonds - chosen for their subtle hues and natural brilliance. </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/champagne-diamond-wedding-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -147,106 +212,6 @@
         "button_style": "underline"
       }
     },
-    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
-      "type": "content-slider",
-      "blocks": {
-        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "mined-diamond",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
-      ],
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Natural Diamond</em> Wedding Rings</p>",
-        "description": "<p>Celebrate lasting commitment with our Natural Diamond Wedding Rings, each handcrafted in our Sydney studio with precision and care.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/diamond-wedding-rings",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208": {
-      "type": "content-slider",
-      "blocks": {
-        "7f5509c5-b96a-4a5e-8286-c69d1b950c88": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "champagne-diamond-wedding-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "7f5509c5-b96a-4a5e-8286-c69d1b950c88"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Champagne Diamond </em>Wedding Rings </p>",
-        "description": "<p>Each ring is handcrafted using champagne diamonds - chosen for their subtle hues and natural brilliance. </p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/for-your-groom-and-groomsmen",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "2f49be64-87a3-4a0f-acaa-523f2c948a4f": {
-      "type": "content-slider",
-      "blocks": {
-        "6f066745-905a-498b-bf03-dcdadacb9c71": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "something-blue",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "6f066745-905a-498b-bf03-dcdadacb9c71"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>Something <em>Blue</em></p>",
-        "description": "<p>Symbolising good luck, the incorporation of blue in a bridal ensemble is an artful nod to the past with a gaze fixed on the future.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/something-blue",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "add4ba56-5e9f-4505-8592-a45e0c9daf51": {
       "type": "content-slider",
       "blocks": {
@@ -254,7 +219,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "for-your-bridesmaids",
+            "collection": "wedding-bands-for-him",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -264,18 +229,50 @@
       "block_order": [
         "9c225558-164e-4699-ab9f-70acd9789493"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>For your <em>Bridesmaids</em></p>",
-        "description": "<p>Honour the cherished loves in your life with our collection of sentimental, forever pieces; precious tokens of everlasting friendships.</p>",
+        "subheading": "<p><strong>Shop By Style </strong></p>",
+        "title": "<p>Men's <em>Wedding Rings</em></p>",
+        "description": "<p>Design-forward creations and classic renderings shape this collection of men’s Ceremonial bands. For the ultimate gesture of forever.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/for-your-bridesmaids",
+        "button_1_link": "shopify://collections/wedding-bands-for-him",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
+      "type": "content-slider",
+      "blocks": {
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "sapphire-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b"
+      ],
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Shop By Stone</strong></p>",
+        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
+        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/sapphire-wedding-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -357,13 +354,13 @@
   "order": [
     "main",
     "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
-    "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
     "112a30e4-a267-406a-a245-0f5c0ab42213",
     "f4cbf1ef-4a63-4243-92ce-30c74c264480",
-    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208",
     "2f49be64-87a3-4a0f-acaa-523f2c948a4f",
+    "f9e39ec7-e645-46ae-9dbc-6e1d553ff208",
+    "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
     "add4ba56-5e9f-4505-8592-a45e0c9daf51",
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
     "25a802f4-35c6-4714-bf2e-555a50f3f689",
     "1680065391ebf6b294"
   ]

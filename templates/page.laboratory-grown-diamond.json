@@ -71,8 +71,8 @@
         "media_width": "6",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>What is a Stone Shape?</p>",
-        "description": "<p>Stone shape refers to the outline or silhouette of a gemstone when viewed from above. While often used interchangeably with “cut”, shape and cut have a distinct difference:<br/></p><ul><li>Shape describes the overall form (round, oval, pear)</li><li>Cut refers to how the facets are arranged to reflect light<br/></li></ul><p>Together, they define the personality of a stone.</p>",
+        "title": "<p>What is a Laboratory Grown Diamond?</p>",
+        "description": "<p>Laboratory grown diamonds are diamonds created using advanced technology that replicates the natural conditions in which mined diamonds form beneath the earth.</p><p><br/>From a <strong>chemical, physical and optical perspective, they are identical to diamonds</strong>, with any differences imperceptible to the human eye. Mined and laboratory grown diamonds can only be identified by using specialised equipment.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -132,8 +132,8 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<ul><li><em>Round</em></li></ul>",
-        "description": "<p>The most classic and widely recognised shape.<br/></p><ul><li>Symmetrical and balanced</li><li>Designed for maximum light reflection</li><li>Timeless and versatile</li></ul><p>Round stones offer a sense of familiarity and refinement - an enduring choice that transcends trends.</p>",
+        "title": "<p>Our Perspective</p>",
+        "description": "<p>We believe laboratory grown diamonds offer a considered alternative within the diamond landscape.</p><p><br/>We work with our clients to discuss the different aspects of both laboratory grown and mined diamonds. Rather than preferring one option as superior, we are committed to <strong>providing clear, unbiased education,</strong> empowering you to choose what feels most aligned with your values, priorities and story.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -193,8 +193,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Oval</em></p>",
-        "description": "<p>An elongated variation of the round shape.<br/></p><ul><li>Soft, fluid silhouette</li><li>Creates the illusion of greater size</li><li>Elegant and elongating on the hand<br/></li></ul><p>Oval stones feel both classic and contemporary, with a subtle sense of movement.</p>",
+        "title": "<p><em>How They Are Made</em></p>",
+        "description": "<p>Laboratory Grown Diamonds are formed using two primary methods:</p><ul><li><strong>High Pressure High Temperature (HPHT)</strong></li><li><strong>Chemical Vapour Deposition (CVD) </strong></li></ul><p>At Natalie Marie Jewellery, we offer both, ensuring all stones are certified by either the International Gemmological Institute (IGI) or the Gemmological Institute of America (GIA).<br/></p><p>The journey of a laboratory grown diamond is complex and multi-staged:<br/></p><ol><li>Grown in a laboratory</li><li>Cut and polished (often in a separate facility)</li><li>Certified by an independent gemological institute</li><li>Sold through the global market</li><li>Selected by a jeweller</li></ol><p>Like natural diamonds, this journey can involve multiple stages and locations, which can impact traceability.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -224,8 +224,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Cushion</em></p>",
-        "description": "<p>A square or rectangular shape with softly rounded corners.</p><ul><li>Romantic, pillowy form</li><li>Balanced brilliance and depth</li><li>Often associated with vintage-inspired design</li></ul><p>Cushion cuts offer a sense of softness and warmth.</p>",
+        "title": "<p><em>Sustainability Considerations</em></p>",
+        "description": "<p>Laboratory grown diamonds are often perceived as a more sustainable option, however the reality is nuanced.</p><p><br/>Key considerations include:</p><ul><li><strong>Energy intensive production <br/></strong>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/> </strong>A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage<br/></strong> Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs<br/></strong> Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/>For a laboratory grown diamond to be considered more sustainable, it would require:</li><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, <strong>industry wide transparency remains limited</strong>, making these claims difficult to fully validate.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -255,8 +255,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Emerald</em></p>",
-        "description": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
+        "title": "<p><em>Ethical Considerations</em></p>",
+        "description": "<p>Reliable, published data around the social impact of laboratory grown diamonds is still developing.</p><p><br/>Areas of uncertainty include:</p><ul><li>Employment conditions in manufacturing facilities</li><li>Human rights standards across production regions</li><li>Contributions to local communities and economies<br/></li></ul><p>Unlike some mined diamond industries, laboratory grown production does not always have established frameworks for community investment or traceable impact.<br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -286,8 +286,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Radiant</em></p>",
-        "description": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
+        "title": "<p><em>Traceability & Transparency</em></p>",
+        "description": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.</p><p>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.</p><p>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -317,70 +317,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Pear</em></p>",
-        "description": "<p>A teardrop-shaped stone combining round and marquise elements.</p><ul><li>Soft, asymmetrical silhouette</li><li>Elongating effect</li><li>Distinctive and expressive<br/></li></ul><p>Pear shapes feel both delicate and directional.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_7Pq67k": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_3pJzgy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_3pJzgy"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Marquise</em></p>",
-        "description": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_8EE9gR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_cFgMgY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_cFgMgY"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Asscher</em></p>",
-        "description": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
+        "title": "<p><em>Certification & Quality</em></p>",
+        "description": "<p>All of our laboratory grown diamonds <strong>above 0.30ct </strong>are independently certified by leading gemological institutes, including:</p><ul><li><strong>GIA (Gemological Institute of America)</strong></li><li><strong>IGI (International Gemological Institute)</strong></li><li><strong>GCAL (Gem Certification & Assurance Lab)</strong></li></ul><p>Each stone features:<br/></p><ul><li>A unique certification number</li><li>Detailed grading across cut, colour, clarity and carat</li></ul>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -440,8 +378,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p>Our Perspective</p>",
-        "description": "<p>We approach stone shapes as part of a broader design conversation. Each piece is considered holistically:<br/></p><ul><li>The relationship between stone and setting</li><li>The balance of proportion and scale</li><li>The way the piece will be worn over time<br/></li></ul><p>A well-chosen shape does more than define a stone - it shapes how it becomes part of you.</p>",
+        "title": "<p><em>Our Approach</em></p>",
+        "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards </li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:</p><p><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.<br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -562,8 +500,6 @@
     "text_with_media_YQbEtm",
     "text_with_media_tG8qCR",
     "text_with_media_QKVKmB",
-    "text_with_media_7Pq67k",
-    "text_with_media_8EE9gR",
     "e519b54b-e820-4452-8c63-5cadf8033400",
     "e7136397-43a9-471b-af79-b0bf6bbe2e84",
     "a101aea1-959f-4f0f-85b6-2d9702efd65e",

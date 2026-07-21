@@ -47,6 +47,39 @@
         "button_style": "underline"
       }
     },
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
+      "type": "content-slider",
+      "blocks": {
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "sapphire-wedding-rings",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "4e90ce6d-082e-433e-94d0-a31d9281d71b"
+      ],
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Shop By Stone</strong></p>",
+        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
+        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Shop All",
+        "button_1_link": "shopify://collections/sapphire-wedding-rings",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "112a30e4-a267-406a-a245-0f5c0ab42213": {
       "type": "content-slider",
       "blocks": {
@@ -76,39 +109,6 @@
         "colour_style": "dark",
         "button_1_text": "Shop All",
         "button_1_link": "shopify://collections/crown-wedding-rings",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f": {
-      "type": "content-slider",
-      "blocks": {
-        "4e90ce6d-082e-433e-94d0-a31d9281d71b": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "sapphire-wedding-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "4e90ce6d-082e-433e-94d0-a31d9281d71b"
-      ],
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/sapphire-wedding-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -357,9 +357,9 @@
   "order": [
     "main",
     "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
-    "112a30e4-a267-406a-a245-0f5c0ab42213",
-    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
     "60fc5e9c-0f48-4004-a7bb-117ed02afc55",
+    "732e5ea5-9a1d-4b67-983d-9a2a4c8e545f",
+    "112a30e4-a267-406a-a245-0f5c0ab42213",
     "f4cbf1ef-4a63-4243-92ce-30c74c264480",
     "f9e39ec7-e645-46ae-9dbc-6e1d553ff208",
     "2f49be64-87a3-4a0f-acaa-523f2c948a4f",

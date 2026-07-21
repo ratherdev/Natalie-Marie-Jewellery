@@ -31,6 +31,7 @@
       "block_order": [
         "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0"
       ],
+      "disabled": true,
       "settings": {
         "enable_dark": false,
         "subheading": "<p><strong>Stone Shapes</strong></p>",

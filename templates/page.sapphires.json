@@ -24,7 +24,7 @@
         "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJ_Dec22_-325_400x_1.jpg"
+            "image": "shopify://shop_images/Sapphires.jpg"
           }
         }
       },
@@ -33,10 +33,10 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>Stone Shapes</strong></p>",
-        "title": "<p>Form, Light & Expression</p>",
-        "description": "<p>The shape of a gemstone is one of the most defining elements of a piece.<br/></p><p>It influences not only how a stone looks, but how it interacts with light, how it sits on the hand, and how it feels to wear. Each shape carries its own visual language - some soft and organic, others structured and precise.</p>",
-        "feature_text": "<p>We see shape as an extension of personal expression - a balance between proportion, character and intention.</p>",
+        "subheading": "<p><strong>Sapphires</strong></p>",
+        "title": "<p>A Stone of Depth, Strength & Individuality</p>",
+        "description": "<p>Sapphires have long been revered for their beauty and symbolism. Known for their durability and depth of colour, they are a stone often chosen to mark meaningful moments - designed to be worn every day, and treasured for a lifetime.</p>",
+        "feature_text": "<p>While most commonly associated with rich blue hues, sapphires exist in a wide spectrum of colours, each with its own unique character.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -71,8 +71,8 @@
         "media_width": "6",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>What is a Stone Shape?</p>",
-        "description": "<p>Stone shape refers to the outline or silhouette of a gemstone when viewed from above. While often used interchangeably with “cut”, shape and cut have a distinct difference:<br/></p><ul><li>Shape describes the overall form (round, oval, pear)</li><li>Cut refers to how the facets are arranged to reflect light<br/></li></ul><p>Together, they define the personality of a stone.</p>",
+        "title": "<p>What is a Sapphire?</p>",
+        "description": "<p>Sapphires belong to the <strong>corundum family of minerals</strong>, one of the hardest naturally occurring substances on earth.</p><p>With a <strong>9 on the Mohs scale of hardness</strong>, sapphires are exceptionally durable - making them a considered choice for engagement rings and heirloom pieces designed for daily wear.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -132,8 +132,8 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<ul><li><em>Round</em></li></ul>",
-        "description": "<p>The most classic and widely recognised shape.<br/></p><ul><li>Symmetrical and balanced</li><li>Designed for maximum light reflection</li><li>Timeless and versatile</li></ul><p>Round stones offer a sense of familiarity and refinement - an enduring choice that transcends trends.</p>",
+        "title": "<p><em>Colour & Character</em></p>",
+        "description": "<p>While blue sapphires are the most widely recognised, sapphires can be found in a diverse range of tones, including:</p><ul><li>Deep ocean blues</li><li>Soft teals and parti-colours</li><li>Golden yellows</li><li>Blush pinks</li><li>Earthy greens<br/></li></ul><p>Each sapphire is inherently unique, often displaying subtle variations in tone, saturation and light performance.<br/></p><p>We believe this individuality is what makes sapphires so special-<strong>no two stones are ever exactly alike.</strong></p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -193,8 +193,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Oval</em></p>",
-        "description": "<p>An elongated variation of the round shape.<br/></p><ul><li>Soft, fluid silhouette</li><li>Creates the illusion of greater size</li><li>Elegant and elongating on the hand<br/></li></ul><p>Oval stones feel both classic and contemporary, with a subtle sense of movement.</p>",
+        "title": "<p><em>Australian Sapphires</em></p>",
+        "description": "<p>At Natalie Marie Jewellery, we are proud to offer <strong>Australian origin sapphires</strong>, sourced primarily from Queensland’s gem fields.</p><p>These stones are known for their:</p><ul><li>Rich, moody colour palette</li><li>Distinctive teal and parti tones (not necessarily what we offer online- but only bespoke)</li><li>Natural variation and depth</li></ul><p></p><p>Australian sapphires offer a level of <strong>traceability and transparency</strong> that is not always possible within the global gemstone market, allowing us to share a clearer understanding of their origin and journey.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -224,8 +224,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Cushion</em></p>",
-        "description": "<p>A square or rectangular shape with softly rounded corners.</p><ul><li>Romantic, pillowy form</li><li>Balanced brilliance and depth</li><li>Often associated with vintage-inspired design</li></ul><p>Cushion cuts offer a sense of softness and warmth.</p>",
+        "title": "<p><em>Sourcing & Transparency</em></p>",
+        "description": "<p>The global gemstone industry is complex, with many stones passing through multiple hands before reaching a jeweller.</p><p>At NMJ, we take a considered approach to sourcing:</p><ul><li>We work with <strong>trusted suppliers and long-term partners</strong></li><li>We prioritise stones where <strong>origin can be verified</strong></li><li>We seek to collaborate with suppliers who support</li><li> responsible environmental practices</li><li>fair working conditions</li><li>community investment</li></ul><p>Where a stone is sold with an origin claim, we ensure this is supported by documented evidence of provenance from the supplier.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -255,8 +255,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Emerald</em></p>",
-        "description": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
+        "title": "<p><em>Custom Cut Stones</em></p>",
+        "description": "<p>Many of the sapphires we offer are custom cut specifically for our designs, allowing us to:</p><ul><li>Highlight the natural beauty of each stone</li><li>Maximise colour and light performance</li><li>Create pieces that feel considered and intentional</li></ul><p>We work with specialised cutters who understand how to reveal the unique characteristics within each individual gemstone.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -286,8 +286,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Radiant</em></p>",
-        "description": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
+        "title": "<p><em>Natural Variation</em></p>",
+        "description": "<p>Unlike diamonds, sapphires are not graded through a universal system.</p><p>Instead, each stone is assessed individually based on:</p><ul><li>Colour</li><li>Tone and saturation</li><li>Clarity (often including natural inclusions)</li><li>Cut and overall presence</li></ul><p>Inclusions and colour variation are not flaws, but rather part of the story of the stone - a reflection of its natural formation.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -317,70 +317,8 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Pear</em></p>",
-        "description": "<p>A teardrop-shaped stone combining round and marquise elements.</p><ul><li>Soft, asymmetrical silhouette</li><li>Elongating effect</li><li>Distinctive and expressive<br/></li></ul><p>Pear shapes feel both delicate and directional.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_7Pq67k": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_3pJzgy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_3pJzgy"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Marquise</em></p>",
-        "description": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_8EE9gR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_cFgMgY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_cFgMgY"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Asscher</em></p>",
-        "description": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
+        "title": "<p><em>Durability & Everyday Wear</em></p>",
+        "description": "<p>Sapphires are one of the most durable gemstones available, making them well suited to everyday wear.</p><p>However, like all fine jewellery, they should be worn with care:</p><ul><li>Avoid hard knocks or impact</li><li>Remove during heavy activity</li><li>Clean gently and regularly</li></ul><p>With the right care, a sapphire piece can become a modern heirloom, passed down through generations.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -441,7 +379,7 @@
         "content_position": "topLeftSticky",
         "subheading": "",
         "title": "<p>Our Perspective</p>",
-        "description": "<p>We approach stone shapes as part of a broader design conversation. Each piece is considered holistically:<br/></p><ul><li>The relationship between stone and setting</li><li>The balance of proportion and scale</li><li>The way the piece will be worn over time<br/></li></ul><p>A well-chosen shape does more than define a stone - it shapes how it becomes part of you.</p>",
+        "description": "<p>We are drawn to sapphires for their quiet strength and individuality.</p><p>Our sapphires are ethically sourced from Australia, celebrated for their exceptional quality, rich natural colour, and traceable origin.</p><p>Each stone carries a sense of depth - formed over time, shaped by nature, and chosen with intention.</p><p>Whether selected for its colour, origin, or meaning, a sapphire offers something deeply personal:</p><p>a piece that feels entirely your own.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -562,8 +500,6 @@
     "text_with_media_YQbEtm",
     "text_with_media_tG8qCR",
     "text_with_media_QKVKmB",
-    "text_with_media_7Pq67k",
-    "text_with_media_8EE9gR",
     "e519b54b-e820-4452-8c63-5cadf8033400",
     "e7136397-43a9-471b-af79-b0bf6bbe2e84",
     "a101aea1-959f-4f0f-85b6-2d9702efd65e",

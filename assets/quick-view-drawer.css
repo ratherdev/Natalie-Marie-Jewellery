@@ -1,0 +1,437 @@
+/* ============================================================
+   QUICK VIEW DRAWER — NMJ Prestage Theme
+   File: assets/quick-view-drawer.css
+   ============================================================ */
+
+/* ProductItem needs relative positioning for the trigger button */
+.ProductItem { position: relative; }
+
+body.qv-open { overflow: hidden; }
+
+/* ── Custom overrides (client) ── */
+.qv-info .Grid--2rows { gap: 5px; }
+.qv-info .scroll-wrapper { position: unset !important; }
+.qv-info .ProductForm__Inventory,
+.qv-info .ProductMeta__LabelList,
+.qv-info .ColorSwatchList_Wrapper,
+.qv-info .ProductMeta__PaymentOptions,
+.qv-info .Link.Link--tertiary.Link--underline,
+.qv-info .ProductMeta__ButtonSet,
+.qv-info square-placement,
+.qv-info .Product__InfoFooter.hidden-pocket { display: none; }
+
+/* ── Overlay backdrop ── */
+#qv-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  visibility: hidden;
+}
+#qv-drawer-overlay.is-open {
+  pointer-events: auto;
+  visibility: visible;
+}
+#qv-drawer-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+#qv-drawer-overlay.is-open::before { opacity: 1; }
+
+/* ── Drawer: RIGHT-SIDE PANEL, single column ── */
+#qv-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 390px;
+  max-width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 48px rgba(0, 0, 0, 0.15);
+  z-index: 100000;
+  overflow: hidden;
+}
+#qv-drawer-overlay.is-open #qv-drawer { transform: translateX(0); }
+
+/* ── Header bar ── */
+#qv-drawer .ProductMeta {
+	margin-bottom: 0;
+}
+#qv-drawer .AdditionalVariantList .Grid__Cell {
+	height: 30px;
+	flex: 0 1 39px;
+}
+#qv-drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  flex-shrink: 0;
+  background: #fff;
+}
+#qv-drawer-close {
+width: 12px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  padding: 0;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+#qv-drawer-close:hover { opacity: 0.6; }
+#qv-drawer-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Body: single column, scrolls vertically ── */
+#qv-drawer-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+}
+
+/* ── Spinner ── */
+#qv-drawer-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+}
+.qv-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: qv-spin 0.75s linear infinite;
+}
+@keyframes qv-spin { to { transform: rotate(360deg); } }
+
+/* ── Content: single column ── */
+#qv-drawer-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ================================================================
+   IMAGE SLIDER — full width, fixed height
+   ================================================================ */
+.qv-gallery {
+  width: 100%;
+  height: 460px;
+  flex-shrink: 0;
+  background: #f7f6f4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Main slide area */
+.qv-slider {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+.qv-slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.qv-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.qv-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 20px;
+}
+
+/* Prev / Next arrows */
+.qv-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ddd;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.15s;
+  padding: 0;
+}
+.qv-gallery:hover .qv-arrow { opacity: 1; }
+.qv-arrow:hover { background: #fff; }
+.qv-arrow--prev { left: 10px; }
+.qv-arrow--next { right: 10px; }
+
+/* Thumbnail strip */
+.qv-thumbs {
+  display: none; /*flex*/
+  gap: 6px;
+  padding: 8px 10px;
+  flex-shrink: 0;
+  background: #f7f6f4;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.qv-thumbs::-webkit-scrollbar { display: none; }
+.qv-thumb {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  background: #efefef;
+  transition: border-color 0.15s;
+}
+.qv-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.qv-thumb.is-active { border-color: #111; }
+.qv-thumbs:has(.qv-thumb:only-child) { display: none; }
+
+/* ================================================================
+   INFO — full width below image
+   ================================================================ */
+.qv-info {
+  width: 100%;
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+}
+.qv-info * { box-sizing: border-box; }
+
+/* Reset injected theme grid */
+.qv-info .Grid { margin-left: 0 !important; }
+.qv-info .Grid__Cell { padding-left: 0 !important; }
+.qv-info [class*="2/3--lap-and-up"],
+.qv-info [class*="2\/3--lap-and-up"] { width: 100% !important; }
+
+/* ── Hide sections not needed in quick view ── */
+.qv-info .Product__ShareButtons,
+.qv-info .SocialSharing,
+.qv-info .Product__Tabs,
+.qv-info .ProductTabs,
+.qv-info .Collapsible,
+.qv-info .Product__Reviews,
+.qv-info #shopify-product-reviews,
+.qv-info .RecentlyViewed,
+.qv-info .Product__OffScreen,
+.qv-info nav.breadcrumb,
+.qv-info .breadcrumb,
+.qv-info .ProductMeta__Sku,
+.qv-info .ProductMeta__StoreAvailabilityContainer,
+.qv-info .ProductMeta__Description,
+.qv-info .Product__Description,
+.qv-info .ProductMeta__ShareButtons,
+.qv-info .ProductMeta__FooterNote,
+.qv-info .ProductMeta__TaxNotice,
+.qv-info .Product__RelatedProducts,
+.qv-info scroll-bar { display: none !important; }
+
+/* Title */
+.qv-info .ProductMeta__Title,
+.qv-info h1.Heading {
+  font-size: 1.2rem !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+}
+
+/* Price */
+.qv-info .ProductMeta__Price,
+.qv-info .Price { font-size: 1rem !important; }
+.qv-info .ProductMeta__PriceList { margin-bottom: 14px !important; }
+
+/* Variant option rows */
+.qv-info .ProductForm__Option { margin-bottom: 14px !important; }
+.qv-info .ProductForm__Label { font-size: 12px !important; }
+
+/* ── Birthstone bordered box — client: no border, no scroll cap ── */
+.qv-info .ProductForm__Option--bordered {
+  overflow: unset !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.qv-info .Grid--2rows {
+  flex-wrap: wrap !important;
+  width: auto !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+.qv-info .Grid--2rows .Grid__Cell {
+  width: calc(90% / 6) !important;
+  min-width: 0;
+}
+.qv-info .ProductForm__Variants > .customLineProperty_VariantSelector {
+  margin-bottom: 0;
+}
+
+/* Birthstone hover */
+.qv-info .AdditionalVariant {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  position: relative;
+}
+.qv-info .AdditionalVariant:hover { transform: translateY(-2px); }
+.qv-info .AdditionalVariant.is-selected .AdditionalVariant__ImageWrapper,
+.qv-info .AdditionalVariant:hover .AdditionalVariant__ImageWrapper {
+  outline: 2px solid var(--link-color, #6b5c4e);
+  outline-offset: 2px;
+}
+.qv-info .ToolTip { display: none !important; }
+
+/* Add to cart — client: 83% width */
+.qv-info .ProductForm__AddToCart,
+.qv-info [name="add"] {
+  width: 79% !important;
+  margin-top: 0 !important;
+}
+.qv-info .AdditionalVariantList.Grid {
+	gap: 10px;
+}
+/* Popovers */
+.qv-info .Popover,
+.qv-info .OptionSelector {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  box-shadow: none !important;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+.qv-info .Popover[aria-hidden="true"],
+.qv-info .OptionSelector[aria-hidden="true"],
+.qv-info .VariantSelector[aria-hidden="true"] { display: none; }
+.qv-info .Popover[aria-hidden="false"],
+.qv-info .OptionSelector[aria-hidden="false"],
+.qv-info .VariantSelector[aria-hidden="false"] { display: block; }
+
+/* ── Footer ── */
+#qv-drawer-footer {
+  padding: 10px 20px;
+  border-top: 1px solid #e8e8e8;
+  flex-shrink: 0;
+  text-align: center;
+  background: #fff;
+}
+#qv-full-link {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+#qv-full-link:hover { color: #111; }
+ .qv-info .CustomLineProperties .customLineProperty--optional{
+  pointer-events: unset @Important;
+}
+  .qv-info  .CustomLineProperties.is-active {
+	box-shadow: unset !important;
+}
+  .qv-info .CustomLineProperties.is-active .ProductForm__Option.ProductForm__Option--labelled {
+	margin-left: -16px;
+	margin-right: -16px;
+	margin-bottom: 0 !important;
+}
+/* ── Error ── */
+.qv-error { padding: 40px 24px; text-align: center; color: #666; font-size: 14px; }
+.qv-error a { color: #111; text-decoration: underline; }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .qv-slide img {
+	 padding: 0px !important; 
+}
+.meta_silder .SectionHeader.SectionHeader--center {
+	margin-bottom: 0;
+}
+.meta_silder  .ContentSlider__ContentWrapper {
+	margin-bottom: 10px;
+}
+  #qv-drawer { width: 100%; }
+  .qv-gallery { height: 280px; }
+  .qv-info { padding: 16px; }
+  .qv-info .Grid--2rows .Grid__Cell { width: 20% !important; }
+  .qv-info .Grid--2rows {gap: 23px;}
+}
+
+/* ── Quick View trigger button ── */
+.qv-trigger-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.96);
+  color: #111;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  opacity: 0;
+  transform: translateY(4px);
+  visibility: hidden;
+  z-index: 2;
+  transition: background 0.15s, color 0.15s, opacity 0.2s, transform 0.2s;
+  pointer-events: auto;
+}
+.ProductItem:hover .qv-trigger-btn,
+.ProductItem:focus-within .qv-trigger-btn {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.qv-trigger-btn:hover { background: #111; color: #fff; }

@@ -1,0 +1,281 @@
+{% if template.name == 'product' and product.metafields.custom.complete_products != blank %}
+ {{ 'quick-view-drawer.css?v=1' | asset_url | stylesheet_tag }}
+
+
+    {{ 'quick-view-drawer.js' | asset_url | script_tag }}
+  {% assign products = product.metafields.custom.complete_products.value %}
+
+  {% capture flickity_options %}
+  {
+    "prevNextButtons": true,
+    "pageDots": true,
+    "wrapAround": false,
+    "contain": true,
+    "cellAlign": "left",
+    "watchCSS": true,
+    "dragThreshold": 8,
+    "groupCells": true,
+    "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+  }
+  {% endcapture %}
+<style>
+  .meta_silder .SectionHeader.SectionHeader--center {
+	text-align: left;
+	border-bottom: 2px solid #000;
+	display: inline-block;
+  font-size: 24px;
+}
+.quick-view-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.quick-view-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.ajax-add-btn.quick_add.active {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.quick-view-content {
+  position: relative;
+  max-width: 900px;
+  margin: 5% auto;
+  background: #fff;
+  padding: 20px;
+  z-index: 2;
+}
+
+.quick-view-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+#QuickViewContent #section-announcement,#QuickViewContent  #section-header {
+	display: none;
+}
+
+.meta_silder .ProductItem__Info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta_silder .ProductItem__Title {
+  margin: 0;
+}
+
+.meta_silder .ProductItem__PriceList {
+  margin: 0;
+}
+.meta_silder  .ProductItem__Title {
+	min-height: 0;
+}
+</style>
+<section class="Section meta_silder Section--spacingExtraLarge " data-section-id="template--19834891141289__9d52ce25-f050-44e7-874d-70597692f5dd" data-section-type="content-slider" data-section-settings="{
+  &quot;layout&quot;: &quot;top&quot;,
+  &quot;enable_natual_scroll&quot;: true,
+  &quot;enable_recently_viewed&quot;: true,
+  &quot;productId&quot;: 8873059188905,
+  &quot;tabs_count&quot;: 2,
+  &quot;recently_block_id&quot;: &quot;block-93faab48-3bfd-4b72-8e25-d026d7a3c9a2&quot;
+}">
+	<div class="Container">
+  <div class="ContentSlider__ContentWrapper ">
+			<div class="ContentSlider__Content ColourStyle--dark">
+				<header class="SectionHeader SectionHeader--center">
+					<span>
+     {% if section.settings.title != blank %}
+     
+        <h2 class="Heading u-h3">{{ section.settings.title }} </h2>
+
+    {% endif %}        
+          </span><div class="SectionHeader__TabList TabList" role="tablist" style="display:none;">
+	      </div>
+				</header>
+			</div>
+		</div>
+<div class="ContentSlider Grid"><div class="Grid__Cell 2/16--lap-and-up"></div>
+				<div class="Grid__Cell 1/1--lap-and-up TabPanelWrapper">
+					<link href="//www.nataliemariejewellery.com/cdn/shop/t/263/assets/component-product-item.css?v=80494208769623918871771516476" rel="stylesheet" type="text/css" media="all">	
+			
+			<div class="TabPanel" id="block-b65acb15-5c5d-4d96-9794-e3e11769da6b" aria-hidden="false" role="tabpanel" data-block-type="complementary">	
+				<div class="ContentSlider__SliderWrapper" style="translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1; visibility: inherit;">
+					<div class="Carousel--scroll ContentList ContentList--carousel Carousel" data-flickity-config="{
+			    &quot;prevNextButtons&quot;: true,
+			    &quot;pageDots&quot;: false,
+			    &quot;wrapAround&quot;: false,
+			    &quot;contain&quot;: true,
+			    &quot;cellAlign&quot;: &quot;left&quot;,
+			    &quot;watchCSS&quot;: true,
+			    &quot;dragThreshold&quot;: 8,
+			    &quot;groupCells&quot;: true,
+			    &quot;arrowShape&quot;: {&quot;x0&quot;: 20, &quot;x1&quot;: 60, &quot;y1&quot;: 40, &quot;x2&quot;: 60, &quot;y2&quot;: 35, &quot;x3&quot;: 25}
+			  }" data-block-id="slideshow_b65acb15-5c5d-4d96-9794-e3e11769da6b">
+		{% assign products = product.metafields.custom.complete_products.value %}
+			
+   {% for item in products limit: section.settings.limit %}
+          
+          {% if item != blank %}
+          <div class="Carousel__Cell">
+
+            <div class="ProductItemWrapper">
+
+              {% render 'product-item',
+                product: item,
+                show_product_info: true,
+                show_quick_buy: section.settings.show_quick_buy,
+                show_vendor: false,
+                quick_btn_name:section.settings.quick_btn_name,
+                show_color_swatch: false,
+                show_labels: true
+              %}
+
+       
+            </div>
+
+          </div>
+          {% endif %}
+
+        {% endfor %}
+
+      
+					</div><div class="Content__SlideshowNav Content__SlideshowNav--scroller" id="slideshow_b65acb15-5c5d-4d96-9794-e3e11769da6b">
+							<div class="flickity-page-dots flickity-page-slider hidden-lap-and-up"><button type="button" style="--item-count: 2;" aria-label="Slide to image" class="slider is-selected"></button></div>
+							<div class="flickity-page-dots flickity-page-slider hidden-pocket"><button type="button" style="--item-count: 2; left: 0px;" aria-label="Slide to image" class="slider is-selected"></button></div>
+						</div></div>
+			</div>
+      {{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+
+			
+			
+				</div>
+				<div class="Grid__Cell 2/16--lap-and-up"></div></div></div>
+	
+	
+</section>
+
+
+<style>
+
+#qv-drawer .Image--fadeIn,#qv-drawer .fadeIn {
+	opacity: 1;
+}
+
+.qv-trigger-btn {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+	background: {{section.settings.quick_buy_bg}};
+	padding: 8px 15px;
+	color: {{section.settings.quick_buy_text}};
+	transition: all .3s ease;
+	width: 100%;
+}
+
+/* SHOW ON HOVER */
+.meta_silder .ProductItem:hover .qv-trigger-btn,.meta_silder{
+  opacity:1;
+  visibility:visible;
+}
+/* MOBILE */
+
+@media(max-width:768px){
+
+.meta_silder .quick-view-btn, .meta_silder .product-card .quick_add {
+	bottom: 80px;
+	width: 100px;
+}
+
+}
+
+</style>
+
+
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Metafield Product Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Complete The Look"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": "Products to show",
+      "default": 6
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_light",
+      "label": "Enable light background",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show Quick Buy",
+      "default": false
+    },
+    {
+        "type": "color",
+        "id": "quick_buy_bg",
+        "label": "Quick Buy Background",
+        "default": "#e7dfd4"
+      },
+      {
+        "type": "color",
+        "id": "quick_buy_text",
+        "label": "Quick Buy Text Color",
+        "default": "#93795c"
+      },
+    {
+      "type": "text",
+      "id": "quick_btn_name",
+      "label": "Button Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_natual_scroll",
+      "label": "Enable natural scroll",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "left", "label": "Left" }
+      ],
+      "default": "top"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Metafield Product Slider"
+    }
+  ]
+}
+{% endschema %}

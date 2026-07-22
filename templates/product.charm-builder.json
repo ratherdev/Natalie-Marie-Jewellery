@@ -145,6 +145,24 @@
         "enable_video_looping": false
       }
     },
+    "metafield_slider_btxRBF": {
+      "type": "metafield-slider",
+      "custom_css": [
+        ".Section--spacingExtraLarge {margin-bottom: 0px; margin-top: 0;}"
+      ],
+      "name": "Metafield Product Slider",
+      "settings": {
+        "title": "{{ product.metafields.custom.complete_title.value }}",
+        "limit": 12,
+        "enable_light": true,
+        "show_quick_buy": true,
+        "quick_buy_bg": "#e7dfd4",
+        "quick_buy_text": "#93795c",
+        "quick_btn_name": "Quick Add",
+        "enable_natual_scroll": true,
+        "text_position": "left"
+      }
+    },
     "0e019660-a200-4a18-a5ed-bae4aee58f1c": {
       "type": "styled-with",
       "blocks": {
@@ -206,6 +224,7 @@
       "block_order": [
         "image_d378wh"
       ],
+      "custom_css": [],
       "settings": {
         "remove_spacing_top": false,
         "remove_spacing_bottom": false,
@@ -224,6 +243,46 @@
         "button_style": "underline"
       }
     },
+    "how_it_works_xkHNAR": {
+      "type": "how-it-works",
+      "blocks": {
+        "article_card_xLeUDW": {
+          "type": "article_card",
+          "settings": {
+            "article": "news/nmj-lovers-jordy-and-tom",
+            "custom_title": "",
+            "custom_text": ""
+          }
+        },
+        "article_card_bcDDW3": {
+          "type": "article_card",
+          "settings": {
+            "article": "news/nmj-lovers-juliet-and-raven",
+            "custom_title": "",
+            "custom_text": ""
+          }
+        },
+        "article_card_QCGtLV": {
+          "type": "article_card",
+          "settings": {
+            "article": "news/nmj-lovers-charlotte-and-olli",
+            "custom_title": "",
+            "custom_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "article_card_xLeUDW",
+        "article_card_bcDDW3",
+        "article_card_QCGtLV"
+      ],
+      "name": "How It Works Articles",
+      "settings": {
+        "heading": "Create Your Story",
+        "subheading": "<p>Start with a chain, then add the charms that mean the most to you. Whether it's a special memory, a loved one, or a milestone, your jewellery becomes a reflection of your unique journey.</p>",
+        "button_label": ""
+      }
+    },
     "9d52ce25-f050-44e7-874d-70597692f5dd": {
       "type": "content-slider",
       "blocks": {
@@ -231,38 +290,8 @@
           "type": "complementary",
           "settings": {
             "contentProduct": "{{ product }}",
-            "use_first_cart_item": false,
-            "title": "<p><strong>Perfectly Paired</strong></p>",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        },
-        "bf2da388-9cf9-4673-957d-9c2521ac348f": {
-          "type": "related",
-          "settings": {
-            "contentProduct": "{{ product }}",
-            "use_first_cart_item": false,
-            "title": "<p><strong>You May Like</strong></p>",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        },
-        "4aba9b05-f9c0-40db-8897-e53803ce4297": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Most Loved</strong></p>",
-            "collection": "most-loved",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        },
-        "93faab48-3bfd-4b72-8e25-d026d7a3c9a2": {
-          "type": "recently",
-          "settings": {
-            "title": "<p><strong>Recently Viewed</strong></p>",
+            "use_first_cart_item": true,
+            "title": "<p>{{ block.settings.contentProduct.metafields.custom.complete_title.value }}</p>",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -270,10 +299,10 @@
         }
       },
       "block_order": [
-        "b65acb15-5c5d-4d96-9794-e3e11769da6b",
-        "bf2da388-9cf9-4673-957d-9c2521ac348f",
-        "4aba9b05-f9c0-40db-8897-e53803ce4297",
-        "93faab48-3bfd-4b72-8e25-d026d7a3c9a2"
+        "b65acb15-5c5d-4d96-9794-e3e11769da6b"
+      ],
+      "custom_css": [
+        ".Section--spacingExtraLarge {margin: 0px 0;}"
       ],
       "settings": {
         "enable_light": false,
@@ -463,8 +492,10 @@
   },
   "order": [
     "main",
+    "metafield_slider_btxRBF",
     "0e019660-a200-4a18-a5ed-bae4aee58f1c",
     "text_with_media_3C79kY",
+    "how_it_works_xkHNAR",
     "9d52ce25-f050-44e7-874d-70597692f5dd",
     "a8f5fa41-4dd6-4dff-a022-c30b7ced2aa4",
     "047d8527-e48d-4c85-ba56-1aa48c4b98ba",

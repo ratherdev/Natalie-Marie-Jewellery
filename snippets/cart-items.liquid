@@ -84,6 +84,8 @@
 						{%- capture lineMetal -%}
 							<p class="CartItem__Variant Text--highlight">{{ property.first }}: {{ property.last }}</p>
 						{%- endcapture -%}
+						{%- elsif property.first == 'Note' -%}
+  							<p class="charm-limit-message text-sm">{{ property.last }}</p>
 					{%- else -%}
 						<p class="CartItem__Variant Text--highlight">{{ property.first }}: {{ property.last }}</p>
 					{%- endif -%}

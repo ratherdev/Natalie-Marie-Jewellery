@@ -91,6 +91,24 @@
 			        {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: 'ProductItem__Image ProductItem__Image--secondary', data-media-id: mediaId, fetchpriority: fetchpriority -}}
 				{%- endif -%}
 			{%- endif -%}
+
+
+{% if show_quick_buy == true %}
+
+<button                                             
+         type="button"                                     
+         class="qv-trigger-btn"                            
+         data-qv-handle="{{ product.handle }}"             
+         data-qv-title="{{ product.title | escape }}"      
+         aria-label="Quick view {{ product.title }}">      
+         Quick View                                        
+       </button>  
+ {%- endif -%}
+
+
+
+
+			
 		</div>
 	  
       {%- if show_labels -%}
@@ -260,6 +278,7 @@
       </div>
     {%- endif -%}
   </div>
+  
 
   {%- if use_horizontal -%}
     <a href="{{ product.url }}" class="ProductItem__ViewButton Button Button--secondary hidden-pocket">{{ 'collection.product.view_product' | t }}</a>

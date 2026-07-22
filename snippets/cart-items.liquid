@@ -23,7 +23,16 @@
 		endif
 	endfor
 -%}
-
+<style>
+.charm-limit-message {
+	color: #93795c;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 5px;
+	font-size: inherit;
+}
+</style>
 {%- assign bundlePrices = bundlePrices | remove_first: ", " | split: ', ' -%}
 {%- assign bundleOriginalPrices = bundleOriginalPrices | remove_first: ", " | split: ', ' -%}
 {%- assign bundleLineItemKeys = bundleLineItemKeys | remove_first: ", " | split: ', ' -%}

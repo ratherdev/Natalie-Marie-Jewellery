@@ -36,7 +36,9 @@ for size, we use it to display a size chart (if applicable)
 		{%- if show_metal_meta and product.metafields.custom.metal.value != blank -%}
 			<input type="hidden" name="properties[Metal]" value="{{ product.metafields.custom.metal.value.title }}" data-active="true">
 		{%- endif -%}
-		
+		{%- if product.metafields.custom.charm_limit_message != blank -%}
+			<input type="hidden" name="properties[Note]" value="{{ product.metafields.custom.charm_limit_message | escape }}" data-active="true">
+		{%- endif -%}
 		{%- if show_width_meta and product.metafields.custom.width.value != blank -%}
 			<input type="hidden" name="properties[Width]" value="{{ product.metafields.custom.width.value.title }}" data-active="true">
 		{%- endif -%}

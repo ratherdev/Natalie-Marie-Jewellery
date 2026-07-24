@@ -54,8 +54,8 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_14_July_2026_at_11.30.55-2.png",
-            "mobile_image": "shopify://shop_images/Untitled_-_14_July_2026_at_11.30.55-2.png",
+            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-4.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-4.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
@@ -71,17 +71,17 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Bold_Symbol_Of_Forever_Edm_Header.png",
-            "mobile_image": "shopify://shop_images/Bold_Symbol_Of_Forever_Edm_Header.png",
+            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-5.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-5.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p><strong>Where Strength Meets Sentiment</strong></p>",
-            "title": "<p><em>A Bold Symbol of Forever </em></p>",
-            "description": "<p>Designed for those drawn to sculptural forms, our chunky diamond wedding rings pair substantial gold with brilliant laboratory-grown diamonds. A modern expression of commitment, created to age beautifully alongside your story. </p>",
+            "subheading": "<p><strong>to be cherished forever</strong></p>",
+            "title": "<p><em>For Every Chapter Ahead</em></p>",
+            "description": "<p>From timeless solitaires to modern trilogy designs, discover engagement rings created to capture your story with elegance, intention and enduring craftsmanship.</p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://collections/diamond-wedding-rings",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/engagement-rings?filter.p.m.custom.filter_metal=Yellow+Gold&page=1&sort_by=manual",
             "button_style": "underline"
           }
         },
@@ -221,7 +221,7 @@
         "0253a4d5-00b4-4c80-870d-9c2892691aa3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_78.png",
+            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-6.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",

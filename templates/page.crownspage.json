@@ -54,7 +54,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "crown-wedding-rings",
+            "collection": "camille-crown",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -68,13 +68,13 @@
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Style</strong></p>",
-        "title": "<p>Crown <em>Wedding Rings</em></p>",
-        "description": "<p>A piece for all stories; a pair for your personal duet. Discover Crown Wedding Rings.</p>",
+        "subheading": "",
+        "title": "<p><em>Camille Crown Ring </em></p>",
+        "description": "<p>Designed for every story, the Camille Crown Ring features marquise diamond detailing and four tailored fits to complement your engagement ring.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "https://www.nataliemariejewellery.com/collections/crown-wedding-rings?filter.p.m.custom.filter_metal=Yellow%20Gold",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

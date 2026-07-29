@@ -559,7 +559,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "diamond-necklaces",
+            "collection": "triology-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -573,13 +573,13 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Diamonds that celebrate life’s milestones</strong></p>",
-        "title": "<p>Diamond Necklaces</p>",
-        "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour the moments, memories and milestones that shape your story.</p>",
+        "subheading": "<p><strong>Timeless Love, Beautifully Told</strong></p>",
+        "title": "<p>Trilogy Engagement</p>",
+        "description": "<p>Each Trilogy Engagement Ring captures the beauty of your shared journey—three stones representing your past, your present, and your forever.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/diamond-necklaces",
+        "button_1_link": "https://www.nataliemariejewellery.com/collections/triology-engagement?filter.p.m.custom.filter_metal=Yellow%20Gold",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

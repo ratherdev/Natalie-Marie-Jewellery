@@ -24,7 +24,7 @@
         "template--16108666814633__d469c0ba-1ca5-4517-8eaf-346749a7ac37-1679901563edfeb8cd-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Bold_Symbol_Of_Forever_Edm_Header_949215ef-3fb0-4aff-bfa3-3c98562bd8b6.png"
+            "image": "shopify://shop_images/Untitled_-_29_July_2026_at_09.47.35.png"
           }
         }
       },
@@ -33,10 +33,10 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>The Wedding Collective </strong></p>",
-        "title": "<p><em>Handcrafted</em> to Mark Your Forever</p>",
-        "description": "<p>Find the wedding band that reflects your personal style. From the timeless brilliance of laboratory-grown diamonds to the understated beauty of sapphires and refined plain gold designs, explore our handcrafted collection by stone and discover the piece that feels uniquely yours.</p>",
-        "feature_text": "<p>From <em>timeless</em> diamonds to <em>meaningful </em>sapphires, discover a wedding band to <em>endure</em>.</p>",
+        "subheading": "<p><strong>Crown Wedding Rings </strong></p>",
+        "title": "<p><em>Thoughtfully</em> Designed for Every Pairing</p>",
+        "description": "<p>Discover sculptural wedding bands thoughtfully designed to sit in harmony with your engagement ring. From softly curved organic forms to diamond-set crown silhouettes, each piece is handcrafted to honour your forever.</p>",
+        "feature_text": "<p>Distinctive<em> silhouettes</em>. Thoughtful craftsmanship. A pairing designed to last a <em>lifetime</em>.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -69,7 +69,7 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "",
-        "title": "<p><em>Camille Crown Ring </em></p>",
+        "title": "<p><em>Camille Crown </em>Ring </p>",
         "description": "<p>Designed for every story, the Camille Crown Ring features marquise diamond detailing and four tailored fits to complement your engagement ring.</p>",
         "text_position": "left",
         "colour_style": "dark",
@@ -87,7 +87,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "mined-diamond",
+            "collection": "odette-crown",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -101,13 +101,13 @@
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Natural Diamond</em> Wedding Rings</p>",
-        "description": "<p>Celebrate lasting commitment with our Natural Diamond Wedding Rings, each handcrafted in our Sydney studio with precision and care.</p>",
+        "subheading": "",
+        "title": "<p><em>Odette Crown </em>Rings</p>",
+        "description": "<p>Three distinctive silhouettes, one timeless intention. Designed to pair seamlessly with your engagement ring, each Odette Crown Ring is handcrafted with natural or laboratory grown diamonds to honour your story with enduring beauty.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/mined-diamond",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -120,7 +120,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "plain-wedding-rings",
+            "collection": "organic-crown",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -134,13 +134,13 @@
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Style</strong></p>",
-        "title": "<p>Plain <em>Wedding Rings</em></p>",
-        "description": "<p>Eternal bonds, symbolic of vows taken. Wedding bands are gestures of forever, exchanged in harmony with the one you love.</p>",
+        "subheading": "",
+        "title": "<p><em>Organic Crown </em>Rings</p>",
+        "description": "<p>Soft, sculptural curves meet timeless craftsmanship. Designed to embrace your engagement ring, each Organic Crown Ring offers a contemporary interpretation of the traditional wedding band, handcrafted to be treasured for a lifetime.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/plain-wedding-rings",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -153,7 +153,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "champagne-diamond-wedding-rings",
+            "collection": "reina-crown",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -167,13 +167,13 @@
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Champagne Diamond </em>Wedding Rings </p>",
-        "description": "<p>Each ring is handcrafted using champagne diamonds - chosen for their subtle hues and natural brilliance. </p>",
+        "subheading": "",
+        "title": "<p><em>Reina Crown</em> Rings </p>",
+        "description": "<p>Designed to frame your engagement ring with effortless elegance, the Reina Crown Collection features a graceful arc of  diamonds that captures light from every angle. </p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/champagne-diamond-wedding-rings",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -186,7 +186,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "laboratory-grown-diamond-wedding-rings",
+            "collection": "thalia-crown",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -200,13 +200,13 @@
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Laboratory Grown </em>Wedding Rings</p>",
-        "description": "<p>Your wedding band, reimagined. Laboratory-Grown Diamonds meet expert craftsmanship for a ring that’s as enduring as your promise.</p>",
+        "subheading": "",
+        "title": "<p><em>Thalia Crown</em> Ring</p>",
+        "description": "<p>A delicate composition of marquise and round diamonds, designed to elevate your bridal stack. Each Thalia Crown Ring is thoughtfully handcrafted to complement your engagement ring with graceful curves and enduring beauty.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/laboratory-grown-diamond-wedding-rings",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -217,6 +217,7 @@
       "blocks": {
         "9c225558-164e-4699-ab9f-70acd9789493": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
             "collection": "wedding-bands-for-him",
@@ -229,6 +230,7 @@
       "block_order": [
         "9c225558-164e-4699-ab9f-70acd9789493"
       ],
+      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,
@@ -262,6 +264,7 @@
       "block_order": [
         "4e90ce6d-082e-433e-94d0-a31d9281d71b"
       ],
+      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,

@@ -70,6 +70,7 @@
       "block_order": [
         "disruptor_tile_zLkigC"
       ],
+      "disabled": true,
       "name": "Collection on Page",
       "settings": {
         "collection": "bobby-clark",
@@ -221,7 +222,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "diamond-wedding-rings",
+            "collection": "bobby-clark",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -231,18 +232,17 @@
       "block_order": [
         "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>Diamond <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Diamond Wedding Rings.</p>",
+        "subheading": "<p><strong>Residency Archive </strong></p>",
+        "title": "<p><em>Bobby Clark</em></p>",
+        "description": "<p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/diamond-wedding-rings",
+        "button_1_text": "Explore Her Work",
+        "button_1_link": "shopify://collections/bobby-clark",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

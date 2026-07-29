@@ -54,7 +54,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "camille-crown",
+            "collection": "nmj-signature-crowns",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -63,6 +63,39 @@
       },
       "block_order": [
         "fa090c1f-de05-41b4-8eba-d58cc1ba3719"
+      ],
+      "settings": {
+        "enable_light": false,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "",
+        "title": "<p><em>NMJ Signature </em>Crowns</p>",
+        "description": "<p>Discover the crown rings that have become synonymous with Natalie Marie Jewellery. Thoughtfully handcrafted to complement a wide range of engagement ring styles, creating a bridal pairing to be treasured for a lifetime.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_slider_A3J9Qn": {
+      "type": "content-slider",
+      "blocks": {
+        "collection_eLEFHn": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "camille-crown",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_eLEFHn"
       ],
       "settings": {
         "enable_light": false,
@@ -358,6 +391,7 @@
     "main",
     "d469c0ba-1ca5-4517-8eaf-346749a7ac37",
     "112a30e4-a267-406a-a245-0f5c0ab42213",
+    "content_slider_A3J9Qn",
     "f4cbf1ef-4a63-4243-92ce-30c74c264480",
     "2f49be64-87a3-4a0f-acaa-523f2c948a4f",
     "f9e39ec7-e645-46ae-9dbc-6e1d553ff208",

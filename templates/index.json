@@ -913,6 +913,7 @@
         },
         "template--16086483075241__4ba9854a-0b7d-4085-8041-9ec0f5b6dc04-image-1": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Website_Resizes_55.png",
             "apply_overlay": false,

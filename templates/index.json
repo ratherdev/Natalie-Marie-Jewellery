@@ -54,34 +54,34 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-4.png",
+            "image": "shopify://shop_images/Untitled_-_31_July_2026_at_10.12.42.png",
             "mobile_image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-4.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p><strong>A New Chapter of Bridal</strong></p>",
-            "title": "<p><em>Fleur</em></p>",
-            "description": "<p>Inspired by the beauty of flowers in bloom, Fleur was crafted to honour the celebrations that seem to pass in the blink of an eye, capturing the beauty of the present moment and transforming it into something enduring.</p>",
+            "subheading": "<p><strong>Diamonds that celebrate life’s milestones</strong></p>",
+            "title": "<p><em>Mark The Moment </em></p>",
+            "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Each piece is created to honour the moments, memories  that shape your story.</p>",
             "colour_style": "light",
             "button_1_text": "Discover The Range",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/fleur",
+            "button_1_link": "shopify://collections/diamond-necklaces",
             "button_style": "underline"
           }
         },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-5.png",
+            "image": "shopify://shop_images/Untitled_-_31_July_2026_at_10.12.42-2.png",
             "mobile_image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-5.png",
             "apply_overlay": true,
             "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p><strong>to be cherished forever</strong></p>",
-            "title": "<p><em>For Every Chapter Ahead</em></p>",
-            "description": "<p>From timeless solitaires to modern trilogy designs, discover engagement rings created to capture your story with elegance, intention and enduring craftsmanship.</p>",
+            "content_position": "bottomLeft",
+            "subheading": "<p><strong>Thoughtful Gifts For Your Bridal Party</strong></p>",
+            "title": "<p><em>For Every Woman Beside You</em></p>",
+            "description": "<p>Honour the cherished loves in your life with our collection of sentimental, forever pieces; precious tokens of everlasting friendships.</p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/engagement-rings?filter.p.m.custom.filter_metal=Yellow+Gold&page=1&sort_by=manual",
+            "button_1_link": "shopify://collections/for-your-bridesmaids",
             "button_style": "underline"
           }
         },

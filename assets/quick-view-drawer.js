@@ -57,7 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
     content.innerHTML = '';
   }
 
-  // ── Inject content ────────────────────────────────────────────
+  // ── Resolve Shopify {width} image URL templates ──────────────
+  var TARGET_WIDTH = 800;
+  function resolveImgUrl(template, widthsAttr) {
+    if (!template || template.indexOf('{width}') === -1) return template;
+    var widths = [];
+    try { widths = JSON.parse(widthsAttr || '[]'); } catch(e) {}
+    var chosen = TARGET_WIDTH;
+    if (widths.length) {
+      var larger = widths.filter(function(w) { return w >= TARGET_WIDTH; });
+      chosen = larger.length ? Math.min.apply(null, larger) : Math.max.apply(null, widths);
+    }
+    return template.replace('{width}', chosen);
+  }
+
+    // ── Inject content ────────────────────────────────────────────
   function injectContent(html, handle) {
     var parser = new DOMParser();
     var doc    = parser.parseFromString(html, 'text/html');
@@ -202,18 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Fix lazy-load images — resolve {width} template
-    var TARGET_WIDTH = 800;
-    function resolveImgUrl(template, widthsAttr) {
-      if (!template || template.indexOf('{width}') === -1) return template;
-      var widths = [];
-      try { widths = JSON.parse(widthsAttr || '[]'); } catch(e) {}
-      var chosen = TARGET_WIDTH;
-      if (widths.length) {
-        var larger = widths.filter(function(w) { return w >= TARGET_WIDTH; });
-        chosen = larger.length ? Math.min.apply(null, larger) : Math.max.apply(null, widths);
-      }
-      return template.replace('{width}', chosen);
-    }
+    // (resolveImgUrl is defined at module scope below)
 
     content.querySelectorAll('img[data-src]').forEach(function(img) {
       img.src = resolveImgUrl(img.getAttribute('data-src'), img.getAttribute('data-widths'));

@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
       var slidesEl = document.createElement('div');
       slidesEl.className = 'qv-slides';
 
-      images.forEach(function(src) {
+      images.forEach(function(src, idx) {
         var slide = document.createElement('div');
         slide.className = 'qv-slide';
         var img = document.createElement('img');
         img.src = src;
         img.alt = '';
-        img.loading = 'lazy';
+        img.loading = idx === 0 ? 'eager' : 'lazy'; // first image loads immediately
         slide.appendChild(img);
         slidesEl.appendChild(slide);
       });

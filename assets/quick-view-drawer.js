@@ -531,28 +531,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Image Slider ──────────────────────────────────────────────
   function initSlider(galleryWrap) {
+    var sliderEl = galleryWrap.querySelector('.qv-slider');
     var slidesEl = galleryWrap.querySelector('.qv-slides');
+    var slides   = galleryWrap.querySelectorAll('.qv-slide');
     var thumbs   = galleryWrap.querySelectorAll('.qv-thumb');
     var prevBtn  = galleryWrap.querySelector('.qv-arrow--prev');
     var nextBtn  = galleryWrap.querySelector('.qv-arrow--next');
-    var total    = thumbs.length;
+    var total    = slides.length;
     var current  = 0;
+
+    // Set pixel widths so translateX(-Npx) works correctly regardless of container
+    function setWidths() {
+      var w = sliderEl ? sliderEl.offsetWidth : 540;
+      if (!w) w = 540; // fallback if not yet rendered
+      slides.forEach(function(slide) { slide.style.width = w + 'px'; });
+      slidesEl.style.width = (w * total) + 'px';
+      // Re-apply current position with new width
+      slidesEl.style.transform = 'translateX(-' + (current * w) + 'px)';
+    }
 
     function goTo(idx) {
       current = (idx + total) % total;
-      slidesEl.style.transform = 'translateX(-' + (current * 100) + '%)';
-      thumbs.forEach(function (t, i) { t.classList.toggle('is-active', i === current); });
+      var w = sliderEl ? sliderEl.offsetWidth : 540;
+      slidesEl.style.transform = 'translateX(-' + (current * w) + 'px)';
+      thumbs.forEach(function(t, i) { t.classList.toggle('is-active', i === current); });
     }
 
-    if (prevBtn) prevBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(current - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(current + 1); });
-    thumbs.forEach(function (thumb, idx) { thumb.addEventListener('click', function () { goTo(idx); }); });
+    // Set widths immediately and also after a short delay (drawer animation)
+    setWidths();
+    setTimeout(setWidths, 400);
 
-    var sliderEl = galleryWrap.querySelector('.qv-slider');
+    // Re-calculate on resize
+    window.addEventListener('resize', function() { setWidths(); });
+
+    if (prevBtn) prevBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current + 1); });
+    thumbs.forEach(function(thumb, idx) { thumb.addEventListener('click', function() { goTo(idx); }); });
+
     if (sliderEl) {
       var startX = 0;
-      sliderEl.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-      sliderEl.addEventListener('touchend', function (e) {
+      sliderEl.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+      sliderEl.addEventListener('touchend', function(e) {
         var diff = startX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
       });

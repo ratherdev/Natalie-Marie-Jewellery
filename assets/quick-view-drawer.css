@@ -49,7 +49,7 @@ body.qv-open { overflow: hidden; }
   top: 0;
   right: 0;
   bottom: 0;
-  width: 390px;
+  width: 540px;
   max-width: 100vw;
   background: #fff;
   display: flex;
@@ -63,25 +63,18 @@ body.qv-open { overflow: hidden; }
 #qv-drawer-overlay.is-open #qv-drawer { transform: translateX(0); }
 
 /* ── Header bar ── */
-#qv-drawer .ProductMeta {
-	margin-bottom: 0;
-}
-#qv-drawer .AdditionalVariantList .Grid__Cell {
-	height: 30px;
-	flex: 0 1 39px;
-}
 #qv-drawer-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 20px;
+  padding: 16px 20px;
   border-bottom: 1px solid #e8e8e8;
   flex-shrink: 0;
   background: #fff;
 }
 #qv-drawer-close {
-width: 12px;
-  height: 12px;
+  width: 32px;
+  height: 32px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -146,7 +139,6 @@ width: 12px;
    ================================================================ */
 .qv-gallery {
   width: 100%;
-  height: 460px;
   flex-shrink: 0;
   background: #f7f6f4;
   display: flex;
@@ -157,24 +149,37 @@ width: 12px;
 
 /* Main slide area */
 .qv-slider {
-  flex: 1;
   position: relative;
   overflow: hidden;
-  min-height: 0;
+  width: 100%;
+  /* Fixed height — works in both scroll-body (mobile) and flex column (desktop) */
+  height: 460px;
 }
+
+@media (max-width: 600px) {
+  .qv-slider { height: 300px; }
+}
+
 .qv-slides {
   display: flex;
-  height: 100%;
+  height: 460px;
+  /* width is set by JS to (numSlides * 100%) so translateX works correctly */
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
+
+@media (max-width: 600px) {
+  .qv-slides { height: 300px; }
+}
+
 .qv-slide {
-  min-width: 100%;
+  /* width set by JS to match slider pixel width — never use % here */
+  flex-shrink: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  overflow: hidden;
 }
 .qv-slide img {
   width: 100%;
@@ -209,7 +214,7 @@ width: 12px;
 
 /* Thumbnail strip */
 .qv-thumbs {
-  display: none; /*flex*/
+  display: flex;
   gap: 6px;
   padding: 8px 10px;
   flex-shrink: 0;
@@ -330,12 +335,10 @@ width: 12px;
 /* Add to cart — client: 83% width */
 .qv-info .ProductForm__AddToCart,
 .qv-info [name="add"] {
-  width: 79% !important;
+  width: 83% !important;
   margin-top: 0 !important;
 }
-.qv-info .AdditionalVariantList.Grid {
-	gap: 10px;
-}
+
 /* Popovers */
 .qv-info .Popover,
 .qv-info .OptionSelector {
@@ -371,37 +374,18 @@ width: 12px;
   transition: color 0.15s;
 }
 #qv-full-link:hover { color: #111; }
- .qv-info .CustomLineProperties .customLineProperty--optional{
-  pointer-events: unset @Important;
-}
-  .qv-info  .CustomLineProperties.is-active {
-	box-shadow: unset !important;
-}
-  .qv-info .CustomLineProperties.is-active .ProductForm__Option.ProductForm__Option--labelled {
-	margin-left: -16px;
-	margin-right: -16px;
-	margin-bottom: 0 !important;
-}
+
 /* ── Error ── */
 .qv-error { padding: 40px 24px; text-align: center; color: #666; font-size: 14px; }
 .qv-error a { color: #111; text-decoration: underline; }
 
 /* ── Mobile ── */
 @media (max-width: 600px) {
-  .qv-slide img {
-	 padding: 0px !important; 
-}
-.meta_silder .SectionHeader.SectionHeader--center {
-	margin-bottom: 0;
-}
-.meta_silder  .ContentSlider__ContentWrapper {
-	margin-bottom: 10px;
-}
   #qv-drawer { width: 100%; }
-  .qv-gallery { height: 280px; }
   .qv-info { padding: 16px; }
-  .qv-info .Grid--2rows .Grid__Cell { width: 20% !important; }
-  .qv-info .Grid--2rows {gap: 23px;}
+  .qv-info .Grid--2rows .Grid__Cell { width: calc(100% / 4) !important; }
+  /* thumbs smaller on mobile */
+  .qv-thumb { width: 44px; height: 44px; }
 }
 
 /* ── Quick View trigger button ── */

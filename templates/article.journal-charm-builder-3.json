@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_d5fd62a1-25e1-4e70-a606-951916734ec5.png"
+            "image": "shopify://shop_images/4_caee9218-0c05-4d7b-8204-d376b8da40bb.png"
           }
         }
       },
@@ -32,8 +32,8 @@
         "media_width": "6",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>Create Your Story | Introducing the NMJ Charm Builder</p>",
-        "description": "<p>A modern way to create jewellery that reflects the moments, people and milestones that matter most.</p><p>There are certain pieces of jewellery that become part of who we are.</p><p>The necklace you reach for every morning. The charm that reminds you of someone you love. The symbol that quietly marks a chapter in your life.</p><p>Our Charm Builder was created to make those pieces personal.</p><p>Designed as an intuitive online experience, it allows you to build a piece of jewellery that feels entirely your own—layering meaningful charms onto your chosen chain to create something that evolves alongside you. Whether you're celebrating a milestone, honouring a loved one or gifting a future heirloom, each piece begins with your story.</p>",
+        "title": "<h2>Endless Ways to Personalise</h2>",
+        "description": "<p>The beauty of the NMJ Charm Offering lies in creating a piece that's uniquely yours. Every necklace can be <em>customised to reflect your story</em>, with thoughtful details that hold lasting meaning.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -59,9 +59,9 @@
             "devices": "mobile_desktop",
             "content_position": "underLeft",
             "subheading": "",
-            "title": "<h2>Jewellery That Means Something</h2>",
-            "description": "<p>Personal jewellery has always been at the heart of Natalie Marie Jewellery.</p><p>The Charm Builder extends this philosophy, inviting you to create a necklace that reflects your journey through thoughtfully designed symbols, birthstones and meaningful details. There is no right or wrong combination—only the one that feels most like you.</p><p>Every charm carries its own meaning, allowing you to build a piece that is deeply personal while remaining timeless enough to wear every day.</p>",
-            "description_mobile": "<p>Personal jewellery has always been at the heart of Natalie Marie Jewellery.</p><p>The Charm Builder extends this philosophy, inviting you to create a necklace that reflects your journey through thoughtfully designed symbols, birthstones and meaningful details. There is no right or wrong combination—only the one that feels most like you.</p><p>Every charm carries its own meaning, allowing you to build a piece that is deeply personal while remaining timeless enough to wear every day.</p>",
+            "title": "",
+            "description": "<p>Choose from a collection of symbolic charms, then make your piece even more personal with <em><strong>birthstones</strong></em> that celebrate the people you love or commemorate a meaningful month. Whether representing children, family, a partner, or your own birth month, each stone adds another layer to your story.</p><p>For an even more intimate touch, select <em><strong>engraving</strong></em><strong> </strong> to capture initials. These subtle details transform your jewellery into a keepsake—one that carries memories, milestones, and moments you'll treasure for years to come.</p><p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
+            "description_mobile": "<p>Choose from a collection of symbolic charms, then make your piece even more personal with <strong>birthstones</strong> that celebrate the people you love or commemorate a meaningful month. Whether representing children, family, a partner, or your own birth month, each stone adds another layer to your story.</p><p>For an even more intimate touch, select <strong>engraving </strong> to capture initials. These subtle details transform your jewellery into a keepsake—one that carries memories, milestones, and moments you'll treasure for years to come.</p><p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -108,7 +108,7 @@
         "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_988e52b0-f360-42a9-9c4d-9b6d682c050d.png"
+            "image": "shopify://shop_images/8_02ccbe49-d476-4c79-881c-a1477c680622.png"
           }
         }
       },
@@ -125,151 +125,11 @@
         "media_width": "7",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>\"The most meaningful jewellery is never finished. <em>It evolves alongside you</em>, collecting the people, places and moments that shape your story.\" </p>",
+        "title": "<p>\"The beauty of a charm necklace lies not only in what it holds today, <em>but in the stories still waiting to be added</em>.\"</p>",
         "description": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc": {
-      "type": "content-list",
-      "blocks": {
-        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "<h2>How the Charm Builder Works</h2>",
-            "description": "<p>Creating your necklace is simple.</p><p><em><strong>1. Choose Your Chain</strong></em></p><p>Begin by selecting the chain that suits your style. Whether you prefer something refined and delicate or a bolder statement, your chain becomes the foundation of your story.</p><p><em><strong>2. Add Your Charms</strong></em></p><p>Explore our collection of symbolic charms and choose the pieces that resonate with you.</p><p>Represent a loved one. Celebrate a milestone. Mark a new beginning. Or simply select the symbols you're naturally drawn to.</p><p>Each addition transforms your necklace into something uniquely yours.</p><p><em><strong>3. Personalise with Birthstones</strong></em></p><p>For selected designs, add a birthstone to represent yourself, your children, a partner, family member or someone you'll always carry close.</p><p>These thoughtful details create a piece layered with meaning—subtle enough for everyday wear, yet deeply personal to the wearer.</p><p><em><strong>4. Wear Your Story</strong></em></p><p>Once complete, your necklace becomes more than jewellery.</p><p>It becomes a reflection of your memories, your relationships and the moments that have shaped you—with the freedom to add new charms as your story continues to unfold.</p>",
-            "description_mobile": "<p>Creating your necklace is simple.</p><p><em><strong>1. Choose Your Chain</strong></em></p><p>Begin by selecting the chain that suits your style. Whether you prefer something refined and delicate or a bolder statement, your chain becomes the foundation of your story.</p><p><em><strong>2. Add Your Charms</strong></em></p><p>Explore our collection of symbolic charms and choose the pieces that resonate with you.</p><p>Represent a loved one. Celebrate a milestone. Mark a new beginning. Or simply select the symbols you're naturally drawn to.</p><p>Each addition transforms your necklace into something uniquely yours.</p><p><em><strong>3. Personalise with Birthstones</strong></em></p><p>For selected designs, add a birthstone to represent yourself, your children, a partner, family member or someone you'll always carry close.</p><p>These thoughtful details create a piece layered with meaning—subtle enough for everyday wear, yet deeply personal to the wearer.</p><p><em><strong>4. Wear Your Story</strong></em></p><p>Once complete, your necklace becomes more than jewellery.</p><p>It becomes a reflection of your memories, your relationships and the moments that have shaped you—with the freedom to add new charms as your story continues to unfold.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": false,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16177341137065__d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc-image-3"
-      ],
-      "settings": {
-        "grid_items_count": 1,
-        "grid_items_count_pocket": "1/1",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
-      "type": "content-list",
-      "blocks": {
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/3_985004d8-acc6-4d92-b6c5-78fd86541ecc.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4_caee9218-0c05-4d7b-8204-d376b8da40bb.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-2",
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1"
-      ],
-      "settings": {
-        "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
         "button_style": "underline"
       }
     },
@@ -325,8 +185,6 @@
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
-    "d94b5d55-eb15-4cf4-80d0-eaa6ad65a4fc",
-    "fe4a59da-74f2-4522-93d1-709dd4b43c45",
     "content_slider_689HQc",
     "main"
   ]

@@ -579,7 +579,7 @@
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "https://www.nataliemariejewellery.com/collections/triology-engagement?filter.p.m.custom.filter_metal=Yellow%20Gold",
+        "button_1_link": "shopify://collections/diamond-wedding-rings",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

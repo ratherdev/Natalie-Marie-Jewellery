@@ -100,6 +100,38 @@
     "fe4a59da-74f2-4522-93d1-709dd4b43c45": {
       "type": "content-list",
       "blocks": {
+        "image_NiBLpb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sollune_2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>MOTHERHOOD & BECOMING</p>",
+            "title": "<p>Sollune Charm</p>",
+            "description": "<p>Created as a reflection of motherhood in all its forms, the Sollune Charm honours transformation. It speaks to the woman you have been, the mother you are becoming and the balance that exists between the two. A deeply meaningful keepsake, Sollune celebrates one of life's most profound journeys.</p>",
+            "description_mobile": "<p>Created as a reflection of motherhood in all its forms, the Sollune Charm honours transformation. It speaks to the woman you have been, the mother you are becoming and the balance that exists between the two. A deeply meaningful keepsake, Sollune celebrates one of life's most profound journeys.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/sollune-charm-yellow-gold",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
           "type": "image",
           "settings": {
@@ -131,8 +163,118 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
+        }
+      },
+      "block_order": [
+        "image_NiBLpb",
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_cPPWy9": {
+      "type": "content-list",
+      "blocks": {
+        "image_pLPiR4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Polaris_-_Birthstone_2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>DIRECTION & GUIDANCE</p>",
+            "title": "<p>Polaris Charm</p>",
+            "description": "<p>Named after the North Star, the Polaris Charm symbolises finding your way. A guiding light through life's milestones, it represents direction, purpose and the confidence to move forward. Personalised with a birthstone, it becomes a meaningful reminder of the people, memories or moments that continue to guide you.</p>",
+            "description_mobile": "<p>Named after the North Star, the Polaris Charm symbolises finding your way. A guiding light through life's milestones, it represents direction, purpose and the confidence to move forward. Personalised with a birthstone, it becomes a meaningful reminder of the people, memories or moments that continue to guide you.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/polaris-charm-birthstone-yellow-gold",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
         },
-        "image_tBWJN6": {
+        "image_JCwYfe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Eily_2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>GUIDANCE & PERSONAL LIGHT</p>",
+            "title": "<p>Eily Charm</p>",
+            "description": "<p>Sometimes, the smallest symbols hold the greatest meaning. Personalised with your chosen birthstone, the Eily Charm represents clarity, guidance and emotional truth. A reminder to trust your instincts and stay connected to who you are, it becomes uniquely personal through the stone you choose.</p>",
+            "description_mobile": "<p>Sometimes, the smallest symbols hold the greatest meaning. Personalised with your chosen birthstone, the Eily Charm represents clarity, guidance and emotional truth. A reminder to trust your instincts and stay connected to who you are, it becomes uniquely personal through the stone you choose.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/eily-charm-birthstone-yellow-gold",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_pLPiR4",
+        "image_JCwYfe"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_FfGgFJ": {
+      "type": "content-list",
+      "blocks": {
+        "image_CAThNH": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Mae-Birthstone_3.jpg",
@@ -163,11 +305,43 @@
             "metaobject_button_style": "",
             "metaobject_devices": ""
           }
+        },
+        "image_KNmtEE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SairaCharm_Birthstone_YG_5stones_1940x2400_fb74ca66-ff9c-4f85-9df1-1283ea73958b.gif",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>PERSONAL INTUITION & SELF-DISCOVERY</p>",
+            "title": "<p>Saira Charm | Birthstone</p>",
+            "description": "<p>The Saira Birthstone Charm brings together the symbolism of your chosen birthstone with the enduring spirit of the Saira collection. A deeply personal talisman, it represents intuition, individuality and the moments that define your journey. Whether chosen to honour yourself or someone you hold close, it serves as a meaningful reminder to trust your own path while celebrating the people and memories that continue to shape you.</p>",
+            "description_mobile": "<p>The Saira Birthstone Charm brings together the symbolism of your chosen birthstone with the enduring spirit of the Saira collection. A deeply personal talisman, it represents intuition, individuality and the moments that define your journey. Whether chosen to honour yourself or someone you hold close, it serves as a meaningful reminder to trust your own path while celebrating the people and memories that continue to shape you.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/saira-charm-birthstone",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
         }
       },
       "block_order": [
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1",
-        "image_tBWJN6"
+        "image_CAThNH",
+        "image_KNmtEE"
       ],
       "settings": {
         "grid_items_count": 2,
@@ -184,24 +358,24 @@
         "button_style": "underline"
       }
     },
-    "content_list_cPPWy9": {
+    "content_list_VbmFzk": {
       "type": "content-list",
       "blocks": {
-        "image_pLPiR4": {
+        "image_9YFK4W": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ella_Charm_-_Pink_Tourmaline.jpg",
+            "image": "shopify://shop_images/SairaCharm-Jade.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
-            "subheading": "",
-            "title": "<p>Ella Charm</p>",
-            "description": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
-            "description_mobile": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
+            "subheading": "<p>HARMONY & GROUNDING</p>",
+            "title": "<p>Saira Charm | Jade</p>",
+            "description": "<p>Carved from natural jade, the Saira Jade Charm is a symbol of calm, balance and emotional grounding. Celebrated for centuries for its enduring beauty, jade encourages stillness amidst change and reminds us to move through life with intention. Worn as a daily talisman, it represents the quiet strength found in remaining connected to yourself.</p>",
+            "description_mobile": "<p>Carved from natural jade, the Saira Jade Charm is a symbol of calm, balance and emotional grounding. Celebrated for centuries for its enduring beauty, jade encourages stillness amidst change and reminds us to move through life with intention. Worn as a daily talisman, it represents the quiet strength found in remaining connected to yourself.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://products/ella-charm-yellow-gold",
+            "button_1_link": "shopify://products/saira-charm-jade",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -219,21 +393,21 @@
             "metaobject_devices": ""
           }
         },
-        "image_JCwYfe": {
+        "image_3QgmiP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Mae-Birthstone_3.jpg",
+            "image": "shopify://shop_images/Ora-Polished_1_31dc8853-6dd2-4c1c-81b9-98e61071031b.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
-            "subheading": "",
-            "title": "<p>Mae Charm</p>",
-            "description": "<p>The Mae Charm celebrates the people who make us who we are. A symbol of connection and identity, it represents the relationships that ground us - family, friendship, love and the moments that define us. Designed to keep what matters most close to your heart, Mae is a quiet reminder that our stories are never written alone.</p>",
-            "description_mobile": "<p>The Mae Charm celebrates the people who make us who we are. A symbol of connection and identity, it represents the relationships that ground us - family, friendship, love and the moments that define us. Designed to keep what matters most close to your heart, Mae is a quiet reminder that our stories are never written alone.</p>",
+            "subheading": "<p>THE MANY VERSIONS OF YOU</p>",
+            "title": "<p>Ora Charm</p>",
+            "description": "<p>We are always evolving. The Ora Charm is a symbol of transformation, honouring every version of yourself - from where you've been to where you're going. A reminder that growth is continual, it celebrates becoming with openness, confidence and intention.</p>",
+            "description_mobile": "<p>We are always evolving. The Ora Charm is a symbol of transformation, honouring every version of yourself - from where you've been to where you're going. A reminder that growth is continual, it celebrates becoming with openness, confidence and intention.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://products/mae-charm-yellow-gold",
+            "button_1_link": "",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -253,8 +427,95 @@
         }
       },
       "block_order": [
-        "image_pLPiR4",
-        "image_JCwYfe"
+        "image_9YFK4W",
+        "image_3QgmiP"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_WHEGt8": {
+      "type": "content-list",
+      "blocks": {
+        "image_GDi8gn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RumiRuby.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>LOVE, SOUL & EMOTIONAL DEPTH</p>",
+            "title": "<p>Rumi Charm</p>",
+            "description": "<p>Inspired by the enduring words of the poet Rumi, this charm reflects love in its deepest sense. A symbol of emotional connection, soulfulness and self-discovery, the Rumi Charm invites you to honour the relationships - both with yourself and others - that shape your life. Your chosen birthstone transforms it into a keepsake with meaning that is entirely your own.</p>",
+            "description_mobile": "<p>Inspired by the enduring words of the poet Rumi, this charm reflects love in its deepest sense. A symbol of emotional connection, soulfulness and self-discovery, the Rumi Charm invites you to honour the relationships - both with yourself and others - that shape your life. Your chosen birthstone transforms it into a keepsake with meaning that is entirely your own.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/rumi-charm-white-gold-birthstone",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_DT3D8d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SairaCharm.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>CONTINUITY & BECOMING</p>",
+            "title": "<p>Saira Charm</p>",
+            "description": "<p>Inspired by the endless rhythm of life's cycles, the Saira Charm honours the beauty of becoming. Its flowing form reflects growth that unfolds over time, reminding us that every chapter - whether marked by change, pause or renewal - shapes who we are. A symbol of transformation, it celebrates both where you've been and all that is still to come.</p>",
+            "description_mobile": "<p>Inspired by the endless rhythm of life's cycles, the Saira Charm honours the beauty of becoming. Its flowing form reflects growth that unfolds over time, reminding us that every chapter - whether marked by change, pause or renewal - shapes who we are. A symbol of transformation, it celebrates both where you've been and all that is still to come.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/saira-charm",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_GDi8gn",
+        "image_DT3D8d"
       ],
       "settings": {
         "grid_items_count": 2,
@@ -440,10 +701,13 @@
     "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
     "22942553-01da-4697-89ac-f500b502883f",
-    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
     "fe4a59da-74f2-4522-93d1-709dd4b43c45",
     "content_list_cPPWy9",
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
+    "content_list_FfGgFJ",
+    "content_list_VbmFzk",
     "content_list_7DMKc9",
+    "content_list_WHEGt8",
     "text_with_media_gc8Y6j",
     "content_slider_eXFQ9a",
     "main"

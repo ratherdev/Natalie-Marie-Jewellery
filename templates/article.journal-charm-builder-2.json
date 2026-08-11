@@ -107,7 +107,7 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underCenter",
-            "subheading": "",
+            "subheading": "<p>LOVE IN EVERY FORM</p>",
             "title": "<p>Ella Charm</p>",
             "description": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
             "description_mobile": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
@@ -133,6 +133,93 @@
           }
         },
         "image_tBWJN6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mae-Birthstone_3.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "<p>CONNECTION & IDENTITY</p>",
+            "title": "<p>Mae Charm</p>",
+            "description": "<p>The Mae Charm celebrates the people who make us who we are. A symbol of connection and identity, it represents the relationships that ground us - family, friendship, love and the moments that define us. Designed to keep what matters most close to your heart, Mae is a quiet reminder that our stories are never written alone.</p>",
+            "description_mobile": "<p>The Mae Charm celebrates the people who make us who we are. A symbol of connection and identity, it represents the relationships that ground us - family, friendship, love and the moments that define us. Designed to keep what matters most close to your heart, Mae is a quiet reminder that our stories are never written alone.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/mae-charm-yellow-gold",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1",
+        "image_tBWJN6"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_cPPWy9": {
+      "type": "content-list",
+      "blocks": {
+        "image_pLPiR4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ella_Charm_-_Pink_Tourmaline.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underCenter",
+            "subheading": "",
+            "title": "<p>Ella Charm</p>",
+            "description": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
+            "description_mobile": "<p>Love takes many forms. The Ella Charm honours them all - from romantic partnerships and lifelong friendships to family bonds and the relationship we nurture with ourselves. A timeless emblem of enduring affection, it serves as a reminder that love, in every expression, is one of life's greatest keepsakes.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Now",
+            "button_1_link": "shopify://products/ella-charm-yellow-gold",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "secondary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_JCwYfe": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Mae-Birthstone_3.jpg",
@@ -166,8 +253,8 @@
         }
       },
       "block_order": [
-        "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1",
-        "image_tBWJN6"
+        "image_pLPiR4",
+        "image_JCwYfe"
       ],
       "settings": {
         "grid_items_count": 2,
@@ -355,6 +442,7 @@
     "22942553-01da-4697-89ac-f500b502883f",
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
     "fe4a59da-74f2-4522-93d1-709dd4b43c45",
+    "content_list_cPPWy9",
     "content_list_7DMKc9",
     "text_with_media_gc8Y6j",
     "content_slider_eXFQ9a",

@@ -15,7 +15,7 @@
         "template--16177341137065__ec32b834-e4e2-4e87-8392-6d45f7b82d33-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_caee9218-0c05-4d7b-8204-d376b8da40bb.png"
+            "image": "shopify://shop_images/9_5aead8a2-eed4-4121-81d1-2aac0c677b52.png"
           }
         }
       },
@@ -32,8 +32,8 @@
         "media_width": "6",
         "content_position": "middleLeft",
         "subheading": "",
-        "title": "<h2>Endless Ways to Personalise</h2>",
-        "description": "<p>The beauty of the NMJ Charm Offering lies in creating a piece that's uniquely yours. Every necklace can be <em>customised to reflect your story</em>, with thoughtful details that hold lasting meaning.</p>",
+        "title": "<p>Endless Ways to Personalise</p>",
+        "description": "<p>At the heart of our expanded charm collection is the freedom to create a piece that feels distinctly your own. Each necklace can be thoughtfully curated to reflect your story, with personal details that carry meaning for years to come.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -49,6 +49,68 @@
         "content": ""
       }
     },
+    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea": {
+      "type": "text-with-media",
+      "blocks": {
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_66547d62-7db7-4ccb-8f83-adfa52d9add3.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>Birthstones</p>",
+        "description": "<p>Explore our collection of meaningful charms, with selected designs offering the option to add a <strong>birthstone</strong> in honour of the people you love or a month that holds significance. Whether chosen to represent children, family, a partner or your own birth month, each stone brings another layer of sentiment to your piece.</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "text_with_media_6X8LQt": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_mQgYcF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_e91c25ac-c319-4a47-9f04-0bf93dd67aed.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_mQgYcF"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "left",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "",
+        "title": "<p>Engraving</p>",
+        "description": "<p>For an even more personal touch, selected charms can be <strong>engraved with initials</strong>, creating a subtle and intimate detail unique to you. Together, these considered elements transform your jewellery into a keepsake - one that holds memories, milestones and moments close.</p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
     "22942553-01da-4697-89ac-f500b502883f": {
       "type": "content-list",
       "blocks": {
@@ -60,8 +122,8 @@
             "content_position": "underLeft",
             "subheading": "",
             "title": "",
-            "description": "<p>Choose from a collection of symbolic charms, then make your piece even more personal with <em><strong>birthstones</strong></em> that celebrate the people you love or commemorate a meaningful month. Whether representing children, family, a partner, or your own birth month, each stone adds another layer to your story.</p><p>For an even more intimate touch, select <em><strong>engraving</strong></em><strong> </strong> to capture initials. These subtle details transform your jewellery into a keepsake—one that carries memories, milestones, and moments you'll treasure for years to come.</p><p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
-            "description_mobile": "<p>Choose from a collection of symbolic charms, then make your piece even more personal with <strong>birthstones</strong> that celebrate the people you love or commemorate a meaningful month. Whether representing children, family, a partner, or your own birth month, each stone adds another layer to your story.</p><p>For an even more intimate touch, select <strong>engraving </strong> to capture initials. These subtle details transform your jewellery into a keepsake—one that carries memories, milestones, and moments you'll treasure for years to come.</p><p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
+            "description": "<p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
+            "description_mobile": "<p>Whether you're marking a new beginning, celebrating a special relationship, or creating a piece that's simply a reflection of you, there are endless ways to personalise your necklace and make it truly one of a kind.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -99,37 +161,6 @@
         "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea": {
-      "type": "text-with-media",
-      "blocks": {
-        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8_02ccbe49-d476-4c79-881c-a1477c680622.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "7",
-        "content_position": "middleLeft",
-        "subheading": "",
-        "title": "<p>\"The beauty of a charm necklace lies not only in what it holds today, <em>but in the stories still waiting to be added</em>.\"</p>",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
         "button_style": "underline"
       }
     },
@@ -183,8 +214,9 @@
   "order": [
     "ec32b834-e4e2-4e87-8392-6d45f7b82d33",
     "3ebc68a8-39a5-4ef0-96ec-3daf87a7a4fc",
-    "22942553-01da-4697-89ac-f500b502883f",
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
+    "text_with_media_6X8LQt",
+    "22942553-01da-4697-89ac-f500b502883f",
     "content_slider_689HQc",
     "main"
   ]

@@ -164,14 +164,14 @@
         "button_style": "underline"
       }
     },
-    "content_slider_689HQc": {
+    "content_slider_wgwYTy": {
       "type": "content-slider",
       "blocks": {
-        "collection_Lnp8QX": {
+        "collection_b3DG9G": {
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "additional-charms",
+            "collection": "create-your-story",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -179,19 +179,19 @@
         }
       },
       "block_order": [
-        "collection_Lnp8QX"
+        "collection_b3DG9G"
       ],
       "settings": {
         "enable_light": false,
         "grid_items_count": 8,
         "enable_natual_scroll": false,
         "subheading": "",
-        "title": "<p><em>Charm Builder</em></p>",
-        "description": "<p>Some stories are collected, rather than told.</p><p>The Charm Builder invites you to create a necklace that celebrates the people, places and moments that have shaped your life. Beginning with one meaningful charm and growing over time, it becomes a future heirloom that is entirely, and uniquely, your own.</p>",
+        "title": "<p><em>Start Your Journey</em></p>",
+        "description": "<p>Discover our collection of chains and meaningful charms, thoughtfully designed to be curated into a piece that is entirely your own. Begin with the piece that speaks to you, then bring together a combination that reflects your story.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "SHOP",
-        "button_1_link": "shopify://collections/additional-charms",
+        "button_1_link": "https://www.nataliemariejewellery.com/collections/create-your-story",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -217,7 +217,7 @@
     "6cfc4a7c-d718-45d7-bad2-92ab0cb6adea",
     "text_with_media_6X8LQt",
     "22942553-01da-4697-89ac-f500b502883f",
-    "content_slider_689HQc",
+    "content_slider_wgwYTy",
     "main"
   ]
 }

@@ -249,15 +249,16 @@
         "article_card_xLeUDW": {
           "type": "article_card",
           "settings": {
-            "article": "news/nmj-lovers-jordy-and-tom",
-            "custom_title": "",
+            "article": "news/the-language-of-charms-symbols-that-tell-your-story",
+            "image": "shopify://shop_images/Untitled_-_12_August_2026_at_10.11.13-1.png",
+            "custom_title": "The Language Of Charms | Symbols That Tell Your Story",
             "custom_text": ""
           }
         },
         "article_card_bcDDW3": {
           "type": "article_card",
           "settings": {
-            "article": "news/nmj-lovers-juliet-and-raven",
+            "article": "news/endless-ways-to-personalise",
             "custom_title": "",
             "custom_text": ""
           }
@@ -265,7 +266,7 @@
         "article_card_QCGtLV": {
           "type": "article_card",
           "settings": {
-            "article": "news/nmj-lovers-charlotte-and-olli",
+            "article": "news/create-your-story-introducing-the-nmj-charm-builder",
             "custom_title": "",
             "custom_text": ""
           }

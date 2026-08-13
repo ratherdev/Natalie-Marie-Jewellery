@@ -295,6 +295,18 @@
               "push_3_url": ""
             }
           },
+          "mega_menu_Jq739M": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "",
+              "push_1_heading": "Example heading",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_url": "",
+              "push_3_heading": "Example heading",
+              "push_3_url": ""
+            }
+          },
           "e7965254-0c71-4a73-baf2-7f5f6f78b281": {
             "type": "mega_menu",
             "settings": {
@@ -302,9 +314,9 @@
               "push_1_image": "shopify://shop_images/Untitled-14July2026at13.13.51-3.png",
               "push_1_heading": "Earrings",
               "push_1_url": "shopify://collections/earrings",
-              "push_2_image": "shopify://shop_images/Eirene_Trio_for_web_2.png",
-              "push_2_heading": "Ready To Wear",
-              "push_2_url": "shopify://collections/ready-to-wear",
+              "push_2_image": "shopify://shop_images/Untitled-13August2026at10.36.41-5.png",
+              "push_2_heading": "Curate Your Personalised Necklace",
+              "push_2_url": "shopify://collections/create-your-story",
               "push_3_image": "shopify://shop_images/Untitled-02July2026at11.47.40-4_1.png",
               "push_3_heading": "Gifts for Anniversaries",
               "push_3_url": "shopify://collections/gifts-for-anniversaries"
@@ -359,6 +371,7 @@
           "f693cefb-6e8b-4685-a36f-9ca2e919b894",
           "mega_menu_RkwpAV",
           "mega_menu_wU9K4z",
+          "mega_menu_Jq739M",
           "e7965254-0c71-4a73-baf2-7f5f6f78b281",
           "mega_menu_YiFcRB",
           "bed6871c-4959-448c-bf4b-6c65c26e66b8",

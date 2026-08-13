@@ -54,17 +54,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/260618_NMJ_0210_20_281_29_LR.jpg",
-            "mobile_image": "shopify://shop_images/260618_NMJ_0210_20_281_29_LR.jpg",
+            "image": "shopify://shop_images/NMJ_Charms_Circle_1080x1350_9d64d8dd-92b4-451b-91f7-5abf19995d78.gif",
+            "mobile_image": "shopify://shop_images/NMJ_Charms_Circle_1080x1350_9d64d8dd-92b4-451b-91f7-5abf19995d78.gif",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>your past, your present, and your forever</p>",
-            "title": "<p><em>Trilogy Engagement</em></p>",
-            "description": "<p>Each Trilogy Engagement Ring tells the story of your love through three stones, symbolising the moments that brought you together, the love you share today, and the forever still to come.</p>",
+            "subheading": "<p>Make It Your Own</p>",
+            "title": "<p><em>Curate Your Personalised Necklace</em></p>",
+            "description": "<p>Discover our collection of chains and meaningful charms, thoughtfully designed to be curated into a piece that is entirely your own. Begin with the piece that speaks to you, then bring together a combination that reflects your story.</p>",
             "colour_style": "light",
             "button_1_text": "Shop The Collection",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/triology-engagement?filter.p.m.custom.filter_metal=Yellow%20Gold",
+            "button_1_link": "shopify://collections/create-your-story",
             "button_style": "underline"
           }
         },

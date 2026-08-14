@@ -166,7 +166,7 @@
         "image_iTbJBa"
       ],
       "custom_css": [
-        ".Section--spacingExtraLarge {margin-top: 20px; border-top: 1px solid #e5dfd6 !important; padding-top: 90px;}",
+        ".Section--spacingExtraLarge {margin-top: 20px; border-top: 1px solid #e5dfd6 !important; padding-top: 90px; margin-bottom: 10px;}",
         ".ContentItem__BlockContentWrapper--noMedia {min-height: 220px;}"
       ],
       "settings": {
@@ -182,6 +182,19 @@
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
+      }
+    },
+    "custom_html_VLFnJR": {
+      "type": "custom-html",
+      "custom_css": [
+        ".Container {max-width: 900px;}",
+        ".SectionHeader.SectionHeader--center {margin-bottom: 30px;}"
+      ],
+      "name": "Custom HTML",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<p>At Natalie Marie Jewellery, we offer both, ensuring all stones are certified by either the International Gemmological Institute (IGI) or the Gemmological Institute of America (GIA).</p>\n<p>The journey of a laboratory grown diamond is complex and multi-staged:</p>\n<ul>\n<li>\n<span>1.</span> Grown in a laboratory</li>\n<li>\n<span>2.</span> Cut and polished (often in a separate facility)</li>\n<li>\n<span>3.</span> Certified by an independent gemological institute</li>\n<li>\n<span>4.</span> Sold through the global market</li>\n<li>\n<span>5.</span> Selected by a jeweller </li>\n</ul>\n<p>Like natural diamonds, this journey can involve multiple stages and locations, which can impact traceability.</p>"
       }
     },
     "86931031-bd17-4f8a-a3c3-f113e451f5fb": {
@@ -538,6 +551,7 @@
     "slideshow_U9Q8eF",
     "custom_html_44QwVe",
     "content_list_NwTBrG",
+    "custom_html_VLFnJR",
     "86931031-bd17-4f8a-a3c3-f113e451f5fb",
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3",
     "5745a96a-89f1-43ff-b4e6-2d5a49f7d900",

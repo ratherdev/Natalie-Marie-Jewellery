@@ -358,6 +358,15 @@
         "button_style": "underline"
       }
     },
+    "custom_html_8UHbnf": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "subheading": "<p>Sub-heading</p>",
+        "title": "<p>Your HTML</p>",
+        "html": "<p>Write your own custom HTML content.</p>"
+      }
+    },
     "text_with_media_YQbEtm": {
       "type": "text-with-media",
       "blocks": {
@@ -622,6 +631,7 @@
     "content_list_NwTBrG",
     "custom_html_VLFnJR",
     "content_list_jGNRga",
+    "custom_html_8UHbnf",
     "text_with_media_YQbEtm",
     "text_with_media_tG8qCR",
     "text_with_media_QKVKmB",

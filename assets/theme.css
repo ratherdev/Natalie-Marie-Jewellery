@@ -9457,3 +9457,8 @@ ul.number-count li {
 }
 
 .custom-code-grid ul {display: flex;gap: 30px;justify-content: center;flex-wrap: nowrap;margin-bottom: 15px;list-style: disc;}
+@media screen and (max-width: 1007px) {
+    .hidden-pocket {
+        display: none !important;
+    }
+}

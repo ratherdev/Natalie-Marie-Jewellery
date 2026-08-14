@@ -9455,8 +9455,15 @@ ul.number-count li {
     margin-bottom: 12px;
     font-weight: bold;
 }
-
-.custom-code-grid ul {display: flex;gap: 30px;justify-content: center;flex-wrap: nowrap;margin-bottom: 15px;list-style: disc;}
+.custom-code-grid ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    list-style: disc;
+    row-gap: 10px !important;
+}
 @media(max-width:767px){
   ul.number-count {
     grid-template-columns: 1fr 1fr;

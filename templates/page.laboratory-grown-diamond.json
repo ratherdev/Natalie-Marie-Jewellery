@@ -167,7 +167,7 @@
       ],
       "custom_css": [
         ".Section--spacingExtraLarge {margin-top: 20px; border-top: 1px solid #e5dfd6 !important; padding-top: 90px;}",
-        " .ContentItem__BlockContentWrapper--noMedia {min-height: 220px; }"
+        ".ContentItem__BlockContentWrapper--noMedia {min-height: 220px ;}"
       ],
       "settings": {
         "grid_items_count": 2,

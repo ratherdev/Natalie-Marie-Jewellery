@@ -188,7 +188,7 @@
       "type": "custom-html",
       "custom_css": [
         ".Container {max-width: 900px;}",
-        ".SectionHeader.SectionHeader--center {margin-bottom: 30px;}"
+        ".SectionHeader.SectionHeader--center {margin-bottom: 30px; padding-top:30px;}"
       ],
       "name": "Custom HTML",
       "settings": {

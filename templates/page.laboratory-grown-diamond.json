@@ -80,66 +80,13 @@
         "cycle_speed": 5
       }
     },
-    "8f040c8d-07b0-4e70-85c5-5523ad1bf134": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.29.44_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "<p>Slide title</p>",
-            "title": "<p>Tell your story</p>",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1"
-      ],
-      "disabled": true,
+    "custom_html_44QwVe": {
+      "type": "custom-html",
+      "name": "Custom HTML",
       "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "588aa754-4a16-43e7-ad50-eed5619cbfca": {
-      "type": "text-with-media",
-      "blocks": {
-        "template--16125431546025__588aa754-4a16-43e7-ad50-eed5619cbfca-1682331895cf99bbfc-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Rumi_Charms_2.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__588aa754-4a16-43e7-ad50-eed5619cbfca-1682331895cf99bbfc-0"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "7",
-        "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p>Our Perspective</p>",
-        "description": "<p>We believe laboratory grown diamonds offer a considered alternative within the diamond landscape.</p><p><br/>We work with our clients to discuss the different aspects of both laboratory grown and mined diamonds. Rather than preferring one option as superior, we are committed to <strong>providing clear, unbiased education,</strong> empowering you to choose what feels most aligned with your values, priorities and story.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
+        "title": "<p><strong>Our Perspective</strong></p>",
+        "html": "<p>We believe laboratory grown diamonds offer a considered alternative within the diamond landscape.</p> \n<p>We work with our clients to discuss the different aspects of both laboratory grown and mined diamonds. Rather than preferring one option as superior, we are committed to <b>providing clear, unbiased education,</b> empowering you to choose what feels most aligned with your values, priorities and story.\n</p>"
       }
     },
     "86931031-bd17-4f8a-a3c3-f113e451f5fb": {
@@ -494,8 +441,7 @@
     "main",
     "f216b39e-a136-4ab1-82b7-fd67637fde7d",
     "slideshow_U9Q8eF",
-    "8f040c8d-07b0-4e70-85c5-5523ad1bf134",
-    "588aa754-4a16-43e7-ad50-eed5619cbfca",
+    "custom_html_44QwVe",
     "86931031-bd17-4f8a-a3c3-f113e451f5fb",
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3",
     "5745a96a-89f1-43ff-b4e6-2d5a49f7d900",

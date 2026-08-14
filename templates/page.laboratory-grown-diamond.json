@@ -103,6 +103,7 @@
       "block_order": [
         "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1"
       ],
+      "disabled": true,
       "settings": {
         "show_fullscreen": false,
         "show_arrow": false,

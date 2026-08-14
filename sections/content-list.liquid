@@ -108,6 +108,9 @@
 		
 				<div class="Grid__Cell 2/16--lap-and-up"></div>
 			</div>
+      <div class="custom-code-grid">
+        {{ section.settings.html  }}
+      </div>
 		</div>
 	</section>
 {%- endif -%}
@@ -183,6 +186,11 @@
       "type": "richtext",
       "id": "description",
       "label": "Description"
+    },
+    {
+      "type": "html",
+      "id": "html",
+      "label": "Custom Html"
     },
     {
       "type": "header",

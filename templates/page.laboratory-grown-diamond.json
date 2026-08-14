@@ -118,7 +118,7 @@
             "button_3_text": "",
             "button_3_link": "",
             "button_style": "underline",
-            "include_no_media_border": false,
+            "include_no_media_border": true,
             "metaobject_autoplay": "",
             "metaobject_loop": "",
             "metaobject_apply_overlay": "",

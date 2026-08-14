@@ -82,6 +82,10 @@
     },
     "custom_html_44QwVe": {
       "type": "custom-html",
+      "custom_css": [
+        ".Container {max-width: 900px;}",
+        ".SectionHeader.SectionHeader--center {margin-bottom: 30px;}"
+      ],
       "name": "Custom HTML",
       "settings": {
         "subheading": "",

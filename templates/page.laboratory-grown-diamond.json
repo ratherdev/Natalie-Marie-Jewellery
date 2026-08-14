@@ -165,6 +165,9 @@
         "image_jDV4j8",
         "image_iTbJBa"
       ],
+      "custom_css": [
+        ".Section--spacingExtraLarge {margin-top: 20px; border-top:1px solid #000; padding-top:90px;}"
+      ],
       "settings": {
         "grid_items_count": 2,
         "grid_items_count_pocket": "1/2",

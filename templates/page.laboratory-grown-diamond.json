@@ -383,7 +383,8 @@
         "image_xewbnG"
       ],
       "custom_css": [
-        ".Section {background: #fff; padding: 80px 0;}"
+        ".Section {background: #fff; padding: 80px 0;}",
+        ".Grid__Cell.hidden-pocket.\\31 \\/16--lap-and-up {width: 0;}"
       ],
       "name": "Text with media",
       "settings": {

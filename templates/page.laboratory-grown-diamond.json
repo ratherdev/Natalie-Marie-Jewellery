@@ -369,220 +369,35 @@
         "html": "<div class=\"lethical-bb\">\n<div class=\"col-1\">\n<h2 class=\"SectionHeader__Heading Heading u-h3\">Ethical Considerations</h2>\n<p>Reliable, published data around the social impact of laboratory grown diamonds is still developing.</p>\n<p>Areas of uncertainty include:</p>\n<ul>\n<li>Employment conditions in manufacturing facilities</li>\n<li>Human rights standards across production regions</li>\n<li>Contributions to local communities and economies</li>\n</ul>\n<p>Unlike some mined diamond industries, laboratory grown production does not always have established frameworks for community investment or traceable impact.</p>\n\n</div>\n<div class=\"col-1\">\n<h2 class=\"SectionHeader__Heading Heading u-h3\">Traceability &amp; Transparency</h2>\n<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.</p>\n<p>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.</p>\n\n<p>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.</p>\n</div>\n<div class=\"col-1\">\n<h2 class=\"SectionHeader__Heading Heading u-h3\">Certification &amp; Qualit</h2>\n<p>All of our laboratory grown diamonds above 0.30ct are independently certified by leading gemological institutes, including:</p>\n<ul>\n<li>GIA (Gemological Institute of America)</li>\n<li>IGI (International Gemological Institute)</li>\n<li>GCAL (Gem Certification &amp; Assurance Lab)</li>\n</ul>\n<p>Each stone features:</p>\n<ul>\n<li>A unique certification number</li>\n<li>Detailed grading across cut, colour, clarity and carat</li>\n</ul>\n</div>\n</div>"
       }
     },
-    "text_with_media_YQbEtm": {
+    "text_with_media_rag8xC": {
       "type": "text-with-media",
       "blocks": {
-        "image_kCH8gH": {
+        "image_xewbnG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
+            "image": "shopify://shop_images/Journal_Crops_10_fa5c8bf2-2475-4625-93c0-6055dae44c8d.png"
           }
         }
       },
       "block_order": [
-        "image_kCH8gH"
+        "image_xewbnG"
       ],
+      "name": "Text with media",
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
+        "media_position_mobile": "top",
+        "media_width": "7",
+        "content_position": "middleLeft",
         "subheading": "",
-        "title": "<p><em>Ethical Considerations</em></p>",
-        "description": "<p>Reliable, published data around the social impact of laboratory grown diamonds is still developing.</p><p><br/>Areas of uncertainty include:</p><ul><li>Employment conditions in manufacturing facilities</li><li>Human rights standards across production regions</li><li>Contributions to local communities and economies<br/></li></ul><p>Unlike some mined diamond industries, laboratory grown production does not always have established frameworks for community investment or traceable impact.<br/></p>",
+        "title": "<p><strong>Our Approach</strong></p>",
+        "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards </li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in<br/>choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a<br/>commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_tG8qCR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_n7cQVB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_n7cQVB"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Traceability & Transparency</em></p>",
-        "description": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.</p><p>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.</p><p>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_QKVKmB": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_pLUtmg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_pLUtmg"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Certification & Quality</em></p>",
-        "description": "<p>All of our laboratory grown diamonds <strong>above 0.30ct </strong>are independently certified by leading gemological institutes, including:</p><ul><li><strong>GIA (Gemological Institute of America)</strong></li><li><strong>IGI (International Gemological Institute)</strong></li><li><strong>GCAL (Gem Certification & Assurance Lab)</strong></li></ul><p>Each stone features:<br/></p><ul><li>A unique certification number</li><li>Detailed grading across cut, colour, clarity and carat</li></ul>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "e519b54b-e820-4452-8c63-5cadf8033400": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.40.30_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84": {
-      "type": "text-with-media",
-      "blocks": {
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DIAS_COLOUR_976x.progressive_fa0b51ae-fa78-4d18-a687-7f24e842eac8.webp"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Our Approach</em></p>",
-        "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards </li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:</p><p><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.<br/></p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.44.51_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e8debbe4-7365-435c-bff6-1005fa07de57": {
-      "type": "content-slider",
-      "blocks": {
-        "f72a239d-4469-4979-829e-6d5923b2fc91": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "engagement-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "f72a239d-4469-4979-829e-6d5923b2fc91"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Diamonds</strong></p>",
-        "title": "<p>Engagement Collection</p>",
-        "description": "<p>Feel inspired and fall in love. View our curated collection of diamond engagement rings.</p>",
-        "text_position": "top",
-        "colour_style": "dark",
-        "button_1_text": "View All",
-        "button_1_link": "shopify://collections/diamond-wedding-rings",
-        "button_2_text": "",
-        "button_2_link": "",
         "button_style": "underline"
       }
     },
@@ -634,13 +449,7 @@
     "custom_html_VLFnJR",
     "content_list_jGNRga",
     "custom_html_8UHbnf",
-    "text_with_media_YQbEtm",
-    "text_with_media_tG8qCR",
-    "text_with_media_QKVKmB",
-    "e519b54b-e820-4452-8c63-5cadf8033400",
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84",
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e",
-    "e8debbe4-7365-435c-bff6-1005fa07de57",
+    "text_with_media_rag8xC",
     "1680767195aa74aee5"
   ]
 }

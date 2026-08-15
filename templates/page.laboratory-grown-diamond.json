@@ -382,6 +382,9 @@
       "block_order": [
         "image_xewbnG"
       ],
+      "custom_css": [
+        ".Section {background: #fff; padding: 80px 0;}"
+      ],
       "name": "Text with media",
       "settings": {
         "remove_spacing_top": true,

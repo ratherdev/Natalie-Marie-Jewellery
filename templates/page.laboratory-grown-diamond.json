@@ -447,7 +447,8 @@
         "image_4YAEkL"
       ],
       "custom_css": [
-        "h2.SectionHeader__Heading.Heading.u-h2 p {font-size: 14px; line-height: 1.4; font-family: \"Karla\";}"
+        "h2.SectionHeader__Heading.Heading.u-h2 p {font-size: 14px; line-height: 1.4; font-family: \"Karla\";}",
+        ".SectionHeader__Description ul {list-style: disc;}"
       ],
       "name": "Three column",
       "settings": {

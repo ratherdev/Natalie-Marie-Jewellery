@@ -451,7 +451,7 @@
       ],
       "name": "Three column",
       "settings": {
-        "enable_dark": false,
+        "enable_dark": true,
         "subheading": "",
         "title": "<p><strong>Our Approach</strong></p>",
         "description": "<p>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</p><p>Each stone is carefully selected to meet our quality standards </p>",

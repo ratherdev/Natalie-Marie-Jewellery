@@ -9498,9 +9498,14 @@ ul.number-count li {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
+.lethical-bb {
+    display: grid;
+    grid-template-columns: 1fr !important;
+} 
 }
 @media screen and (max-width: 1007px) {
     .hidden-pocket {
         display: none !important;
     }
+    
 }

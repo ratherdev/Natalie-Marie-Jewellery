@@ -430,6 +430,9 @@
       "block_order": [
         "f078fcdf-8515-456c-8c94-b3d98f2e2aeb"
       ],
+      "custom_css": [
+        ".Section--spacingExtraLarge {margin: 80px 0; }"
+      ],
       "settings": {
         "include_margins": true,
         "subheading": "<p><strong>Instagram</strong></p>",

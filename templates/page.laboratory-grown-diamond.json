@@ -375,7 +375,7 @@
         "image_xewbnG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Journal_Crops_10_fa5c8bf2-2475-4625-93c0-6055dae44c8d.png"
+            "image": "shopify://shop_images/9_5aead8a2-eed4-4121-81d1-2aac0c677b52.png"
           }
         }
       },
@@ -391,10 +391,10 @@
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
-        "media_position": "right",
+        "media_position": "left",
         "media_position_mobile": "top",
         "media_width": "7",
-        "content_position": "middleLeft",
+        "content_position": "bottomLeft",
         "subheading": "",
         "title": "<p><strong>Our Approach</strong></p>",
         "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards </li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in<br/>choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a<br/>commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.</p>",

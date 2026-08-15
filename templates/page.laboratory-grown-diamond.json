@@ -212,7 +212,7 @@
             "title": "<p><strong>Energy intensive production</strong></p>",
             "description": "<p>Diamond growth requires extremely high temperatures and sustained energy input.</p>",
             "description_mobile": "",
-            "colour_style": "light",
+            "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "mailto:studio@nataliemariejewellery.com",
@@ -244,7 +244,7 @@
             "title": "<p><strong>Energy source matters</strong></p>",
             "description": "<p>A large proportion of global production occurs in regions reliant on coal powered electricity.</p>",
             "description_mobile": "",
-            "colour_style": "light",
+            "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
@@ -276,7 +276,7 @@
             "title": "<p><strong>Water usage</strong></p>",
             "description": "<p>Significant water is required for cooling systems during production.</p>",
             "description_mobile": "",
-            "colour_style": "light",
+            "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
@@ -308,7 +308,7 @@
             "title": "<p><strong>Raw material inputs</strong></p>",
             "description": "<p>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.</p>",
             "description_mobile": "",
-            "colour_style": "light",
+            "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
@@ -339,7 +339,7 @@
       "custom_css": [
         ".Section--spacingExtraLarge {margin-top: 0px; padding-bottom: 90px; padding-top: 90px; margin-bottom: 0px;}",
         ".ContentItem__BlockContentWrapper--noMedia {min-height: 100%;}",
-        ".Section--spacingExtraLarge {background: #1a1f29;}",
+        ".Section--spacingExtraLarge {background: #fff;}",
         ".Grid.Grid--m {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-left: 0; margin: 0; gap: 15px; align-items: flex-end;}",
         ".Grid.Grid--m .ContentItem__BlockContentWrapper {width: 100% !important; margin: 0 !important; align-items: unset;}",
         "@media (max-width: 1024px) {.Grid.Grid--m {grid-template-columns: 1fr 1fr; }}"
@@ -352,7 +352,7 @@
         "title": "<p><strong>Sustainability Considerations</strong></p>",
         "description": "<p>Laboratory grown diamonds are often perceived as a more sustainable option, however the reality is nuanced.</p><p>Key considerations include:</p>",
         "html": "<p>For a laboratory grown diamond to be considered more sustainable, it would require:</p>\n<ul>\n<li>Renewable energy sources</li>\n<li>Transparent supply chains</li>\n<li>Verified carbon reduction or offsetting</li>\n</ul>\n<p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
-        "colour_style": "light",
+        "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
         "button_2_text": "",
@@ -364,9 +364,9 @@
       "type": "custom-html",
       "name": "Custom HTML",
       "settings": {
-        "subheading": "<p>Sub-heading</p>",
-        "title": "<p>Your HTML</p>",
-        "html": "<p>Write your own custom HTML content.</p>"
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"lethical-bb\">\n\n</div>"
       }
     },
     "text_with_media_YQbEtm": {

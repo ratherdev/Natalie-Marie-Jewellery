@@ -446,13 +446,16 @@
       "block_order": [
         "image_4YAEkL"
       ],
+      "custom_css": [
+        "h2.SectionHeader__Heading.Heading.u-h2 p {font-size: 14px; line-height: 1.4; font-family: \"Karla\";}"
+      ],
       "name": "Three column",
       "settings": {
         "enable_dark": false,
         "subheading": "",
         "title": "<p><strong>Our Approach</strong></p>",
         "description": "<p>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</p><p>Each stone is carefully selected to meet our quality standards </p>",
-        "feature_text": "<p>We approach laboratory grown diamonds with the same<br/>intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in<br/>choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view<br/>both laboratory grown and natural diamonds through a different lens: not as<br/>financial assets, but as meaningful investments in a personal story, a<br/>commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future<br/>resale potential, but in what it represents to the individual wearing<br/>it.Whether laboratory grown or natural, the most important investment is<br/>choosing a stone that feels aligned with your values, priorities and the<br/>significance of the moment it celebrates.</p>",
+        "feature_text": "<p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong><br/><br/>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.<br/><br/>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it. Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",

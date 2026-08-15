@@ -385,7 +385,7 @@
       "custom_css": [
         "h2.SectionHeader__Heading.Heading.u-h2 p {font-size: 14px; line-height: 1.4; font-family: \"Karla\";}",
         ".SectionHeader__Description ul {list-style: disc;}",
-        ".Section.Section--spacingExtraLarge {background: #fff; margin: 0; padding: 80px 0 20px;}"
+        ".Section.Section--spacingExtraLarge {background: #fff; margin: 0; padding: 80px 0 80px;}"
       ],
       "name": "Three column",
       "settings": {

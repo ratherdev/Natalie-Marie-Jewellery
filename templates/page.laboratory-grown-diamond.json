@@ -405,6 +405,64 @@
         "button_style": "underline"
       }
     },
+    "text_with_two_media_MfJmwt": {
+      "type": "text-with-two-media",
+      "blocks": {
+        "image_c7T63U": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_c7T63U"
+      ],
+      "name": "Text with two media",
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_width": "11",
+        "subheading": "<p>Slide title</p>",
+        "title": "<p>Tell your story</p>",
+        "description": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_style": "underline"
+      }
+    },
+    "three_column_GqHFxM": {
+      "type": "three-column",
+      "blocks": {
+        "image_4YAEkL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_4YAEkL"
+      ],
+      "name": "Three column",
+      "settings": {
+        "enable_dark": false,
+        "subheading": "",
+        "title": "<p><strong>Our Approach</strong></p>",
+        "description": "<p>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</p><p>Each stone is carefully selected to meet our quality standards </p>",
+        "feature_text": "<p>We approach laboratory grown diamonds with the same<br/>intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in<br/>choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view<br/>both laboratory grown and natural diamonds through a different lens: not as<br/>financial assets, but as meaningful investments in a personal story, a<br/>commitment, a milestone or a future shared together.</p><p>The true value of a diamond often lies not in its future<br/>resale potential, but in what it represents to the individual wearing<br/>it.Whether laboratory grown or natural, the most important investment is<br/>choosing a stone that feels aligned with your values, priorities and the<br/>significance of the moment it celebrates.</p>",
+        "colour_style": "dark",
+        "button_1_metaobject": "",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_metaobject": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "1680767195aa74aee5": {
       "type": "apps",
       "blocks": {
@@ -454,6 +512,8 @@
     "content_list_jGNRga",
     "custom_html_8UHbnf",
     "text_with_media_rag8xC",
+    "text_with_two_media_MfJmwt",
+    "three_column_GqHFxM",
     "1680767195aa74aee5"
   ]
 }

@@ -72,6 +72,9 @@
       "block_order": [
         "image_Vwn4Q8"
       ],
+      "custom_css": [
+        "@media(min-width:991px){.js .Slideshow--fullscreen {max-height: 70vh; }}"
+      ],
       "name": "Slideshow",
       "settings": {
         "show_fullscreen": true,

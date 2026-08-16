@@ -58,7 +58,7 @@
             "mobile_image": "shopify://shop_images/mm-bg.png",
             "apply_overlay": false,
             "fifty_fifty": false,
-            "content_position": "bottomLeft",
+            "content_position": "middleLeft",
             "subheading": "<p>Laboratory Grown Diamond</p>",
             "title": "<p><strong>What is a Laboratory Grown Diamond?</strong></p>",
             "description": "<p>Laboratory grown diamonds are diamonds created using advanced technology that replicates the natural conditions in which mined diamonds form beneath the earth.</p><p>From a <strong>chemical, physical and optical perspective, they are identical to diamonds</strong>, with any differences imperceptible to the human eye. Mined and laboratory grown diamonds can only be identified by using specialised equipment.<br/><br/><br/><br/></p>",
@@ -431,7 +431,7 @@
         "f078fcdf-8515-456c-8c94-b3d98f2e2aeb"
       ],
       "custom_css": [
-        ".Section--spacingExtraLarge {margin: 80px 0; }"
+        ".Section--spacingExtraLarge {margin: 80px 0;}"
       ],
       "settings": {
         "include_margins": true,

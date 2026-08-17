@@ -116,8 +116,8 @@
         "image_ptXh84": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_6_fe058d32-8d2d-4c3c-ac27-8868bb063fe7.png",
-            "mobile_image": "shopify://shop_images/Untitled_design_6_fe058d32-8d2d-4c3c-ac27-8868bb063fe7.png"
+            "image": "shopify://shop_images/Ren-Cluster-Dimaond--Ren-Wedding-Band-Diamond_1e013633-6288-4411-acaf-9909e0735ded.jpg",
+            "mobile_image": "shopify://shop_images/Ren-Cluster-Dimaond--Ren-Wedding-Band-Diamond_1e013633-6288-4411-acaf-9909e0735ded.jpg"
           }
         }
       },
@@ -143,109 +143,6 @@
         "button_1_text": "",
         "button_1_link": "#",
         "button_style": "underline"
-      }
-    },
-    "content_list_NwTBrG": {
-      "type": "content-list",
-      "blocks": {
-        "image_jDV4j8": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "middleLeft",
-            "subheading": "",
-            "title": "<p><strong>High Pressure High Temperature (HPHT)</strong></p>",
-            "description": "",
-            "description_mobile": "<p>.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "mailto:studio@nataliemariejewellery.com",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_iTbJBa": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "middleLeft",
-            "subheading": "",
-            "title": "<p><strong>Chemical Vapour Deposition (CVD) </strong></p>",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "tel:0294432426",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_jDV4j8",
-        "image_iTbJBa"
-      ],
-      "custom_css": [
-        ".Section--spacingExtraLarge {margin-top: 0px; padding-top: 90px; margin-bottom: 10px;}",
-        ".ContentItem__BlockContentWrapper--noMedia {min-height: 220px;}"
-      ],
-      "settings": {
-        "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "<p><strong>How They Are Made</strong></p>",
-        "description": "<p>Laboratory Grown Diamonds are formed using two primary methods:</p>",
-        "html": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "custom_html_VLFnJR": {
-      "type": "custom-html",
-      "custom_css": [
-        ".Container {max-width: 900px;}",
-        ".SectionHeader.SectionHeader--center {margin-bottom: 30px; padding-top: 30px !important;}"
-      ],
-      "name": "Custom HTML",
-      "settings": {
-        "subheading": "",
-        "title": "",
-        "html": "<p>At Natalie Marie Jewellery, we offer both, ensuring all stones are certified by either the International Gemmological Institute (IGI) or the Gemmological Institute of America (GIA).</p>\n<p>The journey of a laboratory grown diamond is complex and multi-staged:</p>\n<ul class=\"number-count\">\n<li>\n<span>1</span> Grown in a laboratory</li>\n<li>\n<span>2</span> Cut and polished (often in a separate facility)</li>\n<li>\n<span>3</span> Certified by an independent gemological institute</li>\n<li>\n<span>4</span> Sold through the global market</li>\n<li>\n<span>5</span> Selected by a jeweller </li>\n</ul>\n<p>Like natural diamonds, this journey can involve multiple stages and locations, which can impact traceability.</p>"
       }
     },
     "content_list_jGNRga": {
@@ -498,8 +395,6 @@
     "text_with_two_media_hJ8VR8",
     "text_with_media_9hRKKh",
     "text_with_media_HfpXNt",
-    "content_list_NwTBrG",
-    "custom_html_VLFnJR",
     "content_list_jGNRga",
     "custom_html_8UHbnf",
     "three_column_GqHFxM",

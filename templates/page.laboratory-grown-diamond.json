@@ -78,20 +78,6 @@
         "button_style": "underline"
       }
     },
-    "custom_html_44QwVe": {
-      "type": "custom-html",
-      "custom_css": [
-        ".Container {max-width: 900px;}",
-        ".SectionHeader.SectionHeader--center {margin-bottom: 30px;}",
-        ".Section--spacingNormal {background: #fff;}"
-      ],
-      "name": "Custom HTML",
-      "settings": {
-        "subheading": "",
-        "title": "<p><strong>Our Perspective</strong></p>",
-        "html": "<p>We believe laboratory grown diamonds offer a considered alternative within the diamond landscape.</p> \n<p>We work with our clients to discuss the different aspects of both laboratory grown and mined diamonds. Rather than preferring one option as superior, we are committed to <b>providing clear, unbiased education,</b> empowering you to choose what feels most aligned with your values, priorities and story.\n</p>"
-      }
-    },
     "text_with_media_9hRKKh": {
       "type": "text-with-media",
       "blocks": {
@@ -481,7 +467,6 @@
     "main",
     "f216b39e-a136-4ab1-82b7-fd67637fde7d",
     "text_with_two_media_hJ8VR8",
-    "custom_html_44QwVe",
     "text_with_media_9hRKKh",
     "content_list_NwTBrG",
     "custom_html_VLFnJR",

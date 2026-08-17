@@ -124,6 +124,9 @@
       "block_order": [
         "image_ptXh84"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": false,
         "remove_spacing_bottom": false,

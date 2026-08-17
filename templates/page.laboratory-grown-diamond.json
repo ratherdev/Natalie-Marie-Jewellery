@@ -555,14 +555,14 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "subheading": "<p><strong>Education</strong></p>",
-            "title": "<p>Sustainability Considerations</p>",
-            "description": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
+            "subheading": "",
+            "title": "<p>Our Approach</p>",
+            "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards <br/></li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.<br/>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.<br/></p>",
             "description_mobile": "<p>When selecting a diamond, there are myriad characteristics and quality factors that can determine the brilliance, sparkle and overall aesthetic impact of the stone. Summarised here in our Diamond Guide are the most important details we suggest you keep in mind when looking for the perfect diamond, whether it be natural laboratory grown, antique or beyond.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
-            "button_1_text": "Learn More",
-            "button_1_link": "shopify://pages/diamond-guide",
+            "button_1_text": "",
+            "button_1_link": "#",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -669,41 +669,6 @@
         "button_style": "underline"
       }
     },
-    "three_column_GqHFxM": {
-      "type": "three-column",
-      "blocks": {
-        "image_4YAEkL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_4YAEkL"
-      ],
-      "custom_css": [
-        "h2.SectionHeader__Heading.Heading.u-h2 p {font-size: 14px; line-height: 1.4; font-family: \"Karla\";}",
-        ".SectionHeader__Description ul {list-style: disc;}",
-        ".Section.Section--spacingExtraLarge {background: #fff; margin: 0; padding: 80px 0 80px;}"
-      ],
-      "name": "Three column",
-      "settings": {
-        "enable_dark": true,
-        "subheading": "",
-        "title": "<p><strong>Our Approach</strong></p>",
-        "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards </li></ul>",
-        "feature_text": "<p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><br/><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong><br/><br/>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.<br/><br/>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it. Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.</p>",
-        "colour_style": "dark",
-        "button_1_metaobject": "",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_metaobject": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
     "1680767195aa74aee5": {
       "type": "apps",
       "blocks": {
@@ -756,7 +721,6 @@
     "content_list_H34mnR",
     "content_list_qCdBjR",
     "content_list_c9HbdD",
-    "three_column_GqHFxM",
     "1680767195aa74aee5"
   ]
 }

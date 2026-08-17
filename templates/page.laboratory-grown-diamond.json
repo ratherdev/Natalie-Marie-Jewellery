@@ -145,23 +145,23 @@
         "button_style": "underline"
       }
     },
-    "content_list_jGNRga": {
+    "content_list_DBeatw": {
       "type": "content-list",
       "blocks": {
-        "image_xyeNYP": {
+        "image_7kfQfe": {
           "type": "image",
           "settings": {
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "subheading": "",
-            "title": "<p><strong>Energy intensive production</strong></p>",
-            "description": "<p>Diamond growth requires extremely high temperatures and sustained energy input.</p>",
-            "description_mobile": "",
+            "subheading": "<p><strong>Education</strong></p>",
+            "title": "<p>Sustainability Considerations</p>",
+            "description": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
+            "description_mobile": "<p>When selecting a diamond, there are myriad characteristics and quality factors that can determine the brilliance, sparkle and overall aesthetic impact of the stone. Summarised here in our Diamond Guide are the most important details we suggest you keep in mind when looking for the perfect diamond, whether it be natural laboratory grown, antique or beyond.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "mailto:studio@nataliemariejewellery.com",
+            "button_1_text": "Learn More",
+            "button_1_link": "shopify://pages/diamond-guide",
             "button_2_metaobject": "",
             "button_2_text": "",
             "button_2_link": "",
@@ -179,15 +179,16 @@
             "metaobject_devices": ""
           }
         },
-        "image_QTTpHe": {
+        "image_aXp7VN": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Diamonds_1_31dfa84d-a611-4a2c-8e8b-74cfb03c2c4a.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
-            "content_position": "middleLeft",
+            "content_position": "underLeft",
             "subheading": "",
-            "title": "<p><strong>Energy source matters</strong></p>",
-            "description": "<p>A large proportion of global production occurs in regions reliant on coal powered electricity.</p>",
+            "title": "",
+            "description": "",
             "description_mobile": "",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -195,7 +196,7 @@
             "button_1_link": "",
             "button_2_metaobject": "",
             "button_2_text": "",
-            "button_2_link": "tel:0294432426",
+            "button_2_link": "",
             "button_3_metaobject": "",
             "button_3_text": "",
             "button_3_link": "",
@@ -210,15 +211,16 @@
             "metaobject_devices": ""
           }
         },
-        "image_hYxcXr": {
+        "image_gc6pXa": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "apply_overlay": false,
             "devices": "mobile_desktop",
-            "content_position": "middleLeft",
-            "subheading": "",
-            "title": "<p><strong>Water usage</strong></p>",
-            "description": "<p>Significant water is required for cooling systems during production.</p>",
+            "content_position": "underLeft",
+            "subheading": "<p>Sub-heading</p>",
+            "title": "<p>Heading</p>",
+            "description": "",
             "description_mobile": "",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -226,38 +228,7 @@
             "button_1_link": "",
             "button_2_metaobject": "",
             "button_2_text": "",
-            "button_2_link": "tel:0294432426",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "image_qfBmx9": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "middleLeft",
-            "subheading": "",
-            "title": "<p><strong>Raw material inputs</strong></p>",
-            "description": "<p>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.</p>",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "tel:0294432426",
+            "button_2_link": "",
             "button_3_metaobject": "",
             "button_3_text": "",
             "button_3_link": "",
@@ -274,27 +245,173 @@
         }
       },
       "block_order": [
-        "image_xyeNYP",
-        "image_QTTpHe",
-        "image_hYxcXr",
-        "image_qfBmx9"
+        "image_7kfQfe",
+        "image_aXp7VN",
+        "image_gc6pXa"
       ],
       "custom_css": [
-        ".Section--spacingExtraLarge {margin-top: 0px; padding-bottom: 90px; padding-top: 90px; margin-bottom: 0px;}",
-        ".ContentItem__BlockContentWrapper--noMedia {min-height: 100%;}",
-        ".Section--spacingExtraLarge {background: #fff;}",
-        ".Grid.Grid--m {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-left: 0; margin: 0; gap: 15px; align-items: flex-end;}",
-        ".Grid.Grid--m .ContentItem__BlockContentWrapper {width: 100% !important; margin: 0 !important; align-items: unset;}",
-        "@media (max-width: 1024px) {.Grid.Grid--m {grid-template-columns: 1fr 1fr; }}"
+        "ul {list-style: disc;}"
       ],
       "settings": {
         "grid_items_count": 2,
-        "grid_items_count_pocket": "1/2",
+        "grid_items_count_pocket": "1/1",
         "text_align": "center",
         "subheading": "",
-        "title": "<p><strong>Sustainability Considerations</strong></p>",
-        "description": "<p>Laboratory grown diamonds are often perceived as a more sustainable option, however the reality is nuanced.</p><p>Key considerations include:</p>",
-        "html": "<p>For a laboratory grown diamond to be considered more sustainable, it would require:</p>\n<ul>\n<li>Renewable energy sources</li>\n<li>Transparent supply chains</li>\n<li>Verified carbon reduction or offsetting</li>\n</ul>\n<p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>\n<style>\n.features--heading-normal .u-h3{font-size:20px;}\n</style>",
+        "title": "",
+        "description": "",
+        "html": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "content_list_H34mnR": {
+      "type": "content-list",
+      "blocks": {
+        "image_hY9nAQ": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "middleLeft",
+            "subheading": "<p><strong>opening hours</strong></p>",
+            "title": "<p>Visit <em>us</em></p>",
+            "description": "<p><em>Avalon Showroom </em></p><p>Tuesday - Saturday: 9:30am to 4:30pm</p><p>43 Old Barrenjoey Rd, Avalon Beach, NSW, 2107.</p><p><em>Paddington Showroom</em></p><p>Tuesday - Saturday: 10:00am to 5:00pm </p><p>70 William Street, Paddington, NSW, 2021.</p>",
+            "description_mobile": "<p><em>Avalon Showroom </em></p><p>Tuesday - Saturday: 9:30am to 4:30pm</p><p>43 Old Barrenjoey Rd, Avalon Beach, NSW, 2107.</p><p><em>Paddington Showroom</em></p><p>Tuesday - Saturday: 10:00am to 5:00pm </p><p>70 William Street, Paddington, NSW, 2021.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore Our Showrooms",
+            "button_1_link": "https://www.nataliemariejewellery.com/pages/our-showroom",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_HqB9dH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_8.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_xpEjEX": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "desktop",
+            "content_position": "middleLeft",
+            "subheading": "<p><strong>SERVICES</strong></p>",
+            "title": "<p>Book <em>Appointments</em></p>",
+            "description": "<p>Create something unique with our consultations - virtually or at our Showrooms.</p>",
+            "description_mobile": "<p>Create something unique with our consultations - virtually or at our Avalon Showroom.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Book Now",
+            "button_1_link": "shopify://pages/book-appointment",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_UxQEaC": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Sub-heading</p>",
+            "title": "<p>Heading</p>",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hY9nAQ",
+        "image_HqB9dH",
+        "image_xpEjEX",
+        "image_UxQEaC"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -395,7 +512,8 @@
     "text_with_two_media_hJ8VR8",
     "text_with_media_9hRKKh",
     "text_with_media_HfpXNt",
-    "content_list_jGNRga",
+    "content_list_DBeatw",
+    "content_list_H34mnR",
     "custom_html_8UHbnf",
     "three_column_GqHFxM",
     "1680767195aa74aee5"

@@ -110,6 +110,38 @@
         "button_style": "underline"
       }
     },
+    "text_with_media_HfpXNt": {
+      "type": "text-with-media",
+      "blocks": {
+        "image_ptXh84": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_6_fe058d32-8d2d-4c3c-ac27-8868bb063fe7.png",
+            "mobile_image": "shopify://shop_images/Untitled_design_6_fe058d32-8d2d-4c3c-ac27-8868bb063fe7.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_ptXh84"
+      ],
+      "settings": {
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_position_mobile": "bottom",
+        "media_width": "7",
+        "content_position": "topLeftSticky",
+        "subheading": "",
+        "title": "<p>How They Are Made</p>",
+        "description": "<p>Laboratory Grown Diamonds are formed using two primary methods:</p><ul><li>High Pressure High Temperature (HPHT)</li><li>Chemical Vapour Deposition (CVD) </li></ul><p>At Natalie Marie Jewellery, we offer both, ensuring all stones are certified by either the International Gemmological Institute (IGI) or the Gemmological Institute of America (GIA).<br/>The journey of a laboratory grown diamond is complex and multi-staged:<br/></p><ol><li>Grown in a laboratory</li><li>Cut and polished (often in a separate facility)</li><li>Certified by an independent gemological institute</li><li>Sold through the global market</li><li>Selected by a jeweller<br/></li></ol><p>Like natural diamonds, this journey can involve multiple stages and locations, which can impact traceability.<br/></p>",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "#",
+        "button_style": "underline"
+      }
+    },
     "content_list_NwTBrG": {
       "type": "content-list",
       "blocks": {
@@ -119,7 +151,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/icon1.png",
             "subheading": "",
             "title": "<p><strong>High Pressure High Temperature (HPHT)</strong></p>",
             "description": "",
@@ -151,7 +182,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/icon2.png",
             "subheading": "",
             "title": "<p><strong>Chemical Vapour Deposition (CVD) </strong></p>",
             "description": "",
@@ -224,7 +254,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/i1.png",
             "subheading": "",
             "title": "<p><strong>Energy intensive production</strong></p>",
             "description": "<p>Diamond growth requires extremely high temperatures and sustained energy input.</p>",
@@ -256,7 +285,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/i2.png",
             "subheading": "",
             "title": "<p><strong>Energy source matters</strong></p>",
             "description": "<p>A large proportion of global production occurs in regions reliant on coal powered electricity.</p>",
@@ -288,7 +316,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/i3.png",
             "subheading": "",
             "title": "<p><strong>Water usage</strong></p>",
             "description": "<p>Significant water is required for cooling systems during production.</p>",
@@ -320,7 +347,6 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "logo_image": "shopify://shop_images/i4.png",
             "subheading": "",
             "title": "<p><strong>Raw material inputs</strong></p>",
             "description": "<p>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.</p>",
@@ -468,6 +494,7 @@
     "f216b39e-a136-4ab1-82b7-fd67637fde7d",
     "text_with_two_media_hJ8VR8",
     "text_with_media_9hRKKh",
+    "text_with_media_HfpXNt",
     "content_list_NwTBrG",
     "custom_html_VLFnJR",
     "content_list_jGNRga",

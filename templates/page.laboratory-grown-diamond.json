@@ -154,10 +154,10 @@
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "subheading": "<p><strong>Education</strong></p>",
+            "subheading": "",
             "title": "<p>Sustainability Considerations</p>",
             "description": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
-            "description_mobile": "<p>When selecting a diamond, there are myriad characteristics and quality factors that can determine the brilliance, sparkle and overall aesthetic impact of the stone. Summarised here in our Diamond Guide are the most important details we suggest you keep in mind when looking for the perfect diamond, whether it be natural laboratory grown, antique or beyond.</p>",
+            "description_mobile": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -343,7 +343,7 @@
             "subheading": "",
             "title": "<p>Traceability & Transparency</p>",
             "description": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.<br/><br/>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.<br/><br/>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.<br/></p>",
-            "description_mobile": "<p>Create something unique with our consultations - virtually or at our Avalon Showroom.</p>",
+            "description_mobile": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.<br/><br/>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.<br/><br/>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.<br/></p>",
             "colour_style": "dark",
             "button_1_metaobject": "",
             "button_1_text": "",
@@ -546,6 +546,129 @@
         "button_style": "underline"
       }
     },
+    "content_list_c9HbdD": {
+      "type": "content-list",
+      "blocks": {
+        "image_wMPXjH": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "middleLeft",
+            "subheading": "<p><strong>Education</strong></p>",
+            "title": "<p>Sustainability Considerations</p>",
+            "description": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
+            "description_mobile": "<p>When selecting a diamond, there are myriad characteristics and quality factors that can determine the brilliance, sparkle and overall aesthetic impact of the stone. Summarised here in our Diamond Guide are the most important details we suggest you keep in mind when looking for the perfect diamond, whether it be natural laboratory grown, antique or beyond.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Learn More",
+            "button_1_link": "shopify://pages/diamond-guide",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_TWWYTt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Diamonds_1_31dfa84d-a611-4a2c-8e8b-74cfb03c2c4a.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_6eh6AV": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Sub-heading</p>",
+            "title": "<p>Heading</p>",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_wMPXjH",
+        "image_TWWYTt",
+        "image_6eh6AV"
+      ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
+      "settings": {
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "three_column_GqHFxM": {
       "type": "three-column",
       "blocks": {
@@ -632,6 +755,7 @@
     "content_list_DBeatw",
     "content_list_H34mnR",
     "content_list_qCdBjR",
+    "content_list_c9HbdD",
     "three_column_GqHFxM",
     "1680767195aa74aee5"
   ]

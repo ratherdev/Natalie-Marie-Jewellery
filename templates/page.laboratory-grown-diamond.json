@@ -137,7 +137,7 @@
         "media_width": "7",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p>How They Are Made</p>",
+        "title": "<p><strong>How They Are Made</strong></p>",
         "description": "<p>Laboratory Grown Diamonds are formed using two primary methods:</p><ul><li><strong>High Pressure High Temperature (HPHT)</strong></li><li><strong>Chemical Vapour Deposition (CVD)</strong> </li></ul><p>At Natalie Marie Jewellery, we offer both, ensuring all stones are certified by either the International Gemmological Institute (IGI) or the Gemmological Institute of America (GIA).<br/>The journey of a laboratory grown diamond is complex and multi-staged:<br/></p><ol><li>Grown in a laboratory</li><li>Cut and polished (often in a separate facility)</li><li>Certified by an independent gemological institute</li><li>Sold through the global market</li><li>Selected by a jeweller<br/></li></ol><p>Like natural diamonds, this journey can involve multiple stages and locations, which can impact traceability.<br/></p>",
         "colour_style": "dark",
         "button_1_text": "",
@@ -155,7 +155,7 @@
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
             "subheading": "",
-            "title": "<p>Sustainability Considerations</p>",
+            "title": "<p><strong>Sustainability Considerations</strong></p>",
             "description": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
             "description_mobile": "<p>Key considerations include:<br/></p><ul><li><strong>Energy intensive production  </strong><br/>Diamond growth requires extremely high temperatures and sustained energy input.</li><li><strong>Energy source matters<br/></strong> A large proportion of global production occurs in regions reliant on coal powered electricity.</li><li><strong>Water usage </strong><br/>Significant water is required for cooling systems during production.</li><li><strong>Raw material inputs <br/></strong>Despite being “grown”, these diamonds still rely on mined diamond 'seeds'.<br/></li></ul><p>For a laboratory grown diamond to be considered more sustainable, it would require:</p><ul><li>Renewable energy sources</li><li>Transparent supply chains</li><li>Verified carbon reduction or offsetting<br/></li></ul><p>At present, industry wide transparency remains limited, making these claims difficult to fully validate.</p>",
             "colour_style": "dark",
@@ -341,7 +341,7 @@
             "devices": "desktop",
             "content_position": "middleLeft",
             "subheading": "",
-            "title": "<p>Traceability & Transparency</p>",
+            "title": "<p><strong>Traceability & Transparencya</strong></p>",
             "description": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.<br/><br/>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.<br/><br/>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.<br/></p>",
             "description_mobile": "<p>Traceability remains one of the most complex aspects of both laboratory grown and natural diamonds.<br/><br/>Once laboratory grown diamonds enter the global market, identifying their exact origin and production conditions becomes challenging.<br/><br/>At Natalie Marie Jewellery, we apply the same due diligence standards to laboratory grown diamonds as we do to natural diamonds, working only with suppliers who meet our strict requirements.<br/></p>",
             "colour_style": "dark",
@@ -433,7 +433,7 @@
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
             "subheading": "",
-            "title": "<p>Certification & Quality</p>",
+            "title": "<p><strong>Certification & Quality</strong></p>",
             "description": "<p>All of our laboratory grown diamonds above 0.30ct are independently certified by leading gemological institutes, including:<br/></p><ul><li><strong>GIA (Gemological Institute of America)</strong></li><li><strong>IGI (International Gemological Institute)</strong></li><li><strong>GCAL (Gem Certification & Assurance Lab)</strong><br/></li></ul><p>Each stone features:<br/></p><ul><li>A unique certification number</li><li>Detailed grading across cut, colour, clarity and carat<br/></li></ul>",
             "description_mobile": "<p>All of our laboratory grown diamonds above 0.30ct are independently certified by leading gemological institutes, including:<br/></p><ul><li><strong>GIA (Gemological Institute of America)</strong></li><li><strong>IGI (International Gemological Institute)</strong></li><li><strong>GCAL (Gem Certification & Assurance Lab)</strong><br/></li></ul><p>Each stone features:<br/></p><ul><li>A unique certification number</li><li>Detailed grading across cut, colour, clarity and carat<br/></li></ul>",
             "colour_style": "dark",
@@ -556,7 +556,7 @@
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
             "subheading": "",
-            "title": "<p>Our Approach</p>",
+            "title": "<p><strong>Our Approach</strong></p>",
             "description": "<ul><li>100% of our laboratory grown diamond suppliers are compliant with our due diligence requirements</li><li>Each stone is carefully selected to meet our quality standards <br/></li></ul><p>We approach laboratory grown diamonds with the same intention that guides everything we create:<br/><strong>to offer transparency, honour craftsmanship, and support you in choosing a stone that feels deeply personal.</strong></p><p>At Natalie Marie Jewellery, we encourage clients to view both laboratory grown and natural diamonds through a different lens: not as financial assets, but as meaningful investments in a personal story, a commitment, a milestone or a future shared together.<br/>The true value of a diamond often lies not in its future resale potential, but in what it represents to the individual wearing it.Whether laboratory grown or natural, the most important investment is choosing a stone that feels aligned with your values, priorities and the significance of the moment it celebrates.<br/></p>",
             "description_mobile": "<p>When selecting a diamond, there are myriad characteristics and quality factors that can determine the brilliance, sparkle and overall aesthetic impact of the stone. Summarised here in our Diamond Guide are the most important details we suggest you keep in mind when looking for the perfect diamond, whether it be natural laboratory grown, antique or beyond.</p>",
             "colour_style": "dark",

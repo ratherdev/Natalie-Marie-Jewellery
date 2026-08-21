@@ -253,6 +253,14 @@
 		endif
 	%}
 	<section class="Section {{ spacing_class }}" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="text-with-media">
+		{%- if section.settings.content_alignment contains 'middle' -%}
+			<style>
+				@media screen and (min-width: 1008px) {
+					#section-{{ section.id }} .TextMedia__ContentWrapper .twin-wrapper { justify-content: center; }
+					#section-{{ section.id }} .TextMedia__ContentWrapper .text-twin.TextMedia__Content { align-self: stretch; }
+				}
+			</style>
+		{%- endif -%}
 		<div class="Container">
 			<div class="TextMedia Grid">
 				{%- if section.settings.media_position == 'left' -%}
@@ -406,16 +414,20 @@
 	        "label": "Top left"
 	      },
 	      {
+	        "value": "middleLeft",
+	        "label": "Center left"
+	      },
+	      {
 	        "value": "topCenter",
 	        "label": "Center"
 	      },
 	      {
 	        "value": "middleCenter",
-	        "label": "Center (vertically centered too)"
+	        "label": "Center (vertically centered)"
 	      }
 	    ],
 	    "default": "topLeft",
-	    "info": "Centers the text within its own column."
+	    "info": "Sets the text position within its own column."
 	  },
 	  {
 	    "type": "select",

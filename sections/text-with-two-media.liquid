@@ -256,7 +256,8 @@
 		{%- if section.settings.content_alignment contains 'middle' -%}
 			<style>
 				@media screen and (min-width: 1008px) {
-					#section-{{ section.id }} .TextMedia__ContentWrapper .twin-wrapper { justify-content: center; }
+					#section-{{ section.id }} .TextMedia__ContentWrapper { align-items: center; }
+					#section-{{ section.id }} .TextMedia__ContentWrapper .twin-wrapper { justify-content: center; height: auto; }
 					#section-{{ section.id }} .TextMedia__ContentWrapper .text-twin.TextMedia__Content { align-self: stretch; }
 				}
 			</style>

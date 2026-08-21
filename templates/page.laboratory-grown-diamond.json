@@ -78,6 +78,29 @@
         "button_style": "underline"
       }
     },
+    "collection_slider_hRBm8L": {
+      "type": "collection-slider",
+      "name": "Collection slider",
+      "settings": {
+        "enable_light": false,
+        "collection": "laboratory-grown-diamond-wedding-rings",
+        "grid_items_count": 8,
+        "enable_natual_scroll": false,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "subheading": "",
+        "title": "<p>Curated <em>for you</em></p>",
+        "description": "",
+        "text_position": "top",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "text_with_media_9hRKKh": {
       "type": "text-with-media",
       "blocks": {
@@ -715,6 +738,7 @@
     "main",
     "f216b39e-a136-4ab1-82b7-fd67637fde7d",
     "text_with_two_media_hJ8VR8",
+    "collection_slider_hRBm8L",
     "text_with_media_9hRKKh",
     "text_with_media_HfpXNt",
     "content_list_DBeatw",

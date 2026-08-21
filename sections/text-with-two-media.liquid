@@ -133,7 +133,7 @@
 	{%- if text_content != blank -%}
 		<div class=" TextMedia__ContentWrapper Grid__Cell 4/16--lap-and-up 4/16--widescreen">
 			<div class="twin-wrapper">
-				<div class="text-twin TextMedia__Content TextMedia__Content--topLeft ColourStyle--{{ section.settings.colour_style }}">
+				<div class="text-twin TextMedia__Content TextMedia__Content--{{ section.settings.content_alignment | default: 'topLeft' }} ColourStyle--{{ section.settings.colour_style }}">
 					<header class="SectionHeader">
 						{{ text_content }}
 					</header>
@@ -395,6 +395,27 @@
 	  {
 	    "type": "header",
 	    "content": "Text Settings"
+	  },
+	  {
+	    "type": "select",
+	    "id": "content_alignment",
+	    "label": "Text alignment",
+	    "options": [
+	      {
+	        "value": "topLeft",
+	        "label": "Top left"
+	      },
+	      {
+	        "value": "topCenter",
+	        "label": "Center"
+	      },
+	      {
+	        "value": "middleCenter",
+	        "label": "Center (vertically centered too)"
+	      }
+	    ],
+	    "default": "topLeft",
+	    "info": "Centers the text within its own column."
 	  },
 	  {
 	    "type": "select",

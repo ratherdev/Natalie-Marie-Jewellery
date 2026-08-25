@@ -50,6 +50,29 @@
         "button_style": "underline"
       }
     },
+    "collection_slider_j7rpTE": {
+      "type": "collection-slider",
+      "name": "Collection slider",
+      "settings": {
+        "enable_light": false,
+        "collection": "mined-diamond-engagement",
+        "grid_items_count": 8,
+        "enable_natual_scroll": false,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "subheading": "",
+        "title": "<p>Curated <em>for you</em></p>",
+        "description": "",
+        "text_position": "top",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
     "65d9d35e-195c-4de2-a034-35b6244ae4aa": {
       "type": "text-with-media",
       "blocks": {
@@ -64,6 +87,9 @@
       "block_order": [
         "template--16125431546025__65d9d35e-195c-4de2-a034-35b6244ae4aa-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
@@ -72,7 +98,7 @@
         "media_position": "left",
         "media_position_mobile": "bottom",
         "media_width": "6",
-        "content_position": "middleLeft",
+        "content_position": "topLeftSticky",
         "subheading": "",
         "title": "<p>What is a Stone Shape?</p>",
         "description": "<p>Stone shape refers to the outline or silhouette of a gemstone when viewed from above. While often used interchangeably with “cut”, shape and cut have a distinct difference:<br/></p><ul><li>Shape describes the overall form (round, oval, pear)</li><li>Cut refers to how the facets are arranged to reflect light<br/></li></ul><p>Together, they define the personality of a stone.</p>",
@@ -84,27 +110,6 @@
     },
     "8f040c8d-07b0-4e70-85c5-5523ad1bf134": {
       "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.29.44_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "<p>Slide title</p>",
-            "title": "<p>Tell your story</p>",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1"
-      ],
       "settings": {
         "show_fullscreen": false,
         "show_arrow": false,
@@ -125,6 +130,9 @@
       "block_order": [
         "template--16125431546025__588aa754-4a16-43e7-ad50-eed5619cbfca-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
@@ -133,9 +141,9 @@
         "media_position": "right",
         "media_position_mobile": "bottom",
         "media_width": "7",
-        "content_position": "middleLeft",
+        "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<ul><li><em>Round</em></li></ul>",
+        "title": "<p>Round</p>",
         "description": "<p>The most classic and widely recognised shape.<br/></p><ul><li>Symmetrical and balanced</li><li>Designed for maximum light reflection</li><li>Timeless and versatile</li></ul><p>Round stones offer a sense of familiarity and refinement - an enduring choice that transcends trends.</p>",
         "colour_style": "dark",
         "button_1_text": "",
@@ -556,6 +564,7 @@
   "order": [
     "main",
     "text_with_two_media_pK6NnD",
+    "collection_slider_j7rpTE",
     "65d9d35e-195c-4de2-a034-35b6244ae4aa",
     "8f040c8d-07b0-4e70-85c5-5523ad1bf134",
     "588aa754-4a16-43e7-ad50-eed5619cbfca",

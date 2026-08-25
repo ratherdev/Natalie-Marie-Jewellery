@@ -153,27 +153,6 @@
     },
     "86931031-bd17-4f8a-a3c3-f113e451f5fb": {
       "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__86931031-bd17-4f8a-a3c3-f113e451f5fb-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.47.52_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__86931031-bd17-4f8a-a3c3-f113e451f5fb-1682332155bb5f09da-1"
-      ],
       "settings": {
         "show_fullscreen": false,
         "show_arrow": false,
@@ -187,19 +166,23 @@
         "template--16125431546025__b0938d04-cc12-4f0f-b9a6-1a30670afae3-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
+            "image": "shopify://shop_images/240619_NatalieMarieJewellery_Content59720-1400-x-1750px.jpg",
+            "mobile_image": "shopify://shop_images/240619_NatalieMarieJewellery_Content59720-1400-x-1750px.jpg"
           }
         }
       },
       "block_order": [
         "template--16125431546025__b0938d04-cc12-4f0f-b9a6-1a30670afae3-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
-        "media_position": "right",
+        "media_position": "left",
         "media_position_mobile": "bottom",
         "media_width": "6",
         "content_position": "topLeftSticky",
@@ -218,43 +201,16 @@
         "template--16125431546025__5745a96a-89f1-43ff-b4e6-2d5a49f7d900-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
+            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png",
+            "mobile_image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png"
           }
         }
       },
       "block_order": [
         "template--16125431546025__5745a96a-89f1-43ff-b4e6-2d5a49f7d900-1682331895cf99bbfc-0"
       ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Cushion</em></p>",
-        "description": "<p>A square or rectangular shape with softly rounded corners.</p><ul><li>Romantic, pillowy form</li><li>Balanced brilliance and depth</li><li>Often associated with vintage-inspired design</li></ul><p>Cushion cuts offer a sense of softness and warmth.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_YQbEtm": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_kCH8gH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_kCH8gH"
+      "custom_css": [
+        "ul {list-style: disc;}"
       ],
       "settings": {
         "remove_spacing_top": true,
@@ -266,42 +222,134 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Emerald</em></p>",
-        "description": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
+        "title": "<p>Cushion</p>",
+        "description": "<p>A square or rectangular shape with softly rounded corners.</p><ul><li>Romantic, pillowy form</li><li>Balanced brilliance and depth</li><li>Often associated with vintage-inspired design</li></ul><p>Cushion cuts offer a sense of softness and warmth.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
         "button_style": "underline"
       }
     },
-    "text_with_media_tG8qCR": {
-      "type": "text-with-media",
+    "content_list_yD6Dmm": {
+      "type": "content-list",
       "blocks": {
-        "image_n7cQVB": {
+        "image_rEB7jr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Emerald</p>",
+            "description": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
+            "description_mobile": "<p>A rectangular shape with step-cut facets.<br/></p><ul><li>Clean lines and architectural form</li><li>Emphasis on clarity over sparkle</li><li>Understated and refined<br/></li></ul><p>Emerald cuts reveal the internal character of a stone, favouring depth and stillness over brilliance.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_BPP4HK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_-_29_July_2026_at_15.13.35.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_8HJhXm": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Radiant</p>",
+            "description": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
+            "description_mobile": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "image_n7cQVB"
+        "image_rEB7jr",
+        "image_BPP4HK",
+        "image_8HJhXm"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
+      "name": "Content list",
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
         "subheading": "",
-        "title": "<p><em>Radiant</em></p>",
-        "description": "<p>A hybrid of brilliant and step cuts.<br/></p><ul><li>Rectangular or square shape</li><li>High sparkle with structured edges</li><li>Dynamic and luminous<br/></li></ul><p>Radiant stones combine precision with vibrancy.</p>",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },
@@ -311,43 +359,15 @@
         "image_pLUtmg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
+            "image": "shopify://shop_images/VintageElongatedCushion-LabGrown-2caratFront.jpg"
           }
         }
       },
       "block_order": [
         "image_pLUtmg"
       ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Pear</em></p>",
-        "description": "<p>A teardrop-shaped stone combining round and marquise elements.</p><ul><li>Soft, asymmetrical silhouette</li><li>Elongating effect</li><li>Distinctive and expressive<br/></li></ul><p>Pear shapes feel both delicate and directional.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_7Pq67k": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_3pJzgy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_3pJzgy"
+      "custom_css": [
+        "ul {list-style: disc;}"
       ],
       "settings": {
         "remove_spacing_top": true,
@@ -359,164 +379,220 @@
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Marquise</em></p>",
-        "description": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
+        "title": "<p>Pear</p>",
+        "description": "<p>A teardrop-shaped stone combining round and marquise elements.</p><ul><li>Soft, asymmetrical silhouette</li><li>Elongating effect</li><li>Distinctive and expressive<br/></li></ul><p>Pear shapes feel both delicate and directional.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
         "button_style": "underline"
       }
     },
-    "text_with_media_8EE9gR": {
-      "type": "text-with-media",
+    "content_list_FHH49T": {
+      "type": "content-list",
       "blocks": {
-        "image_cFgMgY": {
+        "image_EnejAL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_cFgMgY"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Asscher</em></p>",
-        "description": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "e519b54b-e820-4452-8c63-5cadf8033400": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.40.30_pm.png",
             "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Marquise</p>",
+            "description": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
+            "description_mobile": "<p>An elongated shape with pointed ends.<br/></p><ul><li>Dramatic and elegant</li><li>Maximises perceived size</li><li>Strong, elongated presence<br/></li></ul><p>Marquise stones create a sense of length and movement.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_hTY8LF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-5.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
             "subheading": "",
             "title": "",
             "description": "",
-            "colour_style": "light",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
-            "button_style": "underline"
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84": {
-      "type": "text-with-media",
-      "blocks": {
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0": {
+        },
+        "image_qU3cq8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DIAS_COLOUR_976x.progressive_fa0b51ae-fa78-4d18-a687-7f24e842eac8.webp"
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Asscher</p>",
+            "description": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
+            "description_mobile": "<p>A square step-cut with cropped corners.</p><ul><li>Vintage-inspired geometry</li><li>Deep, hall-of-mirrors effect</li><li>Structured and bold<br/></li></ul><p>Asscher cuts carry a quiet intensity and symmetry.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0"
+        "image_EnejAL",
+        "image_hTY8LF",
+        "image_qU3cq8"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
+      "name": "Content list",
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
         "subheading": "",
-        "title": "<p>Our Perspective</p>",
-        "description": "<p>We approach stone shapes as part of a broader design conversation. Each piece is considered holistically:<br/></p><ul><li>The relationship between stone and setting</li><li>The balance of proportion and scale</li><li>The way the piece will be worn over time<br/></li></ul><p>A well-chosen shape does more than define a stone - it shapes how it becomes part of you.</p>",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e": {
-      "type": "slideshow",
+    "content_list_cUN46F": {
+      "type": "content-list",
       "blocks": {
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1": {
+        "image_DFydiq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.44.51_pm.png",
             "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Our Perspective</p>",
+            "description": "<p>We approach stone shapes as part of a broader design conversation. Each piece is considered holistically:<br/></p><ul><li>The relationship between stone and setting</li><li>The balance of proportion and scale</li><li>The way the piece will be worn over time<br/></li></ul><p>A well-chosen shape does more than define a stone - it shapes how it becomes part of you.</p>",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_qtRK4h": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_-_06_July_2026_at_15.34.42-3.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
             "subheading": "",
             "title": "",
             "description": "",
-            "colour_style": "light",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
-            "button_style": "underline"
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1"
+        "image_DFydiq",
+        "image_qtRK4h"
       ],
+      "name": "Content list",
       "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e8debbe4-7365-435c-bff6-1005fa07de57": {
-      "type": "content-slider",
-      "blocks": {
-        "f72a239d-4469-4979-829e-6d5923b2fc91": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "engagement-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "f72a239d-4469-4979-829e-6d5923b2fc91"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Diamonds</strong></p>",
-        "title": "<p>Engagement Collection</p>",
-        "description": "<p>Feel inspired and fall in love. View our curated collection of diamond engagement rings.</p>",
-        "text_position": "top",
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
-        "button_1_text": "View All",
-        "button_1_link": "shopify://collections/diamond-wedding-rings",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -571,15 +647,10 @@
     "86931031-bd17-4f8a-a3c3-f113e451f5fb",
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3",
     "5745a96a-89f1-43ff-b4e6-2d5a49f7d900",
-    "text_with_media_YQbEtm",
-    "text_with_media_tG8qCR",
+    "content_list_yD6Dmm",
     "text_with_media_QKVKmB",
-    "text_with_media_7Pq67k",
-    "text_with_media_8EE9gR",
-    "e519b54b-e820-4452-8c63-5cadf8033400",
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84",
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e",
-    "e8debbe4-7365-435c-bff6-1005fa07de57",
+    "content_list_FHH49T",
+    "content_list_cUN46F",
     "1680767195aa74aee5"
   ]
 }

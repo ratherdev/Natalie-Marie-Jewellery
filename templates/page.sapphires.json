@@ -18,30 +18,56 @@
         "show_large": false
       }
     },
-    "f216b39e-a136-4ab1-82b7-fd67637fde7d": {
-      "type": "three-column",
+    "text_with_two_media_9LC8bD": {
+      "type": "text-with-two-media",
       "blocks": {
-        "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0": {
+        "image_ezyxKR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sapphires.jpg"
+            "image": "shopify://shop_images/sap.jpg",
+            "mobile_image": "shopify://shop_images/sap.jpg"
           }
         }
       },
       "block_order": [
-        "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0"
+        "image_ezyxKR"
       ],
+      "name": "Text with two media",
       "settings": {
-        "enable_dark": false,
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_width": "11",
         "subheading": "<p><strong>Sapphires</strong></p>",
         "title": "<p>A Stone of Depth, Strength & Individuality</p>",
-        "description": "<p>Sapphires have long been revered for their beauty and symbolism. Known for their durability and depth of colour, they are a stone often chosen to mark meaningful moments - designed to be worn every day, and treasured for a lifetime.</p>",
-        "feature_text": "<p>While most commonly associated with rich blue hues, sapphires exist in a wide spectrum of colours, each with its own unique character.</p>",
+        "description": "<p>Sapphires have long been revered for their beauty and symbolism. Known for their durability and depth of colour, they are a stone often chosen to mark meaningful moments - designed to be worn every day, and treasured for a lifetime.<br/>While most commonly associated with rich blue hues, sapphires exist in a wide spectrum of colours, each with its own unique character.</p>",
+        "content_alignment": "middleLeft",
         "colour_style": "dark",
-        "button_1_metaobject": "",
         "button_1_text": "",
         "button_1_link": "",
-        "button_2_metaobject": "",
+        "button_style": "underline"
+      }
+    },
+    "collection_slider_T3ihxj": {
+      "type": "collection-slider",
+      "name": "Collection slider",
+      "settings": {
+        "enable_light": false,
+        "collection": "sapphire-engagement",
+        "grid_items_count": 8,
+        "enable_natual_scroll": false,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "subheading": "",
+        "title": "<p>Curated <em>for you</em></p>",
+        "description": "",
+        "text_position": "top",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -53,8 +79,8 @@
         "template--16125431546025__65d9d35e-195c-4de2-a034-35b6244ae4aa-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sapphires_1.jpg",
-            "mobile_image": "shopify://shop_images/Rumi_Charms_1.png"
+            "image": "shopify://shop_images/sapphire_engagement.png",
+            "mobile_image": "shopify://shop_images/sapphire_engagement.png"
           }
         }
       },
@@ -67,9 +93,9 @@
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "left",
-        "media_position_mobile": "bottom",
+        "media_position_mobile": "top",
         "media_width": "6",
-        "content_position": "middleLeft",
+        "content_position": "topLeftSticky",
         "subheading": "",
         "title": "<p>What is a Sapphire?</p>",
         "description": "<p>Sapphires belong to the <strong>corundum family of minerals</strong>, one of the hardest naturally occurring substances on earth.</p><p>With a <strong>9 on the Mohs scale of hardness</strong>, sapphires are exceptionally durable - making them a considered choice for engagement rings and heirloom pieces designed for daily wear.</p>",
@@ -77,36 +103,6 @@
         "button_1_text": "",
         "button_1_link": "",
         "button_style": "underline"
-      }
-    },
-    "8f040c8d-07b0-4e70-85c5-5523ad1bf134": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.29.44_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "<p>Slide title</p>",
-            "title": "<p>Tell your story</p>",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__8f040c8d-07b0-4e70-85c5-5523ad1bf134-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
       }
     },
     "588aa754-4a16-43e7-ad50-eed5619cbfca": {
@@ -122,6 +118,9 @@
       "block_order": [
         "template--16125431546025__588aa754-4a16-43e7-ad50-eed5619cbfca-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
@@ -130,7 +129,7 @@
         "media_position": "right",
         "media_position_mobile": "bottom",
         "media_width": "7",
-        "content_position": "middleLeft",
+        "content_position": "topLeftSticky",
         "subheading": "",
         "title": "<p><em>Colour & Character</em></p>",
         "description": "<p>While blue sapphires are the most widely recognised, sapphires can be found in a diverse range of tones, including:</p><ul><li>Deep ocean blues</li><li>Soft teals and parti-colours</li><li>Golden yellows</li><li>Blush pinks</li><li>Earthy greens<br/></li></ul><p>Each sapphire is inherently unique, often displaying subtle variations in tone, saturation and light performance.<br/></p><p>We believe this individuality is what makes sapphires so special-<strong>no two stones are ever exactly alike.</strong></p>",
@@ -140,60 +139,33 @@
         "button_style": "underline"
       }
     },
-    "86931031-bd17-4f8a-a3c3-f113e451f5fb": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__86931031-bd17-4f8a-a3c3-f113e451f5fb-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.47.52_pm.png",
-            "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "colour_style": "light",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_style": "underline"
-          }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__86931031-bd17-4f8a-a3c3-f113e451f5fb-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3": {
       "type": "text-with-media",
       "blocks": {
         "template--16125431546025__b0938d04-cc12-4f0f-b9a6-1a30670afae3-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
+            "image": "shopify://shop_images/Web_banner_-_sapphire.png"
           }
         }
       },
       "block_order": [
         "template--16125431546025__b0938d04-cc12-4f0f-b9a6-1a30670afae3-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
+        "media_position": "left",
+        "media_position_mobile": "top",
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Australian Sapphires</em></p>",
+        "title": "<p>Australian Sapphires</p>",
         "description": "<p>At Natalie Marie Jewellery, we are proud to offer <strong>Australian origin sapphires</strong>, sourced primarily from Queensland’s gem fields.</p><p>These stones are known for their:</p><ul><li>Rich, moody colour palette</li><li>Distinctive teal and parti tones (not necessarily what we offer online- but only bespoke)</li><li>Natural variation and depth</li></ul><p></p><p>Australian sapphires offer a level of <strong>traceability and transparency</strong> that is not always possible within the global gemstone market, allowing us to share a clearer understanding of their origin and journey.</p>",
         "colour_style": "dark",
         "button_1_text": "",
@@ -207,25 +179,28 @@
         "template--16125431546025__5745a96a-89f1-43ff-b4e6-2d5a49f7d900-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
+            "image": "shopify://shop_images/sapphire_engagement_3.png"
           }
         }
       },
       "block_order": [
         "template--16125431546025__5745a96a-89f1-43ff-b4e6-2d5a49f7d900-1682331895cf99bbfc-0"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
-        "media_position": "left",
+        "media_position": "right",
         "media_position_mobile": "bottom",
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Sourcing & Transparency</em></p>",
-        "description": "<p>The global gemstone industry is complex, with many stones passing through multiple hands before reaching a jeweller.</p><p>At NMJ, we take a considered approach to sourcing:</p><ul><li>We work with <strong>trusted suppliers and long-term partners</strong></li><li>We prioritise stones where <strong>origin can be verified</strong></li><li>We seek to collaborate with suppliers who support</li><li> responsible environmental practices</li><li>fair working conditions</li><li>community investment</li></ul><p>Where a stone is sold with an origin claim, we ensure this is supported by documented evidence of provenance from the supplier.</p>",
+        "title": "<p>Sourcing & Transparency</p>",
+        "description": "<p>The global gemstone industry is complex, with many stones passing through multiple hands before reaching a jeweller.</p><p>At NMJ, we take a considered approach to sourcing:</p><ul><li>We work with <strong>trusted suppliers and long-term partners</strong></li><li>We prioritise stones where <strong>origin can be verified</strong></li><li>We seek to collaborate with suppliers who support:</li></ul><ol><li>responsible environmental practices</li><li> fair working conditions</li><li> community investment</li></ol><p></p><p>Where a stone is sold with an origin claim, we ensure this is supported by documented evidence of provenance from the supplier.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -238,43 +213,15 @@
         "image_kCH8gH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
+            "image": "shopify://shop_images/Eirene_20Oval_20Trio_20-_20Sapphire_20Diamond_20Side_Edit_RG.jpg"
           }
         }
       },
       "block_order": [
         "image_kCH8gH"
       ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Custom Cut Stones</em></p>",
-        "description": "<p>Many of the sapphires we offer are custom cut specifically for our designs, allowing us to:</p><ul><li>Highlight the natural beauty of each stone</li><li>Maximise colour and light performance</li><li>Create pieces that feel considered and intentional</li></ul><p>We work with specialised cutters who understand how to reveal the unique characteristics within each individual gemstone.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_tG8qCR": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_n7cQVB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Clarity.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_n7cQVB"
+      "custom_css": [
+        "ul {list-style: disc;}"
       ],
       "settings": {
         "remove_spacing_top": true,
@@ -282,168 +229,224 @@
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "left",
-        "media_position_mobile": "bottom",
+        "media_position_mobile": "top",
         "media_width": "6",
         "content_position": "topLeftSticky",
         "subheading": "",
-        "title": "<p><em>Natural Variation</em></p>",
-        "description": "<p>Unlike diamonds, sapphires are not graded through a universal system.</p><p>Instead, each stone is assessed individually based on:</p><ul><li>Colour</li><li>Tone and saturation</li><li>Clarity (often including natural inclusions)</li><li>Cut and overall presence</li></ul><p>Inclusions and colour variation are not flaws, but rather part of the story of the stone - a reflection of its natural formation.</p>",
+        "title": "<p>Custom Cut Stones</p>",
+        "description": "<p>Many of the sapphires we offer are custom cut specifically for our designs, allowing us to:</p><ul><li>Highlight the natural beauty of each stone</li><li>Maximise colour and light performance</li><li>Create pieces that feel considered and intentional</li></ul><p>We work with specialised cutters who understand how to reveal the unique characteristics within each individual gemstone.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
         "button_style": "underline"
       }
     },
-    "text_with_media_QKVKmB": {
-      "type": "text-with-media",
+    "content_list_AaMKrk": {
+      "type": "content-list",
       "blocks": {
-        "image_pLUtmg": {
+        "image_9p4R4X": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screen_Shot_2020-06-16_at_9_40_22_pm_600x_2x_progressive_png.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_pLUtmg"
-      ],
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
-        "subheading": "",
-        "title": "<p><em>Durability & Everyday Wear</em></p>",
-        "description": "<p>Sapphires are one of the most durable gemstones available, making them well suited to everyday wear.</p><p>However, like all fine jewellery, they should be worn with care:</p><ul><li>Avoid hard knocks or impact</li><li>Remove during heavy activity</li><li>Clean gently and regularly</li></ul><p>With the right care, a sapphire piece can become a modern heirloom, passed down through generations.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
-    "e519b54b-e820-4452-8c63-5cadf8033400": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.40.30_pm.png",
             "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
+            "devices": "mobile_desktop",
+            "content_position": "middleLeft",
+            "subheading": "",
+            "title": "<p>Natural Variation</p>",
+            "description": "<p>Unlike diamonds, sapphires are not graded through a universal system.</p><p>Instead, each stone is assessed individually based on:</p><ul><li>Colour</li><li>Tone and saturation</li><li>Clarity (often including natural inclusions)</li><li>Cut and overall presence</li></ul><p>Inclusions<br/> and colour variation are not flaws, but rather part of the story of the<br/> stone - a reflection of its natural formation.</p>",
+            "description_mobile": "<p>Unlike diamonds, sapphires are not graded through a universal system.</p><p>Instead, each stone is assessed individually based on:</p><ul><li>Colour</li><li>Tone and saturation</li><li>Clarity (often including natural inclusions)</li><li>Cut and overall presence</li></ul><p>Inclusions<br/> and colour variation are not flaws, but rather part of the story of the<br/> stone - a reflection of its natural formation.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "#",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_JD4BJp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tilly-Halo-Ring-_-Australian-Sapphire-_-Diamonds.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
             "subheading": "",
             "title": "",
             "description": "",
-            "colour_style": "light",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
-            "button_style": "underline"
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
-        }
-      },
-      "block_order": [
-        "template--16125431546025__e519b54b-e820-4452-8c63-5cadf8033400-1682332155bb5f09da-1"
-      ],
-      "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84": {
-      "type": "text-with-media",
-      "blocks": {
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0": {
+        },
+        "image_DeHttb": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DIAS_COLOUR_976x.progressive_fa0b51ae-fa78-4d18-a687-7f24e842eac8.webp"
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Durability & Everyday Wear</p>",
+            "description": "<p>Sapphires are one of the most durable gemstones available, making them well suited to everyday wear.</p><p>However, like all fine jewellery, they should be worn with care:</p><ul><li>Avoid hard knocks or impact</li><li>Remove during heavy activity</li><li>Clean gently and regularly</li></ul><p>With the right care, a sapphire piece can become a modern heirloom, passed down through generations.</p>",
+            "description_mobile": "<p>Sapphires are one of the most durable gemstones available, making them well suited to everyday wear.</p><p>However, like all fine jewellery, they should be worn with care:</p><ul><li>Avoid hard knocks or impact</li><li>Remove during heavy activity</li><li>Clean gently and regularly</li></ul><p>With the right care, a sapphire piece can become a modern heirloom, passed down through generations.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "template--16125431546025__e7136397-43a9-471b-af79-b0bf6bbe2e84-1682331895cf99bbfc-0"
+        "image_9p4R4X",
+        "image_JD4BJp",
+        "image_DeHttb"
       ],
+      "custom_css": [
+        "ul {list-style: disc;}"
+      ],
+      "name": "Content list",
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "6",
-        "content_position": "topLeftSticky",
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
         "subheading": "",
-        "title": "<p>Our Perspective</p>",
-        "description": "<p>We are drawn to sapphires for their quiet strength and individuality.</p><p>Our sapphires are ethically sourced from Australia, celebrated for their exceptional quality, rich natural colour, and traceable origin.</p><p>Each stone carries a sense of depth - formed over time, shaped by nature, and chosen with intention.</p><p>Whether selected for its colour, origin, or meaning, a sapphire offers something deeply personal:</p><p>a piece that feels entirely your own.</p>",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e": {
-      "type": "slideshow",
+    "content_list_wyQryF": {
+      "type": "content-list",
       "blocks": {
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1": {
+        "image_DRf9xH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2023-04-24_at_8.44.51_pm.png",
             "apply_overlay": false,
-            "fifty_fifty": false,
-            "content_position": "bottomLeft",
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p>Our Perspective</p>",
+            "description": "<p>We are drawn to sapphires for their quiet strength and individuality.</p><p>Our sapphires are ethically sourced from Australia, celebrated for their <br/>exceptional quality, rich natural colour, and traceable origin.</p><p>Each stone carries a sense of depth - formed over time, shaped by nature, and chosen with intention.</p><p>Whether selected for its colour, origin, or meaning, a sapphire offers something deeply personal:</p><p>a piece that feels entirely your own.</p>",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_n3kaWV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ren-Cluster-Sapphire-Ren-Wedding-Band-Plain-2.jpg",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
             "subheading": "",
             "title": "",
             "description": "",
-            "colour_style": "light",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
             "button_1_text": "",
             "button_1_link": "",
-            "button_style": "underline"
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
           }
         }
       },
       "block_order": [
-        "template--16125431546025__a101aea1-959f-4f0f-85b6-2d9702efd65e-1682332155bb5f09da-1"
+        "image_DRf9xH",
+        "image_n3kaWV"
       ],
+      "name": "Content list",
       "settings": {
-        "show_fullscreen": false,
-        "show_arrow": false,
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "e8debbe4-7365-435c-bff6-1005fa07de57": {
-      "type": "content-slider",
-      "blocks": {
-        "f72a239d-4469-4979-829e-6d5923b2fc91": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "engagement-rings",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "f72a239d-4469-4979-829e-6d5923b2fc91"
-      ],
-      "settings": {
-        "enable_light": false,
-        "grid_items_count": 8,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Diamonds</strong></p>",
-        "title": "<p>Engagement Collection</p>",
-        "description": "<p>Feel inspired and fall in love. View our curated collection of diamond engagement rings.</p>",
-        "text_position": "top",
+        "grid_items_count": 2,
+        "grid_items_count_pocket": "1/1",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
         "colour_style": "dark",
-        "button_1_text": "View All",
-        "button_1_link": "shopify://collections/diamond-wedding-rings",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -490,20 +493,15 @@
   },
   "order": [
     "main",
-    "f216b39e-a136-4ab1-82b7-fd67637fde7d",
+    "text_with_two_media_9LC8bD",
+    "collection_slider_T3ihxj",
     "65d9d35e-195c-4de2-a034-35b6244ae4aa",
-    "8f040c8d-07b0-4e70-85c5-5523ad1bf134",
     "588aa754-4a16-43e7-ad50-eed5619cbfca",
-    "86931031-bd17-4f8a-a3c3-f113e451f5fb",
     "b0938d04-cc12-4f0f-b9a6-1a30670afae3",
     "5745a96a-89f1-43ff-b4e6-2d5a49f7d900",
     "text_with_media_YQbEtm",
-    "text_with_media_tG8qCR",
-    "text_with_media_QKVKmB",
-    "e519b54b-e820-4452-8c63-5cadf8033400",
-    "e7136397-43a9-471b-af79-b0bf6bbe2e84",
-    "a101aea1-959f-4f0f-85b6-2d9702efd65e",
-    "e8debbe4-7365-435c-bff6-1005fa07de57",
+    "content_list_AaMKrk",
+    "content_list_wyQryF",
     "1680767195aa74aee5"
   ]
 }

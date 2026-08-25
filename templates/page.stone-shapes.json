@@ -18,32 +18,35 @@
         "show_large": false
       }
     },
-    "f216b39e-a136-4ab1-82b7-fd67637fde7d": {
-      "type": "three-column",
+    "text_with_two_media_pK6NnD": {
+      "type": "text-with-two-media",
       "blocks": {
-        "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0": {
+        "image_wNGbK6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJ_Dec22_-325_400x_1.jpg"
+            "image": "shopify://shop_images/stone-shap.jpg",
+            "mobile_image": "shopify://shop_images/stone-shap.jpg"
           }
         }
       },
       "block_order": [
-        "template--16115342246057__f216b39e-a136-4ab1-82b7-fd67637fde7d-16807660576eee1300-0"
+        "image_wNGbK6"
       ],
+      "name": "Text with two media",
       "settings": {
-        "enable_dark": false,
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
+        "enable_newsletter_subscribe": false,
+        "klaviyo_form_id": "",
+        "media_position": "right",
+        "media_width": "11",
         "subheading": "<p><strong>Stone Shapes</strong></p>",
         "title": "<p>Form, Light & Expression</p>",
-        "description": "<p>The shape of a gemstone is one of the most defining elements of a piece.<br/></p><p>It influences not only how a stone looks, but how it interacts with light, how it sits on the hand, and how it feels to wear. Each shape carries its own visual language - some soft and organic, others structured and precise.</p>",
-        "feature_text": "<p>We see shape as an extension of personal expression - a balance between proportion, character and intention.</p>",
+        "description": "<p>The shape of a gemstone is one of the most defining elements of a piece.<br/>It influences not only how a stone looks, but how it interacts with light, how it sits on the hand, and how it feels to wear. Each shape carries its own visual language - some soft and organic, others structured and precise.<br/>We see shape as an extension of personal expression - a balance between proportion, character and intention.</p>",
+        "content_alignment": "middleLeft",
         "colour_style": "dark",
-        "button_1_metaobject": "",
         "button_1_text": "",
         "button_1_link": "",
-        "button_2_metaobject": "",
-        "button_2_text": "",
-        "button_2_link": "",
         "button_style": "underline"
       }
     },
@@ -552,7 +555,7 @@
   },
   "order": [
     "main",
-    "f216b39e-a136-4ab1-82b7-fd67637fde7d",
+    "text_with_two_media_pK6NnD",
     "65d9d35e-195c-4de2-a034-35b6244ae4aa",
     "8f040c8d-07b0-4e70-85c5-5523ad1bf134",
     "588aa754-4a16-43e7-ad50-eed5619cbfca",

@@ -81,7 +81,7 @@
             "description": "<p>Considered proportions. Distinctive details. One extraordinary stone at the centre of it all. Discover solitaire engagement rings handcrafted to celebrate the beauty and individuality of your chosen stone.</p><p></p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "shopify://collections/solitaire-engagement",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/solitaire-engagement?filter.p.m.custom.filter_metal=Yellow%20Gold",
             "button_style": "underline"
           }
         },
@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "fleur",
+            "collection": "laboratory-grown-diamond-engagement-ring",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>New  to Bridal</strong></p>",
-        "title": "<p><em>Introducing</em> Fleur</p>",
-        "description": "<p>Inspired by the beauty of flowers in bloom, Fleur was crafted to honour the celebrations that seem to pass in the blink of an eye.</p>",
+        "subheading": "<p><strong>thoughtfully crafted</strong></p>",
+        "title": "<p>Modern Brilliance</p>",
+        "description": "<p>From classic solitaire designs, trilogy rings, or <strong>unique cluster settings. </strong>Designed for everyday wear and a lifetime of meaning</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "shopify://collections/fleur",
+        "button_1_link": "https://www.nataliemariejewellery.com/collections/laboratory-grown-diamond-engagement-ring?filter.p.m.custom.filter_metal=Yellow%20Gold",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

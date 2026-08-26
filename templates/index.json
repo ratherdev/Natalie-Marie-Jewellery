@@ -54,8 +54,8 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/NMJ_Charms_Circle_1080x1350_9d64d8dd-92b4-451b-91f7-5abf19995d78.gif",
-            "mobile_image": "shopify://shop_images/NMJ_Charms_Circle_1080x1350_9d64d8dd-92b4-451b-91f7-5abf19995d78.gif",
+            "image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19-2.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19-2.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
@@ -71,17 +71,17 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Wedding_Planner_For_Homepage.png",
-            "mobile_image": "shopify://shop_images/Wedding_Planner_For_Homepage.png",
+            "image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>A Place to Hold It All</p>",
-            "title": "<p><em>Introducing The Wedding Journal</em></p>",
-            "description": "<p>A thoughtful companion for your wedding journey, designed to hold the plans, reflections, memories and meaningful moments that make the experience uniquely yours.</p>",
+            "subheading": "<p>Distinctly yours</p>",
+            "title": "<p><em>The Art of the Solitaire</em></p>",
+            "description": "<p>Considered proportions. Distinctive details. One extraordinary stone at the centre of it all. Discover solitaire engagement rings handcrafted to celebrate the beauty and individuality of your chosen stone.</p><p></p>",
             "colour_style": "light",
             "button_1_text": "Explore Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/products/wedding-journal",
+            "button_1_link": "shopify://collections/solitaire-engagement",
             "button_style": "underline"
           }
         },

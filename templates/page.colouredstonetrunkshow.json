@@ -15,8 +15,8 @@
         "template--16107012980905__39f713ce-2be9-44f1-9310-85b9ec69af48-167962820178899593-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Bobby_Clark_Mobile_Sketches_Sollune.png",
-            "mobile_image": "shopify://shop_images/Bobby_Clark_Mobile_Sketches_Sollune.png"
+            "image": "shopify://shop_images/Gemstone_Image_for_site_for_trunkshow.png",
+            "mobile_image": "shopify://shop_images/Gemstone_Image_for_site_for_trunkshow.png"
           }
         }
       },
@@ -26,9 +26,9 @@
       "settings": {
         "enable_dark": false,
         "subheading": "<p><strong>JOIN US</strong></p>",
-        "title": "<p>Creative Mothers | The Art of Opposing Practices</p>",
-        "description": "<p>We warmly invite our community to join us for an intimate evening exploring the intersection of motherhood and creativity.</p><p>Join us for a live panel and Q&A hosted on the <strong>7th of May</strong> at our Paddington showroom. Hosted by Shona Munro, our Head Designer, featuring:<br/>- Bobby Clark, Melbourne-based Artist.<br/>- Tara Cooper, Director of Elce Swim.<br/>- Natalie Fitch, Founder of Natalie Marie Jewellery. <br/></p><p>Together, we will explore the ever evolving relationship between creative practice and motherhood, through thoughtful, honest conversation.</p><p>The evening will be accompanied by canapés and a selection of wines curated by <a href=\"https://winonawine.com/\" target=\"_blank\" title=\"https://winonawine.com/\">Winona</a>, with guests invited for an exclusive first look at our creative collaboration with Bobby Clark; a Sollune inspired mobile.</p><p>Guests will receive access to exclusive offers, <strong>20% off fine jewellery collection for one month + redeem ticket price on your order.*</strong></p><p>Limited tickets available, secure your place today.</p>",
-        "feature_text": "<p>A space for connection, <em>an opportunity to gather with like-minded women,</em> to listen, to share, <em>and to be part of an open and meaningful conversation.</em></p>",
+        "title": "<p>A Study in Colour</p>",
+        "description": "<p><strong>Gemstone Trunk Show | 2–4 October</strong><br/><br/>For three days only, we invite you to discover <strong>A Study in Colour</strong> - an intimate Gemstone Trunk Show celebrating the beauty and individuality of natural coloured gemstones.<br/><br/>In collaboration with our trusted gemstone partner, we have curated a collection of one-of-a-kind stones, each selected for its exceptional colour, character and natural beauty.<br/><br/>From warm yellow sapphires and burnt orange zircons to ocean-blue sapphires, vivid green tourmalines and soft grey spinels, every stone carries a story from our earth to your hands.</p><p>Discover the gemstone that captures your heart, then work alongside our bespoke team to craft your piece.<br/><br/>Be led by our most-loved Eirene setting, across rings, earrings and necklaces, or begin the bespoke process and create a piece designed entirely around your chosen stone.<br/><br/>Appointments are available throughout the weekend for those wishing to secure dedicated time with a Bespoke Consultant. Walk-ins are also warmly welcomed, register your interest.</p>",
+        "feature_text": "<p><em>Mark</em> a birth month, <em>honour </em>a milestone, <em>capture</em> the memory of a loved one, or be <em>guided</em> by the stone you can't leave behind.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -85,6 +85,7 @@
         "subheading": "",
         "title": "",
         "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",

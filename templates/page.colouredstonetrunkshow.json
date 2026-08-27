@@ -27,15 +27,15 @@
         "enable_dark": false,
         "subheading": "<p><strong>JOIN US</strong></p>",
         "title": "<p>A Study in Colour</p>",
-        "description": "<p><strong>Gemstone Trunk Show | 2–4 October</strong><br/><br/>For three days only, we invite you to discover <strong>A Study in Colour</strong> - an intimate Gemstone Trunk Show celebrating the beauty and individuality of natural coloured gemstones.<br/><br/>In collaboration with our trusted gemstone partner, we have curated a collection of one-of-a-kind stones, each selected for its exceptional colour, character and natural beauty.<br/><br/>From warm yellow sapphires and burnt orange zircons to ocean-blue sapphires, vivid green tourmalines and soft grey spinels, every stone carries a story from our earth to your hands.</p><p>Discover the gemstone that captures your heart, then work alongside our bespoke team to craft your piece.<br/><br/>Be led by our most-loved Eirene setting, across rings, earrings and necklaces, or begin the bespoke process and create a piece designed entirely around your chosen stone.<br/><br/>Appointments are available throughout the weekend for those wishing to secure dedicated time with a Bespoke Consultant. Walk-ins are also warmly welcomed, register your interest.</p>",
+        "description": "<p><strong>Our First Gemstone Trunk Show | 2–4 October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience <strong>A Study in Colour</strong> — Natalie Marie Jewellery’s inaugural Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p><h3>Book a Bespoke Appointment</h3><p>Looking for something entirely your own? Enjoy dedicated one-on-one time with our Bespoke Team to explore the gemstone collection, find your stone and begin creating a piece designed around it.</p><h3>Explore the Trunk Show</h3><p>Prefer to discover the collection at your own pace? Register your interest or join us as a walk-in throughout the weekend to explore our one-of-a-kind pieces and gemstone collection.</p><p></p>",
         "feature_text": "<p><em>Mark</em> a birth month, <em>honour </em>a milestone, <em>capture</em> the memory of a loved one, or be <em>guided</em> by the stone you can't leave behind.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_metaobject": "booking-creative-mothers-event",
-        "button_2_text": "BOOK NOW",
-        "button_2_link": "",
+        "button_1_text": "BOOK NOW",
+        "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
+        "button_2_metaobject": "",
+        "button_2_text": "ATTEND PREVIEW EVENT",
+        "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
         "button_style": "primary"
       }
     },
@@ -162,13 +162,14 @@
         "media_position_mobile": "bottom",
         "media_width": "11",
         "content_position": "bottomLeft",
+        "logo_image": "shopify://shop_images/260618_NMJ_0179.jpg",
         "subheading": "<p><strong>VISIT US</strong></p>",
         "title": "",
-        "description": "<p>We are proud to offer a connected and welcoming retail experience that reflects our design philosophy and deep appreciation for craftsmanship.</p><p>Our customer service is centred around care and guidance, ensuring that every client feels supported and valued throughout their journey with us.  We pay close attention to every detail, recognising the importance of each story and purchase. </p>",
+        "description": "<h3>Explore the Trunk Show</h3><p>Prefer to discover the collection at your own pace? Register your interest or join us as a walk-in throughout the weekend to explore our one-of-a-kind pieces and gemstone collection.</p>",
         "colour_style": "dark",
         "button_1_text": "Find Us Here",
         "button_1_link": "https://www.google.com/maps/place/Natalie+Marie+Jewellery/@-33.636657,151.328951,15z/data=!4m6!3m5!1s0x6b72acd46218336f:0x5ef6c4fe82a93e6e!8m2!3d-33.6366567!4d151.3289506!16s%2Fg%2F11g7z5z7pd?hl=en",
-        "button_style": "underline"
+        "button_style": "primary"
       }
     },
     "main": {

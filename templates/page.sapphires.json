@@ -94,7 +94,7 @@
         "klaviyo_form_id": "",
         "media_position": "left",
         "media_position_mobile": "top",
-        "media_width": "6",
+        "media_width": "7",
         "content_position": "topLeftSticky",
         "subheading": "",
         "title": "<p>What is a Sapphire?</p>",
@@ -122,8 +122,8 @@
         "ul {list-style: disc;}"
       ],
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
@@ -190,8 +190,8 @@
         "ul {list-style: disc;}"
       ],
       "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",

@@ -27,14 +27,14 @@
         "enable_dark": false,
         "subheading": "<p><strong>JOIN US</strong></p>",
         "title": "<p>A Study In Colour </p>",
-        "description": "<p><strong>Our First Gemstone Trunk Show | 2–4 October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience <strong>A Study in Colour</strong> — Natalie Marie Jewellery’s inaugural Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p><h3>Book a Bespoke Appointment</h3><p>Looking for something entirely your own? Enjoy dedicated one-on-one time with our Bespoke Team to explore the gemstone collection, find your stone and begin creating a piece designed around it.</p><h3>Explore the Trunk Show</h3><p>Prefer to discover the collection at your own pace? Register your interest or join us as a walk-in throughout the weekend to explore our one-of-a-kind pieces and gemstone collection.</p><p></p><p></p><p></p>",
+        "description": "<p><strong>Our First Gemstone Trunk Show | 2–4 October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience <strong>A Study in Colour</strong> — Natalie Marie Jewellery’s inaugural Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p>",
         "feature_text": "<p><em>Mark </em>a birth month, <em>honour </em>a milestone, <em>capture </em>the memory of a loved one, or be <em>guided </em>by the stone you can't leave behind.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
-        "button_1_text": "Book Now",
+        "button_1_text": "",
         "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
         "button_2_metaobject": "",
-        "button_2_text": "Attend Preview Event",
+        "button_2_text": "",
         "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
         "button_style": "primary"
       }
@@ -149,6 +149,7 @@
       "block_order": [
         "image_VARJqh"
       ],
+      "disabled": true,
       "settings": {
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
@@ -307,6 +308,127 @@
         "button_1_link": "",
         "button_style": "underline"
       }
+    },
+    "content_list_6p33Qd": {
+      "type": "content-list",
+      "blocks": {
+        "image_ibzXL4": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>A Study In Colour </p>",
+            "title": "<h3>Join Us </h3>",
+            "description": "<p>Looking for something entirely your own? Enjoy dedicated one-on-one time with our Bespoke Team to explore the gemstone collection, find your stone and begin creating a piece designed around it.</p>",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Book A Bespoke Appointment",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "Register Interest",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "Attend The Preview",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_JA7djT": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Sub-heading</p>",
+            "title": "<p>Heading</p>",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_qF4h4Q": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "<p>Sub-heading</p>",
+            "title": "<p>Heading</p>",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ibzXL4",
+        "image_JA7djT",
+        "image_qF4h4Q"
+      ],
+      "name": "Content list",
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
     }
   },
   "order": [
@@ -318,6 +440,7 @@
     "3b27efc2-8d0f-4cf3-b0c1-6cf94ae77cf1",
     "main",
     "1679627866e0be1ce9",
-    "text_with_media_T7jfpb"
+    "text_with_media_T7jfpb",
+    "content_list_6p33Qd"
   ]
 }

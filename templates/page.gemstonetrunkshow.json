@@ -15,8 +15,8 @@
         "template--16107012980905__39f713ce-2be9-44f1-9310-85b9ec69af48-167962820178899593-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC09292.jpg",
-            "mobile_image": "shopify://shop_images/DSC09292.jpg"
+            "image": "shopify://shop_images/260618_NMJ_0179.jpg",
+            "mobile_image": "shopify://shop_images/260618_NMJ_0179.jpg"
           }
         }
       },
@@ -25,17 +25,17 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>MEET US IN Melbourne</strong></p>",
-        "title": "<p>Ceremonial Atelier </p>",
-        "description": "<p>Our Ceremonial Atelier is all about creating meaningful connections and unforgettable pieces. We’re so excited to be returning to Melbourne for our next Atelier, bringing the world of NMJ beyond our two Sydney showrooms and offering you the chance to connect with our team in person.</p><p>Join us at <strong>Hannah St Hotel </strong>on <strong>Sunday 20th September </strong>or <strong>Monday 21st September </strong>to explore our Ceremonial and Engagement collections, or begin your bespoke design journey with us.</p><p>Whether for a proposal, your wedding day, a sentimental keepsake, or a milestone worth remembering, we would be honoured to work alongside you to bring your dream piece to life.</p><p>Spaces are limited — book now to secure your appointment.</p>",
-        "feature_text": "<p>An exclusive, <em>one-on-one </em>design experience beyond our Sydney <em>showrooms.</em></p>",
+        "subheading": "<p><strong>JOIN US</strong></p>",
+        "title": "<p>A Study In Colour </p>",
+        "description": "<p><strong>Our First Gemstone Trunk Show | 2–4 October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience <strong>A Study in Colour</strong> — Natalie Marie Jewellery’s inaugural Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p><h3>Book a Bespoke Appointment</h3><p>Looking for something entirely your own? Enjoy dedicated one-on-one time with our Bespoke Team to explore the gemstone collection, find your stone and begin creating a piece designed around it.</p><h3>Explore the Trunk Show</h3><p>Prefer to discover the collection at your own pace? Register your interest or join us as a walk-in throughout the weekend to explore our one-of-a-kind pieces and gemstone collection.</p><p></p><p></p><p></p>",
+        "feature_text": "<p><em>Mark </em>a birth month, <em>honour </em>a milestone, <em>capture </em>the memory of a loved one, or be <em>guided </em>by the stone you can't leave behind.</p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
-        "button_1_text": "Book Melbourne Atelier",
+        "button_1_text": "Book Now",
         "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
-        "button_2_metaobject": "booking-byron-ceremonial-atelier",
-        "button_2_text": "BOOK NOW",
-        "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371/?locations=Del%20Rainbow%20",
+        "button_2_metaobject": "",
+        "button_2_text": "Attend Preview Event",
+        "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
         "button_style": "primary"
       }
     },
@@ -85,6 +85,7 @@
         "subheading": "",
         "title": "",
         "description": "",
+        "html": "",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",
@@ -140,8 +141,8 @@
         "image_VARJqh": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_1b078e95-c875-4434-be75-db4aab9bd63a.png",
-            "mobile_image": "shopify://shop_images/3_1b078e95-c875-4434-be75-db4aab9bd63a.png"
+            "image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png"
           }
         }
       },
@@ -152,14 +153,14 @@
         "remove_spacing_top": true,
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": true,
-        "klaviyo_form_id": "TNMTpb",
+        "klaviyo_form_id": "Us3zgu",
         "media_position": "right",
         "media_position_mobile": "bottom",
         "media_width": "7",
         "content_position": "topLeftSticky",
-        "subheading": "<p><strong>Looking to join us somewhere else?</strong></p>",
-        "title": "<p>Join The Waitlist</p>",
-        "description": "<p> Be the first to know when our Ceremonial Atelier visits your city. Sign up below and we’ll be in touch as soon as bookings become available.</p>",
+        "subheading": "<p>Your Invitation to A Study in Colour</p>",
+        "title": "<p>Register Your Interest</p>",
+        "description": "<p>Register your interest to receive event updates, first looks at the one-of-a-kind gemstones and pieces arriving for the occasion, and everything you need to know ahead of the weekend.</p>",
         "colour_style": "dark",
         "button_1_text": "",
         "button_1_link": "",

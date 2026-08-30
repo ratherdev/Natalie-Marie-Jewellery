@@ -9,294 +9,49 @@
  */
 {
   "sections": {
-    "39f713ce-2be9-44f1-9310-85b9ec69af48": {
-      "type": "three-column",
-      "blocks": {
-        "template--16107012980905__39f713ce-2be9-44f1-9310-85b9ec69af48-167962820178899593-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/260618_NMJ_0179.jpg",
-            "mobile_image": "shopify://shop_images/260618_NMJ_0179.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "template--16107012980905__39f713ce-2be9-44f1-9310-85b9ec69af48-167962820178899593-0"
-      ],
-      "settings": {
-        "enable_dark": false,
-        "subheading": "<p><strong>JOIN US</strong></p>",
-        "title": "<p>A Study In Colour | Gemstone Trunkshow</p>",
-        "description": "<p><strong> 2–4 October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience <strong>A Study in Colour</strong> — Natalie Marie Jewellery’s inaugural Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p><p><strong>Friday 2 October</strong> marks the opening of A Study in Colour with an exclusive preview event, offering the first opportunity to discover the collection.</p><p><strong>Saturday 3 & Sunday 4 October</strong>, the Trunk Show will be open for walk-ins throughout the weekend, with dedicated Bespoke Appointments also available for those looking to explore the gemstone collection one-on-one with our team.</p>",
-        "feature_text": "<p><em>Mark </em>a birth month, <em>honour </em>a milestone, <em>capture </em>the memory of a loved one, or be <em>guided </em>by the stone you can't leave behind.</p>",
-        "colour_style": "dark",
-        "button_1_metaobject": "",
-        "button_1_text": "",
-        "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
-        "button_2_metaobject": "",
-        "button_2_text": "",
-        "button_2_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
-        "button_style": "primary"
-      }
-    },
-    "bbe2eacb-e372-460d-9d09-961884ee4038": {
-      "type": "accordion",
-      "blocks": {
-        "13ab5fe6-885e-4dcb-b457-0397a5255008": {
-          "type": "accordion",
-          "repeater": "{{ page.metafields.custom.faqs.value }}",
-          "settings": {
-            "separator_title": "{{ block.repeater.separator_title | metafield_tag }}",
-            "image": "{{ block.repeater.separator_media.value }}",
-            "title": "<p>{{ block.repeater.question.value }}</p>",
-            "content": "{{ block.repeater.answer | metafield_tag }}"
-          }
-        },
-        "accordion_yDwidP": {
-          "type": "accordion",
-          "settings": {
-            "separator_title": "",
-            "title": "",
-            "content": ""
-          }
-        }
-      },
-      "block_order": [
-        "13ab5fe6-885e-4dcb-b457-0397a5255008",
-        "accordion_yDwidP"
-      ],
-      "disabled": true,
-      "settings": {
-        "tabbed_content": false,
-        "subheading": "<p><strong>About Appointments</strong></p>",
-        "title": "<p>FAQs</p>",
-        "description": "",
-        "text_position": "top",
-        "colour_style": "dark",
-        "button_1_text": "Book Byron Atelier",
-        "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371/?locations=Del%20Rainbow%20",
-        "button_2_text": "Book Byron Atelier",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_GXAe4E": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_VARJqh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png",
-            "mobile_image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_VARJqh"
-      ],
-      "disabled": true,
-      "settings": {
-        "remove_spacing_top": true,
-        "remove_spacing_bottom": true,
-        "enable_newsletter_subscribe": true,
-        "klaviyo_form_id": "Us3zgu",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "7",
-        "content_position": "topLeftSticky",
-        "subheading": "<p>Your Invitation to A Study in Colour</p>",
-        "title": "<p>Register Your Interest</p>",
-        "description": "<p>Register your interest to receive event updates, first looks at the one-of-a-kind gemstones and pieces arriving for the occasion, and everything you need to know ahead of the weekend.</p>",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_style": "underline"
-      }
-    },
     "text_with_media_dyAAyz": {
       "type": "text-with-media",
       "blocks": {
         "image_paWwkw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BtHGAse.jpg"
+            "image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png"
           }
         }
       },
       "block_order": [
         "image_paWwkw"
       ],
-      "disabled": true,
       "settings": {
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": false,
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
         "media_position": "right",
         "media_position_mobile": "bottom",
-        "media_width": "11",
-        "content_position": "bottomLeft",
-        "subheading": "<p><strong>VISIT US</strong></p>",
-        "title": "",
-        "description": "<p>We are proud to offer a connected and welcoming retail experience that reflects our design philosophy and deep appreciation for craftsmanship.</p><p>Our customer service is centred around care and guidance, ensuring that every client feels supported and valued throughout their journey with us. We pay close attention to every detail, recognising the importance of each story and purchase. </p>",
-        "colour_style": "dark",
-        "button_1_text": "Find Us Here",
-        "button_1_link": "https://www.google.com/maps/place/Natalie+Marie+Jewellery/@-33.636657,151.328951,15z/data=!4m6!3m5!1s0x6b72acd46218336f:0x5ef6c4fe82a93e6e!8m2!3d-33.6366567!4d151.3289506!16s%2Fg%2F11g7z5z7pd?hl=en",
-        "button_style": "underline"
-      }
-    },
-    "3b27efc2-8d0f-4cf3-b0c1-6cf94ae77cf1": {
-      "type": "text-with-media",
-      "blocks": {
-        "d05305f1-2b74-441f-bbc0-efe6f6353870": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Bespoke.mp4",
-            "video_url": "",
-            "video_size": "1920x1080",
-            "autoplay": true,
-            "loop": true
-          }
-        }
-      },
-      "block_order": [
-        "d05305f1-2b74-441f-bbc0-efe6f6353870"
-      ],
-      "disabled": true,
-      "settings": {
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": false,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "left",
-        "media_position_mobile": "bottom",
-        "media_width": "11",
-        "content_position": "bottomLeft",
-        "subheading": "<p><strong>VISIT US</strong></p>",
-        "title": "",
-        "description": "<p>We are proud to offer a connected and welcoming retail experience that reflects our design philosophy and deep appreciation for craftsmanship.</p><p>Our customer service is centred around care and guidance, ensuring that every client feels supported and valued throughout their journey with us.  We pay close attention to every detail, recognising the importance of each story and purchase. </p>",
-        "colour_style": "dark",
-        "button_1_text": "Find Us Here",
-        "button_1_link": "https://www.google.com/maps/place/Natalie+Marie+Jewellery/@-33.636657,151.328951,15z/data=!4m6!3m5!1s0x6b72acd46218336f:0x5ef6c4fe82a93e6e!8m2!3d-33.6366567!4d151.3289506!16s%2Fg%2F11g7z5z7pd?hl=en",
-        "button_style": "underline"
-      }
-    },
-    "main": {
-      "type": "main-contact",
-      "disabled": true,
-      "settings": {}
-    },
-    "1679627866e0be1ce9": {
-      "type": "apps",
-      "blocks": {
-        "a7c47af5-c18a-4e4c-a9b7-8e894211a547": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "a7c47af5-c18a-4e4c-a9b7-8e894211a547"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "subheading": "<p><strong>Instagram</strong></p>",
-        "title": "<p>Shop our <em>feed</em></p>",
-        "description": "",
+        "media_width": "7",
+        "content_position": "middleLeft",
+        "subheading": "<p><strong>JOIN US</strong></p>",
+        "title": "<p>A Study In Colour</p>",
+        "description": "<p><strong>2-4th October | Paddington Showroom</strong></p><p>For the first time, we invite you to experience A Study in Colour, our first  Gemstone Trunk Show.</p><p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p><p>From luminous yellow sapphires and Ceylon sapphires to vivid blue topaz and rich pink garnets, each gemstone has been selected for its individual colour, character and natural beauty.</p><p><strong>Walk-ins are welcomed, or book an appointment</strong> with a Bespoke Consultant to secure dedicated one-on-one time throughout the weekend.</p>",
         "colour_style": "dark",
         "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "text_with_media_T7jfpb": {
-      "type": "text-with-media",
-      "blocks": {
-        "image_RmtHpy": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "image_RmtHpy"
-      ],
-      "settings": {
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": false,
-        "enable_newsletter_subscribe": false,
-        "klaviyo_form_id": "",
-        "media_position": "right",
-        "media_position_mobile": "bottom",
-        "media_width": "11",
-        "content_position": "bottomLeft",
-        "subheading": "<p>Slide title</p>",
-        "title": "<p>Tell your story</p>",
-        "description": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
+        "button_1_link": "https://www.google.com/maps/place/Natalie+Marie+Jewellery/@-33.636657,151.328951,15z/data=!4m6!3m5!1s0x6b72acd46218336f:0x5ef6c4fe82a93e6e!8m2!3d-33.6366567!4d151.3289506!16s%2Fg%2F11g7z5z7pd?hl=en",
         "button_style": "underline"
       }
     },
     "content_list_6p33Qd": {
       "type": "content-list",
       "blocks": {
-        "image_yPBQrT": {
-          "type": "image",
-          "settings": {
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "middleLeft",
-            "subheading": "<p>Join Us </p>",
-            "title": "<p>Looking to create something bespoke?</p>",
-            "description": "<p>Book an appointment for dedicated one-on-one time with our Bespoke team. Explore the gemstone collection together, find your stone and be guided through the process of bringing your dream piece to life.</p>",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "Book A Bespoke Appointment",
-            "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "primary",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
         "image_W33wK7": {
           "type": "image",
           "settings": {
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "subheading": "<p>Join Us </p>",
-            "title": "<p>Prefer to simply explore?</p>",
-            "description": "<p>Register your interest or join us as a walk-in throughout the weekend to discover the collection at your own pace.</p>",
+            "subheading": "<p>FRIDAY 2ND OCTOBER</p>",
+            "title": "<p>Be The First</p>",
+            "description": "<p>Join us for an intimate first look. Enjoy complimentary champagne as you meet our gemstone supplier and bespoke team, discover a curated selection of natural gemstones, and be among the first to explore a limited release of Eirene coloured gemstone designs, handcrafted especially for the occasion.</p><p>Complimentary to attend. Register to join us.</p>",
             "description_mobile": "",
             "colour_style": "dark",
             "button_1_metaobject": "",
@@ -319,19 +74,50 @@
             "metaobject_devices": ""
           }
         },
-        "image_4HK94g": {
+        "image_yPBQrT": {
           "type": "image",
           "settings": {
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "middleLeft",
-            "subheading": "<p>Join Us </p>",
-            "title": "<p>Stay Up to Date</p>",
-            "description": "<p>Keep up to date with <strong>A Study in Colour</strong> and receive the latest event details, collection previews and important updates ahead of our first Gemstone Trunk Show.</p>",
+            "subheading": "<p>SATURDAY 3RD & SUNDAY 4TH OCTOBER</p>",
+            "title": "<p>Begin Your Bespoke Journey</p>",
+            "description": "<p>Book an appointment for dedicated one-on-one time with our Bespoke team. Explore the gemstone collection together, find the stone that speaks to you, and be guided through bringing your piece to life.</p><p>Be led by our most-loved Eirene setting across rings, earrings and necklaces, or create something entirely bespoke, designed around your chosen stone.</p>",
             "description_mobile": "",
             "colour_style": "dark",
             "button_1_metaobject": "",
-            "button_1_text": "Keep Me Updated",
+            "button_1_text": "Book Bespoke Appointment",
+            "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "primary",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "image_mtKzTf": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "middleLeft",
+            "subheading": "<p>SIGN UP</p>",
+            "title": "<p>Keep Up To Date</p>",
+            "description": "<p>Keep up to date with 'A Study in Colour' and be among the first to discover what’s to come. Receive the latest event details, previews of our one-of-a-kind gemstones and exclusive designs, and important updates ahead of our first Gemstone Trunk Show.</p>",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Subscribe",
             "button_1_link": "https://www.nataliemariejewellery.com/pages/preference",
             "button_2_metaobject": "",
             "button_2_text": "",
@@ -352,9 +138,9 @@
         }
       },
       "block_order": [
-        "image_yPBQrT",
         "image_W33wK7",
-        "image_4HK94g"
+        "image_yPBQrT",
+        "image_mtKzTf"
       ],
       "name": "Content list",
       "settings": {
@@ -372,17 +158,16 @@
         "button_2_link": "",
         "button_style": "underline"
       }
+    },
+    "main": {
+      "type": "main-contact",
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
-    "39f713ce-2be9-44f1-9310-85b9ec69af48",
-    "bbe2eacb-e372-460d-9d09-961884ee4038",
-    "text_with_media_GXAe4E",
     "text_with_media_dyAAyz",
-    "3b27efc2-8d0f-4cf3-b0c1-6cf94ae77cf1",
-    "main",
-    "1679627866e0be1ce9",
-    "text_with_media_T7jfpb",
-    "content_list_6p33Qd"
+    "content_list_6p33Qd",
+    "main"
   ]
 }

@@ -15,7 +15,7 @@
         "image_paWwkw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_27_August_2026_at_13.23.42.png"
+            "image": "shopify://shop_images/WEB_UPLOAD.png"
           }
         }
       },
@@ -27,7 +27,7 @@
         "remove_spacing_bottom": true,
         "enable_newsletter_subscribe": false,
         "klaviyo_form_id": "",
-        "media_position": "right",
+        "media_position": "left",
         "media_position_mobile": "bottom",
         "media_width": "7",
         "content_position": "middleLeft",

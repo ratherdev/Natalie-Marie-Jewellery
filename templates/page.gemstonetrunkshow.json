@@ -54,7 +54,7 @@
             "description": "<p>Join us for an intimate first look. Enjoy complimentary champagne as you meet our gemstone supplier and bespoke team, discover a curated selection of natural gemstones, and be among the first to explore a limited release of Eirene coloured gemstone designs, handcrafted especially for the occasion.</p><p>Complimentary to attend. Register to join us.</p>",
             "description_mobile": "",
             "colour_style": "dark",
-            "button_1_metaobject": "",
+            "button_1_metaobject": "gemstone-trunk-show",
             "button_1_text": "Attend Preview Event",
             "button_1_link": "https://nataliemariejewellery.as.me/schedule/62dbb371",
             "button_2_metaobject": "",

@@ -71,17 +71,17 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19.png",
-            "mobile_image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19.png",
+            "image": "shopify://shop_images/Coloured_stone_image_for_web.png",
+            "mobile_image": "shopify://shop_images/Coloured_stone_image_for_web.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>Distinctly yours</p>",
-            "title": "<p><em>The Art of the Solitaire</em></p>",
-            "description": "<p>Considered proportions. Distinctive details. One extraordinary stone at the centre of it all. Discover solitaire engagement rings handcrafted to celebrate the beauty and individuality of your chosen stone.</p><p></p>",
+            "subheading": "<p>A Study In Colour</p>",
+            "title": "<p><em>Gemstone Trunk Show</em></p>",
+            "description": "<p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p>",
             "colour_style": "light",
-            "button_1_text": "Explore Now",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/solitaire-engagement?filter.p.m.custom.filter_metal=Yellow%20Gold",
+            "button_1_text": "Discover The Event",
+            "button_1_link": "https://www.nataliemariejewellery.com/pages/gemstone-trunkshow",
             "button_style": "underline"
           }
         },

@@ -54,8 +54,8 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19-2.png",
-            "mobile_image": "shopify://shop_images/Untitled_-_26_August_2026_at_14.54.19-2.png",
+            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-8.png",
+            "mobile_image": "shopify://shop_images/Untitled-13August2026at10.36.41-8.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
@@ -71,8 +71,8 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Coloured_stone_image_for_web.png",
-            "mobile_image": "shopify://shop_images/Coloured_stone_image_for_web.png",
+            "image": "shopify://shop_images/260618_NMJ_0179.jpg",
+            "mobile_image": "shopify://shop_images/260618_NMJ_0179.jpg",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "laboratory-grown-diamond-engagement-ring",
+            "collection": "birthstone-collection-nmj",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>thoughtfully crafted</strong></p>",
-        "title": "<p><em>Modern Brilliance</em></p>",
-        "description": "<p>From classic solitaire designs, trilogy rings, or <strong>unique cluster settings. </strong>Designed for everyday wear and a lifetime of meaning</p>",
+        "subheading": "<p> Woven into a piece you’ll wear forever</p>",
+        "title": "<p><em>A Story Held Close</em></p>",
+        "description": "<p>Our birthstone collection is designed to honour the moments, people, and memories that shape you - subtle, personal, and deeply considered.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore Now",
-        "button_1_link": "https://www.nataliemariejewellery.com/collections/laboratory-grown-diamond-engagement-ring?filter.p.m.custom.filter_metal=Yellow%20Gold",
+        "button_1_link": "https://www.nataliemariejewellery.com/collections/birthstone-collection-nmj",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "create-your-story",
+            "collection": "bangles-1",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -575,13 +575,13 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p>Make It Your Own</p>",
-        "title": "<p><em>Curate Your Personalised Necklace</em></p>",
-        "description": "<p>Discover our collection of chains and meaningful charms, thoughtfully designed to be curated into a piece that is entirely your own. </p>",
+        "subheading": "<p>Bracelets</p>",
+        "title": "<p><em>Bangles</em></p>",
+        "description": "<p>Looking to bring a subtle touch of luxury to your everyday? Browse our edit of handcrafted bangles.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/create-your-story",
+        "button_1_link": "shopify://collections/bangles-1",
         "button_2_text": "",
         "button_2_link": "shopify://collections/sana",
         "button_style": "underline"

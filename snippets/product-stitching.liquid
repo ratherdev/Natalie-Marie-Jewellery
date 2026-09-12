@@ -419,7 +419,7 @@
 				{%- endif -%}
 				
 				{%- if stitch_stones and currentStone != blank  -%}
-					{%- if currentMetal.system.id != validationStone.system.id -%}
+					{%- if currentStone.system.id != validationStone.system.id -%}
 						{% continue %}
 					{%- endif -%}
 				{%- endif -%}

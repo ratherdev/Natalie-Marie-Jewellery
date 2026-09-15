@@ -54,17 +54,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/11_6c85d92f-0278-46d5-acb8-27b48610caa2.png",
-            "mobile_image": "shopify://shop_images/11_47c2a45d-02b8-4484-8746-7c2a7885dbdb.png",
+            "image": "shopify://shop_images/Copy_of_HEADER_2.png",
+            "mobile_image": "shopify://shop_images/Copy_of_HEADER_2.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>Make It Your Own</p>",
-            "title": "<p><em>Curate Your Personalised Necklace</em></p>",
-            "description": "<p>Discover our collection of chains and meaningful charms, thoughtfully designed to be curated into a piece that is entirely your own. Begin with the piece that speaks to you, then bring together a combination that reflects your story.</p>",
+            "subheading": "<p>Farewell to Selected Sashi & Sana Styles</p>",
+            "title": "<p><em>30% Off</em></p>",
+            "description": "<p>As we make room for the season ahead, selected Sashi and Sana styles are now <strong>30% off</strong>—<strong>a final opportunity to</strong> discover these much-loved designs before they leave us. <a href=\"https://www.nataliemariejewellery.com/pages/terms-conditions\" title=\"https://www.nataliemariejewellery.com/pages/terms-conditions\"><em>T&C's Apply.</em> </a></p>",
             "colour_style": "light",
-            "button_1_text": "Shop The Collection",
-            "button_1_link": "shopify://collections/create-your-story",
+            "button_1_text": "Shop The Offer",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/sashi-sana-promo",
             "button_style": "underline"
           }
         },

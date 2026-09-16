@@ -46,7 +46,7 @@
         "image_WpFtw6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014620007.jpg"
+            "image": "shopify://shop_images/IMG_6977.heic"
           }
         }
       },
@@ -140,7 +140,7 @@
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/F0A9134.jpg",
+            "image": "shopify://shop_images/30_30bcea17-fcd7-4a0e-ada9-1a9fd97a50ee.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -172,7 +172,7 @@
         "template--16177341137065__fe4a59da-74f2-4522-93d1-709dd4b43c45-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014610009.jpg",
+            "image": "shopify://shop_images/28_27f9aec6-fe67-489f-8fd8-d86985c85916.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -282,7 +282,7 @@
         "template--16177341137065__6cfc4a7c-d718-45d7-bad2-92ab0cb6adea-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014600014.jpg"
+            "image": "shopify://shop_images/Journal_Imagery_2.png"
           }
         }
       },
@@ -367,7 +367,7 @@
         "image_rdgQcV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014620032.jpg",
+            "image": "shopify://shop_images/33_bc65dc67-6e63-4261-a43b-065023cc5684.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -399,7 +399,7 @@
         "image_LacbEU": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/F0A6881.jpg",
+            "image": "shopify://shop_images/34.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -509,7 +509,7 @@
         "image_WManzp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/000014600005.jpg",
+            "image": "shopify://shop_images/35_3002c912-e3d9-4677-b369-ef89154871a3.png",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",

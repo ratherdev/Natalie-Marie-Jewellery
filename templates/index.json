@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "birthstone-collection-nmj",
+            "collection": "vintage-inspired-engagement-wedding-rings",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,13 +139,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p> Woven into a piece you’ll wear forever</p>",
-        "title": "<p><em>A Story Held Close</em></p>",
-        "description": "<p>Our birthstone collection is designed to honour the moments, people, and memories that shape you - subtle, personal, and deeply considered.</p>",
+        "subheading": "<p>Engagement & Wedding Rings</p>",
+        "title": "<p><em>Vintage Inspired</em></p>",
+        "description": "<p>Discover intricate millgrain edges, hand-engraved details, considered stone settings and sculptural forms, each a nod to eras past. These details bring together vintage design sensibilities with thoughtful, modern workmanship.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Explore Now",
-        "button_1_link": "https://www.nataliemariejewellery.com/collections/birthstone-collection-nmj",
+        "button_1_text": "Discover The Range",
+        "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

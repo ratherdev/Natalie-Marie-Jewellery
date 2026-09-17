@@ -32,6 +32,24 @@
             "button_style": "underline"
           }
         },
+        "56bb69ec-fd48-426b-8115-26a4ed674f40": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Nat Ring Stacks Digi Ad (1080 x 1080 px) (Instagram Post (4_5)).mp4",
+            "fifty_fifty": true,
+            "autoplay": true,
+            "loop": true,
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "subheading": "<p>Vintage Inspired </p>",
+            "title": "<p><em>Old World Romance</em></p>",
+            "description": "<p>A communion of old and new, our vintage-inspired ceremonial pieces draw on the beauty and nostalgia of jewellery passed down through generations, reimagined for a love entirely your own.</p>",
+            "colour_style": "light",
+            "button_1_text": "Explore The Range",
+            "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
+            "button_style": "underline"
+          }
+        },
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
@@ -46,24 +64,6 @@
             "colour_style": "light",
             "button_1_text": "Shop The Offer",
             "button_1_link": "https://www.nataliemariejewellery.com/collections/sashi-sana-promo",
-            "button_style": "underline"
-          }
-        },
-        "56bb69ec-fd48-426b-8115-26a4ed674f40": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Nat Ring Stacks Digi Ad (1080 x 1080 px) (Instagram Post (4_5)).mp4",
-            "fifty_fifty": true,
-            "autoplay": true,
-            "loop": true,
-            "apply_overlay": false,
-            "content_position": "bottomRight",
-            "subheading": "<p>Vintage Inspired </p>",
-            "title": "<p><em>Old World Romance</em></p>",
-            "description": "<p>A communion of old and new, our vintage-inspired ceremonial pieces draw on the beauty and nostalgia of jewellery passed down through generations, reimagined for a love entirely your own.</p>",
-            "colour_style": "light",
-            "button_1_text": "Explore The Range",
-            "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
             "button_style": "underline"
           }
         },
@@ -106,8 +106,8 @@
       },
       "block_order": [
         "video_qWnByf",
-        "177ec424-4f77-417c-abfd-95b841c1986f",
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
+        "177ec424-4f77-417c-abfd-95b841c1986f",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],

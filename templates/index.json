@@ -32,6 +32,23 @@
             "button_style": "underline"
           }
         },
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/251103_NMJ_0646.jpg",
+            "mobile_image": "shopify://shop_images/251103_NMJ_0646.jpg",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "bottomRight",
+            "subheading": "<p>Farewell to Selected Sashi & Sana Styles</p>",
+            "title": "<p><em>30% Off</em></p>",
+            "description": "<p>As we make room for the season ahead, selected Sashi and Sana styles are now <strong>30% off</strong>—<strong>a final opportunity to</strong> discover these much-loved designs before they leave us. <a href=\"https://www.nataliemariejewellery.com/pages/terms-conditions\" title=\"https://www.nataliemariejewellery.com/pages/terms-conditions\"><em>T&C's Apply.</em> </a></p>",
+            "colour_style": "light",
+            "button_1_text": "Shop The Offer",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/sashi-sana-promo",
+            "button_style": "underline"
+          }
+        },
         "56bb69ec-fd48-426b-8115-26a4ed674f40": {
           "type": "video",
           "settings": {
@@ -47,23 +64,6 @@
             "colour_style": "light",
             "button_1_text": "Explore The Range",
             "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
-            "button_style": "underline"
-          }
-        },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0646.jpg",
-            "mobile_image": "shopify://shop_images/251103_NMJ_0646.jpg",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p>Farewell to Selected Sashi & Sana Styles</p>",
-            "title": "<p><em>30% Off</em></p>",
-            "description": "<p>As we make room for the season ahead, selected Sashi and Sana styles are now <strong>30% off</strong>—<strong>a final opportunity to</strong> discover these much-loved designs before they leave us. <a href=\"https://www.nataliemariejewellery.com/pages/terms-conditions\" title=\"https://www.nataliemariejewellery.com/pages/terms-conditions\"><em>T&C's Apply.</em> </a></p>",
-            "colour_style": "light",
-            "button_1_text": "Shop The Offer",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/sashi-sana-promo",
             "button_style": "underline"
           }
         },
@@ -106,8 +106,8 @@
       },
       "block_order": [
         "video_qWnByf",
-        "56bb69ec-fd48-426b-8115-26a4ed674f40",
         "177ec424-4f77-417c-abfd-95b841c1986f",
+        "56bb69ec-fd48-426b-8115-26a4ed674f40",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],

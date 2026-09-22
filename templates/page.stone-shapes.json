@@ -24,8 +24,8 @@
         "image_wNGbK6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/stone-shap.jpg",
-            "mobile_image": "shopify://shop_images/stone-shap.jpg"
+            "image": "shopify://shop_images/Main_Image_For_Page.jpg",
+            "mobile_image": "shopify://shop_images/Main_Image_For_Page.jpg"
           }
         }
       },
@@ -79,8 +79,8 @@
         "template--16125431546025__65d9d35e-195c-4de2-a034-35b6244ae4aa-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rumi_Charms_1.png",
-            "mobile_image": "shopify://shop_images/Rumi_Charms_1.png"
+            "image": "shopify://shop_images/251103_NMJ_0232_1.jpg",
+            "mobile_image": "shopify://shop_images/251103_NMJ_0232_1.jpg"
           }
         }
       },
@@ -123,7 +123,7 @@
         "template--16125431546025__588aa754-4a16-43e7-ad50-eed5619cbfca-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rumi_Charms_2.png"
+            "image": "shopify://shop_images/250820_NMJ11240_1.jpg"
           }
         }
       },
@@ -166,8 +166,8 @@
         "template--16125431546025__b0938d04-cc12-4f0f-b9a6-1a30670afae3-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/240619_NatalieMarieJewellery_Content59720-1400-x-1750px.jpg",
-            "mobile_image": "shopify://shop_images/240619_NatalieMarieJewellery_Content59720-1400-x-1750px.jpg"
+            "image": "shopify://shop_images/250820_NMJ11217_1.jpg",
+            "mobile_image": "shopify://shop_images/250820_NMJ11217_1.jpg"
           }
         }
       },
@@ -201,8 +201,8 @@
         "template--16125431546025__5745a96a-89f1-43ff-b4e6-2d5a49f7d900-1682331895cf99bbfc-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png",
-            "mobile_image": "shopify://shop_images/Untitled-13August2026at10.36.41-10.png"
+            "image": "shopify://shop_images/VintageElongatedCushion-LabGrown-2caratFront.jpg",
+            "mobile_image": "shopify://shop_images/VintageElongatedCushion-LabGrown-2caratFront.jpg"
           }
         }
       },
@@ -267,7 +267,7 @@
         "image_BPP4HK": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_-_29_July_2026_at_15.13.35.png",
+            "image": "shopify://shop_images/260618_NMJ_0197.jpg",
             "apply_overlay": false,
             "devices": "mobile_desktop",
             "content_position": "underLeft",
@@ -359,7 +359,7 @@
         "image_pLUtmg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/VintageElongatedCushion-LabGrown-2caratFront.jpg"
+            "image": "shopify://shop_images/EDM_Header_-_Everyday_Signatures_2.png"
           }
         }
       },

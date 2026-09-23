@@ -1,24 +1,20 @@
 {%- if section.settings.tabbed_content -%}
 	{%- assign tabbedContentHeader = '' -%}
 	{%- assign tabbed_content_index = 0 -%}
-	{%- assign tab_open = false -%}
+	{%- assign newTabbedContent = false -%}
 	{{ 'component-tabbed-content.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
 {%- capture accordion_content -%}
 	{%- for block in section.blocks -%}
-
+	
 		{%- assign separator_title = block.settings.separator_title | strip_html -%}
-
+		
 		{%- if separator_title != blank -%}
-
-			{%- if section.settings.tabbed_content and tab_open -%}
-				</div>
-				{%- assign tab_open = false -%}
-			{%- endif -%}
-
+			
 			{%- assign tabbed_content_index = tabbed_content_index | plus: 1 -%}
-
+			{%- assign newTabbedContent = true -%}
+			
 			{%- capture accordionHeader -%}
 	            <div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6 {% if section.settings.tabbed_content %}TabbedHeaderItem{% endif %} {% if tabbed_content_index == 1 %}is-active{% endif %}" {% if section.settings.tabbed_content %}data-action="toggle-content" data-toggle-id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}"{% endif %}>
 					{{ block.settings.separator_title }}
@@ -59,17 +55,20 @@
 		{%- else -%}
 			{%- assign title = block.settings.title | strip_html -%}
 			{%- assign content = block.settings.content | strip_html -%}
-
-			{%- if section.settings.tabbed_content and tab_open == false -%}
-				{%- if tabbed_content_index == 0 -%}
-					{%- assign tabbed_content_index = 1 -%}
+			
+			{%- if section.settings.tabbed_content -%}
+				{%- if newTabbedContent and tabbed_content_index > 1 or forloop.last -%}
+					</div>
 				{%- endif -%}
-				<div id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}" class="TabbedContentItem {% if tabbed_content_index == 1 %}is-active{% endif %}">
-					{{ accordionHeaderImage }}
-					{%- assign accordionHeaderImage = '' -%}
-					{%- assign tab_open = true -%}
+			
+				{%- if newTabbedContent -%}
+					<div id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}" class="TabbedContentItem {% if tabbed_content_index == 1 %}is-active{% endif %}">
+						{{ accordionHeaderImage }}
+						{%- assign accordionHeaderImage = '' -%}
+						{%- assign newTabbedContent = false -%}
+				{%- endif -%}
 			{%- endif -%}
-
+			
 			{%- if title != blank and content != blank -%}
 	            <div class="Collapsible" {{ block.shopify_attributes }}>
 	              <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
@@ -85,11 +84,7 @@
 	              </div>
 	            </div>
 			{%- endif -%}
-		{%- endif -%}
-
-		{%- if forloop.last and section.settings.tabbed_content and tab_open -%}
-			</div>
-		{%- endif -%}
+		{%- endif -%}	
 	{%- endfor -%}
 {%- endcapture -%}
 

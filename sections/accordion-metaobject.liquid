@@ -6,9 +6,10 @@
 {%- endif -%}
 
 {%- assign faq_list = page.metafields.custom.faqs.value -%}
+<!-- DEBUG faq_list.size = {{ faq_list.size }} -->
 
 {%- capture accordion_content -%}
-	{%- for entry in faq_list -%}
+	{%- for entry in faq_list limit: 250 -%}
 
 		{%- capture separator_title_html -%}<p>{{ entry.separator_title | metafield_tag }}</p>{%- endcapture -%}
 		{%- assign separator_title = separator_title_html | strip_html | strip -%}
@@ -174,7 +175,7 @@
 
 {% schema %}
 {
-  "name": "Accordion (FAQs meta)",
+  "name": "Accordion (FAQs metaobj)",
   "settings": [
     {
       "type": "paragraph",

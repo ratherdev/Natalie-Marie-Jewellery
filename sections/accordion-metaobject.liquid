@@ -1,118 +1,3 @@
-{%- if section.settings.tabbed_content -%}
-	{%- assign tabbedContentHeader = '' -%}
-	{%- assign tabbed_content_index = 0 -%}
-	{%- assign tab_open = false -%}
-	{{ 'component-tabbed-content.css' | asset_url | stylesheet_tag }}
-{%- endif -%}
-
-{%- assign faq_list = page.metafields.custom.faqs.value -%}
-{%- assign faq_total = faq_list.size -%}
-{%- assign chunk_size = 50 -%}
-{%- assign chunk_count = faq_total | divided_by: chunk_size | plus: 1 -%}
-{%- assign global_index = 0 -%}
-<!-- DEBUG faq_list.size = {{ faq_total }} | chunks = {{ chunk_count }} -->
-
-{%- capture accordion_content -%}
-	{%- for chunk in (1..chunk_count) -%}
-	{%- assign chunk_offset = forloop.index0 | times: chunk_size -%}
-	{%- for entry in faq_list limit: chunk_size offset: chunk_offset -%}
-		{%- assign global_index = global_index | plus: 1 -%}
-		{%- assign is_last_entry = false -%}
-		{%- if global_index == faq_total -%}
-			{%- assign is_last_entry = true -%}
-		{%- endif -%}
-
-		{%- capture separator_title_html -%}<p>{{ entry.separator_title | metafield_tag }}</p>{%- endcapture -%}
-		{%- assign separator_title = separator_title_html | strip_html | strip -%}
-
-		{%- if separator_title != blank -%}
-
-			{%- if section.settings.tabbed_content and tab_open -%}
-				</div>
-				{%- assign tab_open = false -%}
-			{%- endif -%}
-
-			{%- assign tabbed_content_index = tabbed_content_index | plus: 1 -%}
-			{%- assign entry_id = entry.system.id | default: global_index -%}
-
-			{%- capture accordionHeader -%}
-	            <div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6 {% if section.settings.tabbed_content %}TabbedHeaderItem{% endif %} {% if tabbed_content_index == 1 %}is-active{% endif %}" data-entry-id="{{ entry_id }}" {% if section.settings.tabbed_content %}data-action="toggle-content" data-toggle-id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}"{% endif %}>
-					<span class="Anchor" id="block-{{ entry_id }}"></span>
-					{{ separator_title_html }}
-
-					{%- capture accordionHeaderImage -%}
-			  			{%- if entry.separator_media.value != blank -%}
-			  				{%- assign media = entry.separator_media.value -%}
-			  				{%- assign max_width = media.width -%}
-			  		        {%- assign media_aspect_ratio = media.aspect_ratio -%}
-
-			  		        <div class="AspectRatio AspectRatio--withFallback Accordion__ImageWrapper" style="max-width: {{ max_width }}px; padding-bottom: {{ 100.0 | divided_by: media_aspect_ratio }}%; --aspect-ratio: {{ media_aspect_ratio }}">
-			  		          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: media -%}{%- endcapture -%}
-			  		          {%- assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-
-			  		          <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ media.alt | escape }}">
-			  		          <span class="Image__Loader"></span>
-
-			  		          <noscript>
-			  		            <img src="{{ media | img_url: '600x' }}" alt="{{ media.alt | escape }}">
-			  		          </noscript>
-			  		        </div>
-			  			{%- endif -%}
-					{%- endcapture -%}
-
-					{%- unless section.settings.tabbed_content -%}
-						{{ accordionHeaderImage }}
-					{%- endunless -%}
-
-	            </div>
-			{%- endcapture -%}
-
-			{%- if section.settings.tabbed_content -%}
-				{%- assign tabbedContentHeader = tabbedContentHeader | append: accordionHeader -%}
-			{%- else -%}
-				{{ accordionHeader }}
-			{%- endif -%}
-
-		{%- else -%}
-			{%- capture title_html -%}<p>{{ entry.question.value }}</p>{%- endcapture -%}
-			{%- assign title = title_html | strip_html | strip -%}
-			{%- capture content_html -%}{{ entry.answer | metafield_tag }}{%- endcapture -%}
-			{%- assign content = content_html | strip_html | strip -%}
-
-			{%- if section.settings.tabbed_content and tab_open == false -%}
-				{%- if tabbed_content_index == 0 -%}
-					{%- assign tabbed_content_index = 1 -%}
-				{%- endif -%}
-				<div id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}" class="TabbedContentItem {% if tabbed_content_index == 1 %}is-active{% endif %}">
-					{{ accordionHeaderImage }}
-					{%- assign accordionHeaderImage = '' -%}
-					{%- assign tab_open = true -%}
-			{%- endif -%}
-
-			{%- if title != blank and content != blank -%}
-	            <div class="Collapsible" data-entry-id="{{ entry.system.id | default: global_index }}">
-	              <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
-	                {{ title_html }} <span class="Collapsible__Plus"></span>
-	              </button>
-
-	              <div class="Collapsible__Inner">
-	                <div class="Collapsible__Content Collapsible__Content--removeInset">
-	                  <div class="Rte">
-	                    {{ content_html }}
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-			{%- endif -%}
-		{%- endif -%}
-
-		{%- if is_last_entry and section.settings.tabbed_content and tab_open -%}
-			</div>
-		{%- endif -%}
-	{%- endfor -%}
-	{%- endfor -%}
-{%- endcapture -%}
-
 {%- capture text_content -%}
 	{%- if section.settings.subheading != blank -%}
 		<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
@@ -127,87 +12,1402 @@
 			{{ section.settings.description }}
 		</div>
 	{%- endif -%}
-
-	{%- if section.settings.button_1_text != blank and section.settings.button_2_text != blank -%}
-		{%- assign has_two_buttons = true -%}
-	{%- else -%}
-		{%- assign has_two_buttons = false -%}
-	{%- endif -%}
-
-	{%- if section.settings.button_1_text != blank or section.settings.button_2_text != blank -%}
-		<div class="SectionHeader__ButtonWrapper">
-			<div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
-				{%- if section.settings.button_1_text != blank -%}
-					<a href="{{ section.settings.button_1_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_1_text | escape }}</a>
-				{%- endif -%}
-
-				{%- if section.settings.button_2_text != blank -%}
-					<a href="{{ section.settings.button_2_link }}" class="ButtonGroup__Item {% if section.settings.button_style == 'underline' %}Link Link--underline{% else %}Button Button--{{ section.settings.button_style }}{% endif %}">{{ section.settings.button_2_text | escape }}</a>
-				{%- endif -%}
-			</div>
-		</div>
-	{%- endif -%}
 {%- endcapture -%}
 
-{%- if accordion_content != blank -%}
-	{{ 'section-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'section-accordion.css' | asset_url | stylesheet_tag }}
 
-	{%- capture section_settings -%}
-	{
-	  "tabbedContent": {% if section.settings.tabbed_content %}true{% else %}false{% endif %}
-	}
-	{%- endcapture -%}
+<section class="Section Section--spacingExtraLarge" data-section-type="accordion" data-section-id="{{ section.id }}">
+	<div class="Container">
+		<div class="Grid">
+			<div class="Grid__Cell 3/16--lap-and-up"></div>
+			<div class="Grid__Cell 10/16--lap-and-up">
+				{{ text_content }}
 
-	<section class="Section Section--spacingExtraLarge" data-section-type="accordion" data-section-id="{{ section.id }}" data-section-settings='{{ section_settings }}'>
-		<div class="Container">
-			<div class="Grid">
-				<div class="Grid__Cell 3/16--lap-and-up"></div>
-				<div class="Grid__Cell 10/16--lap-and-up">
-					{{ text_content }}
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-1"></span>
+		<p>Our Jewellery</p>
+	</div>
 
-					{%- if section.settings.tabbed_content -%}
-						{%- if tabbedContentHeader != blank -%}
-							<div class="TabbedHeader">
-								{{ tabbedContentHeader }}
-							</div>
-						{%- endif -%}
-						<div class="TabbedContent">
-							{{ accordion_content }}
-						</div>
-					{%- else -%}
-						{{ accordion_content }}
-					{%- endif -%}
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Where and how is your jewellery made?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>The majority of NMJ pieces are handcrafted to order by our skilled team of jewellers and stone setters.</p>
+	                <p>Our Avalon studio sits at the heart of our production process, where each order is carefully reviewed, allocated and then brought to life by jewellers specialising in different areas of the craft. With the majority of our pieces handmade in Australia, we also work with a small network of trusted offshore production partners to produce select components, which are then set and personalised by hand by our in house team of jewellers. Find out more about our production processes here.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-				</div>
-				<div class="Grid__Cell 3/16--lap-and-up"></div>
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What materials and precious metals do you use?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We work with enduring precious metals and carefully selected natural and laboratory-grown stones, chosen for their quality, beauty and suitability for each design.</p>
+	                <p>Our precious metal offering includes sterling silver, 9ct, 14ct and 18ct gold in yellow, rose and white tones. We use a combination of newly mined and recycled metal, and prioritise using Australian mined gold where possible.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is the difference between 9ct, 14ct and 18ct gold?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>The carat measure of gold refers to the proportion of fine gold contained within the metal.</p>
+	                <p>9ct gold contains 37.5% fine gold</p>
+	                <p>14ct gold contains 58.5% fine gold</p>
+	                <p>18ct gold contains 75% fine gold.</p>
+	                <p>Fine gold is naturally soft, so it is combined with other metals to create an alloy that is suitable for everyday jewellery. The balance of gold and alloying metals influences the piece’s colour, strength, durability and price. We follow industry standards across our offering, with engagement and wedding jewellery crafted largely in 18ct, and everyday fine jewellery crafted largely in 9ct.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is the difference between yellow, rose and white gold?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yellow, rose and white gold all begin with fine gold. Their individual tones are created by carefully combining the gold with different alloying metals.</p>
+	                <p>Yellow gold retains the warm, traditional character most closely associated with gold. Rose gold has a soft blush tone create by a higher proportion of copper in the alloy. White gold combines gold with pale-tones metals and is finished with rhodium plating to create its bright white appearance. All alloys wear equally, depending on the carat measure.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Is your jewellery nickel-free?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our jewellery is crafted in accordance with European standards governing nickel release, which set strict limits for jewellery intended to be worn against the skin.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Are your diamonds and gemstones responsibly sourced?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Responsible sourcing is an ongoing commitment at NMJ and an important consideration in every supplier relationship we establish.</p>
+	                <p>Our suppliers are assessed through a detailed due diligence framework covering human rights, environmental responsibility, legality, traceability and responsible business practices. Suppliers are asked to provide supporting policies and evidence, and those unwilling to engage with our requirements are removed from our supply chain. Additionally, all of our diamond suppliers adhere to the Kimberly Process.</p>
+	                <p>Where we make a specific claim about a gemstone’s origin, that claim is supported by written evidence of provenance. We also prioritise locally sourced stones where possible, including Australian sapphires from Central Queensland.</p>
+	                <p>We recognise that jewellery supply chains are complex and that responsible sourcing is not a fixed destination. We remain committed to continually improving transparency, traceability and accountability throughout our supply network.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Are your diamonds certified?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Unless otherwise stated, all natural and laboratory-grown diamonds over 0.30ct are independently certified by a recognised gemmological laboratory. Each certified diamond is accompanied by a detailed certificate outlining its individual characteristics and quality.</p>
+	                <p>All certified diamonds also feature a unique identification number laser-inscribed on the girdle, corresponding with the information provided on the certificate.</p>
+	                <p>Smaller accent diamonds are not typically certified individually. Where certification applies, the certificate will be provided with your finished piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is the difference between natural and laboratory-grown diamonds?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Natural diamonds are formed deep within the earth over billions of years, while laboratory-grown diamonds are created in a controlled environment using technology that replicates the conditions under which natural diamonds develop.</p>
+	                <p>Both are genuine diamonds, sharing the same chemical composition, physical properties and beautiful brilliance. The key difference is simply their origin. Laboratory-grown diamonds generally offer a more accessible price point, while natural diamonds are valued for their rarity and unique geological history.</p>
+	                <p>We offer both options, allowing you to choose the diamond that best reflects your preferences, values and budget. Unless otherwise stated, all natural and laboratory-grown diamonds over 0.30ct are independently certified and feature a corresponding identification number laser-inscribed on the girdle.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Why can natural stones and precious metal alloys vary between pieces?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Natural stones are formed through unique geological processes, meaning no two are ever exactly alike. Subtle variations in colour, tone, pattern, inclusion and other natural characteristics may occur from one stone to another. These details are part of each stone’s story and contribute to the individual beauty of every piece rather than being considered faults.</p>
+	                <p>The colour of precious metal alloys may also vary slightly between pieces. This is because gold is blended with other metals to create is colour, strength and carat, and subtle differences between individual alloy batches can influence the finished tone. These natural variations are to be expected and make each piece uniquely yours.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Will my finished piece look exactly like the piece shown online?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>As many of our pieces are handcrafted to order and feature natural stones, your finished piece may vary slightly from the product imagery shown online. Subject differences in stone colour, tone, pattern and natural inclusions may occur, while the colour of precious metal alloys can also vary slightly between individual batches.</p>
+	                <p>We take great care to remain true to the original design and overall aesthetic of each piece. These subtle variations are a beautiful reflection of the materials and handcrafted process, giving every piece its own individual character.</p>
+	                <p>We endeavour to always provide detailed dimensions and scale information, including images of the pieces worn on the body for reference.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is a One of a Kind piece?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our One of a Kind pieces are truly unique designs, created as an extension of our bespoke offering. Each piece is thoughtfully designed to celebrate the individual characteristics of a particular stone.</p>
+	                <p>Because of the unique nature of the stone or design, these pieces cannot be replicated exactly. Once a One of a Kind piece has found its forever home, there will never be another precisely the same.</p>
+	                <p>If you miss out on a one of a kind piece, our bespoke team can work with you to create a design which is equally unique in design and form.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-2"></span>
+		<p>Sizing and Personalisation</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I determine my ring size?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We know that finding the right ring size can feel a little daunting, particularly when the piece is intended as a surprise.</p>
+	                <p>For the most accurate result, we recommend visiting one of our retail locations for an in-person sizing consultation or contacting our Customer Service team to request a ring sizer. If you are purchasing a ring as a surprise, our Ring Size Guide also includes some helpful guidance.</p>
+	                <p>If you are unable to visit our showrooms, you can purchase our self ring sizing tool here.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I choose the right necklace or chain length?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Each of our necklaces is offered in the length we feel best complements the design, with thoughtful consideration given to how it can be worn alone or layered with our other pieces.</p>
+	                <p>If you prefer a different length, please contact our Customer Service team before placing your order. They will be happy to discuss the available options and advise whether an alternative or customised chain length is possible for your chosen piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I request a ring size or chain length that is not listed online?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. If your preferred ring size or chain length is not available online, please contact our Customer Service Team. They will be happy to discuss your requirements and work with you to find the most suitable option for your chosen piece.</p>
+	                <p>Please note that availability may depend on the design, materials and construction of the piece, and additional costs or production time may apply.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How does sizing work for men’s rings and signet rings?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Finding the correct size is especially important for men’s rings and wedding bands. Wherever possible, we recommend visiting one of our showrooms so our team can professionally size your finger and help you find the most comfortable fit.</p>
+	                <p>If visiting us is not possible, we recommend being professionally sized by a jeweller. When being measured, please let them know the width and depth of your chosen ring – these measurements are available on each product page – as wider or heavier bands may require a slightly larger size for a comfortable fit.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I customise or personalise an existing NMJ design?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Where possible, we would be happy to help you make an existing NMJ design feel uniquely your own. Depending on the piece, customisation options may include changes to the metal, stones, sizing or personal details such as engraving.</p>
+	                <p>Please contact our Customer Service team before placing your order. They can discuss what may be possible and provide a personalised quotation for your requested changes. As each design is carefully considered, some customisations may not be suitable or achievable.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you offer engraving?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, we offer hand engraving on selected pieces. Hand engraving is a highly specialised art form that we are proud to support, helping to preserve this beautiful, time-honoured craft for generations to come. Where engraving is available, the options and maximum number of characters will be listed on the relevant product page.</p>
+	                <p>If you are considering a more detailed or customised engraving – such as a family crest, illustration or motif on a signet face – please contact our Customer Service team with your design details. We will be happy to discuss what may be possible and provide a personalised quotation based on the complexity and feasibility of your chosen design.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What happens if I order the wrong ring size?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Please contact our Customer Service team as soon as possible so we can review the available options with you.</p>
+	                <p>If you need to change a size before production begins, please get in touch within 24 hours of placing your order. We will always make reasonable efforts to accommodate your request, although changes cannot be guaranteed once work on your piece has commenced.</p>
+	                <p>Depending on the change required, additional costs or an adjustment to the production timeframe may apply. We will always discuss this with you before proceeding.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can all NMJ rings be resized?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Not every ring can be resized, as suitability depends on the individual design, construction, materials, stone setting and the extent of the adjustment required.</p>
+	                <p>Every resizing request is carefully assessed by our Production team to ensure the integrity of your piece is protected. Some designs may have limited resizing capacity or may not be suitable for resizing at all.</p>
+	                <p>Where applicable, resize eligibility will be noted on the individual product page. Our Customer Service team is also available to guide you before ordering.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-3"></span>
+		<p>Orders and Production</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is the difference between Made to Order and Ready to Wear?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Most of our jewellery is Made to Order, meaning it is handcrafted especially for you once your order has been confirmed. The estimated production timeframe for each piece is displayed on its individual product page.</p>
+	                <p>Ready to Wear pieces have already been crafted and are generally available for dispatch within two business days of order confirmation. If resizing, personalisation or another customisation is required, a longer timeframe may apply.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long will my order take to make?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>As many of our pieces are handcrafted to order, production timeframes vary depending on the design and the process involved in bringing it to life.</p>
+	                <p>The estimated production timeframe is displayed on the individual product page and begins on the first business day after your order is confirmed. Please keep in mind that this timeframe does not include shipping or delivery.</p>
+	                <p>While we take great care to meet our estimated timeframes, occasional delays may occur due to material availability, production requirements or other unforeseen circumstances. If a significant delay affects your order, we will contact you as soon as possible.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can you accommodate an urgent order or a particular date?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If you require your piece by a particular date, please contact our Customer Service team before placing your order.</p>
+	                <p>We will always do our best to accommodate meaningful dates wherever possible and can advise whether your requested timeframe is achievable. However, delivery by a particular date cannot be guaranteed unless it has been expressly confirmed by our team.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I change or cancel my order after it has been placed?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If you would like to make a change to your order, please contact our Customer Service Team as soon as possible.</p>
+	                <p>Requests to change a size or add or update personalisation should be made within 24 hours of placing your order. As many of our pieces are made especially for you, changes may not be possible once production has commenced.</p>
+	                <p>We will always do our best to accommodate your request where possible and will let you know if any additional costs or changes to the production timeframe apply before proceeding.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I change my personal or delivery details after ordering?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If your order has not yet been dispatched, we may be able to update your contact details or delivery address.</p>
+	                <p>Please contact our Customer Service team as soon as you notice an error. We will do our best to help, although changes cannot always be accommodated once an order has been processed or prepared for dispatch.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I check the status of my order?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>An estimated production timeframe is provided on each product page as a guide. As many of our pieces are handcrafted to order, these timeframes may vary slightly depending on the intricacy of the design and the individual production process.</p>
+	                <p>Our Customer Care team will be in touch if we anticipate any delays to your order. If you would like an update at any stage, please contact us with your order details and our team will be happy to check its progress for you.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How will my order be packaged and presented?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Your piece will arrive beautifully presented in our signature NMJ jewellery box. Orders being delivered will be carefully protected inside a cardboard shipping box, cushioned with shredded PEFC-certified shredded paper and enclosed in a compostable mailer.</p>
+	                <p>Our beaded Sashi and Sana necklaces will arrive in our custom embroidered NMJ linen pouch. While our tennis &amp; Ember bracelets and necklaces will arrive in our exclusive NMJ timber boxes.</p>
+	                <p>If you select gift wrapping at checkout, your piece will be finished in our signature NMJ wrapping and tied with a ribbon made from 100% Australian grown cotton, ready to gift to someone special.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I include a gift message?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, you can add a personal gift message at checkout. Your message will be beautifully handwritten on a card and thoughtfully enclosed with your order.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you offer gift cards?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, Natalie Marie Jewellery gift cards can be purchased online or from one of our retail locations.</p>
+	                <p>Digital gift cards are delivered to the email address provided at purchase and can be redeemed online or in store. Physical gift cards are available in store or can be posted to you.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-4"></span>
+		<p>Payments and Pricing</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What payment methods and payment plans do you offer?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We accept major credit and debit cards, PayPal, Afterpay and Zippay, subject to availability. The payment methods currently available for your order will be displayed at checkout.</p>
+	                <p>When using a third-party payment provider, its own eligibility requirements, spending limits, repayment arrangements, fees and terms will apply.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What should I do if my payment is not processing?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If you are experiencing difficulty completing your payment, please contact our Customer Care team. They will be happy to assist and work with you to resolve the issue wherever possible.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long are your quotes valid, and can pricing change after a quote expires?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Written quotes provided by Natalie Marie Jewellery are valid for 30 days from the date of issue unless otherwise specified.</p>
+	                <p>As the cost of precious metals, gemstones and other materials can change over time, pricing may need to be reviewed once a quote has expired. If this occurs, our team will provide an updated quote before you proceed.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do I use a gift card or credit note?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>When you receive an NMJ gift card or credit note, you will be provided with a unique code. To redeem it online, simply enter this code in the gift card or discount code field at checkout and select apply. The available value will then be deducted from your order total.</p>
+	                <p>If your order exceeds the available balance, you can pay the remaining amount using one of our accepted payment methods. Any unused balance will remain available on the same code for a future purchase, subject to the applicable expiry date.</p>
+	                <p>Please refer to our Terms &amp; Conditions for more information regarding gift cards.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-5"></span>
+		<p>Shipping and Collection</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What delivery and showroom collection options do you offer?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Australian orders are sent using Australian Post Express Post or DHL Express, depending on the service selected at checkout and its availability for your location.</p>
+	                <p>Selected international orders are sent using DHL Express. Local collection may also be available from our Avalon and Paddington showrooms where this option is offered at checkout.</p>
+	                <p>The available options, pricing and estimated delivery timeframes for your order will be displayed at checkout.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you offer complimentary shipping?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We offer complimentary shipping on One of a Kind and Bespoke pieces, as well as eligible orders valued at $1,000 AUD or more.</p>
+	                <p>Complimentary shipping is subject to destination and service availability. Any applicable charges or exclusions will be clearly displayed at checkout.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I track my order?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Once your piece has been carefully prepared and dispatched, we will send you a shipping confirmation email containing your tracking information.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you ship internationally?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, we ship to selected international destinations using registered and trackable DHL Express services.</p>
+	                <p>The destinations and shipping options available will be displayed at checkout.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Will I need to sign for my delivery?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. As an additional measure of care and security, all orders require a signature on delivery unless otherwise expressly stated.</p>
+	                <p>Please ensure the delivery address and contact information provided at checkout are complete and accurate.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What happens if I miss my delivery?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If no one is available to receive your order, the courier will leave instructions outlining the next steps. Depending on the delivery provider, your parcel may be taken to a nearby collection point or made available for redelivery.</p>
+	                <p>Please follow the instructions provided by the courier and collect your parcel within the nominated timeframe. If you experience any issues, contact our Customer Service team and we will be happy to assist where possible.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What should I do if tracking shows my order as delivered but I cannot locate it?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If your tracking shows that your order has been delivered but you cannot locate it, we recommend first checking around the delivery address, including any safe-drop locations, and asking other members of your household, building management or neighbours whether they accepted it on your behalf.</p>
+	                <p>If your parcel is still missing, please contact the delivery provider directly and notify our Customer Service team as soon as possible. We will work with you and the courier to investigate the delivery.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Is my jewellery insured while in transit?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, your jewellery is insured by NMJ while it is in transit to you. Once your order has been delivered and signed for, responsibility for the piece passes to you.</p>
+	                <p>We recommend arranging appropriate insurance for your piece once it has been received. This can help protect it against accidental damage, loss or theft beyond the coverage provided by our warranty.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Will I need to pay international duties and taxes?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>International orders may be subject to import duties, taxes, customs fees or other charges imposed by the destination country.</p>
+	                <p>Unless these charges are expressly included and collected at checkout, they will be the responsibility of the recipient. As customs requirements vary between countries, we recommend contacting your local customs authority before purchasing if you would like further information.</p>
+	                <p>Orders refused due to unpaid duties, taxes or customs charges will not be eligible for a refund. Unclaimed packages will be managed in accordance with the carrier’s applicable terms and conditions.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-6"></span>
+		<p>Our Showrooms</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Where are your showrooms located?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We would love to welcome you into one of our Sydney showrooms:</p>
+	                <p>Avalon Beach</p>
+	                <p>43 Old Barrenjoey Road, Avalon Beach</p>
+	                <p>Paddington</p>
+	                <p>70 William Street, Paddington</p>
+	                <p>Please check our current opening hours before visiting, as these may vary seasonally.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do I need an appointment, and what types of appointments do you offer?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>You are always welcome to visit our showrooms without an appointment. However, if you would prefer a more personalised experience, we offer dedicated engagement, ceremonial and bespoke appointments.</p>
+	                <p>During your appointment, a member of our team will guide you through the collection, answer your questions and help you explore the pieces and options best suited to you.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Is every online piece available to view in your showrooms?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>While we aim to have an example of each design available to view across our showrooms, this is not always possible.</p>
+	                <p>If there is a particular piece you would like to see, please contact our Customer Service team before visiting. They will be happy to confirm whether the piece is available to view and advise which showroom currently has it in stock.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I collect an online order from one of your showrooms?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our Customer Service team will contact you as soon as your order is ready to collect.</p>
+	                <p>Please wait until you receive this confirmation before visiting your selected showroom, as collection availability and timing will depend on the piece, its production requirements and the chosen location.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I bring my jewellery into a showroom for assessment or servicing?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>You are welcome to bring your NMJ piece into either of our showrooms for assessment or servicing. Your jewellery will be carefully photographed and logged, and we will email you to confirm that it is safely in our care, along with a unique reference number.</p>
+	                <p>Our Production team will then assess the work required and provide you with a personalised quotation and estimated timeframe before proceeding.</p>
+	                <p>We also offer complimentary ultrasonic cleaning for suitable NMJ pieces while you wait in the showroom. Please note that we are only able to assess, service or clean jewellery purchased from NMJ.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-7"></span>
+		<p>Returns and Exchanges</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I return or exchange my order?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Return eligibility depends on whether your piece is Made to Order, Ready to Ship, an earring or an Archive Sale piece.</p>
+	                <p>As Made to Order pieces are handcrafted especially for you, they cannot be returned, exchanged, refunded or credited for change of mind.</p>
+	                <p>Eligible full price Ready to Ship pieces may be returned for an exchange or credit note within 14 days of receipt, provided all return conditions are met.</p>
+	                <p>Please see our return policy for more information.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do I return an eligible item?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>To arrange a return, please contact our Customer Service team or bring your piece into one of our showrooms. Our team will carefully assess the item against the conditions of our Returns Policy and confirm the outcome with you.</p>
+	                <p>We recommend contacting us before returning your piece by post so we can provide the appropriate instructions and ensure it arrives safely.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What should I do if I believe my piece is faulty or incorrectly described?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Please contact our Customer Service team with your order details and information about the issue. Photographs can also be helpful in allowing our team to make an initial assessment.</p>
+	                <p>We will carefully review your concerns and guide you through the next steps. Please see our return policy for more information.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I return a gift?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If you have received an NMJ piece as a gift and would like to return it, please contact our Customer Care team or visit one of our showrooms. Where possible, please provide the original order number or the purchaser’s details so our team can locate the order.</p>
+	                <p>Eligible gift returns will be assessed in accordance with our Returns Policy.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Why may a restocking fee apply?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>A restocking fee may apply to an approved change-of-mind return to help cover the costs associated with carefully inspecting, processing and preparing the piece to be returned to our collection.</p>
+	                <p>Any applicable fee will be clearly communicated before your return is finalised.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-8"></span>
+		<p>Warranty, Repairs and Care</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What warranty comes with my NMJ jewellery?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our jewellery is thoughtfully made to be loved and worn, and we stand behind the quality of our craftsmanship.</p>
+	                <p>Fine jewellery is covered by a 12 month manufacturer’s warranty from the original purchase date for eligible manufacturing and craftsmanship faults.</p>
+	                <p>Engagement and Bespoke pieces have a limited lifetime manufacturer’s warranty covering eligible manufacturing and craftsmanship faults, subject to our Terms.</p>
+	                <p>Please see our Warranty Guide for more information.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can you repair my jewellery outside the warranty period?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We are committed to helping you care for your NMJ jewellery throughout its lifetime.</p>
+	                <p>Where reasonably possible, we will assess an NMJ piece for repair outside its warranty period. Fees may apply, and repair suitability will depend on the condition of the piece, the work required and the availability of suitable materials and components.</p>
+	                <p>Not every piece can be repaired. If a repair is not reasonably possible, our team may discuss alternative options with you.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can you repair jewellery made by another jeweller?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>To ensure we can confidently care for the quality and integrity of every piece we work with, our repair and servicing services are reserved for jewellery purchased from NMJ.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can you replace a missing stone, earring back or other component?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Where possible, we can replace missing stones, earring backs and other components for NMJ pieces. Please contact our Customer Service team or bring your piece into one of our showrooms so we can assess what is required.</p>
+	                <p>Replacement options are subject to the availability of suitable stones and components. Our team will confirm the available options, cost and estimated timeframe before proceeding.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you offer resizing, cleaning, refurbishment and rhodium-plating services?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. We offer professional servicing and rhodium plating to help restore and maintain your jewellery.</p>
+	                <p>Eligible Engagement and Bespoke pieces receive complimentary lifetime routine servicing. This includes:</p>
+	                <p>A thorough inspection;</p>
+	                <p>Professional cleaning and polishing;</p>
+	                <p>Assessment of stones, settings, claws and band; and</p>
+	                <p>Routine tightening where required and reasonably possible.</p>
+	                <p>Repairs, replacement stones, restoration, resizing and replacement components fall outside routine servicing and may incur an additional cost. We will always discuss any recommended work and associated costs with you before proceeding.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do I send or deliver my jewellery to you for assessment or servicing?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Please contact our Customer Service team before sending your piece so we can guide you through the process.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long will my repair or service take?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>An estimated timeframe will be provided alongside your repair or service quotation. This timeframe is a guide only, as the full extent of the work required may not become apparent until our jewellers begin working on your piece.</p>
+	                <p>If we find that additional time or further work is needed, our Customer Service team will be in touch to discuss this with you and provide an updated timeframe.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How should I care for and store my jewellery?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>To keep your jewellery looking its best, we recommend removing it before washing your hands, showering, swimming, exercising or sleeping. Soap, natural skin oils and other residue can collect beneath settings and between fine chain links, attracting dirt and causing your piece to become dull more quickly.</p>
+	                <p>Jewellery should also be removed before applying creams, lotions, perfumes and other beauty products, as these can leave a sticky residue on the metal and stones.</p>
+	                <p>When not being worn, store each piece separately in a clean, dry place or soft jewellery pouch to help protect it from moisture, tarnishing, scratching or tangling. Our signature NMJ boxes are designed for presentation rather than long-term storage, as the adhesives used within jewellery boxes may react with precious metals over time and contribute to tarnishing.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How often should I clean my jewellery at home?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>For pieces worn regularly, we recommend a gentle at-home clean every few weeks, or whenever you notice a build-up of oils, lotions or everyday residue. Lightly wiping your jewellery with a soft, lint-free cloth after wear can also help maintain its finish between cleans.</p>
+	                <p>The most suitable cleaning method will depend on the metal, stones and construction of your piece, as some gemstones require more delicate care. Always refer to our Care Guide for instructions on cleaning your particular piece, and if you are unsure, contact our Customer Service team before cleaning it at home.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How often should my jewellery be professionally serviced?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We recommend having stone-set jewellery professionally inspected and serviced every 12 months. Regular servicing allows our jewellers to check the settings, claws and overall condition of your piece, helping to identify signs of wear before they develop into more significant issues.</p>
+	                <p>We offer a complimentary annual clean and service for all NMJ bespoke and online engagement pieces. Please contact our Customer Service team or visit one of our showrooms to arrange your service.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Which stones require additional care or should not be cleaned at home?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Delicate, porous or heavily included stones require additional care. This includes our Sashi and Sana pieces, pearls, opals, emerald, turquoise, lapis lazuli, coral and amber. These stones can be sensitive to moisture, heat, chemicals, sudden temperature changes and vigorous cleaning.</p>
+	                <p>Avoid placing these pieces in ultrasonic or steam cleaners, soaking them in water or using household cleaners, detergents and abrasive cloths. Instead, gently wipe them with a clean, soft, slightly damp cloth and allow them to dry completely before storing.</p>
+	                <p>If you are unsure how to care for a particular stone or product, please contact our Customer Care team before cleaning it at home. We will be happy to advise on the safest method of your piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Why has my jewellery tarnished, and how can I help prevent it?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Tarnishing is a natural surface reaction that can occur when precious metals are exposed to air, moisture, natural skin oils, chemicals and environmental elements. It is particularly common with sterling silver but may also appear on gold alloys over time. Tarnishing does not mean your jewellery is faulty and can generally be removed through appropriate cleaning or professional servicing.</p>
+	                <p>To help minimise tarnishing, remove your jewellery before showering, swimming, exercising or applying perfumes, lotions and cleaning products. After wearing, gently wipe each piece with a soft, lint-free cloth and store it separately in a clean, dry jewellery pouch.</p>
+	                <p>Our signature NMJ boxes are intended for presentation rather than long-term storage, as adhesives used within jewellery boxes may react with precious metals over time and contribute to tarnishing.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you recommend insuring my jewellery?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, we strongly recommend arranging comprehensive insurance for your jewellery, particularly engagement rings, bespoke pieces and other precious or frequently worn designs. While our warranty covers eligible manufacturing faults, it does not cover loss, theft or accidental damage.</p>
+	                <p>We recommend confirming the level of protection offered, including whether your policy provides cover while travelling when your jewellery is worn outside the home.</p>
+	                <p>Our team can support with setting up an interim policy for you upon collection of your piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-9"></span>
+		<p>Archive Sale</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Are Archive Sale purchases final sale?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. Archive Sale purchases are final sale and cannot be returned, exchanged, refunded or credited for change of mind, incorrect sizing or minor imperfections that were disclosed.</p>
+	                <p>As these pieces are offered in limited quantities and often include discontinued, sample or display designs, we encourage you to carefully review the product description, imagery, condition and sizing before purchasing.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>When will my Archive Sale order be dispatched?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Please allow up to five business days for your Archive Sale order to be carefully prepared and dispatched.</p>
+	                <p>Once your order has been shipped, we will send you a confirmation email containing your tracking information.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do Archive Sale pieces come with a manufacturing warranty?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. Archive Sale pieces remain covered by the applicable manufacturer’s warranty in relation to eligible manufacturing or craftsmanship faults.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-10"></span>
+		<p>Engagement Rings</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What engagement ring styles do you offer?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our online engagement collection includes a thoughtfully curated range of designs, from refined solitaires and timeless trilogies to more intricate, vintage inspired settings.</p>
+	                <p>Many of our designs can be created with your choice of precious metal, stone type, shape and size, allowing you to find a ring that feels uniquely yours. If you are looking for something truly individual, our bespoke engagement ring service will pair you with one of our dedicated designers, who will work closely with you to create a ring that thoughtfully reflects your vision.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is the difference between an online and a bespoke engagement ring?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our online engagement rings are thoughtfully designed NMJ pieces that can be purchased through our website or in one of our showrooms. Once your order has been placed, our dedicated Production team will carefully select the best available stone for your ring in accordance with our stringent quality specifications. Your piece will then be individually crafted for you, bringing your chosen design to life with care and consideration.</p>
+	                <p>Our bespoke service offers a more personalised design experience. You will be paired with a dedicated bespoke designer who will guide you through each stage of the process, from exploring your ideas and sourcing stones for you to view, through to refining the final design. You will also receive drawings and sketches to review and approve before your ring enters production.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can I customise an NMJ engagement ring?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our laboratory-grown diamond engagement rings are available in a considered selection of stone sizes. For designs featuring larger stones, we have thoughtfully increased the band dimensions to ensure the setting remains beautifully balanced while supporting the strength and integrity of your ring.</p>
+	                <p>You can personalise your piece with custom hand engraving or a hidden stone, creating a meaningful detail that is uniquely yours.</p>
+	                <p>If you are considering further customisations, please contact our Customer Service team. They will guide you through the available options or, where appropriate, pair you with a dedicated bespoke designer to begin your bespoke journey.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do I choose the right metal, diamond or gemstone?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Choosing the right materials for your ring is a deeply personal decision, guided by your individual style, lifestyle, values and budget.</p>
+	                <p>When selecting a precious metal, consider the colour you are naturally drawn to, the jewellery you already wear and how your ring will suit everyday life. Your choice of diamond or gemstone may be influenced by its shape, colour, rarity, origin and the story or meaning it holds for you.</p>
+	                <p>Our team can guide you through the differences between yellow, rose and white gold and platinum, as well as natural diamonds, laboratory-grown diamonds and coloured gemstones. Visit one of our showrooms or book an engagement or bespoke appointment to explore the options and find the combination that feels most like you.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do you source stones for your engagement rings?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our dedicated in-house Diamond and Gemstone Specialist sources a stone for each engagement ring as it is ordered. Working within our stringent quality specifications, they carefully consider the available options and select the stone that best complements your chosen design, size and setting.</p>
+	                <p>This considered approach allows us to select the best available stone for your individual piece, ensuring every engagement ring is brought to life with exceptional care and attention to detail.</p>
+	                <p>Through our bespoke services, clients can choose to explore the extensive options of stones available, from coloured stones to mined or laboratory grown diamonds.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long will my engagement ring take to make?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>As each engagement ring is individually crafted for you, production timeframes will vary depending on the design and level of customisation. The estimated production timeframe for our online engagement rings is provided on each product page as a guide.</p>
+	                <p>For bespoke engagement rings, your designer will provide an estimated timeframe as part of the design process, once the details of your piece have been confirmed.</p>
+	                <p>If you are working toward a particular date, please let our team know as early as possible. While we cannot always accommodate shorter timeframes, we will be happy to discuss the available options with you. If we anticipate any delays once your order is in production, our Customer Care team will keep you informed.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can you accommodate a particular proposal date?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If you are planning to propose on a particular date, please let us know as early as possible and before placing your order. Our Customer Care team will review the production requirements of your chosen ring and advise whether your preferred timeframe can be accommodated.</p>
+	                <p>While we will always do our best to work toward meaningful dates, shorter production timeframes cannot always be guaranteed. If a made-to-order or bespoke ring cannot be completed in time, our team may be able to guide you toward another suitable option.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How can I ensure my engagement ring will sit with a wedding band?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>The profile and setting of your engagement ring will determine how it sits alongside a wedding band. Some designs allow a straight band to sit flush, while others may pair more beautifully with a curved or contoured band.</p>
+	                <p>If you plan to wear the two rings together, we recommend considering your wedding band during the engagement ring selection process. Our team can guide you through compatible pairings and help you find pieces that feel balanced and comfortable when worn together.</p>
+	                <p>You are welcome to visit one of our showrooms with your engagement ring or book a ceremonial appointment to explore the options in person. If an existing band is not quite right, we can also discuss creating a bespoke wedding band designed to complement your engagement ring.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Can my engagement ring be resized if it does not fit?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Eligible Engagement, Bespoke and Ceremonial rings receive one complimentary resize when requested within six months of the original purchase date.</p>
+	                <p>Every resize is carefully assessed to ensure it can be completed without compromising the integrity of the design. Eligibility depends on the piece and will be noted on the individual product page.</p>
+	                <p>Any additional resizing, or resizing requested outside the complimentary period, will be assessed and quoted separately.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What warranty, servicing and care come with my engagement ring?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our Engagement and Bespoke pieces are created to be worn and treasured for a lifetime.</p>
+	                <p>They are covered by a limited lifetime manufacturer’s warranty for eligible manufacturing and craftmanship faults, subject to our Terms. Eligible Engagement and Bespoke pieces also receive complimentary lifetime routine servicing.</p>
+	                <p>To help preserve the beauty and integrity of your piece, we recommend returning it to NMJ every 12 months for inspection and servicing.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you work with heirloom or customer-supplied stones?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We may work with client-supplied heirloom stones through our Heirloom Service.</p>
+	                <p>Every supplied stone and piece must first be carefully assessed by our team. Heirloom and previously worn materials can carry existing wear or structural vulnerabilities, and not every stone will be suitable for resetting or for the proposed design.</p>
+	                <p>Where we consider a stone to be unsuitable, we may decline to use it in order to protect both the material and the integrity of the finished piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+		<span class="Anchor" id="block-static-11"></span>
+		<p>Bespoke Jewellery</p>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What is your bespoke service, and how does the process work?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our bespoke service is a deeply personal design experience, allowing you to create a piece that is thoughtfully tailored to your story, style and vision.</p>
+	                <p>You will be paired with a dedicated bespoke designer, beginning with an initial discovery call to explore your ideas, preferences, budget and timeframe. From there, your designer will source suitable stones and share initial design concepts and quotations for your consideration.</p>
+	                <p>Where relevant, you will be invited to a private stone viewing with your designer before receiving detailed sketches or renders of your piece to review and approve. Once the final design has been confirmed and your deposit has been paid, your piece will move into production, where it will be carefully brought to life by our skilled team.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long does the bespoke process take?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>The timeframe for your bespoke journey will vary depending on the complexity of your design, the number of stones you would like to consider and the time required to source the perfect option.</p>
+	                <p>Particularly rare or specialised stones may take longer to locate, while additional rounds of design refinements may also extend the process. Your bespoke designer will keep you informed throughout each stage and provide an estimated timeframe based on the unique requirements of your piece.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How much does a bespoke piece cost, and is there a minimum spend?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>There is no minimum spend for our bespoke service. Each piece is individually quoted based on its unique design, including the precious metal, stone selection, complexity and craftsmanship involved.</p>
+	                <p>Following your initial discovery call or appointment, your designer will share initial concepts and quotations for your consideration. Any design decisions or refinements that may affect the price will be discussed with you throughout the process before the final design is approved.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What deposit is required, and can I pay in instalments?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Payment for your bespoke piece is made in two stages. A 50-75% deposit is required before production begins, allowing us to secure your selected materials and commence crafting your piece. The remaining balance is due once your piece is complete and before it is dispatched or collected.</p>
+	                <p>Your bespoke designer will keep you informed throughout the process and provide payment instructions at each stage.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How do you source stones for bespoke pieces?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>We work with a trusted network of carefully selected stone suppliers who meet our due diligence requirements for responsible sourcing and business practices.</p>
+	                <p>During your initial discovery call or appointment, your bespoke designer will take the time to understand your preferences, including stone type, shape, colour, size, quality and budget. They will then thoughtfully source a selection of stones that best reflect your vision for you to consider.</p>
+	                <p>The sourcing timeframe will vary depending on your requirements, as particularly rare or specialised stones may take longer to find.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Will I approve the design before production begins?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes. Before your piece enters production, your bespoke designer will provide sketches, digital renders or reference imagery for you to review.</p>
+	                <p>You will have the opportunity to discuss the design, request any final refinements and confirm that you are happy with each detail. Production will only begin once you have approved the final design and paid your deposit.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you create bespoke pieces other than engagement rings?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, our bespoke service extends beyond engagement rings to a variety of meaningful, one-of-a-kind pieces.</p>
+	                <p>We recommend exploring our bespoke archive to discover examples of previous commissions and gain a sense of what may be possible. If you have a particular idea in mind, please contact our Customer Care team, who can discuss your vision and guide you through the next steps.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you work with customer-supplied or heirloom stones?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, we may be able to incorporate customer-supplied or heirloom stones into a bespoke piece on a case-by-case basis.</p>
+	                <p>Before confirming whether we can work with your stone, our team will need to assess its condition, dimensions and suitability for the proposed design. As older stones may have existing wear, damage or unique setting requirements, not every stone will be suitable for resetting.</p>
+	                <p>Please contact our Customer Care team with details and imagery of your stone, and they will guide you through the assessment process and available options</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What options are available if I do not have time to complete the bespoke process?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>If your proposal date is approaching and there is not enough time to complete the full bespoke process, we may be able to arrange a temporary proposal ring, such as our Promise Ring.</p>
+	                <p>This allows you to propose with a beautiful piece while giving you and your partner the opportunity to begin the bespoke journey together afterward. You can then collaborate with one of our dedicated bespoke designers to create an engagement ring that thoughtfully reflects your shared vision.</p>
+	                <p>We also stock a selection of ‘ready to wear’ engagement styles in our boutiques and online which can be purchased for immediate dispatch.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>How long is a bespoke quote valid?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Bespoke quotations are valid for 14 days from the date of issue. As precious metal and gemstone prices fluctuate, any quotation accepted after this period may need to be reviewed and updated.</p>
+	                <p>Please note that quoted stones are subject to availability and are not secured until your deposit has been received. If your preferred stone is no longer available, your bespoke designer will source a comparable alternative for your consideration and provide an updated quotation where required.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>What warranty, resizing and servicing are included with a bespoke piece?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Our bespoke pieces are accompanied by a limited lifetime manufacturing warranty, subject to the piece being returned to NMJ for its complimentary annual clean, inspection and service. This allows our jewellers to assess the settings, claws and overall condition of your piece and identify signs of wear before they develop into more significant concerns.</p>
+	                <p>Bespoke engagement and ceremonial rings also include one complimentary resize within six months of receiving your piece, where the design allows. Some styles, stone settings and significant size adjustments may not be suitable for resizing, and our team will assess this on a case-by-case basis.</p>
+	                <p>Our warranty covers eligible manufacturing faults but does not extend to accidental damage, loss, theft, general wear and tear or work completed by another jeweller. We recommend arranging comprehensive insurance to protect your piece once it has been received.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Where should I have my bespoke piece cleaned and serviced?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Your bespoke piece should be returned to Natalie Marie Jewellery for its complimentary annual clean, inspection and service. This allows our jewellers to carefully assess the settings, claws and overall condition of your piece, while ensuring any servicing is completed in accordance with its original design and craftsmanship.</p>
+	                <p>Annual servicing by NMJ is required to maintain the validity of your limited lifetime manufacturing warranty. Please contact our Customer Care team or bring your piece into either of our showrooms to arrange your service. We recommend that repairs, resizing or alterations are not undertaken by another jeweller, as third-party work may affect your warranty.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="Collapsible">
+	  <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+	    <p>Do you work with interstate and international clients?</p> <span class="Collapsible__Plus"></span>
+	  </button>
+	  <div class="Collapsible__Inner">
+	    <div class="Collapsible__Content Collapsible__Content--removeInset">
+	      <div class="Rte">
+	                <p>Yes, we work with clients across Australia and around the world. Your bespoke journey can be facilitated remotely through video appointments, phone calls and email, allowing you to collaborate closely with your designer at each stage of the process.</p>
+	                <p>Once complete, your bespoke piece can be securely shipped interstate or internationally. International clients should refer to our Shipping and Duties &amp; Taxes Terms and Conditions for information regarding delivery, customs requirements and any applicable import duties or taxes.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 			</div>
+			<div class="Grid__Cell 3/16--lap-and-up"></div>
 		</div>
-	</section>
-{%- endif -%}
+	</div>
+</section>
 
 {% schema %}
 {
-  "name": "Accordion (FAQs metaobj)",
+  "name": "Accordion (FAQs static)",
   "settings": [
     {
       "type": "paragraph",
-      "content": "Reads all FAQ entries directly from this page's \"FAQs\" metafield (page.metafields.custom.faqs) instead of section blocks, so there is no 50-item limit. Add/edit entries via the page's metafield editor, not via \"Add block\"."
-    },
-    {
-      "type": "checkbox",
-      "id": "tabbed_content",
-      "label": "display headers as tabs",
-      "default": false
-    },
-	{
-      "type": "header",
-      "content": "Text"
-    },
-    {
-      "type": "image_picker",
-      "id": "logo_image",
-      "label": "Title image",
-      "info": "1800 x 800px .jpg recommended"
+      "content": "TEMPORARY stopgap: all 102 FAQ entries are hardcoded directly in this section's HTML (not pulled from blocks or metafields), so there is no 50-item limit and every entry always renders. To edit content, you must edit the section file's code directly, or swap back to the metaobject-driven \"Accordion (FAQs metaobject)\" section once the faqs_2/faqs_3 metafield split is done."
     },
     {
       "type": "richtext",
@@ -218,110 +1418,18 @@
     {
       "type": "richtext",
       "id": "title",
-      "label": "Heading",
-      "default": "<p>Heading</p>"
+      "label": "Heading"
     },
     {
       "type": "richtext",
       "id": "description",
       "label": "Description"
-    },
-    {
-      "type": "header",
-      "content": "Text Settings"
-    },
-	{
-      "type": "select",
-      "id": "text_position",
-      "label": "Text position",
-      "options": [
-        {
-          "value": "top",
-          "label": "Top"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        }
-      ],
-      "default": "top",
-      "info": "Sets the text and button position."
-    },
-	{
-      "type": "select",
-      "id": "colour_style",
-      "label": "Colour style",
-      "options": [
-        {
-          "value": "light",
-          "label": "Light"
-        },
-        {
-          "value": "dark",
-          "label": "Dark"
-        }
-      ],
-      "default": "dark",
-      "info": "Sets the text and button colour."
-    },
-    {
-      "type": "header",
-      "content": "Button 1"
-    },
-    {
-      "type": "text",
-      "id": "button_1_text",
-      "label": "Text"
-    },
-    {
-      "type": "url",
-      "id": "button_1_link",
-      "label": "Link"
-    },
-    {
-      "type": "header",
-      "content": "Button 2"
-    },
-    {
-      "type": "text",
-      "id": "button_2_text",
-      "label": "Text"
-    },
-    {
-      "type": "url",
-      "id": "button_2_link",
-      "label": "Link"
-    },
-    {
-      "type": "header",
-      "content": "Button Settings"
-    },
-    {
-      "type": "select",
-      "id": "button_style",
-      "label": "Button style",
-      "options": [
-        {
-          "value": "underline",
-          "label": "Text underline"
-        },
-        {
-          "value": "secondary",
-          "label": "Secondary Button"
-        },
-        {
-          "value": "primary",
-          "label": "Primary Button"
-        }
-      ],
-      "default": "underline",
-      "info": "Sets the style for the button."
     }
   ],
   "presets": [
     {
       "category": "Content",
-      "name": "Accordion (FAQs metaobject)",
+      "name": "Accordion (FAQs static - TEMP)",
       "settings": {}
     }
   ]

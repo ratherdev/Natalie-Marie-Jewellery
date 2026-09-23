@@ -66,6 +66,7 @@
       "block_order": [
         "975cc5d6-9efd-42da-979b-39cb83c9d32a"
       ],
+      "disabled": true,
       "settings": {
         "tabbed_content": false,
         "subheading": "",
@@ -78,6 +79,15 @@
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
+      }
+    },
+    "accordion_metaobject_Tk8wYV": {
+      "type": "accordion-metaobject",
+      "name": "Accordion (FAQs metaobject)",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "description": ""
       }
     },
     "00083ada-fd41-413c-893b-b870c0b05859": {
@@ -238,31 +248,14 @@
         "button_2_link": "",
         "button_style": "underline"
       }
-    },
-    "accordion_metaobject_Tk8wYV": {
-      "type": "accordion-metaobject",
-      "name": "Accordion (FAQs metaobject)",
-      "settings": {
-        "tabbed_content": false,
-        "subheading": "<p>Sub-heading</p>",
-        "title": "<p>Heading</p>",
-        "description": "",
-        "text_position": "top",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
     }
   },
   "order": [
     "main",
     "245f9da0-6cff-4047-a42e-95285eedda3e",
     "11411955-503e-4df2-8cc3-fb56bc8e307d",
+    "accordion_metaobject_Tk8wYV",
     "00083ada-fd41-413c-893b-b870c0b05859",
-    "16800638107217eb39",
-    "accordion_metaobject_Tk8wYV"
+    "16800638107217eb39"
   ]
 }

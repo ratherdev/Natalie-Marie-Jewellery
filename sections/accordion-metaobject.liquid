@@ -6,10 +6,21 @@
 {%- endif -%}
 
 {%- assign faq_list = page.metafields.custom.faqs.value -%}
-<!-- DEBUG faq_list.size = {{ faq_list.size }} -->
+{%- assign faq_total = faq_list.size -%}
+{%- assign chunk_size = 50 -%}
+{%- assign chunk_count = faq_total | divided_by: chunk_size | plus: 1 -%}
+{%- assign global_index = 0 -%}
+<!-- DEBUG faq_list.size = {{ faq_total }} | chunks = {{ chunk_count }} -->
 
 {%- capture accordion_content -%}
-	{%- for entry in faq_list limit: 250 -%}
+	{%- for chunk in (1..chunk_count) -%}
+	{%- assign chunk_offset = forloop.index0 | times: chunk_size -%}
+	{%- for entry in faq_list limit: chunk_size offset: chunk_offset -%}
+		{%- assign global_index = global_index | plus: 1 -%}
+		{%- assign is_last_entry = false -%}
+		{%- if global_index == faq_total -%}
+			{%- assign is_last_entry = true -%}
+		{%- endif -%}
 
 		{%- capture separator_title_html -%}<p>{{ entry.separator_title | metafield_tag }}</p>{%- endcapture -%}
 		{%- assign separator_title = separator_title_html | strip_html | strip -%}
@@ -22,7 +33,7 @@
 			{%- endif -%}
 
 			{%- assign tabbed_content_index = tabbed_content_index | plus: 1 -%}
-			{%- assign entry_id = entry.system.id | default: forloop.index -%}
+			{%- assign entry_id = entry.system.id | default: global_index -%}
 
 			{%- capture accordionHeader -%}
 	            <div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6 {% if section.settings.tabbed_content %}TabbedHeaderItem{% endif %} {% if tabbed_content_index == 1 %}is-active{% endif %}" data-entry-id="{{ entry_id }}" {% if section.settings.tabbed_content %}data-action="toggle-content" data-toggle-id="{{ section.id }}-tabbed-content-{{ tabbed_content_index }}"{% endif %}>
@@ -79,7 +90,7 @@
 			{%- endif -%}
 
 			{%- if title != blank and content != blank -%}
-	            <div class="Collapsible" data-entry-id="{{ entry.system.id | default: forloop.index }}">
+	            <div class="Collapsible" data-entry-id="{{ entry.system.id | default: global_index }}">
 	              <button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
 	                {{ title_html }} <span class="Collapsible__Plus"></span>
 	              </button>
@@ -95,9 +106,10 @@
 			{%- endif -%}
 		{%- endif -%}
 
-		{%- if forloop.last and section.settings.tabbed_content and tab_open -%}
+		{%- if is_last_entry and section.settings.tabbed_content and tab_open -%}
 			</div>
 		{%- endif -%}
+	{%- endfor -%}
 	{%- endfor -%}
 {%- endcapture -%}
 

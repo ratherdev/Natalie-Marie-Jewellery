@@ -562,6 +562,38 @@
     "content_list_BYe8Qe": {
       "type": "content-list",
       "blocks": {
+        "image_4jX9Ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/JOURNAL_CROPS_ELLTY.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
         "image_dB9mVm": {
           "type": "image",
           "settings": {
@@ -596,6 +628,7 @@
         }
       },
       "block_order": [
+        "image_4jX9Ee",
         "image_dB9mVm"
       ],
       "settings": {
@@ -691,7 +724,7 @@
         "enable_natual_scroll": true,
         "subheading": "<p><strong>SHOP</strong></p>",
         "title": "<p>Ceylon Sapphires</p>",
-        "description": "<p>Explore our collection of Ceylon Sapphire pieces. </p>",
+        "description": "<p>Explore our collection of Ceylon Sapphire pieces.&nbsp;</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",

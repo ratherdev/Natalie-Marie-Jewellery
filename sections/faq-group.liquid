@@ -1,0 +1,194 @@
+{%- capture text_content -%}
+	{%- if section.settings.subheading != blank -%}
+		<h3 class="SectionHeader__SubHeading Heading Heading--caps Heading--textFont u-h6"><span>{{ section.settings.subheading }}</span></h3>
+	{%- endif -%}
+
+	{%- if section.settings.title != blank -%}
+		<h2 class="SectionHeader__Heading Heading u-h3"><span>{{ section.settings.title }}</span></h2>
+	{%- endif -%}
+
+	{%- if section.settings.description != blank -%}
+		<div class="SectionHeader__Description SectionHeader__Description--primary Rte">
+			{{ section.settings.description }}
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture group_header -%}
+	{%- if section.settings.group_title != blank -%}
+		<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
+			<span class="Anchor" id="faq-{{ section.settings.group_anchor | default: section.settings.group_title | handleize }}"></span>
+			<p>{{ section.settings.group_title | escape }}</p>
+
+			{%- if section.settings.group_image != blank -%}
+				{%- assign media = section.settings.group_image -%}
+				<div class="AspectRatio AspectRatio--withFallback Accordion__ImageWrapper" style="max-width: {{ media.width }}px; padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}">
+					{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: media -%}{%- endcapture -%}
+					{%- assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+					<img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ media.alt | escape }}">
+					<span class="Image__Loader"></span>
+
+					<noscript>
+						<img src="{{ media | img_url: '600x' }}" alt="{{ media.alt | escape }}">
+					</noscript>
+				</div>
+			{%- endif -%}
+		</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{{ 'section-accordion.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+	if section.settings.remove_spacing_top and section.settings.remove_spacing_bottom
+		assign spacing_class = ''
+	elsif section.settings.remove_spacing_top
+		assign spacing_class = 'Section--spacingExtraLargeBottom'
+	elsif section.settings.remove_spacing_bottom
+		assign spacing_class = 'Section--spacingExtraLargeTop'
+	else
+		assign spacing_class = 'Section--spacingExtraLarge'
+	endif
+%}
+
+<section class="Section {{ spacing_class }} FaqGroup" data-section-type="accordion" data-section-id="{{ section.id }}" data-section-settings='{"tabbedContent": false}'>
+	<div class="Container">
+		<div class="Grid">
+			<div class="Grid__Cell 3/16--lap-and-up"></div>
+			<div class="Grid__Cell 10/16--lap-and-up">
+				{{ text_content }}
+				{{ group_header }}
+
+				{%- for block in section.blocks -%}
+					{%- if block.settings.question != blank and block.settings.answer != blank -%}
+						<div class="Collapsible" {{ block.shopify_attributes }}>
+							<button class="Collapsible__Button Heading u-h4" data-action="toggle-collapsible" aria-expanded="false">
+								<p>{{ block.settings.question | escape }}</p> <span class="Collapsible__Plus"></span>
+							</button>
+
+							<div class="Collapsible__Inner">
+								<div class="Collapsible__Content Collapsible__Content--removeInset">
+									<div class="Rte">
+										{{ block.settings.answer }}
+									</div>
+								</div>
+							</div>
+						</div>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+			<div class="Grid__Cell 3/16--lap-and-up"></div>
+		</div>
+	</div>
+</section>
+
+{%- if section.settings.remove_spacing_top and section.settings.group_title != blank -%}
+	<style>
+		{%- comment -%} Stacked groups: keep a consistent gap above each category heading {%- endcomment -%}
+		[data-section-id="{{ section.id }}"] .Accordion__Section.Heading:first-child { margin-top: 65px; }
+	</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ group",
+  "class": "shopify-section--faq-group",
+  "max_blocks": 50,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "One FAQ category per section. Add one section per category and stack them; tick \"Remove top spacing\" on every group after the first so they read as one list."
+    },
+    {
+      "type": "header",
+      "content": "Intro (optional, usually first group only)"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Sub-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Category"
+    },
+    {
+      "type": "text",
+      "id": "group_title",
+      "label": "Category title",
+      "default": "Our Jewellery"
+    },
+    {
+      "type": "text",
+      "id": "group_anchor",
+      "label": "Anchor link ID",
+      "info": "Optional. Link to this category with #faq-<id>. Defaults to the category title."
+    },
+    {
+      "type": "image_picker",
+      "id": "group_image",
+      "label": "Category image"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_spacing_top",
+      "label": "Remove top spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_spacing_bottom",
+      "label": "Remove bottom spacing",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content",
+      "name": "FAQ group",
+      "blocks": [
+        {
+          "type": "question",
+          "settings": {
+            "question": "Question",
+            "answer": "<p>Answer</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

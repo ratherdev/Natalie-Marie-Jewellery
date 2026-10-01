@@ -85,6 +85,7 @@
 
 {%- if section.settings.remove_spacing_top and section.settings.group_title != blank -%}
 	<style>
+        .Accordion__Section p {font-weight: bold;}
 		{%- comment -%} Stacked groups: keep a consistent gap above each category heading {%- endcomment -%}
 		[data-section-id="{{ section.id }}"] .Accordion__Section.Heading:first-child { margin-top: 65px; }
 	</style>

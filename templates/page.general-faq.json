@@ -81,6 +81,40 @@
         "button_style": "underline"
       }
     },
+    "faq_group_9kpx7W": {
+      "type": "faq-group",
+      "blocks": {
+        "question_R7VdTi": {
+          "type": "question",
+          "settings": {
+            "question": "Where and how is your jewellery made?",
+            "answer": "<p>The majority of NMJ pieces are handcrafted to order by our skilled team of jewellers and stone setters.</p><p>Our Avalon studio sits at the heart of our production process, where each order is carefully reviewed, allocated and then brought to life by jewellers specialising in different areas of the craft. With the majority of our pieces handmade in Australia, we also work with a small network of trusted offshore production partners to produce select components, which are then set and personalised by hand by our in house team of jewellers. Find out more about our production processes here.</p>"
+          }
+        },
+        "question_GDz4Ud": {
+          "type": "question",
+          "settings": {
+            "question": "What materials and precious metals do you use?",
+            "answer": "<p>We work with enduring precious metals and carefully selected natural and laboratory-grown stones, chosen for their quality, beauty and suitability for each design.</p><p>Our precious metal offering includes sterling silver, 9ct, 14ct and 18ct gold in yellow, rose and white tones. We use a combination of newly mined and recycled metal, and prioritise using Australian mined gold where possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_R7VdTi",
+        "question_GDz4Ud"
+      ],
+      "disabled": true,
+      "name": "FAQ group",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "group_title": "Our Jewellery",
+        "group_anchor": "",
+        "remove_spacing_top": false,
+        "remove_spacing_bottom": false
+      }
+    },
     "accordion_metaobject_Tk8wYV": {
       "type": "accordion-metaobject",
       "name": "Accordion (FAQs metaobject)",
@@ -254,6 +288,7 @@
     "main",
     "245f9da0-6cff-4047-a42e-95285eedda3e",
     "11411955-503e-4df2-8cc3-fb56bc8e307d",
+    "faq_group_9kpx7W",
     "accordion_metaobject_Tk8wYV",
     "00083ada-fd41-413c-893b-b870c0b05859",
     "16800638107217eb39"

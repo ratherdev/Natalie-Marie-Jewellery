@@ -45,7 +45,7 @@
         "description": "<p>Our General FAQ’s endeavour to answer the most commonly asked questions from our clients. If you have questions about our Bespoke Process, please see our Bespoke FAQ’s <a href=\"/pages/the-bespoke-process-faqs\" title=\"The Bespoke Process FAQs\">here</a>.&nbsp;<br/><br/>Have a question we have not answered?</p>",
         "colour_style": "dark",
         "button_1_text": "Contact Customer Service",
-        "button_1_link": "",
+        "button_1_link": "https://www.nataliemariejewellery.com/pages/contact",
         "button_style": "underline"
       }
     },

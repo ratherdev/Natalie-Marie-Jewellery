@@ -53,8 +53,8 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-2.png",
-            "mobile_image": "shopify://shop_images/Untitled-13August2026at10.36.41-2.png",
+            "image": "shopify://shop_images/Image_for_the_site.png",
+            "mobile_image": "shopify://shop_images/Image_for_the_site.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
@@ -118,14 +118,14 @@
         "cycle_speed": 5
       }
     },
-    "3724036e-7066-4fcb-98bc-86c05f650a17": {
+    "2a18819f-f09b-4bb3-a529-2f7a35897115": {
       "type": "content-slider",
       "blocks": {
-        "d509fa90-2f01-4264-96dc-99e68566a8cf": {
+        "a341f433-5015-425a-a79e-870018486d71": {
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "vintage-inspired-engagement-wedding-rings",
+            "collection": "coloured-trunk-show-one-of-a-kinds",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -133,176 +133,21 @@
         }
       },
       "block_order": [
-        "d509fa90-2f01-4264-96dc-99e68566a8cf"
+        "a341f433-5015-425a-a79e-870018486d71"
       ],
       "settings": {
-        "enable_light": false,
-        "grid_items_count": 16,
+        "enable_light": true,
+        "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p>Engagement & Wedding Rings</p>",
-        "title": "<p><em>Vintage Inspired</em></p>",
-        "description": "<p>Discover intricate millgrain edges, hand-engraved details, considered stone settings and sculptural forms, each a nod to eras past. These details bring together vintage design sensibilities with thoughtful, modern workmanship.</p>",
+        "subheading": "<p>One Of A Kind</p>",
+        "title": "<p><em>A Study In Colour&nbsp;</em></p>",
+        "description": "<p>Crafted exclusively for&nbsp;<strong>A Study in Colour</strong>, discover a limited collection of one-of-a-kind pieces celebrating natural gemstones in their individual forms and characteristics.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Discover The Range",
-        "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
+        "button_1_text": "Explore All",
+        "button_1_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
         "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "94d74b56-d4a7-4b4b-8898-49a61c4c54da": {
-      "type": "content-list",
-      "blocks": {
-        "6c954802-cdfb-4c10-8480-eed010664a51": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WebsiteResizes_80.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "<p><em>Crown Rings</em></p>",
-            "description": "<p>A piece for all stories; a pair for your personal duet. Our crown wedding rings have been designed to allow for the perfect, custom fit based on your engagement ring style.</p>",
-            "description_mobile": "<p>A piece for all stories; a pair for your personal duet. Our crown wedding rings have been designed to allow for the perfect, custom fit based on your engagement ring style.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "Discover The Range",
-            "button_1_link": "shopify://collections/crown-wedding-rings",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "shopify://collections/engagement-rings",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "shopify://collections/petits-collection",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "efb9f213-441f-4fab-a644-3ddbc3a4ca97": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Radiant_and_classic_the_Eirene_Charm_is_a_modern_classic_designed_to_bring_brilliance_to_any_jewellery_piece._Handcrafted_in_9ct_Yellow_Gold_this_charm_showcases_a_1ct_IGI-certified_o.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "<p><em>Diamond  </em>Necklaces</p>",
-            "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
-            "description_mobile": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "Explore The Collection",
-            "button_1_link": "shopify://collections/diamond-necklaces",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "0253a4d5-00b4-4c80-870d-9c2892691aa3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-6.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "<p><em>Drop</em> Earrings</p>",
-            "description": "<p>From everyday wear to statement pieces, these earrings are crafted to speak softly or turn heads – a perfect pair for your collection.</p>",
-            "description_mobile": "<p>From everyday wear to statement pieces, these earrings are crafted to speak softly or turn heads – a perfect pair for your collection.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "Shop The Collection",
-            "button_1_text": "",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/drop-earrings?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
-            "button_2_metaobject": "",
-            "button_2_text": "Shop The Curation",
-            "button_2_link": "https://www.nataliemariejewellery.com/collections/drop-earrings?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
-        "cc11ec83-9736-4bb2-9d80-2b917436668e": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/4_Bracelets-Mobile.jpg",
-            "apply_overlay": false,
-            "devices": "mobile",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "",
-            "description": "",
-            "description_mobile": "",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "Shop Bracelets",
-            "button_1_link": "shopify://collections/bracelets",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        }
-      },
-      "block_order": [
-        "6c954802-cdfb-4c10-8480-eed010664a51",
-        "efb9f213-441f-4fab-a644-3ddbc3a4ca97",
-        "0253a4d5-00b4-4c80-870d-9c2892691aa3",
-        "cc11ec83-9736-4bb2-9d80-2b917436668e"
-      ],
-      "settings": {
-        "grid_items_count": 3,
-        "grid_items_count_pocket": "1/2",
-        "text_align": "center",
-        "subheading": "",
-        "title": "",
-        "description": "",
-        "html": "",
-        "colour_style": "dark",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_2_text": "",
-        "button_2_link": "",
+        "button_2_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
         "button_style": "underline"
       }
     },
@@ -554,14 +399,169 @@
         "button_style": "underline"
       }
     },
-    "2a18819f-f09b-4bb3-a529-2f7a35897115": {
+    "94d74b56-d4a7-4b4b-8898-49a61c4c54da": {
+      "type": "content-list",
+      "blocks": {
+        "6c954802-cdfb-4c10-8480-eed010664a51": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WebsiteResizes_80.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p><em>Crown Rings</em></p>",
+            "description": "<p>A piece for all stories; a pair for your personal duet. Our crown wedding rings have been designed to allow for the perfect, custom fit based on your engagement ring style.</p>",
+            "description_mobile": "<p>A piece for all stories; a pair for your personal duet. Our crown wedding rings have been designed to allow for the perfect, custom fit based on your engagement ring style.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Discover The Range",
+            "button_1_link": "shopify://collections/crown-wedding-rings",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "shopify://collections/engagement-rings",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "shopify://collections/petits-collection",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "efb9f213-441f-4fab-a644-3ddbc3a4ca97": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Radiant_and_classic_the_Eirene_Charm_is_a_modern_classic_designed_to_bring_brilliance_to_any_jewellery_piece._Handcrafted_in_9ct_Yellow_Gold_this_charm_showcases_a_1ct_IGI-certified_o.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p><em>Diamond  </em>Necklaces</p>",
+            "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
+            "description_mobile": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore The Collection",
+            "button_1_link": "shopify://collections/diamond-necklaces",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "0253a4d5-00b4-4c80-870d-9c2892691aa3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_-_09_July_2026_at_11.51.20-6.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p><em>Drop</em> Earrings</p>",
+            "description": "<p>From everyday wear to statement pieces, these earrings are crafted to speak softly or turn heads – a perfect pair for your collection.</p>",
+            "description_mobile": "<p>From everyday wear to statement pieces, these earrings are crafted to speak softly or turn heads – a perfect pair for your collection.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "Shop The Collection",
+            "button_1_text": "",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/drop-earrings?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
+            "button_2_metaobject": "",
+            "button_2_text": "Shop The Curation",
+            "button_2_link": "https://www.nataliemariejewellery.com/collections/drop-earrings?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "cc11ec83-9736-4bb2-9d80-2b917436668e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/4_Bracelets-Mobile.jpg",
+            "apply_overlay": false,
+            "devices": "mobile",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "description_mobile": "",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Shop Bracelets",
+            "button_1_link": "shopify://collections/bracelets",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c954802-cdfb-4c10-8480-eed010664a51",
+        "efb9f213-441f-4fab-a644-3ddbc3a4ca97",
+        "0253a4d5-00b4-4c80-870d-9c2892691aa3",
+        "cc11ec83-9736-4bb2-9d80-2b917436668e"
+      ],
+      "settings": {
+        "grid_items_count": 3,
+        "grid_items_count_pocket": "1/2",
+        "text_align": "center",
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "html": "",
+        "colour_style": "dark",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
+      }
+    },
+    "3724036e-7066-4fcb-98bc-86c05f650a17": {
       "type": "content-slider",
       "blocks": {
-        "a341f433-5015-425a-a79e-870018486d71": {
+        "d509fa90-2f01-4264-96dc-99e68566a8cf": {
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "coloured-trunk-show-one-of-a-kinds",
+            "collection": "vintage-inspired-engagement-wedding-rings",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -569,21 +569,21 @@
         }
       },
       "block_order": [
-        "a341f433-5015-425a-a79e-870018486d71"
+        "d509fa90-2f01-4264-96dc-99e68566a8cf"
       ],
       "settings": {
-        "enable_light": true,
-        "grid_items_count": 10,
+        "enable_light": false,
+        "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>One Of A Kind</p>",
-        "title": "<p><em>A Study In Colour&nbsp;</em></p>",
-        "description": "<p>Crafted exclusively for&nbsp;<strong>A Study in Colour</strong>, discover a limited collection of one-of-a-kind pieces celebrating natural gemstones in their individual forms and characteristics.</p>",
+        "subheading": "<p>Engagement & Wedding Rings</p>",
+        "title": "<p><em>Vintage Inspired</em></p>",
+        "description": "<p>Discover intricate millgrain edges, hand-engraved details, considered stone settings and sculptural forms, each a nod to eras past. These details bring together vintage design sensibilities with thoughtful, modern workmanship.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
+        "button_1_text": "Discover The Range",
+        "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
         "button_2_text": "",
-        "button_2_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
+        "button_2_link": "",
         "button_style": "underline"
       }
     },

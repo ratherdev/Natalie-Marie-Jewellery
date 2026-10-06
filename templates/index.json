@@ -35,14 +35,14 @@
         "56bb69ec-fd48-426b-8115-26a4ed674f40": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/EireneSolitaireRing_Sapphire(1).mp4",
+            "video": "shopify://files/videos/Untitled-30September2026at09.12.00.mp4",
             "fifty_fifty": true,
             "autoplay": true,
             "loop": true,
             "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "<p><strong>One Of A Kind</strong></p>",
-            "title": "<p>A Study in Colour</p>",
+            "title": "<p><em>A Study in Colour</em></p>",
             "description": "<p>Crafted exclusively for <strong>A Study in Colour</strong>, discover a limited collection of one-of-a-kind pieces celebrating natural gemstones in their individual forms and characteristics.</p>",
             "colour_style": "light",
             "button_1_text": "Explore The Range",
@@ -53,17 +53,17 @@
         "177ec424-4f77-417c-abfd-95b841c1986f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/251103_NMJ_0646.jpg",
-            "mobile_image": "shopify://shop_images/251103_NMJ_0646.jpg",
+            "image": "shopify://shop_images/Untitled-13August2026at10.36.41-2.png",
+            "mobile_image": "shopify://shop_images/Untitled-13August2026at10.36.41-2.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomRight",
-            "subheading": "<p>Farewell to Selected Sashi & Sana Styles</p>",
-            "title": "<p><em>30% Off</em></p>",
-            "description": "<p>As we make room for the season ahead, selected Sashi and Sana styles are now <strong>30% off</strong>—<strong>a final opportunity to</strong> discover these much-loved designs before they leave us. <a href=\"https://www.nataliemariejewellery.com/pages/terms-conditions\" title=\"https://www.nataliemariejewellery.com/pages/terms-conditions\"><em>T&C's Apply.</em>&nbsp;</a></p>",
+            "subheading": "<p>A little self-expression</p>",
+            "title": "<p><em>Heart Matter</em></p>",
+            "description": "<p>Draped and layered styles to keep close to your chest, necklaces serve as aform of self-adornment. From delicate everyday pieces to distinctive statement designs, discover necklaces to wear your way - layered together or treasured on their own.</p>",
             "colour_style": "light",
-            "button_1_text": "Shop The Offer",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/sashi-sana-promo",
+            "button_1_text": "Discover the Collection",
+            "button_1_link": "shopify://collections/necklaces",
             "button_style": "underline"
           }
         },

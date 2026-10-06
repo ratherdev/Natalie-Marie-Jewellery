@@ -203,6 +203,31 @@
         "group_title": "<p><strong>Our Jewellery</strong></p>",
         "group_anchor": "",
         "remove_spacing_top": false,
+        "remove_spacing_bottom": true
+      }
+    },
+    "faq_group_6fAU3Q": {
+      "type": "faq-group",
+      "blocks": {
+        "question_C8h6EJ": {
+          "type": "question",
+          "settings": {
+            "question": "Question",
+            "answer": "<p>Answer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_C8h6EJ"
+      ],
+      "name": "FAQ group",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "description": "",
+        "group_title": "<p><strong>Sizing and Personalisation</strong></p>",
+        "group_anchor": "",
+        "remove_spacing_top": false,
         "remove_spacing_bottom": false
       }
     },
@@ -380,6 +405,7 @@
     "245f9da0-6cff-4047-a42e-95285eedda3e",
     "11411955-503e-4df2-8cc3-fb56bc8e307d",
     "faq_group_9kpx7W",
+    "faq_group_6fAU3Q",
     "accordion_metaobject_Tk8wYV",
     "00083ada-fd41-413c-893b-b870c0b05859",
     "16800638107217eb39"

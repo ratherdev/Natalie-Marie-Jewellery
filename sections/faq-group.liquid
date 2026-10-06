@@ -18,7 +18,7 @@
 	{%- if section.settings.group_title != blank -%}
 		<div class="Accordion__Section Heading Heading--caps Heading--textFont u-h6">
 			<span class="Anchor" id="faq-{{ section.settings.group_anchor | default: section.settings.group_title | handleize }}"></span>
-			<p>{{ section.settings.group_title | escape }}</p>
+			<p>{{ section.settings.group_title }}</p>
 
 			{%- if section.settings.group_image != blank -%}
 				{%- assign media = section.settings.group_image -%}

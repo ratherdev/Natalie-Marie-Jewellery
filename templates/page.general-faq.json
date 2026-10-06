@@ -86,6 +86,7 @@
       "blocks": {
         "question_R7VdTi": {
           "type": "question",
+          "name": "Where and how is your jewellery made?",
           "settings": {
             "question": "Where and how is your jewellery made?",
             "answer": "<p>The majority of NMJ pieces are handcrafted to order by our skilled team of jewellers and stone setters.</p><p>Our Avalon studio sits at the heart of our production process, where each order is carefully reviewed, allocated and then brought to life by jewellers specialising in different areas of the craft. With the majority of our pieces handmade in Australia, we also work with a small network of trusted offshore production partners to produce select components, which are then set and personalised by hand by our in house team of jewellers. Find out more about our production processes here.</p>"
@@ -93,17 +94,107 @@
         },
         "question_GDz4Ud": {
           "type": "question",
+          "name": "What materials and precious metals do you use?",
           "settings": {
             "question": "What materials and precious metals do you use?",
             "answer": "<p>We work with enduring precious metals and carefully selected natural and laboratory-grown stones, chosen for their quality, beauty and suitability for each design.</p><p>Our precious metal offering includes sterling silver, 9ct, 14ct and 18ct gold in yellow, rose and white tones. We use a combination of newly mined and recycled metal, and prioritise using Australian mined gold where possible.</p>"
+          }
+        },
+        "question_7yU7cV": {
+          "type": "question",
+          "name": "What is the difference between 9ct, 14ct and 18ct gold?",
+          "settings": {
+            "question": "What is the difference between 9ct, 14ct and 18ct gold?",
+            "answer": "<p>The carat measure of gold refers to the proportion of fine gold contained<br/>within the metal.</p><ul><li>9ct gold contains 37.5% fine gold</li><li>14ct gold contains 58.5% fine gold</li><li>18ct gold contains 75% fine gold.</li></ul><p>Fine gold is naturally soft, so it is combined with other metals to create an<br/>alloy that is suitable for everyday jewellery. The balance of gold and<br/>alloying metals influences the piece’s colour, strength, durability and<br/>price. We follow industry standards across our offering, with engagement and<br/>wedding jewellery crafted largely in 18ct, and everyday fine jewellery crafted largely in<br/>9ct.</p>"
+          }
+        },
+        "question_HPEgAV": {
+          "type": "question",
+          "name": "What is the difference between yellow, rose and white gold?",
+          "settings": {
+            "question": "What is the difference between yellow, rose and white gold?",
+            "answer": "<p>Yellow, rose and white gold all begin with fine gold. Their individual tones are created by carefully combining the gold with different alloying metals.</p><p>Yellow gold retains the warm, traditional character most closely associated with gold. Rose gold has a soft blush tone create by a higher proportion of copper in the alloy. White gold combines gold with pale-tones metals and is finished with rhodium plating to create its bright white appearance. All alloys wear equally, depending on the carat measure.</p>"
+          }
+        },
+        "question_VWDP3i": {
+          "type": "question",
+          "name": "Is your jewellery nickel-free?",
+          "settings": {
+            "question": "Is your jewellery nickel-free?",
+            "answer": "<p>Our jewellery is crafted in accordance with European standards governing nickel release, which set strict limits for jewellery intended to be worn against the skin.</p>"
+          }
+        },
+        "question_MYLcNk": {
+          "type": "question",
+          "name": "Are your diamonds and gemstones responsibly sourced?",
+          "settings": {
+            "question": "Are your diamonds and gemstones responsibly sourced?",
+            "answer": "<p>Responsible sourcing is an ongoing commitment at NMJ and an important consideration in every supplier relationship we establish.</p><p>Our suppliers are assessed through a detailed due diligence framework covering human rights, environmental responsibility, legality, traceability and responsible business practices. Suppliers are asked to provide supporting policies and evidence, and those unwilling to engage with our requirements are removed from our supply chain. Additionally, all of our diamond suppliers adhere to the Kimberly Process.</p><p>Where we make a specific claim about a gemstone’s origin, that claim is supported by written evidence of provenance. We also prioritise locally sourced stones where possible, including Australian sapphires from Central Queensland.</p><p>We recognise that jewellery supply chains are complex and that responsible sourcing is not a fixed destination. We remain committed to continually improving transparency, traceability and accountability throughout our supply network.</p>"
+          }
+        },
+        "question_TfD8kq": {
+          "type": "question",
+          "name": " Our Jewellery  Where and how is your jewellery made?  The majority of NMJ pieces are handcrafted to",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "question_QBHa9V": {
+          "type": "question",
+          "name": "Are your diamonds certified?",
+          "settings": {
+            "question": "Are your diamonds certified?",
+            "answer": "<p>Unless otherwise stated, all natural and laboratory-grown diamonds over 0.30ct are independently certified by a recognised gemmological laboratory. Each certified diamond is accompanied by a detailed certificate outlining its individual characteristics and quality.</p><p>All certified diamonds also feature a unique identification number laser-inscribed on the girdle, corresponding with the information provided on the certificate.</p><p>Smaller accent diamonds are not typically certified individually. Where certification applies, the certificate will be provided with your finished piece.</p>"
+          }
+        },
+        "question_GDq6mg": {
+          "type": "question",
+          "name": "What is the difference between natural and laboratory-grown diamonds?",
+          "settings": {
+            "question": "What is the difference between natural and laboratory-grown diamonds?",
+            "answer": "<p>Natural diamonds are formed deep within the earth over billions of years, while laboratory-grown diamonds are created in a controlled environment using technology that replicates the conditions under which natural diamonds develop.</p><p>Both are genuine diamonds, sharing the same chemical composition, physical properties and beautiful brilliance. The key difference is simply their origin. Laboratory-grown diamonds generally offer a more accessible price point, while natural diamonds are valued for their rarity and unique geological history.</p><p>We offer both options, allowing you to choose the diamond that best reflects your preferences, values and budget. Unless otherwise stated, all natural and laboratory-grown diamonds over 0.30ct are independently certified and feature a corresponding identification number laser-inscribed on the girdle.</p>"
+          }
+        },
+        "question_EMhcdR": {
+          "type": "question",
+          "name": "Why can natural stones and precious metal alloys vary between pieces?",
+          "settings": {
+            "question": "Why can natural stones and precious metal alloys vary between pieces?",
+            "answer": "<p>Natural stones are formed through unique geological processes, meaning no two are ever exactly alike. Subtle variations in colour, tone, pattern, inclusion and other natural characteristics may occur from one stone to another. These details are part of each stone’s story and contribute to the individual beauty of every piece rather than being considered faults.</p><p>The colour of precious metal alloys may also vary slightly between pieces. This is because gold is blended with other metals to create is colour, strength and carat, and subtle differences between individual alloy batches can influence the finished tone. These natural variations are to be expected and make each piece uniquely yours.</p>"
+          }
+        },
+        "question_pqNPyw": {
+          "type": "question",
+          "name": " Will my finished piece look exactly like the piece shown online? ",
+          "settings": {
+            "question": "Will my finished piece look exactly like the piece shown online?",
+            "answer": "<p>As many of our pieces are handcrafted to order and feature natural stones, your finished piece may vary slightly from the product imagery shown online. Subject differences in stone colour, tone, pattern and natural inclusions may occur, while the colour of precious metal alloys can also vary slightly between individual batches.</p><p>We take great care to remain true to the original design and overall aesthetic of each piece. These subtle variations are a beautiful reflection of the materials and handcrafted process, giving every piece its own individual character.</p><p>We endeavour to always provide detailed dimensions and scale information, including images of the pieces worn on the body for reference.</p>"
+          }
+        },
+        "question_XUdCiC": {
+          "type": "question",
+          "name": "What is a One of a Kind piece?",
+          "settings": {
+            "question": "What is a One of a Kind piece?",
+            "answer": "<p>Our One of a Kind pieces are truly unique designs, created as an extension of our bespoke offering. Each piece is thoughtfully designed to celebrate the individual characteristics of a particular stone.</p><p>Because of the unique nature of the stone or design, these pieces cannot be replicated exactly. Once a One of a Kind piece has found its forever home, there will never be another precisely the same.</p><p>If you miss out on a one of a kind piece, our bespoke team can work with you to create a design which is equally unique in design and form.</p>"
           }
         }
       },
       "block_order": [
         "question_R7VdTi",
-        "question_GDz4Ud"
+        "question_GDz4Ud",
+        "question_7yU7cV",
+        "question_HPEgAV",
+        "question_VWDP3i",
+        "question_MYLcNk",
+        "question_TfD8kq",
+        "question_QBHa9V",
+        "question_GDq6mg",
+        "question_EMhcdR",
+        "question_pqNPyw",
+        "question_XUdCiC"
       ],
-      "disabled": true,
       "name": "FAQ group",
       "settings": {
         "subheading": "",

@@ -195,6 +195,7 @@
         "question_pqNPyw",
         "question_XUdCiC"
       ],
+      "disabled": true,
       "name": "FAQ group",
       "settings": {
         "subheading": "",
@@ -220,6 +221,7 @@
       "block_order": [
         "question_C8h6EJ"
       ],
+      "disabled": true,
       "name": "FAQ group",
       "settings": {
         "subheading": "",

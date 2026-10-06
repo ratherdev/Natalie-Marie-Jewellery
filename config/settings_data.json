@@ -408,7 +408,7 @@
             "type": "text",
             "settings": {
               "title": "Here to Help",
-              "content": "<p><a href=\"tel:0294432426\" title=\"tel:0294432426\">(02) 9443 2426</a></p><p>Speak to us: Mon - Sat | 9:30am - 4:30pm</p><p><a href=\"mailto://studio@nataliemariejewellery.com\" title=\"mailto://studio@nataliemariejewellery.com\">studio@nataliemariejewellery.com</a></p><p>Visit us In Avalon: Tues - Sat | 9:30am-4:30pm </p><p>43 Old Barrenjoey Rd, Avalon Beach</p><p>Visit us In Paddington: Tues - Sat | 10:00am-5:00pm </p><p>Sun 11:00am - 4:00pm</p><p>70 William Street, Paddington</p>",
+              "content": "<p><a href=\"tel:0294432426\" title=\"tel:0294432426\">(02) 9443 2426</a></p><p>Speak to us: Mon - Sat | 9:30am - 4:30pm</p><p><a href=\"mailto://studio@nataliemariejewellery.com\" title=\"mailto://studio@nataliemariejewellery.com\">studio@nataliemariejewellery.com</a></p><p>Visit us In Avalon: Tues - Sat | 9:30am-4:30pm&nbsp;<br/></p><p>Sun 11:00am - 3pm</p><p>43 Old Barrenjoey Rd, Avalon Beach</p><p>Visit us In Paddington: Tues - Sat | 10:00am-5:00pm&nbsp;</p><p>Sun 11:00am - 4:00pm</p><p>70 William Street, Paddington</p>",
               "show_social_media": false,
               "move_end_mobile": false
             }

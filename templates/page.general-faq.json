@@ -227,8 +227,8 @@
         "description": "",
         "group_title": "<p><strong>Sizing and Personalisation</strong></p>",
         "group_anchor": "",
-        "remove_spacing_top": false,
-        "remove_spacing_bottom": false
+        "remove_spacing_top": true,
+        "remove_spacing_bottom": true
       }
     },
     "accordion_metaobject_Tk8wYV": {

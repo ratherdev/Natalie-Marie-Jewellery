@@ -122,7 +122,7 @@
 			data-variant-id="{{ product.variants[0].id }}"
 			data-product-url="{{ shop.url }}{{ product.url }}">
 				{%- render 'icon' with 'wishlist' -%}
-				{%- render 'icon' with 'wishlist-fill', class: hidden' -%}
+				{%- render 'icon' with 'wishlist-fill', class: hidden -%}
 		</span>
     {%- endif -%}
 
@@ -264,4 +264,13 @@
   {%- if use_horizontal -%}
     <a href="{{ product.url }}" class="ProductItem__ViewButton Button Button--secondary hidden-pocket">{{ 'collection.product.view_product' | t }}</a>
   {%- endif -%}
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'icon' with 'wishlist-fill', class: hidden' -%}"
+  to: "{%- render 'icon' with 'wishlist-fill', class: hidden -%}"
+  position: 5051..5108
+{%- endcomment -%}

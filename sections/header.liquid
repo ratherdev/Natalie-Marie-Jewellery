@@ -492,7 +492,7 @@ HEADER CONTENT
       {%- if section.settings.show_icons and settings.enable_swym -%}
         <a href="#swym-wishlist" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable swym-wishlist">
           {%- render 'icon' with 'wishlist' -%}
-		  {%- render 'icon' with 'wishlist-fill', class: hidden' -%}
+		  {%- render 'icon' with 'wishlist-fill', class: hidden -%}
         </a>
       {%- endif -%}
 
@@ -810,4 +810,13 @@ HEADER CONTENT
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'icon' with 'wishlist-fill', class: hidden' -%}"
+  to: "{%- render 'icon' with 'wishlist-fill', class: hidden -%}"
+  position: 28851..28908
+{%- endcomment -%}

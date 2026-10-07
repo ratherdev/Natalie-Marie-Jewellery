@@ -122,9 +122,9 @@
 												{{ product.metafields.custom.crafting_location.value.title }}
 											</h3>
 
-											<div>
-												{{ product.metafields.custom.crafting_location.value.content }}
-											</div>
+											<div class="crafting-location-content">
+    {{ crafting_location.content | metafield_tag }}
+  </div>
 											{% else %}
 											{{ footer_button_block.settings.button_3_content }}
 											{% endif %}

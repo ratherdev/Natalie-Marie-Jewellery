@@ -117,8 +117,18 @@
 								
 								{%- if footer_button_block.settings.button_3_text != blank and footer_button_block.settings.button_3_content != blank -%}
 									<div class="ToggleContent ProductMeta__FooterButtonSet--content" id="ProductMeta__FooterButtonSet--content_3" aria-hidden="true">
-										testing
-										{{ footer_button_block.settings.button_3_content }}
+										{% if product.metafields.custom.crafting_location.value %}
+											<h3>
+												{{ product.metafields.custom.crafting_location.value.title }}
+											</h3>
+
+											<div>
+												{{ product.metafields.custom.crafting_location.value.content }}
+											</div>
+											{% else %}
+											{{ footer_button_block.settings.button_3_content }}
+											{% endif %}
+										
 									</div>
 								{%- endif -%}
 							{%- endcapture -%}

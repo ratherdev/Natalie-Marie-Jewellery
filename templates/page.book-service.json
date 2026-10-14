@@ -541,10 +541,7 @@
     },
     "custom_liquid_UcVxXf": {
       "type": "custom-liquid",
-      "custom_css": [
-        "* {margin: 0 !important; padding: 0 !important; min-height: 0 !important;}",
-        " div {display: none !important; }"
-      ],
+      "custom_css": [],
       "name": "Custom Liquid",
       "settings": {
         "subheading": "",

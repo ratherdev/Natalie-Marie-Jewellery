@@ -34,6 +34,7 @@
         },
         "56bb69ec-fd48-426b-8115-26a4ed674f40": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/Untitled-30September2026at09.12.00.mp4",
             "fifty_fifty": true,
@@ -50,38 +51,37 @@
             "button_style": "underline"
           }
         },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Image_for_the_site.png",
-            "mobile_image": "shopify://shop_images/Image_for_the_site.png",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p><strong>A little self-expression</strong></p>",
-            "title": "<p><em>Heart Matter</em></p>",
-            "description": "<p>Draped and layered styles to keep close to your chest, necklaces serve as aform of self-adornment. From delicate everyday pieces to distinctive statement designs, discover necklaces to wear your way - layered together or treasured on their own.</p>",
-            "colour_style": "light",
-            "button_1_text": "Discover the Collection",
-            "button_1_link": "shopify://collections/necklaces",
-            "button_style": "underline"
-          }
-        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Website_banner_23358a62-4351-4d64-ac56-46514410bfab.png",
-            "mobile_image": "shopify://shop_images/Website_banner_23358a62-4351-4d64-ac56-46514410bfab.png",
+            "image": "shopify://shop_images/LeoraTennisNecklace_2.png",
+            "mobile_image": "shopify://shop_images/LeoraTennisNecklace_2.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
-            "subheading": "<p>A Study In Colour</p>",
-            "title": "<p><em>Gemstone Trunk Show</em></p>",
-            "description": "<p>For three days only, discover a curated collection of one-of-a-kind natural gemstones, alongside exclusive finished pieces created especially for the occasion. Our most-loved signatures have been reimagined through colour, with new Eirene designs also making their debut.</p>",
+            "subheading": "<p><strong>With love, from us to you</strong></p>",
+            "title": "<p><em>Enjoy up to 15% off&nbsp;</em></p>",
+            "description": "<p>Our love letter, extending gratitude for trusting us with your stories. <strong>Enjoy up to 15% off made-to-order pieces.</strong></p><p>Thoughtfully handcrafted to order, for the people and moments that mean the most.</p>",
             "colour_style": "light",
-            "button_1_text": "Discover The Event",
-            "button_1_link": "https://www.nataliemariejewellery.com/pages/gemstone-trunkshow",
+            "button_1_text": "Explore Christmas Gift Guides",
+            "button_1_link": "https://www.nataliemariejewellery.com/pages/gift-guides-2026",
+            "button_style": "underline"
+          }
+        },
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_176.jpg",
+            "mobile_image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_176_89d699f1-c2ef-4f2a-ba80-40c8cffcef7a.jpg",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "bottomRight",
+            "subheading": "<p><strong>to treasure always</strong></p>",
+            "title": "<p><em>Sincerely Yours</em></p>",
+            "description": "<p>It is often the smallest things we keep forever. A note tucked safely away. The words reread long after the moment has passed. The quiet reminders of how it feels to be deeply loved, deeply known.</p>",
+            "colour_style": "light",
+            "button_1_text": "Discover the Collection",
+            "button_1_link": "shopify://collections/sincerely-yours",
             "button_style": "underline"
           }
         },
@@ -107,8 +107,8 @@
       "block_order": [
         "video_qWnByf",
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
-        "177ec424-4f77-417c-abfd-95b841c1986f",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
+        "177ec424-4f77-417c-abfd-95b841c1986f",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],
       "settings": {
@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "coloured-trunk-show-one-of-a-kinds",
+            "collection": "for-making-a-statement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -139,15 +139,15 @@
         "enable_light": true,
         "grid_items_count": 10,
         "enable_natual_scroll": true,
-        "subheading": "<p>One Of A Kind</p>",
-        "title": "<p><em>A Study In Colour&nbsp;</em></p>",
-        "description": "<p>Crafted exclusively for&nbsp;<strong>A Study in Colour</strong>, discover a limited collection of one-of-a-kind pieces celebrating natural gemstones in their individual forms and characteristics.</p>",
+        "subheading": "<p>Gift Guide</p>",
+        "title": "<p><em>For Making A Statement&nbsp;</em></p>",
+        "description": "<p>For the milestones worth marking, the gestures that say more than words ever could, and the moments that deserve something unforgettable.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
+        "button_1_link": "shopify://collections/for-making-a-statement",
         "button_2_text": "",
-        "button_2_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
+        "button_2_link": "shopify://collections/for-making-a-statement",
         "button_style": "underline"
       }
     },
@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "vintage-inspired-engagement-wedding-rings",
+            "collection": "for-pieces-with-meaning",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -575,13 +575,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>Engagement & Wedding Rings</p>",
-        "title": "<p><em>Vintage Inspired</em></p>",
-        "description": "<p>Discover intricate millgrain edges, hand-engraved details, considered stone settings and sculptural forms, each a nod to eras past. These details bring together vintage design sensibilities with thoughtful, modern workmanship.</p>",
+        "subheading": "<p>Gift Guide</p>",
+        "title": "<p><em>For Pieces With Meaning</em></p>",
+        "description": "<p>For the quiet gestures, heartfelt sentiments and the love that deserves to be held close. Thoughtfully curated by Natalie, discover a selection of our community's most-loved pieces.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Discover The Range",
-        "button_1_link": "shopify://collections/vintage-inspired-engagement-wedding-rings",
+        "button_1_link": "shopify://collections/for-pieces-with-meaning",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

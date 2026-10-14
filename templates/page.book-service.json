@@ -543,7 +543,7 @@
       "type": "custom-liquid",
       "custom_css": [
         "* {margin: 0 !important; padding: 0 !important; min-height: 0 !important;}",
-        "# {display: none !important;}"
+        "div {display: none !important;}"
       ],
       "name": "Custom Liquid",
       "settings": {

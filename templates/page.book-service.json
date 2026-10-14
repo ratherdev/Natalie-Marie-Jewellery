@@ -549,7 +549,7 @@
       "settings": {
         "subheading": "",
         "title": "",
-        "liquid": "<!-- TTA: Acuity booking -> GA4 generate_lead (added Oct 2026) -->\n<script>\n(function () {\nvar seen = {};\nwindow.addEventListener('message', function (e) {\nif (!/acuityscheduling\\.com$/.test((e.origin || '').replace(/^https?:\\/\\//, ''))) return;\nvar d = e.data;\nif (!d || d.acuityconversion !== 'success' || seen[d.id]) return;\nseen[d.id] = true;\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){ dataLayer.push(arguments); }\ngtag('event', 'generate_lead', {\nsend_to: 'G-2S8W44BM46',\nlead_source: d.appointmentType,\ncalendar: d.calendar,\nvalue: parseFloat(d.price) || 0,\ncurrency: 'AUD',\ntransaction_id: d.id\n});\n});\n})();\n</script>"
+        "liquid": "<!-- TTA: Acuity booking -> GA4 generate_lead (added Oct 2026) -->\n<script>\n(function () {\nvar seen = {};\nwindow.addEventListener('message', function (e) {\nif (!/(acuityscheduling|acuityinnovation)\\.com$/.test((e.origin || '').replace(/^https?:\\/\\//, ''))) return;\nvar d = e.data;\nif (!d || d.acuityconversion !== 'success' || seen[d.id]) return;\nseen[d.id] = true;\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){ dataLayer.push(arguments); }\ngtag('event', 'generate_lead', {\nsend_to: 'G-2S8W44BM46',\nlead_source: d.appointmentType,\ncalendar: d.calendar,\nvalue: parseFloat(d.price) || 0,\ncurrency: 'AUD',\ntransaction_id: d.id\n});\n});\n})();\n</script>"
       }
     }
   },

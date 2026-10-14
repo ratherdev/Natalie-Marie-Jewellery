@@ -538,6 +538,18 @@
         "button_2_link": "",
         "button_style": "underline"
       }
+    },
+    "custom_liquid_UcVxXf": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "* {margin: 0 !important; padding: 0 !important; min-height: 0 !important; }"
+      ],
+      "name": "Custom Liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "<!-- TTA: Acuity booking -> GA4 generate_lead (added Oct 2026) -->\n<script>\n(function () {\nvar seen = {};\nwindow.addEventListener('message', function (e) {\nif (!/acuityscheduling\\.com$/.test((e.origin || '').replace(/^https?:\\/\\//, ''))) return;\nvar d = e.data;\nif (!d || d.acuityconversion !== 'success' || seen[d.id]) return;\nseen[d.id] = true;\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){ dataLayer.push(arguments); }\ngtag('event', 'generate_lead', {\nsend_to: 'G-2S8W44BM46',\nlead_source: d.appointmentType,\ncalendar: d.calendar,\nvalue: parseFloat(d.price) || 0,\ncurrency: 'AUD',\ntransaction_id: d.id\n});\n});\n})();\n</script>"
+      }
     }
   },
   "order": [
@@ -548,6 +560,7 @@
     "bbe2eacb-e372-460d-9d09-961884ee4038",
     "3b27efc2-8d0f-4cf3-b0c1-6cf94ae77cf1",
     "main",
-    "1679627866e0be1ce9"
+    "1679627866e0be1ce9",
+    "custom_liquid_UcVxXf"
   ]
 }

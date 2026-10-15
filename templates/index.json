@@ -434,38 +434,6 @@
             "metaobject_devices": ""
           }
         },
-        "efb9f213-441f-4fab-a644-3ddbc3a4ca97": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8_0e1191f9-919f-4495-9e22-e11815a8d376.png",
-            "apply_overlay": false,
-            "devices": "mobile_desktop",
-            "content_position": "underLeft",
-            "subheading": "",
-            "title": "<p><em>Diamond &nbsp;</em>Necklaces</p>",
-            "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
-            "description_mobile": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
-            "colour_style": "dark",
-            "button_1_metaobject": "",
-            "button_1_text": "Explore The Collection",
-            "button_1_link": "shopify://collections/diamond-necklaces",
-            "button_2_metaobject": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_3_metaobject": "",
-            "button_3_text": "",
-            "button_3_link": "",
-            "button_style": "underline",
-            "include_no_media_border": true,
-            "metaobject_autoplay": "",
-            "metaobject_loop": "",
-            "metaobject_apply_overlay": "",
-            "metaobject_content_position": "",
-            "metaobject_colour_style": "",
-            "metaobject_button_style": "",
-            "metaobject_devices": ""
-          }
-        },
         "0253a4d5-00b4-4c80-870d-9c2892691aa3": {
           "type": "image",
           "settings": {
@@ -484,6 +452,38 @@
             "button_2_metaobject": "",
             "button_2_text": "Shop The Curation",
             "button_2_link": "https://www.nataliemariejewellery.com/collections/tennis-bracelets?filter.p.m.custom.filter_metal=Yellow%20Gold",
+            "button_3_metaobject": "",
+            "button_3_text": "",
+            "button_3_link": "",
+            "button_style": "underline",
+            "include_no_media_border": true,
+            "metaobject_autoplay": "",
+            "metaobject_loop": "",
+            "metaobject_apply_overlay": "",
+            "metaobject_content_position": "",
+            "metaobject_colour_style": "",
+            "metaobject_button_style": "",
+            "metaobject_devices": ""
+          }
+        },
+        "efb9f213-441f-4fab-a644-3ddbc3a4ca97": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_0e1191f9-919f-4495-9e22-e11815a8d376.png",
+            "apply_overlay": false,
+            "devices": "mobile_desktop",
+            "content_position": "underLeft",
+            "subheading": "",
+            "title": "<p><em>Diamond &nbsp;</em>Necklaces</p>",
+            "description": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
+            "description_mobile": "<p>Our collection of diamond necklaces celebrates the quiet brilliance of fine craftsmanship and timeless design. Thoughtfully handcrafted, each piece is created to honour them memories that shape your story.</p>",
+            "colour_style": "dark",
+            "button_1_metaobject": "",
+            "button_1_text": "Explore The Collection",
+            "button_1_link": "shopify://collections/diamond-necklaces",
+            "button_2_metaobject": "",
+            "button_2_text": "",
+            "button_2_link": "",
             "button_3_metaobject": "",
             "button_3_text": "",
             "button_3_link": "",
@@ -534,8 +534,8 @@
       },
       "block_order": [
         "6c954802-cdfb-4c10-8480-eed010664a51",
-        "efb9f213-441f-4fab-a644-3ddbc3a4ca97",
         "0253a4d5-00b4-4c80-870d-9c2892691aa3",
+        "efb9f213-441f-4fab-a644-3ddbc3a4ca97",
         "cc11ec83-9736-4bb2-9d80-2b917436668e"
       ],
       "settings": {

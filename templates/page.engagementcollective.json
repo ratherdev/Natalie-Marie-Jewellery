@@ -33,10 +33,10 @@
       ],
       "settings": {
         "enable_dark": false,
-        "subheading": "<p><strong>The Wedding Collective </strong></p>",
-        "title": "<p><em>Handcrafted</em> to Mark Your Forever</p>",
-        "description": "<p>Find the wedding band that reflects your personal style. From the timeless brilliance of laboratory-grown diamonds to the understated beauty of sapphires and refined plain gold designs, explore our handcrafted collection by stone and discover the piece that feels uniquely yours.</p>",
-        "feature_text": "<p>From <em>timeless</em> diamonds to <em>meaningful </em>sapphires, discover a wedding band to <em>endure</em>.</p>",
+        "subheading": "<p>THE ENGAGEMENT COLLECTION</p>",
+        "title": "<h3><em>A Promise</em>, Made Personal</h3>",
+        "description": "<p>Find the engagement ring that tells your story. From the timeless brilliance of natural and laboratory grown diamonds to the individual character of coloured gemstones, explore our handcrafted collection and discover a piece that feels uniquely yours. Thoughtfully designed to mark your beginning and be treasured for a lifetime.</p>",
+        "feature_text": "<p>For the moment you ask<em>, and every day they say yes.</em></p>",
         "colour_style": "dark",
         "button_1_metaobject": "",
         "button_1_text": "",
@@ -54,7 +54,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "crown-wedding-rings",
+            "collection": "solitaire-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -69,12 +69,12 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "<p><strong>Shop By Style</strong></p>",
-        "title": "<p>Crown <em>Wedding Rings</em></p>",
-        "description": "<p>A piece for all stories; a pair for your personal duet. Discover Crown Wedding Rings.</p>",
+        "title": "<p>Solitaire Engagement<em> Rings</em></p>",
+        "description": "<p>Explore our Solitaire Engagement Rings — a singular stone, a commitment to craftsmanship and sustainability, embodying timeless love.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "https://www.nataliemariejewellery.com/collections/crown-wedding-rings?filter.p.m.custom.filter_metal=Yellow%20Gold",
+        "button_1_link": "shopify://collections/solitaire-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -87,7 +87,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "mined-diamond",
+            "collection": "triology-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -101,13 +101,13 @@
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Natural Diamond</em> Wedding Rings</p>",
-        "description": "<p>Celebrate lasting commitment with our Natural Diamond Wedding Rings, each handcrafted in our Sydney studio with precision and care.</p>",
+        "subheading": "<p><strong>Shop By Style</strong></p>",
+        "title": "<p>Trilogy <em>Engagement</em> Rings</p>",
+        "description": "<p>Each <strong>Trilogy Engagement Ring</strong> captures the beauty of your shared journey—three stones representing your past, your present, and your forever.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/mined-diamond",
+        "button_1_link": "shopify://collections/triology-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -120,7 +120,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "plain-wedding-rings",
+            "collection": "multi-stone-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -135,12 +135,12 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "<p><strong>Shop By Style</strong></p>",
-        "title": "<p>Plain <em>Wedding Rings</em></p>",
-        "description": "<p>Eternal bonds, symbolic of vows taken. Wedding bands are gestures of forever, exchanged in harmony with the one you love.</p>",
+        "title": "<p>Multi-Stone<em> Engagement Rings</em></p>",
+        "description": "<p>Crafted with purpose and precision, these rings invite you to celebrate every chapter with one beautifully composed symbol.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/plain-wedding-rings",
+        "button_1_link": "shopify://collections/multi-stone-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -153,7 +153,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "champagne-diamond-wedding-rings",
+            "collection": "cluster-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -167,13 +167,13 @@
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Champagne Diamond </em>Wedding Rings </p>",
-        "description": "<p>Each ring is handcrafted using champagne diamonds - chosen for their subtle hues and natural brilliance. </p>",
+        "subheading": "<p><strong>Shop By Style</strong></p>",
+        "title": "<p>Cluster <em>Engagement</em> Rings&nbsp;</p>",
+        "description": "<p>Every <strong>Cluster Engagement Ring</strong> is a handcrafted expression of intentional design. Using <strong>ethically sourced stones</strong>, our artisans create clusters that evoke a sense of movement and balance</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/champagne-diamond-wedding-rings",
+        "button_1_link": "shopify://collections/cluster-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -186,7 +186,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "laboratory-grown-diamond-wedding-rings",
+            "collection": "laboratory-grown-diamond-engagement-ring",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -201,12 +201,12 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p><em>Laboratory Grown </em>Wedding Rings</p>",
-        "description": "<p>Your wedding band, reimagined. Laboratory-Grown Diamonds meet expert craftsmanship for a ring that’s as enduring as your promise.</p>",
+        "title": "<p><em>Laboratory Grown Engagement</em> Rings</p>",
+        "description": "<p>From classic solitaire designs, trilogy rings, or&nbsp;<strong>unique cluster settings&nbsp;</strong>Designed for everyday wear and a lifetime of meaning</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/laboratory-grown-diamond-wedding-rings",
+        "button_1_link": "shopify://collections/laboratory-grown-diamond-engagement-ring",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -219,7 +219,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "wedding-bands-for-him",
+            "collection": "mined-diamond-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -233,13 +233,13 @@
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Style </strong></p>",
-        "title": "<p>Men's <em>Wedding Rings</em></p>",
-        "description": "<p>Design-forward creations and classic renderings shape this collection of men’s Ceremonial bands. For the ultimate gesture of forever.</p>",
+        "subheading": "<p><strong>Shop By Stone</strong></p>",
+        "title": "<p>Natural Diamond <em>Engagement Rings</em></p>",
+        "description": "<p>Discover the enduring allure of <strong>natural diamond engagement rings</strong>, crafted by hand with care and intention. Each piece in this collection features an <strong>ethically sourced natural diamonds.</strong></p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/wedding-bands-for-him",
+        "button_1_link": "shopify://collections/mined-diamond-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -252,7 +252,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "sapphire-wedding-rings",
+            "collection": "sapphire-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -267,12 +267,12 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "<p><strong>Shop By Stone</strong></p>",
-        "title": "<p>Sapphire <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "title": "<p>Sapphire <em>Engagement</em> <em>Rings</em></p>",
+        "description": "<p>Loved for their natural beauty, Sapphires are a reflection of their relationship with the earth. A deep connection between two, our Sapphire Engagement Ring collection is an ode to your personal story.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/sapphire-wedding-rings",
+        "button_1_link": "shopify://collections/sapphire-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -285,7 +285,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "something-sentimental-collection",
+            "collection": "champagne-diamond-engagement",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -295,18 +295,17 @@
       "block_order": [
         "3aaa1e55-5aff-45c5-8ac6-d84a64448de3"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": false,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Wedding Collective</strong></p>",
-        "title": "<p>Something <em>New</em></p>",
-        "description": "<p>On this day, the beauty lies in the small details. Curated for timelessness in mind, these consciously crafted gifts are perfect expressions of your milestone.</p>",
+        "subheading": "<p><strong>Shop By Stone&nbsp;</strong></p>",
+        "title": "<p>Champagne Diamond <em>Engagement Rings</em></p>",
+        "description": "<p>Our Champagne Diamond Engagement Rings collection offers a warm, alternative take on tradition - designed for those who seek <em>quiet individuality.</em></p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/something-sentimental-collection",
+        "button_1_link": "shopify://collections/champagne-diamond-engagement",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

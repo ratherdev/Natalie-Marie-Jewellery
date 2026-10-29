@@ -12,6 +12,23 @@
     "097f4421-1065-41b5-b18d-fa4b0294968a": {
       "type": "slideshow",
       "blocks": {
+        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_224_2.jpg",
+            "mobile_image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_224_2.jpg",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "bottomLeft",
+            "subheading": "<p><strong>With love, from us to you</strong></p>",
+            "title": "<p><em>Enjoy up to 15% off&nbsp;</em></p>",
+            "description": "<p>Our love letter, extending gratitude for trusting us with your stories. <strong>Enjoy up to 15% off made-to-order pieces.</strong></p><p>Thoughtfully handcrafted to order, for the people and moments that mean the most.</p>",
+            "colour_style": "light",
+            "button_1_text": "Explore Christmas Gift Guides",
+            "button_1_link": "https://www.nataliemariejewellery.com/pages/gift-guides-2026",
+            "button_style": "underline"
+          }
+        },
         "video_qWnByf": {
           "type": "video",
           "disabled": true,
@@ -46,24 +63,7 @@
             "description": "<p>Some moments become part of your story forever. A quiet promise, a heartfelt yes, the beginning of a life shared. With an oval diamond at its heart, framed by a luminous diamond halo, the Eirene Halo Ring celebrates these beginnings.&nbsp;</p>",
             "colour_style": "light",
             "button_1_text": "Explore The Range",
-            "button_1_link": "shopify://collections/coloured-trunk-show-one-of-a-kinds",
-            "button_style": "underline"
-          }
-        },
-        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_224_2.jpg",
-            "mobile_image": "shopify://shop_images/NMJ_CHRISTMASGIFTING_HIGH_224_2.jpg",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomLeft",
-            "subheading": "<p><strong>With love, from us to you</strong></p>",
-            "title": "<p><em>Enjoy up to 15% off&nbsp;</em></p>",
-            "description": "<p>Our love letter, extending gratitude for trusting us with your stories. <strong>Enjoy up to 15% off made-to-order pieces.</strong></p><p>Thoughtfully handcrafted to order, for the people and moments that mean the most.</p>",
-            "colour_style": "light",
-            "button_1_text": "Explore Christmas Gift Guides",
-            "button_1_link": "https://www.nataliemariejewellery.com/pages/gift-guides-2026",
+            "button_1_link": "shopify://collections/sincerely-yours",
             "button_style": "underline"
           }
         },
@@ -105,9 +105,9 @@
         }
       },
       "block_order": [
+        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "video_qWnByf",
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
-        "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "177ec424-4f77-417c-abfd-95b841c1986f",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],

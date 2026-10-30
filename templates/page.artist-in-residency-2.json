@@ -60,20 +60,19 @@
             "background": "#f8f6f2",
             "overlay": false,
             "content_position": "middle_left",
-            "subheading": "<p><strong>Artist In Residency </strong></p>",
+            "subheading": "<p><strong>Artist In Residency&nbsp;</strong></p>",
             "heading": "",
-            "description": "<h2><em>Bobby Clark<br/></em></h2><p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>",
-            "description_mobile": "<h2><em>Bobby Clark </em></h2><p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. </p>"
+            "description": "<h3><em>Bonnie Grey</em></h3><p>Discover <em>Lilies of the Field</em> by Bonnie Gray, our Artist in Residence. Through warm colour, expressive texture and quietly poetic details, Bonnie’s paintings explore love, belonging and the beauty held within everyday rituals.&nbsp;</p>",
+            "description_mobile": "<h3><em>Bonnie Grey</em></h3><p>Discover <em>Lilies of the Field</em> by Bonnie Gray, our Artist in Residence. Through warm colour, expressive texture and quietly poetic details, Bonnie’s paintings explore love, belonging and the beauty held within everyday rituals.&nbsp;</p>"
           }
         }
       },
       "block_order": [
         "disruptor_tile_zLkigC"
       ],
-      "disabled": true,
       "name": "Collection on Page",
       "settings": {
-        "collection": "bobby-clark",
+        "collection": "artist-in-residency-bonnie-grey",
         "grid_items_per_page": 48,
         "disruptor_tile_positions": "1",
         "mobile_items_per_row": "2",
@@ -81,6 +80,39 @@
         "desktop_items_per_row": "4",
         "show_vendor": false,
         "show_color_swatch": true
+      }
+    },
+    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
+      "type": "content-slider",
+      "blocks": {
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970": {
+          "type": "collection",
+          "settings": {
+            "title": "<p><strong>Collection</strong></p>",
+            "collection": "bobby-clark",
+            "show_product_info": true,
+            "show_vendor": false,
+            "show_color_swatch": true
+          }
+        }
+      },
+      "block_order": [
+        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
+      ],
+      "settings": {
+        "enable_light": true,
+        "grid_items_count": 20,
+        "enable_natual_scroll": true,
+        "subheading": "<p><strong>Residency Archive </strong></p>",
+        "title": "<p><em>Bobby Clark</em></p>",
+        "description": "<p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>",
+        "text_position": "left",
+        "colour_style": "dark",
+        "button_1_text": "Explore Her Work",
+        "button_1_link": "shopify://collections/bobby-clark",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_style": "underline"
       }
     },
     "112a30e4-a267-406a-a245-0f5c0ab42213": {
@@ -210,39 +242,6 @@
         "colour_style": "dark",
         "button_1_text": "View Their Work",
         "button_1_link": "shopify://collections/cloud-may-studio",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_style": "underline"
-      }
-    },
-    "f4cbf1ef-4a63-4243-92ce-30c74c264480": {
-      "type": "content-slider",
-      "blocks": {
-        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970": {
-          "type": "collection",
-          "settings": {
-            "title": "<p><strong>Collection</strong></p>",
-            "collection": "bobby-clark",
-            "show_product_info": true,
-            "show_vendor": false,
-            "show_color_swatch": true
-          }
-        }
-      },
-      "block_order": [
-        "a5dc43a7-23a2-4efa-ba8b-46b4de5b9970"
-      ],
-      "settings": {
-        "enable_light": true,
-        "grid_items_count": 20,
-        "enable_natual_scroll": true,
-        "subheading": "<p><strong>Residency Archive </strong></p>",
-        "title": "<p><em>Bobby Clark</em></p>",
-        "description": "<p>Proudly Scottish-born and Melbourne-based, artist and photographer Bobby Clark has become renowned for her distinctive visual language. Drawing from her own experience of the world, her work is defined by balance and symmetry, measure and precision.</p>",
-        "text_position": "left",
-        "colour_style": "dark",
-        "button_1_text": "Explore Her Work",
-        "button_1_link": "shopify://collections/bobby-clark",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

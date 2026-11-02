@@ -81,7 +81,7 @@
             "description": "<p>A fresh chapter in colour for our much-loved Sashi and Sana collections. Discover soft buttery tones, warm rose hues and playful natural patterns.&nbsp;</p><p>Wear alone, layer together, make them your own.</p>",
             "colour_style": "light",
             "button_1_text": "Discover the Collection",
-            "button_1_link": "shopify://collections/sana",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/sana?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
             "button_style": "underline"
           }
         },

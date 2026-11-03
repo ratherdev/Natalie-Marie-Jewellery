@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "for-pieces-with-meaning",
+            "collection": "sana",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -575,13 +575,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>Gift Guide</p>",
-        "title": "<p><em>For Pieces With Meaning</em></p>",
-        "description": "<p>For the quiet gestures, heartfelt sentiments and the love that deserves to be held close. Thoughtfully curated by Natalie, discover a selection of our community's most-loved pieces.</p>",
+        "subheading": "<p>Summer In Colour&nbsp;</p>",
+        "title": "<p><em>New Arrivals</em></p>",
+        "description": "<p>Our most-loved Sashi and Sana necklaces return this summer – reimagined with four new grounding mantras to guide you into 2027.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Discover The Range",
-        "button_1_link": "shopify://collections/for-pieces-with-meaning",
+        "button_1_link": "shopify://collections/sana",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

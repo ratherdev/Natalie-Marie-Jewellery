@@ -102,7 +102,7 @@
         "grid_items_count": 20,
         "enable_natual_scroll": true,
         "subheading": "",
-        "title": "<p><em>Camille Crown </em>Ring </p>",
+        "title": "<p><em>Camille Crown </em>Ring&nbsp;</p>",
         "description": "<p>Designed for every story, the Camille Crown Ring features marquise diamond detailing and four tailored fits to complement your engagement ring.</p>",
         "text_position": "left",
         "colour_style": "dark",
@@ -263,18 +263,17 @@
       "block_order": [
         "9c225558-164e-4699-ab9f-70acd9789493"
       ],
-      "disabled": true,
       "settings": {
         "enable_light": true,
         "grid_items_count": 20,
         "enable_natual_scroll": true,
-        "subheading": "<p><strong>Shop By Style </strong></p>",
-        "title": "<p>Men's <em>Wedding Rings</em></p>",
-        "description": "<p>Design-forward creations and classic renderings shape this collection of men’s Ceremonial bands. For the ultimate gesture of forever.</p>",
+        "subheading": "<p><strong>Shop By Style&nbsp;</strong></p>",
+        "title": "<p><em>Meia Crown</em> Ring</p>",
+        "description": "<p>A piece for all stories; a pair for your personal duet. Our marquise cut diamond-laced Meia Crown Ring has been designed across four sizes to allow for the perfect, custom fit based on your engagement ring style.</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/wedding-bands-for-him",
+        "button_1_link": "shopify://collections/meia-crown-ring",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

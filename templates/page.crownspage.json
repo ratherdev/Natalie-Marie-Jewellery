@@ -250,10 +250,9 @@
       "blocks": {
         "9c225558-164e-4699-ab9f-70acd9789493": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "wedding-bands-for-him",
+            "collection": "meia-crown-ring",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": true
@@ -272,8 +271,8 @@
         "description": "<p>A piece for all stories; a pair for your personal duet. Our marquise cut diamond-laced Meia Crown Ring has been designed across four sizes to allow for the perfect, custom fit based on your engagement ring style.</p>",
         "text_position": "left",
         "colour_style": "dark",
-        "button_1_text": "Shop All",
-        "button_1_link": "shopify://collections/meia-crown-ring",
+        "button_1_text": "",
+        "button_1_link": "",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"
@@ -303,7 +302,7 @@
         "enable_natual_scroll": true,
         "subheading": "<p><strong>Shop By Stone</strong></p>",
         "title": "<p>Sapphire <em>Wedding Rings</em></p>",
-        "description": "<p>Explore our edit of Sapphire Wedding Rings. </p>",
+        "description": "<p>Explore our edit of Sapphire Wedding Rings.&nbsp;</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Shop All",

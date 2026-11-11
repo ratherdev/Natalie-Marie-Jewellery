@@ -125,7 +125,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "for-making-a-statement",
+            "collection": "for-pieces-with-meaning",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -140,12 +140,12 @@
         "grid_items_count": 10,
         "enable_natual_scroll": true,
         "subheading": "<p>Gift Guide</p>",
-        "title": "<p><em>For Making A Statement&nbsp;</em></p>",
-        "description": "<p>For the milestones worth marking, the gestures that say more than words ever could, and the moments that deserve something unforgettable.</p>",
+        "title": "<p><em>For Pieces With Meaning</em></p>",
+        "description": "<p>For the quiet gestures, heartfelt sentiments and the love that deserves to be held close. Thoughtfully curated by Natalie, discover a selection of our community's most-loved pieces, from Sollune and Anam Cara to Ella, alongside personalised keepsakes</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Explore All",
-        "button_1_link": "shopify://collections/for-making-a-statement",
+        "button_1_link": "shopify://collections/for-pieces-with-meaning",
         "button_2_text": "",
         "button_2_link": "shopify://collections/for-making-a-statement",
         "button_style": "underline"

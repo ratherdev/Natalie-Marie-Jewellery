@@ -15,8 +15,8 @@
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/8_0e1191f9-919f-4495-9e22-e11815a8d376.png",
-            "mobile_image": "shopify://shop_images/8_0e1191f9-919f-4495-9e22-e11815a8d376.png",
+            "image": "shopify://shop_images/Petite_Fold_Image_For_web_309a5ca3-073e-4c2e-8c87-32441526502c.png",
+            "mobile_image": "shopify://shop_images/Petite_Fold_Image_For_web_309a5ca3-073e-4c2e-8c87-32441526502c.png",
             "apply_overlay": true,
             "fifty_fifty": true,
             "content_position": "bottomLeft",
@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "title": "<p><strong>Collection</strong></p>",
-            "collection": "sana",
+            "collection": "for-telling-their-story",
             "show_product_info": true,
             "show_vendor": false,
             "show_color_swatch": false
@@ -575,13 +575,13 @@
         "enable_light": false,
         "grid_items_count": 16,
         "enable_natual_scroll": true,
-        "subheading": "<p>Summer In Colour&nbsp;</p>",
-        "title": "<p><em>New Arrivals</em></p>",
-        "description": "<p>Our most-loved Sashi and Sana necklaces return this summer – reimagined with four new grounding mantras to guide you into 2027.</p>",
+        "subheading": "<p>Gift Guide</p>",
+        "title": "<p><em>For Telling Their Story</em></p>",
+        "description": "<p>A story only you could tell, brought to life through the details you choose. Discover our collection of personalised treasures, from birthstone necklaces to initial charms and meaningful engravings.&nbsp;</p>",
         "text_position": "left",
         "colour_style": "dark",
         "button_1_text": "Discover The Range",
-        "button_1_link": "shopify://collections/sana",
+        "button_1_link": "shopify://collections/for-telling-their-story",
         "button_2_text": "",
         "button_2_link": "",
         "button_style": "underline"

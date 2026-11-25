@@ -12,14 +12,31 @@
     "097f4421-1065-41b5-b18d-fa4b0294968a": {
       "type": "slideshow",
       "blocks": {
+        "177ec424-4f77-417c-abfd-95b841c1986f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_-_13_August_2026_at_10.36.41-3.png",
+            "mobile_image": "shopify://shop_images/Untitled_-_13_August_2026_at_10.36.41-3.png",
+            "apply_overlay": true,
+            "fifty_fifty": true,
+            "content_position": "middleCenter",
+            "subheading": "<p><strong>For The Person You Know By Heart</strong></p>",
+            "title": "<p><em>Up To 15% Off Sitewide</em></p>",
+            "description": "<p>For a limited time, enjoy up to 15% off selected pieces across our collections, now including <strong>Ready To Wear</strong>.</p><p>&nbsp;You’ll find our most-loved fine jewellery alongside everyday pieces made to be treasured long after Christmas has passed.</p>",
+            "colour_style": "light",
+            "button_1_text": "Shop Now",
+            "button_1_link": "https://www.nataliemariejewellery.com/collections/ready-to-wear-1?filter.p.m.custom.filter_metal=Yellow+Gold&page=1",
+            "button_style": "underline"
+          }
+        },
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/6_1a8c5f75-c751-4e0b-9422-a338271d959a.png",
-            "mobile_image": "shopify://shop_images/6_1a8c5f75-c751-4e0b-9422-a338271d959a.png",
+            "image": "shopify://shop_images/For_pieces_with_meaning_1.png",
+            "mobile_image": "shopify://shop_images/For_pieces_with_meaning_1.png",
             "apply_overlay": true,
             "fifty_fifty": true,
-            "content_position": "bottomLeft",
+            "content_position": "middleCenter",
             "subheading": "<p><strong>With love, from us to you</strong></p>",
             "title": "<p><em>Enjoy up to 15% off&nbsp;</em></p>",
             "description": "<p>Our love letter, extending gratitude for trusting us with your stories. <strong>Enjoy up to 15% off made-to-order pieces.</strong></p><p>Thoughtfully handcrafted to order, for the people and moments that mean the most.</p>",
@@ -68,23 +85,6 @@
             "button_style": "underline"
           }
         },
-        "177ec424-4f77-417c-abfd-95b841c1986f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design_7_1a4449e5-9c74-4038-b059-56186ef16475.png",
-            "mobile_image": "shopify://shop_images/Untitled_design_7_1a4449e5-9c74-4038-b059-56186ef16475.png",
-            "apply_overlay": true,
-            "fifty_fifty": true,
-            "content_position": "bottomRight",
-            "subheading": "<p><strong>A New Expression of Colour</strong></p>",
-            "title": "<p>Sashi & Sana</p>",
-            "description": "<p>A fresh chapter in colour for our much-loved Sashi and Sana collections. Discover soft buttery tones, warm rose hues and playful natural patterns.&nbsp;</p><p>Wear alone, layer together, make them your own.</p>",
-            "colour_style": "light",
-            "button_1_text": "Discover the Collection",
-            "button_1_link": "https://www.nataliemariejewellery.com/collections/sana?filter.p.m.custom.filter_metal=Yellow+Gold&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
-            "button_style": "underline"
-          }
-        },
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c": {
           "type": "image",
           "disabled": true,
@@ -105,10 +105,10 @@
         }
       },
       "block_order": [
+        "177ec424-4f77-417c-abfd-95b841c1986f",
         "template--16086483075241__097f4421-1065-41b5-b18d-fa4b0294968a-16774726526107df29-0",
         "video_qWnByf",
         "56bb69ec-fd48-426b-8115-26a4ed674f40",
-        "177ec424-4f77-417c-abfd-95b841c1986f",
         "a917b1c4-d9a7-463a-b2cf-d26e83df324c"
       ],
       "settings": {

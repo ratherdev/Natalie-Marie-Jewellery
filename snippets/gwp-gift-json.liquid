@@ -1,0 +1,3 @@
+{%- comment -%} One gift option as JSON, for snippets/gwp-block.liquid. Pass `product`. {%- endcomment -%}
+{%- assign gwp_variant = product.selected_or_first_available_variant -%}
+{"variantId": {{ gwp_variant.id | json }}, "available": {{ gwp_variant.available | json }}, "title": {{ product.title | json }}, "image": {% if product.featured_image %}{{ product.featured_image | image_url: width: 200 | json }}{% else %}null{% endif %}}

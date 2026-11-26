@@ -1,0 +1,110 @@
+{%- comment -%}
+  Gift with purchase (GWP) block. Rendered under the bag line items in the cart drawer
+  (snippets/cart-drawer.liquid) and on the /cart page (sections/main-cart.liquid).
+
+  Campaigns come from:
+  1. Theme settings > Gift with purchase: 3 campaign slots edited in the theme customizer.
+  2. Optional `gwp_campaign` metaobject entries (Content > Metaobjects), if that definition exists.
+
+  Everything is output as JSON. assets/gwp.js picks the running campaign(s) in the browser using
+  the current time, so cached HTML never delays a start or end. This markup is re-rendered with
+  the cart section on every cart change, so stock and product tags are as fresh as the last refresh.
+  The block stays hidden until gwp.js renders it.
+{%- endcomment -%}
+{%- if settings.gwp_enabled and cart.item_count > 0 -%}
+  {%- assign gwp_count = 0 -%}
+  <div class="Gwp Gwp--{{ context | default: 'drawer' }}" data-gwp hidden>
+    <script type="application/json" data-gwp-config>
+      {
+        "mode": {{ settings.gwp_mode | default: 'priority' | json }},
+        "timezone": "Australia/Sydney",
+        "basisDefault": {{ settings.gwp_threshold_basis | default: 'after' | json }},
+        "onePerOrder": {{ settings.gwp_one_per_order | json }},
+        "personalisationNote": {{ settings.gwp_personalisation_note | json }},
+        "lines": {
+          {%- for item in cart.items -%}
+            {{ item.key | json }}: {{ item.product.tags | join: '|' | downcase | split: '|' | json }}{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        },
+        "campaigns": [
+          {%- for i in (1..3) -%}
+            {%- capture gwp_prefix -%}gwp_c{{ i }}_{%- endcapture -%}
+            {%- assign k = gwp_prefix | append: 'enabled' -%}
+            {%- unless settings[k] -%}{%- continue -%}{%- endunless -%}
+
+            {%- assign k = gwp_prefix | append: 'gift_product' -%}
+            {%- assign gwp_product = settings[k] -%}
+            {%- if gwp_product != blank and gwp_product.id == blank -%}{%- assign gwp_product = all_products[gwp_product] -%}{%- endif -%}
+            {%- assign k = gwp_prefix | append: 'gift_collection' -%}
+            {%- assign gwp_collection = settings[k] -%}
+            {%- if gwp_collection != blank and gwp_collection.id == blank -%}{%- assign gwp_collection = collections[gwp_collection] -%}{%- endif -%}
+
+            {%- if gwp_count > 0 -%},{%- endif -%}
+            {%- assign gwp_count = gwp_count | plus: 1 -%}
+            {
+              "handle": "campaign-{{ i }}",
+              {%- assign k = gwp_prefix | append: 'name' -%}
+              "name": {{ settings[k] | json }},
+              "active": true,
+              {%- assign k = gwp_prefix | append: 'priority' -%}
+              "priority": {{ settings[k] | default: 0 | json }},
+              {%- assign k = gwp_prefix | append: 'start' -%}
+              "start": {{ settings[k] | json }},
+              {%- assign k = gwp_prefix | append: 'end' -%}
+              "end": {{ settings[k] | json }},
+              {%- assign k = gwp_prefix | append: 'threshold' -%}
+              "threshold": {{ settings[k] | default: 0 | json }},
+              {%- assign k = gwp_prefix | append: 'basis' -%}
+              "thresholdBasis": {% if settings[k] == 'after' or settings[k] == 'before' %}{{ settings[k] | json }}{% else %}null{% endif %},
+              {%- assign k = gwp_prefix | append: 'include_tags' -%}
+              "includeTags": {{ settings[k] | downcase | split: ',' | json }},
+              {%- assign k = gwp_prefix | append: 'exclude_tags' -%}
+              "excludeTags": {{ settings[k] | downcase | split: ',' | json }},
+              {%- assign k = gwp_prefix | append: 'label' -%}
+              "label": {{ settings[k] | json }},
+              {%- assign k = gwp_prefix | append: 'message_progress' -%}
+              "messageProgress": {{ settings[k] | json }},
+              {%- assign k = gwp_prefix | append: 'message_unlocked' -%}
+              "messageUnlocked": {{ settings[k] | json }},
+              {%- assign k = gwp_prefix | append: 'personalisation' -%}
+              "personalisationRequired": {{ settings[k] | json }},
+              "gifts": [
+                {%- if gwp_collection != blank and gwp_collection.products_count > 0 -%}
+                  {%- for gwp_gift in gwp_collection.products limit: 10 -%}
+                    {%- render 'gwp-gift-json', product: gwp_gift -%}{%- unless forloop.last -%},{%- endunless -%}
+                  {%- endfor -%}
+                {%- elsif gwp_product != blank -%}
+                  {%- render 'gwp-gift-json', product: gwp_product -%}
+                {%- endif -%}
+              ]
+            }
+          {%- endfor -%}
+
+          {%- for campaign in shop.metaobjects.gwp_campaign.values -%}
+            {%- assign gwp_product = campaign.gift_product.value -%}
+            {%- if gwp_count > 0 -%},{%- endif -%}
+            {%- assign gwp_count = gwp_count | plus: 1 -%}
+            {
+              "handle": {{ campaign.system.handle | prepend: 'mo-' | json }},
+              "name": {{ campaign.name.value | json }},
+              "active": {{ campaign.active.value | json }},
+              "priority": {{ campaign.priority.value | default: 0 | json }},
+              "startAt": {% if campaign.start_at.value != blank %}{{ campaign.start_at.value | date: '%s' }}{% else %}null{% endif %},
+              "endAt": {% if campaign.end_at.value != blank %}{{ campaign.end_at.value | date: '%s' }}{% else %}null{% endif %},
+              "threshold": {{ campaign.threshold.value | default: 0 | json }},
+              "thresholdBasis": {{ campaign.threshold_basis.value | json }},
+              "includeTags": {{ campaign.include_tags.value | downcase | split: ',' | json }},
+              "excludeTags": {{ campaign.exclude_tags.value | downcase | split: ',' | json }},
+              "label": {{ campaign.label.value | json }},
+              "messageProgress": {{ campaign.message_progress.value | json }},
+              "messageUnlocked": {{ campaign.message_unlocked.value | json }},
+              "personalisationRequired": {{ campaign.personalisation_required.value | json }},
+              "gifts": [{%- if gwp_product != blank -%}{%- render 'gwp-gift-json', product: gwp_product -%}{%- endif -%}]
+            }
+          {%- endfor -%}
+        ]
+      }
+    </script>
+    <div class="Gwp__Inner" data-gwp-inner></div>
+  </div>
+{%- endif -%}

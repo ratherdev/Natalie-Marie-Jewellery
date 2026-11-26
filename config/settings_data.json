@@ -9,6 +9,11 @@
  */
 {
   "current": {
+    "gwp_enabled": true,
+    "gwp_c1_enabled": false,
+    "gwp_c1_name": "GWP Black Friday",
+    "gwp_c1_gift_product": "christmas-ornament",
+    "gwp_c1_threshold": 1500,
     "icon_stroke_width": 1.3,
     "heading_color": "#000000",
     "text_light_color": "#ffffff",

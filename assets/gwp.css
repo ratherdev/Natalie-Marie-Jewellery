@@ -1,0 +1,154 @@
+/* Gift with purchase block: see snippets/gwp-block.liquid and assets/gwp.js */
+.Gwp {
+  --gwp-bg: #f8f7f3;
+  --gwp-accent: #9a8266;
+  --gwp-divider: #e0ded9;
+  --gwp-tag-bg: #ebe8e2;
+  background: var(--gwp-bg);
+  border-top: 1px solid var(--gwp-divider);
+  padding: 30px 0 32px;
+}
+
+.Gwp[hidden] {
+  display: none;
+}
+
+.Gwp--drawer {
+  border-bottom: 1px solid var(--gwp-divider);
+}
+
+.Gwp--page {
+  margin-top: 10px;
+}
+
+.Gwp__Label {
+  margin: 0 0 10px;
+  font-family: var(--text-font-family);
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gwp-accent);
+}
+
+.Gwp__Headline {
+  margin: 0 0 18px;
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight, 400);
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--heading-color, #1c1b1b);
+}
+
+.Gwp__Headline em {
+  font-style: italic;
+}
+
+.Gwp__Bar {
+  position: relative;
+  height: 4px;
+  background: var(--gwp-divider);
+  overflow: hidden;
+}
+
+.Gwp__BarFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: var(--gwp-accent);
+  transition: width 0.4s ease;
+}
+
+.Gwp__BarLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: var(--text-font-family);
+  font-size: 11px;
+  color: var(--gwp-accent);
+}
+
+.Gwp__Gift {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.Gwp__Thumb {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
+  background: #e8e6e1;
+  overflow: hidden;
+}
+
+.Gwp__Thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Gwp__GiftName {
+  margin: 0 0 4px;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--heading-color, #1c1b1b);
+}
+
+.Gwp__GiftText {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--gwp-accent);
+}
+
+.Gwp__Tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 9px;
+  background: var(--gwp-tag-bg);
+  font-family: var(--text-font-family);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gwp-accent);
+}
+
+@media screen and (min-width: 641px) {
+  .Gwp__Headline {
+    font-size: 22px;
+  }
+
+  .Gwp__Thumb {
+    width: 96px;
+    height: 96px;
+  }
+
+  .Gwp__GiftName {
+    font-size: 18px;
+  }
+
+  .Gwp__GiftText {
+    font-size: 13px;
+  }
+}
+
+/* Gift line in the bag */
+.CartItem__Complimentary {
+  font-family: var(--text-font-family);
+  color: var(--gwp-accent, #9a8266);
+}
+
+/* Several campaigns at once (tiers mode) */
+.Gwp__Campaign + .Gwp__Campaign {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--gwp-divider);
+}

@@ -47,6 +47,7 @@
   	  	{%- assign mergeLineItem = false -%}
 		{%- assign hideQuantity = false -%}
 		{%- assign hideIncreaseQuantity = false -%}
+		{%- assign isGwpGift = false -%}
 		
 		{%- capture lineProperties -%}
 			{%- if line_item.properties != empty -%}
@@ -79,13 +80,18 @@
 						{%- endfor -%}
 					{%- endif -%}
 					
+					{%- if property.first == '_gwp' and property.last != blank -%}
+						{%- assign isGwpGift = true -%}
+					{%- endif -%}
+					
 					{%- if property.first == '_bundleMerge' and property.last == 'true' -%}
 						{%- assign mergeLineItem = true -%}
 					{%- endif -%}
 					
 					{%- assign first_character_in_key = property.first | truncate: 1, '' -%}
 
-					{%- if property.last == blank or first_character_in_key == '_' -%}
+					{%- assign property_key_trimmed = property.first | strip -%}
+					{%- if property.last == blank or first_character_in_key == '_' or property_key_trimmed == 'Personalise' -%}
 						{%- continue -%}
 					{%- endif -%}
 					
@@ -168,7 +174,9 @@
 					</h2>
 					
 					<div class="CartItem__PriceList {% unless for_drawer %}hidden-lap-and-up{% endunless %}">
-						{%- if lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
+						{%- if isGwpGift and line_item.final_line_price == 0 -%}
+							<span class="CartItem__Price CartItem__Complimentary Price">Complimentary</span>
+						{%- elsif lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
 							<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
 							<span class="CartItem__OriginalPrice Price Price--compareAt">{{ lineItemOriginalPrice | money_with_currency | remove: '.00' }}</span>
 						{%- else -%}
@@ -211,6 +219,26 @@
 		  
 					{{ lineProperties }}
 
+					{%- comment -%} Personalise field for the complimentary (GWP) gift. Property name is " Personalise" (leading space), same as the product page {%- endcomment -%}
+					{%- if isGwpGift -%}
+						{%- assign personalise_value = line_item.properties[' Personalise'] | default: line_item.properties['Personalise'] -%}
+						<div class="CartItem__Personalise{% if personalise_value != blank %} is-saved{% endif %}" data-personalise data-line-key="{{ line_item.key }}">
+							<div class="CartItem__PersonaliseHead">
+								<span class="CartItem__PersonaliseLabel">Personalise:</span>
+								
+								<button type="button" class="CartItem__PersonaliseBtn CartItem__PersonaliseEdit custom_edit" data-personalise-edit>Edit</button>
+							</div>
+							<p class="CartItem__PersonaliseValue">{{ personalise_value | escape }}</p>
+							<div class="CartItem__PersonaliseField">
+								<div class="CartItem__PersonaliseBox">
+									<input type="text" class="CartItem__PersonaliseInput" maxlength="10" placeholder="Add Initial" aria-label="Personalise" value="{{ personalise_value | escape }}" data-personalise-input data-saved="{{ personalise_value | escape }}">
+									<span class="CartItem__PersonaliseCount"><span data-personalise-count>{{ personalise_value | size }}</span>/10</span>
+								</div>
+								<button type="button" class="CartItem__PersonaliseBtn CartItem__PersonaliseSave custom_save" data-personalise-save>Save</button>
+							</div>
+						</div>
+					{%- endif -%}
+
 					{%- if line_item.selling_plan_allocation -%}
 						<p class="CartItem__PlanAllocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
 					{%- endif -%}
@@ -234,7 +262,7 @@
 				{%- capture item_actions -%}
 					<div class="CartItem__Actions" style="text-align: center">
 						{%- assign labelMetaDowncase = line_item.product.metafields.custom.label.value | downcase -%}
-						{%- if labelMetaDowncase contains 'one of a kind' -%}
+						{%- if labelMetaDowncase contains 'one of a kind' or isGwpGift -%}
 							{%- assign hideQuantity = true -%}
 						{%- endif -%}
 						
@@ -258,11 +286,13 @@
 							</div>
 						</div>
 						
-						{%- unless for_drawer -%}
+						{%- unless for_drawer or isGwpGift -%}
 							<a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" class="CartItem__Remove CartItem__Remove--desk Link Link--underline Link--underlineShort u-h8" data-quantity="0" data-action="remove-item" data-line-key="{{ lineItemKeys }}">{{ 'cart.items.remove' | t }}</a>
 						{%- endunless -%}
 						
+						{%- unless isGwpGift -%}
 						<a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" class="CartItem__Remove CartItem__Remove--mobile u-h7 {% unless for_drawer %}hidden-lap-and-up{% endunless %}" data-quantity="0" data-action="remove-item" data-line-key="{{ lineItemKeys }}">{%- render 'icon' with 'close' -%}</a>
+						{%- endunless -%}
 					</div>
 				{%- endcapture -%}
 
@@ -276,7 +306,9 @@
 			{%- unless for_drawer -%}
 			
 				<div class="CartItem__LinePriceList {% unless for_drawer %}Grid__Cell 3/16 hidden-pocket{% endunless %}" {% if for_drawer %}style="text-align: right"{% endif %}>
-					{%- if lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
+					{%- if isGwpGift and line_item.final_line_price == 0 -%}
+						<span class="CartItem__Price CartItem__Complimentary Price">Complimentary</span>
+					{%- elsif lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
 						<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
 						<span class="CartItem__OriginalPrice Price Price--compareAt">{{ lineItemOriginalPrice | money_with_currency | remove: '.00' }}</span>
 					{%- else -%}
@@ -301,3 +333,122 @@
 		{%- endif -%}
 	{%- endfor -%}
 </div>
+
+<style>
+	.custom_edit,.custom_save {padding: 2px 6px !important;}
+	.CartItem__Personalise { margin: 14px 0 44px; }
+	.CartItem__PersonaliseHead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+	.CartItem__PersonaliseLabel { color: #93795c; }
+	.CartItem__PersonaliseBox { position: relative; }
+	.CartItem__PersonaliseInput { display: block; width: 100%; box-sizing: border-box; padding: 5px 32px 5px 16px; border: 1px solid #e5dfd6; border-radius: 0; background: transparent; color: #000; font: inherit;}
+	.CartItem__PersonaliseCount { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 14px; letter-spacing: 0; }
+	.CartItem__PersonaliseBtn { display: inline-block; padding: 8px 18px; border: 1px solid #93795c; background: transparent; color: #93795c; font: inherit; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+	.CartItem__PersonaliseBtn:hover { background: #93795c; color: #fff; }
+	.CartItem__PersonaliseSave { margin-top: 10px; }
+	.CartItem__PersonaliseEdit, .CartItem__PersonaliseValue { display: none; }
+	.CartItem__PersonaliseValue { margin: 0; letter-spacing: .2em; word-break: break-all; }
+	.CartItem__Personalise.is-saved .CartItem__PersonaliseEdit { display: inline-block; }
+	.CartItem__Personalise.is-saved .CartItem__PersonaliseValue { display: block; }
+	.CartItem__Personalise.is-saved .CartItem__PersonaliseGuide,
+	.CartItem__Personalise.is-saved .CartItem__PersonaliseField { display: none; }
+	.CartItem__Personalise.is-saving { opacity: .5; pointer-events: none; }
+	.CartItem__PersonaliseInput::placeholder { color: #000; opacity: 1; }
+</style>
+<script>
+	(function () {
+		if (window.__nmjPersonalise) return;
+		window.__nmjPersonalise = true;
+		var root = (window.routes && window.routes.rootUrlWithoutSlash) || '';
+		var KEY = ' Personalise'; // leading space, same as the product page property name
+
+		function save(input) {
+			var wrap = input.closest('[data-personalise]');
+			var key = wrap.getAttribute('data-line-key');
+			var value = input.value.trim();
+			if (value === input.getAttribute('data-saved')) return Promise.resolve(false);
+			wrap.classList.add('is-saving');
+			return fetch(root + '/cart.js').then(function (r) { return r.json(); }).then(function (cart) {
+				var item = cart.items.filter(function (i) { return i.key === key; })[0];
+				if (!item) return false;
+				var props = Object.assign({}, item.properties || {});
+				delete props['Personalise'];
+				props[KEY] = value; // blank value removes it from the bag
+				return fetch(root + '/cart/change.js', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ id: key, quantity: item.quantity, properties: props })
+				}).then(function () {
+					input.setAttribute('data-saved', value);
+					wrap.classList.remove('is-saving');
+					var txt = wrap.querySelector('.CartItem__PersonaliseValue');
+					if (txt) txt.textContent = value;
+					wrap.classList.toggle('is-saved', !!value);
+					document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+					return true;
+				});
+			}).catch(function () {
+				wrap.classList.remove('is-saving');
+				return false;
+			});
+		}
+
+		// live counter
+		document.addEventListener('input', function (e) {
+			if (!e.target.matches('[data-personalise-input]')) return;
+			var n = e.target.parentNode.querySelector('[data-personalise-count]');
+			if (n) n.textContent = e.target.value.length;
+		});
+
+		// Edit button: show the input again
+		document.addEventListener('click', function (e) {
+			var edit = e.target.closest('[data-personalise-edit]');
+			if (!edit) return;
+			var wrap = edit.closest('[data-personalise]');
+			wrap.classList.remove('is-saved');
+			var input = wrap.querySelector('[data-personalise-input]');
+			input.focus();
+			input.setSelectionRange(input.value.length, input.value.length);
+		});
+
+		// Save button
+		document.addEventListener('click', function (e) {
+			var btn = e.target.closest('[data-personalise-save]');
+			if (!btn) return;
+			save(btn.closest('[data-personalise]').querySelector('[data-personalise-input]'));
+		});
+
+		// Enter key also saves
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Enter' && e.target.matches('[data-personalise-input]')) {
+				e.preventDefault();
+				save(e.target);
+			}
+		});
+
+		// left edit mode without changing anything: back to saved view
+		document.addEventListener('focusout', function (e) {
+			var input = e.target;
+			if (!input.matches || !input.matches('[data-personalise-input]')) return;
+			var saved = input.getAttribute('data-saved');
+			if (saved && input.value.trim() === saved) {
+				input.closest('[data-personalise]').classList.add('is-saved');
+			}
+		});
+
+		// make sure an unsaved value is saved before going to checkout
+		document.addEventListener('click', function (e) {
+			var btn = e.target.closest('[name="checkout"], .Cart__Checkout');
+			if (!btn || btn.__nmjGo) return;
+			var dirty = Array.prototype.filter.call(document.querySelectorAll('[data-personalise-input]'), function (i) {
+				return i.value.trim() !== i.getAttribute('data-saved');
+			});
+			if (!dirty.length) return;
+			e.preventDefault();
+			e.stopPropagation();
+			Promise.all(dirty.map(save)).then(function () {
+				btn.__nmjGo = true;
+				btn.click();
+			});
+		}, true);
+	})();
+</script>

@@ -87,6 +87,8 @@
           <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
 
           {% render 'cart-items' %}
+
+          {%- render 'gwp-block', context: 'drawer' -%}
 		  
 		  {% render 'cart-recommendations', class: 'MinicartRecommendations--mobile hidden-widescreen', recommendCollection: recommendCollection %}
         </div>

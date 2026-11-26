@@ -1326,5 +1326,402 @@
         "default": false
       }
     ]
+  },
+
+  {
+    "name": "Gift with purchase",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Spend-and-get gift campaigns for the cart drawer and View Bag page. Up to 3 scheduled campaigns here, plus any entries in Content > Metaobjects > GWP campaign (optional)."
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_enabled",
+        "label": "Enable gift with purchase",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "gwp_mode",
+        "label": "When several campaigns are running",
+        "options": [
+          {
+            "value": "priority",
+            "label": "Show only the highest priority"
+          },
+          {
+            "value": "tiers",
+            "label": "Run them all as tiers (one gift per campaign reached)"
+          }
+        ],
+        "default": "priority"
+      },
+      {
+        "type": "select",
+        "id": "gwp_threshold_basis",
+        "label": "Default threshold basis",
+        "info": "TODO: confirm with Lauren. After discounts = cart subtotal incl. NMJ15. Before discounts = original prices.",
+        "options": [
+          {
+            "value": "after",
+            "label": "After discounts"
+          },
+          {
+            "value": "before",
+            "label": "Before discounts"
+          }
+        ],
+        "default": "after"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_one_per_order",
+        "label": "One gift per order (per campaign)",
+        "info": "TODO: confirm with Lauren. When off, one gift per multiple of the threshold.",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "gwp_personalisation_note",
+        "label": "Personalisation note",
+        "info": "TODO: placeholder until Lauren confirms what customers can enter.",
+        "default": "Add your personalisation at checkout"
+      },
+      {
+        "type": "paragraph",
+        "content": "Testing on a copy theme: add ?gwp_now=2026-11-25T09:00 to the preview URL to see what shows at that Sydney time. Ignored on the live theme."
+      },
+      {
+        "type": "header",
+        "content": "Campaign 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c1_enabled",
+        "label": "Campaign on",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_name",
+        "label": "Campaign name",
+        "info": "For your reference, e.g. Black Friday 2026."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_start",
+        "label": "Starts (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-11-25 00:00. Leave blank to start straight away."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_end",
+        "label": "Ends (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-12-02 23:59. Leave blank for no end date."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c1_threshold",
+        "label": "Spend threshold (AUD)",
+        "info": "e.g. 1500"
+      },
+      {
+        "type": "select",
+        "id": "gwp_c1_basis",
+        "label": "Threshold counts",
+        "options": [
+          {
+            "value": "default",
+            "label": "Use the default below"
+          },
+          {
+            "value": "after",
+            "label": "After discounts"
+          },
+          {
+            "value": "before",
+            "label": "Before discounts"
+          }
+        ],
+        "default": "default"
+      },
+      {
+        "type": "product",
+        "id": "gwp_c1_gift_product",
+        "label": "Gift product",
+        "info": "An A$0 product, published to the Online Store, hidden from collections and search."
+      },
+      {
+        "type": "collection",
+        "id": "gwp_c1_gift_collection",
+        "label": "Or: gift collection (by tag)",
+        "info": "Optional. Uses the first in-stock product in this collection, e.g. an automated collection of products tagged gwp-gift. Overrides the gift product."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_include_tags",
+        "label": "Only count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-eligible. Blank = every product counts."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_exclude_tags",
+        "label": "Never count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-exclude, gift-card."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c1_priority",
+        "label": "Priority",
+        "info": "Higher wins when campaigns overlap.",
+        "default": 9
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_label",
+        "label": "Label",
+        "default": "Black Friday gift with purchase"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_message_progress",
+        "label": "Message before unlocking",
+        "info": "{remaining} = amount left, {threshold} = threshold, *words* = italic.",
+        "default": "Spend {remaining} more to receive a complimentary *{gift}*"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c1_message_unlocked",
+        "label": "Message once unlocked",
+        "default": "You’ve unlocked a complimentary *{gift}*"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c1_personalisation",
+        "label": "Gift needs personalisation at checkout",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Campaign 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c2_enabled",
+        "label": "Campaign on",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_name",
+        "label": "Campaign name",
+        "info": "For your reference, e.g. Black Friday 2026."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_start",
+        "label": "Starts (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-11-25 00:00. Leave blank to start straight away."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_end",
+        "label": "Ends (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-12-02 23:59. Leave blank for no end date."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c2_threshold",
+        "label": "Spend threshold (AUD)",
+        "info": "e.g. 1500"
+      },
+      {
+        "type": "select",
+        "id": "gwp_c2_basis",
+        "label": "Threshold counts",
+        "options": [
+          {
+            "value": "default",
+            "label": "Use the default below"
+          },
+          {
+            "value": "after",
+            "label": "After discounts"
+          },
+          {
+            "value": "before",
+            "label": "Before discounts"
+          }
+        ],
+        "default": "default"
+      },
+      {
+        "type": "product",
+        "id": "gwp_c2_gift_product",
+        "label": "Gift product",
+        "info": "An A$0 product, published to the Online Store, hidden from collections and search."
+      },
+      {
+        "type": "collection",
+        "id": "gwp_c2_gift_collection",
+        "label": "Or: gift collection (by tag)",
+        "info": "Optional. Uses the first in-stock product in this collection, e.g. an automated collection of products tagged gwp-gift. Overrides the gift product."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_include_tags",
+        "label": "Only count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-eligible. Blank = every product counts."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_exclude_tags",
+        "label": "Never count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-exclude, gift-card."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c2_priority",
+        "label": "Priority",
+        "info": "Higher wins when campaigns overlap.",
+        "default": 8
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_label",
+        "label": "Label",
+        "default": "Gift with purchase"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_message_progress",
+        "label": "Message before unlocking",
+        "info": "{remaining} = amount left, {threshold} = threshold, *words* = italic.",
+        "default": "Spend {remaining} more to receive a complimentary *{gift}*"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c2_message_unlocked",
+        "label": "Message once unlocked",
+        "default": "You’ve unlocked a complimentary *{gift}*"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c2_personalisation",
+        "label": "Gift needs personalisation at checkout",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Campaign 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c3_enabled",
+        "label": "Campaign on",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_name",
+        "label": "Campaign name",
+        "info": "For your reference, e.g. Black Friday 2026."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_start",
+        "label": "Starts (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-11-25 00:00. Leave blank to start straight away."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_end",
+        "label": "Ends (Sydney time)",
+        "info": "Format YYYY-MM-DD HH:MM, e.g. 2026-12-02 23:59. Leave blank for no end date."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c3_threshold",
+        "label": "Spend threshold (AUD)",
+        "info": "e.g. 1500"
+      },
+      {
+        "type": "select",
+        "id": "gwp_c3_basis",
+        "label": "Threshold counts",
+        "options": [
+          {
+            "value": "default",
+            "label": "Use the default below"
+          },
+          {
+            "value": "after",
+            "label": "After discounts"
+          },
+          {
+            "value": "before",
+            "label": "Before discounts"
+          }
+        ],
+        "default": "default"
+      },
+      {
+        "type": "product",
+        "id": "gwp_c3_gift_product",
+        "label": "Gift product",
+        "info": "An A$0 product, published to the Online Store, hidden from collections and search."
+      },
+      {
+        "type": "collection",
+        "id": "gwp_c3_gift_collection",
+        "label": "Or: gift collection (by tag)",
+        "info": "Optional. Uses the first in-stock product in this collection, e.g. an automated collection of products tagged gwp-gift. Overrides the gift product."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_include_tags",
+        "label": "Only count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-eligible. Blank = every product counts."
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_exclude_tags",
+        "label": "Never count products tagged",
+        "info": "Optional, comma separated, e.g. gwp-exclude, gift-card."
+      },
+      {
+        "type": "number",
+        "id": "gwp_c3_priority",
+        "label": "Priority",
+        "info": "Higher wins when campaigns overlap.",
+        "default": 7
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_label",
+        "label": "Label",
+        "default": "Gift with purchase"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_message_progress",
+        "label": "Message before unlocking",
+        "info": "{remaining} = amount left, {threshold} = threshold, *words* = italic.",
+        "default": "Spend {remaining} more to receive a complimentary *{gift}*"
+      },
+      {
+        "type": "text",
+        "id": "gwp_c3_message_unlocked",
+        "label": "Message once unlocked",
+        "default": "You’ve unlocked a complimentary *{gift}*"
+      },
+      {
+        "type": "checkbox",
+        "id": "gwp_c3_personalisation",
+        "label": "Gift needs personalisation at checkout",
+        "default": false
+      }
+    ]
   }
 ]

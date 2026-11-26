@@ -73,7 +73,7 @@
     "favicon": "shopify://shop_images/NEW_Favicon-01.svg",
     "enable_swym": true,
     "gwp_enabled": true,
-    "gwp_c1_enabled": false,
+    "gwp_c1_enabled": true,
     "gwp_c1_name": "GWP Black Friday",
     "gwp_c1_threshold": 1500,
     "gwp_c1_gift_product": "christmas-ornament",

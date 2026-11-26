@@ -223,6 +223,17 @@
 					{%- comment -%} Personalise field for the complimentary (GWP) gift. Property name is " Personalise" (leading space), same as the product page {%- endcomment -%}
 					{%- if isGwpGift -%}
 						{%- assign personalise_value = line_item.properties[' Personalise'] | default: line_item.properties['Personalise'] -%}
+						{%- comment -%} Placeholder and max characters come from the product's "Product Custom Line - Text" entry (custom.custom_line_item_properties) {%- endcomment -%}
+						{%- assign personalise_placeholder = 'Add Initial' -%}
+						{%- assign personalise_max = 10 -%}
+						{%- for clp in line_item.product.metafields.custom.custom_line_item_properties.value -%}
+							{%- if clp.system.type == 'product_custom_line_text' -%}
+								{%- if clp.placeholder != blank -%}{%- assign personalise_placeholder = clp.placeholder.value | default: clp.placeholder -%}{%- endif -%}
+								{%- assign clp_max = clp.maximum_characters | plus: 0 -%}
+								{%- if clp_max > 0 -%}{%- assign personalise_max = clp_max -%}{%- endif -%}
+								{%- break -%}
+							{%- endif -%}
+						{%- endfor -%}
 						<div class="CartItem__Personalise{% if personalise_value != blank %} is-saved{% endif %}" data-personalise data-line-key="{{ line_item.key }}">
 							<div class="CartItem__PersonaliseHead">
 								<span class="CartItem__PersonaliseLabel">Personalise:</span>
@@ -232,8 +243,8 @@
 							<p class="CartItem__PersonaliseValue">{{ personalise_value | escape }}</p>
 							<div class="CartItem__PersonaliseField">
 								<div class="CartItem__PersonaliseBox">
-									<input type="text" class="CartItem__PersonaliseInput" maxlength="10" placeholder="Add Initial" aria-label="Personalise" value="{{ personalise_value | escape }}" data-personalise-input data-saved="{{ personalise_value | escape }}">
-									<span class="CartItem__PersonaliseCount"><span data-personalise-count>{{ personalise_value | size }}</span>/10</span>
+									<input type="text" class="CartItem__PersonaliseInput" maxlength="{{ personalise_max }}" placeholder="{{ personalise_placeholder | escape }}" aria-label="Personalise" value="{{ personalise_value | escape }}" data-personalise-input data-saved="{{ personalise_value | escape }}">
+									<span class="CartItem__PersonaliseCount"><span data-personalise-count>{{ personalise_value | size }}</span>/{{ personalise_max }}</span>
 								</div>
 								<button type="button" class="CartItem__PersonaliseBtn CartItem__PersonaliseSave custom_save" data-personalise-save>Save</button>
 							</div>

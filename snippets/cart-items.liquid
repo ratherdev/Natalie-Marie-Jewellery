@@ -134,7 +134,7 @@
 			<div class="CartItemWrapper">
 		{%- endif -%}
 
-		<div class="CartItem {% unless for_drawer %}Grid{% endunless %}">
+		<div class="CartItem {% unless for_drawer %}Grid{% endunless %}{% if for_drawer and line_item.line_level_discount_allocations != blank %} CartItem--hasDiscount{% endif %}">
 			<div class="{% unless for_drawer %}Grid__Cell 1/4{% endunless %} CartItem__ImageWrapper">
 					{%- assign media = line_item.image -%}
 					<div class="CartItem__Image AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }});">
@@ -365,6 +365,11 @@
 	.CartItem__Personalise.is-saved .CartItem__PersonaliseField { display: none; }
 	.CartItem__Personalise.is-saving { opacity: .5; pointer-events: none; }
 	.CartItem__PersonaliseInput::placeholder { color: #000; opacity: 1; }
+	/* Mini cart, phone/tablet: the price block is pinned bottom-right; with a discount badge it's two rows tall,
+	   so push the quantity row down to keep the option lines (e.g. Chain Length) clear of it */
+	@media screen and (max-width: 1007px) {
+		.Drawer__Container .CartItem--hasDiscount .CartItem__Actions { margin-top: 56px; }
+	}
 	@media screen and (max-width: 640px) {
 		/* phone: keep the text clear of the 0/10 counter */
 		.CartItem__PersonaliseInput { padding-right: 56px; text-overflow: ellipsis; }

@@ -175,7 +175,7 @@
 					</h2>
 					
 					<div class="CartItem__PriceList {% unless for_drawer %}hidden-lap-and-up{% endunless %}">
-						{%- if isGwpGift and line_item.final_line_price == 0 -%}
+						{%- comment -%} Complimentary when the gift line is $0, or an order-level discount (the GWP's $85 'amount off order') covers its price {%- endcomment -%}{%- assign gwpOrderDiscount = 0 -%}{%- for d in cart.cart_level_discount_applications -%}{%- assign gwpOrderDiscount = gwpOrderDiscount | plus: d.total_allocated_amount -%}{%- endfor -%}{%- assign gwpFree = false -%}{%- if isGwpGift -%}{%- if line_item.final_line_price == 0 or gwpOrderDiscount >= line_item.final_line_price -%}{%- assign gwpFree = true -%}{%- endif -%}{%- endif -%}{%- if gwpFree -%}
 							<span class="CartItem__Price CartItem__Complimentary Price">Complimentary</span>
 						{%- elsif lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
 							<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>
@@ -307,7 +307,7 @@
 			{%- unless for_drawer -%}
 			
 				<div class="CartItem__LinePriceList {% unless for_drawer %}Grid__Cell 3/16 hidden-pocket{% endunless %}" {% if for_drawer %}style="text-align: right"{% endif %}>
-					{%- if isGwpGift and line_item.final_line_price == 0 -%}
+					{%- comment -%} Complimentary when the gift line is $0, or an order-level discount (the GWP's $85 'amount off order') covers its price {%- endcomment -%}{%- assign gwpOrderDiscount = 0 -%}{%- for d in cart.cart_level_discount_applications -%}{%- assign gwpOrderDiscount = gwpOrderDiscount | plus: d.total_allocated_amount -%}{%- endfor -%}{%- assign gwpFree = false -%}{%- if isGwpGift -%}{%- if line_item.final_line_price == 0 or gwpOrderDiscount >= line_item.final_line_price -%}{%- assign gwpFree = true -%}{%- endif -%}{%- endif -%}{%- if gwpFree -%}
 						<span class="CartItem__Price CartItem__Complimentary Price">Complimentary</span>
 					{%- elsif lineItemOriginalPrice != lineItemPrice and lineItemOriginalPrice > 0 -%}
 						<span class="CartItem__Price Price Price--highlight">{{ lineItemPrice | money_with_currency | remove: '.00' }}</span>

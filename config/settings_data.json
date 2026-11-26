@@ -75,7 +75,7 @@
     "gwp_enabled": true,
     "gwp_c1_enabled": true,
     "gwp_c1_name": "GWP Black Friday",
-    "gwp_c1_threshold": 1500,
+    "gwp_c1_threshold": 1499,
     "gwp_c1_gift_product": "christmas-ornament",
     "gwp_c1_label": "gift with purchase",
     "text_color": "#000000",

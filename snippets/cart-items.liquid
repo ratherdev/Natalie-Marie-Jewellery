@@ -80,7 +80,8 @@
 						{%- endfor -%}
 					{%- endif -%}
 					
-					{%- if property.first == '_gwp' and property.last != blank -%}
+					{%- comment -%} Only treat it as the locked gift line while the GWP is switched on; otherwise gwp.js isn't loaded to manage it, so the normal remove/quantity controls must show. {%- endcomment -%}
+					{%- if settings.gwp_enabled and property.first == '_gwp' and property.last != blank -%}
 						{%- assign isGwpGift = true -%}
 					{%- endif -%}
 					

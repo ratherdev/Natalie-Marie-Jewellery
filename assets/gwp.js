@@ -181,8 +181,11 @@
     return true;
   }
 
-  // "after": what the customer pays for the counted items, after line discounts (NMJ15) and their
-  // share of any order-level discount. With no tag rules this equals the cart subtotal.
+  // "after": what the counted items cost after product/line discounts (NMJ5, NMJ15).
+  // Order-level discounts are NOT subtracted: the gift itself is made free by an automatic
+  // "amount off order" discount, so subtracting it would drop the bag below the threshold and
+  // remove the gift. This matches how Shopify checks an order discount's minimum (after product
+  // discounts, before order discounts).
   // "before": original line prices of the counted items, before any discount.
   function basisCents(cart, c, config, isGift) {
     var basis = c.thresholdBasis || config.basisDefault || 'after';
@@ -191,14 +194,7 @@
     var sum = function (list, key) { return list.reduce(function (t, i) { return t + (i[key] || 0); }, 0); };
 
     if (basis === 'before') return sum(counted, 'original_line_price');
-
-    var allFinal = sum(items, 'final_line_price');
-    var countedFinal = sum(counted, 'final_line_price');
-    var orderDiscount = (cart.cart_level_discount_applications || []).reduce(function (t, d) {
-      return t + (d.total_allocated_amount || 0);
-    }, 0);
-    var share = allFinal > 0 ? orderDiscount * (countedFinal / allFinal) : 0;
-    return Math.max(0, Math.round(countedFinal - share));
+    return Math.max(0, Math.round(sum(counted, 'final_line_price')));
   }
 
   function plan(cart, config) {

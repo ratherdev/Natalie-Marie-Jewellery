@@ -839,6 +839,14 @@
 														{%- assign use_primary_button = false -%}
 													{%- endif -%}
 
+{%- comment -%} GWP: a $0 gift product can't be bought from its own page; it's only added by the gift with purchase in the bag {%- endcomment -%}
+{%- capture gwp_gift_threshold -%}{%- render 'gwp-gift-check', product: product -%}{%- endcapture -%}
+{%- assign gwp_gift_threshold = gwp_gift_threshold | strip -%}
+{%- if gwp_gift_threshold != blank -%}
+<div id="AddToCartAnchor" class="ProductForm__BuyButtons ProductForm__GwpGift" {{ block.shopify_attributes }}>
+  <p class="Text--subdued">Complimentary with orders over {{ gwp_gift_threshold | times: 100 | money_without_trailing_zeros }} {{ cart.currency.iso_code }}. Added to your bag automatically, while stocks last.</p>
+</div>
+{%- else -%}
 													<div id="AddToCartAnchor" class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
 														{%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
 															<style>
@@ -904,6 +912,7 @@
 											{% render 'klaviyo-product' %}
 										{%- endif -%}
 													</div>
+{%- endif -%}
 
 											{%- when 'store_pickup' -%}
 												{%- comment -%}The availability container will be added automatically if there is store pickup available{%- endcomment -%}

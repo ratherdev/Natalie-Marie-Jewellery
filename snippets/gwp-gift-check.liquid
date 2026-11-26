@@ -1,0 +1,26 @@
+{%- comment -%}
+  Outputs the campaign's threshold (e.g. "1500") when `product` is a $0 gift product chosen in
+  Theme settings > Gift with purchase (any of the 3 campaign slots, gift product or gift collection),
+  otherwise outputs nothing. Used to stop $0 gifts being bought directly from the product page or search.
+  Usage: {%- capture gwp_gift_threshold -%}{%- render 'gwp-gift-check', product: product -%}{%- endcapture -%}
+{%- endcomment -%}
+{%- if product != blank and product.price_max == 0 -%}
+  {%- assign gwp_found = '' -%}
+  {%- for i in (1..3) -%}
+    {%- capture gwp_prefix -%}gwp_c{{ i }}_{%- endcapture -%}
+    {%- assign k = gwp_prefix | append: 'gift_product' -%}
+    {%- assign gwp_p = settings[k] -%}
+    {%- if gwp_p != blank and gwp_p.id == blank -%}{%- assign gwp_p = all_products[gwp_p] -%}{%- endif -%}
+    {%- assign k = gwp_prefix | append: 'gift_collection' -%}
+    {%- assign gwp_c = settings[k] -%}
+    {%- if gwp_c != blank and gwp_c.id == blank -%}{%- assign gwp_c = collections[gwp_c] -%}{%- endif -%}
+    {%- assign gwp_match = false -%}
+    {%- if gwp_p != blank and gwp_p.id == product.id -%}{%- assign gwp_match = true -%}{%- endif -%}
+    {%- if gwp_c != blank and product.collections contains gwp_c -%}{%- assign gwp_match = true -%}{%- endif -%}
+    {%- if gwp_match and gwp_found == '' -%}
+      {%- assign k = gwp_prefix | append: 'threshold' -%}
+      {%- assign gwp_found = settings[k] | default: 0 | append: '' -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if gwp_found != '' -%}{{ gwp_found }}{%- endif -%}
+{%- endif -%}

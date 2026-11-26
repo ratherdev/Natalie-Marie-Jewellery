@@ -80,7 +80,19 @@
 							{%- endif -%}
 						{%- endfor -%}
 					{%- endif -%}
-				  {%- endfor -%}
+				  {%- comment -%} GWP gift: added automatically, so it has no _Production Time. Use its Dispatch metafield, or Personalisation Dispatch once Personalise is saved {%- endcomment -%}
+			{%- assign gwpHasTime = false -%}{%- assign gwpLine = false -%}
+			{%- for property in line_item.properties -%}
+				{%- if property.first == '_Production Time' -%}{%- assign gwpHasTime = true -%}{%- endif -%}
+				{%- if property.first == '_gwp' and property.last != blank -%}{%- assign gwpLine = true -%}{%- endif -%}
+			{%- endfor -%}
+			{%- if gwpLine and gwpHasTime == false -%}
+				{%- assign gwpPersonalise = line_item.properties[' Personalise'] | default: line_item.properties['Personalise'] -%}
+				{%- assign gwpTime = line_item.product.metafields.custom.dispatch.value -%}
+				{%- if gwpPersonalise != blank and line_item.product.metafields.custom.personalisation_dispatch.value != blank -%}{%- assign gwpTime = line_item.product.metafields.custom.personalisation_dispatch.value -%}{%- endif -%}
+				{%- if gwpTime != blank -%}{%- assign productionTimes = productionTimes | append: ',' | append: gwpTime -%}{%- endif -%}
+			{%- endif -%}
+		  {%- endfor -%}
 		  
 				  {%- assign productionTimes = productionTimes | remove_first: ',' | split: ',' | downcase -%}
 				  {%- assign productionTimesOrder = settings.production_times_order | strip_newlines | split: ',' -%}

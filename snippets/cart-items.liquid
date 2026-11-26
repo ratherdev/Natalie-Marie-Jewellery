@@ -365,6 +365,10 @@
 	.CartItem__Personalise.is-saved .CartItem__PersonaliseField { display: none; }
 	.CartItem__Personalise.is-saving { opacity: .5; pointer-events: none; }
 	.CartItem__PersonaliseInput::placeholder { color: #000; opacity: 1; }
+	@media screen and (max-width: 640px) {
+		/* phone: keep the text clear of the 0/10 counter */
+		.CartItem__PersonaliseInput { padding-right: 56px; text-overflow: ellipsis; }
+	}
 </style>
 <script>
 	(function () {
